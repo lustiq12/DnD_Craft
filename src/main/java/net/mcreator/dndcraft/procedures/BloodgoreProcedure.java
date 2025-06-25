@@ -34,7 +34,7 @@ public class BloodgoreProcedure {
 		if (!(damagesource.is(DamageTypes.ON_FIRE) || damagesource.is(DamageTypes.IN_FIRE) || damagesource.is(DamageTypes.FREEZE) || damagesource.is(DamageTypes.DRY_OUT) || damagesource.is(DamageTypes.MAGIC) || damagesource.is(DamageTypes.DROWN)
 				|| damagesource.is(DamageTypes.FALLING_BLOCK))) {
 			if (world instanceof ServerLevel _level)
-				_level.sendParticles((SimpleParticleType) (DndCraftModParticleTypes.BLOOD.get()), x, y, z, 20, 0, 0, 0, 1);
+				_level.sendParticles((SimpleParticleType) (DndCraftModParticleTypes.BLOOD.get()), x, (y + 1), z, 20, 0, 0, 0, 1);
 		}
 	}
 }

@@ -76,6 +76,8 @@ public class PassiveabilitysProcedure {
 									capability.syncPlayerVariables(entity);
 								});
 							}
+							if (world instanceof ServerLevel _level)
+								_level.sendParticles(ParticleTypes.CHERRY_LEAVES, x, y, z, 2000, 5, 5, 3, 0.01);
 							{
 								final Vec3 _center = new Vec3(x, y, z);
 								List<Entity> _entfound = world.getEntitiesOfClass(Entity.class, new AABB(_center, _center).inflate(15 / 2d), e -> true).stream().sorted(Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_center))).toList();
@@ -88,8 +90,6 @@ public class PassiveabilitysProcedure {
 										});
 									}
 									if (!(entityiterator == entity)) {
-										if (world instanceof ServerLevel _level)
-											_level.sendParticles(ParticleTypes.CHERRY_LEAVES, x, y, z, 1000, 7, 7, 7, 0.01);
 										if (entityiterator instanceof LivingEntity _entity && !_entity.level().isClientSide())
 											_entity.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SLOWDOWN, 200, 5));
 										if (entityiterator instanceof LivingEntity _entity && !_entity.level().isClientSide())
