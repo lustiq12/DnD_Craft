@@ -13,7 +13,7 @@ import net.minecraft.network.chat.Component;
 import net.minecraft.network.FriendlyByteBuf;
 import net.minecraft.core.BlockPos;
 
-import net.mcreator.dndcraft.world.inventory.BardeguiMenu;
+import net.mcreator.dndcraft.world.inventory.DruidGuiMenu;
 
 import io.netty.buffer.Unpooled;
 
@@ -26,12 +26,12 @@ public class DruidOpenProcedure {
 			NetworkHooks.openScreen((ServerPlayer) _ent, new MenuProvider() {
 				@Override
 				public Component getDisplayName() {
-					return Component.literal("Bardegui");
+					return Component.literal("DruidGui");
 				}
 
 				@Override
 				public AbstractContainerMenu createMenu(int id, Inventory inventory, Player player) {
-					return new BardeguiMenu(id, inventory, new FriendlyByteBuf(Unpooled.buffer()).writeBlockPos(_bpos));
+					return new DruidGuiMenu(id, inventory, new FriendlyByteBuf(Unpooled.buffer()).writeBlockPos(_bpos));
 				}
 			}, _bpos);
 		}

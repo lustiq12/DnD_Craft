@@ -120,8 +120,9 @@ public class PassiveabilitysProcedure {
 							sz = -3;
 							for (int index2 = 0; index2 < 6; index2++) {
 								if (entity instanceof Player _player && !_player.level().isClientSide())
-									_player.displayClientMessage(Component.literal(("" + (world.getBlockState(BlockPos.containing(x + sx, y + sy, z + sz))).is(BlockTags.create(new ResourceLocation("dnd_craft:druid_plants"))))), false);
-								if ((world.getBlockState(BlockPos.containing(x + sx, y + sy, z + sz))).is(BlockTags.create(new ResourceLocation("dnd_craft:druid_plants")))) {
+									_player.displayClientMessage(
+											Component.literal(("" + (world.getBlockState(BlockPos.containing(Math.round(x) + sx, Math.round(y) + sy, Math.round(z) + sz))).is(BlockTags.create(new ResourceLocation("dnd_craft:druid_plants"))))), false);
+								if ((world.getBlockState(BlockPos.containing(Math.round(x) + sx, Math.round(y) + sy, Math.round(z) + sz))).is(BlockTags.create(new ResourceLocation("dnd_craft:druid_plants")))) {
 									found = true;
 								}
 								sz = sz + 1;
@@ -132,7 +133,7 @@ public class PassiveabilitysProcedure {
 					}
 					if (found == true) {
 						if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
-							_entity.addEffect(new MobEffectInstance(MobEffects.REGENERATION, 80, 1, false, false));
+							_entity.addEffect(new MobEffectInstance(MobEffects.REGENERATION, 200, 1, false, false));
 					}
 				}
 			} else if (((entity.getCapability(DndCraftModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new DndCraftModVariables.PlayerVariables())).Class_Variable).equals("Sorcerer")) {
