@@ -1,0 +1,14 @@
+{
+  "replace": false,
+  "values": [
+    "dnd_craft:rusty_mace",
+    "dnd_craft:adamantium_battle_axe",
+    "dnd_craft:two_handed_adamantium_axe",
+    "dnd_craft:adamantium_mace",
+    "dnd_craft:adamantium_ax",
+    "dnd_craft:battle_axe",
+    "dnd_craft:two_handed_axe",
+    "dnd_craft:mace",
+    "dnd_craft:ax"
+  ]
+}

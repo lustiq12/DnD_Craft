@@ -1,0 +1,10 @@
+{
+  "_fv": 73,
+  "_type": "command",
+  "definition": {
+    "commandName": "class",
+    "type": "STANDARD",
+    "permissionLevel": "2",
+    "argsxml": "<xml xmlns=\"https://developers.google.com/blockly/xml\"><block type=\"args_start\" deletable=\"false\" x=\"322\" y=\"123\"><next><block type=\"string\"><field name=\"type\">word</field><field name=\"name\">classname</field><statement name=\"args\"><block type=\"call_procedure\"><field name=\"procedure\">Classsettercommandp</field></block></statement></block></next></block></xml>"
+  }
+}

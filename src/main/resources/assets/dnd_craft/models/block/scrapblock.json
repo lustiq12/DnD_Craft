@@ -1,0 +1,13 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "dnd_craft:block/raw_iron_block",
+    "up": "dnd_craft:block/raw_iron_block",
+    "north": "dnd_craft:block/raw_iron_block",
+    "east": "dnd_craft:block/raw_iron_block",
+    "south": "dnd_craft:block/raw_iron_block",
+    "west": "dnd_craft:block/raw_iron_block",
+    "particle": "dnd_craft:block/raw_iron_block"
+  },
+  "render_type": "solid"
+}

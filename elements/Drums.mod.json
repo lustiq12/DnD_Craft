@@ -1,0 +1,45 @@
+{
+  "_fv": 73,
+  "_type": "tool",
+  "definition": {
+    "toolType": "Sword",
+    "renderType": 1,
+    "blockingRenderType": 0,
+    "texture": "banjo",
+    "customModelName": "drums:default",
+    "blockingModelName": "Normal blocking",
+    "name": "§4Drums",
+    "specialInformation": {
+      "fixedValue": [
+        "-Right click to get strengh and speed for 10 seconds",
+        "-Shift rightclick to deal damage to all nearby enemies and let them glow",
+        "-Hit enemies get the levitation effect"
+      ]
+    },
+    "creativeTabs": [
+      {
+        "value": "TOOLS"
+      }
+    ],
+    "efficiency": 4.0,
+    "attackSpeed": 1.2999999999999998,
+    "enchantability": 2,
+    "damageVsEntity": 4.0,
+    "usageCount": 0,
+    "glowCondition": {
+      "fixedValue": false
+    },
+    "repairItems": [],
+    "immuneToFire": false,
+    "blockDropsTier": "WOOD",
+    "blocksAffected": [],
+    "stayInGridWhenCrafting": false,
+    "damageOnCrafting": false,
+    "onRightClickedOnBlock": {
+      "name": "Drumsrichtclick"
+    },
+    "onEntityHitWith": {
+      "name": "Drumhit"
+    }
+  }
+}

@@ -1,0 +1,45 @@
+{
+  "_fv": 73,
+  "_type": "tool",
+  "definition": {
+    "toolType": "Sword",
+    "renderType": 1,
+    "blockingRenderType": 0,
+    "texture": "banjo",
+    "customModelName": "banjo:default",
+    "blockingModelName": "Normal blocking",
+    "name": "§4Banjo",
+    "specialInformation": {
+      "fixedValue": [
+        "-Right click to heal",
+        "-Shift rightclick to slow and weaken all enemies in an area and give yourself absorbtion",
+        "-Hitting enemies give you increased range for a few seconds and blind them"
+      ]
+    },
+    "creativeTabs": [
+      {
+        "value": "TOOLS"
+      }
+    ],
+    "efficiency": 4.0,
+    "attackSpeed": 1.5,
+    "enchantability": 2,
+    "damageVsEntity": 3.0,
+    "usageCount": 0,
+    "glowCondition": {
+      "fixedValue": false
+    },
+    "repairItems": [],
+    "immuneToFire": false,
+    "blockDropsTier": "WOOD",
+    "blocksAffected": [],
+    "stayInGridWhenCrafting": false,
+    "damageOnCrafting": false,
+    "onRightClickedOnBlock": {
+      "name": "BanjoRightclickedOnBlock"
+    },
+    "onEntityHitWith": {
+      "name": "BanjoItemInHandTick"
+    }
+  }
+}

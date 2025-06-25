@@ -1,0 +1,13 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "dnd_craft:block/verykebaba",
+    "up": "dnd_craft:block/verykebaba",
+    "north": "dnd_craft:block/lastkebab",
+    "east": "dnd_craft:block/lastkebab",
+    "south": "dnd_craft:block/lastkebab",
+    "west": "dnd_craft:block/lastkebab",
+    "particle": "dnd_craft:block/verykebaba"
+  },
+  "render_type": "solid"
+}

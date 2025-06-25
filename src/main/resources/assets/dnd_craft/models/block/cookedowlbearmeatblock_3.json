@@ -1,0 +1,13 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "dnd_craft:block/kebabfleshbruh",
+    "up": "dnd_craft:block/kebabfleshbruh",
+    "north": "dnd_craft:block/halfkebab",
+    "east": "dnd_craft:block/halfkebab",
+    "south": "dnd_craft:block/halfkebab",
+    "west": "dnd_craft:block/halfkebab",
+    "particle": "dnd_craft:block/kebabfleshbruh"
+  },
+  "render_type": "solid"
+}

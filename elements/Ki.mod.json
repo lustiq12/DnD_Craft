@@ -1,0 +1,70 @@
+{
+  "_fv": 73,
+  "_type": "gui",
+  "definition": {
+    "type": 0,
+    "width": 178,
+    "height": 189,
+    "inventoryOffsetX": 0,
+    "inventoryOffsetY": 0,
+    "renderBgLayer": true,
+    "doesPauseGame": false,
+    "components": [
+      {
+        "type": "label",
+        "data": {
+          "name": "label_ki_abilitys",
+          "text": {
+            "fixedValue": "Ki Abilitys"
+          },
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "x": 177,
+          "y": 35,
+          "locked": false
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "name": "button_strong_fist",
+          "text": "Fist Storm",
+          "isUndecorated": false,
+          "onClick": {
+            "name": "Strongfistki"
+          },
+          "width": 82,
+          "height": 20,
+          "x": 132,
+          "y": 53,
+          "locked": false
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "name": "button_better_defense",
+          "text": "Better Defense",
+          "isUndecorated": false,
+          "onClick": {
+            "name": "Betterdefense"
+          },
+          "width": 98,
+          "height": 20,
+          "x": 132,
+          "y": 80,
+          "locked": false
+        }
+      }
+    ],
+    "gridSettings": {
+      "sx": 18,
+      "sy": 18,
+      "ox": 11,
+      "oy": 15,
+      "snapOnGrid": true
+    }
+  }
+}

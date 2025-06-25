@@ -1,0 +1,10 @@
+{
+  "type": "forge:add_spawns",
+  "biomes": "dripstone_caves",
+  "spawners": {
+    "type": "dnd_craft:basilisk",
+    "weight": 20,
+    "minCount": 4,
+    "maxCount": 4
+  }
+}

@@ -1,0 +1,358 @@
+{
+  "_fv": 73,
+  "_type": "gui",
+  "definition": {
+    "type": 0,
+    "width": 416,
+    "height": 225,
+    "inventoryOffsetX": 0,
+    "inventoryOffsetY": 0,
+    "renderBgLayer": true,
+    "doesPauseGame": true,
+    "components": [
+      {
+        "type": "button",
+        "data": {
+          "name": "button_fire_arrow",
+          "text": "Fire Arrow",
+          "isUndecorated": false,
+          "onClick": {
+            "name": "Firearrow"
+          },
+          "width": 77,
+          "height": 20,
+          "x": 60,
+          "y": 35,
+          "locked": false
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_spell_chooser",
+          "text": {
+            "fixedValue": "Spell Chooser"
+          },
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "x": 14,
+          "y": 15,
+          "locked": false
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "name": "button_cold_ray",
+          "text": "Cold Ray",
+          "isUndecorated": false,
+          "onClick": {
+            "name": "Coldray"
+          },
+          "width": 66,
+          "height": 20,
+          "x": 60,
+          "y": 62,
+          "locked": false
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "name": "button_thunderwave",
+          "text": "Thunderwave",
+          "isUndecorated": false,
+          "onClick": {
+            "name": "Thunderwave"
+          },
+          "width": 82,
+          "height": 20,
+          "x": 60,
+          "y": 116,
+          "locked": false
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "name": "button_fake_life",
+          "text": "Fake Life",
+          "isUndecorated": false,
+          "onClick": {
+            "name": "Fakelife"
+          },
+          "width": 72,
+          "height": 20,
+          "x": 60,
+          "y": 89,
+          "locked": false
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_level_0",
+          "text": {
+            "fixedValue": "Level 1"
+          },
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "x": 15,
+          "y": 35,
+          "locked": false
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_level_01",
+          "text": {
+            "fixedValue": "Level 1"
+          },
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "x": 15,
+          "y": 62,
+          "locked": false
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_level_5",
+          "text": {
+            "fixedValue": "Level 2"
+          },
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "x": 15,
+          "y": 89,
+          "locked": false
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_level_51",
+          "text": {
+            "fixedValue": "Level 3"
+          },
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "x": 15,
+          "y": 116,
+          "locked": false
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "name": "button_invisibility",
+          "text": "Invisibility",
+          "isUndecorated": false,
+          "onClick": {
+            "name": "Ivisibility"
+          },
+          "width": 88,
+          "height": 20,
+          "x": 60,
+          "y": 143,
+          "locked": false
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_level_10",
+          "text": {
+            "fixedValue": "Level 4"
+          },
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "x": 15,
+          "y": 143,
+          "locked": false
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_level_101",
+          "text": {
+            "fixedValue": "Level 5"
+          },
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "x": 15,
+          "y": 170,
+          "locked": false
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "name": "button_night_vision",
+          "text": "Night Vision",
+          "isUndecorated": false,
+          "onClick": {
+            "name": "Nightvision"
+          },
+          "width": 87,
+          "height": 20,
+          "x": 60,
+          "y": 170,
+          "locked": false
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "name": "button_fireball",
+          "text": "Fireball",
+          "isUndecorated": false,
+          "onClick": {
+            "name": "Fireball"
+          },
+          "width": 67,
+          "height": 20,
+          "x": 60,
+          "y": 197,
+          "locked": false
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_level_40",
+          "text": {
+            "fixedValue": "Level 6"
+          },
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "x": 15,
+          "y": 197,
+          "locked": false
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_level_401",
+          "text": {
+            "fixedValue": "Level 7"
+          },
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "x": 150,
+          "y": 35,
+          "locked": false
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "name": "button_snowstorm",
+          "text": "Snow storm",
+          "isUndecorated": false,
+          "onClick": {
+            "name": "Snowstorm"
+          },
+          "width": 72,
+          "height": 20,
+          "x": 195,
+          "y": 35,
+          "locked": false
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_level_80",
+          "text": {
+            "fixedValue": "Level 8"
+          },
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "x": 150,
+          "y": 62,
+          "locked": false
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "name": "button_fire_wall",
+          "text": "Fire Wall",
+          "isUndecorated": false,
+          "onClick": {
+            "name": "Firewall"
+          },
+          "width": 72,
+          "height": 20,
+          "x": 195,
+          "y": 89,
+          "locked": false
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_level_45",
+          "text": {
+            "fixedValue": "Level 9"
+          },
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "x": 150,
+          "y": 89,
+          "locked": false
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "name": "button_strong_invisibility",
+          "text": "Strong Invisibility",
+          "isUndecorated": false,
+          "onClick": {
+            "name": "Stronginvisibility"
+          },
+          "width": 124,
+          "height": 20,
+          "x": 195,
+          "y": 62,
+          "locked": false
+        }
+      }
+    ],
+    "gridSettings": {
+      "sx": 18,
+      "sy": 18,
+      "ox": 11,
+      "oy": 15,
+      "snapOnGrid": true
+    }
+  }
+}

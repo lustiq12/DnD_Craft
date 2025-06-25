@@ -1,0 +1,13 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "dnd_craft:block/mangrove_log_top",
+    "up": "dnd_craft:block/mangrove_log_top",
+    "north": "dnd_craft:block/mangrove_log",
+    "east": "dnd_craft:block/mangrove_log",
+    "south": "dnd_craft:block/mangrove_log",
+    "west": "dnd_craft:block/mangrove_log",
+    "particle": "dnd_craft:block/mangrove_log_top"
+  },
+  "render_type": "solid"
+}

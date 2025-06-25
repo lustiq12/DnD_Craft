@@ -1,0 +1,13 @@
+{
+  "type": "forge:add_spawns",
+  "biomes": [
+    "dripstone_caves",
+    "lush_caves"
+  ],
+  "spawners": {
+    "type": "dnd_craft:ocherjelly",
+    "weight": 23,
+    "minCount": 4,
+    "maxCount": 4
+  }
+}

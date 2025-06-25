@@ -1,0 +1,21 @@
+{
+  "type": "forge:add_spawns",
+  "biomes": [
+    "beach",
+    "snowy_beach",
+    "dripstone_caves",
+    "frozen_peaks",
+    "grove",
+    "ice_spikes",
+    "jagged_peaks",
+    "stony_peaks",
+    "stony_shore",
+    "windswept_hills"
+  ],
+  "spawners": {
+    "type": "dnd_craft:harpy",
+    "weight": 20,
+    "minCount": 4,
+    "maxCount": 4
+  }
+}

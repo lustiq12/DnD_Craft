@@ -1,0 +1,6897 @@
+{
+  "mod_elements": [
+    {
+      "name": "DnD",
+      "type": "tab",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "dn_d",
+      "metadata": {
+        "files": []
+      }
+    },
+    {
+      "name": "Dagger",
+      "type": "tool",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "dagger",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/dnd_craft/models/item/dagger.json",
+          "src/main/java/net/mcreator/dndcraft/item/DaggerItem.java"
+        ]
+      },
+      "path": "~/Weapons"
+    },
+    {
+      "name": "Daggerrecipe",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "daggerrecipe",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/dnd_craft/recipes/daggerrecipe.json"
+        ]
+      },
+      "path": "~/Recipes"
+    },
+    {
+      "name": "Ax",
+      "type": "tool",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ax",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/dndcraft/item/AxItem.java",
+          "src/main/resources/assets/dnd_craft/models/item/ax.json"
+        ]
+      },
+      "path": "~/Weapons"
+    },
+    {
+      "name": "AnimalBone",
+      "type": "item",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "animal_bone",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/dndcraft/item/AnimalBoneItem.java",
+          "src/main/resources/assets/dnd_craft/models/item/animal_bone.json"
+        ]
+      }
+    },
+    {
+      "name": "Bonemealrecipe",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "bonemealrecipe",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/dnd_craft/recipes/bonemealrecipe.json"
+        ]
+      },
+      "path": "~/Recipes"
+    },
+    {
+      "name": "Bonemealrecipe2",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "bonemealrecipe_2",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/dnd_craft/recipes/bonemealrecipe_2.json"
+        ]
+      },
+      "path": "~/Recipes"
+    },
+    {
+      "name": "Bonemealrecipe3",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "bonemealrecipe_3",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/dnd_craft/recipes/bonemealrecipe_3.json"
+        ]
+      },
+      "path": "~/Recipes"
+    },
+    {
+      "name": "Bonemealrecipe4",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "bonemealrecipe_4",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/dnd_craft/recipes/bonemealrecipe_4.json"
+        ]
+      },
+      "path": "~/Recipes"
+    },
+    {
+      "name": "Bonemealrecipe5",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "bonemealrecipe_5",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/dnd_craft/recipes/bonemealrecipe_5.json"
+        ]
+      },
+      "path": "~/Recipes"
+    },
+    {
+      "name": "AxRecipe",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ax_recipe",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/dnd_craft/recipes/ax_recipe.json"
+        ]
+      },
+      "path": "~/Recipes"
+    },
+    {
+      "name": "LightHammer",
+      "type": "tool",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "light_hammer",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/dnd_craft/models/item/light_hammer.json",
+          "src/main/java/net/mcreator/dndcraft/item/LightHammerItem.java"
+        ]
+      },
+      "path": "~/Weapons"
+    },
+    {
+      "name": "Lighthammerecipe",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "lighthammerecipe",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/dnd_craft/recipes/lighthammerecipe.json"
+        ]
+      },
+      "path": "~/Recipes"
+    },
+    {
+      "name": "BattleStaff",
+      "type": "tool",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "battle_staff",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/dnd_craft/models/item/battle_staff.json",
+          "src/main/java/net/mcreator/dndcraft/item/BattleStaffItem.java"
+        ]
+      },
+      "path": "~/Weapons"
+    },
+    {
+      "name": "Battlestaffrecipe",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "battlestaffrecipe",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/dnd_craft/recipes/battlestaffrecipe.json"
+        ]
+      },
+      "path": "~/Recipes"
+    },
+    {
+      "name": "Club",
+      "type": "tool",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "club",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/dndcraft/item/ClubItem.java",
+          "src/main/resources/assets/dnd_craft/models/item/club.json"
+        ]
+      },
+      "path": "~/Weapons"
+    },
+    {
+      "name": "Clubrecipe",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "clubrecipe",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/dnd_craft/recipes/clubrecipe.json"
+        ]
+      },
+      "path": "~/Recipes"
+    },
+    {
+      "name": "IronPlate",
+      "type": "item",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "iron_plate",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/dnd_craft/models/item/iron_plate.json",
+          "src/main/java/net/mcreator/dndcraft/item/IronPlateItem.java"
+        ]
+      }
+    },
+    {
+      "name": "Ironplaterecipe",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ironplaterecipe",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/dnd_craft/recipes/ironplaterecipe.json"
+        ]
+      },
+      "path": "~/Recipes"
+    },
+    {
+      "name": "Animalbonesrecipe",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "animalbonesrecipe",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/dnd_craft/recipes/animalbonesrecipe.json"
+        ]
+      },
+      "path": "~/Recipes"
+    },
+    {
+      "name": "Spear",
+      "type": "tool",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "spear",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/dnd_craft/models/item/spear.json",
+          "src/main/java/net/mcreator/dndcraft/item/SpearItem.java"
+        ]
+      },
+      "path": "~/Weapons"
+    },
+    {
+      "name": "Spearrecipe",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "spearrecipe",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/dnd_craft/recipes/spearrecipe.json"
+        ]
+      },
+      "path": "~/Recipes"
+    },
+    {
+      "name": "Mace",
+      "type": "tool",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mace",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/dnd_craft/models/item/mace.json",
+          "src/main/java/net/mcreator/dndcraft/item/MaceItem.java"
+        ]
+      },
+      "path": "~/Weapons"
+    },
+    {
+      "name": "Macerecipe",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "macerecipe",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/dnd_craft/recipes/macerecipe.json"
+        ]
+      },
+      "path": "~/Recipes"
+    },
+    {
+      "name": "MetalRod",
+      "type": "item",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "metal_rod",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/dnd_craft/models/item/metal_rod.json",
+          "src/main/java/net/mcreator/dndcraft/item/MetalRodItem.java"
+        ]
+      }
+    },
+    {
+      "name": "Ironrodrecipe",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ironrodrecipe",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/dnd_craft/recipes/ironrodrecipe.json"
+        ]
+      },
+      "path": "~/Recipes"
+    },
+    {
+      "name": "ZwoHandedClub",
+      "type": "tool",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "zwo_handed_club",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/dnd_craft/models/item/zwo_handed_club.json",
+          "src/main/java/net/mcreator/dndcraft/item/ZwoHandedClubItem.java"
+        ]
+      },
+      "path": "~/Weapons"
+    },
+    {
+      "name": "Twohandedclub",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "twohandedclub",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/dnd_craft/recipes/twohandedclub.json"
+        ]
+      },
+      "path": "~/Recipes"
+    },
+    {
+      "name": "Gladius",
+      "type": "tool",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "gladius",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/dnd_craft/models/item/gladius.json",
+          "src/main/java/net/mcreator/dndcraft/item/GladiusItem.java"
+        ]
+      },
+      "path": "~/Weapons"
+    },
+    {
+      "name": "Gladiusrecipe",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "gladiusrecipe",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/dnd_craft/recipes/gladiusrecipe.json"
+        ]
+      },
+      "path": "~/Recipes"
+    },
+    {
+      "name": "Claymore",
+      "type": "tool",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "claymore",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/dnd_craft/models/item/claymore.json",
+          "src/main/java/net/mcreator/dndcraft/item/ClaymoreItem.java"
+        ]
+      },
+      "path": "~/Weapons"
+    },
+    {
+      "name": "Claymorerecipe",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "claymorerecipe",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/dnd_craft/recipes/claymorerecipe.json"
+        ]
+      },
+      "path": "~/Recipes"
+    },
+    {
+      "name": "TwoHandedhammerToolInHandTick",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "two_handedhammer_tool_in_hand_tick",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/dndcraft/procedures/TwoHandedhammerToolInHandTickProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Procedures"
+    },
+    {
+      "name": "TwoHandedhammer",
+      "type": "tool",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "two_handedhammer",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/dndcraft/item/TwoHandedhammerItem.java",
+          "src/main/resources/assets/dnd_craft/models/item/two_handedhammer.json"
+        ]
+      },
+      "path": "~/Weapons"
+    },
+    {
+      "name": "WarHammer",
+      "type": "tool",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "war_hammer",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/dndcraft/item/WarHammerItem.java",
+          "src/main/resources/assets/dnd_craft/models/item/war_hammer.json"
+        ]
+      },
+      "path": "~/Weapons"
+    },
+    {
+      "name": "Warhammerecipe",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "warhammerecipe",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/dnd_craft/recipes/warhammerecipe.json"
+        ]
+      },
+      "path": "~/Recipes"
+    },
+    {
+      "name": "Twohandedhammerrecipe",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "twohandedhammerrecipe",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/dnd_craft/recipes/twohandedhammerrecipe.json"
+        ]
+      },
+      "path": "~/Recipes"
+    },
+    {
+      "name": "Ironplaterecipebig",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ironplaterecipebig",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/dnd_craft/recipes/ironplaterecipebig.json"
+        ]
+      },
+      "path": "~/Recipes"
+    },
+    {
+      "name": "TwoHandedAxe",
+      "type": "tool",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "two_handed_axe",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/dnd_craft/models/item/two_handed_axe.json",
+          "src/main/java/net/mcreator/dndcraft/item/TwoHandedAxeItem.java"
+        ]
+      },
+      "path": "~/Weapons"
+    },
+    {
+      "name": "BattleAxe",
+      "type": "tool",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "battle_axe",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/dnd_craft/models/item/battle_axe.json",
+          "src/main/java/net/mcreator/dndcraft/item/BattleAxeItem.java"
+        ]
+      },
+      "path": "~/Weapons"
+    },
+    {
+      "name": "Twohanedaxerecipe",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "twohanedaxerecipe",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/dnd_craft/recipes/twohanedaxerecipe.json"
+        ]
+      },
+      "path": "~/Recipes"
+    },
+    {
+      "name": "Battleaxerecipe",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "battleaxerecipe",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/dnd_craft/recipes/battleaxerecipe.json"
+        ]
+      },
+      "path": "~/Recipes"
+    },
+    {
+      "name": "DailyRationPlayerFinishesUsingItem",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "daily_ration_player_finishes_using_item",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/dndcraft/procedures/DailyRationPlayerFinishesUsingItemProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Procedures"
+    },
+    {
+      "name": "SoapRightclickedOnBlock",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "soap_rightclicked_on_block",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/dndcraft/procedures/SoapRightclickedOnBlockProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "itemstack",
+            "type": "itemstack"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Procedures"
+    },
+    {
+      "name": "Soap",
+      "type": "item",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "soap",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/dnd_craft/models/item/soap.json",
+          "src/main/java/net/mcreator/dndcraft/item/SoapItem.java"
+        ]
+      }
+    },
+    {
+      "name": "AnimalFat",
+      "type": "item",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "animal_fat",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/dndcraft/item/AnimalFatItem.java",
+          "src/main/resources/assets/dnd_craft/models/item/animal_fat.json"
+        ]
+      }
+    },
+    {
+      "name": "Soaprecipe",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "soaprecipe",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/dnd_craft/recipes/soaprecipe.json"
+        ]
+      },
+      "path": "~/Recipes"
+    },
+    {
+      "name": "Animalfatrecipe",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "animalfatrecipe",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/dnd_craft/recipes/animalfatrecipe.json"
+        ]
+      },
+      "path": "~/Recipes"
+    },
+    {
+      "name": "TwoHandedClaymore",
+      "type": "tool",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "two_handed_claymore",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/dndcraft/item/TwoHandedClaymoreItem.java",
+          "src/main/resources/assets/dnd_craft/models/item/two_handed_claymore.json"
+        ]
+      },
+      "path": "~/Weapons"
+    },
+    {
+      "name": "Twohandedclaymorerecipe",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "twohandedclaymorerecipe",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/dnd_craft/recipes/twohandedclaymorerecipe.json"
+        ]
+      },
+      "path": "~/Recipes"
+    },
+    {
+      "name": "ScimitarToolInHandTick",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "scimitar_tool_in_hand_tick",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/dndcraft/procedures/ScimitarToolInHandTickProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Procedures"
+    },
+    {
+      "name": "Scimitar",
+      "type": "tool",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "scimitar",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/dnd_craft/models/item/scimitar.json",
+          "src/main/java/net/mcreator/dndcraft/item/ScimitarItem.java"
+        ]
+      },
+      "path": "~/Weapons"
+    },
+    {
+      "name": "Scimitrrecipe",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "scimitrrecipe",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/dnd_craft/recipes/scimitrrecipe.json"
+        ]
+      },
+      "path": "~/Recipes"
+    },
+    {
+      "name": "Classes",
+      "type": "gui",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "classes",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/dndcraft/client/gui/ClassesScreen.java",
+          "src/main/java/net/mcreator/dndcraft/network/ClassesButtonMessage.java",
+          "src/main/java/net/mcreator/dndcraft/world/inventory/ClassesMenu.java"
+        ]
+      },
+      "path": "~/ClassSystem/GUI"
+    },
+    {
+      "name": "Classability1",
+      "type": "keybind",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "classability_1",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/dndcraft/network/Classability1Message.java"
+        ]
+      },
+      "path": "~/ClassSystem/Abilitys"
+    },
+    {
+      "name": "Classability2",
+      "type": "keybind",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "classability_2",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/dndcraft/network/Classability2Message.java"
+        ]
+      },
+      "path": "~/ClassSystem/Abilitys"
+    },
+    {
+      "name": "Classability3",
+      "type": "keybind",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "classability_3",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/dndcraft/network/Classability3Message.java"
+        ]
+      },
+      "path": "~/ClassSystem/Abilitys"
+    },
+    {
+      "name": "Classability2p",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "classability_2p",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/dndcraft/procedures/Classability2pProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/ClassSystem/Abilitys"
+    },
+    {
+      "name": "Classchoosecommand",
+      "type": "command",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "classchoosecommand",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/dndcraft/command/ClasschoosecommandCommand.java"
+        ]
+      },
+      "path": "~/Commands"
+    },
+    {
+      "name": "Classsettercommandp",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "classsettercommandp",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/dndcraft/procedures/ClasssettercommandpProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "arguments",
+            "type": "cmdcontext"
+          },
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Commands"
+    },
+    {
+      "name": "Classability1p",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "classability_1p",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/dndcraft/procedures/Classability1pProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/ClassSystem/Abilitys"
+    },
+    {
+      "name": "GhostAxe",
+      "type": "tool",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ghost_axe",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/dnd_craft/models/item/ghost_axe.json",
+          "src/main/java/net/mcreator/dndcraft/item/GhostAxeItem.java"
+        ]
+      },
+      "path": "~/ClassSystem/Barbar"
+    },
+    {
+      "name": "Ghostaxeantidropsystem",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ghostaxeantidropsystem",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/dndcraft/procedures/GhostaxeantidropsystemProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "itemstack",
+            "type": "itemstack"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/ClassSystem/Barbar"
+    },
+    {
+      "name": "Classability3p",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "classability_3p",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/dndcraft/procedures/Classability3pProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/ClassSystem/Abilitys"
+    },
+    {
+      "name": "Passiveabilitys",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "passiveabilitys",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/dndcraft/procedures/PassiveabilitysProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/ClassSystem/Abilitys"
+    },
+    {
+      "name": "DFJ",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "dfj",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/dndcraft/procedures/DFJProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/ClassSystem/GUI"
+    },
+    {
+      "name": "Classchooseagain",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "classchooseagain",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/dndcraft/procedures/ClasschooseagainProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/ClassSystem"
+    },
+    {
+      "name": "Barbar",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "barbar",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/dndcraft/procedures/BarbarProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/ClassSystem/Barbar"
+    },
+    {
+      "name": "Barde",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "bard",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/dndcraft/procedures/BardeProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/ClassSystem/Barde"
+    },
+    {
+      "name": "WutrauschDisplayOverlayIngame",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "wutrausch_display_overlay_ingame",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/mcreator/dndcraft/procedures/WutrauschDisplayOverlayIngameProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/ClassSystem/Barbar"
+    },
+    {
+      "name": "Wutrausch",
+      "type": "overlay",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "wutrausch",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/dndcraft/client/screens/WutrauschOverlay.java"
+        ]
+      },
+      "path": "~/ClassSystem/Barbar"
+    },
+    {
+      "name": "Sickle",
+      "type": "tool",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "sickle",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/dnd_craft/models/item/sickle.json",
+          "src/main/java/net/mcreator/dndcraft/item/SickleItem.java"
+        ]
+      },
+      "path": "~/Weapons"
+    },
+    {
+      "name": "Sicklerecipe",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "sicklerecipe",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/dnd_craft/recipes/sicklerecipe.json"
+        ]
+      },
+      "path": "~/Recipes"
+    },
+    {
+      "name": "BarbarGui",
+      "type": "gui",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "barbar_gui",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/dndcraft/client/gui/BarbarGuiScreen.java",
+          "src/main/java/net/mcreator/dndcraft/world/inventory/BarbarGuiMenu.java",
+          "src/main/java/net/mcreator/dndcraft/network/BarbarGuiButtonMessage.java"
+        ]
+      },
+      "path": "~/ClassSystem/Barbar"
+    },
+    {
+      "name": "Classabilityopngui",
+      "type": "keybind",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "classabilityopngui",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/dndcraft/network/ClassabilityopnguiMessage.java"
+        ]
+      },
+      "path": "~/ClassSystem/GUI"
+    },
+    {
+      "name": "Classgui",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "classgui",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/dndcraft/procedures/ClassguiProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/ClassSystem/GUI"
+    },
+    {
+      "name": "Bardegui",
+      "type": "gui",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "bardegui",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/dndcraft/network/BardeguiButtonMessage.java",
+          "src/main/java/net/mcreator/dndcraft/world/inventory/BardeguiMenu.java",
+          "src/main/java/net/mcreator/dndcraft/client/gui/BardeguiScreen.java"
+        ]
+      },
+      "path": "~/ClassSystem/Barde"
+    },
+    {
+      "name": "Exit",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "exit",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/dndcraft/procedures/ExitProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/ClassSystem/GUI"
+    },
+    {
+      "name": "Barbaropen",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "barbaropen",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/dndcraft/procedures/BarbaropenProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/ClassSystem/Barbar"
+    },
+    {
+      "name": "Bardeopen",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "bardeopen",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/dndcraft/procedures/BardeopenProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/ClassSystem/Barde"
+    },
+    {
+      "name": "Displaybutton",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "displaybutton",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/mcreator/dndcraft/procedures/DisplaybuttonProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/ClassSystem/GUI"
+    },
+    {
+      "name": "Ogre2",
+      "type": "animatedentity",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ogre",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/dndcraft/client/renderer/Ogre2Renderer.java",
+          "src/main/java/net/mcreator/dndcraft/entity/Ogre2Entity.java",
+          "src/main/java/net/mcreator/dndcraft/entity/model/Ogre2Model.java",
+          "src/main/resources/data/dnd_craft/forge/biome_modifier/ogre_biome_modifier.json",
+          "src/main/resources/assets/dnd_craft/models/item/ogre_spawn_egg.json"
+        ]
+      },
+      "path": "~/Mobs"
+    },
+    {
+      "name": "Ork",
+      "type": "animatedentity",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ork",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/dndcraft/entity/OrkEntity.java",
+          "src/main/java/net/mcreator/dndcraft/entity/model/OrkModel.java",
+          "src/main/resources/data/dnd_craft/forge/biome_modifier/ork_biome_modifier.json",
+          "src/main/java/net/mcreator/dndcraft/client/renderer/OrkRenderer.java",
+          "src/main/resources/assets/dnd_craft/models/item/ork_spawn_egg.json"
+        ]
+      },
+      "path": "~/Mobs"
+    },
+    {
+      "name": "AdantiumOre",
+      "type": "block",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "adantium_ore",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/dnd_craft/worldgen/placed_feature/adantium_ore.json",
+          "src/main/resources/assets/dnd_craft/blockstates/adantium_ore.json",
+          "src/main/resources/data/dnd_craft/loot_tables/blocks/adantium_ore.json",
+          "src/main/resources/data/dnd_craft/forge/biome_modifier/adantium_ore_biome_modifier.json",
+          "src/main/resources/assets/dnd_craft/models/item/adantium_ore.json",
+          "src/main/resources/assets/dnd_craft/models/block/adantium_ore.json",
+          "src/main/java/net/mcreator/dndcraft/block/AdantiumOreBlock.java",
+          "src/main/resources/data/dnd_craft/worldgen/configured_feature/adantium_ore.json"
+        ]
+      }
+    },
+    {
+      "name": "AdantiumIngot",
+      "type": "item",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "adantium_ingot",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/dndcraft/item/AdantiumIngotItem.java",
+          "src/main/resources/assets/dnd_craft/models/item/adantium_ingot.json"
+        ]
+      }
+    },
+    {
+      "name": "RawAdamantiumOre",
+      "type": "item",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "raw_adamantium_ore",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/dnd_craft/models/item/raw_adamantium_ore.json",
+          "src/main/java/net/mcreator/dndcraft/item/RawAdamantiumOreItem.java"
+        ]
+      }
+    },
+    {
+      "name": "Adamantiumingotrecipe",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "adamantiumingotrecipe",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/dnd_craft/recipes/adamantiumingotrecipe.json"
+        ]
+      },
+      "path": "~/Recipes"
+    },
+    {
+      "name": "AdamantiumDagger",
+      "type": "tool",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "adamantium_dagger",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/dndcraft/item/AdamantiumDaggerItem.java",
+          "src/main/resources/assets/dnd_craft/models/item/adamantium_dagger.json"
+        ]
+      },
+      "path": "~/Weapons"
+    },
+    {
+      "name": "AdamantiumAx",
+      "type": "tool",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "adamantium_ax",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/dndcraft/item/AdamantiumAxItem.java",
+          "src/main/resources/assets/dnd_craft/models/item/adamantium_ax.json"
+        ]
+      },
+      "path": "~/Weapons"
+    },
+    {
+      "name": "AdamantiumClaymore",
+      "type": "tool",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "adamantium_claymore",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/dnd_craft/models/item/adamantium_claymore.json",
+          "src/main/java/net/mcreator/dndcraft/item/AdamantiumClaymoreItem.java"
+        ]
+      },
+      "path": "~/Weapons"
+    },
+    {
+      "name": "LightAdamantiumHammer",
+      "type": "tool",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "light_adamantium_hammer",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/dnd_craft/models/item/light_adamantium_hammer.json",
+          "src/main/java/net/mcreator/dndcraft/item/LightAdamantiumHammerItem.java"
+        ]
+      },
+      "path": "~/Weapons"
+    },
+    {
+      "name": "AdamantiumSpear",
+      "type": "tool",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "adamantium_spear",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/dndcraft/item/AdamantiumSpearItem.java",
+          "src/main/resources/assets/dnd_craft/models/item/adamantium_spear.json"
+        ]
+      },
+      "path": "~/Weapons"
+    },
+    {
+      "name": "AdamantiumMace",
+      "type": "tool",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "adamantium_mace",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/dndcraft/item/AdamantiumMaceItem.java",
+          "src/main/resources/assets/dnd_craft/models/item/adamantium_mace.json"
+        ]
+      },
+      "path": "~/Weapons"
+    },
+    {
+      "name": "AdamantiumGladius",
+      "type": "tool",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "adamantium_gladius",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/dndcraft/item/AdamantiumGladiusItem.java",
+          "src/main/resources/assets/dnd_craft/models/item/adamantium_gladius.json"
+        ]
+      },
+      "path": "~/Weapons"
+    },
+    {
+      "name": "TwoHandedAdamantiumHammer",
+      "type": "tool",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "two_handed_adamantium_hammer",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/dndcraft/item/TwoHandedAdamantiumHammerItem.java",
+          "src/main/resources/assets/dnd_craft/models/item/two_handed_adamantium_hammer.json"
+        ]
+      },
+      "path": "~/Weapons"
+    },
+    {
+      "name": "AdamantiumWarHammer",
+      "type": "tool",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "adamantium_war_hammer",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/dndcraft/item/AdamantiumWarHammerItem.java",
+          "src/main/resources/assets/dnd_craft/models/item/adamantium_war_hammer.json"
+        ]
+      },
+      "path": "~/Weapons"
+    },
+    {
+      "name": "TwoHandedAdamantiumAxe",
+      "type": "tool",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "two_handed_adamantium_axe",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/dnd_craft/models/item/two_handed_adamantium_axe.json",
+          "src/main/java/net/mcreator/dndcraft/item/TwoHandedAdamantiumAxeItem.java"
+        ]
+      },
+      "path": "~/Weapons"
+    },
+    {
+      "name": "AdamantiumBattleAxe",
+      "type": "tool",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "adamantium_battle_axe",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/dndcraft/item/AdamantiumBattleAxeItem.java",
+          "src/main/resources/assets/dnd_craft/models/item/adamantium_battle_axe.json"
+        ]
+      },
+      "path": "~/Weapons"
+    },
+    {
+      "name": "TwoHandedAdamantiumClaymore",
+      "type": "tool",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "two_handed_adamantium_claymore",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/dndcraft/item/TwoHandedAdamantiumClaymoreItem.java",
+          "src/main/resources/assets/dnd_craft/models/item/two_handed_adamantium_claymore.json"
+        ]
+      },
+      "path": "~/Weapons"
+    },
+    {
+      "name": "AdamantiumScimitar",
+      "type": "tool",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "adamantium_scimitar",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/dnd_craft/models/item/adamantium_scimitar.json",
+          "src/main/java/net/mcreator/dndcraft/item/AdamantiumScimitarItem.java"
+        ]
+      },
+      "path": "~/Weapons"
+    },
+    {
+      "name": "AdamantiumSickle",
+      "type": "tool",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "adamantium_sickle",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/dndcraft/item/AdamantiumSickleItem.java",
+          "src/main/resources/assets/dnd_craft/models/item/adamantium_sickle.json"
+        ]
+      },
+      "path": "~/Weapons"
+    },
+    {
+      "name": "Adagger",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "adagger",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/dnd_craft/recipes/adagger.json"
+        ]
+      },
+      "path": "~/Recipes"
+    },
+    {
+      "name": "Aax",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "aax",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/dnd_craft/recipes/aax.json"
+        ]
+      },
+      "path": "~/Recipes"
+    },
+    {
+      "name": "Alighthammer",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "alighthammer",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/dnd_craft/recipes/alighthammer.json"
+        ]
+      },
+      "path": "~/Recipes"
+    },
+    {
+      "name": "AdamantiumUpgradeSmithingTemplate",
+      "type": "item",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "adamantium_upgrade_smithing_template",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/dnd_craft/models/item/adamantium_upgrade_smithing_template.json",
+          "src/main/java/net/mcreator/dndcraft/item/AdamantiumUpgradeSmithingTemplateItem.java"
+        ]
+      }
+    },
+    {
+      "name": "Aspear",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "aspear",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/dnd_craft/recipes/aspear.json"
+        ]
+      },
+      "path": "~/Recipes"
+    },
+    {
+      "name": "Amace",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "amace",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/dnd_craft/recipes/amace.json"
+        ]
+      },
+      "path": "~/Recipes"
+    },
+    {
+      "name": "Agladius",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "agladius",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/dnd_craft/recipes/agladius.json"
+        ]
+      },
+      "path": "~/Recipes"
+    },
+    {
+      "name": "Aclaymore",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "aclaymore",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/dnd_craft/recipes/aclaymore.json"
+        ]
+      },
+      "path": "~/Recipes"
+    },
+    {
+      "name": "Atwohandedhammer",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "atwohandedhammer",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/dnd_craft/recipes/atwohandedhammer.json"
+        ]
+      },
+      "path": "~/Recipes"
+    },
+    {
+      "name": "Awarhammer",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "awarhammer",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/dnd_craft/recipes/awarhammer.json"
+        ]
+      },
+      "path": "~/Recipes"
+    },
+    {
+      "name": "Atwohandedaxe",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "atwohandedaxe",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/dnd_craft/recipes/atwohandedaxe.json"
+        ]
+      },
+      "path": "~/Recipes"
+    },
+    {
+      "name": "Abattleaxe",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "abattleaxe",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/dnd_craft/recipes/abattleaxe.json"
+        ]
+      },
+      "path": "~/Recipes"
+    },
+    {
+      "name": "Atwohandedclaymore",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "atwohandedclaymore",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/dnd_craft/recipes/atwohandedclaymore.json"
+        ]
+      },
+      "path": "~/Recipes"
+    },
+    {
+      "name": "Ascimitar",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ascimitar",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/dnd_craft/recipes/ascimitar.json"
+        ]
+      },
+      "path": "~/Recipes"
+    },
+    {
+      "name": "Asickle",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "asickle",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/dnd_craft/recipes/asickle.json"
+        ]
+      },
+      "path": "~/Recipes"
+    },
+    {
+      "name": "Harpy",
+      "type": "animatedentity",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "harpy",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/dndcraft/entity/model/HarpyModel.java",
+          "src/main/resources/assets/dnd_craft/models/item/harpy_spawn_egg.json",
+          "src/main/java/net/mcreator/dndcraft/client/renderer/HarpyRenderer.java",
+          "src/main/java/net/mcreator/dndcraft/entity/HarpyEntity.java",
+          "src/main/resources/data/dnd_craft/forge/biome_modifier/harpy_biome_modifier.json"
+        ]
+      },
+      "path": "~/Mobs"
+    },
+    {
+      "name": "HarpyTooth",
+      "type": "item",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "harpy_tooth",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/dndcraft/item/HarpyToothItem.java",
+          "src/main/resources/assets/dnd_craft/models/item/harpy_tooth.json"
+        ]
+      }
+    },
+    {
+      "name": "HarpySpear",
+      "type": "tool",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "harpy_spear",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/dndcraft/item/HarpySpearItem.java",
+          "src/main/resources/assets/dnd_craft/models/item/harpy_spear.json"
+        ]
+      },
+      "path": "~/Weapons"
+    },
+    {
+      "name": "Harpyspearrecipe",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "harpyspearrecipe",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/dnd_craft/recipes/harpyspearrecipe.json"
+        ]
+      },
+      "path": "~/Recipes"
+    },
+    {
+      "name": "Owlbear",
+      "type": "animatedentity",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "owlbear",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/dnd_craft/forge/biome_modifier/owlbear_biome_modifier.json",
+          "src/main/java/net/mcreator/dndcraft/entity/OwlbearEntity.java",
+          "src/main/java/net/mcreator/dndcraft/entity/model/OwlbearModel.java",
+          "src/main/resources/assets/dnd_craft/models/item/owlbear_spawn_egg.json",
+          "src/main/java/net/mcreator/dndcraft/client/renderer/OwlbearRenderer.java"
+        ]
+      },
+      "path": "~/Mobs"
+    },
+    {
+      "name": "RawOwlbearMeat",
+      "type": "item",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "raw_owlbear_meat",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/dndcraft/item/RawOwlbearMeatItem.java",
+          "src/main/resources/assets/dnd_craft/models/item/raw_owlbear_meat.json"
+        ]
+      },
+      "path": "~/Food"
+    },
+    {
+      "name": "CookedOwlbearMeat",
+      "type": "item",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "cooked_owlbear_meat",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/dndcraft/item/CookedOwlbearMeatItem.java",
+          "src/main/resources/assets/dnd_craft/models/item/cooked_owlbear_meat.json"
+        ]
+      },
+      "path": "~/Food"
+    },
+    {
+      "name": "Owlbearloottable",
+      "type": "loottable",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "owlbearloottable",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/dnd_craft/loot_tables/entities/owlbear.json"
+        ]
+      },
+      "path": "~/Loot"
+    },
+    {
+      "name": "OwlbearEntityIsHurt",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "owlbear_entity_is_hurt",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/dndcraft/procedures/OwlbearEntityIsHurtProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Procedures"
+    },
+    {
+      "name": "OwlbearPlayerCollidesWithThisEntity",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "owlbear_player_collides_with_this_entity",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/dndcraft/procedures/OwlbearPlayerCollidesWithThisEntityProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Procedures"
+    },
+    {
+      "name": "Mimic",
+      "type": "animatedentity",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mimic",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/dndcraft/client/renderer/MimicRenderer.java",
+          "src/main/java/net/mcreator/dndcraft/entity/model/MimicModel.java",
+          "src/main/resources/data/dnd_craft/forge/biome_modifier/mimic_biome_modifier.json",
+          "src/main/java/net/mcreator/dndcraft/entity/MimicEntity.java",
+          "src/main/resources/assets/dnd_craft/models/item/mimic_spawn_egg.json"
+        ]
+      },
+      "path": "~/Mobs"
+    },
+    {
+      "name": "Mimicloottable",
+      "type": "loottable",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mimicloottable",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/dnd_craft/loot_tables/entities/mimic.json"
+        ]
+      },
+      "path": "~/Loot"
+    },
+    {
+      "name": "Adamtiumupgraderecipe",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "adamtiumupgraderecipe",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/dnd_craft/recipes/adamtiumupgraderecipe.json"
+        ]
+      },
+      "path": "~/Recipes"
+    },
+    {
+      "name": "ShieldParticle",
+      "type": "particle",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "shield_particle",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/dndcraft/client/particle/ShieldParticleParticle.java",
+          "src/main/resources/assets/dnd_craft/particles/shield_particle.json"
+        ]
+      },
+      "path": "~/ClassSystem/Abilitys"
+    },
+    {
+      "name": "Cooldwonreset",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "cooldwonreset",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/dndcraft/procedures/CooldwonresetProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Commands"
+    },
+    {
+      "name": "Cooldwonset0",
+      "type": "command",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "cooldwonset_0",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/dndcraft/command/Cooldwonset0Command.java"
+        ]
+      },
+      "path": "~/Commands"
+    },
+    {
+      "name": "Goblin",
+      "type": "animatedentity",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "goblin",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/dndcraft/entity/GoblinEntity.java",
+          "src/main/java/net/mcreator/dndcraft/client/renderer/GoblinRenderer.java",
+          "src/main/resources/assets/dnd_craft/models/item/goblin_spawn_egg.json",
+          "src/main/resources/data/dnd_craft/forge/biome_modifier/goblin_biome_modifier.json",
+          "src/main/java/net/mcreator/dndcraft/entity/model/GoblinModel.java"
+        ]
+      },
+      "path": "~/Mobs"
+    },
+    {
+      "name": "MonsterDagger",
+      "type": "tool",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "monster_dagger",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/dndcraft/item/MonsterDaggerItem.java",
+          "src/main/resources/assets/dnd_craft/models/item/monster_dagger.json"
+        ]
+      },
+      "path": "~/Weapons"
+    },
+    {
+      "name": "Goblinloot",
+      "type": "loottable",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "goblinloot",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/dnd_craft/loot_tables/entities/goblin.json"
+        ]
+      },
+      "path": "~/Loot"
+    },
+    {
+      "name": "GoblinsBackpack",
+      "type": "item",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "goblins_backpack",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/dndcraft/item/GoblinsBackpackItem.java",
+          "src/main/resources/assets/dnd_craft/models/item/goblins_backpack.json"
+        ]
+      }
+    },
+    {
+      "name": "GoblinsBackpackRightclickedOnBlock",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "goblins_backpack_rightclicked_on_block",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/dndcraft/procedures/GoblinsBackpackRightclickedOnBlockProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Procedures"
+    },
+    {
+      "name": "Daggerreciperusty",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "daggerreciperusty",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/dnd_craft/recipes/daggerreciperusty.json"
+        ]
+      },
+      "path": "~/Recipes"
+    },
+    {
+      "name": "SeatOnBlockRightClicked",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "seat_on_block_right_clicked",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/dndcraft/procedures/SeatOnBlockRightClickedProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "sourceentity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Procedures"
+    },
+    {
+      "name": "IronGoblin",
+      "type": "animatedentity",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "iron_goblin",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/dndcraft/entity/model/IronGoblinModel.java",
+          "src/main/java/net/mcreator/dndcraft/entity/IronGoblinEntity.java",
+          "src/main/resources/data/dnd_craft/forge/biome_modifier/iron_goblin_biome_modifier.json",
+          "src/main/java/net/mcreator/dndcraft/client/renderer/IronGoblinRenderer.java"
+        ]
+      },
+      "path": "~/Mobs"
+    },
+    {
+      "name": "IronGoblinloot",
+      "type": "loottable",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "iron_goblinloot",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/dnd_craft/loot_tables/entities/iron_goblin.json"
+        ]
+      },
+      "path": "~/Loot"
+    },
+    {
+      "name": "GoblinOnInitialEntitySpawn",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "goblin_on_initial_entity_spawn",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/dndcraft/procedures/GoblinOnInitialEntitySpawnProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Procedures"
+    },
+    {
+      "name": "GoblinCamp",
+      "type": "structure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "goblin_camp",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/dnd_craft/worldgen/structure_set/goblin_camp.json",
+          "src/main/resources/data/dnd_craft/worldgen/structure/goblin_camp.json",
+          "src/main/resources/data/dnd_craft/worldgen/template_pool/goblin_camp.json"
+        ]
+      },
+      "path": "~/Structures"
+    },
+    {
+      "name": "GoblinChief",
+      "type": "animatedentity",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "goblin_chief",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/dndcraft/client/renderer/GoblinChiefRenderer.java",
+          "src/main/java/net/mcreator/dndcraft/entity/model/GoblinChiefModel.java",
+          "src/main/resources/data/dnd_craft/forge/biome_modifier/goblin_chief_biome_modifier.json",
+          "src/main/java/net/mcreator/dndcraft/entity/GoblinChiefEntity.java",
+          "src/main/resources/assets/dnd_craft/models/item/goblin_chief_spawn_egg.json"
+        ]
+      },
+      "path": "~/Mobs"
+    },
+    {
+      "name": "Goblinchiefloot",
+      "type": "loottable",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "goblinchiefloot",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/dnd_craft/loot_tables/entities/goblin_chief.json"
+        ]
+      },
+      "path": "~/Loot"
+    },
+    {
+      "name": "OrkCamp",
+      "type": "structure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ork_camp",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/dnd_craft/worldgen/template_pool/ork_camp.json",
+          "src/main/resources/data/dnd_craft/worldgen/structure_set/ork_camp.json",
+          "src/main/resources/data/dnd_craft/worldgen/structure/ork_camp.json"
+        ]
+      },
+      "path": "~/Structures"
+    },
+    {
+      "name": "AdamantiumShrine",
+      "type": "structure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "adamantium_shrine",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/dnd_craft/worldgen/template_pool/adamantium_shrine.json",
+          "src/main/resources/data/dnd_craft/worldgen/structure_set/adamantium_shrine.json",
+          "src/main/resources/data/dnd_craft/worldgen/structure/adamantium_shrine.json"
+        ]
+      },
+      "path": "~/Structures"
+    },
+    {
+      "name": "LostCamp",
+      "type": "structure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "lost_camp",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/dnd_craft/worldgen/structure_set/lost_camp.json",
+          "src/main/resources/data/dnd_craft/worldgen/structure/lost_camp.json",
+          "src/main/resources/data/dnd_craft/worldgen/template_pool/lost_camp.json"
+        ]
+      },
+      "path": "~/Structures"
+    },
+    {
+      "name": "CookedOwlbearMeatBlock",
+      "type": "block",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "cooked_owlbear_meat_block",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/dndcraft/block/CookedOwlbearMeatBlockBlock.java",
+          "src/main/resources/assets/dnd_craft/models/item/cooked_owlbear_meat_block.json",
+          "src/main/resources/assets/dnd_craft/models/block/cooked_owlbear_meat_block.json",
+          "src/main/resources/assets/dnd_craft/blockstates/cooked_owlbear_meat_block.json",
+          "src/main/resources/data/dnd_craft/loot_tables/blocks/cooked_owlbear_meat_block.json"
+        ]
+      },
+      "path": "~/Food"
+    },
+    {
+      "name": "Cookedowlbearmeatrecipe2",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "cookedowlbearmeatrecipe_2",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/dnd_craft/recipes/cookedowlbearmeatrecipe_2.json"
+        ]
+      },
+      "path": "~/Recipes"
+    },
+    {
+      "name": "RawOrkBeef",
+      "type": "item",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "raw_ork_beef",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/dnd_craft/models/item/raw_ork_beef.json",
+          "src/main/java/net/mcreator/dndcraft/item/RawOrkBeefItem.java"
+        ]
+      },
+      "path": "~/Food"
+    },
+    {
+      "name": "CookedOrkBeef",
+      "type": "item",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "cooked_ork_beef",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/dnd_craft/models/item/cooked_ork_beef.json",
+          "src/main/java/net/mcreator/dndcraft/item/CookedOrkBeefItem.java"
+        ]
+      },
+      "path": "~/Food"
+    },
+    {
+      "name": "Orkloot",
+      "type": "loottable",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "orkloot",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/dnd_craft/loot_tables/entities/ork.json"
+        ]
+      },
+      "path": "~/Loot"
+    },
+    {
+      "name": "GoblinSpawnerOnTickUpdate",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "goblin_spawner_on_tick_update",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/dndcraft/procedures/GoblinSpawnerOnTickUpdateProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Procedures"
+    },
+    {
+      "name": "CopperCoin",
+      "type": "item",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "copper_coin",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/dndcraft/item/CopperCoinItem.java",
+          "src/main/resources/assets/dnd_craft/models/item/copper_coin.json"
+        ]
+      }
+    },
+    {
+      "name": "IronCoin",
+      "type": "item",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "iron_coin",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/dnd_craft/models/item/iron_coin.json",
+          "src/main/java/net/mcreator/dndcraft/item/IronCoinItem.java"
+        ]
+      }
+    },
+    {
+      "name": "GoldCoin",
+      "type": "item",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "gold_coin",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/dnd_craft/models/item/gold_coin.json",
+          "src/main/java/net/mcreator/dndcraft/item/GoldCoinItem.java"
+        ]
+      }
+    },
+    {
+      "name": "Coins",
+      "type": "villagertrade",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "coins",
+      "metadata": {
+        "files": []
+      }
+    },
+    {
+      "name": "AdamantiumCoin",
+      "type": "item",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "adamantium_coin",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/dndcraft/item/AdamantiumCoinItem.java",
+          "src/main/resources/assets/dnd_craft/models/item/adamantium_coin.json"
+        ]
+      }
+    },
+    {
+      "name": "Daggerrecipe2",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "daggerrecipe_2",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/dnd_craft/recipes/daggerrecipe_2.json"
+        ]
+      },
+      "path": "~/Recipes"
+    },
+    {
+      "name": "GoblinHut",
+      "type": "structure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "goblin_hut",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/dnd_craft/worldgen/structure_set/goblin_hut.json",
+          "src/main/resources/data/dnd_craft/worldgen/template_pool/goblin_hut.json",
+          "src/main/resources/data/dnd_craft/worldgen/structure/goblin_hut.json"
+        ]
+      },
+      "path": "~/Structures"
+    },
+    {
+      "name": "Goblincamploot",
+      "type": "loottable",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "goblincamploot",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/dnd_craft/loot_tables/chests/goblincamp.json"
+        ]
+      },
+      "path": "~/Loot"
+    },
+    {
+      "name": "Orkcamploot",
+      "type": "loottable",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "orkcamploot",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/dnd_craft/loot_tables/chests/orkcamploot.json"
+        ]
+      },
+      "path": "~/Loot"
+    },
+    {
+      "name": "RustyMace",
+      "type": "tool",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "rusty_mace",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/dndcraft/item/RustyMaceItem.java",
+          "src/main/resources/assets/dnd_craft/models/item/rusty_mace.json"
+        ]
+      },
+      "path": "~/Weapons"
+    },
+    {
+      "name": "Goblinhutloot",
+      "type": "loottable",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "goblinhutloot",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/dnd_craft/loot_tables/chests/lostcamploot.json"
+        ]
+      },
+      "path": "~/Loot"
+    },
+    {
+      "name": "Lifeextraperlevel",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "lifeextraperlevel",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/dndcraft/procedures/LifeextraperlevelProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "amount",
+            "type": "number"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/ClassSystem"
+    },
+    {
+      "name": "HarpyOnEntityTickUpdate",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "harpy_on_entity_tick_update",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/dndcraft/procedures/HarpyOnEntityTickUpdateProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "sourceentity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Procedures"
+    },
+    {
+      "name": "MimicEntityIsHurt",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mimic_entity_is_hurt",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/dndcraft/procedures/MimicEntityIsHurtProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "sourceentity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Procedures"
+    },
+    {
+      "name": "GoblinChiefEntityIsHurt",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "goblin_chief_entity_is_hurt",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/dndcraft/procedures/GoblinChiefEntityIsHurtProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "amount",
+            "type": "number"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Procedures"
+    },
+    {
+      "name": "Battalestafftwohanded",
+      "type": "tool",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "battalestafftwohanded",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/dndcraft/item/BattalestafftwohandedItem.java",
+          "src/main/resources/assets/dnd_craft/models/item/battalestafftwohanded.json"
+        ]
+      },
+      "path": "~/Weapons"
+    },
+    {
+      "name": "BattleStaffRightclickedOnBlock",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "battle_staff_rightclicked_on_block",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/dndcraft/procedures/BattleStaffRightclickedOnBlockProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Procedures"
+    },
+    {
+      "name": "BattalestafftwohandedRightclickedOnBlock",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "battalestafftwohanded_rightclicked_on_block",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/dndcraft/procedures/BattalestafftwohandedRightclickedOnBlockProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Procedures"
+    },
+    {
+      "name": "BanjoRightclickedOnBlock",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "banjo_rightclicked_on_block",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/dndcraft/procedures/BanjoRightclickedOnBlockProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "itemstack",
+            "type": "itemstack"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Magic"
+    },
+    {
+      "name": "BanjoItemInHandTick",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "banjo_item_in_hand_tick",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/dndcraft/procedures/BanjoItemInHandTickProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "sourceentity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Procedures"
+    },
+    {
+      "name": "Banjo",
+      "type": "tool",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "banjo",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/dnd_craft/models/item/banjo.json",
+          "src/main/java/net/mcreator/dndcraft/item/BanjoItem.java"
+        ]
+      },
+      "path": "~/Magic"
+    },
+    {
+      "name": "MimicPlayerCollidesWithThisEntity",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mimic_player_collides_with_this_entity",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/dndcraft/procedures/MimicPlayerCollidesWithThisEntityProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "sourceentity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Procedures"
+    },
+    {
+      "name": "MagicChoose",
+      "type": "gui",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "magic_choose",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/dndcraft/client/gui/MagicChooseScreen.java",
+          "src/main/java/net/mcreator/dndcraft/network/MagicChooseButtonMessage.java",
+          "src/main/java/net/mcreator/dndcraft/world/inventory/MagicChooseMenu.java"
+        ]
+      },
+      "path": "~/Magic"
+    },
+    {
+      "name": "MagicWandRightclickedOnBlock",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "magic_wand_rightclicked_on_block",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/dndcraft/procedures/MagicWandRightclickedOnBlockProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "itemstack",
+            "type": "itemstack"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Magic"
+    },
+    {
+      "name": "MagicWand",
+      "type": "item",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "magic_wand",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/dnd_craft/models/item/magic_wand.json",
+          "src/main/java/net/mcreator/dndcraft/item/MagicWandItem.java"
+        ]
+      },
+      "path": "~/Magic"
+    },
+    {
+      "name": "Firearrow",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "firearrow",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/dndcraft/procedures/FirearrowProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Magic"
+    },
+    {
+      "name": "Magier",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "magier",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/dndcraft/procedures/MagierProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/ClassSystem/Magier"
+    },
+    {
+      "name": "Magiergui",
+      "type": "gui",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "magiergui",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/dndcraft/network/MagierguiButtonMessage.java",
+          "src/main/java/net/mcreator/dndcraft/client/gui/MagierguiScreen.java",
+          "src/main/java/net/mcreator/dndcraft/world/inventory/MagierguiMenu.java"
+        ]
+      },
+      "path": "~/ClassSystem/Magier"
+    },
+    {
+      "name": "Magieropen",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "magieropen",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/dndcraft/procedures/MagieropenProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/ClassSystem/Magier"
+    },
+    {
+      "name": "MagicWandRightclicked",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "spellcast",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/dndcraft/procedures/MagicWandRightclickedProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/ClassSystem/Magier"
+    },
+    {
+      "name": "Coldray",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "coldray",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/dndcraft/procedures/ColdrayProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Magic"
+    },
+    {
+      "name": "Thunderwave",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "thunderwave",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/dndcraft/procedures/ThunderwaveProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Magic"
+    },
+    {
+      "name": "Fakelife",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "fakelife",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/dndcraft/procedures/FakelifeProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Magic"
+    },
+    {
+      "name": "Ivisibility",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ivisibility",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/dndcraft/procedures/IvisibilityProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Magic"
+    },
+    {
+      "name": "Nightvision",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "nightvision",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/dndcraft/procedures/NightvisionProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Magic"
+    },
+    {
+      "name": "Mana",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mana",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/dndcraft/procedures/ManaProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Procedures"
+    },
+    {
+      "name": "Fireball",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "fireball",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/dndcraft/procedures/FireballProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Magic"
+    },
+    {
+      "name": "Fireball2ProjectileHitsLivingEntity",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "fireball_2_projectile_hits_living_entity",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/dndcraft/procedures/Fireball2ProjectileHitsLivingEntityProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Magic"
+    },
+    {
+      "name": "Fireball2",
+      "type": "projectile",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "fireball_2",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/dndcraft/entity/Fireball2Entity.java"
+        ]
+      },
+      "path": "~/Magic"
+    },
+    {
+      "name": "Fireball2WhileProjectileFlyingTick",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "fireball_2_while_projectile_flying_tick",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/dndcraft/procedures/Fireball2WhileProjectileFlyingTickProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Magic"
+    },
+    {
+      "name": "Fireball2ProjectileHitsBlock",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "fireball_2_projectile_hits_block",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/dndcraft/procedures/Fireball2ProjectileHitsBlockProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Magic"
+    },
+    {
+      "name": "Snowstorm",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "snowstorm",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/dndcraft/procedures/SnowstormProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Procedures"
+    },
+    {
+      "name": "PoisonedDagger",
+      "type": "tool",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "poisoned_dagger",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/dndcraft/item/PoisonedDaggerItem.java",
+          "src/main/resources/assets/dnd_craft/models/item/poisoned_dagger.json"
+        ]
+      },
+      "path": "~/Magic Items"
+    },
+    {
+      "name": "Poisoneddagger2",
+      "type": "tool",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "coated_poisoned_dagger",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/dndcraft/item/Poisoneddagger2Item.java",
+          "src/main/resources/assets/dnd_craft/models/item/coated_poisoned_dagger.json"
+        ]
+      },
+      "path": "~/Magic Items"
+    },
+    {
+      "name": "Poisoneddagger2LivingEntityIsHitWithTool",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "poisoneddagger_2_living_entity_is_hit_with_tool",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/dndcraft/procedures/Poisoneddagger2LivingEntityIsHitWithToolProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "sourceentity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Procedures"
+    },
+    {
+      "name": "PoisonedDaggerRightclicked",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "poisoned_dagger_rightclicked",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/dndcraft/procedures/PoisonedDaggerRightclickedProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Procedures"
+    },
+    {
+      "name": "ColdrayspellProjectileHitsLivingEntity",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "coldrayspell_projectile_hits_living_entity",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/dndcraft/procedures/ColdrayspellProjectileHitsLivingEntityProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Magic"
+    },
+    {
+      "name": "Coldrayspell",
+      "type": "projectile",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "coldrayspell",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/dndcraft/entity/ColdrayspellEntity.java"
+        ]
+      },
+      "path": "~/Magic"
+    },
+    {
+      "name": "ColdrayspellWhileProjectileFlyingTick",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "coldrayspell_while_projectile_flying_tick",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/dndcraft/procedures/ColdrayspellWhileProjectileFlyingTickProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Magic"
+    },
+    {
+      "name": "IronGoblinOnInitialEntitySpawn",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "iron_goblin_on_initial_entity_spawn",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/dndcraft/procedures/IronGoblinOnInitialEntitySpawnProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Procedures"
+    },
+    {
+      "name": "Firewall",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "firewall",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/dndcraft/procedures/FirewallProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Magic"
+    },
+    {
+      "name": "Stronginvisibility",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "stronginvisibility",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/dndcraft/procedures/StronginvisibilityProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Magic"
+    },
+    {
+      "name": "DodgeOnKeyPressed",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "dodge_on_key_pressed",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/dndcraft/procedures/DodgeOnKeyPressedProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Magic"
+    },
+    {
+      "name": "Dodge",
+      "type": "keybind",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "dodge",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/dndcraft/network/DodgeMessage.java"
+        ]
+      },
+      "path": "~/Magic"
+    },
+    {
+      "name": "HealPotionPlayerFinishesUsingItem",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "heal_potion_player_finishes_using_item",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/dndcraft/procedures/HealPotionPlayerFinishesUsingItemProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Procedures"
+    },
+    {
+      "name": "HealPotion",
+      "type": "item",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "heal_potion",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/dnd_craft/models/item/heal_potion.json",
+          "src/main/java/net/mcreator/dndcraft/item/HealPotionItem.java"
+        ]
+      },
+      "path": "~/Magic Items"
+    },
+    {
+      "name": "Potionofstronghealing",
+      "type": "item",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "potionofstronghealing",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/dnd_craft/models/item/potionofstronghealing.json",
+          "src/main/java/net/mcreator/dndcraft/item/PotionofstronghealingItem.java"
+        ]
+      },
+      "path": "~/Magic Items"
+    },
+    {
+      "name": "PotionofstronghealingPlayerFinishesUsingItem",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "potionofstronghealing_player_finishes_using_item",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/dndcraft/procedures/PotionofstronghealingPlayerFinishesUsingItemProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Procedures"
+    },
+    {
+      "name": "SuperiorPotionofHealing",
+      "type": "item",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "superior_potionof_healing",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/dnd_craft/models/item/superior_potionof_healing.json",
+          "src/main/java/net/mcreator/dndcraft/item/SuperiorPotionofHealingItem.java"
+        ]
+      },
+      "path": "~/Magic Items"
+    },
+    {
+      "name": "SuperiorPotionofHealingPlayerFinishesUsingItem",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "superior_potionof_healing_player_finishes_using_item",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/dndcraft/procedures/SuperiorPotionofHealingPlayerFinishesUsingItemProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Procedures"
+    },
+    {
+      "name": "UltimatePotionofhealing",
+      "type": "item",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ultimate_potionofhealing",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/dnd_craft/models/item/ultimate_potionofhealing.json",
+          "src/main/java/net/mcreator/dndcraft/item/UltimatePotionofhealingItem.java"
+        ]
+      },
+      "path": "~/Magic Items"
+    },
+    {
+      "name": "UltimatePotionofhealingPlayerFinishesUsingItem",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ultimate_potionofhealing_player_finishes_using_item",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/dndcraft/procedures/UltimatePotionofhealingPlayerFinishesUsingItemProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Procedures"
+    },
+    {
+      "name": "PoisonVialPlayerFinishesUsingItem",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "poison_vial_player_finishes_using_item",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/dndcraft/procedures/PoisonVialPlayerFinishesUsingItemProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Procedures"
+    },
+    {
+      "name": "PoisonVialEntitySwingsItem",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "poison_vial_entity_swings_item",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/dndcraft/procedures/PoisonVialEntitySwingsItemProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "itemstack",
+            "type": "itemstack"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Procedures"
+    },
+    {
+      "name": "PoisonVial",
+      "type": "item",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "poison_vial",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/dndcraft/item/PoisonVialItem.java",
+          "src/main/resources/assets/dnd_craft/models/item/poison_vial.json"
+        ]
+      }
+    },
+    {
+      "name": "EntityHit",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "entity_hit",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/dndcraft/procedures/EntityHitProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "immediatesourceentity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Procedures"
+    },
+    {
+      "name": "Ogrehit",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ogrehit",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/dndcraft/procedures/OgrehitProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "sourceentity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Procedures"
+    },
+    {
+      "name": "Chestmimic",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "chestmimic",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/dndcraft/procedures/ChestmimicProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Procedures"
+    },
+    {
+      "name": "Ogre2OnEntityTickUpdate",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ogre_2_on_entity_tick_update",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/dndcraft/procedures/Ogre2OnEntityTickUpdateProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Procedures"
+    },
+    {
+      "name": "Slimy",
+      "type": "potioneffect",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "slimy",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/dndcraft/potion/SlimyMobEffect.java"
+        ]
+      },
+      "path": "~/OverlaysEffectsParticles"
+    },
+    {
+      "name": "SlimyOverlay",
+      "type": "overlay",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "slimy_overlay",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/dndcraft/client/screens/SlimyOverlayOverlay.java"
+        ]
+      },
+      "path": "~/OverlaysEffectsParticles"
+    },
+    {
+      "name": "SlimyOverlayDisplayOverlayIngame",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "slimy_overlay_display_overlay_ingame",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/mcreator/dndcraft/procedures/SlimyOverlayDisplayOverlayIngameProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Procedures"
+    },
+    {
+      "name": "Slimyparticle",
+      "type": "particle",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "slimyparticle",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/dndcraft/client/particle/SlimyparticleParticle.java",
+          "src/main/resources/assets/dnd_craft/particles/slimyparticle.json"
+        ]
+      },
+      "path": "~/OverlaysEffectsParticles"
+    },
+    {
+      "name": "Jelly",
+      "type": "potioneffect",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "jelly",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/dndcraft/potion/JellyMobEffect.java"
+        ]
+      },
+      "path": "~/OverlaysEffectsParticles"
+    },
+    {
+      "name": "Jellyoverlay",
+      "type": "overlay",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "jellyoverlay",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/dndcraft/client/screens/JellyoverlayOverlay.java"
+        ]
+      },
+      "path": "~/OverlaysEffectsParticles"
+    },
+    {
+      "name": "JellyoverlayDisplayOverlayIngame",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "jellyoverlay_display_overlay_ingame",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/mcreator/dndcraft/procedures/JellyoverlayDisplayOverlayIngameProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Procedures"
+    },
+    {
+      "name": "OcherjellyPlayerCollidesWithThisEntity",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ocherjelly_player_collides_with_this_entity",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/dndcraft/procedures/OcherjellyPlayerCollidesWithThisEntityProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "sourceentity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Procedures"
+    },
+    {
+      "name": "Ocherjelly",
+      "type": "animatedentity",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ocherjelly",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/dndcraft/entity/OcherjellyEntity.java",
+          "src/main/resources/assets/dnd_craft/models/item/ocherjelly_spawn_egg.json",
+          "src/main/java/net/mcreator/dndcraft/entity/model/OcherjellyModel.java",
+          "src/main/java/net/mcreator/dndcraft/client/renderer/OcherjellyRenderer.java",
+          "src/main/resources/data/dnd_craft/forge/biome_modifier/ocherjelly_biome_modifier.json"
+        ]
+      },
+      "path": "~/Mobs"
+    },
+    {
+      "name": "Ocherjally2",
+      "type": "animatedentity",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ocherjally_2",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/dndcraft/entity/Ocherjally2Entity.java",
+          "src/main/java/net/mcreator/dndcraft/entity/model/Ocherjally2Model.java",
+          "src/main/java/net/mcreator/dndcraft/client/renderer/Ocherjally2Renderer.java",
+          "src/main/resources/data/dnd_craft/forge/biome_modifier/ocherjally_2_biome_modifier.json"
+        ]
+      },
+      "path": "~/Mobs"
+    },
+    {
+      "name": "OcherjellyItIsStruckByLightning",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ocherjelly_it_is_struck_by_lightning",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/dndcraft/procedures/OcherjellyItIsStruckByLightningProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Procedures"
+    },
+    {
+      "name": "Monk",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "monk",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/dndcraft/procedures/MonkProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/ClassSystem/Monk"
+    },
+    {
+      "name": "MonkGui",
+      "type": "gui",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "monk_gui",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/dndcraft/world/inventory/MonkGuiMenu.java",
+          "src/main/java/net/mcreator/dndcraft/network/MonkGuiButtonMessage.java",
+          "src/main/java/net/mcreator/dndcraft/client/gui/MonkGuiScreen.java"
+        ]
+      },
+      "path": "~/ClassSystem/Monk"
+    },
+    {
+      "name": "Monkopen",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "monkopen",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/dndcraft/procedures/MonkopenProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/ClassSystem/Monk"
+    },
+    {
+      "name": "Ki",
+      "type": "gui",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ki",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/dndcraft/world/inventory/KiMenu.java",
+          "src/main/java/net/mcreator/dndcraft/client/gui/KiScreen.java",
+          "src/main/java/net/mcreator/dndcraft/network/KiButtonMessage.java"
+        ]
+      },
+      "path": "~/ClassSystem/Monk"
+    },
+    {
+      "name": "Strongfistki",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "strongfistki",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/dndcraft/procedures/StrongfistkiProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/ClassSystem/Monk"
+    },
+    {
+      "name": "Fiststorm",
+      "type": "overlay",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "fiststorm",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/dndcraft/client/screens/FiststormOverlay.java"
+        ]
+      },
+      "path": "~/ClassSystem/Monk"
+    },
+    {
+      "name": "RawOwlbearmeatBlock",
+      "type": "block",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "raw_owlbearmeat_block",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/dnd_craft/blockstates/raw_owlbearmeat_block.json",
+          "src/main/resources/assets/dnd_craft/models/item/raw_owlbearmeat_block.json",
+          "src/main/resources/assets/dnd_craft/models/block/raw_owlbearmeat_block.json",
+          "src/main/resources/data/dnd_craft/loot_tables/blocks/raw_owlbearmeat_block.json",
+          "src/main/java/net/mcreator/dndcraft/block/RawOwlbearmeatBlockBlock.java"
+        ]
+      },
+      "path": "~/Food"
+    },
+    {
+      "name": "RawOwlbearmeatBlockOnTickUpdate",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "raw_owlbearmeat_block_on_tick_update",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/dndcraft/procedures/RawOwlbearmeatBlockOnTickUpdateProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Procedures"
+    },
+    {
+      "name": "FiststormDisplayOverlayIngame",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "fiststorm_display_overlay_ingame",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/mcreator/dndcraft/procedures/FiststormDisplayOverlayIngameProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/ClassSystem/Monk"
+    },
+    {
+      "name": "Betterdefense",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "betterdefense",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/dndcraft/procedures/BetterdefenseProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/ClassSystem/Monk"
+    },
+    {
+      "name": "Defensebetter",
+      "type": "overlay",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "defensebetter",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/dndcraft/client/screens/DefensebetterOverlay.java"
+        ]
+      },
+      "path": "~/ClassSystem/Monk"
+    },
+    {
+      "name": "Betterdefensedisplay",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "betterdefensedisplay",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/mcreator/dndcraft/procedures/BetterdefensedisplayProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/ClassSystem/Monk"
+    },
+    {
+      "name": "Monkweaponability",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "monkweaponability",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/dndcraft/procedures/MonkweaponabilityProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "sourceentity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/ClassSystem/Monk"
+    },
+    {
+      "name": "OrkOutpost",
+      "type": "structure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ork_outpost",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/dnd_craft/worldgen/template_pool/ork_outpost.json",
+          "src/main/resources/data/dnd_craft/worldgen/structure/ork_outpost.json",
+          "src/main/resources/data/dnd_craft/worldgen/structure_set/ork_outpost.json"
+        ]
+      },
+      "path": "~/Structures"
+    },
+    {
+      "name": "MimicSludge",
+      "type": "animatedentity",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mimic_sludge",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/dndcraft/client/renderer/MimicSludgeRenderer.java",
+          "src/main/java/net/mcreator/dndcraft/entity/model/MimicSludgeModel.java",
+          "src/main/java/net/mcreator/dndcraft/entity/MimicSludgeEntity.java"
+        ]
+      },
+      "path": "~/Mobs"
+    },
+    {
+      "name": "MimicEntityDies",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mimic_entity_dies",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/dndcraft/procedures/MimicEntityDiesProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Procedures"
+    },
+    {
+      "name": "InvisibleStalkerOnEntityTickUpdate",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "invisible_stalker_on_entity_tick_update",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/dndcraft/procedures/InvisibleStalkerOnEntityTickUpdateProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Procedures"
+    },
+    {
+      "name": "InvisibleStalker",
+      "type": "animatedentity",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "invisible_stalker",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/dndcraft/client/renderer/InvisibleStalkerRenderer.java",
+          "src/main/resources/assets/dnd_craft/models/item/invisible_stalker_spawn_egg.json",
+          "src/main/java/net/mcreator/dndcraft/entity/model/InvisibleStalkerModel.java",
+          "src/main/java/net/mcreator/dndcraft/entity/InvisibleStalkerEntity.java",
+          "src/main/resources/data/dnd_craft/forge/biome_modifier/invisible_stalker_biome_modifier.json"
+        ]
+      },
+      "path": "~/Mobs"
+    },
+    {
+      "name": "Freezing",
+      "type": "potioneffect",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "freezing",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/dndcraft/potion/FreezingMobEffect.java"
+        ]
+      },
+      "path": "~/OverlaysEffectsParticles"
+    },
+    {
+      "name": "FreeziungoverlayDisplayOverlayIngame",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "freeziungoverlay_display_overlay_ingame",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/mcreator/dndcraft/procedures/FreeziungoverlayDisplayOverlayIngameProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Procedures"
+    },
+    {
+      "name": "Freeziungoverlay",
+      "type": "overlay",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "freeziungoverlay",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/dndcraft/client/screens/FreeziungoverlayOverlay.java"
+        ]
+      },
+      "path": "~/OverlaysEffectsParticles"
+    },
+    {
+      "name": "BasiliskEntityIsHurt",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "basilisk_entity_is_hurt",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/dndcraft/procedures/BasiliskEntityIsHurtProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "sourceentity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Procedures"
+    },
+    {
+      "name": "Basilisk",
+      "type": "animatedentity",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "basilisk",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/dnd_craft/models/item/basilisk_spawn_egg.json",
+          "src/main/resources/data/dnd_craft/forge/biome_modifier/basilisk_biome_modifier.json",
+          "src/main/java/net/mcreator/dndcraft/entity/BasiliskEntity.java",
+          "src/main/java/net/mcreator/dndcraft/client/renderer/BasiliskRenderer.java",
+          "src/main/java/net/mcreator/dndcraft/entity/model/BasiliskModel.java"
+        ]
+      },
+      "path": "~/Mobs"
+    },
+    {
+      "name": "Cookedowlbearmeatblock2",
+      "type": "block",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "cookedowlbearmeatblock_2",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/dnd_craft/models/item/cookedowlbearmeatblock_2.json",
+          "src/main/java/net/mcreator/dndcraft/block/Cookedowlbearmeatblock2Block.java",
+          "src/main/resources/assets/dnd_craft/blockstates/cookedowlbearmeatblock_2.json",
+          "src/main/resources/data/dnd_craft/loot_tables/blocks/cookedowlbearmeatblock_2.json",
+          "src/main/resources/assets/dnd_craft/models/block/cookedowlbearmeatblock_2.json"
+        ]
+      },
+      "path": "~/Food"
+    },
+    {
+      "name": "Cookedowlbearmeatblock3",
+      "type": "block",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "cookedowlbearmeatblock_3",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/dnd_craft/models/block/cookedowlbearmeatblock_3.json",
+          "src/main/resources/data/dnd_craft/loot_tables/blocks/cookedowlbearmeatblock_3.json",
+          "src/main/resources/assets/dnd_craft/models/item/cookedowlbearmeatblock_3.json",
+          "src/main/resources/assets/dnd_craft/blockstates/cookedowlbearmeatblock_3.json",
+          "src/main/java/net/mcreator/dndcraft/block/Cookedowlbearmeatblock3Block.java"
+        ]
+      },
+      "path": "~/Food"
+    },
+    {
+      "name": "Cookedowlbearmeatblock4",
+      "type": "block",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "cookedowlbearmeatblock_4",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/dnd_craft/models/item/cookedowlbearmeatblock_4.json",
+          "src/main/resources/assets/dnd_craft/models/block/cookedowlbearmeatblock_4.json",
+          "src/main/java/net/mcreator/dndcraft/block/Cookedowlbearmeatblock4Block.java",
+          "src/main/resources/assets/dnd_craft/blockstates/cookedowlbearmeatblock_4.json",
+          "src/main/resources/data/dnd_craft/loot_tables/blocks/cookedowlbearmeatblock_4.json"
+        ]
+      },
+      "path": "~/Food"
+    },
+    {
+      "name": "DaggerRightclickedOnBlock",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "dagger_rightclicked_on_block",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/dndcraft/procedures/DaggerRightclickedOnBlockProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "itemstack",
+            "type": "itemstack"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Procedures"
+    },
+    {
+      "name": "Owlbearmeatblockrecipe",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "owlbearmeatblockrecipe",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/dnd_craft/recipes/owlbearmeatblockrecipe.json"
+        ]
+      },
+      "path": "~/Recipes"
+    },
+    {
+      "name": "Owlbearmeatrecipe",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "owlbearmeatrecipe",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/dnd_craft/recipes/owlbearmeatrecipe.json"
+        ]
+      },
+      "path": "~/Recipes"
+    },
+    {
+      "name": "OwlbearMeatStripe",
+      "type": "item",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "owlbear_meat_stripe",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/dnd_craft/models/item/owlbear_meat_stripe.json",
+          "src/main/java/net/mcreator/dndcraft/item/OwlbearMeatStripeItem.java"
+        ]
+      },
+      "path": "~/Food"
+    },
+    {
+      "name": "Owlbearregenerate",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "owlbearregenerate",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/dndcraft/procedures/OwlbearregenerateProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Procedures"
+    },
+    {
+      "name": "Owlbearregenerate2",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "owlbearregenerate_2",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/dndcraft/procedures/Owlbearregenerate2Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Procedures"
+    },
+    {
+      "name": "Blood",
+      "type": "particle",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "blood",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/dndcraft/client/particle/BloodParticle.java",
+          "src/main/resources/assets/dnd_craft/particles/blood.json"
+        ]
+      },
+      "path": "~/OverlaysEffectsParticles"
+    },
+    {
+      "name": "Bloodgore",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "bloodgore",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/dndcraft/procedures/BloodgoreProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "damagesource",
+            "type": "damagesource"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Procedures"
+    },
+    {
+      "name": "PlatinumOre",
+      "type": "block",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "platinum_ore",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/dnd_craft/worldgen/configured_feature/platinum_ore.json",
+          "src/main/resources/assets/dnd_craft/models/block/platinum_ore.json",
+          "src/main/resources/data/dnd_craft/forge/biome_modifier/platinum_ore_biome_modifier.json",
+          "src/main/resources/data/dnd_craft/loot_tables/blocks/platinum_ore.json",
+          "src/main/resources/assets/dnd_craft/blockstates/platinum_ore.json",
+          "src/main/resources/assets/dnd_craft/models/item/platinum_ore.json",
+          "src/main/java/net/mcreator/dndcraft/block/PlatinumOreBlock.java",
+          "src/main/resources/data/dnd_craft/worldgen/placed_feature/platinum_ore.json"
+        ]
+      }
+    },
+    {
+      "name": "Rawplatinumore",
+      "type": "item",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "rawplatinumore",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/dndcraft/item/RawplatinumoreItem.java",
+          "src/main/resources/assets/dnd_craft/models/item/rawplatinumore.json"
+        ]
+      }
+    },
+    {
+      "name": "Plainumingot",
+      "type": "item",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "plainumingot",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/dnd_craft/models/item/plainumingot.json",
+          "src/main/java/net/mcreator/dndcraft/item/PlainumingotItem.java"
+        ]
+      }
+    },
+    {
+      "name": "Owlbearregenerate3",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "owlbearregenerate_3",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/dndcraft/procedures/Owlbearregenerate3Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Procedures"
+    },
+    {
+      "name": "Platinumcook",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "platinumcook",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/dnd_craft/recipes/platinumcook.json"
+        ]
+      },
+      "path": "~/Recipes"
+    },
+    {
+      "name": "Owlbearmeatcookingrecipe",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "owlbearmeatcookingrecipe",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/dnd_craft/recipes/owlbearmeatcookingrecipe.json"
+        ]
+      },
+      "path": "~/Recipes"
+    },
+    {
+      "name": "MagicscrollFirearrowRightclicked",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "magicscroll_firearrow_rightclicked",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/dndcraft/procedures/MagicscrollFirearrowRightclickedProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Magic Items"
+    },
+    {
+      "name": "MagicscrollFirearrow",
+      "type": "item",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "magicscroll_firearrow",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/dndcraft/item/MagicscrollFirearrowItem.java",
+          "src/main/resources/assets/dnd_craft/models/item/magicscroll_firearrow.json"
+        ]
+      },
+      "path": "~/Magic Items"
+    },
+    {
+      "name": "Scrapsheet",
+      "type": "item",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "scrapsheet",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/dnd_craft/models/item/scrapsheet.json",
+          "src/main/java/net/mcreator/dndcraft/item/ScrapsheetItem.java"
+        ]
+      }
+    },
+    {
+      "name": "Scrapsheetrecipe",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "scrapsheetrecipe",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/dnd_craft/recipes/scrapsheetrecipe.json"
+        ]
+      },
+      "path": "~/Recipes"
+    },
+    {
+      "name": "Ogreloot",
+      "type": "loottable",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ogreloot",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/dnd_craft/loot_tables/entities/ogre.json"
+        ]
+      },
+      "path": "~/Loot"
+    },
+    {
+      "name": "Scrapblock",
+      "type": "block",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "scrapblock",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/dndcraft/block/ScrapblockBlock.java",
+          "src/main/resources/data/dnd_craft/loot_tables/blocks/scrapblock.json",
+          "src/main/resources/assets/dnd_craft/models/item/scrapblock.json",
+          "src/main/resources/assets/dnd_craft/blockstates/scrapblock.json",
+          "src/main/resources/assets/dnd_craft/models/block/scrapblock.json"
+        ]
+      }
+    },
+    {
+      "name": "Scrapblcokrecipe",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "scrapblcokrecipe",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/dnd_craft/recipes/scrapblcokrecipe.json"
+        ]
+      },
+      "path": "~/Recipes"
+    },
+    {
+      "name": "CraftOpGapple",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "craft_op_gapple",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/dnd_craft/recipes/craft_op_gapple.json"
+        ]
+      },
+      "path": "~/Recipes"
+    },
+    {
+      "name": "DungeonHunter",
+      "type": "achievement",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "dungeon_hunter",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/dnd_craft/advancements/dungeon_hunter.json"
+        ]
+      },
+      "path": "~/Achievements"
+    },
+    {
+      "name": "DungeonGourmet",
+      "type": "achievement",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "dungeon_gourmet",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/dnd_craft/advancements/dungeon_gourmet.json"
+        ]
+      },
+      "path": "~/Achievements"
+    },
+    {
+      "name": "TheBeginning",
+      "type": "achievement",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "the_beginning",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/dnd_craft/advancements/the_beginning.json"
+        ]
+      },
+      "path": "~/Achievements"
+    },
+    {
+      "name": "WeaponCollector",
+      "type": "achievement",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "weapon_collector",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/dnd_craft/advancements/weapon_collector.json"
+        ]
+      },
+      "path": "~/Achievements"
+    },
+    {
+      "name": "Businessman",
+      "type": "achievement",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "businessman",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/dnd_craft/advancements/businessman.json"
+        ]
+      },
+      "path": "~/Achievements"
+    },
+    {
+      "name": "Adamantiumattack",
+      "type": "achievement",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "adamantiumattack",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/dnd_craft/advancements/adamantiumattack.json"
+        ]
+      },
+      "path": "~/Achievements"
+    },
+    {
+      "name": "Drums",
+      "type": "tool",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "drums",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/dnd_craft/models/item/drums.json",
+          "src/main/java/net/mcreator/dndcraft/item/DrumsItem.java"
+        ]
+      },
+      "path": "~/Magic"
+    },
+    {
+      "name": "Drumsrichtclick",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "drumsrichtclick",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/dndcraft/procedures/DrumsrichtclickProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "itemstack",
+            "type": "itemstack"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Magic"
+    },
+    {
+      "name": "Drumhit",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "drumhit",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/dndcraft/procedures/DrumhitProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "sourceentity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Magic"
+    },
+    {
+      "name": "Setmana",
+      "type": "command",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "setmana",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/dndcraft/command/SetmanaCommand.java"
+        ]
+      },
+      "path": "~/Commands"
+    },
+    {
+      "name": "SetManapcd",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "set_manapcd",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/dndcraft/procedures/SetManapcdProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "arguments",
+            "type": "cmdcontext"
+          }
+        ]
+      },
+      "path": "~/Commands"
+    },
+    {
+      "name": "Discord",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "discord",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/dndcraft/procedures/DiscordProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Procedures"
+    },
+    {
+      "name": "WargOnInitialEntitySpawn",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "warg_on_initial_entity_spawn",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/dndcraft/procedures/WargOnInitialEntitySpawnProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Mobs"
+    },
+    {
+      "name": "Warg",
+      "type": "animatedentity",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "warg",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/dndcraft/entity/model/WargModel.java",
+          "src/main/java/net/mcreator/dndcraft/client/renderer/WargRenderer.java",
+          "src/main/resources/data/dnd_craft/forge/biome_modifier/warg_biome_modifier.json",
+          "src/main/resources/assets/dnd_craft/models/item/warg_spawn_egg.json",
+          "src/main/java/net/mcreator/dndcraft/entity/WargEntity.java"
+        ]
+      },
+      "path": "~/Mobs"
+    },
+    {
+      "name": "IronGoblinOnEntityTickUpdate",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "iron_goblin_on_entity_tick_update",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/dndcraft/procedures/IronGoblinOnEntityTickUpdateProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Mobs"
+    },
+    {
+      "name": "Bowblin",
+      "type": "animatedentity",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "bowblin",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/dndcraft/client/renderer/BowblinRenderer.java",
+          "src/main/resources/data/dnd_craft/forge/biome_modifier/bowblin_biome_modifier.json",
+          "src/main/java/net/mcreator/dndcraft/entity/model/BowblinModel.java",
+          "src/main/java/net/mcreator/dndcraft/entity/BowblinEntity.java",
+          "src/main/java/net/mcreator/dndcraft/entity/BowblinEntityProjectile.java"
+        ]
+      },
+      "path": "~/Mobs"
+    },
+    {
+      "name": "Bowitem",
+      "type": "item",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "bowitem",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/dndcraft/item/BowitemItem.java",
+          "src/main/resources/assets/dnd_craft/models/item/bowitem.json"
+        ]
+      }
+    },
+    {
+      "name": "Arrow",
+      "type": "projectile",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "arrow",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/dndcraft/entity/ArrowEntity.java"
+        ]
+      }
+    },
+    {
+      "name": "Cook",
+      "type": "animatedentity",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "cook",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/dndcraft/client/renderer/CookRenderer.java",
+          "src/main/java/net/mcreator/dndcraft/entity/CookEntity.java",
+          "src/main/resources/assets/dnd_craft/models/item/cook_spawn_egg.json",
+          "src/main/java/net/mcreator/dndcraft/entity/model/CookModel.java"
+        ]
+      },
+      "path": "~/NPCs"
+    },
+    {
+      "name": "CookGui",
+      "type": "gui",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "cook_gui",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/dndcraft/client/gui/CookGuiScreen.java",
+          "src/main/java/net/mcreator/dndcraft/network/CookGuiButtonMessage.java",
+          "src/main/java/net/mcreator/dndcraft/world/inventory/CookGuiMenu.java"
+        ]
+      },
+      "path": "~/NPCs"
+    },
+    {
+      "name": "IfnoQuest",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ifno_quest",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/mcreator/dndcraft/procedures/IfnoQuestProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/NPCs"
+    },
+    {
+      "name": "DailyRation",
+      "type": "item",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "daily_ration",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/dndcraft/item/DailyRationItem.java",
+          "src/main/resources/assets/dnd_craft/models/item/daily_ration.json"
+        ]
+      },
+      "path": "~/Food"
+    },
+    {
+      "name": "DailyRationRecipe",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "daily_ration_recipe",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/dnd_craft/recipes/daily_ration_recipe.json"
+        ]
+      },
+      "path": "~/Recipes"
+    },
+    {
+      "name": "DailyRationQuest",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "daily_ration_quest",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/dndcraft/procedures/DailyRationQuestProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/NPCs"
+    },
+    {
+      "name": "DailyRationLoot",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "daily_ration_loot",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/dndcraft/procedures/DailyRationLootProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/NPCs"
+    },
+    {
+      "name": "Monsterquestshow",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "monsterquestshow",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/mcreator/dndcraft/procedures/MonsterquestshowProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/NPCs"
+    },
+    {
+      "name": "Monsterdelightquest",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "monsterdelightquest",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/dndcraft/procedures/MonsterdelightquestProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/NPCs"
+    },
+    {
+      "name": "MonsterDelightloot",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "monster_delightloot",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/dndcraft/procedures/MonsterDelightlootProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/NPCs"
+    },
+    {
+      "name": "Monsterquestunlock",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "monsterquestunlock",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/mcreator/dndcraft/procedures/MonsterquestunlockProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/NPCs"
+    },
+    {
+      "name": "CooksHouse",
+      "type": "structure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "cooks_house",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/dnd_craft/worldgen/structure/cooks_house.json",
+          "src/main/resources/data/dnd_craft/worldgen/structure_set/cooks_house.json",
+          "src/main/resources/data/dnd_craft/worldgen/template_pool/cooks_house.json"
+        ]
+      },
+      "path": "~/Structures"
+    },
+    {
+      "name": "Veteranquestshow",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "veteranquestshow",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/mcreator/dndcraft/procedures/VeteranquestshowProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/NPCs"
+    },
+    {
+      "name": "Veteranquest",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "veteranquest",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/dndcraft/procedures/VeteranquestProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/NPCs"
+    },
+    {
+      "name": "CookingVeteranLoot",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "cooking_veteran_loot",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/dndcraft/procedures/CookingVeteranLootProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/NPCs"
+    },
+    {
+      "name": "OwlbearDrumsticks",
+      "type": "item",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "owlbear_drumsticks",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/dndcraft/item/OwlbearDrumsticksItem.java",
+          "src/main/resources/assets/dnd_craft/models/item/owlbear_drumsticks.json"
+        ]
+      },
+      "path": "~/Food"
+    },
+    {
+      "name": "ResiI",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "resi_i",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/dndcraft/procedures/ResiIProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Food"
+    },
+    {
+      "name": "Orksteaak",
+      "type": "item",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "orksteaak",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/dnd_craft/models/item/orksteaak.json",
+          "src/main/java/net/mcreator/dndcraft/item/OrksteaakItem.java"
+        ]
+      },
+      "path": "~/Food"
+    },
+    {
+      "name": "StrenI",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "stren_i",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/dndcraft/procedures/StrenIProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Food"
+    },
+    {
+      "name": "Owlbeardrumsticksrecipe",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "owlbeardrumsticksrecipe",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/dnd_craft/recipes/owlbeardrumsticksrecipe.json"
+        ]
+      },
+      "path": "~/Recipes"
+    },
+    {
+      "name": "Orksteakrecipe",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "orksteakrecipe",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/dnd_craft/recipes/orksteakrecipe.json"
+        ]
+      },
+      "path": "~/Recipes"
+    },
+    {
+      "name": "OrkSteakSmelt",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ork_steak_smelt",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/dnd_craft/recipes/ork_steak_smelt.json"
+        ]
+      },
+      "path": "~/Recipes"
+    },
+    {
+      "name": "OrkSteakSmoke",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ork_steak_smoke",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/dnd_craft/recipes/ork_steak_smoke.json"
+        ]
+      },
+      "path": "~/Recipes"
+    },
+    {
+      "name": "OrkSteakCampfireSmoke",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ork_steak_campfire_smoke",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/dnd_craft/recipes/ork_steak_campfire_smoke.json"
+        ]
+      },
+      "path": "~/Recipes"
+    },
+    {
+      "name": "SetKiPcd",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "set_ki_pcd",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/dndcraft/procedures/SetKiPcdProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "arguments",
+            "type": "cmdcontext"
+          }
+        ]
+      },
+      "path": "~/Commands"
+    },
+    {
+      "name": "SetKi",
+      "type": "command",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "set_ki",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/dndcraft/command/SetKiCommand.java"
+        ]
+      },
+      "path": "~/Commands"
+    },
+    {
+      "name": "KiEffect",
+      "type": "potioneffect",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ki_effect",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/dndcraft/potion/KiEffectMobEffect.java"
+        ]
+      },
+      "path": "~/ClassSystem/Monk"
+    },
+    {
+      "name": "KiEffect2",
+      "type": "potioneffect",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ki_effect_2",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/dndcraft/potion/KiEffect2MobEffect.java"
+        ]
+      },
+      "path": "~/ClassSystem/Monk"
+    },
+    {
+      "name": "SetLevel",
+      "type": "command",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "set_level",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/dndcraft/command/SetLevelCommand.java"
+        ]
+      },
+      "path": "~/Commands"
+    },
+    {
+      "name": "SetLevelPcd",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "set_level_pcd",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/dndcraft/procedures/SetLevelPcdProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "arguments",
+            "type": "cmdcontext"
+          },
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Commands"
+    }
+  ],
+  "variable_elements": [
+    {
+      "name": "Class_Variable",
+      "type": "string",
+      "scope": "player_lifetime",
+      "value": "false"
+    },
+    {
+      "name": "first_join",
+      "type": "logic",
+      "scope": "world",
+      "value": "true"
+    },
+    {
+      "name": "wutrausch",
+      "type": "logic",
+      "scope": "player_lifetime",
+      "value": "false"
+    },
+    {
+      "name": "cooldown",
+      "type": "number",
+      "scope": "player_lifetime",
+      "value": "0"
+    },
+    {
+      "name": "PlayerLevel",
+      "type": "number",
+      "scope": "player_lifetime",
+      "value": "0"
+    },
+    {
+      "name": "Spell",
+      "type": "string",
+      "scope": "player_lifetime",
+      "value": "\"\""
+    },
+    {
+      "name": "Mana",
+      "type": "number",
+      "scope": "player_lifetime",
+      "value": "100.0"
+    },
+    {
+      "name": "Dogde",
+      "type": "logic",
+      "scope": "player_lifetime",
+      "value": "false"
+    },
+    {
+      "name": "Ki",
+      "type": "number",
+      "scope": "player_lifetime",
+      "value": "0"
+    },
+    {
+      "name": "Lvlxp",
+      "type": "number",
+      "scope": "player_lifetime",
+      "value": "0"
+    },
+    {
+      "name": "Discord",
+      "type": "logic",
+      "scope": "player_persistent",
+      "value": "true"
+    },
+    {
+      "name": "DailyRationQuest",
+      "type": "number",
+      "scope": "player_lifetime",
+      "value": "0"
+    },
+    {
+      "name": "Monsterdelightquest",
+      "type": "number",
+      "scope": "player_lifetime",
+      "value": "0"
+    },
+    {
+      "name": "CookingVeteranquest",
+      "type": "number",
+      "scope": "player_lifetime",
+      "value": "0.0"
+    },
+    {
+      "name": "MaxMana",
+      "type": "number",
+      "scope": "player_lifetime",
+      "value": "100.0"
+    },
+    {
+      "name": "MaxKi",
+      "type": "number",
+      "scope": "player_lifetime",
+      "value": "2.0"
+    }
+  ],
+  "sound_elements": [
+    {
+      "name": "ogre_death",
+      "files": [
+        "225883-7cefacb7-8116-4eea-915c-3ad56f0c639b"
+      ],
+      "category": "hostile",
+      "subtitle": "ogre grunts"
+    }
+  ],
+  "tag_elements": {
+    "BLOCKS:minecraft:needs_diamond_tool": [
+      "~CUSTOM:AdantiumOre"
+    ],
+    "BLOCKS:minecraft:needs_iron_tool": [
+      "~CUSTOM:PlatinumOre"
+    ],
+    "BLOCKS:minecraft:mineable/pickaxe": [
+      "~CUSTOM:PlatinumOre",
+      "~CUSTOM:AdantiumOre"
+    ],
+    "ITEMS:minecraft:pickaxes": [
+      "~CUSTOM:AdamantiumWarHammer",
+      "~CUSTOM:TwoHandedAdamantiumHammer",
+      "~CUSTOM:LightAdamantiumHammer",
+      "~CUSTOM:WarHammer",
+      "~CUSTOM:TwoHandedhammer",
+      "~CUSTOM:LightHammer"
+    ],
+    "ITEMS:minecraft:axes": [
+      "~CUSTOM:RustyMace",
+      "~CUSTOM:AdamantiumBattleAxe",
+      "~CUSTOM:TwoHandedAdamantiumAxe",
+      "~CUSTOM:AdamantiumMace",
+      "~CUSTOM:AdamantiumAx",
+      "~CUSTOM:BattleAxe",
+      "~CUSTOM:TwoHandedAxe",
+      "~CUSTOM:Mace",
+      "~CUSTOM:Ax"
+    ],
+    "ITEMS:minecraft:swords": [
+      "~CUSTOM:Drums",
+      "~CUSTOM:Poisoneddagger2",
+      "~CUSTOM:PoisonedDagger",
+      "~CUSTOM:Banjo",
+      "~CUSTOM:Battalestafftwohanded",
+      "~CUSTOM:MonsterDagger",
+      "~CUSTOM:HarpySpear",
+      "~CUSTOM:AdamantiumScimitar",
+      "~CUSTOM:TwoHandedAdamantiumClaymore",
+      "~CUSTOM:AdamantiumGladius",
+      "~CUSTOM:AdamantiumSpear",
+      "~CUSTOM:AdamantiumClaymore",
+      "~CUSTOM:AdamantiumDagger",
+      "~CUSTOM:GhostAxe",
+      "~CUSTOM:Scimitar",
+      "~CUSTOM:TwoHandedClaymore",
+      "~CUSTOM:Claymore",
+      "~CUSTOM:Gladius",
+      "~CUSTOM:ZwoHandedClub",
+      "~CUSTOM:Spear",
+      "~CUSTOM:Club",
+      "~CUSTOM:BattleStaff",
+      "~CUSTOM:Dagger"
+    ],
+    "ITEMS:minecraft:hoes": [
+      "~CUSTOM:AdamantiumSickle",
+      "~CUSTOM:Sickle"
+    ]
+  },
+  "tab_element_order": {
+    "CUSTOM:DnD": [
+      "MagicWand",
+      "MonsterDagger",
+      "PoisonedDagger",
+      "RustyMace",
+      "Dagger",
+      "Ax",
+      "LightHammer",
+      "BattleStaff",
+      "Club",
+      "ZwoHandedClub",
+      "Spear",
+      "Mace",
+      "MetalRod",
+      "Gladius",
+      "Claymore",
+      "TwoHandedhammer",
+      "WarHammer",
+      "TwoHandedAxe",
+      "BattleAxe",
+      "TwoHandedClaymore",
+      "Scimitar",
+      "Sickle",
+      "AdamantiumDagger",
+      "AdamantiumAx",
+      "AdamantiumClaymore",
+      "LightAdamantiumHammer",
+      "AdamantiumSpear",
+      "AdamantiumMace",
+      "AdamantiumGladius",
+      "TwoHandedAdamantiumHammer",
+      "AdamantiumWarHammer",
+      "TwoHandedAdamantiumAxe",
+      "AdamantiumBattleAxe",
+      "TwoHandedAdamantiumClaymore",
+      "AdamantiumScimitar",
+      "AdamantiumSickle",
+      "HarpySpear",
+      "RawOwlbearMeat",
+      "CookedOwlbearMeat",
+      "RawOrkBeef",
+      "CookedOrkBeef",
+      "CopperCoin",
+      "IronCoin",
+      "GoldCoin",
+      "AdamantiumCoin",
+      "PoisonVial",
+      "HealPotion",
+      "Potionofstronghealing",
+      "SuperiorPotionofHealing",
+      "UltimatePotionofhealing",
+      "CookedOwlbearMeatBlock",
+      "Cookedowlbearmeatblock2",
+      "Cookedowlbearmeatblock3",
+      "Cookedowlbearmeatblock4",
+      "RawOwlbearmeatBlock",
+      "PlatinumOre",
+      "Rawplatinumore",
+      "Plainumingot",
+      "AdantiumOre",
+      "RawAdamantiumOre",
+      "AdantiumIngot",
+      "MagicscrollFirearrow",
+      "Scrapsheet",
+      "Scrapblock",
+      "Warg",
+      "Cook",
+      "Ork",
+      "Ogre2",
+      "Harpy",
+      "Owlbear",
+      "Mimic",
+      "Goblin",
+      "Ocherjelly",
+      "GoblinChief",
+      "Basilisk",
+      "InvisibleStalker",
+      "DailyRation",
+      "OwlbearDrumsticks",
+      "Orksteaak",
+      "OwlbearMeatStripe",
+      "AnimalBone",
+      "IronPlate",
+      "AnimalFat",
+      "Soap",
+      "AdamantiumUpgradeSmithingTemplate",
+      "HarpyTooth",
+      "GoblinsBackpack",
+      "Ocherjally2",
+      "Ghoul"
+    ]
+  },
+  "language_map": {
+    "en_us": {
+      "gui.dnd_craft.bardegui.label_rage": "Healing",
+      "advancements.the_beginning.descr": "Start your adventure",
+      "block.dnd_craft.raw_owlbearmeat_block": "Raw Owlbear Meat Block",
+      "gui.dnd_craft.bardegui.label_0_level": "Level 1 (y)",
+      "entity.dnd_craft.goblin_chief": "Goblin Chief",
+      "item.dnd_craft.adamantium_spear": "Adamantium Spear",
+      "advancements.weapon_collector.title": "Weapon Collector",
+      "gui.dnd_craft.cook_gui.button_completed1": "COMPLETED",
+      "gui.dnd_craft.monk_gui.label_level_60": "Level 15 (c)",
+      "gui.dnd_craft.barbar_gui.label_barbarian": "Barbarian",
+      "item.dnd_craft.poison_vial.description_1": "Right-click with weapon in off hand to poison it",
+      "gui.dnd_craft.barbar_gui.label_invincibility": "Invincibility",
+      "item.dnd_craft.poison_vial.description_0": "Craft with Weapons to Make Poisonous Weapons",
+      "item.dnd_craft.drums.description_1": "-Shift rightclick to deal damage to all nearby enemies and let them glow",
+      "item.dnd_craft.drums.description_0": "-Right click to get strengh and speed for 10 seconds",
+      "entity.dnd_craft.cook": "Cook",
+      "gui.dnd_craft.bardegui.label_level_60": "Level 15 (c)",
+      "gui.dnd_craft.magic_choose.label_level_01": "Level 1",
+      "item.dnd_craft.adamantium_coin": "Platinum Coin",
+      "gui.dnd_craft.bardegui.label_invincibility": "Power of the Wind",
+      "entity.dnd_craft.goblin": "Goblin",
+      "entity.dnd_craft.mimic": "Mimic",
+      "block.dnd_craft.cooked_owlbear_meat_block": "Cooked Owlbear Meat Block",
+      "gui.dnd_craft.monk_gui.label_0_level": "Level 1 (y)",
+      "entity.dnd_craft.ghoul": "Ghoul",
+      "gui.cool_mod.classes.button_barbarian": "Barbarian",
+      "item.cool_mod.two_handed_adamantium_claymore": "Two Handed Adamantium Claymore",
+      "item.dnd_craft.harpy_tooth": "Harpy Tooth",
+      "item.cool_mod.gladius": "Gladius",
+      "item.dnd_craft.two_handed_adamantium_hammer": "Two Handed Adamantium Hammer",
+      "item.dnd_craft.basilisk_spawn_egg": "Basilisk Spawn Egg",
+      "item.cool_mod.spear": "Spear",
+      "entity.cool_mod.ogre": "Ogre",
+      "gui.cool_mod.barbar_gui.label_level_60": "Level 60",
+      "entity.dnd_craft.iron_goblin": "Goblin",
+      "effect.dnd_craft.ki_effect": "Ki",
+      "gui.dnd_craft.magic_choose.label_level_10": "Level 4",
+      "item.cool_mod.harpy_tooth": "Harpy Tooth",
+      "gui.dnd_craft.classes.label_druid_and_magician_arent_workin": "(druid is not",
+      "item.dnd_craft.coated_poisoned_dagger.description_0": "Magic Weapon",
+      "item.dnd_craft.coated_poisoned_dagger.description_1": "§4Rare",
+      "entity.cool_mod.mimic": "Mimic",
+      "gui.dnd_craft.magic_choose.button_invisibility": "Invisibility",
+      "gui.dnd_craft.bardegui.label_ghost_axe": "Damage Aura",
+      "gui.dnd_craft.monk_gui.label_ghost_axe": "Unarmored Speed",
+      "item.dnd_craft.cooked_owlbear_meat": "Cooked Owlbear Meat",
+      "item.dnd_craft.light_adamantium_hammer": "Light Adamantium Hammer",
+      "gui.dnd_craft.bardegui.label_barbarian": "Bard",
+      "advancements.adamantiumattack.descr": "Get all adamantium weapons.",
+      "item.dnd_craft.dagger": "Dagger",
+      "item.dnd_craft.superior_potionof_healing.description_1": "§4Rare",
+      "item.dnd_craft.superior_potionof_healing.description_0": "Magic Item",
+      "item.dnd_craft.soap": "Soap",
+      "item.dnd_craft.gold_coin": "Gold Coin",
+      "item.cool_mod.adamantium_scimitar": "Adamantium Scimitar",
+      "item.cool_mod.adamantium_mace": "Adamantium Mace",
+      "item.dnd_craft.ocherjally_2_spawn_egg": "Ocherjelly Spawn Egg",
+      "item.cool_mod.ghost_axe": "Ghost Axe",
+      "effect.dnd_craft.jelly": "Jelly",
+      "item.dnd_craft.animal_fat": "Bone Fat",
+      "gui.dnd_craft.magic_choose.button_flight": "Snow Storm",
+      "gui.cool_mod.classes.label_added_soon": "added soon...)",
+      "item.dnd_craft.rawplatinumore": "Raw Platinum Ore",
+      "gui.dnd_craft.barbar_gui.label_barbarian_strenght": "Barbarian Strenght",
+      "gui.cool_mod.barbar_gui.label_barbarian": "Barbarian",
+      "entity.dnd_craft.ocherjelly": "Ocherjelly",
+      "gui.dnd_craft.monk_gui.button_exit": "EXIT",
+      "item.dnd_craft.metal_rod": "Metal Rod",
+      "gui.dnd_craft.cook_gui.label_quests": "Quests",
+      "item.cool_mod.adamantium_dagger": "Adamantium Dagger",
+      "gui.dnd_craft.magiergui.label_10_level": "Every Level",
+      "item.cool_mod.soap": "Soap",
+      "item.dnd_craft.iron_plate": "Iron Plate",
+      "gui.dnd_craft.monk_gui.label_invincibility": "Spiritual Regeneration",
+      "gui.cool_mod.classes.button_magician": "Magician",
+      "item.dnd_craft.orksteaak": "Orksteak",
+      "item.dnd_craft.ultimate_potionofhealing": "§6Ultimate Potion of Healing",
+      "item.dnd_craft.banjo.description_0": "-Right click to heal",
+      "item.dnd_craft.banjo.description_1": "-Shift rightclick to slow and weaken all enemies in an area and give yourself absorbtion",
+      "gui.dnd_craft.barbar_gui.label_ghost_axe": "Ghost Axe",
+      "gui.cool_mod.barbar_gui.label_0_level": "Level 0",
+      "item.dnd_craft.banjo.description_2": "-Hitting enemies give you increased range for a few seconds and blind them",
+      "entity.cool_mod.ratmodel": "Ratmodel",
+      "gui.dnd_craft.bardegui.button_choose": "Choose",
+      "item.cool_mod.raw_owlbear_meat": "Raw Owlbear Meat",
+      "item.dnd_craft.heal_potion.description_1": "§2Common",
+      "gui.dnd_craft.magic_choose.button_fire_wall": "Fire Wall",
+      "item.dnd_craft.heal_potion.description_0": "Magic Item",
+      "item.dnd_craft.drums.description_2": "-Hit enemies get the levitation effect",
+      "gui.dnd_craft.barbar_gui.label_level_80_passive": "Level 20 (Passive)",
+      "gui.dnd_craft.magiergui.label_level_80_passive": "Level 80 (Passive)",
+      "entity.dnd_craft.mimic_sludge": "Mimic",
+      "item.cool_mod.adamantium_battle_axe": "Adamantium Battle Axe",
+      "item.cool_mod.adamantium_upgrade_smithing_template": "Adamantium Upgrade Smithing Template",
+      "gui.dnd_craft.classes.button_magician": "Magician",
+      "item.cool_mod.light_hammer": "Light Hammer",
+      "item.dnd_craft.adamantium_dagger": "Adamantium Dagger",
+      "gui.dnd_craft.magic_choose.button_invisibility1": "Strong Invisibility",
+      "item.cool_mod.raw_adamantium_ore": "Raw Adamantium Ore",
+      "item.dnd_craft.adamantium_upgrade_smithing_template": "Adamantium Upgrade Smithing Template",
+      "gui.dnd_craft.magic_choose.label_level_40": "Level 6",
+      "entity.dnd_craft.harpy": "Harpy",
+      "item_group.dnd_craft.dn_d": "D\u0026D",
+      "gui.dnd_craft.barbar_gui.button_choose": "Choose",
+      "gui.dnd_craft.magic_choose.label_level_45": "Level 9",
+      "item.cool_mod.animal_bone": "Animal Bones",
+      "gui.dnd_craft.bardegui.label_10_level": "Level 5 (x)",
+      "gui.cool_mod.barbar_gui.button_choose": "Choose",
+      "advancements.weapon_collector.descr": "Get every dnd weapon.",
+      "item.cool_mod.iron_plate": "Iron Plate",
+      "gui.cool_mod.bardegui.label_rage": "Healing",
+      "item.dnd_craft.orksteaak.description_1": "§6-Strenght I",
+      "gui.cool_mod.classes.button_bard": "Bard",
+      "item.dnd_craft.orksteaak.description_0": "§6This is a meal, wich means you get specific effects upon consuming it.",
+      "gui.cool_mod.classes.button_druid": "Druid",
+      "gui.dnd_craft.magiergui.label_level_60": "Level 60 (c)",
+      "gui.cool_mod.barbar_gui.label_barbarian_strenght": "Barbarian Strenght",
+      "key.dnd_craft.classability_3": "Class ability 3",
+      "item.dnd_craft.drums": "§4Drums",
+      "item.dnd_craft.owlbear_meat_stripe": "Owlbear Meat Stripe",
+      "gui.dnd_craft.cook_gui.label_craft_every_food_item_of_dnd": "Craft 80 of Dnd meals",
+      "subtitles.ogre_death": "ogre grunts",
+      "item.cool_mod.zwo_handed_club": "two Handed Club",
+      "gui.dnd_craft.magic_choose.label_level_51": "Level 3",
+      "key.dnd_craft.classability_1": "Class ability 1",
+      "gui.cool_mod.barbar_gui.label_10_level": "Level 20",
+      "key.dnd_craft.classability_2": "Class ability 2",
+      "gui.cool_mod.bardegui.label_barbarian_strenght": "Better Healing",
+      "item.dnd_craft.plainumingot": "Platinum Ingot",
+      "gui.cool_mod.barbar_gui.label_level_80_passive": "Level 80 (Passive)",
+      "gui.dnd_craft.monk_gui.button_choose": "Choose",
+      "gui.dnd_craft.magic_choose.label_level_401": "Level 7",
+      "item.cool_mod.owlbear_spawn_egg": "Owlbear Spawn Egg",
+      "advancements.the_beginning.title": "The Beginning",
+      "item.dnd_craft.scrapsheet": "Scrapsheet",
+      "item.dnd_craft.war_hammer": "War Hammer",
+      "gui.cool_mod.classes.label_druid_and_magician_arent_workin": "(druid and magician arent",
+      "item.dnd_craft.daily_ration": "Daily Ration",
+      "gui.cool_mod.barbar_gui.button_exit": "EXIT",
+      "item.dnd_craft.light_hammer": "Light Hammer",
+      "item.dnd_craft.magic_wand.description_0": "Sneak-click to select Spells",
+      "gui.dnd_craft.barbar_gui.label_survival_instinct": "Survival Instinct",
+      "item.cool_mod.two_handed_adamantium_axe": "Two Handed Adamantium Axe",
+      "gui.dnd_craft.magic_choose.button_strong_invisibility": "Strong Invisibility",
+      "item.cool_mod.adamantium_ax": "Adamantium Ax",
+      "gui.dnd_craft.magic_choose.button_thunderwave": "Thunderwave",
+      "item.dnd_craft.raw_owlbear_meat": "Raw Owlbear Meat",
+      "item.cool_mod.scimitar": "Scimitar",
+      "gui.cool_mod.barbar_gui.label_40_level": "Level 40 (Passive)",
+      "item.cool_mod.battle_axe": "Battle Axe",
+      "effect.dnd_craft.slimy": "Slimy",
+      "gui.cool_mod.bardegui.label_level_80_passive": "Level 80 (Passive)",
+      "item.dnd_craft.two_handedhammer": "Two Handed Hammer",
+      "gui.cool_mod.classes.label_working_right_now_but_will_be_ad": "working right now but will be",
+      "item.cool_mod.claymore": "Claymore",
+      "key.dnd_craft.classabilityopngui": "Classabilityopengui",
+      "item.dnd_craft.superior_potionof_healing": "§6Superior Potion of Healing",
+      "gui.dnd_craft.cook_gui.label_ss4daily_eater": "§6Daily eater",
+      "item.dnd_craft.ogre_spawn_egg": "Ogre Spawn Egg",
+      "entity.dnd_craft.ogre": "Ogre",
+      "gui.cool_mod.bardegui.label_survival_instinct": "Bards Speed",
+      "item.cool_mod.ax": "Ax",
+      "entity.cool_mod.harpy": "Harpy",
+      "item.dnd_craft.zwo_handed_club": "two Handed Club",
+      "item.cool_mod.adamantium_spear": "Adamantium Spear",
+      "item.dnd_craft.adamantium_gladius": "Adamantium Gladius",
+      "gui.dnd_craft.magiergui.label_barbarian_strenght": "Better Healing",
+      "item.dnd_craft.ghost_axe": "Ghost Axe",
+      "gui.dnd_craft.classes.button_druid": "Druid",
+      "item.dnd_craft.adamantium_sickle": "Adamantium Sickle",
+      "gui.dnd_craft.cook_gui.button_loot_quest": "LOOT QUEST",
+      "gui.cool_mod.bardegui.label_level_60": "Level 60",
+      "gui.dnd_craft.cook_gui.label_ssc": "§6Cooking veteran",
+      "item.dnd_craft.magic_wand": "Spellbook",
+      "gui.dnd_craft.bardegui.label_barbarian_strenght": "Better Healing",
+      "gui.dnd_craft.cook_gui.label_eat_40_ork_beefs": "Eat 40 ork beefs",
+      "item.dnd_craft.poison_vial": "Poison Vial",
+      "gui.dnd_craft.ki.label_ki_abilitys": "Ki Abilitys",
+      "gui.dnd_craft.cook_gui.button_accept": "Loot",
+      "item.dnd_craft.sickle": "Sickle",
+      "item.dnd_craft.mimic_spawn_egg": "Mimic Spawn Egg",
+      "advancements.businessman.descr": "Collect one stack of every diffrent coin.",
+      "gui.dnd_craft.bardegui.label_40_level": "Level 10 (Passive)",
+      "advancements.adamantiumattack.title": "Adamantium Attack",
+      "gui.dnd_craft.magic_choose.label_level_80": "Level 8",
+      "entity.dnd_craft.ocherjally_2": "Ocherjelly",
+      "item.cool_mod.mimic_spawn_egg": "Mimic Spawn Egg",
+      "item.dnd_craft.magic_wand.description_2": "Right-click on block to cast self-spells",
+      "item.dnd_craft.magic_wand.description_1": "Left-click to cast attack-spells",
+      "item.cool_mod.adamantium_gladius": "Adamantium Gladius",
+      "item.dnd_craft.adamantium_claymore": "Adamantium Claymore",
+      "item.dnd_craft.ork_spawn_egg": "Ork Spawn Egg",
+      "item.cool_mod.two_handedhammer": "Two Handed Hammer",
+      "item.dnd_craft.harpy_spear": "Harpy Spear",
+      "item.cool_mod.mace": "Mace",
+      "gui.dnd_craft.classes.button_monk": "Monk",
+      "item.dnd_craft.magicscroll_firearrow.description_1": "Magic Item",
+      "item.cool_mod.dagger": "Dagger",
+      "item.dnd_craft.copper_coin": "Copper Coin",
+      "item.dnd_craft.magicscroll_firearrow.description_2": "§Common",
+      "item.dnd_craft.club": "Club",
+      "item.dnd_craft.owlbear_drumsticks": "Owlbear drums",
+      "effect.dnd_craft.ki_effect_2": "Ki",
+      "item.dnd_craft.cooked_ork_beef": "Cooked Ork Beef",
+      "gui.dnd_craft.cook_gui.button_completed": "COMPLETED",
+      "gui.cool_mod.bardegui.label_ghost_axe": "Damage Aura",
+      "gui.dnd_craft.barbar_gui.label_level_60": "Level 15 (c)",
+      "item.cool_mod.light_adamantium_hammer": "Light Adamantium Hammer",
+      "item.dnd_craft.claymore": "Claymore",
+      "item.cool_mod.harpy_spawn_egg": "Harpy Spawn Egg",
+      "advancements.dungeon_gourmet.title": "Dungeon Gourmet",
+      "block.dnd_craft.platinum_ore": "Platinum Ore",
+      "item.dnd_craft.goblin_spawn_egg": "Goblin Spawn Egg",
+      "entity.dnd_craft.owlbear": "Owlbear",
+      "entity.dnd_craft.warg": "Warg",
+      "item.dnd_craft.goblin_chief_spawn_egg": "Goblin Chief Spawn Egg",
+      "item.dnd_craft.iron_coin": "Iron Coin",
+      "item.cool_mod.ogre_spawn_egg": "Ogre Spawn Egg",
+      "gui.dnd_craft.classes.label_working_right_now_but_will_be_ad": "working right now but will be",
+      "item.dnd_craft.two_handed_axe": "Two Handed Axe",
+      "item.cool_mod.harpy_spear": "Harpy Spear",
+      "gui.dnd_craft.barbar_gui.label_0_level": "Level 1 (y)",
+      "gui.dnd_craft.monk_gui.label_level_80_passive": "Level 20 (Passive)",
+      "gui.dnd_craft.magiergui.label_barbarian": "Magician",
+      "item.dnd_craft.two_handed_adamantium_axe": "Two Handed Adamantium Axe",
+      "entity.dnd_craft.basilisk": "Basilisk",
+      "gui.dnd_craft.magic_choose.label_spell_chooser": "Spell Chooser",
+      "gui.dnd_craft.magiergui.label_40_level": "Level 40 (Passive)",
+      "gui.dnd_craft.magiergui.label_ghost_axe": "+1 Spell",
+      "item_group.cool_mod.dn_d": "D\u0026D",
+      "item.dnd_craft.banjo": "§4Banjo",
+      "item.dnd_craft.scimitar": "Scimitar",
+      "gui.dnd_craft.magiergui.label_rage": "Arcane Regeneration",
+      "item.dnd_craft.battle_axe": "Battle Axe",
+      "item.cool_mod.adamantium_sickle": "Adamantium Sickle",
+      "item.dnd_craft.ax": "Ax",
+      "item.dnd_craft.adantium_ingot": "Adantium Ingot",
+      "gui.dnd_craft.magic_choose.button_fireball": "Fireball",
+      "item.cool_mod.two_handed_axe": "Two Handed Axe",
+      "item.cool_mod.adantium_ingot": "Adantium Ingot",
+      "item.cool_mod.club": "Club",
+      "item.dnd_craft.harpy_spawn_egg": "Harpy Spawn Egg",
+      "gui.cool_mod.barbar_gui.label_rage": "Rage",
+      "item.dnd_craft.invisible_stalker_spawn_egg": "Invisible Stalker Spawn Egg",
+      "item.dnd_craft.potionofstronghealing": "§6Potion of Strong Healing",
+      "gui.dnd_craft.monk_gui.label_barbarian_strenght": "Diamond Soul",
+      "block.dnd_craft.cookedowlbearmeatblock_4": "Cooked Owlbear Meat Block",
+      "item.dnd_craft.magicscroll_firearrow": "§6Magic Scroll",
+      "block.dnd_craft.cookedowlbearmeatblock_3": "Cooked Owlbear Meat Block",
+      "block.dnd_craft.cookedowlbearmeatblock_2": "Cooked Owlbear Meat Block",
+      "item.dnd_craft.battalestafftwohanded": "Battle Staff",
+      "block.cool_mod.adantium_ore": "Adantium Ore",
+      "advancements.dungeon_hunter.title": "Dungeon Looter",
+      "gui.dnd_craft.cook_gui.button_loot_quest1": "LOOT QUEST",
+      "item.dnd_craft.magicscroll_firearrow.description_0": "-Fire arrow",
+      "item.dnd_craft.goblins_backpack": "Goblin´s Backpack",
+      "gui.dnd_craft.magic_choose.button_fake_life": "Fake Life",
+      "gui.dnd_craft.cook_gui.button_loot_quest2": "LOOT QUEST",
+      "item.dnd_craft.ghoul_spawn_egg": "Ghoul Spawn Egg",
+      "gui.dnd_craft.monk_gui.label_survival_instinct": "Timstop Emergency",
+      "item.dnd_craft.two_handed_claymore": "Two Handed Claymore",
+      "entity.dnd_craft.ork": "Ork",
+      "gui.dnd_craft.magic_choose.button_snowstorm": "Snow storm",
+      "item.dnd_craft.adamantium_war_hammer": "Adamantium War Hammer",
+      "gui.cool_mod.bardegui.label_invincibility": "Power of the Wind",
+      "gui.dnd_craft.classes.button_bard": "Bard",
+      "item.dnd_craft.poisoned_dagger": "§6Dagger of Poison",
+      "gui.cool_mod.barbar_gui.label_ghost_axe": "Ghost Axe",
+      "gui.dnd_craft.bardegui.label_survival_instinct": "Bards Speed",
+      "gui.dnd_craft.cook_gui.label_sscmonster_delight": "§6Monster delight",
+      "item.dnd_craft.adamantium_ax": "Adamantium Ax",
+      "item.dnd_craft.ocherjelly_spawn_egg": "Ocherjelly Spawn Egg",
+      "gui.dnd_craft.monk_gui.label_10_level": "Level 5 (x)",
+      "gui.dnd_craft.monk_gui.label_40_level": "Level 10 (Passive)",
+      "gui.dnd_craft.ki.button_strong_fist": "Fist Storm",
+      "item.dnd_craft.two_handed_adamantium_claymore": "Two Handed Adamantium Claymore",
+      "item.cool_mod.two_handed_claymore": "Two Handed Claymore",
+      "item.dnd_craft.coated_poisoned_dagger": "§6Dagger of Poison",
+      "item.dnd_craft.animal_bone": "Animal Bones",
+      "entity.dnd_craft.invisible_stalker": "Invisible Stalker",
+      "entity.cool_mod.ork": "Ork",
+      "gui.dnd_craft.barbar_gui.label_40_level": "Level 10 (Passive)",
+      "item.dnd_craft.heal_potion": "§6Heal Potion",
+      "item.dnd_craft.iron_goblin_spawn_egg": "Goblin Spawn Egg",
+      "item.cool_mod.war_hammer": "War Hammer",
+      "item.dnd_craft.monster_dagger": "Rusty Dagger",
+      "item.cool_mod.metal_rod": "Metal Rod",
+      "gui.dnd_craft.magiergui.button_exit": "EXIT",
+      "gui.dnd_craft.bardegui.button_exit": "EXIT",
+      "key.cool_mod.classability_1": "Class ability 1",
+      "item.cool_mod.adamantium_claymore": "Adamantium Claymore",
+      "gui.dnd_craft.bardegui.label_level_80_passive": "Level 20 (Passive)",
+      "gui.dnd_craft.barbar_gui.label_10_level": "Level 5 (x)",
+      "item.dnd_craft.adamantium_mace": "Adamantium Mace",
+      "gui.dnd_craft.magic_choose.button_cold_ray": "Cold Ray",
+      "item.dnd_craft.rusty_mace": "Rusty Mace",
+      "key.cool_mod.classabilityopngui": "Classabilityopengui",
+      "gui.dnd_craft.magic_choose.button_fire_arrow": "Fire Arrow",
+      "gui.cool_mod.bardegui.label_10_level": "Level 20",
+      "key.cool_mod.classability_2": "Class ability 2",
+      "item.cool_mod.cooked_owlbear_meat": "Cooked Owlbear Meat",
+      "key.cool_mod.classability_3": "Class ability 3",
+      "gui.dnd_craft.magiergui.label_survival_instinct": "Bards Speed",
+      "item.dnd_craft.adamantium_battle_axe": "Adamantium Battle Axe",
+      "gui.dnd_craft.magiergui.label_invincibility": "Power of the Wind",
+      "item.cool_mod.sickle": "Sickle",
+      "gui.cool_mod.bardegui.button_choose": "Choose",
+      "gui.dnd_craft.monk_gui.label_barbarian": "Monk",
+      "advancements.businessman.title": "Businessman",
+      "gui.cool_mod.barbar_gui.label_survival_instinct": "Survival Instinct",
+      "advancements.dungeon_hunter.descr": "Get every DnD mob loot.",
+      "entity.cool_mod.owlbear": "Owlbear",
+      "gui.dnd_craft.magiergui.label_0_level": "Level 1 (y)",
+      "gui.cool_mod.bardegui.label_barbarian": "Bard",
+      "gui.cool_mod.bardegui.label_0_level": "Level 0",
+      "gui.dnd_craft.magic_choose.label_level_5": "Level 2",
+      "block.dnd_craft.adantium_ore": "Adamantium Ore",
+      "item.dnd_craft.bowblin_spawn_egg": "Goblin Spawn Egg",
+      "item.cool_mod.ork_spawn_egg": "Ork Spawn Egg",
+      "item.cool_mod.animal_fat": "Bone Fat",
+      "gui.dnd_craft.barbar_gui.label_rage": "Rage",
+      "effect.dnd_craft.freezing": "Freezing",
+      "gui.cool_mod.barbar_gui.label_invincibility": "Invincibility",
+      "item.dnd_craft.bowitem": "Bowitem",
+      "item.cool_mod.battle_staff": "Battle Staff",
+      "item.cool_mod.adamantium_war_hammer": "Adamantium War Hammer",
+      "gui.dnd_craft.magic_choose.button_night_vision": "Night Vision",
+      "item.cool_mod.two_handed_adamantium_hammer": "Two Handed Adamantium Hammer",
+      "gui.dnd_craft.barbar_gui.button_exit": "EXIT",
+      "gui.dnd_craft.magiergui.button_choose": "Choose",
+      "block.dnd_craft.scrapblock": "Scrapblock",
+      "item.dnd_craft.mace": "Mace",
+      "item.dnd_craft.mimic_sludge_spawn_egg": "Mimic Spawn Egg",
+      "item.cool_mod.ratmodel_spawn_egg": "Ratmodel Spawn Egg",
+      "gui.dnd_craft.magic_choose.label_level_0": "Level 1",
+      "item.dnd_craft.battle_staff": "Battle Staff",
+      "item.dnd_craft.gladius": "Gladius",
+      "item.dnd_craft.cook_spawn_egg": "Cook Spawn Egg",
+      "gui.cool_mod.bardegui.button_exit": "EXIT",
+      "gui.dnd_craft.classes.label_added_soon": "added soon...)",
+      "key.dnd_craft.dodge": "Dodge",
+      "gui.dnd_craft.ki.button_better_defense": "Better Defense",
+      "item.dnd_craft.raw_ork_beef": "Raw Ork Beef",
+      "item.dnd_craft.potionofstronghealing.description_1": "§3Uncommon",
+      "item.dnd_craft.potionofstronghealing.description_0": "Magic Item",
+      "entity.dnd_craft.bowblin": "Goblin",
+      "item.dnd_craft.adamantium_scimitar": "Adamantium Scimitar",
+      "gui.dnd_craft.magic_choose.label_level_101": "Level 5",
+      "advancements.dungeon_gourmet.descr": "Eat every food item in this mod.",
+      "item.dnd_craft.raw_adamantium_ore": "Raw Adamantium Ore",
+      "item.dnd_craft.ultimate_potionofhealing.description_0": "Magic Item",
+      "item.dnd_craft.owlbear_spawn_egg": "Owlbear Spawn Egg",
+      "gui.dnd_craft.monk_gui.label_rage": "Ki",
+      "item.dnd_craft.ultimate_potionofhealing.description_1": "§5Very Rare",
+      "gui.cool_mod.bardegui.label_40_level": "Level 40 (Passive)",
+      "gui.dnd_craft.cook_gui.label_eat_10_fish": "Eat 12 Daily Rations",
+      "item.dnd_craft.owlbear_drumsticks.description_1": "§6-Resistance I",
+      "item.dnd_craft.poisoned_dagger.description_0": "Magic Weapon",
+      "item.dnd_craft.spear": "Spear",
+      "item.dnd_craft.owlbear_drumsticks.description_0": "§6This is a meal, wich means you get specific effects upon consuming it.",
+      "item.dnd_craft.poisoned_dagger.description_1": "§4Rare",
+      "item.dnd_craft.warg_spawn_egg": "Warg Spawn Egg",
+      "gui.dnd_craft.classes.button_barbarian": "Barbarian",
+      "item.dnd_craft.poisoned_dagger.description_2": "(Right click to coat in poison)"
+    }
+  },
+  "foldersRoot": {
+    "name": "~",
+    "children": [
+      {
+        "name": "ClassSystem",
+        "children": [
+          {
+            "name": "Barde",
+            "children": []
+          },
+          {
+            "name": "Barbar",
+            "children": []
+          },
+          {
+            "name": "GUI",
+            "children": []
+          },
+          {
+            "name": "Abilitys",
+            "children": []
+          },
+          {
+            "name": "Magier",
+            "children": []
+          },
+          {
+            "name": "Monk",
+            "children": []
+          }
+        ]
+      },
+      {
+        "name": "Recipes",
+        "children": []
+      },
+      {
+        "name": "Procedures",
+        "children": []
+      },
+      {
+        "name": "Mobs",
+        "children": []
+      },
+      {
+        "name": "Magic",
+        "children": []
+      },
+      {
+        "name": "Food",
+        "children": []
+      },
+      {
+        "name": "Weapons",
+        "children": []
+      },
+      {
+        "name": "Magic Items",
+        "children": []
+      },
+      {
+        "name": "Loot",
+        "children": []
+      },
+      {
+        "name": "Achievements",
+        "children": []
+      },
+      {
+        "name": "NPCs",
+        "children": []
+      },
+      {
+        "name": "Structures",
+        "children": []
+      },
+      {
+        "name": "OverlaysEffectsParticles",
+        "children": []
+      },
+      {
+        "name": "Commands",
+        "children": []
+      }
+    ]
+  },
+  "workspaceSettings": {
+    "modid": "dnd_craft",
+    "modName": "D\u0026D Craft",
+    "version": "2.5.0",
+    "description": "This mod is a fun addition to Minecraft that adds some mobs from the DnD universe and lets you choose your own class.",
+    "author": "Miherrma, Luderspieler",
+    "websiteURL": "https://mcreator.net",
+    "license": "Apache License version 2.0",
+    "serverSideOnly": false,
+    "modPicture": "dnd-craft_logo",
+    "requiredMods": [],
+    "dependencies": [],
+    "dependants": [],
+    "mcreatorDependencies": [
+      "pehkui",
+      "geckolib",
+      "jei"
+    ],
+    "currentGenerator": "forge-1.20.1",
+    "credits": "Created using mod maker MCreator - https://mcreator.net/about",
+    "modElementsPackage": "net.mcreator.dndcraft"
+  },
+  "mcreatorVersion": 202400452410
+}

@@ -1,0 +1,48 @@
+{
+  "_fv": 73,
+  "_type": "recipe",
+  "definition": {
+    "recipeType": "Crafting",
+    "recipeRetstackSize": 1,
+    "group": "",
+    "cookingBookCategory": "MISC",
+    "xpReward": 0.0,
+    "cookingTime": 200,
+    "craftingBookCategory": "MISC",
+    "recipeShapeless": true,
+    "recipeSlots": [
+      {
+        "value": ""
+      },
+      {
+        "value": ""
+      },
+      {
+        "value": ""
+      },
+      {
+        "value": "Blocks.LOG#1"
+      },
+      {
+        "value": "CUSTOM:AnimalBone"
+      },
+      {
+        "value": ""
+      },
+      {
+        "value": "Items.RAW_COPPER"
+      },
+      {
+        "value": "Items.RAW_COPPER"
+      },
+      {
+        "value": ""
+      }
+    ],
+    "recipeReturnStack": {
+      "value": "CUSTOM:Scrapsheet"
+    },
+    "name": "scrapsheetrecipe",
+    "namespace": "mod"
+  }
+}

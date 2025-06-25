@@ -1,0 +1,27 @@
+{
+  "_fv": 73,
+  "_type": "projectile",
+  "definition": {
+    "projectileItem": {
+      "value": "CUSTOM:AdamantiumCoin"
+    },
+    "showParticles": false,
+    "actionSound": {
+      "value": "entity.player.hurt_freeze"
+    },
+    "igniteFire": false,
+    "power": 15.0,
+    "damage": 1.0,
+    "knockback": 3,
+    "entityModel": "Default",
+    "customModelTexture": "",
+    "modelWidth": 0.5,
+    "modelHeight": 0.5,
+    "onHitsEntity": {
+      "name": "ColdrayspellProjectileHitsLivingEntity"
+    },
+    "onFlyingTick": {
+      "name": "ColdrayspellWhileProjectileFlyingTick"
+    }
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "_fv": 73,
+  "_type": "achievement",
+  "definition": {
+    "achievementName": "Dungeon Gourmet",
+    "achievementDescription": "Eat every food item in this mod.",
+    "achievementIcon": {
+      "value": "CUSTOM:CookedOrkBeef"
+    },
+    "background": "Default",
+    "disableDisplay": false,
+    "showPopup": true,
+    "announceToChat": true,
+    "hideIfNotCompleted": false,
+    "rewardLoot": [],
+    "rewardRecipes": [
+      "CraftOpGapple"
+    ],
+    "rewardXP": 25,
+    "achievementType": "task",
+    "parent": {
+      "value": "CUSTOM:TheBeginning"
+    },
+    "triggerxml": "<xml xmlns=\"https://developers.google.com/blockly/xml\"><block type=\"advancement_trigger\" deletable=\"false\" x=\"40\" y=\"80\"><next><block type=\"item_consumed\"><value name=\"item\"><block type=\"mcitem_all\"><field name=\"value\">CUSTOM:RawOrkBeef</field></block></value><next><block type=\"item_consumed\"><value name=\"item\"><block type=\"mcitem_all\"><field name=\"value\">CUSTOM:CookedOrkBeef</field></block></value><next><block type=\"item_consumed\"><value name=\"item\"><block type=\"mcitem_all\"><field name=\"value\">CUSTOM:RawOwlbearMeat</field></block></value><next><block type=\"item_consumed\"><value name=\"item\"><block type=\"mcitem_all\"><field name=\"value\">CUSTOM:CookedOwlbearMeat</field></block></value><next><block type=\"item_consumed\"><value name=\"item\"><block type=\"mcitem_all\"><field name=\"value\">CUSTOM:OwlbearMeatStripe</field></block></value></block></next></block></next></block></next></block></next></block></next></block></xml>"
+  }
+}

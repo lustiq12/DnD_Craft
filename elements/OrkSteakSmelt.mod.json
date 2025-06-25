@@ -1,0 +1,22 @@
+{
+  "_fv": 73,
+  "_type": "recipe",
+  "definition": {
+    "recipeType": "Smelting",
+    "recipeRetstackSize": 1,
+    "group": "meat",
+    "cookingBookCategory": "FOOD",
+    "xpReward": 1.0,
+    "cookingTime": 200,
+    "craftingBookCategory": "MISC",
+    "recipeShapeless": false,
+    "smeltingInputStack": {
+      "value": "CUSTOM:RawOrkBeef"
+    },
+    "smeltingReturnStack": {
+      "value": "CUSTOM:CookedOrkBeef"
+    },
+    "name": "ork_steak_smelt",
+    "namespace": "mod"
+  }
+}

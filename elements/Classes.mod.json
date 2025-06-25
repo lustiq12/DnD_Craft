@@ -1,0 +1,197 @@
+{
+  "_fv": 73,
+  "_type": "gui",
+  "definition": {
+    "type": 0,
+    "width": 178,
+    "height": 189,
+    "inventoryOffsetX": 0,
+    "inventoryOffsetY": 0,
+    "renderBgLayer": true,
+    "doesPauseGame": false,
+    "components": [
+      {
+        "type": "button",
+        "data": {
+          "name": "button_barbarian",
+          "text": "Barbarian",
+          "isUndecorated": false,
+          "onClick": {
+            "name": "Barbaropen"
+          },
+          "width": 72,
+          "height": 20,
+          "x": 150,
+          "y": 35,
+          "locked": false
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "name": "button_bard",
+          "text": "Bard",
+          "isUndecorated": false,
+          "onClick": {
+            "name": "Bardeopen"
+          },
+          "width": 46,
+          "height": 20,
+          "x": 150,
+          "y": 62,
+          "locked": false
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "name": "button_druid",
+          "text": "Druid",
+          "isUndecorated": false,
+          "width": 51,
+          "height": 20,
+          "x": 150,
+          "y": 89,
+          "locked": false
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "name": "button_magician",
+          "text": "Magician",
+          "isUndecorated": false,
+          "onClick": {
+            "name": "Magieropen"
+          },
+          "width": 67,
+          "height": 20,
+          "x": 150,
+          "y": 116,
+          "locked": false
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "barbaricon.png",
+          "use1Xscale": false,
+          "x": 132,
+          "y": 35,
+          "locked": false
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "christiano_ronaldo_horn.png",
+          "use1Xscale": false,
+          "x": 132,
+          "y": 62,
+          "locked": false
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "druidbruhscreen.png",
+          "use1Xscale": false,
+          "x": 132,
+          "y": 89,
+          "locked": false
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "zauberstab.png",
+          "use1Xscale": false,
+          "x": 132,
+          "y": 116,
+          "locked": false
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_druid_and_magician_arent_workin",
+          "text": {
+            "fixedValue": "(druid is not"
+          },
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "x": 132,
+          "y": 143,
+          "locked": false
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_working_right_now_but_will_be_ad",
+          "text": {
+            "fixedValue": "working right now but will be"
+          },
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "x": 132,
+          "y": 152,
+          "locked": false
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_added_soon",
+          "text": {
+            "fixedValue": "added soon...)"
+          },
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "x": 132,
+          "y": 161,
+          "locked": false
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "name": "button_monk",
+          "text": "Monk",
+          "isUndecorated": false,
+          "onClick": {
+            "name": "Monkopen"
+          },
+          "width": 46,
+          "height": 20,
+          "x": 249,
+          "y": 35,
+          "locked": false
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "bruh.png",
+          "use1Xscale": false,
+          "x": 231,
+          "y": 35,
+          "locked": false
+        }
+      }
+    ],
+    "gridSettings": {
+      "sx": 18,
+      "sy": 18,
+      "ox": 11,
+      "oy": 15,
+      "snapOnGrid": false
+    }
+  }
+}

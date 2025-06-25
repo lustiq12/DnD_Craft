@@ -1,0 +1,16 @@
+{
+  "variants": {
+    "axis=x": {
+      "model": "dnd_craft:block/raw_owlbearmeat_block",
+      "x": 90,
+      "y": 90
+    },
+    "axis=y": {
+      "model": "dnd_craft:block/raw_owlbearmeat_block"
+    },
+    "axis=z": {
+      "model": "dnd_craft:block/raw_owlbearmeat_block",
+      "x": 90
+    }
+  }
+}

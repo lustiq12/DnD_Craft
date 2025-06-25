@@ -1,0 +1,28 @@
+{
+  "mappings": {
+    "verycracked": {
+      "map": {
+        "0": "verycrackedwhitedragonegg"
+      },
+      "name": "verycracked"
+    },
+    "default": {
+      "map": {
+        "0": "whitedragoneggtexture"
+      },
+      "name": "default"
+    },
+    "damaged": {
+      "map": {
+        "0": "veryverycrackedwhitedragonegg"
+      },
+      "name": "damaged"
+    },
+    "cracked": {
+      "map": {
+        "0": "crackedwhiztedragonegg2"
+      },
+      "name": "cracked"
+    }
+  }
+}

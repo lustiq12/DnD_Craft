@@ -1,0 +1,13 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "dnd_craft:block/rawowlbearmeatfront",
+    "up": "dnd_craft:block/rawowlbearmeatfront",
+    "north": "dnd_craft:block/rawowlbeaermeat",
+    "east": "dnd_craft:block/rawowlbeaermeat",
+    "south": "dnd_craft:block/rawowlbeaermeat",
+    "west": "dnd_craft:block/rawowlbeaermeat",
+    "particle": "dnd_craft:block/rawowlbearmeatfront"
+  },
+  "render_type": "solid"
+}

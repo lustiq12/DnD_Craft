@@ -1,0 +1,14 @@
+{
+  "structures": [
+    {
+      "structure": "dnd_craft:lost_camp",
+      "weight": 1
+    }
+  ],
+  "placement": {
+    "type": "minecraft:random_spread",
+    "spacing": 30,
+    "separation": 6,
+    "salt": 628486051
+  }
+}

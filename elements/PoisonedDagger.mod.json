@@ -1,0 +1,42 @@
+{
+  "_fv": 73,
+  "_type": "tool",
+  "definition": {
+    "toolType": "Sword",
+    "renderType": 0,
+    "blockingRenderType": 0,
+    "texture": "unpoisoneddagger",
+    "customModelName": "Normal",
+    "blockingModelName": "Normal blocking",
+    "name": "§6Dagger of Poison",
+    "specialInformation": {
+      "fixedValue": [
+        "Magic Weapon",
+        "§4Rare",
+        "(Right click to coat in poison)"
+      ]
+    },
+    "creativeTabs": [
+      {
+        "value": "CUSTOM:DnD"
+      }
+    ],
+    "efficiency": 1.0,
+    "attackSpeed": 1.7000000000000002,
+    "enchantability": 15,
+    "damageVsEntity": 7.0,
+    "usageCount": 0,
+    "glowCondition": {
+      "fixedValue": false
+    },
+    "repairItems": [],
+    "immuneToFire": false,
+    "blockDropsTier": "DIAMOND",
+    "blocksAffected": [],
+    "stayInGridWhenCrafting": false,
+    "damageOnCrafting": false,
+    "onRightClickedInAir": {
+      "name": "PoisonedDaggerRightclicked"
+    }
+  }
+}

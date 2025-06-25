@@ -1,0 +1,22 @@
+{
+  "_fv": 73,
+  "_type": "recipe",
+  "definition": {
+    "recipeType": "Smoking",
+    "recipeRetstackSize": 1,
+    "group": "meat",
+    "cookingBookCategory": "FOOD",
+    "xpReward": 1.0,
+    "cookingTime": 200,
+    "craftingBookCategory": "MISC",
+    "recipeShapeless": false,
+    "smokingInputStack": {
+      "value": "CUSTOM:RawOrkBeef"
+    },
+    "smokingReturnStack": {
+      "value": "CUSTOM:CookedOrkBeef"
+    },
+    "name": "ork_steak_smoke",
+    "namespace": "mod"
+  }
+}

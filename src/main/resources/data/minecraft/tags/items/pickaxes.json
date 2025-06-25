@@ -1,0 +1,11 @@
+{
+  "replace": false,
+  "values": [
+    "dnd_craft:adamantium_war_hammer",
+    "dnd_craft:two_handed_adamantium_hammer",
+    "dnd_craft:light_adamantium_hammer",
+    "dnd_craft:war_hammer",
+    "dnd_craft:two_handedhammer",
+    "dnd_craft:light_hammer"
+  ]
+}

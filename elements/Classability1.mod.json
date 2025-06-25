@@ -1,0 +1,12 @@
+{
+  "_fv": 73,
+  "_type": "keybind",
+  "definition": {
+    "triggerKey": "Y",
+    "keyBindingName": "Class ability 1",
+    "keyBindingCategoryKey": "gameplay",
+    "onKeyPressed": {
+      "name": "Classability1p"
+    }
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "type": "forge:add_spawns",
+  "biomes": {
+    "type": "forge:any"
+  },
+  "spawners": {
+    "type": "dnd_craft:mimic",
+    "weight": 15,
+    "minCount": 4,
+    "maxCount": 4
+  }
+}

@@ -1,0 +1,41 @@
+{
+  "_fv": 73,
+  "_type": "tool",
+  "definition": {
+    "toolType": "Sword",
+    "renderType": 0,
+    "blockingRenderType": 0,
+    "texture": "betterdagger",
+    "customModelName": "Normal",
+    "blockingModelName": "Normal blocking",
+    "name": "Dagger",
+    "specialInformation": {
+      "fixedValue": []
+    },
+    "creativeTabs": [
+      {
+        "value": "CUSTOM:DnD"
+      }
+    ],
+    "efficiency": 4.0,
+    "attackSpeed": 1.9000000000000001,
+    "enchantability": 0,
+    "damageVsEntity": 3.9999999999999996,
+    "usageCount": 250,
+    "glowCondition": {
+      "fixedValue": false
+    },
+    "repairItems": [],
+    "immuneToFire": false,
+    "blockDropsTier": "WOOD",
+    "blocksAffected": [],
+    "stayInGridWhenCrafting": true,
+    "damageOnCrafting": true,
+    "onRightClickedOnBlock": {
+      "name": "DaggerRightclickedOnBlock"
+    },
+    "onItemInUseTick": {
+      "name": "ScimitarToolInHandTick"
+    }
+  }
+}

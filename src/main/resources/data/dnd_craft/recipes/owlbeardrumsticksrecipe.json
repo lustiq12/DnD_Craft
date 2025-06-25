@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "dnd_craft:cooked_owlbear_meat"
+    },
+    {
+      "item": "dnd_craft:cooked_owlbear_meat"
+    },
+    {
+      "item": "dnd_craft:animal_fat"
+    },
+    {
+      "item": "minecraft:bowl"
+    }
+  ],
+  "result": {
+    "item": "dnd_craft:owlbear_drumsticks",
+    "count": 1
+  }
+}

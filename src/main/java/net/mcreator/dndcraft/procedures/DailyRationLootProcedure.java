@@ -1,0 +1,41 @@
+package net.mcreator.dndcraft.procedures;
+
+import net.minecraft.world.level.LevelAccessor;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.entity.item.ItemEntity;
+import net.minecraft.world.entity.ExperienceOrb;
+import net.minecraft.world.entity.Entity;
+import net.minecraft.server.level.ServerLevel;
+
+import net.mcreator.dndcraft.network.DndCraftModVariables;
+import net.mcreator.dndcraft.init.DndCraftModItems;
+
+public class DailyRationLootProcedure {
+	public static void execute(LevelAccessor world, double x, double y, double z, Entity entity) {
+		if (entity == null)
+			return;
+		{
+			double _setval = -1;
+			entity.getCapability(DndCraftModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+				capability.DailyRationQuest = _setval;
+				capability.syncPlayerVariables(entity);
+			});
+		}
+		for (int index0 = 0; index0 < 10; index0++) {
+			if (world instanceof ServerLevel _level)
+				_level.addFreshEntity(new ExperienceOrb(_level, x, y, z, 2));
+		}
+		if (world instanceof ServerLevel _level) {
+			ItemEntity entityToSpawn = new ItemEntity(_level, x, y, z, new ItemStack(DndCraftModItems.COOKED_OWLBEAR_MEAT.get()));
+			entityToSpawn.setPickUpDelay(10);
+			_level.addFreshEntity(entityToSpawn);
+		}
+		for (int index1 = 0; index1 < 3; index1++) {
+			if (world instanceof ServerLevel _level) {
+				ItemEntity entityToSpawn = new ItemEntity(_level, x, y, z, new ItemStack(DndCraftModItems.ANIMAL_FAT.get()));
+				entityToSpawn.setPickUpDelay(10);
+				_level.addFreshEntity(entityToSpawn);
+			}
+		}
+	}
+}

@@ -1,0 +1,14 @@
+{
+  "structures": [
+    {
+      "structure": "dnd_craft:cooks_house",
+      "weight": 1
+    }
+  ],
+  "placement": {
+    "type": "minecraft:random_spread",
+    "spacing": 12,
+    "separation": 8,
+    "salt": 912995145
+  }
+}

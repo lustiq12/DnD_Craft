@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:smithing_transform",
+  "template": {
+    "item": "dnd_craft:two_handedhammer"
+  },
+  "base": {
+    "item": "dnd_craft:adantium_ingot"
+  },
+  "addition": {
+    "item": "dnd_craft:adamantium_upgrade_smithing_template"
+  },
+  "result": {
+    "item": "dnd_craft:two_handed_adamantium_hammer"
+  }
+}

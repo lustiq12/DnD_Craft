@@ -1,0 +1,37 @@
+{
+  "_fv": 73,
+  "_type": "tool",
+  "definition": {
+    "toolType": "Sword",
+    "renderType": 0,
+    "blockingRenderType": 0,
+    "texture": "poisoned_dagger",
+    "customModelName": "Normal",
+    "blockingModelName": "Normal blocking",
+    "name": "§6Dagger of Poison",
+    "specialInformation": {
+      "fixedValue": [
+        "Magic Weapon",
+        "§4Rare"
+      ]
+    },
+    "creativeTabs": [],
+    "efficiency": 1.0,
+    "attackSpeed": 1.7000000000000002,
+    "enchantability": 15,
+    "damageVsEntity": 18.0,
+    "usageCount": 0,
+    "glowCondition": {
+      "fixedValue": false
+    },
+    "repairItems": [],
+    "immuneToFire": false,
+    "blockDropsTier": "DIAMOND",
+    "blocksAffected": [],
+    "stayInGridWhenCrafting": false,
+    "damageOnCrafting": false,
+    "onEntityHitWith": {
+      "name": "Poisoneddagger2LivingEntityIsHitWithTool"
+    }
+  }
+}
