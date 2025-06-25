@@ -19,6 +19,7 @@ import net.minecraft.core.BlockPos;
 
 import net.mcreator.dndcraft.world.inventory.MonkGuiMenu;
 import net.mcreator.dndcraft.world.inventory.MagierguiMenu;
+import net.mcreator.dndcraft.world.inventory.DruidGuiMenu;
 import net.mcreator.dndcraft.world.inventory.ClassesMenu;
 import net.mcreator.dndcraft.world.inventory.BardeguiMenu;
 import net.mcreator.dndcraft.world.inventory.BarbarGuiMenu;
@@ -47,7 +48,7 @@ public class ManaProcedure {
 		if (((entity.getCapability(DndCraftModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new DndCraftModVariables.PlayerVariables())).Class_Variable).equals("false")) {
 			if (entity.isAlive() && !(entity instanceof Player _plr0 && _plr0.containerMenu instanceof BarbarGuiMenu || entity instanceof Player _plr1 && _plr1.containerMenu instanceof ClassesMenu
 					|| entity instanceof Player _plr2 && _plr2.containerMenu instanceof BardeguiMenu || entity instanceof Player _plr3 && _plr3.containerMenu instanceof MagierguiMenu
-					|| entity instanceof Player _plr4 && _plr4.containerMenu instanceof MonkGuiMenu || false)) {
+					|| entity instanceof Player _plr4 && _plr4.containerMenu instanceof MonkGuiMenu || entity instanceof Player _plr5 && _plr5.containerMenu instanceof DruidGuiMenu || false)) {
 				if (entity instanceof ServerPlayer _ent) {
 					BlockPos _bpos = BlockPos.containing(x, y, z);
 					NetworkHooks.openScreen((ServerPlayer) _ent, new MenuProvider() {
