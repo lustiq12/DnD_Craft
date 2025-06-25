@@ -24,6 +24,7 @@ import net.mcreator.dndcraft.client.renderer.InvisibleStalkerRenderer;
 import net.mcreator.dndcraft.client.renderer.HarpyRenderer;
 import net.mcreator.dndcraft.client.renderer.GoblinRenderer;
 import net.mcreator.dndcraft.client.renderer.GoblinChiefRenderer;
+import net.mcreator.dndcraft.client.renderer.GhoulRenderer;
 import net.mcreator.dndcraft.client.renderer.CookRenderer;
 import net.mcreator.dndcraft.client.renderer.BowblinRenderer;
 import net.mcreator.dndcraft.client.renderer.BasiliskRenderer;
@@ -52,5 +53,6 @@ public class DndCraftModEntityRenderers {
 		event.registerEntityRenderer(DndCraftModEntities.BOWBLIN_PROJECTILE.get(), ThrownItemRenderer::new);
 		event.registerEntityRenderer(DndCraftModEntities.ARROW.get(), ThrownItemRenderer::new);
 		event.registerEntityRenderer(DndCraftModEntities.COOK.get(), CookRenderer::new);
+		event.registerEntityRenderer(DndCraftModEntities.GHOUL.get(), GhoulRenderer::new);
 	}
 }

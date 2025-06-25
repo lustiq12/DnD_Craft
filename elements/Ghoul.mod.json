@@ -13,28 +13,21 @@
       "fixedValue": 1.0
     },
     "entityDataEntries": [],
-    "modelWidth": 0.7999999999999999,
-    "modelHeight": 1.5999999999999999,
+    "modelWidth": 0.6,
+    "modelHeight": 1.8,
     "modelShadowSize": 0.5,
     "mountedYOffset": 0.0,
     "stepHeight": 0.6,
     "hasSpawnEgg": true,
     "spawnEggBaseColor": {
-      "value": -16737844,
+      "value": -16724788,
       "falpha": 0.0
     },
     "spawnEggDotColor": {
-      "value": -14922434,
+      "value": -10066330,
       "falpha": 0.0
     },
-    "creativeTabs": [
-      {
-        "value": "CUSTOM:DnD"
-      },
-      {
-        "value": "MISC"
-      }
-    ],
+    "creativeTabs": [],
     "isBoss": false,
     "bossBarColor": "PINK",
     "bossBarType": "PROGRESS",
@@ -57,14 +50,14 @@
       "value": ""
     },
     "mobBehaviourType": "Mob",
-    "mobCreatureType": "UNDEAD",
+    "mobCreatureType": "UNDEFINED",
     "attackStrength": 7,
     "attackKnockback": 0.0,
-    "knockbackResistance": 0.5,
+    "knockbackResistance": 0.0,
     "movementSpeed": 0.4,
-    "armorBaseValue": 6.0,
+    "armorBaseValue": 0.0,
     "trackingRange": 64,
-    "followRange": 32,
+    "followRange": 16,
     "health": 22,
     "xpAmount": 20,
     "waterMob": false,
@@ -95,29 +88,29 @@
       "value": ""
     },
     "livingSound": {
-      "value": ""
+      "value": "entity.zombie.ambient"
     },
     "hurtSound": {
-      "value": "entity.generic.hurt"
+      "value": "entity.zombie.hurt"
     },
     "deathSound": {
-      "value": "entity.generic.death"
+      "value": "entity.zombie.death"
     },
     "stepSound": {
-      "value": ""
+      "value": "entity.zombie.step"
     },
     "raidCelebrationSound": {
       "value": ""
     },
     "hasAI": true,
     "aiBase": "(none)",
-    "aixml": "<xml xmlns=\"https://developers.google.com/blockly/xml\"><block type=\"aitasks_container\" deletable=\"false\" x=\"40\" y=\"40\"><next><block type=\"attack_entity\"><field name=\"insight\">FALSE</field><field name=\"nearby\">FALSE</field><field name=\"entity\">EntityLiving</field><field name=\"condition\">null,null</field><next><block type=\"attack_on_collide\"><field name=\"speed\">1.2</field><field name=\"longmemory\">FALSE</field><field name=\"condition\">null,null</field><next><block type=\"wander\"><field name=\"speed\">1</field><field name=\"condition\">null,null</field><next><block type=\"attack_action\"><field name=\"callhelp\">FALSE</field><field name=\"condition\">null,null</field><next><block type=\"look_around\"><field name=\"condition\">null,null</field><next><block type=\"swim_in_water\"><field name=\"condition\">null,null</field></block></next></block></next></block></next></block></next></block></next></block></next></block></xml>",
+    "aixml": "<xml xmlns=\"https://developers.google.com/blockly/xml\"><block type=\"aitasks_container\" deletable=\"false\" x=\"40\" y=\"40\"><next><block type=\"attack_on_collide\"><field name=\"speed\">1.2</field><field name=\"longmemory\">FALSE</field><field name=\"condition\">null,null</field><next><block type=\"attack_action\"><field name=\"callhelp\">FALSE</field><field name=\"condition\">null,null</field><next><block type=\"wander\"><field name=\"speed\">0.8</field><field name=\"condition\">null,null</field><next><block type=\"look_around\"><field name=\"condition\">null,null</field><next><block type=\"attack_entity\"><field name=\"insight\">FALSE</field><field name=\"nearby\">FALSE</field><field name=\"entity\">EntityLiving</field><field name=\"condition\">null,null</field></block></next></block></next></block></next></block></next></block></next></block></xml>",
     "model": "ghoul.geo.json",
     "groupName": "",
     "animation1": "idle",
     "animation2": "walk",
     "animation3": "",
-    "animation4": "attack",
+    "animation4": "",
     "animation5": "",
     "animation6": "",
     "animation7": "",
@@ -126,7 +119,7 @@
     "animation10": "",
     "enable2": true,
     "enable3": false,
-    "enable4": true,
+    "enable4": false,
     "enable5": false,
     "enable6": false,
     "enable7": false,

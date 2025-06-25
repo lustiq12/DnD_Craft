@@ -183,6 +183,7 @@ public class DndCraftModItems {
 	public static final RegistryObject<Item> DAILY_RATION = REGISTRY.register("daily_ration", () -> new DailyRationItem());
 	public static final RegistryObject<Item> OWLBEAR_DRUMSTICKS = REGISTRY.register("owlbear_drumsticks", () -> new OwlbearDrumsticksItem());
 	public static final RegistryObject<Item> ORKSTEAAK = REGISTRY.register("orksteaak", () -> new OrksteaakItem());
+	public static final RegistryObject<Item> GHOUL_SPAWN_EGG = REGISTRY.register("ghoul_spawn_egg", () -> new ForgeSpawnEggItem(DndCraftModEntities.GHOUL, -16724788, -10066330, new Item.Properties()));
 
 	// Start of user code block custom items
 	// End of user code block custom items

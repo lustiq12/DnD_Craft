@@ -15,6 +15,7 @@ import net.mcreator.dndcraft.world.inventory.MonkGuiMenu;
 import net.mcreator.dndcraft.world.inventory.MagierguiMenu;
 import net.mcreator.dndcraft.world.inventory.MagicChooseMenu;
 import net.mcreator.dndcraft.world.inventory.KiMenu;
+import net.mcreator.dndcraft.world.inventory.DruidGuiMenu;
 import net.mcreator.dndcraft.world.inventory.CookGuiMenu;
 import net.mcreator.dndcraft.world.inventory.ClassesMenu;
 import net.mcreator.dndcraft.world.inventory.BardeguiMenu;
@@ -31,4 +32,5 @@ public class DndCraftModMenus {
 	public static final RegistryObject<MenuType<MonkGuiMenu>> MONK_GUI = REGISTRY.register("monk_gui", () -> IForgeMenuType.create(MonkGuiMenu::new));
 	public static final RegistryObject<MenuType<KiMenu>> KI = REGISTRY.register("ki", () -> IForgeMenuType.create(KiMenu::new));
 	public static final RegistryObject<MenuType<CookGuiMenu>> COOK_GUI = REGISTRY.register("cook_gui", () -> IForgeMenuType.create(CookGuiMenu::new));
+	public static final RegistryObject<MenuType<DruidGuiMenu>> DRUID_GUI = REGISTRY.register("druid_gui", () -> IForgeMenuType.create(DruidGuiMenu::new));
 }

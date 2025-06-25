@@ -104,6 +104,10 @@ public class ClassesScreen extends AbstractContainerScreen<ClassesMenu> {
 		guistate.put("button:button_bard", button_bard);
 		this.addRenderableWidget(button_bard);
 		button_druid = Button.builder(Component.translatable("gui.dnd_craft.classes.button_druid"), e -> {
+			if (true) {
+				DndCraftMod.PACKET_HANDLER.sendToServer(new ClassesButtonMessage(2, x, y, z));
+				ClassesButtonMessage.handleButtonAction(entity, 2, x, y, z);
+			}
 		}).bounds(this.leftPos + 25, this.topPos + 63, 51, 20).build();
 		guistate.put("button:button_druid", button_druid);
 		this.addRenderableWidget(button_druid);

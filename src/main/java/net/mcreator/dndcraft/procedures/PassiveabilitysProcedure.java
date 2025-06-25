@@ -20,6 +20,7 @@ import net.minecraft.server.level.ServerLevel;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.core.BlockPos;
+import net.minecraft.commands.arguments.EntityAnchorArgument;
 import net.minecraft.commands.CommandSourceStack;
 import net.minecraft.commands.CommandSource;
 
@@ -52,16 +53,14 @@ public class PassiveabilitysProcedure {
 					if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
 						_entity.addEffect(new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 100, 1));
 				}
-			}
-			if (((entity.getCapability(DndCraftModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new DndCraftModVariables.PlayerVariables())).Class_Variable).equals("Bard")) {
+			} else if (((entity.getCapability(DndCraftModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new DndCraftModVariables.PlayerVariables())).Class_Variable).equals("Bard")) {
 				if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
 					_entity.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 20, 0));
 				if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
 					_entity.addEffect(new MobEffectInstance(MobEffects.DIG_SPEED, 20, 0));
-			}
-			if (((entity.getCapability(DndCraftModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new DndCraftModVariables.PlayerVariables())).Class_Variable).equals("Monk")) {
+			} else if (((entity.getCapability(DndCraftModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new DndCraftModVariables.PlayerVariables())).Class_Variable).equals("Monk")) {
 				if (1 > (entity.getCapability(DndCraftModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new DndCraftModVariables.PlayerVariables())).cooldown) {
-					if (0 < (entity.getCapability(DndCraftModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new DndCraftModVariables.PlayerVariables())).Ki) {
+					if (1 < (entity.getCapability(DndCraftModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new DndCraftModVariables.PlayerVariables())).Ki) {
 						if (10 > (entity instanceof LivingEntity _livEnt ? _livEnt.getHealth() : -1)) {
 							if (world instanceof Level _level) {
 								if (!_level.isClientSide()) {
@@ -90,32 +89,30 @@ public class PassiveabilitysProcedure {
 									}
 									if (!(entityiterator == entity)) {
 										if (world instanceof ServerLevel _level)
-											_level.sendParticles(ParticleTypes.CHERRY_LEAVES, x, y, z, 10000, 7, 7, 7, 0.01);
+											_level.sendParticles(ParticleTypes.CHERRY_LEAVES, x, y, z, 1000, 7, 7, 7, 0.01);
 										if (entityiterator instanceof LivingEntity _entity && !_entity.level().isClientSide())
 											_entity.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SLOWDOWN, 200, 5));
 										if (entityiterator instanceof LivingEntity _entity && !_entity.level().isClientSide())
 											_entity.addEffect(new MobEffectInstance(MobEffects.SLOW_FALLING, 200, 1));
-										entityiterator.setDeltaMovement(new Vec3((entityiterator.getLookAngle().x - 0.2), 0, (entityiterator.getLookAngle().z - 0.2)));
+										entityiterator.lookAt(EntityAnchorArgument.Anchor.EYES, new Vec3(x, y, z));
+										entityiterator.setDeltaMovement(new Vec3((0 - entityiterator.getLookAngle().x), 0, (0 - entityiterator.getLookAngle().z)));
 									}
 								}
 							}
 						}
 					}
 				}
-			}
-			if (((entity.getCapability(DndCraftModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new DndCraftModVariables.PlayerVariables())).Class_Variable).equals("Druid")) {
+			} else if (((entity.getCapability(DndCraftModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new DndCraftModVariables.PlayerVariables())).Class_Variable).equals("Druid")) {
 				if (entity instanceof Player _player) {
 					_player.getAbilities().mayBuild = true;
 					_player.onUpdateAbilities();
 				}
-			}
-			if (((entity.getCapability(DndCraftModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new DndCraftModVariables.PlayerVariables())).Class_Variable).equals("Sorcerer")) {
+			} else if (((entity.getCapability(DndCraftModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new DndCraftModVariables.PlayerVariables())).Class_Variable).equals("Sorcerer")) {
 				if (entity instanceof Player _player) {
 					_player.getAbilities().mayBuild = true;
 					_player.onUpdateAbilities();
 				}
-			}
-			if (((entity.getCapability(DndCraftModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new DndCraftModVariables.PlayerVariables())).Class_Variable).equals("Fighter")) {
+			} else if (((entity.getCapability(DndCraftModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new DndCraftModVariables.PlayerVariables())).Class_Variable).equals("Fighter")) {
 				if (entity instanceof Player _player) {
 					_player.getAbilities().mayBuild = true;
 					_player.onUpdateAbilities();
@@ -131,8 +128,7 @@ public class PassiveabilitysProcedure {
 								_ent.getName().getString(), _ent.getDisplayName(), _ent.level().getServer(), _ent), "attribute @p minecraft:generic.attack_damage base set 4");
 					}
 				}
-			}
-			if (((entity.getCapability(DndCraftModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new DndCraftModVariables.PlayerVariables())).Class_Variable).equals("Monk")) {
+			} else if (((entity.getCapability(DndCraftModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new DndCraftModVariables.PlayerVariables())).Class_Variable).equals("Monk")) {
 				if (entity instanceof LivingEntity _entity)
 					_entity.removeEffect(MobEffects.BLINDNESS);
 				if (entity instanceof LivingEntity _entity)
@@ -141,20 +137,17 @@ public class PassiveabilitysProcedure {
 					_entity.removeEffect(MobEffects.HUNGER);
 				if (entity instanceof LivingEntity _entity)
 					_entity.removeEffect(MobEffects.WITHER);
-			}
-			if (((entity.getCapability(DndCraftModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new DndCraftModVariables.PlayerVariables())).Class_Variable).equals("Druid")) {
+			} else if (((entity.getCapability(DndCraftModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new DndCraftModVariables.PlayerVariables())).Class_Variable).equals("Druid")) {
 				if (entity instanceof Player _player) {
 					_player.getAbilities().mayBuild = true;
 					_player.onUpdateAbilities();
 				}
-			}
-			if (((entity.getCapability(DndCraftModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new DndCraftModVariables.PlayerVariables())).Class_Variable).equals("Sorcerer")) {
+			} else if (((entity.getCapability(DndCraftModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new DndCraftModVariables.PlayerVariables())).Class_Variable).equals("Sorcerer")) {
 				if (entity instanceof Player _player) {
 					_player.getAbilities().mayBuild = true;
 					_player.onUpdateAbilities();
 				}
-			}
-			if (((entity.getCapability(DndCraftModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new DndCraftModVariables.PlayerVariables())).Class_Variable).equals("Fighter")) {
+			} else if (((entity.getCapability(DndCraftModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new DndCraftModVariables.PlayerVariables())).Class_Variable).equals("Fighter")) {
 				if (entity instanceof Player _player) {
 					_player.getAbilities().mayBuild = true;
 					_player.onUpdateAbilities();

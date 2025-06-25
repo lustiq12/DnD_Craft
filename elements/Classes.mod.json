@@ -48,6 +48,9 @@
           "name": "button_druid",
           "text": "Druid",
           "isUndecorated": false,
+          "onClick": {
+            "name": "DruidOpen"
+          },
           "width": 51,
           "height": 20,
           "x": 150,

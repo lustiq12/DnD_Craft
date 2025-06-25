@@ -17,6 +17,7 @@ import net.mcreator.dndcraft.entity.InvisibleStalkerEntity;
 import net.mcreator.dndcraft.entity.HarpyEntity;
 import net.mcreator.dndcraft.entity.GoblinEntity;
 import net.mcreator.dndcraft.entity.GoblinChiefEntity;
+import net.mcreator.dndcraft.entity.GhoulEntity;
 import net.mcreator.dndcraft.entity.CookEntity;
 import net.mcreator.dndcraft.entity.BowblinEntity;
 import net.mcreator.dndcraft.entity.BasiliskEntity;
@@ -132,6 +133,13 @@ public class EntityAnimationFactory {
 				}
 			}
 			if (event.getEntity() instanceof CookEntity syncable) {
+				String animation = syncable.getSyncedAnimation();
+				if (!animation.equals("undefined")) {
+					syncable.setAnimation("undefined");
+					syncable.animationprocedure = animation;
+				}
+			}
+			if (event.getEntity() instanceof GhoulEntity syncable) {
 				String animation = syncable.getSyncedAnimation();
 				if (!animation.equals("undefined")) {
 					syncable.setAnimation("undefined");

@@ -6154,6 +6154,92 @@
         ]
       },
       "path": "~/Commands"
+    },
+    {
+      "name": "Druid",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "druid",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/dndcraft/procedures/DruidProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/ClassSystem/Druid"
+    },
+    {
+      "name": "DruidGui",
+      "type": "gui",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "druid_gui",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/dndcraft/client/gui/DruidGuiScreen.java",
+          "src/main/java/net/mcreator/dndcraft/network/DruidGuiButtonMessage.java",
+          "src/main/java/net/mcreator/dndcraft/world/inventory/DruidGuiMenu.java"
+        ]
+      },
+      "path": "~/ClassSystem/Druid"
+    },
+    {
+      "name": "DruidOpen",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "druid_open",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/dndcraft/procedures/DruidOpenProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/ClassSystem/Druid"
+    },
+    {
+      "name": "Ghoul",
+      "type": "animatedentity",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ghoul",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/dndcraft/client/renderer/GhoulRenderer.java",
+          "src/main/resources/data/dnd_craft/forge/biome_modifier/ghoul_biome_modifier.json",
+          "src/main/java/net/mcreator/dndcraft/entity/model/GhoulModel.java",
+          "src/main/java/net/mcreator/dndcraft/entity/GhoulEntity.java",
+          "src/main/resources/assets/dnd_craft/models/item/ghoul_spawn_egg.json"
+        ]
+      },
+      "path": "~/Mobs"
     }
   ],
   "variable_elements": [
@@ -6413,8 +6499,7 @@
       "AdamantiumUpgradeSmithingTemplate",
       "HarpyTooth",
       "GoblinsBackpack",
-      "Ocherjally2",
-      "Ghoul"
+      "Ocherjally2"
     ]
   },
   "language_map": {
@@ -6428,6 +6513,7 @@
       "advancements.weapon_collector.title": "Weapon Collector",
       "gui.dnd_craft.cook_gui.button_completed1": "COMPLETED",
       "gui.dnd_craft.monk_gui.label_level_60": "Level 15 (c)",
+      "gui.dnd_craft.druid_gui.label_invincibility": "Power of the Wind",
       "gui.dnd_craft.barbar_gui.label_barbarian": "Barbarian",
       "item.dnd_craft.poison_vial.description_1": "Right-click with weapon in off hand to poison it",
       "gui.dnd_craft.barbar_gui.label_invincibility": "Invincibility",
@@ -6510,6 +6596,7 @@
       "item.dnd_craft.drums.description_2": "-Hit enemies get the levitation effect",
       "gui.dnd_craft.barbar_gui.label_level_80_passive": "Level 20 (Passive)",
       "gui.dnd_craft.magiergui.label_level_80_passive": "Level 80 (Passive)",
+      "gui.dnd_craft.druid_gui.label_40_level": "Level 10 (Passive)",
       "entity.dnd_craft.mimic_sludge": "Mimic",
       "item.cool_mod.adamantium_battle_axe": "Adamantium Battle Axe",
       "item.cool_mod.adamantium_upgrade_smithing_template": "Adamantium Upgrade Smithing Template",
@@ -6529,10 +6616,13 @@
       "gui.cool_mod.barbar_gui.button_choose": "Choose",
       "advancements.weapon_collector.descr": "Get every dnd weapon.",
       "item.cool_mod.iron_plate": "Iron Plate",
+      "gui.dnd_craft.druid_gui.label_level_60": "Level 15 (c)",
       "gui.cool_mod.bardegui.label_rage": "Healing",
+      "gui.dnd_craft.druid_gui.label_barbarian_strenght": "Better Nature regeneration",
       "item.dnd_craft.orksteaak.description_1": "§6-Strenght I",
       "gui.cool_mod.classes.button_bard": "Bard",
       "item.dnd_craft.orksteaak.description_0": "§6This is a meal, wich means you get specific effects upon consuming it.",
+      "gui.dnd_craft.druid_gui.label_survival_instinct": "Nature Regeneration",
       "gui.cool_mod.classes.button_druid": "Druid",
       "gui.dnd_craft.magiergui.label_level_60": "Level 60 (c)",
       "gui.cool_mod.barbar_gui.label_barbarian_strenght": "Barbarian Strenght",
@@ -6588,6 +6678,7 @@
       "gui.dnd_craft.magiergui.label_barbarian_strenght": "Better Healing",
       "item.dnd_craft.ghost_axe": "Ghost Axe",
       "gui.dnd_craft.classes.button_druid": "Druid",
+      "gui.dnd_craft.druid_gui.label_0_level": "Level 1 (y)",
       "item.dnd_craft.adamantium_sickle": "Adamantium Sickle",
       "gui.dnd_craft.cook_gui.button_loot_quest": "LOOT QUEST",
       "gui.cool_mod.bardegui.label_level_60": "Level 60",
@@ -6601,7 +6692,9 @@
       "item.dnd_craft.sickle": "Sickle",
       "item.dnd_craft.mimic_spawn_egg": "Mimic Spawn Egg",
       "advancements.businessman.descr": "Collect one stack of every diffrent coin.",
+      "gui.dnd_craft.druid_gui.label_barbarian": "Druid",
       "gui.dnd_craft.bardegui.label_40_level": "Level 10 (Passive)",
+      "gui.dnd_craft.druid_gui.label_ghost_axe": "Entangling Roots",
       "advancements.adamantiumattack.title": "Adamantium Attack",
       "gui.dnd_craft.magic_choose.label_level_80": "Level 8",
       "entity.dnd_craft.ocherjally_2": "Ocherjelly",
@@ -6616,6 +6709,7 @@
       "item.cool_mod.mace": "Mace",
       "gui.dnd_craft.classes.button_monk": "Monk",
       "item.dnd_craft.magicscroll_firearrow.description_1": "Magic Item",
+      "gui.dnd_craft.druid_gui.button_choose": "Choose",
       "item.cool_mod.dagger": "Dagger",
       "item.dnd_craft.copper_coin": "Copper Coin",
       "item.dnd_craft.magicscroll_firearrow.description_2": "§Common",
@@ -6639,8 +6733,11 @@
       "item.cool_mod.ogre_spawn_egg": "Ogre Spawn Egg",
       "gui.dnd_craft.classes.label_working_right_now_but_will_be_ad": "working right now but will be",
       "item.dnd_craft.two_handed_axe": "Two Handed Axe",
+      "gui.dnd_craft.druid_gui.label_level_80_passive": "Level 20 (Passive)",
+      "gui.dnd_craft.druid_gui.label_10_level": "Level 5 (x)",
       "item.cool_mod.harpy_spear": "Harpy Spear",
       "gui.dnd_craft.barbar_gui.label_0_level": "Level 1 (y)",
+      "gui.dnd_craft.druid_gui.button_exit": "EXIT",
       "gui.dnd_craft.monk_gui.label_level_80_passive": "Level 20 (Passive)",
       "gui.dnd_craft.magiergui.label_barbarian": "Magician",
       "item.dnd_craft.two_handed_adamantium_axe": "Two Handed Adamantium Axe",
@@ -6699,6 +6796,7 @@
       "item.dnd_craft.coated_poisoned_dagger": "§6Dagger of Poison",
       "item.dnd_craft.animal_bone": "Animal Bones",
       "entity.dnd_craft.invisible_stalker": "Invisible Stalker",
+      "gui.dnd_craft.druid_gui.label_rage": "Healing",
       "entity.cool_mod.ork": "Ork",
       "gui.dnd_craft.barbar_gui.label_40_level": "Level 10 (Passive)",
       "item.dnd_craft.heal_potion": "§6Heal Potion",

@@ -15,6 +15,7 @@ import net.mcreator.dndcraft.client.gui.MonkGuiScreen;
 import net.mcreator.dndcraft.client.gui.MagierguiScreen;
 import net.mcreator.dndcraft.client.gui.MagicChooseScreen;
 import net.mcreator.dndcraft.client.gui.KiScreen;
+import net.mcreator.dndcraft.client.gui.DruidGuiScreen;
 import net.mcreator.dndcraft.client.gui.CookGuiScreen;
 import net.mcreator.dndcraft.client.gui.ClassesScreen;
 import net.mcreator.dndcraft.client.gui.BardeguiScreen;
@@ -33,6 +34,7 @@ public class DndCraftModScreens {
 			MenuScreens.register(DndCraftModMenus.MONK_GUI.get(), MonkGuiScreen::new);
 			MenuScreens.register(DndCraftModMenus.KI.get(), KiScreen::new);
 			MenuScreens.register(DndCraftModMenus.COOK_GUI.get(), CookGuiScreen::new);
+			MenuScreens.register(DndCraftModMenus.DRUID_GUI.get(), DruidGuiScreen::new);
 		});
 	}
 }

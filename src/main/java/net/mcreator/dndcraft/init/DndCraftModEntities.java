@@ -29,6 +29,7 @@ import net.mcreator.dndcraft.entity.InvisibleStalkerEntity;
 import net.mcreator.dndcraft.entity.HarpyEntity;
 import net.mcreator.dndcraft.entity.GoblinEntity;
 import net.mcreator.dndcraft.entity.GoblinChiefEntity;
+import net.mcreator.dndcraft.entity.GhoulEntity;
 import net.mcreator.dndcraft.entity.Fireball2Entity;
 import net.mcreator.dndcraft.entity.CookEntity;
 import net.mcreator.dndcraft.entity.ColdrayspellEntity;
@@ -113,6 +114,10 @@ public class DndCraftModEntities {
 			EntityType.Builder.<CookEntity>of(CookEntity::new, MobCategory.AMBIENT).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(CookEntity::new)
 
 					.sized(0.9f, 1.5f));
+	public static final RegistryObject<EntityType<GhoulEntity>> GHOUL = register("ghoul",
+			EntityType.Builder.<GhoulEntity>of(GhoulEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(GhoulEntity::new)
+
+					.sized(0.6f, 1.8f));
 
 	// Start of user code block custom entities
 	// End of user code block custom entities
@@ -139,6 +144,7 @@ public class DndCraftModEntities {
 			WargEntity.init();
 			BowblinEntity.init();
 			CookEntity.init();
+			GhoulEntity.init();
 		});
 	}
 
@@ -160,5 +166,6 @@ public class DndCraftModEntities {
 		event.put(WARG.get(), WargEntity.createAttributes().build());
 		event.put(BOWBLIN.get(), BowblinEntity.createAttributes().build());
 		event.put(COOK.get(), CookEntity.createAttributes().build());
+		event.put(GHOUL.get(), GhoulEntity.createAttributes().build());
 	}
 }
