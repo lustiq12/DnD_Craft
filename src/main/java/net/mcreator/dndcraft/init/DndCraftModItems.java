@@ -57,6 +57,7 @@ import net.mcreator.dndcraft.item.GoldCoinItem;
 import net.mcreator.dndcraft.item.GoblinsBackpackItem;
 import net.mcreator.dndcraft.item.GladiusItem;
 import net.mcreator.dndcraft.item.GhostAxeItem;
+import net.mcreator.dndcraft.item.FeywildItem;
 import net.mcreator.dndcraft.item.DrumsItem;
 import net.mcreator.dndcraft.item.DailyRationItem;
 import net.mcreator.dndcraft.item.DaggerItem;
@@ -184,6 +185,7 @@ public class DndCraftModItems {
 	public static final RegistryObject<Item> OWLBEAR_DRUMSTICKS = REGISTRY.register("owlbear_drumsticks", () -> new OwlbearDrumsticksItem());
 	public static final RegistryObject<Item> ORKSTEAAK = REGISTRY.register("orksteaak", () -> new OrksteaakItem());
 	public static final RegistryObject<Item> GHOUL_SPAWN_EGG = REGISTRY.register("ghoul_spawn_egg", () -> new ForgeSpawnEggItem(DndCraftModEntities.GHOUL, -16724788, -10066330, new Item.Properties()));
+	public static final RegistryObject<Item> FEYWILD = REGISTRY.register("feywild", () -> new FeywildItem());
 
 	// Start of user code block custom items
 	// End of user code block custom items

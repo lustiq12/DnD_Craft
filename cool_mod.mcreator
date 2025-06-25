@@ -6240,6 +6240,29 @@
         ]
       },
       "path": "~/Mobs"
+    },
+    {
+      "name": "Feywild",
+      "type": "dimension",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "feywild",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/dnd_craft/blockstates/feywild_portal.json",
+          "src/main/resources/assets/dnd_craft/models/block/feywild_portal_ns.json",
+          "src/main/java/net/mcreator/dndcraft/block/FeywildPortalBlock.java",
+          "src/main/resources/data/dnd_craft/dimension_type/feywild.json",
+          "src/main/java/net/mcreator/dndcraft/world/teleporter/FeywildPortalShape.java",
+          "src/main/resources/assets/dnd_craft/models/block/feywild_portal_ew.json",
+          "src/main/java/net/mcreator/dndcraft/item/FeywildItem.java",
+          "src/main/resources/assets/dnd_craft/models/item/feywild.json",
+          "src/main/java/net/mcreator/dndcraft/world/teleporter/FeywildTeleporter.java",
+          "src/main/java/net/mcreator/dndcraft/world/dimension/FeywildDimension.java",
+          "src/main/resources/data/dnd_craft/dimension/feywild.json"
+        ]
+      },
+      "path": "~/DimensionsBiomes"
     }
   ],
   "variable_elements": [
@@ -6446,6 +6469,9 @@
     "ITEMS:minecraft:hoes": [
       "~CUSTOM:AdamantiumSickle",
       "~CUSTOM:Sickle"
+    ],
+    "BLOCKS:minecraft:overworld_carver_replaceables": [
+      "~Blocks.STONE#0"
     ]
   },
   "tab_element_order": {
@@ -6537,7 +6563,8 @@
       "AdamantiumUpgradeSmithingTemplate",
       "HarpyTooth",
       "GoblinsBackpack",
-      "Ocherjally2"
+      "Ocherjally2",
+      "Feywild"
     ]
   },
   "language_map": {
@@ -6723,6 +6750,7 @@
       "gui.dnd_craft.cook_gui.label_ssc": "§6Cooking veteran",
       "item.dnd_craft.magic_wand": "Spellbook",
       "gui.dnd_craft.bardegui.label_barbarian_strenght": "Better Healing",
+      "item.dnd_craft.feywild": "some stick",
       "gui.dnd_craft.cook_gui.label_eat_40_ork_beefs": "Eat 40 ork beefs",
       "item.dnd_craft.poison_vial": "Poison Vial",
       "gui.dnd_craft.ki.label_ki_abilitys": "Ki Abilitys",
@@ -7008,12 +7036,16 @@
       {
         "name": "Commands",
         "children": []
+      },
+      {
+        "name": "DimensionsBiomes",
+        "children": []
       }
     ]
   },
   "workspaceSettings": {
     "modid": "dnd_craft",
-    "modName": "D\u0026D Craft",
+    "modName": "DnD-Craft",
     "version": "2.5.0",
     "description": "This mod is a fun addition to Minecraft that adds some mobs from the DnD universe and lets you choose your own class.",
     "author": "Ppotatoe, Luderspieler",

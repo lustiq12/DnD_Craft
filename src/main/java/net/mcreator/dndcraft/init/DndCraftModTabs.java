@@ -110,6 +110,7 @@ public class DndCraftModTabs {
 				tabData.accept(DndCraftModItems.ADAMANTIUM_UPGRADE_SMITHING_TEMPLATE.get());
 				tabData.accept(DndCraftModItems.HARPY_TOOTH.get());
 				tabData.accept(DndCraftModItems.GOBLINS_BACKPACK.get());
+				tabData.accept(DndCraftModItems.FEYWILD.get());
 			}).build());
 
 	@SubscribeEvent
@@ -129,6 +130,7 @@ public class DndCraftModTabs {
 		} else if (tabData.getTabKey() == CreativeModeTabs.TOOLS_AND_UTILITIES) {
 			tabData.accept(DndCraftModItems.BANJO.get());
 			tabData.accept(DndCraftModItems.DRUMS.get());
+			tabData.accept(DndCraftModItems.FEYWILD.get());
 		}
 	}
 }

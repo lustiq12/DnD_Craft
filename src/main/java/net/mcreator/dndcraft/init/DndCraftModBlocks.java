@@ -13,6 +13,7 @@ import net.minecraft.world.level.block.Block;
 import net.mcreator.dndcraft.block.ScrapblockBlock;
 import net.mcreator.dndcraft.block.RawOwlbearmeatBlockBlock;
 import net.mcreator.dndcraft.block.PlatinumOreBlock;
+import net.mcreator.dndcraft.block.FeywildPortalBlock;
 import net.mcreator.dndcraft.block.Cookedowlbearmeatblock4Block;
 import net.mcreator.dndcraft.block.Cookedowlbearmeatblock3Block;
 import net.mcreator.dndcraft.block.Cookedowlbearmeatblock2Block;
@@ -30,6 +31,7 @@ public class DndCraftModBlocks {
 	public static final RegistryObject<Block> COOKEDOWLBEARMEATBLOCK_4 = REGISTRY.register("cookedowlbearmeatblock_4", () -> new Cookedowlbearmeatblock4Block());
 	public static final RegistryObject<Block> PLATINUM_ORE = REGISTRY.register("platinum_ore", () -> new PlatinumOreBlock());
 	public static final RegistryObject<Block> SCRAPBLOCK = REGISTRY.register("scrapblock", () -> new ScrapblockBlock());
+	public static final RegistryObject<Block> FEYWILD_PORTAL = REGISTRY.register("feywild_portal", () -> new FeywildPortalBlock());
 	// Start of user code block custom blocks
 	// End of user code block custom blocks
 }
