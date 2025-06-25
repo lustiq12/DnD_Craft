@@ -1131,7 +1131,7 @@
           }
         ]
       },
-      "path": "~/ClassSystem/Barde"
+      "path": "~/ClassSystem/Bard"
     },
     {
       "name": "WutrauschDisplayOverlayIngame",
@@ -1269,7 +1269,7 @@
           "src/main/java/net/mcreator/dndcraft/client/gui/BardeguiScreen.java"
         ]
       },
-      "path": "~/ClassSystem/Barde"
+      "path": "~/ClassSystem/Bard"
     },
     {
       "name": "Exit",
@@ -1374,7 +1374,7 @@
           }
         ]
       },
-      "path": "~/ClassSystem/Barde"
+      "path": "~/ClassSystem/Bard"
     },
     {
       "name": "Displaybutton",
@@ -3083,7 +3083,7 @@
           }
         ]
       },
-      "path": "~/ClassSystem/Magier"
+      "path": "~/ClassSystem/Magician"
     },
     {
       "name": "Magiergui",
@@ -3098,7 +3098,7 @@
           "src/main/java/net/mcreator/dndcraft/world/inventory/MagierguiMenu.java"
         ]
       },
-      "path": "~/ClassSystem/Magier"
+      "path": "~/ClassSystem/Magician"
     },
     {
       "name": "Magieropen",
@@ -3133,7 +3133,7 @@
           }
         ]
       },
-      "path": "~/ClassSystem/Magier"
+      "path": "~/ClassSystem/Magician"
     },
     {
       "name": "MagicWandRightclicked",
@@ -3168,7 +3168,7 @@
           }
         ]
       },
-      "path": "~/ClassSystem/Magier"
+      "path": "~/ClassSystem/Magician"
     },
     {
       "name": "Coldray",
@@ -6792,7 +6792,7 @@
         "name": "ClassSystem",
         "children": [
           {
-            "name": "Barde",
+            "name": "Bard",
             "children": []
           },
           {
@@ -6808,11 +6808,15 @@
             "children": []
           },
           {
-            "name": "Magier",
+            "name": "Magician",
             "children": []
           },
           {
             "name": "Monk",
+            "children": []
+          },
+          {
+            "name": "Druid",
             "children": []
           }
         ]
