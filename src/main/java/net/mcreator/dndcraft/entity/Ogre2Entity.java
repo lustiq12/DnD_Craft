@@ -198,7 +198,7 @@ public class Ogre2Entity extends Monster implements GeoEntity {
 		builder = builder.add(Attributes.ARMOR, 0);
 		builder = builder.add(Attributes.ATTACK_DAMAGE, 12);
 		builder = builder.add(Attributes.FOLLOW_RANGE, 32);
-		builder = builder.add(Attributes.KNOCKBACK_RESISTANCE, 1);
+		builder = builder.add(Attributes.KNOCKBACK_RESISTANCE, 0.5);
 		return builder;
 	}
 
