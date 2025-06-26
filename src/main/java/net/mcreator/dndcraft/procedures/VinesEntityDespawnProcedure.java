@@ -9,7 +9,7 @@ public class VinesEntityDespawnProcedure {
 	public static void execute(LevelAccessor world, Entity entity) {
 		if (entity == null)
 			return;
-		DndCraftMod.queueServerWork(105, () -> {
+		DndCraftMod.queueServerWork(130, () -> {
 			if (!entity.level().isClientSide())
 				entity.discard();
 		});

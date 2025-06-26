@@ -14,6 +14,7 @@ import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.damagesource.DamageTypes;
 import net.minecraft.world.damagesource.DamageSource;
+import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.core.particles.ParticleTypes;
@@ -154,9 +155,15 @@ public class Classability2pProcedure {
 						for (Entity entityiterator : _entfound) {
 							if (!(entityiterator instanceof Player)) {
 								if (entityiterator instanceof LivingEntity _entity && !_entity.level().isClientSide())
-									_entity.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SLOWDOWN, 105, 254, false, false));
+									_entity.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SLOWDOWN, 115, 254, false, false));
 								if (entityiterator instanceof LivingEntity _entity && !_entity.level().isClientSide())
-									_entity.addEffect(new MobEffectInstance(MobEffects.JUMP, 105, 254, false, false));
+									_entity.addEffect(new MobEffectInstance(MobEffects.JUMP, 115, 254, false, false));
+								{
+									Entity _ent = entityiterator;
+									_ent.teleportTo((entityiterator.getX()), (entityiterator.getY()), (entityiterator.getZ()));
+									if (_ent instanceof ServerPlayer _serverPlayer)
+										_serverPlayer.connection.teleport((entityiterator.getX()), (entityiterator.getY()), (entityiterator.getZ()), _ent.getYRot(), _ent.getXRot());
+								}
 								if (world instanceof ServerLevel _level) {
 									Entity entityToSpawn = DndCraftModEntities.VINES.get().spawn(_level, BlockPos.containing(entityiterator.getX(), entityiterator.getY(), entityiterator.getZ()), MobSpawnType.MOB_SUMMONED);
 									if (entityToSpawn != null) {
@@ -201,6 +208,20 @@ public class Classability2pProcedure {
 														}
 													}.compareDistOf((entityiterator.getX()), (entityiterator.getY()), (entityiterator.getZ()))).findFirst().orElse(null))).setAnimation("idleReal");
 										}
+										DndCraftMod.queueServerWork(40, () -> {
+											if (((Entity) world.getEntitiesOfClass(VINESEntity.class, AABB.ofSize(new Vec3((entityiterator.getX()), (entityiterator.getY()), (entityiterator.getZ())), 4, 4, 4), e -> true).stream().sorted(new Object() {
+												Comparator<Entity> compareDistOf(double _x, double _y, double _z) {
+													return Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_x, _y, _z));
+												}
+											}.compareDistOf((entityiterator.getX()), (entityiterator.getY()), (entityiterator.getZ()))).findFirst().orElse(null)) instanceof VINESEntity) {
+												((VINESEntity) ((Entity) world.getEntitiesOfClass(VINESEntity.class, AABB.ofSize(new Vec3((entityiterator.getX()), (entityiterator.getY()), (entityiterator.getZ())), 4, 4, 4), e -> true).stream()
+														.sorted(new Object() {
+															Comparator<Entity> compareDistOf(double _x, double _y, double _z) {
+																return Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_x, _y, _z));
+															}
+														}.compareDistOf((entityiterator.getX()), (entityiterator.getY()), (entityiterator.getZ()))).findFirst().orElse(null))).setAnimation("despawn");
+											}
+										});
 									});
 								});
 							}
