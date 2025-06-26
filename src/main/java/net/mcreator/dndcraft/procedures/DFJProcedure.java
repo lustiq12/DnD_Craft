@@ -39,10 +39,6 @@ public class DFJProcedure {
 		if (entity == null)
 			return;
 		if (DndCraftModVariables.WorldVariables.get(world).first_join) {
-			if (entity instanceof Player _player) {
-				_player.getAbilities().invulnerable = true;
-				_player.onUpdateAbilities();
-			}
 			if (entity instanceof ServerPlayer _ent) {
 				BlockPos _bpos = BlockPos.containing(x, y, z);
 				NetworkHooks.openScreen((ServerPlayer) _ent, new MenuProvider() {
