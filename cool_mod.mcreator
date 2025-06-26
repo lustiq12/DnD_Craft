@@ -6263,6 +6263,46 @@
         ]
       },
       "path": "~/DimensionsBiomes"
+    },
+    {
+      "name": "VINES",
+      "type": "animatedentity",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "vines",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/dnd_craft/models/item/vines_spawn_egg.json",
+          "src/main/java/net/mcreator/dndcraft/entity/model/VINESModel.java",
+          "src/main/java/net/mcreator/dndcraft/entity/VINESEntity.java",
+          "src/main/java/net/mcreator/dndcraft/client/renderer/VINESRenderer.java",
+          "src/main/resources/data/dnd_craft/forge/biome_modifier/vines_biome_modifier.json"
+        ]
+      },
+      "path": "~/ClassSystem/Druid"
+    },
+    {
+      "name": "VinesEntityDespawn",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "vines_entity_despawn",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/dndcraft/procedures/VinesEntityDespawnProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/ClassSystem/Druid"
     }
   ],
   "variable_elements": [
@@ -6725,6 +6765,7 @@
       "gui.cool_mod.barbar_gui.label_40_level": "Level 40 (Passive)",
       "item.cool_mod.battle_axe": "Battle Axe",
       "effect.dnd_craft.slimy": "Slimy",
+      "item.dnd_craft.vines_spawn_egg": "VINES Spawn Egg",
       "gui.cool_mod.bardegui.label_level_80_passive": "Level 80 (Passive)",
       "item.dnd_craft.two_handedhammer": "Two Handed Hammer",
       "gui.cool_mod.classes.label_working_right_now_but_will_be_ad": "working right now but will be",
@@ -6888,6 +6929,7 @@
       "gui.dnd_craft.magiergui.label_survival_instinct": "Bards Speed",
       "item.dnd_craft.adamantium_battle_axe": "Adamantium Battle Axe",
       "gui.dnd_craft.magiergui.label_invincibility": "Power of the Wind",
+      "entity.dnd_craft.vines": "VINES",
       "item.cool_mod.sickle": "Sickle",
       "gui.cool_mod.bardegui.button_choose": "Choose",
       "gui.dnd_craft.monk_gui.label_barbarian": "Monk",

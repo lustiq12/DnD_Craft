@@ -12,6 +12,7 @@ import net.minecraftforge.api.distmarker.Dist;
 import net.minecraft.client.renderer.entity.ThrownItemRenderer;
 
 import net.mcreator.dndcraft.client.renderer.WargRenderer;
+import net.mcreator.dndcraft.client.renderer.VINESRenderer;
 import net.mcreator.dndcraft.client.renderer.OwlbearRenderer;
 import net.mcreator.dndcraft.client.renderer.OrkRenderer;
 import net.mcreator.dndcraft.client.renderer.Ogre2Renderer;
@@ -54,5 +55,6 @@ public class DndCraftModEntityRenderers {
 		event.registerEntityRenderer(DndCraftModEntities.ARROW.get(), ThrownItemRenderer::new);
 		event.registerEntityRenderer(DndCraftModEntities.COOK.get(), CookRenderer::new);
 		event.registerEntityRenderer(DndCraftModEntities.GHOUL.get(), GhoulRenderer::new);
+		event.registerEntityRenderer(DndCraftModEntities.VINES.get(), VINESRenderer::new);
 	}
 }

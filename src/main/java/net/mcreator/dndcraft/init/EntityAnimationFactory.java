@@ -5,6 +5,7 @@ import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.event.entity.living.LivingEvent;
 
 import net.mcreator.dndcraft.entity.WargEntity;
+import net.mcreator.dndcraft.entity.VINESEntity;
 import net.mcreator.dndcraft.entity.OwlbearEntity;
 import net.mcreator.dndcraft.entity.OrkEntity;
 import net.mcreator.dndcraft.entity.Ogre2Entity;
@@ -140,6 +141,13 @@ public class EntityAnimationFactory {
 				}
 			}
 			if (event.getEntity() instanceof GhoulEntity syncable) {
+				String animation = syncable.getSyncedAnimation();
+				if (!animation.equals("undefined")) {
+					syncable.setAnimation("undefined");
+					syncable.animationprocedure = animation;
+				}
+			}
+			if (event.getEntity() instanceof VINESEntity syncable) {
 				String animation = syncable.getSyncedAnimation();
 				if (!animation.equals("undefined")) {
 					syncable.setAnimation("undefined");

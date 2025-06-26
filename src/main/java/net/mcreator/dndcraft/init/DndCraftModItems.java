@@ -186,6 +186,7 @@ public class DndCraftModItems {
 	public static final RegistryObject<Item> ORKSTEAAK = REGISTRY.register("orksteaak", () -> new OrksteaakItem());
 	public static final RegistryObject<Item> GHOUL_SPAWN_EGG = REGISTRY.register("ghoul_spawn_egg", () -> new ForgeSpawnEggItem(DndCraftModEntities.GHOUL, -16724788, -10066330, new Item.Properties()));
 	public static final RegistryObject<Item> FEYWILD = REGISTRY.register("feywild", () -> new FeywildItem());
+	public static final RegistryObject<Item> VINES_SPAWN_EGG = REGISTRY.register("vines_spawn_egg", () -> new ForgeSpawnEggItem(DndCraftModEntities.VINES, -1, -1, new Item.Properties()));
 
 	// Start of user code block custom items
 	// End of user code block custom items
