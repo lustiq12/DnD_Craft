@@ -43,22 +43,20 @@ public class LifeextraperlevelProcedure {
 				capability.syncPlayerVariables(entity);
 			});
 		}
-		if (!(100 == (entity.getCapability(DndCraftModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new DndCraftModVariables.PlayerVariables())).MaxMana
-				- (entity.getCapability(DndCraftModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new DndCraftModVariables.PlayerVariables())).PlayerLevel * 20)
-				|| (entity.getCapability(DndCraftModVariables.PLAYER_VARIABLES_CAPABILITY, null)
-						.orElse(new DndCraftModVariables.PlayerVariables())).Lvlxp >= (entity.getCapability(DndCraftModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new DndCraftModVariables.PlayerVariables())).PlayerLevel * 100) {
+		if ((entity.getCapability(DndCraftModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new DndCraftModVariables.PlayerVariables())).Lvlxp >= Math
+				.pow((entity.getCapability(DndCraftModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new DndCraftModVariables.PlayerVariables())).PlayerLevel, 2) * 35) {
 			{
-				double _setval = (entity.getCapability(DndCraftModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new DndCraftModVariables.PlayerVariables())).PlayerLevel + 1;
+				double _setval = (entity.getCapability(DndCraftModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new DndCraftModVariables.PlayerVariables())).Lvlxp
+						- Math.pow((entity.getCapability(DndCraftModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new DndCraftModVariables.PlayerVariables())).PlayerLevel, 2) * 35;
 				entity.getCapability(DndCraftModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-					capability.PlayerLevel = _setval;
+					capability.Lvlxp = _setval;
 					capability.syncPlayerVariables(entity);
 				});
 			}
 			{
-				double _setval = (entity.getCapability(DndCraftModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new DndCraftModVariables.PlayerVariables())).Lvlxp
-						- (entity.getCapability(DndCraftModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new DndCraftModVariables.PlayerVariables())).PlayerLevel * 100;
+				double _setval = (entity.getCapability(DndCraftModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new DndCraftModVariables.PlayerVariables())).PlayerLevel + 1;
 				entity.getCapability(DndCraftModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-					capability.Lvlxp = _setval;
+					capability.PlayerLevel = _setval;
 					capability.syncPlayerVariables(entity);
 				});
 			}
@@ -93,8 +91,10 @@ public class LifeextraperlevelProcedure {
 		if (amount > 0.9) {
 			if (!world.isClientSide() && world.getServer() != null)
 				world.getServer().getPlayerList()
-						.broadcastSystemMessage(Component.literal(("You still need " + ((entity.getCapability(DndCraftModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new DndCraftModVariables.PlayerVariables())).PlayerLevel * 100
-								- (entity.getCapability(DndCraftModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new DndCraftModVariables.PlayerVariables())).Lvlxp) + " XP to level up.")), false);
+						.broadcastSystemMessage(Component.literal(("You still need "
+								+ (Math.pow((entity.getCapability(DndCraftModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new DndCraftModVariables.PlayerVariables())).PlayerLevel, 2) * 35
+										- (entity.getCapability(DndCraftModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new DndCraftModVariables.PlayerVariables())).Lvlxp)
+								+ " XP to level up. " + (entity.getCapability(DndCraftModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new DndCraftModVariables.PlayerVariables())).Lvlxp)), false);
 		}
 	}
 }
