@@ -97,7 +97,7 @@
       {
         "type": "image",
         "data": {
-          "image": "druidbruhscreen.png",
+          "image": "druidstaff.png",
           "use1Xscale": false,
           "x": 132,
           "y": 89,
@@ -111,54 +111,6 @@
           "use1Xscale": false,
           "x": 132,
           "y": 116,
-          "locked": false
-        }
-      },
-      {
-        "type": "label",
-        "data": {
-          "name": "label_druid_and_magician_arent_workin",
-          "text": {
-            "fixedValue": "(druid is not"
-          },
-          "color": {
-            "value": -12829636,
-            "falpha": 0.0
-          },
-          "x": 132,
-          "y": 143,
-          "locked": false
-        }
-      },
-      {
-        "type": "label",
-        "data": {
-          "name": "label_working_right_now_but_will_be_ad",
-          "text": {
-            "fixedValue": "working right now but will be"
-          },
-          "color": {
-            "value": -12829636,
-            "falpha": 0.0
-          },
-          "x": 132,
-          "y": 152,
-          "locked": false
-        }
-      },
-      {
-        "type": "label",
-        "data": {
-          "name": "label_added_soon",
-          "text": {
-            "fixedValue": "added soon...)"
-          },
-          "color": {
-            "value": -12829636,
-            "falpha": 0.0
-          },
-          "x": 132,
-          "y": 161,
           "locked": false
         }
       },

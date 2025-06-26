@@ -7,6 +7,7 @@ import net.minecraft.world.phys.AABB;
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.entity.ai.attributes.Attributes;
 import net.minecraft.world.entity.MobSpawnType;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.Entity;
@@ -154,6 +155,11 @@ public class Classability2pProcedure {
 						List<Entity> _entfound = world.getEntitiesOfClass(Entity.class, new AABB(_center, _center).inflate(12 / 2d), e -> true).stream().sorted(Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_center))).toList();
 						for (Entity entityiterator : _entfound) {
 							if (!(entityiterator instanceof Player)) {
+								if (entityiterator instanceof LivingEntity _livingEntity30 && _livingEntity30.getAttributes().hasAttribute(Attributes.KNOCKBACK_RESISTANCE))
+									_livingEntity30.getAttribute(Attributes.KNOCKBACK_RESISTANCE)
+											.setBaseValue((((entityiterator instanceof LivingEntity _livingEntity29 && _livingEntity29.getAttributes().hasAttribute(Attributes.KNOCKBACK_RESISTANCE)
+													? _livingEntity29.getAttribute(Attributes.KNOCKBACK_RESISTANCE).getBaseValue()
+													: 0) + 1) * 100));
 								if (entityiterator instanceof LivingEntity _entity && !_entity.level().isClientSide())
 									_entity.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SLOWDOWN, 115, 254, false, false));
 								if (entityiterator instanceof LivingEntity _entity && !_entity.level().isClientSide())
@@ -220,6 +226,13 @@ public class Classability2pProcedure {
 																return Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_x, _y, _z));
 															}
 														}.compareDistOf((entityiterator.getX()), (entityiterator.getY()), (entityiterator.getZ()))).findFirst().orElse(null))).setAnimation("despawn");
+											}
+											if (entityiterator.isAlive()) {
+												if (entityiterator instanceof LivingEntity _livingEntity63 && _livingEntity63.getAttributes().hasAttribute(Attributes.KNOCKBACK_RESISTANCE))
+													_livingEntity63.getAttribute(Attributes.KNOCKBACK_RESISTANCE)
+															.setBaseValue(((entityiterator instanceof LivingEntity _livingEntity62 && _livingEntity62.getAttributes().hasAttribute(Attributes.KNOCKBACK_RESISTANCE)
+																	? _livingEntity62.getAttribute(Attributes.KNOCKBACK_RESISTANCE).getBaseValue()
+																	: 0) / 100 - 1));
 											}
 										});
 									});

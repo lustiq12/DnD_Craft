@@ -15,6 +15,7 @@ import net.minecraft.core.BlockPos;
 
 import net.mcreator.dndcraft.world.inventory.MonkGuiMenu;
 import net.mcreator.dndcraft.world.inventory.MagierguiMenu;
+import net.mcreator.dndcraft.world.inventory.DruidGuiMenu;
 import net.mcreator.dndcraft.world.inventory.BardeguiMenu;
 import net.mcreator.dndcraft.world.inventory.BarbarGuiMenu;
 import net.mcreator.dndcraft.network.DndCraftModVariables;
@@ -85,6 +86,22 @@ public class ClassguiProcedure {
 					@Override
 					public AbstractContainerMenu createMenu(int id, Inventory inventory, Player player) {
 						return new MonkGuiMenu(id, inventory, new FriendlyByteBuf(Unpooled.buffer()).writeBlockPos(_bpos));
+					}
+				}, _bpos);
+			}
+		}
+		if (("Druid").equals((entity.getCapability(DndCraftModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new DndCraftModVariables.PlayerVariables())).Class_Variable)) {
+			if (entity instanceof ServerPlayer _ent) {
+				BlockPos _bpos = BlockPos.containing(x, y, z);
+				NetworkHooks.openScreen((ServerPlayer) _ent, new MenuProvider() {
+					@Override
+					public Component getDisplayName() {
+						return Component.literal("DruidGui");
+					}
+
+					@Override
+					public AbstractContainerMenu createMenu(int id, Inventory inventory, Player player) {
+						return new DruidGuiMenu(id, inventory, new FriendlyByteBuf(Unpooled.buffer()).writeBlockPos(_bpos));
 					}
 				}, _bpos);
 			}

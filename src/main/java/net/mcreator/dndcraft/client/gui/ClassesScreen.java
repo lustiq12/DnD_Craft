@@ -59,7 +59,7 @@ public class ClassesScreen extends AbstractContainerScreen<ClassesMenu> {
 
 		guiGraphics.blit(new ResourceLocation("dnd_craft:textures/screens/christiano_ronaldo_horn.png"), this.leftPos + 7, this.topPos + 36, 0, 0, 16, 16, 16, 16);
 
-		guiGraphics.blit(new ResourceLocation("dnd_craft:textures/screens/druidbruhscreen.png"), this.leftPos + 7, this.topPos + 63, 0, 0, 16, 16, 16, 16);
+		guiGraphics.blit(new ResourceLocation("dnd_craft:textures/screens/druidstaff.png"), this.leftPos + 7, this.topPos + 63, 0, 0, 16, 16, 16, 16);
 
 		guiGraphics.blit(new ResourceLocation("dnd_craft:textures/screens/zauberstab.png"), this.leftPos + 7, this.topPos + 90, 0, 0, 16, 16, 16, 16);
 
@@ -79,9 +79,6 @@ public class ClassesScreen extends AbstractContainerScreen<ClassesMenu> {
 
 	@Override
 	protected void renderLabels(GuiGraphics guiGraphics, int mouseX, int mouseY) {
-		guiGraphics.drawString(this.font, Component.translatable("gui.dnd_craft.classes.label_druid_and_magician_arent_workin"), 7, 117, -12829636, false);
-		guiGraphics.drawString(this.font, Component.translatable("gui.dnd_craft.classes.label_working_right_now_but_will_be_ad"), 7, 126, -12829636, false);
-		guiGraphics.drawString(this.font, Component.translatable("gui.dnd_craft.classes.label_added_soon"), 7, 135, -12829636, false);
 	}
 
 	@Override
