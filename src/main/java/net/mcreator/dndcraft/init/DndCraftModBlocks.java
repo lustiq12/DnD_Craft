@@ -11,6 +11,7 @@ import net.minecraftforge.registries.DeferredRegister;
 import net.minecraft.world.level.block.Block;
 
 import net.mcreator.dndcraft.block.SilverOreBlock;
+import net.mcreator.dndcraft.block.ShadowfellPortalBlock;
 import net.mcreator.dndcraft.block.ScrapblockBlock;
 import net.mcreator.dndcraft.block.RawOwlbearmeatBlockBlock;
 import net.mcreator.dndcraft.block.PlatinumOreBlock;
@@ -34,6 +35,7 @@ public class DndCraftModBlocks {
 	public static final RegistryObject<Block> SCRAPBLOCK = REGISTRY.register("scrapblock", () -> new ScrapblockBlock());
 	public static final RegistryObject<Block> FEYWILD_PORTAL = REGISTRY.register("feywild_portal", () -> new FeywildPortalBlock());
 	public static final RegistryObject<Block> SILVER_ORE = REGISTRY.register("silver_ore", () -> new SilverOreBlock());
+	public static final RegistryObject<Block> SHADOWFELL_PORTAL = REGISTRY.register("shadowfell_portal", () -> new ShadowfellPortalBlock());
 	// Start of user code block custom blocks
 	// End of user code block custom blocks
 }

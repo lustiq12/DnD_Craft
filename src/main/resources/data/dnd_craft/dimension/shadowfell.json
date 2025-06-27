@@ -1,12 +1,12 @@
 {
-  "type": "dnd_craft:feywild",
+  "type": "dnd_craft:shadowfell",
   "generator": {
     "type": "minecraft:noise",
     "biome_source": {
       "type": "minecraft:multi_noise",
       "biomes": [
         {
-          "biome": "dark_forest",
+          "biome": "basalt_deltas",
           "parameters": {
             "temperature": 0,
             "humidity": 0,
@@ -20,7 +20,7 @@
       ]
     },
     "settings": {
-      "name": "dnd_craft:feywild",
+      "name": "dnd_craft:shadowfell",
       "sea_level": 63,
       "legacy_random_source": false,
       "disable_mob_generation": false,
@@ -40,7 +40,7 @@
         "min_y": -64,
         "height": 384,
         "size_horizontal": 4,
-        "size_vertical": 2
+        "size_vertical": 1
       },
       "noise_router": {
         "barrier": {
@@ -383,7 +383,7 @@
             "if_true": {
               "type": "minecraft:biome",
               "biome_is": [
-                "dark_forest"
+                "basalt_deltas"
               ]
             },
             "then_run": {
@@ -417,17 +417,14 @@
                           "then_run": {
                             "type": "minecraft:block",
                             "result_state": {
-                              "Name": "minecraft:grass_block",
-                              "Properties": {
-                                "snowy": "false"
-                              }
+                              "Name": "minecraft:blackstone"
                             }
                           }
                         },
                         {
                           "type": "minecraft:block",
                           "result_state": {
-                            "Name": "minecraft:gravel"
+                            "Name": "minecraft:magma_block"
                           }
                         }
                       ]
@@ -445,7 +442,10 @@
                     "then_run": {
                       "type": "minecraft:block",
                       "result_state": {
-                        "Name": "minecraft:dirt"
+                        "Name": "minecraft:basalt",
+                        "Properties": {
+                          "axis": "y"
+                        }
                       }
                     }
                   }

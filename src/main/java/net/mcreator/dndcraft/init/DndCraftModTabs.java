@@ -114,6 +114,7 @@ public class DndCraftModTabs {
 				tabData.accept(DndCraftModItems.SILVER_INGOT.get());
 				tabData.accept(DndCraftModItems.RAW_SILVER_ORE.get());
 				tabData.accept(DndCraftModBlocks.SILVER_ORE.get().asItem());
+				tabData.accept(DndCraftModItems.SHADOWFELL.get());
 			}).build());
 
 	@SubscribeEvent
@@ -134,6 +135,7 @@ public class DndCraftModTabs {
 			tabData.accept(DndCraftModItems.BANJO.get());
 			tabData.accept(DndCraftModItems.DRUMS.get());
 			tabData.accept(DndCraftModItems.FEYWILD.get());
+			tabData.accept(DndCraftModItems.SHADOWFELL.get());
 		}
 	}
 }

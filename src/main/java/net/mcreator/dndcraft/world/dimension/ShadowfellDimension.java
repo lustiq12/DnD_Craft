@@ -12,9 +12,9 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.client.renderer.DimensionSpecialEffects;
 
 @Mod.EventBusSubscriber
-public class FeywildDimension {
+public class ShadowfellDimension {
 	@Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD)
-	public static class FeywildSpecialEffectsHandler {
+	public static class ShadowfellSpecialEffectsHandler {
 		@SubscribeEvent
 		@OnlyIn(Dist.CLIENT)
 		public static void registerDimensionSpecialEffects(RegisterDimensionSpecialEffectsEvent event) {
@@ -29,7 +29,7 @@ public class FeywildDimension {
 					return false;
 				}
 			};
-			event.register(new ResourceLocation("dnd_craft:feywild"), customEffect);
+			event.register(new ResourceLocation("dnd_craft:shadowfell"), customEffect);
 		}
 	}
 }

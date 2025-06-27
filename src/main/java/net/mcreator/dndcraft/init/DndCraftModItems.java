@@ -28,6 +28,7 @@ import net.mcreator.dndcraft.item.SoapItem;
 import net.mcreator.dndcraft.item.SilverIngotItem;
 import net.mcreator.dndcraft.item.SilverCoinItem;
 import net.mcreator.dndcraft.item.SickleItem;
+import net.mcreator.dndcraft.item.ShadowfellItem;
 import net.mcreator.dndcraft.item.ScrapsheetItem;
 import net.mcreator.dndcraft.item.ScimitarItem;
 import net.mcreator.dndcraft.item.RustyMaceItem;
@@ -192,6 +193,7 @@ public class DndCraftModItems {
 	public static final RegistryObject<Item> SILVER_INGOT = REGISTRY.register("silver_ingot", () -> new SilverIngotItem());
 	public static final RegistryObject<Item> RAW_SILVER_ORE = REGISTRY.register("raw_silver_ore", () -> new RawSilverOreItem());
 	public static final RegistryObject<Item> SILVER_ORE = block(DndCraftModBlocks.SILVER_ORE);
+	public static final RegistryObject<Item> SHADOWFELL = REGISTRY.register("shadowfell", () -> new ShadowfellItem());
 
 	// Start of user code block custom items
 	// End of user code block custom items

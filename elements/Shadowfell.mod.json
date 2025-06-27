@@ -4,7 +4,7 @@
   "definition": {
     "biomesInDimension": [
       {
-        "value": "roofed_forest"
+        "value": "basalt_deltas"
       }
     ],
     "worldGenType": "Normal world gen",
@@ -18,7 +18,7 @@
     "generateOreVeins": true,
     "generateAquifers": true,
     "horizontalNoiseSize": 4,
-    "verticalNoiseSize": 2,
+    "verticalNoiseSize": 1,
     "defaultEffects": "overworld",
     "useCustomEffects": true,
     "hasClouds": true,

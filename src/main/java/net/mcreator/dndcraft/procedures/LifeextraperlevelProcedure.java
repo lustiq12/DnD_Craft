@@ -91,10 +91,8 @@ public class LifeextraperlevelProcedure {
 		if (amount > 0.9) {
 			if (!world.isClientSide() && world.getServer() != null)
 				world.getServer().getPlayerList()
-						.broadcastSystemMessage(Component.literal(("You still need "
-								+ (Math.pow((entity.getCapability(DndCraftModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new DndCraftModVariables.PlayerVariables())).PlayerLevel, 2) * 35
-										- (entity.getCapability(DndCraftModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new DndCraftModVariables.PlayerVariables())).Lvlxp)
-								+ " XP to level up. " + (entity.getCapability(DndCraftModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new DndCraftModVariables.PlayerVariables())).Lvlxp)), false);
+						.broadcastSystemMessage(Component.literal(("You still need " + (Math.pow((entity.getCapability(DndCraftModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new DndCraftModVariables.PlayerVariables())).PlayerLevel, 2) * 35
+								- (entity.getCapability(DndCraftModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new DndCraftModVariables.PlayerVariables())).Lvlxp) + " XP to level up. ")), false);
 		}
 	}
 }
