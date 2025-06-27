@@ -16,6 +16,7 @@ import net.mcreator.dndcraft.block.ScrapblockBlock;
 import net.mcreator.dndcraft.block.RawOwlbearmeatBlockBlock;
 import net.mcreator.dndcraft.block.PlatinumOreBlock;
 import net.mcreator.dndcraft.block.FeywildPortalBlock;
+import net.mcreator.dndcraft.block.DeepslateSilverOreBlock;
 import net.mcreator.dndcraft.block.Cookedowlbearmeatblock4Block;
 import net.mcreator.dndcraft.block.Cookedowlbearmeatblock3Block;
 import net.mcreator.dndcraft.block.Cookedowlbearmeatblock2Block;
@@ -36,6 +37,7 @@ public class DndCraftModBlocks {
 	public static final RegistryObject<Block> FEYWILD_PORTAL = REGISTRY.register("feywild_portal", () -> new FeywildPortalBlock());
 	public static final RegistryObject<Block> SILVER_ORE = REGISTRY.register("silver_ore", () -> new SilverOreBlock());
 	public static final RegistryObject<Block> SHADOWFELL_PORTAL = REGISTRY.register("shadowfell_portal", () -> new ShadowfellPortalBlock());
+	public static final RegistryObject<Block> DEEPSLATE_SILVER_ORE = REGISTRY.register("deepslate_silver_ore", () -> new DeepslateSilverOreBlock());
 	// Start of user code block custom blocks
 	// End of user code block custom blocks
 }

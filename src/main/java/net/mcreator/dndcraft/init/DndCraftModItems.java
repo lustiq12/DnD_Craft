@@ -194,6 +194,7 @@ public class DndCraftModItems {
 	public static final RegistryObject<Item> RAW_SILVER_ORE = REGISTRY.register("raw_silver_ore", () -> new RawSilverOreItem());
 	public static final RegistryObject<Item> SILVER_ORE = block(DndCraftModBlocks.SILVER_ORE);
 	public static final RegistryObject<Item> SHADOWFELL = REGISTRY.register("shadowfell", () -> new ShadowfellItem());
+	public static final RegistryObject<Item> DEEPSLATE_SILVER_ORE = block(DndCraftModBlocks.DEEPSLATE_SILVER_ORE);
 
 	// Start of user code block custom items
 	// End of user code block custom items

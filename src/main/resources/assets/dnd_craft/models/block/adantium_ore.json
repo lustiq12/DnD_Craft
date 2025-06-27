@@ -1,13 +1,13 @@
 {
   "parent": "block/cube",
   "textures": {
-    "down": "dnd_craft:block/gold_ore",
-    "up": "dnd_craft:block/gold_ore",
-    "north": "dnd_craft:block/gold_ore",
-    "east": "dnd_craft:block/gold_ore",
-    "south": "dnd_craft:block/gold_ore",
-    "west": "dnd_craft:block/gold_ore",
-    "particle": "dnd_craft:block/gold_ore"
+    "down": "dnd_craft:block/adamantiumore",
+    "up": "dnd_craft:block/adamantiumore",
+    "north": "dnd_craft:block/adamantiumore",
+    "east": "dnd_craft:block/adamantiumore",
+    "south": "dnd_craft:block/adamantiumore",
+    "west": "dnd_craft:block/adamantiumore",
+    "particle": "dnd_craft:block/adamantiumore"
   },
   "render_type": "solid"
 }

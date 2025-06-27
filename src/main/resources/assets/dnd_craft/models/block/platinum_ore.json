@@ -1,13 +1,13 @@
 {
   "parent": "block/cube",
   "textures": {
-    "down": "dnd_craft:block/emerald_ore",
-    "up": "dnd_craft:block/emerald_ore",
-    "north": "dnd_craft:block/emerald_ore",
-    "east": "dnd_craft:block/emerald_ore",
-    "south": "dnd_craft:block/emerald_ore",
-    "west": "dnd_craft:block/emerald_ore",
-    "particle": "dnd_craft:block/emerald_ore"
+    "down": "dnd_craft:block/platinore",
+    "up": "dnd_craft:block/platinore",
+    "north": "dnd_craft:block/platinore",
+    "east": "dnd_craft:block/platinore",
+    "south": "dnd_craft:block/platinore",
+    "west": "dnd_craft:block/platinore",
+    "particle": "dnd_craft:block/platinore"
   },
   "render_type": "solid"
 }

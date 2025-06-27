@@ -38,7 +38,7 @@ public class DFJProcedure {
 	private static void execute(@Nullable Event event, LevelAccessor world, double x, double y, double z, Entity entity) {
 		if (entity == null)
 			return;
-		if (DndCraftModVariables.WorldVariables.get(world).first_join) {
+		if ((entity.getCapability(DndCraftModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new DndCraftModVariables.PlayerVariables())).first_join) {
 			if (entity instanceof ServerPlayer _ent) {
 				BlockPos _bpos = BlockPos.containing(x, y, z);
 				NetworkHooks.openScreen((ServerPlayer) _ent, new MenuProvider() {
@@ -54,7 +54,12 @@ public class DFJProcedure {
 				}, _bpos);
 			}
 		}
-		DndCraftModVariables.WorldVariables.get(world).first_join = false;
-		DndCraftModVariables.WorldVariables.get(world).syncData(world);
+		{
+			boolean _setval = false;
+			entity.getCapability(DndCraftModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+				capability.first_join = _setval;
+				capability.syncPlayerVariables(entity);
+			});
+		}
 	}
 }

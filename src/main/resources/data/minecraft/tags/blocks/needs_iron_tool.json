@@ -1,6 +1,7 @@
 {
   "replace": false,
   "values": [
+    "dnd_craft:deepslate_silver_ore",
     "dnd_craft:silver_ore",
     "dnd_craft:platinum_ore"
   ]

@@ -6369,6 +6369,25 @@
         ]
       },
       "path": "~/DimensionsBiomes"
+    },
+    {
+      "name": "DeepslateSilverOre",
+      "type": "block",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "deepslate_silver_ore",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/dndcraft/block/DeepslateSilverOreBlock.java",
+          "src/main/resources/data/dnd_craft/worldgen/configured_feature/deepslate_silver_ore.json",
+          "src/main/resources/assets/dnd_craft/blockstates/deepslate_silver_ore.json",
+          "src/main/resources/assets/dnd_craft/models/block/deepslate_silver_ore.json",
+          "src/main/resources/data/dnd_craft/worldgen/placed_feature/deepslate_silver_ore.json",
+          "src/main/resources/data/dnd_craft/forge/biome_modifier/deepslate_silver_ore_biome_modifier.json",
+          "src/main/resources/assets/dnd_craft/models/item/deepslate_silver_ore.json",
+          "src/main/resources/data/dnd_craft/loot_tables/blocks/deepslate_silver_ore.json"
+        ]
+      }
     }
   ],
   "variable_elements": [
@@ -6381,7 +6400,7 @@
     {
       "name": "first_join",
       "type": "logic",
-      "scope": "world",
+      "scope": "player_persistent",
       "value": "true"
     },
     {
@@ -6484,10 +6503,12 @@
       "~CUSTOM:AdantiumOre"
     ],
     "BLOCKS:minecraft:needs_iron_tool": [
+      "~CUSTOM:DeepslateSilverOre",
       "~CUSTOM:SilverOre",
       "~CUSTOM:PlatinumOre"
     ],
     "BLOCKS:minecraft:mineable/pickaxe": [
+      "~CUSTOM:DeepslateSilverOre",
       "~CUSTOM:SilverOre",
       "~CUSTOM:PlatinumOre",
       "~CUSTOM:AdantiumOre"
@@ -6676,7 +6697,8 @@
       "SilverIngot",
       "RawSilverOre",
       "SilverOre",
-      "Shadowfell"
+      "Shadowfell",
+      "DeepslateSilverOre"
     ]
   },
   "language_map": {
@@ -6756,6 +6778,7 @@
       "item.dnd_craft.daily_ration": "Daily Ration",
       "item.dnd_craft.light_hammer": "Light Hammer",
       "item.cool_mod.two_handed_adamantium_axe": "Two Handed Adamantium Axe",
+      "block.dnd_craft.deepslate_silver_ore": "Silver Ore",
       "gui.dnd_craft.magic_choose.button_strong_invisibility": "Strong Invisibility",
       "item.cool_mod.adamantium_ax": "Adamantium Ax",
       "item.dnd_craft.raw_owlbear_meat": "Raw Owlbear Meat",

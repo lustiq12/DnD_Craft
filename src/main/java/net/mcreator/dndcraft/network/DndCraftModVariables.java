@@ -15,14 +15,9 @@ import net.minecraftforge.common.capabilities.CapabilityToken;
 import net.minecraftforge.common.capabilities.CapabilityManager;
 import net.minecraftforge.common.capabilities.Capability;
 
-import net.minecraft.world.level.saveddata.SavedData;
-import net.minecraft.world.level.ServerLevelAccessor;
-import net.minecraft.world.level.LevelAccessor;
-import net.minecraft.world.level.Level;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.server.level.ServerPlayer;
-import net.minecraft.server.level.ServerLevel;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.network.FriendlyByteBuf;
 import net.minecraft.nbt.Tag;
@@ -38,7 +33,6 @@ import java.util.function.Supplier;
 public class DndCraftModVariables {
 	@SubscribeEvent
 	public static void init(FMLCommonSetupEvent event) {
-		DndCraftMod.addNetworkMessage(SavedDataSyncMessage.class, SavedDataSyncMessage::buffer, SavedDataSyncMessage::new, SavedDataSyncMessage::handler);
 		DndCraftMod.addNetworkMessage(PlayerVariablesSyncMessage.class, PlayerVariablesSyncMessage::buffer, PlayerVariablesSyncMessage::new, PlayerVariablesSyncMessage::handler);
 	}
 
@@ -72,6 +66,7 @@ public class DndCraftModVariables {
 			event.getOriginal().revive();
 			PlayerVariables original = ((PlayerVariables) event.getOriginal().getCapability(PLAYER_VARIABLES_CAPABILITY, null).orElse(new PlayerVariables()));
 			PlayerVariables clone = ((PlayerVariables) event.getEntity().getCapability(PLAYER_VARIABLES_CAPABILITY, null).orElse(new PlayerVariables()));
+			clone.first_join = original.first_join;
 			clone.Discord = original.Discord;
 			if (!event.isWasDeath()) {
 				clone.Class_Variable = original.Class_Variable;
@@ -89,139 +84,6 @@ public class DndCraftModVariables {
 				clone.MaxMana = original.MaxMana;
 				clone.MaxKi = original.MaxKi;
 			}
-		}
-
-		@SubscribeEvent
-		public static void onPlayerLoggedIn(PlayerEvent.PlayerLoggedInEvent event) {
-			if (!event.getEntity().level().isClientSide()) {
-				SavedData mapdata = MapVariables.get(event.getEntity().level());
-				SavedData worlddata = WorldVariables.get(event.getEntity().level());
-				if (mapdata != null)
-					DndCraftMod.PACKET_HANDLER.send(PacketDistributor.PLAYER.with(() -> (ServerPlayer) event.getEntity()), new SavedDataSyncMessage(0, mapdata));
-				if (worlddata != null)
-					DndCraftMod.PACKET_HANDLER.send(PacketDistributor.PLAYER.with(() -> (ServerPlayer) event.getEntity()), new SavedDataSyncMessage(1, worlddata));
-			}
-		}
-
-		@SubscribeEvent
-		public static void onPlayerChangedDimension(PlayerEvent.PlayerChangedDimensionEvent event) {
-			if (!event.getEntity().level().isClientSide()) {
-				SavedData worlddata = WorldVariables.get(event.getEntity().level());
-				if (worlddata != null)
-					DndCraftMod.PACKET_HANDLER.send(PacketDistributor.PLAYER.with(() -> (ServerPlayer) event.getEntity()), new SavedDataSyncMessage(1, worlddata));
-			}
-		}
-	}
-
-	public static class WorldVariables extends SavedData {
-		public static final String DATA_NAME = "dnd_craft_worldvars";
-		public boolean first_join = true;
-
-		public static WorldVariables load(CompoundTag tag) {
-			WorldVariables data = new WorldVariables();
-			data.read(tag);
-			return data;
-		}
-
-		public void read(CompoundTag nbt) {
-			first_join = nbt.getBoolean("first_join");
-		}
-
-		@Override
-		public CompoundTag save(CompoundTag nbt) {
-			nbt.putBoolean("first_join", first_join);
-			return nbt;
-		}
-
-		public void syncData(LevelAccessor world) {
-			this.setDirty();
-			if (world instanceof Level level && !level.isClientSide())
-				DndCraftMod.PACKET_HANDLER.send(PacketDistributor.DIMENSION.with(level::dimension), new SavedDataSyncMessage(1, this));
-		}
-
-		static WorldVariables clientSide = new WorldVariables();
-
-		public static WorldVariables get(LevelAccessor world) {
-			if (world instanceof ServerLevel level) {
-				return level.getDataStorage().computeIfAbsent(e -> WorldVariables.load(e), WorldVariables::new, DATA_NAME);
-			} else {
-				return clientSide;
-			}
-		}
-	}
-
-	public static class MapVariables extends SavedData {
-		public static final String DATA_NAME = "dnd_craft_mapvars";
-
-		public static MapVariables load(CompoundTag tag) {
-			MapVariables data = new MapVariables();
-			data.read(tag);
-			return data;
-		}
-
-		public void read(CompoundTag nbt) {
-		}
-
-		@Override
-		public CompoundTag save(CompoundTag nbt) {
-			return nbt;
-		}
-
-		public void syncData(LevelAccessor world) {
-			this.setDirty();
-			if (world instanceof Level && !world.isClientSide())
-				DndCraftMod.PACKET_HANDLER.send(PacketDistributor.ALL.noArg(), new SavedDataSyncMessage(0, this));
-		}
-
-		static MapVariables clientSide = new MapVariables();
-
-		public static MapVariables get(LevelAccessor world) {
-			if (world instanceof ServerLevelAccessor serverLevelAcc) {
-				return serverLevelAcc.getLevel().getServer().getLevel(Level.OVERWORLD).getDataStorage().computeIfAbsent(e -> MapVariables.load(e), MapVariables::new, DATA_NAME);
-			} else {
-				return clientSide;
-			}
-		}
-	}
-
-	public static class SavedDataSyncMessage {
-		private final int type;
-		private SavedData data;
-
-		public SavedDataSyncMessage(FriendlyByteBuf buffer) {
-			this.type = buffer.readInt();
-			CompoundTag nbt = buffer.readNbt();
-			if (nbt != null) {
-				this.data = this.type == 0 ? new MapVariables() : new WorldVariables();
-				if (this.data instanceof MapVariables mapVariables)
-					mapVariables.read(nbt);
-				else if (this.data instanceof WorldVariables worldVariables)
-					worldVariables.read(nbt);
-			}
-		}
-
-		public SavedDataSyncMessage(int type, SavedData data) {
-			this.type = type;
-			this.data = data;
-		}
-
-		public static void buffer(SavedDataSyncMessage message, FriendlyByteBuf buffer) {
-			buffer.writeInt(message.type);
-			if (message.data != null)
-				buffer.writeNbt(message.data.save(new CompoundTag()));
-		}
-
-		public static void handler(SavedDataSyncMessage message, Supplier<NetworkEvent.Context> contextSupplier) {
-			NetworkEvent.Context context = contextSupplier.get();
-			context.enqueueWork(() -> {
-				if (!context.getDirection().getReceptionSide().isServer() && message.data != null) {
-					if (message.type == 0)
-						MapVariables.clientSide = (MapVariables) message.data;
-					else
-						WorldVariables.clientSide = (WorldVariables) message.data;
-				}
-			});
-			context.setPacketHandled(true);
 		}
 	}
 
@@ -257,6 +119,7 @@ public class DndCraftModVariables {
 
 	public static class PlayerVariables {
 		public String Class_Variable = "false";
+		public boolean first_join = true;
 		public boolean wutrausch = false;
 		public double cooldown = 0;
 		public double PlayerLevel = 0;
@@ -280,6 +143,7 @@ public class DndCraftModVariables {
 		public Tag writeNBT() {
 			CompoundTag nbt = new CompoundTag();
 			nbt.putString("Class_Variable", Class_Variable);
+			nbt.putBoolean("first_join", first_join);
 			nbt.putBoolean("wutrausch", wutrausch);
 			nbt.putDouble("cooldown", cooldown);
 			nbt.putDouble("PlayerLevel", PlayerLevel);
@@ -300,6 +164,7 @@ public class DndCraftModVariables {
 		public void readNBT(Tag tag) {
 			CompoundTag nbt = (CompoundTag) tag;
 			Class_Variable = nbt.getString("Class_Variable");
+			first_join = nbt.getBoolean("first_join");
 			wutrausch = nbt.getBoolean("wutrausch");
 			cooldown = nbt.getDouble("cooldown");
 			PlayerLevel = nbt.getDouble("PlayerLevel");
@@ -339,6 +204,7 @@ public class DndCraftModVariables {
 				if (!context.getDirection().getReceptionSide().isServer()) {
 					PlayerVariables variables = ((PlayerVariables) Minecraft.getInstance().player.getCapability(PLAYER_VARIABLES_CAPABILITY, null).orElse(new PlayerVariables()));
 					variables.Class_Variable = message.data.Class_Variable;
+					variables.first_join = message.data.first_join;
 					variables.wutrausch = message.data.wutrausch;
 					variables.cooldown = message.data.cooldown;
 					variables.PlayerLevel = message.data.PlayerLevel;

@@ -115,6 +115,7 @@ public class DndCraftModTabs {
 				tabData.accept(DndCraftModItems.RAW_SILVER_ORE.get());
 				tabData.accept(DndCraftModBlocks.SILVER_ORE.get().asItem());
 				tabData.accept(DndCraftModItems.SHADOWFELL.get());
+				tabData.accept(DndCraftModBlocks.DEEPSLATE_SILVER_ORE.get().asItem());
 			}).build());
 
 	@SubscribeEvent
