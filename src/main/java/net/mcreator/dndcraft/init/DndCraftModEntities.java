@@ -22,7 +22,6 @@ import net.mcreator.dndcraft.entity.OwlbearEntity;
 import net.mcreator.dndcraft.entity.OrkEntity;
 import net.mcreator.dndcraft.entity.Ogre2Entity;
 import net.mcreator.dndcraft.entity.OcherjellyEntity;
-import net.mcreator.dndcraft.entity.Ocherjally2Entity;
 import net.mcreator.dndcraft.entity.MimicSludgeEntity;
 import net.mcreator.dndcraft.entity.MimicEntity;
 import net.mcreator.dndcraft.entity.IronGoblinEntity;
@@ -67,7 +66,7 @@ public class DndCraftModEntities {
 			EntityType.Builder.<GoblinEntity>of(GoblinEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(GoblinEntity::new)
 
 					.sized(0.7f, 1.4f));
-	public static final RegistryObject<EntityType<IronGoblinEntity>> IRON_GOBLIN = register("iron_goblin",
+	public static final RegistryObject<EntityType<IronGoblinEntity>> GOBLIN_IRON = register("goblin_iron",
 			EntityType.Builder.<IronGoblinEntity>of(IronGoblinEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(IronGoblinEntity::new)
 
 					.sized(0.7f, 1.4f));
@@ -81,10 +80,6 @@ public class DndCraftModEntities {
 			EntityType.Builder.<ColdrayspellEntity>of(ColdrayspellEntity::new, MobCategory.MISC).setCustomClientFactory(ColdrayspellEntity::new).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(0.5f, 0.5f));
 	public static final RegistryObject<EntityType<OcherjellyEntity>> OCHERJELLY = register("ocherjelly",
 			EntityType.Builder.<OcherjellyEntity>of(OcherjellyEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(OcherjellyEntity::new)
-
-					.sized(1.2f, 1f));
-	public static final RegistryObject<EntityType<Ocherjally2Entity>> OCHERJALLY_2 = register("ocherjally_2",
-			EntityType.Builder.<Ocherjally2Entity>of(Ocherjally2Entity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(Ocherjally2Entity::new)
 
 					.sized(1.2f, 1f));
 	public static final RegistryObject<EntityType<MimicSludgeEntity>> MIMIC_SLUDGE = register("mimic_sludge",
@@ -103,11 +98,11 @@ public class DndCraftModEntities {
 			EntityType.Builder.<WargEntity>of(WargEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(512).setUpdateInterval(3).setCustomClientFactory(WargEntity::new)
 
 					.sized(1.1f, 0.9f));
-	public static final RegistryObject<EntityType<BowblinEntity>> BOWBLIN = register("bowblin",
+	public static final RegistryObject<EntityType<BowblinEntity>> GOBLIN_BOW = register("goblin_bow",
 			EntityType.Builder.<BowblinEntity>of(BowblinEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(BowblinEntity::new)
 
 					.sized(0.7f, 1.4f));
-	public static final RegistryObject<EntityType<BowblinEntityProjectile>> BOWBLIN_PROJECTILE = register("projectile_bowblin", EntityType.Builder.<BowblinEntityProjectile>of(BowblinEntityProjectile::new, MobCategory.MISC)
+	public static final RegistryObject<EntityType<BowblinEntityProjectile>> GOBLIN_BOW_PROJECTILE = register("projectile_goblin_bow", EntityType.Builder.<BowblinEntityProjectile>of(BowblinEntityProjectile::new, MobCategory.MISC)
 			.setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).setCustomClientFactory(BowblinEntityProjectile::new).sized(0.5f, 0.5f));
 	public static final RegistryObject<EntityType<ArrowEntity>> ARROW = register("arrow",
 			EntityType.Builder.<ArrowEntity>of(ArrowEntity::new, MobCategory.MISC).setCustomClientFactory(ArrowEntity::new).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(0.3f, 0.5f));
@@ -140,7 +135,6 @@ public class DndCraftModEntities {
 			IronGoblinEntity.init();
 			GoblinChiefEntity.init();
 			OcherjellyEntity.init();
-			Ocherjally2Entity.init();
 			MimicSludgeEntity.init();
 			InvisibleStalkerEntity.init();
 			BasiliskEntity.init();
@@ -160,15 +154,14 @@ public class DndCraftModEntities {
 		event.put(OWLBEAR.get(), OwlbearEntity.createAttributes().build());
 		event.put(MIMIC.get(), MimicEntity.createAttributes().build());
 		event.put(GOBLIN.get(), GoblinEntity.createAttributes().build());
-		event.put(IRON_GOBLIN.get(), IronGoblinEntity.createAttributes().build());
+		event.put(GOBLIN_IRON.get(), IronGoblinEntity.createAttributes().build());
 		event.put(GOBLIN_CHIEF.get(), GoblinChiefEntity.createAttributes().build());
 		event.put(OCHERJELLY.get(), OcherjellyEntity.createAttributes().build());
-		event.put(OCHERJALLY_2.get(), Ocherjally2Entity.createAttributes().build());
 		event.put(MIMIC_SLUDGE.get(), MimicSludgeEntity.createAttributes().build());
 		event.put(INVISIBLE_STALKER.get(), InvisibleStalkerEntity.createAttributes().build());
 		event.put(BASILISK.get(), BasiliskEntity.createAttributes().build());
 		event.put(WARG.get(), WargEntity.createAttributes().build());
-		event.put(BOWBLIN.get(), BowblinEntity.createAttributes().build());
+		event.put(GOBLIN_BOW.get(), BowblinEntity.createAttributes().build());
 		event.put(COOK.get(), CookEntity.createAttributes().build());
 		event.put(GHOUL.get(), GhoulEntity.createAttributes().build());
 		event.put(VINES.get(), VINESEntity.createAttributes().build());

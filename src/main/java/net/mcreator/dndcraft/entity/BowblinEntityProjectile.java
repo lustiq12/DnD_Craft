@@ -21,7 +21,7 @@ import net.mcreator.dndcraft.init.DndCraftModEntities;
 @OnlyIn(value = Dist.CLIENT, _interface = ItemSupplier.class)
 public class BowblinEntityProjectile extends AbstractArrow implements ItemSupplier {
 	public BowblinEntityProjectile(PlayMessages.SpawnEntity packet, Level world) {
-		super(DndCraftModEntities.BOWBLIN_PROJECTILE.get(), world);
+		super(DndCraftModEntities.GOBLIN_BOW_PROJECTILE.get(), world);
 	}
 
 	public BowblinEntityProjectile(EntityType<? extends BowblinEntityProjectile> type, Level world) {

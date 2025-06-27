@@ -70,7 +70,7 @@ public class BowblinEntity extends Monster implements RangedAttackMob, GeoEntity
 	public String animationprocedure = "empty";
 
 	public BowblinEntity(PlayMessages.SpawnEntity packet, Level world) {
-		this(DndCraftModEntities.BOWBLIN.get(), world);
+		this(DndCraftModEntities.GOBLIN_BOW.get(), world);
 	}
 
 	public BowblinEntity(EntityType<BowblinEntity> type, Level world) {
@@ -268,7 +268,7 @@ public class BowblinEntity extends Monster implements RangedAttackMob, GeoEntity
 
 	@Override
 	public void performRangedAttack(LivingEntity target, float flval) {
-		BowblinEntityProjectile entityarrow = new BowblinEntityProjectile(DndCraftModEntities.BOWBLIN_PROJECTILE.get(), this, this.level());
+		BowblinEntityProjectile entityarrow = new BowblinEntityProjectile(DndCraftModEntities.GOBLIN_BOW_PROJECTILE.get(), this, this.level());
 		double d0 = target.getY() + target.getEyeHeight() - 1.1;
 		double d1 = target.getX() - this.getX();
 		double d3 = target.getZ() - this.getZ();

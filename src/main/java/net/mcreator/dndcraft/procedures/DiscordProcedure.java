@@ -32,17 +32,10 @@ public class DiscordProcedure {
 	private static void execute(@Nullable Event event, LevelAccessor world, double x, double y, double z, Entity entity) {
 		if (entity == null)
 			return;
-		if ((entity.getCapability(DndCraftModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new DndCraftModVariables.PlayerVariables())).Discord) {
+		if ((entity.getCapability(DndCraftModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new DndCraftModVariables.PlayerVariables())).first_join) {
 			if (world instanceof ServerLevel _level)
 				_level.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(),
 						"/tellraw @p {\"text\":\"\",\"extra\":[ {\"text\":\"[DnD-Craft] \",\"color\":\"dark_green\",\"bold\":true}, {\"text\":\"Make sure to join our discord server! \",\"color\":\"gold\"}, {\"text\":\"(click on this message)\",\"color\":\"blue\",\"bold\":true, \"clickEvent\":{\"action\":\"open_url\",\"value\":\"https://discord.gg/fKCsbUauD7\"} } ]}");
-		}
-		{
-			boolean _setval = false;
-			entity.getCapability(DndCraftModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-				capability.Discord = _setval;
-				capability.syncPlayerVariables(entity);
-			});
 		}
 	}
 }

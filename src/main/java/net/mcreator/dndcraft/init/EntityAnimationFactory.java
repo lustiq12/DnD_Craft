@@ -10,7 +10,6 @@ import net.mcreator.dndcraft.entity.OwlbearEntity;
 import net.mcreator.dndcraft.entity.OrkEntity;
 import net.mcreator.dndcraft.entity.Ogre2Entity;
 import net.mcreator.dndcraft.entity.OcherjellyEntity;
-import net.mcreator.dndcraft.entity.Ocherjally2Entity;
 import net.mcreator.dndcraft.entity.MimicSludgeEntity;
 import net.mcreator.dndcraft.entity.MimicEntity;
 import net.mcreator.dndcraft.entity.IronGoblinEntity;
@@ -85,13 +84,6 @@ public class EntityAnimationFactory {
 				}
 			}
 			if (event.getEntity() instanceof OcherjellyEntity syncable) {
-				String animation = syncable.getSyncedAnimation();
-				if (!animation.equals("undefined")) {
-					syncable.setAnimation("undefined");
-					syncable.animationprocedure = animation;
-				}
-			}
-			if (event.getEntity() instanceof Ocherjally2Entity syncable) {
 				String animation = syncable.getSyncedAnimation();
 				if (!animation.equals("undefined")) {
 					syncable.setAnimation("undefined");

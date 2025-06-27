@@ -19,7 +19,7 @@ public class GoblinOnInitialEntitySpawnProcedure {
 			if (!entity.level().isClientSide())
 				entity.discard();
 			if (world instanceof ServerLevel _level) {
-				Entity entityToSpawn = DndCraftModEntities.BOWBLIN.get().spawn(_level, BlockPos.containing(x, y, z), MobSpawnType.MOB_SUMMONED);
+				Entity entityToSpawn = DndCraftModEntities.GOBLIN_BOW.get().spawn(_level, BlockPos.containing(x, y, z), MobSpawnType.MOB_SUMMONED);
 				if (entityToSpawn != null) {
 					entityToSpawn.setYRot(world.getRandom().nextFloat() * 360F);
 				}
@@ -28,7 +28,7 @@ public class GoblinOnInitialEntitySpawnProcedure {
 			if (!entity.level().isClientSide())
 				entity.discard();
 			if (world instanceof ServerLevel _level) {
-				Entity entityToSpawn = DndCraftModEntities.IRON_GOBLIN.get().spawn(_level, BlockPos.containing(x, y, z), MobSpawnType.MOB_SUMMONED);
+				Entity entityToSpawn = DndCraftModEntities.GOBLIN_IRON.get().spawn(_level, BlockPos.containing(x, y, z), MobSpawnType.MOB_SUMMONED);
 				if (entityToSpawn != null) {
 					entityToSpawn.setYRot(world.getRandom().nextFloat() * 360F);
 				}

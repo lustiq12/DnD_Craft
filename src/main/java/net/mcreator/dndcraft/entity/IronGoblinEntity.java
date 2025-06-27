@@ -64,7 +64,7 @@ public class IronGoblinEntity extends Monster implements GeoEntity {
 	public String animationprocedure = "empty";
 
 	public IronGoblinEntity(PlayMessages.SpawnEntity packet, Level world) {
-		this(DndCraftModEntities.IRON_GOBLIN.get(), world);
+		this(DndCraftModEntities.GOBLIN_IRON.get(), world);
 	}
 
 	public IronGoblinEntity(EntityType<IronGoblinEntity> type, Level world) {

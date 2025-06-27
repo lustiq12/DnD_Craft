@@ -64,8 +64,10 @@ public class DndCraftModTabs {
 				tabData.accept(DndCraftModItems.COOKED_OWLBEAR_MEAT.get());
 				tabData.accept(DndCraftModItems.RAW_ORK_BEEF.get());
 				tabData.accept(DndCraftModItems.COOKED_ORK_BEEF.get());
-				tabData.accept(DndCraftModItems.COPPER_COIN.get());
+				tabData.accept(DndCraftModItems.PLATIN_COIN.get());
 				tabData.accept(DndCraftModItems.GOLD_COIN.get());
+				tabData.accept(DndCraftModItems.SILVER_COIN.get());
+				tabData.accept(DndCraftModItems.COPPER_COIN.get());
 				tabData.accept(DndCraftModItems.POISON_VIAL.get());
 				tabData.accept(DndCraftModItems.HEAL_POTION.get());
 				tabData.accept(DndCraftModItems.POTIONOFSTRONGHEALING.get());
@@ -76,12 +78,6 @@ public class DndCraftModTabs {
 				tabData.accept(DndCraftModBlocks.COOKEDOWLBEARMEATBLOCK_3.get().asItem());
 				tabData.accept(DndCraftModBlocks.COOKEDOWLBEARMEATBLOCK_4.get().asItem());
 				tabData.accept(DndCraftModBlocks.RAW_OWLBEARMEAT_BLOCK.get().asItem());
-				tabData.accept(DndCraftModBlocks.PLATINUM_ORE.get().asItem());
-				tabData.accept(DndCraftModItems.RAWPLATINUMORE.get());
-				tabData.accept(DndCraftModItems.PLAINUMINGOT.get());
-				tabData.accept(DndCraftModBlocks.ADANTIUM_ORE.get().asItem());
-				tabData.accept(DndCraftModItems.RAW_ADAMANTIUM_ORE.get());
-				tabData.accept(DndCraftModItems.ADANTIUM_INGOT.get());
 				tabData.accept(DndCraftModItems.MAGICSCROLL_FIREARROW.get());
 				tabData.accept(DndCraftModItems.SCRAPSHEET.get());
 				tabData.accept(DndCraftModBlocks.SCRAPBLOCK.get().asItem());
@@ -109,13 +105,17 @@ public class DndCraftModTabs {
 				tabData.accept(DndCraftModItems.HARPY_TOOTH.get());
 				tabData.accept(DndCraftModItems.GOBLINS_BACKPACK.get());
 				tabData.accept(DndCraftModItems.FEYWILD.get());
-				tabData.accept(DndCraftModItems.PLATIN_COIN.get());
-				tabData.accept(DndCraftModItems.SILVER_COIN.get());
-				tabData.accept(DndCraftModItems.SILVER_INGOT.get());
-				tabData.accept(DndCraftModItems.RAW_SILVER_ORE.get());
-				tabData.accept(DndCraftModBlocks.SILVER_ORE.get().asItem());
 				tabData.accept(DndCraftModItems.SHADOWFELL.get());
 				tabData.accept(DndCraftModBlocks.DEEPSLATE_SILVER_ORE.get().asItem());
+				tabData.accept(DndCraftModBlocks.SILVER_ORE.get().asItem());
+				tabData.accept(DndCraftModItems.SILVER_INGOT.get());
+				tabData.accept(DndCraftModItems.RAW_SILVER_ORE.get());
+				tabData.accept(DndCraftModBlocks.PLATINUM_ORE.get().asItem());
+				tabData.accept(DndCraftModItems.RAWPLATINUMORE.get());
+				tabData.accept(DndCraftModItems.PLAINUMINGOT.get());
+				tabData.accept(DndCraftModBlocks.ADANTIUM_ORE.get().asItem());
+				tabData.accept(DndCraftModItems.RAW_ADAMANTIUM_ORE.get());
+				tabData.accept(DndCraftModItems.ADANTIUM_INGOT.get());
 			}).build());
 
 	@SubscribeEvent

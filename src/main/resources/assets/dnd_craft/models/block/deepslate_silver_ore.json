@@ -1,13 +1,13 @@
 {
   "parent": "block/cube",
   "textures": {
-    "down": "dnd_craft:block/gold_ore",
-    "up": "dnd_craft:block/gold_ore",
-    "north": "dnd_craft:block/gold_ore",
-    "east": "dnd_craft:block/gold_ore",
-    "south": "dnd_craft:block/gold_ore",
-    "west": "dnd_craft:block/gold_ore",
-    "particle": "dnd_craft:block/gold_ore"
+    "down": "dnd_craft:block/silveroredeepslate",
+    "up": "dnd_craft:block/silveroredeepslate",
+    "north": "dnd_craft:block/silveroredeepslate",
+    "east": "dnd_craft:block/silveroredeepslate",
+    "south": "dnd_craft:block/silveroredeepslate",
+    "west": "dnd_craft:block/silveroredeepslate",
+    "particle": "dnd_craft:block/silveroredeepslate"
   },
   "render_type": "solid"
 }

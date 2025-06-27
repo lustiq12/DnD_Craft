@@ -15,13 +15,13 @@ public class OcherjellyItIsStruckByLightningProcedure {
 		if (!entity.level().isClientSide())
 			entity.discard();
 		if (world instanceof ServerLevel _level) {
-			Entity entityToSpawn = DndCraftModEntities.OCHERJALLY_2.get().spawn(_level, BlockPos.containing(x, y, z), MobSpawnType.MOB_SUMMONED);
+			Entity entityToSpawn = DndCraftModEntities.OCHERJELLY.get().spawn(_level, BlockPos.containing(x, y, z), MobSpawnType.MOB_SUMMONED);
 			if (entityToSpawn != null) {
 				entityToSpawn.setYRot(world.getRandom().nextFloat() * 360F);
 			}
 		}
 		if (world instanceof ServerLevel _level) {
-			Entity entityToSpawn = DndCraftModEntities.OCHERJALLY_2.get().spawn(_level, BlockPos.containing(x, y, z), MobSpawnType.MOB_SUMMONED);
+			Entity entityToSpawn = DndCraftModEntities.OCHERJELLY.get().spawn(_level, BlockPos.containing(x, y, z), MobSpawnType.MOB_SUMMONED);
 			if (entityToSpawn != null) {
 				entityToSpawn.setYRot(world.getRandom().nextFloat() * 360F);
 			}

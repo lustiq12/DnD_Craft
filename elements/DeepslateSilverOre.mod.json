@@ -2,7 +2,7 @@
   "_fv": 73,
   "_type": "block",
   "definition": {
-    "texture": "gold_ore",
+    "texture": "silveroredeepslate",
     "textureTop": "",
     "textureLeft": "",
     "textureFront": "",
@@ -34,7 +34,7 @@
       }
     ],
     "customProperties": [],
-    "name": "Silver Ore",
+    "name": "Deepslate Silver Ore",
     "specialInformation": {
       "fixedValue": []
     },
@@ -131,7 +131,7 @@
     "generationShape": "UNIFORM",
     "frequencyPerChunks": 8,
     "frequencyOnChunk": 5,
-    "minGenerateHeight": 30,
-    "maxGenerateHeight": 30
+    "minGenerateHeight": -32,
+    "maxGenerateHeight": -5
   }
 }

@@ -67,7 +67,6 @@ public class DndCraftModVariables {
 			PlayerVariables original = ((PlayerVariables) event.getOriginal().getCapability(PLAYER_VARIABLES_CAPABILITY, null).orElse(new PlayerVariables()));
 			PlayerVariables clone = ((PlayerVariables) event.getEntity().getCapability(PLAYER_VARIABLES_CAPABILITY, null).orElse(new PlayerVariables()));
 			clone.first_join = original.first_join;
-			clone.Discord = original.Discord;
 			if (!event.isWasDeath()) {
 				clone.Class_Variable = original.Class_Variable;
 				clone.wutrausch = original.wutrausch;
@@ -128,7 +127,6 @@ public class DndCraftModVariables {
 		public boolean Dogde = false;
 		public double Ki = 0;
 		public double Lvlxp = 0;
-		public boolean Discord = true;
 		public double DailyRationQuest = 0;
 		public double Monsterdelightquest = 0;
 		public double CookingVeteranquest = 0.0;
@@ -152,7 +150,6 @@ public class DndCraftModVariables {
 			nbt.putBoolean("Dogde", Dogde);
 			nbt.putDouble("Ki", Ki);
 			nbt.putDouble("Lvlxp", Lvlxp);
-			nbt.putBoolean("Discord", Discord);
 			nbt.putDouble("DailyRationQuest", DailyRationQuest);
 			nbt.putDouble("Monsterdelightquest", Monsterdelightquest);
 			nbt.putDouble("CookingVeteranquest", CookingVeteranquest);
@@ -173,7 +170,6 @@ public class DndCraftModVariables {
 			Dogde = nbt.getBoolean("Dogde");
 			Ki = nbt.getDouble("Ki");
 			Lvlxp = nbt.getDouble("Lvlxp");
-			Discord = nbt.getBoolean("Discord");
 			DailyRationQuest = nbt.getDouble("DailyRationQuest");
 			Monsterdelightquest = nbt.getDouble("Monsterdelightquest");
 			CookingVeteranquest = nbt.getDouble("CookingVeteranquest");
@@ -213,7 +209,6 @@ public class DndCraftModVariables {
 					variables.Dogde = message.data.Dogde;
 					variables.Ki = message.data.Ki;
 					variables.Lvlxp = message.data.Lvlxp;
-					variables.Discord = message.data.Discord;
 					variables.DailyRationQuest = message.data.DailyRationQuest;
 					variables.Monsterdelightquest = message.data.Monsterdelightquest;
 					variables.CookingVeteranquest = message.data.CookingVeteranquest;

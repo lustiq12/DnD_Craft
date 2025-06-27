@@ -19,7 +19,7 @@ public class WargOnInitialEntitySpawnProcedure {
 			return;
 		if (Math.random() < 0.3) {
 			if (world instanceof ServerLevel _level) {
-				Entity entityToSpawn = DndCraftModEntities.BOWBLIN.get().spawn(_level, BlockPos.containing(x, y, z), MobSpawnType.MOB_SUMMONED);
+				Entity entityToSpawn = DndCraftModEntities.GOBLIN_BOW.get().spawn(_level, BlockPos.containing(x, y, z), MobSpawnType.MOB_SUMMONED);
 				if (entityToSpawn != null) {
 					entityToSpawn.setDeltaMovement(0, 0, 0);
 				}
