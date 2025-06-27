@@ -21,7 +21,6 @@ import net.minecraft.tags.BlockTags;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.resources.ResourceLocation;
-import net.minecraft.network.chat.Component;
 import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.core.BlockPos;
 import net.minecraft.commands.arguments.EntityAnchorArgument;
@@ -119,9 +118,6 @@ public class PassiveabilitysProcedure {
 						for (int index1 = 0; index1 < 6; index1++) {
 							sz = -3;
 							for (int index2 = 0; index2 < 6; index2++) {
-								if (entity instanceof Player _player && !_player.level().isClientSide())
-									_player.displayClientMessage(
-											Component.literal(("" + (world.getBlockState(BlockPos.containing(Math.round(x) + sx, Math.round(y) + sy, Math.round(z) + sz))).is(BlockTags.create(new ResourceLocation("dnd_craft:druid_plants"))))), false);
 								if ((world.getBlockState(BlockPos.containing(Math.round(x) + sx, Math.round(y) + sy, Math.round(z) + sz))).is(BlockTags.create(new ResourceLocation("dnd_craft:druid_plants")))) {
 									found = true;
 								}
