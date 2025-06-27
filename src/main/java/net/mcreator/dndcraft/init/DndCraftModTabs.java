@@ -65,9 +65,7 @@ public class DndCraftModTabs {
 				tabData.accept(DndCraftModItems.RAW_ORK_BEEF.get());
 				tabData.accept(DndCraftModItems.COOKED_ORK_BEEF.get());
 				tabData.accept(DndCraftModItems.COPPER_COIN.get());
-				tabData.accept(DndCraftModItems.IRON_COIN.get());
 				tabData.accept(DndCraftModItems.GOLD_COIN.get());
-				tabData.accept(DndCraftModItems.ADAMANTIUM_COIN.get());
 				tabData.accept(DndCraftModItems.POISON_VIAL.get());
 				tabData.accept(DndCraftModItems.HEAL_POTION.get());
 				tabData.accept(DndCraftModItems.POTIONOFSTRONGHEALING.get());
@@ -111,6 +109,11 @@ public class DndCraftModTabs {
 				tabData.accept(DndCraftModItems.HARPY_TOOTH.get());
 				tabData.accept(DndCraftModItems.GOBLINS_BACKPACK.get());
 				tabData.accept(DndCraftModItems.FEYWILD.get());
+				tabData.accept(DndCraftModItems.PLATIN_COIN.get());
+				tabData.accept(DndCraftModItems.SILVER_COIN.get());
+				tabData.accept(DndCraftModItems.SILVER_INGOT.get());
+				tabData.accept(DndCraftModItems.RAW_SILVER_ORE.get());
+				tabData.accept(DndCraftModBlocks.SILVER_ORE.get().asItem());
 			}).build());
 
 	@SubscribeEvent

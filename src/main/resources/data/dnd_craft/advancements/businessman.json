@@ -37,7 +37,7 @@
         "items": [
           {
             "items": [
-              "dnd_craft:iron_coin"
+              "dnd_craft:silver_coin"
             ],
             "count": {
               "min": 64,
@@ -69,7 +69,7 @@
         "items": [
           {
             "items": [
-              "dnd_craft:adamantium_coin"
+              "dnd_craft:platin_coin"
             ],
             "count": {
               "min": 64,

@@ -2259,7 +2259,6 @@
         "files": [
           "src/main/java/net/mcreator/dndcraft/entity/model/IronGoblinModel.java",
           "src/main/java/net/mcreator/dndcraft/entity/IronGoblinEntity.java",
-          "src/main/resources/data/dnd_craft/forge/biome_modifier/iron_goblin_biome_modifier.json",
           "src/main/java/net/mcreator/dndcraft/client/renderer/IronGoblinRenderer.java"
         ]
       },
@@ -2311,7 +2310,7 @@
           }
         ]
       },
-      "path": "~/Procedures"
+      "path": "~/Mobs"
     },
     {
       "name": "GoblinCamp",
@@ -2519,19 +2518,6 @@
       }
     },
     {
-      "name": "IronCoin",
-      "type": "item",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "iron_coin",
-      "metadata": {
-        "files": [
-          "src/main/resources/assets/dnd_craft/models/item/iron_coin.json",
-          "src/main/java/net/mcreator/dndcraft/item/IronCoinItem.java"
-        ]
-      }
-    },
-    {
       "name": "GoldCoin",
       "type": "item",
       "compiles": true,
@@ -2552,19 +2538,6 @@
       "registry_name": "coins",
       "metadata": {
         "files": []
-      }
-    },
-    {
-      "name": "AdamantiumCoin",
-      "type": "item",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "adamantium_coin",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/dndcraft/item/AdamantiumCoinItem.java",
-          "src/main/resources/assets/dnd_craft/models/item/adamantium_coin.json"
-        ]
       }
     },
     {
@@ -5570,7 +5543,6 @@
       "metadata": {
         "files": [
           "src/main/java/net/mcreator/dndcraft/client/renderer/BowblinRenderer.java",
-          "src/main/resources/data/dnd_craft/forge/biome_modifier/bowblin_biome_modifier.json",
           "src/main/java/net/mcreator/dndcraft/entity/model/BowblinModel.java",
           "src/main/java/net/mcreator/dndcraft/entity/BowblinEntity.java",
           "src/main/java/net/mcreator/dndcraft/entity/BowblinEntityProjectile.java"
@@ -6303,6 +6275,77 @@
         ]
       },
       "path": "~/ClassSystem/Druid"
+    },
+    {
+      "name": "PlatinCoin",
+      "type": "item",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "platin_coin",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/dndcraft/item/PlatinCoinItem.java",
+          "src/main/resources/assets/dnd_craft/models/item/platin_coin.json"
+        ]
+      }
+    },
+    {
+      "name": "SilverCoin",
+      "type": "item",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "silver_coin",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/dnd_craft/models/item/silver_coin.json",
+          "src/main/java/net/mcreator/dndcraft/item/SilverCoinItem.java"
+        ]
+      }
+    },
+    {
+      "name": "SilverIngot",
+      "type": "item",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "silver_ingot",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/dndcraft/item/SilverIngotItem.java",
+          "src/main/resources/assets/dnd_craft/models/item/silver_ingot.json"
+        ]
+      }
+    },
+    {
+      "name": "RawSilverOre",
+      "type": "item",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "raw_silver_ore",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/dndcraft/item/RawSilverOreItem.java",
+          "src/main/resources/assets/dnd_craft/models/item/raw_silver_ore.json"
+        ]
+      }
+    },
+    {
+      "name": "SilverOre",
+      "type": "block",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "silver_ore",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/dndcraft/block/SilverOreBlock.java",
+          "src/main/resources/data/dnd_craft/worldgen/configured_feature/silver_ore.json",
+          "src/main/resources/assets/dnd_craft/blockstates/silver_ore.json",
+          "src/main/resources/assets/dnd_craft/models/block/silver_ore.json",
+          "src/main/resources/data/dnd_craft/loot_tables/blocks/silver_ore.json",
+          "src/main/resources/data/dnd_craft/forge/biome_modifier/silver_ore_biome_modifier.json",
+          "src/main/resources/data/dnd_craft/worldgen/placed_feature/silver_ore.json",
+          "src/main/resources/assets/dnd_craft/models/item/silver_ore.json"
+        ]
+      }
     }
   ],
   "variable_elements": [
@@ -6418,9 +6461,11 @@
       "~CUSTOM:AdantiumOre"
     ],
     "BLOCKS:minecraft:needs_iron_tool": [
+      "~CUSTOM:SilverOre",
       "~CUSTOM:PlatinumOre"
     ],
     "BLOCKS:minecraft:mineable/pickaxe": [
+      "~CUSTOM:SilverOre",
       "~CUSTOM:PlatinumOre",
       "~CUSTOM:AdantiumOre"
     ],
@@ -6558,9 +6603,7 @@
       "RawOrkBeef",
       "CookedOrkBeef",
       "CopperCoin",
-      "IronCoin",
       "GoldCoin",
-      "AdamantiumCoin",
       "PoisonVial",
       "HealPotion",
       "Potionofstronghealing",
@@ -6604,7 +6647,12 @@
       "HarpyTooth",
       "GoblinsBackpack",
       "Ocherjally2",
-      "Feywild"
+      "Feywild",
+      "PlatinCoin",
+      "SilverCoin",
+      "SilverIngot",
+      "RawSilverOre",
+      "SilverOre"
     ]
   },
   "language_map": {
@@ -6628,7 +6676,6 @@
       "entity.dnd_craft.cook": "Cook",
       "gui.dnd_craft.bardegui.label_level_60": "Level 15 (c)",
       "gui.dnd_craft.magic_choose.label_level_01": "Level 1",
-      "item.dnd_craft.adamantium_coin": "Platinum Coin",
       "gui.dnd_craft.bardegui.label_invincibility": "Power of the Wind",
       "entity.dnd_craft.goblin": "Goblin",
       "entity.dnd_craft.mimic": "Mimic",
@@ -6738,6 +6785,7 @@
       "subtitles.ogre_death": "ogre grunts",
       "item.cool_mod.zwo_handed_club": "two Handed Club",
       "gui.dnd_craft.magic_choose.label_level_51": "Level 3",
+      "block.dnd_craft.silver_ore": "Silver Ore",
       "key.dnd_craft.classability_1": "Class ability 1",
       "gui.cool_mod.barbar_gui.label_10_level": "Level 20",
       "key.dnd_craft.classability_2": "Class ability 2",
@@ -6763,6 +6811,7 @@
       "item.dnd_craft.raw_owlbear_meat": "Raw Owlbear Meat",
       "item.cool_mod.scimitar": "Scimitar",
       "gui.cool_mod.barbar_gui.label_40_level": "Level 40 (Passive)",
+      "item.dnd_craft.platin_coin": "Platinum Coin",
       "item.cool_mod.battle_axe": "Battle Axe",
       "effect.dnd_craft.slimy": "Slimy",
       "item.dnd_craft.vines_spawn_egg": "VINES Spawn Egg",
@@ -6810,6 +6859,7 @@
       "item.dnd_craft.magic_wand.description_1": "Left-click to cast attack-spells",
       "item.cool_mod.adamantium_gladius": "Adamantium Gladius",
       "item.dnd_craft.adamantium_claymore": "Adamantium Claymore",
+      "item.dnd_craft.silver_ingot": "Silver Ingot",
       "item.dnd_craft.ork_spawn_egg": "Ork Spawn Egg",
       "item.cool_mod.two_handedhammer": "Two Handed Hammer",
       "item.dnd_craft.harpy_spear": "Harpy Spear",
@@ -6836,7 +6886,6 @@
       "entity.dnd_craft.owlbear": "Owlbear",
       "entity.dnd_craft.warg": "Warg",
       "item.dnd_craft.goblin_chief_spawn_egg": "Goblin Chief Spawn Egg",
-      "item.dnd_craft.iron_coin": "Iron Coin",
       "item.cool_mod.ogre_spawn_egg": "Ogre Spawn Egg",
       "gui.dnd_craft.classes.label_working_right_now_but_will_be_ad": "working right now but will be",
       "item.dnd_craft.two_handed_axe": "Two Handed Axe",
@@ -6876,6 +6925,7 @@
       "item.dnd_craft.battalestafftwohanded": "Battle Staff",
       "block.cool_mod.adantium_ore": "Adantium Ore",
       "advancements.dungeon_hunter.title": "Dungeon Looter",
+      "item.dnd_craft.raw_silver_ore": "Raw Silver Ore",
       "gui.dnd_craft.cook_gui.button_loot_quest1": "LOOT QUEST",
       "item.dnd_craft.magicscroll_firearrow.description_0": "-Fire arrow",
       "item.dnd_craft.goblins_backpack": "Goblin´s Backpack",
@@ -6934,6 +6984,7 @@
       "gui.cool_mod.bardegui.button_choose": "Choose",
       "gui.dnd_craft.monk_gui.label_barbarian": "Monk",
       "advancements.businessman.title": "Businessman",
+      "item.dnd_craft.silver_coin": "Silver Coin",
       "gui.cool_mod.barbar_gui.label_survival_instinct": "Survival Instinct",
       "advancements.dungeon_hunter.descr": "Get every DnD mob loot.",
       "entity.cool_mod.owlbear": "Owlbear",

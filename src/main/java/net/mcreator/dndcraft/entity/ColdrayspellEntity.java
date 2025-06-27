@@ -27,7 +27,7 @@ import net.mcreator.dndcraft.init.DndCraftModEntities;
 
 @OnlyIn(value = Dist.CLIENT, _interface = ItemSupplier.class)
 public class ColdrayspellEntity extends AbstractArrow implements ItemSupplier {
-	public static final ItemStack PROJECTILE_ITEM = new ItemStack(DndCraftModItems.ADAMANTIUM_COIN.get());
+	public static final ItemStack PROJECTILE_ITEM = new ItemStack(DndCraftModItems.PLATIN_COIN.get());
 
 	public ColdrayspellEntity(PlayMessages.SpawnEntity packet, Level world) {
 		super(DndCraftModEntities.COLDRAYSPELL.get(), world);

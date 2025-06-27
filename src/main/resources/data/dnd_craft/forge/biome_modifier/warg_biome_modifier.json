@@ -5,7 +5,7 @@
   },
   "spawners": {
     "type": "dnd_craft:warg",
-    "weight": 20,
+    "weight": 2,
     "minCount": 4,
     "maxCount": 4
   }

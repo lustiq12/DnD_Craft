@@ -5,7 +5,7 @@
   },
   "spawners": {
     "type": "dnd_craft:invisible_stalker",
-    "weight": 4,
+    "weight": 2,
     "minCount": 4,
     "maxCount": 4
   }

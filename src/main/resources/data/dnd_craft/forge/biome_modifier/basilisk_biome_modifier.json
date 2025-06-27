@@ -3,7 +3,7 @@
   "biomes": "dripstone_caves",
   "spawners": {
     "type": "dnd_craft:basilisk",
-    "weight": 20,
+    "weight": 10,
     "minCount": 4,
     "maxCount": 4
   }

@@ -3,11 +3,11 @@
   "_type": "item",
   "definition": {
     "renderType": 0,
-    "texture": "ironcoin",
+    "texture": "adamatiumore",
     "customModelName": "Normal",
     "customProperties": {},
     "states": [],
-    "name": "Iron Coin",
+    "name": "Raw Silver Ore",
     "rarity": "UNCOMMON",
     "creativeTabs": [
       {
@@ -53,6 +53,10 @@
     "isAlwaysEdible": false,
     "animation": "none",
     "isMusicDisc": false,
+    "musicDiscMusic": {
+      "value": ""
+    },
+    "musicDiscDescription": "",
     "musicDiscLengthInTicks": 0,
     "musicDiscAnalogOutput": 0
   }

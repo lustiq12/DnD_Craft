@@ -5,7 +5,7 @@
   },
   "spawners": {
     "type": "dnd_craft:goblin_chief",
-    "weight": 20,
+    "weight": 2,
     "minCount": 4,
     "maxCount": 4
   }

@@ -9,7 +9,7 @@
   ],
   "spawners": {
     "type": "dnd_craft:ork",
-    "weight": 25,
+    "weight": 5,
     "minCount": 9,
     "maxCount": 9
   }

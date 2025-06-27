@@ -36,7 +36,7 @@
             },
             "countPrice2": 1,
             "offer": {
-              "value": "CUSTOM:IronCoin"
+              "value": "CUSTOM:SilverCoin"
             },
             "countOffer": 5,
             "level": 3,
@@ -72,7 +72,7 @@
             },
             "countPrice2": 1,
             "offer": {
-              "value": "CUSTOM:AdamantiumCoin"
+              "value": "CUSTOM:PlatinCoin"
             },
             "countOffer": 1,
             "level": 5,
@@ -90,7 +90,7 @@
             },
             "countPrice2": 1,
             "offer": {
-              "value": "CUSTOM:IronCoin"
+              "value": "CUSTOM:SilverCoin"
             },
             "countOffer": 16,
             "level": 1,
@@ -108,7 +108,7 @@
             },
             "countPrice2": 1,
             "offer": {
-              "value": "CUSTOM:IronCoin"
+              "value": "CUSTOM:SilverCoin"
             },
             "countOffer": 1,
             "level": 1,
@@ -179,7 +179,7 @@
           },
           {
             "price1": {
-              "value": "CUSTOM:IronCoin"
+              "value": "CUSTOM:SilverCoin"
             },
             "countPrice1": 2,
             "price2": {
@@ -197,7 +197,7 @@
           },
           {
             "price1": {
-              "value": "CUSTOM:IronCoin"
+              "value": "CUSTOM:SilverCoin"
             },
             "countPrice1": 1,
             "price2": {
@@ -269,7 +269,7 @@
           },
           {
             "price1": {
-              "value": "CUSTOM:IronCoin"
+              "value": "CUSTOM:SilverCoin"
             },
             "countPrice1": 2,
             "price2": {
@@ -449,7 +449,7 @@
           },
           {
             "price1": {
-              "value": "CUSTOM:AdamantiumCoin"
+              "value": "CUSTOM:PlatinCoin"
             },
             "countPrice1": 2,
             "price2": {
@@ -510,7 +510,7 @@
           },
           {
             "price1": {
-              "value": "CUSTOM:IronCoin"
+              "value": "CUSTOM:SilverCoin"
             },
             "countPrice1": 4,
             "price2": {
@@ -546,7 +546,7 @@
           },
           {
             "price1": {
-              "value": "CUSTOM:IronCoin"
+              "value": "CUSTOM:SilverCoin"
             },
             "countPrice1": 6,
             "price2": {
@@ -600,7 +600,7 @@
           },
           {
             "price1": {
-              "value": "CUSTOM:AdamantiumCoin"
+              "value": "CUSTOM:PlatinCoin"
             },
             "countPrice1": 9,
             "price2": {
@@ -618,7 +618,7 @@
           },
           {
             "price1": {
-              "value": "CUSTOM:AdamantiumCoin"
+              "value": "CUSTOM:PlatinCoin"
             },
             "countPrice1": 1,
             "price2": {
@@ -662,7 +662,7 @@
             },
             "countPrice2": 1,
             "offer": {
-              "value": "CUSTOM:IronCoin"
+              "value": "CUSTOM:SilverCoin"
             },
             "countOffer": 2,
             "level": 1,
@@ -716,7 +716,7 @@
             },
             "countPrice2": 1,
             "offer": {
-              "value": "CUSTOM:IronCoin"
+              "value": "CUSTOM:SilverCoin"
             },
             "countOffer": 1,
             "level": 1,
@@ -741,7 +741,7 @@
             },
             "countPrice2": 1,
             "offer": {
-              "value": "CUSTOM:IronCoin"
+              "value": "CUSTOM:SilverCoin"
             },
             "countOffer": 1,
             "level": 2,
@@ -751,7 +751,7 @@
           },
           {
             "price1": {
-              "value": "CUSTOM:IronCoin"
+              "value": "CUSTOM:SilverCoin"
             },
             "countPrice1": 10,
             "price2": {
@@ -777,7 +777,7 @@
             },
             "countPrice2": 1,
             "offer": {
-              "value": "CUSTOM:IronCoin"
+              "value": "CUSTOM:SilverCoin"
             },
             "countOffer": 10,
             "level": 3,
@@ -787,7 +787,7 @@
           },
           {
             "price1": {
-              "value": "CUSTOM:IronCoin"
+              "value": "CUSTOM:SilverCoin"
             },
             "countPrice1": 1,
             "price2": {
@@ -813,7 +813,7 @@
             },
             "countPrice2": 1,
             "offer": {
-              "value": "CUSTOM:AdamantiumCoin"
+              "value": "CUSTOM:PlatinCoin"
             },
             "countOffer": 1,
             "level": 4,
@@ -823,7 +823,7 @@
           },
           {
             "price1": {
-              "value": "CUSTOM:AdamantiumCoin"
+              "value": "CUSTOM:PlatinCoin"
             },
             "countPrice1": 1,
             "price2": {

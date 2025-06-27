@@ -3,12 +3,12 @@
   "_type": "item",
   "definition": {
     "renderType": 0,
-    "texture": "adamntiumcoin",
+    "texture": "silvecoin",
     "customModelName": "Normal",
     "customProperties": {},
     "states": [],
-    "name": "Platinum Coin",
-    "rarity": "EPIC",
+    "name": "Silver Coin",
+    "rarity": "UNCOMMON",
     "creativeTabs": [
       {
         "value": "CUSTOM:DnD"
@@ -53,6 +53,10 @@
     "isAlwaysEdible": false,
     "animation": "none",
     "isMusicDisc": false,
+    "musicDiscMusic": {
+      "value": ""
+    },
+    "musicDiscDescription": "",
     "musicDiscLengthInTicks": 0,
     "musicDiscAnalogOutput": 0
   }

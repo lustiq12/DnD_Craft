@@ -24,13 +24,13 @@ public class DndCraftModTrades {
 		event.getGenericTrades().add(new BasicItemListing(new ItemStack(DndCraftModItems.GOLD_COIN.get(), 2),
 
 				new ItemStack(DndCraftModItems.HARPY_SPEAR.get()), 10, 5, 0.05f));
-		event.getGenericTrades().add(new BasicItemListing(new ItemStack(DndCraftModItems.IRON_COIN.get(), 4),
+		event.getGenericTrades().add(new BasicItemListing(new ItemStack(DndCraftModItems.SILVER_COIN.get(), 4),
 
 				new ItemStack(DndCraftModItems.COOKED_ORK_BEEF.get(), 5), 10, 5, 0.05f));
 		event.getGenericTrades().add(new BasicItemListing(new ItemStack(DndCraftModItems.GOLD_COIN.get()),
 
 				new ItemStack(DndCraftModItems.ANIMAL_BONE.get(), 15), 10, 5, 0.05f));
-		event.getGenericTrades().add(new BasicItemListing(new ItemStack(DndCraftModItems.IRON_COIN.get(), 6),
+		event.getGenericTrades().add(new BasicItemListing(new ItemStack(DndCraftModItems.SILVER_COIN.get(), 6),
 
 				new ItemStack(DndCraftModItems.RAW_OWLBEAR_MEAT.get(), 3), 10, 5, 0.05f));
 		event.getGenericTrades().add(new BasicItemListing(new ItemStack(DndCraftModItems.GOLD_COIN.get(), 60),
@@ -39,10 +39,10 @@ public class DndCraftModTrades {
 		event.getGenericTrades().add(new BasicItemListing(new ItemStack(DndCraftModItems.GOLD_COIN.get(), 2),
 
 				new ItemStack(DndCraftModItems.HARPY_TOOTH.get(), 3), 10, 5, 0.05f));
-		event.getGenericTrades().add(new BasicItemListing(new ItemStack(DndCraftModItems.ADAMANTIUM_COIN.get(), 9),
+		event.getGenericTrades().add(new BasicItemListing(new ItemStack(DndCraftModItems.PLATIN_COIN.get(), 9),
 
 				new ItemStack(DndCraftModItems.ADAMANTIUM_UPGRADE_SMITHING_TEMPLATE.get()), 10, 5, 0.05f));
-		event.getGenericTrades().add(new BasicItemListing(new ItemStack(DndCraftModItems.ADAMANTIUM_COIN.get()),
+		event.getGenericTrades().add(new BasicItemListing(new ItemStack(DndCraftModItems.PLATIN_COIN.get()),
 
 				new ItemStack(Items.TOTEM_OF_UNDYING), 10, 5, 0.05f));
 		event.getGenericTrades().add(new BasicItemListing(new ItemStack(DndCraftModItems.RAW_ORK_BEEF.get(), 5),
@@ -50,7 +50,7 @@ public class DndCraftModTrades {
 				new ItemStack(DndCraftModItems.COPPER_COIN.get(), 5), 10, 5, 0.05f));
 		event.getGenericTrades().add(new BasicItemListing(new ItemStack(DndCraftModItems.RAW_OWLBEAR_MEAT.get()),
 
-				new ItemStack(DndCraftModItems.IRON_COIN.get(), 2), 10, 5, 0.05f));
+				new ItemStack(DndCraftModItems.SILVER_COIN.get(), 2), 10, 5, 0.05f));
 		event.getGenericTrades().add(new BasicItemListing(new ItemStack(DndCraftModItems.RUSTY_MACE.get()),
 
 				new ItemStack(DndCraftModItems.COPPER_COIN.get(), 4), 10, 5, 0.05f));
@@ -59,7 +59,7 @@ public class DndCraftModTrades {
 				new ItemStack(DndCraftModItems.COPPER_COIN.get(), 2), 10, 5, 0.05f));
 		event.getGenericTrades().add(new BasicItemListing(new ItemStack(DndCraftModItems.COPPER_COIN.get(), 10),
 
-				new ItemStack(DndCraftModItems.IRON_COIN.get()), 10, 5, 0f));
+				new ItemStack(DndCraftModItems.SILVER_COIN.get()), 10, 5, 0f));
 	}
 
 	@SubscribeEvent
@@ -70,19 +70,19 @@ public class DndCraftModTrades {
 					new ItemStack(DndCraftModItems.COPPER_COIN.get(), 50), 10, 5, 0.05f));
 			event.getTrades().get(3).add(new BasicItemListing(new ItemStack(Items.EMERALD, 3),
 
-					new ItemStack(DndCraftModItems.IRON_COIN.get(), 5), 10, 5, 0.05f));
+					new ItemStack(DndCraftModItems.SILVER_COIN.get(), 5), 10, 5, 0.05f));
 			event.getTrades().get(4).add(new BasicItemListing(new ItemStack(Items.EMERALD, 6),
 
 					new ItemStack(DndCraftModItems.GOLD_COIN.get()), 10, 5, 0.05f));
 			event.getTrades().get(5).add(new BasicItemListing(new ItemStack(Items.EMERALD, 60),
 
-					new ItemStack(DndCraftModItems.ADAMANTIUM_COIN.get()), 10, 5, 0.05f));
+					new ItemStack(DndCraftModItems.PLATIN_COIN.get()), 10, 5, 0.05f));
 			event.getTrades().get(1).add(new BasicItemListing(new ItemStack(DndCraftModBlocks.SCRAPBLOCK.get(), 2),
 
-					new ItemStack(DndCraftModItems.IRON_COIN.get(), 16), 10, 5, 0.05f));
+					new ItemStack(DndCraftModItems.SILVER_COIN.get(), 16), 10, 5, 0.05f));
 			event.getTrades().get(1).add(new BasicItemListing(new ItemStack(DndCraftModItems.SCRAPSHEET.get()),
 
-					new ItemStack(DndCraftModItems.IRON_COIN.get()), 10, 5, 0.05f));
+					new ItemStack(DndCraftModItems.SILVER_COIN.get()), 10, 5, 0.05f));
 		}
 		if (event.getType() == VillagerProfession.WEAPONSMITH) {
 			event.getTrades().get(2).add(new BasicItemListing(new ItemStack(DndCraftModItems.GOLD_COIN.get(), 5),
@@ -94,10 +94,10 @@ public class DndCraftModTrades {
 			event.getTrades().get(1).add(new BasicItemListing(new ItemStack(DndCraftModItems.GOLD_COIN.get(), 2),
 
 					new ItemStack(DndCraftModItems.LIGHT_HAMMER.get()), 10, 5, 0.05f));
-			event.getTrades().get(1).add(new BasicItemListing(new ItemStack(DndCraftModItems.IRON_COIN.get(), 2),
+			event.getTrades().get(1).add(new BasicItemListing(new ItemStack(DndCraftModItems.SILVER_COIN.get(), 2),
 
 					new ItemStack(DndCraftModItems.BATTLE_STAFF.get()), 10, 5, 0.05f));
-			event.getTrades().get(1).add(new BasicItemListing(new ItemStack(DndCraftModItems.IRON_COIN.get()),
+			event.getTrades().get(1).add(new BasicItemListing(new ItemStack(DndCraftModItems.SILVER_COIN.get()),
 
 					new ItemStack(DndCraftModItems.CLUB.get()), 10, 5, 0.05f));
 			event.getTrades().get(2).add(new BasicItemListing(new ItemStack(DndCraftModItems.GOLD_COIN.get()),
@@ -109,7 +109,7 @@ public class DndCraftModTrades {
 			event.getTrades().get(3).add(new BasicItemListing(new ItemStack(DndCraftModItems.GOLD_COIN.get(), 5),
 
 					new ItemStack(DndCraftModItems.MACE.get()), 10, 5, 0.05f));
-			event.getTrades().get(1).add(new BasicItemListing(new ItemStack(DndCraftModItems.IRON_COIN.get(), 2),
+			event.getTrades().get(1).add(new BasicItemListing(new ItemStack(DndCraftModItems.SILVER_COIN.get(), 2),
 
 					new ItemStack(DndCraftModItems.ZWO_HANDED_CLUB.get()), 10, 5, 0.05f));
 			event.getTrades().get(5).add(new BasicItemListing(new ItemStack(DndCraftModItems.GOLD_COIN.get(), 8),
@@ -139,27 +139,27 @@ public class DndCraftModTrades {
 			event.getTrades().get(5).add(new BasicItemListing(new ItemStack(DndCraftModItems.GOLD_COIN.get(), 50),
 
 					new ItemStack(DndCraftModItems.TWO_HANDED_CLAYMORE.get()), 10, 5, 0.05f));
-			event.getTrades().get(5).add(new BasicItemListing(new ItemStack(DndCraftModItems.ADAMANTIUM_COIN.get(), 2),
+			event.getTrades().get(5).add(new BasicItemListing(new ItemStack(DndCraftModItems.PLATIN_COIN.get(), 2),
 
 					new ItemStack(DndCraftModItems.RAW_ADAMANTIUM_ORE.get()), 10, 5, 0.05f));
 		}
 		if (event.getType() == VillagerProfession.CLERIC) {
 			event.getTrades().get(2).add(new BasicItemListing(new ItemStack(DndCraftModItems.COPPER_COIN.get(), 10),
 
-					new ItemStack(DndCraftModItems.IRON_COIN.get()), 10, 5, 0f));
-			event.getTrades().get(2).add(new BasicItemListing(new ItemStack(DndCraftModItems.IRON_COIN.get(), 10),
+					new ItemStack(DndCraftModItems.SILVER_COIN.get()), 10, 5, 0f));
+			event.getTrades().get(2).add(new BasicItemListing(new ItemStack(DndCraftModItems.SILVER_COIN.get(), 10),
 
 					new ItemStack(DndCraftModItems.GOLD_COIN.get()), 10, 5, 0f));
 			event.getTrades().get(3).add(new BasicItemListing(new ItemStack(DndCraftModItems.GOLD_COIN.get()),
 
-					new ItemStack(DndCraftModItems.IRON_COIN.get(), 10), 10, 5, 0f));
-			event.getTrades().get(3).add(new BasicItemListing(new ItemStack(DndCraftModItems.IRON_COIN.get()),
+					new ItemStack(DndCraftModItems.SILVER_COIN.get(), 10), 10, 5, 0f));
+			event.getTrades().get(3).add(new BasicItemListing(new ItemStack(DndCraftModItems.SILVER_COIN.get()),
 
 					new ItemStack(DndCraftModItems.COPPER_COIN.get(), 10), 10, 5, 0f));
 			event.getTrades().get(4).add(new BasicItemListing(new ItemStack(DndCraftModItems.GOLD_COIN.get(), 10),
 
-					new ItemStack(DndCraftModItems.ADAMANTIUM_COIN.get()), 10, 5, 0f));
-			event.getTrades().get(4).add(new BasicItemListing(new ItemStack(DndCraftModItems.ADAMANTIUM_COIN.get()),
+					new ItemStack(DndCraftModItems.PLATIN_COIN.get()), 10, 5, 0f));
+			event.getTrades().get(4).add(new BasicItemListing(new ItemStack(DndCraftModItems.PLATIN_COIN.get()),
 
 					new ItemStack(DndCraftModItems.GOLD_COIN.get(), 10), 10, 5, 0f));
 		}

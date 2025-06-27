@@ -3,7 +3,7 @@
   "_type": "projectile",
   "definition": {
     "projectileItem": {
-      "value": "CUSTOM:AdamantiumCoin"
+      "value": "CUSTOM:PlatinCoin"
     },
     "showParticles": false,
     "actionSound": {

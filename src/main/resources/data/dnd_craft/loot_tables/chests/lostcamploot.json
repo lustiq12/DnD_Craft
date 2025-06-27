@@ -6,7 +6,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "dnd_craft:iron_coin",
+          "name": "dnd_craft:silver_coin",
           "weight": 1,
           "functions": [
             {
