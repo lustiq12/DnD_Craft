@@ -3,7 +3,7 @@
   "_type": "projectile",
   "definition": {
     "projectileItem": {
-      "value": "CUSTOM:Bowitem"
+      "value": "Items.ARROW"
     },
     "showParticles": false,
     "actionSound": {
@@ -13,8 +13,8 @@
     "power": 1.0,
     "damage": 2.0,
     "knockback": 1,
-    "entityModel": "Default",
-    "customModelTexture": "",
+    "entityModel": "Modelarrow",
+    "customModelTexture": "arrow.png",
     "modelWidth": 0.30000000000000004,
     "modelHeight": 0.5
   }

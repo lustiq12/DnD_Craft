@@ -16,6 +16,7 @@ import net.minecraftforge.network.NetworkHooks;
 
 import net.minecraft.world.level.ServerLevelAccessor;
 import net.minecraft.world.level.Level;
+import net.minecraft.world.entity.projectile.Arrow;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.npc.Villager;
 import net.minecraft.world.entity.monster.RangedAttackMob;
@@ -268,7 +269,7 @@ public class BowblinEntity extends Monster implements RangedAttackMob, GeoEntity
 
 	@Override
 	public void performRangedAttack(LivingEntity target, float flval) {
-		BowblinEntityProjectile entityarrow = new BowblinEntityProjectile(DndCraftModEntities.GOBLIN_BOW_PROJECTILE.get(), this, this.level());
+		Arrow entityarrow = new Arrow(this.level(), this);
 		double d0 = target.getY() + target.getEyeHeight() - 1.1;
 		double d1 = target.getX() - this.getX();
 		double d3 = target.getZ() - this.getZ();

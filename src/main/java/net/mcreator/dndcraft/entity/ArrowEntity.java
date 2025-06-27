@@ -8,6 +8,7 @@ import net.minecraftforge.api.distmarker.OnlyIn;
 import net.minecraftforge.api.distmarker.Dist;
 
 import net.minecraft.world.level.Level;
+import net.minecraft.world.item.Items;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.entity.projectile.ItemSupplier;
 import net.minecraft.world.entity.projectile.AbstractArrow;
@@ -19,12 +20,11 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.network.protocol.game.ClientGamePacketListener;
 import net.minecraft.network.protocol.Packet;
 
-import net.mcreator.dndcraft.init.DndCraftModItems;
 import net.mcreator.dndcraft.init.DndCraftModEntities;
 
 @OnlyIn(value = Dist.CLIENT, _interface = ItemSupplier.class)
 public class ArrowEntity extends AbstractArrow implements ItemSupplier {
-	public static final ItemStack PROJECTILE_ITEM = new ItemStack(DndCraftModItems.BOWITEM.get());
+	public static final ItemStack PROJECTILE_ITEM = new ItemStack(Items.ARROW);
 
 	public ArrowEntity(PlayMessages.SpawnEntity packet, Level world) {
 		super(DndCraftModEntities.ARROW.get(), world);

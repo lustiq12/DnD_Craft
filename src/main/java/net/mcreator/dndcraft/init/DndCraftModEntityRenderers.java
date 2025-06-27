@@ -28,6 +28,7 @@ import net.mcreator.dndcraft.client.renderer.GhoulRenderer;
 import net.mcreator.dndcraft.client.renderer.CookRenderer;
 import net.mcreator.dndcraft.client.renderer.BowblinRenderer;
 import net.mcreator.dndcraft.client.renderer.BasiliskRenderer;
+import net.mcreator.dndcraft.client.renderer.ArrowRenderer;
 
 @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
 public class DndCraftModEntityRenderers {
@@ -49,8 +50,7 @@ public class DndCraftModEntityRenderers {
 		event.registerEntityRenderer(DndCraftModEntities.BASILISK.get(), BasiliskRenderer::new);
 		event.registerEntityRenderer(DndCraftModEntities.WARG.get(), WargRenderer::new);
 		event.registerEntityRenderer(DndCraftModEntities.GOBLIN_BOW.get(), BowblinRenderer::new);
-		event.registerEntityRenderer(DndCraftModEntities.GOBLIN_BOW_PROJECTILE.get(), ThrownItemRenderer::new);
-		event.registerEntityRenderer(DndCraftModEntities.ARROW.get(), ThrownItemRenderer::new);
+		event.registerEntityRenderer(DndCraftModEntities.ARROW.get(), ArrowRenderer::new);
 		event.registerEntityRenderer(DndCraftModEntities.COOK.get(), CookRenderer::new);
 		event.registerEntityRenderer(DndCraftModEntities.GHOUL.get(), GhoulRenderer::new);
 		event.registerEntityRenderer(DndCraftModEntities.VINES.get(), VINESRenderer::new);

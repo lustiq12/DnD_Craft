@@ -70,7 +70,6 @@ import net.mcreator.dndcraft.item.CookedOwlbearMeatItem;
 import net.mcreator.dndcraft.item.CookedOrkBeefItem;
 import net.mcreator.dndcraft.item.ClubItem;
 import net.mcreator.dndcraft.item.ClaymoreItem;
-import net.mcreator.dndcraft.item.BowitemItem;
 import net.mcreator.dndcraft.item.BattleStaffItem;
 import net.mcreator.dndcraft.item.BattleAxeItem;
 import net.mcreator.dndcraft.item.BattalestafftwohandedItem;
@@ -180,7 +179,6 @@ public class DndCraftModItems {
 	public static final RegistryObject<Item> SCRAPBLOCK = block(DndCraftModBlocks.SCRAPBLOCK);
 	public static final RegistryObject<Item> DRUMS = REGISTRY.register("drums", () -> new DrumsItem());
 	public static final RegistryObject<Item> WARG_SPAWN_EGG = REGISTRY.register("warg_spawn_egg", () -> new ForgeSpawnEggItem(DndCraftModEntities.WARG, -3562105, -10333879, new Item.Properties()));
-	public static final RegistryObject<Item> BOWITEM = REGISTRY.register("bowitem", () -> new BowitemItem());
 	public static final RegistryObject<Item> COOK_SPAWN_EGG = REGISTRY.register("cook_spawn_egg", () -> new ForgeSpawnEggItem(DndCraftModEntities.COOK, -2969733, -11849188, new Item.Properties()));
 	public static final RegistryObject<Item> DAILY_RATION = REGISTRY.register("daily_ration", () -> new DailyRationItem());
 	public static final RegistryObject<Item> OWLBEAR_DRUMSTICKS = REGISTRY.register("owlbear_drumsticks", () -> new OwlbearDrumsticksItem());

@@ -33,7 +33,6 @@ import net.mcreator.dndcraft.entity.GhoulEntity;
 import net.mcreator.dndcraft.entity.Fireball2Entity;
 import net.mcreator.dndcraft.entity.CookEntity;
 import net.mcreator.dndcraft.entity.ColdrayspellEntity;
-import net.mcreator.dndcraft.entity.BowblinEntityProjectile;
 import net.mcreator.dndcraft.entity.BowblinEntity;
 import net.mcreator.dndcraft.entity.BasiliskEntity;
 import net.mcreator.dndcraft.entity.ArrowEntity;
@@ -102,8 +101,6 @@ public class DndCraftModEntities {
 			EntityType.Builder.<BowblinEntity>of(BowblinEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(BowblinEntity::new)
 
 					.sized(0.7f, 1.4f));
-	public static final RegistryObject<EntityType<BowblinEntityProjectile>> GOBLIN_BOW_PROJECTILE = register("projectile_goblin_bow", EntityType.Builder.<BowblinEntityProjectile>of(BowblinEntityProjectile::new, MobCategory.MISC)
-			.setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).setCustomClientFactory(BowblinEntityProjectile::new).sized(0.5f, 0.5f));
 	public static final RegistryObject<EntityType<ArrowEntity>> ARROW = register("arrow",
 			EntityType.Builder.<ArrowEntity>of(ArrowEntity::new, MobCategory.MISC).setCustomClientFactory(ArrowEntity::new).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(0.3f, 0.5f));
 	public static final RegistryObject<EntityType<CookEntity>> COOK = register("cook",

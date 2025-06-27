@@ -11,11 +11,13 @@ import net.minecraftforge.api.distmarker.Dist;
 
 import net.mcreator.dndcraft.client.model.Modelrat;
 import net.mcreator.dndcraft.client.model.Modeliron_golem;
+import net.mcreator.dndcraft.client.model.Modelarrow;
 
 @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD, value = {Dist.CLIENT})
 public class DndCraftModModels {
 	@SubscribeEvent
 	public static void registerLayerDefinitions(EntityRenderersEvent.RegisterLayerDefinitions event) {
+		event.registerLayerDefinition(Modelarrow.LAYER_LOCATION, Modelarrow::createBodyLayer);
 		event.registerLayerDefinition(Modelrat.LAYER_LOCATION, Modelrat::createBodyLayer);
 		event.registerLayerDefinition(Modeliron_golem.LAYER_LOCATION, Modeliron_golem::createBodyLayer);
 	}

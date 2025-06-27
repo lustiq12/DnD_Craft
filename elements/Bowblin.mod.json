@@ -143,7 +143,7 @@
     "breedTriggerItems": [],
     "ranged": true,
     "rangedAttackItem": {
-      "value": "CUSTOM:Bowitem"
+      "value": ""
     },
     "rangedItemType": "Default item",
     "rangedAttackInterval": 30,
