@@ -4959,6 +4959,10 @@
             "type": "damagesource"
           },
           {
+            "name": "amount",
+            "type": "number"
+          },
+          {
             "name": "x",
             "type": "number"
           },
