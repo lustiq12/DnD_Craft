@@ -17,7 +17,7 @@ public class MonsterDelightlootProcedure {
 			return;
 		{
 			DndCraftModVariables.PlayerVariables _vars = entity.getData(DndCraftModVariables.PLAYER_VARIABLES);
-			_vars.DailyRationQuest = -1;
+			_vars.Monsterdelightquest = 0;
 			_vars.syncPlayerVariables(entity);
 		}
 		for (int index0 = 0; index0 < 10; index0++) {

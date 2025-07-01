@@ -92,7 +92,7 @@ public class CookGuiScreen extends AbstractContainerScreen<CookGuiMenu> {
 				PacketDistributor.sendToServer(new CookGuiButtonMessage(0, x, y, z));
 				CookGuiButtonMessage.handleButtonAction(entity, 0, x, y, z);
 			}
-		}).bounds(this.leftPos + 124, this.topPos + 24, 77, 20).build(builder -> new Button(builder) {
+		}).bounds(this.leftPos + 142, this.topPos + 24, 77, 20).build(builder -> new Button(builder) {
 			@Override
 			public void renderWidget(GuiGraphics guiGraphics, int gx, int gy, float ticks) {
 				this.visible = IfnoQuestProcedure.execute(entity);
@@ -106,7 +106,7 @@ public class CookGuiScreen extends AbstractContainerScreen<CookGuiMenu> {
 				PacketDistributor.sendToServer(new CookGuiButtonMessage(1, x, y, z));
 				CookGuiButtonMessage.handleButtonAction(entity, 1, x, y, z);
 			}
-		}).bounds(this.leftPos + 124, this.topPos + 51, 77, 20).build(builder -> new Button(builder) {
+		}).bounds(this.leftPos + 142, this.topPos + 51, 77, 20).build(builder -> new Button(builder) {
 			@Override
 			public void renderWidget(GuiGraphics guiGraphics, int gx, int gy, float ticks) {
 				this.visible = MonsterquestshowProcedure.execute(entity);
@@ -120,7 +120,7 @@ public class CookGuiScreen extends AbstractContainerScreen<CookGuiMenu> {
 				PacketDistributor.sendToServer(new CookGuiButtonMessage(2, x, y, z));
 				CookGuiButtonMessage.handleButtonAction(entity, 2, x, y, z);
 			}
-		}).bounds(this.leftPos + 124, this.topPos + 78, 77, 20).build(builder -> new Button(builder) {
+		}).bounds(this.leftPos + 142, this.topPos + 78, 77, 20).build(builder -> new Button(builder) {
 			@Override
 			public void renderWidget(GuiGraphics guiGraphics, int gx, int gy, float ticks) {
 				this.visible = VeteranquestshowProcedure.execute(entity);

@@ -18,7 +18,7 @@ public class CookingVeteranLootProcedure {
 			return;
 		{
 			DndCraftModVariables.PlayerVariables _vars = entity.getData(DndCraftModVariables.PLAYER_VARIABLES);
-			_vars.DailyRationQuest = -1;
+			_vars.CookingVeteranquest = 0;
 			_vars.syncPlayerVariables(entity);
 		}
 		for (int index0 = 0; index0 < 15; index0++) {

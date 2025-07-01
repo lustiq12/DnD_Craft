@@ -9,11 +9,7 @@
     "states": [],
     "name": "§6Magic Scroll",
     "rarity": "COMMON",
-    "creativeTabs": [
-      {
-        "value": "CUSTOM:DnD"
-      }
-    ],
+    "creativeTabs": [],
     "stackSize": 1,
     "enchantability": 0,
     "useDuration": 0,

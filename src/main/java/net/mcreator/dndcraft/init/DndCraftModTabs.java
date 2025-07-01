@@ -23,7 +23,6 @@ public class DndCraftModTabs {
 	public static final DeferredRegister<CreativeModeTab> REGISTRY = DeferredRegister.create(Registries.CREATIVE_MODE_TAB, DndCraftMod.MODID);
 	public static final DeferredHolder<CreativeModeTab, CreativeModeTab> DN_D = REGISTRY.register("dn_d",
 			() -> CreativeModeTab.builder().title(Component.translatable("item_group.dnd_craft.dn_d")).icon(() -> new ItemStack(DndCraftModItems.MAGICSCROLL_FIREARROW.get())).displayItems((parameters, tabData) -> {
-				tabData.accept(DndCraftModItems.MAGIC_WAND.get());
 				tabData.accept(DndCraftModItems.MONSTER_DAGGER.get());
 				tabData.accept(DndCraftModItems.POISONED_DAGGER.get());
 				tabData.accept(DndCraftModItems.RUSTY_MACE.get());
@@ -78,7 +77,6 @@ public class DndCraftModTabs {
 				tabData.accept(DndCraftModBlocks.COOKEDOWLBEARMEATBLOCK_3.get().asItem());
 				tabData.accept(DndCraftModBlocks.COOKEDOWLBEARMEATBLOCK_4.get().asItem());
 				tabData.accept(DndCraftModBlocks.RAW_OWLBEARMEAT_BLOCK.get().asItem());
-				tabData.accept(DndCraftModItems.MAGICSCROLL_FIREARROW.get());
 				tabData.accept(DndCraftModItems.SCRAPSHEET.get());
 				tabData.accept(DndCraftModBlocks.SCRAPBLOCK.get().asItem());
 				tabData.accept(DndCraftModItems.WARG_SPAWN_EGG.get());
@@ -114,6 +112,7 @@ public class DndCraftModTabs {
 				tabData.accept(DndCraftModBlocks.ADANTIUM_ORE.get().asItem());
 				tabData.accept(DndCraftModItems.RAW_ADAMANTIUM_ORE.get());
 				tabData.accept(DndCraftModItems.ADANTIUM_INGOT.get());
+				tabData.accept(DndCraftModItems.SPELLBOOK.get());
 			}).build());
 
 	@SubscribeEvent

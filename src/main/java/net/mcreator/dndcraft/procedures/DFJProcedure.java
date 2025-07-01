@@ -18,6 +18,7 @@ import net.minecraft.core.BlockPos;
 
 import net.mcreator.dndcraft.world.inventory.ClassesMenu;
 import net.mcreator.dndcraft.network.DndCraftModVariables;
+import net.mcreator.dndcraft.DndCraftMod;
 
 import javax.annotation.Nullable;
 
@@ -57,11 +58,13 @@ public class DFJProcedure {
 					}
 				}, _bpos);
 			}
-		}
-		{
-			DndCraftModVariables.PlayerVariables _vars = entity.getData(DndCraftModVariables.PLAYER_VARIABLES);
-			_vars.first_join = false;
-			_vars.syncPlayerVariables(entity);
+			DndCraftMod.queueServerWork(1, () -> {
+				{
+					DndCraftModVariables.PlayerVariables _vars = entity.getData(DndCraftModVariables.PLAYER_VARIABLES);
+					_vars.first_join = false;
+					_vars.syncPlayerVariables(entity);
+				}
+			});
 		}
 	}
 }

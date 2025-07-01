@@ -33,8 +33,13 @@ public class BloodgoreProcedure {
 			return;
 		if (!(damagesource.is(DamageTypes.ON_FIRE) || damagesource.is(DamageTypes.IN_FIRE) || damagesource.is(DamageTypes.FREEZE) || damagesource.is(DamageTypes.DRY_OUT) || damagesource.is(DamageTypes.MAGIC) || damagesource.is(DamageTypes.DROWN)
 				|| damagesource.is(DamageTypes.FALLING_BLOCK) || damagesource.is(DamageTypes.LAVA))) {
-			if (world instanceof ServerLevel _level)
-				_level.sendParticles((SimpleParticleType) (DndCraftModParticleTypes.BLOOD.get()), x, (y + 1), z, (int) (3 * amount), 0, 0, 0, 1);
+			if (300 > 3 * amount) {
+				if (world instanceof ServerLevel _level)
+					_level.sendParticles((SimpleParticleType) (DndCraftModParticleTypes.BLOOD.get()), x, (y + 1), z, (int) (3 * amount), 0, 0, 0, 1);
+			} else if (true) {
+				if (world instanceof ServerLevel _level)
+					_level.sendParticles((SimpleParticleType) (DndCraftModParticleTypes.BLOOD.get()), x, (y + 1), z, 500, 0, 0, 0, 1);
+			}
 		}
 	}
 }

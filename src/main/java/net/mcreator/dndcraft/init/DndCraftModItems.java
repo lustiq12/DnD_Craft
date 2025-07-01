@@ -153,7 +153,7 @@ public class DndCraftModItems {
 	public static final DeferredItem<Item> RUSTY_MACE = REGISTRY.register("rusty_mace", RustyMaceItem::new);
 	public static final DeferredItem<Item> BATTALESTAFFTWOHANDED = REGISTRY.register("battalestafftwohanded", BattalestafftwohandedItem::new);
 	public static final DeferredItem<Item> BANJO = REGISTRY.register("banjo", BanjoItem::new);
-	public static final DeferredItem<Item> MAGIC_WAND = REGISTRY.register("magic_wand", MagicWandItem::new);
+	public static final DeferredItem<Item> SPELLBOOK = REGISTRY.register("spellbook", MagicWandItem::new);
 	public static final DeferredItem<Item> POISONED_DAGGER = REGISTRY.register("poisoned_dagger", PoisonedDaggerItem::new);
 	public static final DeferredItem<Item> COATED_POISONED_DAGGER = REGISTRY.register("coated_poisoned_dagger", Poisoneddagger2Item::new);
 	public static final DeferredItem<Item> HEAL_POTION = REGISTRY.register("heal_potion", HealPotionItem::new);

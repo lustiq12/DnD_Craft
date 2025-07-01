@@ -24,7 +24,7 @@ public class DailyRationItem extends Item {
 		double x = entity.getX();
 		double y = entity.getY();
 		double z = entity.getZ();
-		DailyRationQuestProcedure.execute(world, entity);
+		DailyRationQuestProcedure.execute(entity);
 		if (itemstack.isEmpty()) {
 			return retval;
 		} else {

@@ -21,7 +21,7 @@ public class CookedOrkBeefItem extends Item {
 		double x = entity.getX();
 		double y = entity.getY();
 		double z = entity.getZ();
-		MonsterdelightquestProcedure.execute(world, entity);
+		MonsterdelightquestProcedure.execute(entity);
 		return retval;
 	}
 }

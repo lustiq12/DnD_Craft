@@ -28,9 +28,9 @@ public class MagicWandItem extends Item {
 	@OnlyIn(Dist.CLIENT)
 	public void appendHoverText(ItemStack itemstack, Item.TooltipContext context, List<Component> list, TooltipFlag flag) {
 		super.appendHoverText(itemstack, context, list, flag);
-		list.add(Component.translatable("item.dnd_craft.magic_wand.description_0"));
-		list.add(Component.translatable("item.dnd_craft.magic_wand.description_1"));
-		list.add(Component.translatable("item.dnd_craft.magic_wand.description_2"));
+		list.add(Component.translatable("item.dnd_craft.spellbook.description_0"));
+		list.add(Component.translatable("item.dnd_craft.spellbook.description_1"));
+		list.add(Component.translatable("item.dnd_craft.spellbook.description_2"));
 	}
 
 	@Override

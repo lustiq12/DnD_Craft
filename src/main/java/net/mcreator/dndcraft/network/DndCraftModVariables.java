@@ -76,6 +76,7 @@ public class DndCraftModVariables {
 				clone.CookingVeteranquest = original.CookingVeteranquest;
 				clone.MaxMana = original.MaxMana;
 				clone.MaxKi = original.MaxKi;
+				clone.XpPercent = original.XpPercent;
 			}
 			event.getEntity().setData(PLAYER_VARIABLES, clone);
 		}
@@ -97,6 +98,7 @@ public class DndCraftModVariables {
 		public double CookingVeteranquest = 0.0;
 		public double MaxMana = 100.0;
 		public double MaxKi = 2.0;
+		public double XpPercent = 0;
 
 		@Override
 		public CompoundTag serializeNBT(HolderLookup.Provider lookupProvider) {
@@ -116,6 +118,7 @@ public class DndCraftModVariables {
 			nbt.putDouble("CookingVeteranquest", CookingVeteranquest);
 			nbt.putDouble("MaxMana", MaxMana);
 			nbt.putDouble("MaxKi", MaxKi);
+			nbt.putDouble("XpPercent", XpPercent);
 			return nbt;
 		}
 
@@ -136,6 +139,7 @@ public class DndCraftModVariables {
 			CookingVeteranquest = nbt.getDouble("CookingVeteranquest");
 			MaxMana = nbt.getDouble("MaxMana");
 			MaxKi = nbt.getDouble("MaxKi");
+			XpPercent = nbt.getDouble("XpPercent");
 		}
 
 		public void syncPlayerVariables(Entity entity) {

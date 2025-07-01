@@ -46,7 +46,7 @@ public class MagierProcedure {
 			ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
 		}
 		if (entity instanceof Player _player) {
-			ItemStack _setstack = new ItemStack(DndCraftModItems.MAGIC_WAND.get()).copy();
+			ItemStack _setstack = new ItemStack(DndCraftModItems.SPELLBOOK.get()).copy();
 			_setstack.setCount(1);
 			ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
 		}

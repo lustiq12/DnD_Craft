@@ -73,12 +73,12 @@ public class LifeextraperlevelProcedure {
 				}
 			}
 			if (!world.isClientSide() && world.getServer() != null)
-				world.getServer().getPlayerList().broadcastSystemMessage(Component.literal(("\u00A74You leveled up! You are now level " + entity.getData(DndCraftModVariables.PLAYER_VARIABLES).PlayerLevel)), false);
+				world.getServer().getPlayerList().broadcastSystemMessage(Component.literal(("\u00A74You leveled up! You are now level " + Math.round(entity.getData(DndCraftModVariables.PLAYER_VARIABLES).PlayerLevel))), false);
 		}
-		if (amount > 0.9) {
-			if (!world.isClientSide() && world.getServer() != null)
-				world.getServer().getPlayerList().broadcastSystemMessage(
-						Component.literal(("You still need " + (Math.pow(entity.getData(DndCraftModVariables.PLAYER_VARIABLES).PlayerLevel, 2) * 35 - entity.getData(DndCraftModVariables.PLAYER_VARIABLES).Lvlxp) + " XP to level up. ")), false);
+		{
+			DndCraftModVariables.PlayerVariables _vars = entity.getData(DndCraftModVariables.PLAYER_VARIABLES);
+			_vars.XpPercent = (entity.getData(DndCraftModVariables.PLAYER_VARIABLES).Lvlxp / (Math.pow(entity.getData(DndCraftModVariables.PLAYER_VARIABLES).PlayerLevel, 2) * 35)) * 100;
+			_vars.syncPlayerVariables(entity);
 		}
 	}
 }
