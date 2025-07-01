@@ -1,7 +1,5 @@
 package net.mcreator.dndcraft.procedures;
 
-import net.minecraftforge.registries.ForgeRegistries;
-
 import net.minecraft.world.level.block.state.properties.Property;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.LevelAccessor;
@@ -10,16 +8,14 @@ import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.item.ItemEntity;
 import net.minecraft.world.entity.Entity;
-import net.minecraft.util.RandomSource;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.core.BlockPos;
 
 import net.mcreator.dndcraft.init.DndCraftModItems;
 import net.mcreator.dndcraft.init.DndCraftModBlocks;
-
-import java.util.Map;
 
 public class DaggerRightclickedOnBlockProcedure {
 	public static void execute(LevelAccessor world, double x, double y, double z, Entity entity, ItemStack itemstack) {
@@ -33,11 +29,11 @@ public class DaggerRightclickedOnBlockProcedure {
 					BlockPos _bp = BlockPos.containing(x, y, z);
 					BlockState _bs = DndCraftModBlocks.COOKEDOWLBEARMEATBLOCK_2.get().defaultBlockState();
 					BlockState _bso = world.getBlockState(_bp);
-					for (Map.Entry<Property<?>, Comparable<?>> entry : _bso.getValues().entrySet()) {
-						Property _property = _bs.getBlock().getStateDefinition().getProperty(entry.getKey().getName());
-						if (_property != null && _bs.getValue(_property) != null)
+					for (Property<?> _propertyOld : _bso.getProperties()) {
+						Property _propertyNew = _bs.getBlock().getStateDefinition().getProperty(_propertyOld.getName());
+						if (_propertyNew != null && _bs.getValue(_propertyNew) != null)
 							try {
-								_bs = _bs.setValue(_property, (Comparable) entry.getValue());
+								_bs = _bs.setValue(_propertyNew, _bso.getValue(_propertyOld));
 							} catch (Exception e) {
 							}
 					}
@@ -50,18 +46,15 @@ public class DaggerRightclickedOnBlockProcedure {
 						_level.addFreshEntity(entityToSpawn);
 					}
 				}
-				{
-					ItemStack _ist = itemstack;
-					if (_ist.hurt(1, RandomSource.create(), null)) {
-						_ist.shrink(1);
-						_ist.setDamageValue(0);
-					}
+				if (world instanceof ServerLevel _level) {
+					itemstack.hurtAndBreak(1, _level, null, _stkprov -> {
+					});
 				}
 				if (world instanceof Level _level) {
 					if (!_level.isClientSide()) {
-						_level.playSound(null, BlockPos.containing(x, y, z), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.sheep.shear")), SoundSource.NEUTRAL, 2, 1);
+						_level.playSound(null, BlockPos.containing(x, y, z), BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("entity.sheep.shear")), SoundSource.NEUTRAL, 2, 1);
 					} else {
-						_level.playLocalSound(x, y, z, ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.sheep.shear")), SoundSource.NEUTRAL, 2, 1, false);
+						_level.playLocalSound(x, y, z, BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("entity.sheep.shear")), SoundSource.NEUTRAL, 2, 1, false);
 					}
 				}
 			} else if ((world.getBlockState(BlockPos.containing(x, y, z))).getBlock() == DndCraftModBlocks.COOKEDOWLBEARMEATBLOCK_2.get()) {
@@ -69,11 +62,11 @@ public class DaggerRightclickedOnBlockProcedure {
 					BlockPos _bp = BlockPos.containing(x, y, z);
 					BlockState _bs = DndCraftModBlocks.COOKEDOWLBEARMEATBLOCK_3.get().defaultBlockState();
 					BlockState _bso = world.getBlockState(_bp);
-					for (Map.Entry<Property<?>, Comparable<?>> entry : _bso.getValues().entrySet()) {
-						Property _property = _bs.getBlock().getStateDefinition().getProperty(entry.getKey().getName());
-						if (_property != null && _bs.getValue(_property) != null)
+					for (Property<?> _propertyOld : _bso.getProperties()) {
+						Property _propertyNew = _bs.getBlock().getStateDefinition().getProperty(_propertyOld.getName());
+						if (_propertyNew != null && _bs.getValue(_propertyNew) != null)
 							try {
-								_bs = _bs.setValue(_property, (Comparable) entry.getValue());
+								_bs = _bs.setValue(_propertyNew, _bso.getValue(_propertyOld));
 							} catch (Exception e) {
 							}
 					}
@@ -86,18 +79,15 @@ public class DaggerRightclickedOnBlockProcedure {
 						_level.addFreshEntity(entityToSpawn);
 					}
 				}
-				{
-					ItemStack _ist = itemstack;
-					if (_ist.hurt(1, RandomSource.create(), null)) {
-						_ist.shrink(1);
-						_ist.setDamageValue(0);
-					}
+				if (world instanceof ServerLevel _level) {
+					itemstack.hurtAndBreak(1, _level, null, _stkprov -> {
+					});
 				}
 				if (world instanceof Level _level) {
 					if (!_level.isClientSide()) {
-						_level.playSound(null, BlockPos.containing(x, y, z), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.sheep.shear")), SoundSource.NEUTRAL, 2, 1);
+						_level.playSound(null, BlockPos.containing(x, y, z), BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("entity.sheep.shear")), SoundSource.NEUTRAL, 2, 1);
 					} else {
-						_level.playLocalSound(x, y, z, ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.sheep.shear")), SoundSource.NEUTRAL, 2, 1, false);
+						_level.playLocalSound(x, y, z, BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("entity.sheep.shear")), SoundSource.NEUTRAL, 2, 1, false);
 					}
 				}
 			} else if ((world.getBlockState(BlockPos.containing(x, y, z))).getBlock() == DndCraftModBlocks.COOKEDOWLBEARMEATBLOCK_3.get()) {
@@ -105,11 +95,11 @@ public class DaggerRightclickedOnBlockProcedure {
 					BlockPos _bp = BlockPos.containing(x, y, z);
 					BlockState _bs = DndCraftModBlocks.COOKEDOWLBEARMEATBLOCK_4.get().defaultBlockState();
 					BlockState _bso = world.getBlockState(_bp);
-					for (Map.Entry<Property<?>, Comparable<?>> entry : _bso.getValues().entrySet()) {
-						Property _property = _bs.getBlock().getStateDefinition().getProperty(entry.getKey().getName());
-						if (_property != null && _bs.getValue(_property) != null)
+					for (Property<?> _propertyOld : _bso.getProperties()) {
+						Property _propertyNew = _bs.getBlock().getStateDefinition().getProperty(_propertyOld.getName());
+						if (_propertyNew != null && _bs.getValue(_propertyNew) != null)
 							try {
-								_bs = _bs.setValue(_property, (Comparable) entry.getValue());
+								_bs = _bs.setValue(_propertyNew, _bso.getValue(_propertyOld));
 							} catch (Exception e) {
 							}
 					}
@@ -122,18 +112,15 @@ public class DaggerRightclickedOnBlockProcedure {
 						_level.addFreshEntity(entityToSpawn);
 					}
 				}
-				{
-					ItemStack _ist = itemstack;
-					if (_ist.hurt(1, RandomSource.create(), null)) {
-						_ist.shrink(1);
-						_ist.setDamageValue(0);
-					}
+				if (world instanceof ServerLevel _level) {
+					itemstack.hurtAndBreak(1, _level, null, _stkprov -> {
+					});
 				}
 				if (world instanceof Level _level) {
 					if (!_level.isClientSide()) {
-						_level.playSound(null, BlockPos.containing(x, y, z), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.sheep.shear")), SoundSource.NEUTRAL, 2, 1);
+						_level.playSound(null, BlockPos.containing(x, y, z), BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("entity.sheep.shear")), SoundSource.NEUTRAL, 2, 1);
 					} else {
-						_level.playLocalSound(x, y, z, ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.sheep.shear")), SoundSource.NEUTRAL, 2, 1, false);
+						_level.playLocalSound(x, y, z, BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("entity.sheep.shear")), SoundSource.NEUTRAL, 2, 1, false);
 					}
 				}
 			}

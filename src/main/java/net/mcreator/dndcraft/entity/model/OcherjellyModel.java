@@ -9,17 +9,17 @@ import net.mcreator.dndcraft.entity.OcherjellyEntity;
 public class OcherjellyModel extends GeoModel<OcherjellyEntity> {
 	@Override
 	public ResourceLocation getAnimationResource(OcherjellyEntity entity) {
-		return new ResourceLocation("dnd_craft", "animations/ockergallert.animation.json");
+		return ResourceLocation.parse("dnd_craft:animations/ockergallert.animation.json");
 	}
 
 	@Override
 	public ResourceLocation getModelResource(OcherjellyEntity entity) {
-		return new ResourceLocation("dnd_craft", "geo/ockergallert.geo.json");
+		return ResourceLocation.parse("dnd_craft:geo/ockergallert.geo.json");
 	}
 
 	@Override
 	public ResourceLocation getTextureResource(OcherjellyEntity entity) {
-		return new ResourceLocation("dnd_craft", "textures/entities/" + entity.getTexture() + ".png");
+		return ResourceLocation.parse("dnd_craft:textures/entities/" + entity.getTexture() + ".png");
 	}
 
 }

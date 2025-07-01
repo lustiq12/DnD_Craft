@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "aaa",
+    "aaa",
+    "aaa"
+  ],
+  "key": {
+    "a": {
+      "item": "dnd_craft:scrapsheet"
+    }
+  },
+  "result": {
+    "id": "dnd_craft:scrapblock",
+    "count": 1
+  }
+}

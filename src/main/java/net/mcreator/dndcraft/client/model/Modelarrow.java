@@ -21,7 +21,7 @@ import com.mojang.blaze3d.vertex.PoseStack;
 public class Modelarrow<T extends Entity> extends EntityModel<T> {
 	// This layer location should be baked with EntityRendererProvider.Context in
 	// the entity renderer and passed into this model's constructor
-	public static final ModelLayerLocation LAYER_LOCATION = new ModelLayerLocation(new ResourceLocation("dnd_craft", "modelarrow"), "main");
+	public static final ModelLayerLocation LAYER_LOCATION = new ModelLayerLocation(ResourceLocation.fromNamespaceAndPath("dnd_craft", "modelarrow"), "main");
 	public final ModelPart back;
 	public final ModelPart cross_1;
 	public final ModelPart cross_2;
@@ -45,10 +45,10 @@ public class Modelarrow<T extends Entity> extends EntityModel<T> {
 	}
 
 	@Override
-	public void renderToBuffer(PoseStack poseStack, VertexConsumer vertexConsumer, int packedLight, int packedOverlay, float red, float green, float blue, float alpha) {
-		back.render(poseStack, vertexConsumer, packedLight, packedOverlay, red, green, blue, alpha);
-		cross_1.render(poseStack, vertexConsumer, packedLight, packedOverlay, red, green, blue, alpha);
-		cross_2.render(poseStack, vertexConsumer, packedLight, packedOverlay, red, green, blue, alpha);
+	public void renderToBuffer(PoseStack poseStack, VertexConsumer vertexConsumer, int packedLight, int packedOverlay, int rgb) {
+		back.render(poseStack, vertexConsumer, packedLight, packedOverlay, rgb);
+		cross_1.render(poseStack, vertexConsumer, packedLight, packedOverlay, rgb);
+		cross_2.render(poseStack, vertexConsumer, packedLight, packedOverlay, rgb);
 	}
 
 	public void setupAnim(T entity, float limbSwing, float limbSwingAmount, float ageInTicks, float netHeadYaw, float headPitch) {

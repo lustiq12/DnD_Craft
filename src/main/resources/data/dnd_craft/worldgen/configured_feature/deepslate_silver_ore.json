@@ -7,7 +7,7 @@
       {
         "target": {
           "predicate_type": "tag_match",
-          "tag": "forge:stone"
+          "tag": "c:stones"
         },
         "state": {
           "Name": "dnd_craft:deepslate_silver_ore"

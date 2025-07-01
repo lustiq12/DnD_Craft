@@ -8,7 +8,7 @@ public class MonsterquestunlockProcedure {
 	public static boolean execute(Entity entity) {
 		if (entity == null)
 			return false;
-		if ((entity.getCapability(DndCraftModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new DndCraftModVariables.PlayerVariables())).DailyRationQuest == -1) {
+		if (entity.getData(DndCraftModVariables.PLAYER_VARIABLES).DailyRationQuest == -1) {
 			return true;
 		}
 		return false;

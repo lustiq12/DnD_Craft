@@ -1,0 +1,28 @@
+{
+  "replace": false,
+  "values": [
+    "dnd_craft:drums",
+    "dnd_craft:coated_poisoned_dagger",
+    "dnd_craft:poisoned_dagger",
+    "dnd_craft:banjo",
+    "dnd_craft:battalestafftwohanded",
+    "dnd_craft:monster_dagger",
+    "dnd_craft:harpy_spear",
+    "dnd_craft:adamantium_scimitar",
+    "dnd_craft:two_handed_adamantium_claymore",
+    "dnd_craft:adamantium_gladius",
+    "dnd_craft:adamantium_spear",
+    "dnd_craft:adamantium_claymore",
+    "dnd_craft:adamantium_dagger",
+    "dnd_craft:ghost_axe",
+    "dnd_craft:scimitar",
+    "dnd_craft:two_handed_claymore",
+    "dnd_craft:claymore",
+    "dnd_craft:gladius",
+    "dnd_craft:zwo_handed_club",
+    "dnd_craft:spear",
+    "dnd_craft:club",
+    "dnd_craft:battle_staff",
+    "dnd_craft:dagger"
+  ]
+}

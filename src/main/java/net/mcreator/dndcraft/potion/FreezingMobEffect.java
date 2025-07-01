@@ -8,9 +8,4 @@ public class FreezingMobEffect extends MobEffect {
 	public FreezingMobEffect() {
 		super(MobEffectCategory.HARMFUL, -3342337);
 	}
-
-	@Override
-	public boolean isDurationEffectTick(int duration, int amplifier) {
-		return true;
-	}
 }

@@ -1,0 +1,87 @@
+{
+  "display": {
+    "icon": {
+      "id": "dnd_craft:gold_coin"
+    },
+    "title": {
+      "translate": "advancements.businessman.title"
+    },
+    "description": {
+      "translate": "advancements.businessman.descr"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "businessman_0": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "dnd_craft:copper_coin"
+            ],
+            "count": {
+              "min": 64,
+              "max": 64
+            }
+          }
+        ]
+      }
+    },
+    "businessman_1": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "dnd_craft:silver_coin"
+            ],
+            "count": {
+              "min": 64,
+              "max": 64
+            }
+          }
+        ]
+      }
+    },
+    "businessman_2": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "dnd_craft:gold_coin"
+            ],
+            "count": {
+              "min": 64,
+              "max": 64
+            }
+          }
+        ]
+      }
+    },
+    "businessman_3": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "dnd_craft:platin_coin"
+            ],
+            "count": {
+              "min": 64,
+              "max": 64
+            }
+          }
+        ]
+      }
+    }
+  },
+  "rewards": {
+    "experience": 200
+  },
+  "parent": "dnd_craft:the_beginning"
+}

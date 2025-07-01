@@ -9,17 +9,17 @@ import net.mcreator.dndcraft.entity.VINESEntity;
 public class VINESModel extends GeoModel<VINESEntity> {
 	@Override
 	public ResourceLocation getAnimationResource(VINESEntity entity) {
-		return new ResourceLocation("dnd_craft", "animations/vines.animation.json");
+		return ResourceLocation.parse("dnd_craft:animations/vines.animation.json");
 	}
 
 	@Override
 	public ResourceLocation getModelResource(VINESEntity entity) {
-		return new ResourceLocation("dnd_craft", "geo/vines.geo.json");
+		return ResourceLocation.parse("dnd_craft:geo/vines.geo.json");
 	}
 
 	@Override
 	public ResourceLocation getTextureResource(VINESEntity entity) {
-		return new ResourceLocation("dnd_craft", "textures/entities/" + entity.getTexture() + ".png");
+		return ResourceLocation.parse("dnd_craft:textures/entities/" + entity.getTexture() + ".png");
 	}
 
 }

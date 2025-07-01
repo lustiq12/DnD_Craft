@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "a",
+    "b"
+  ],
+  "key": {
+    "a": {
+      "item": "minecraft:beef"
+    },
+    "b": {
+      "item": "dnd_craft:dagger"
+    }
+  },
+  "result": {
+    "id": "dnd_craft:animal_bone",
+    "count": 2
+  }
+}

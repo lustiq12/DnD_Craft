@@ -9,17 +9,17 @@ import net.mcreator.dndcraft.entity.MimicSludgeEntity;
 public class MimicSludgeModel extends GeoModel<MimicSludgeEntity> {
 	@Override
 	public ResourceLocation getAnimationResource(MimicSludgeEntity entity) {
-		return new ResourceLocation("dnd_craft", "animations/mimicsludge.animation.json");
+		return ResourceLocation.parse("dnd_craft:animations/mimicsludge.animation.json");
 	}
 
 	@Override
 	public ResourceLocation getModelResource(MimicSludgeEntity entity) {
-		return new ResourceLocation("dnd_craft", "geo/mimicsludge.geo.json");
+		return ResourceLocation.parse("dnd_craft:geo/mimicsludge.geo.json");
 	}
 
 	@Override
 	public ResourceLocation getTextureResource(MimicSludgeEntity entity) {
-		return new ResourceLocation("dnd_craft", "textures/entities/" + entity.getTexture() + ".png");
+		return ResourceLocation.parse("dnd_craft:textures/entities/" + entity.getTexture() + ".png");
 	}
 
 }

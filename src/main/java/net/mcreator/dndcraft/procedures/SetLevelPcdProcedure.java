@@ -18,28 +18,21 @@ public class SetLevelPcdProcedure {
 		if (entity == null)
 			return;
 		{
-			double _setval = (entity.getCapability(DndCraftModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new DndCraftModVariables.PlayerVariables())).MaxMana
-					+ 20 * (DoubleArgumentType.getDouble(arguments, "level") - (entity.getCapability(DndCraftModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new DndCraftModVariables.PlayerVariables())).PlayerLevel);
-			entity.getCapability(DndCraftModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-				capability.MaxMana = _setval;
-				capability.syncPlayerVariables(entity);
-			});
+			DndCraftModVariables.PlayerVariables _vars = entity.getData(DndCraftModVariables.PLAYER_VARIABLES);
+			_vars.MaxMana = entity.getData(DndCraftModVariables.PLAYER_VARIABLES).MaxMana + 20 * (DoubleArgumentType.getDouble(arguments, "level") - entity.getData(DndCraftModVariables.PLAYER_VARIABLES).PlayerLevel);
+			_vars.syncPlayerVariables(entity);
 		}
 		{
-			double _setval = (entity.getCapability(DndCraftModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new DndCraftModVariables.PlayerVariables())).Ki
-					+ 1 * (DoubleArgumentType.getDouble(arguments, "level") - (entity.getCapability(DndCraftModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new DndCraftModVariables.PlayerVariables())).PlayerLevel);
-			entity.getCapability(DndCraftModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-				capability.MaxKi = _setval;
-				capability.syncPlayerVariables(entity);
-			});
+			DndCraftModVariables.PlayerVariables _vars = entity.getData(DndCraftModVariables.PLAYER_VARIABLES);
+			_vars.MaxKi = entity.getData(DndCraftModVariables.PLAYER_VARIABLES).Ki + 1 * (DoubleArgumentType.getDouble(arguments, "level") - entity.getData(DndCraftModVariables.PLAYER_VARIABLES).PlayerLevel);
+			_vars.syncPlayerVariables(entity);
 		}
 		if (entity instanceof LivingEntity _livingEntity4 && _livingEntity4.getAttributes().hasAttribute(Attributes.MAX_HEALTH))
 			_livingEntity4.getAttribute(Attributes.MAX_HEALTH)
 					.setBaseValue(((entity instanceof LivingEntity _livingEntity2 && _livingEntity2.getAttributes().hasAttribute(Attributes.MAX_HEALTH) ? _livingEntity2.getAttribute(Attributes.MAX_HEALTH).getBaseValue() : 0)
-							+ 1 * (DoubleArgumentType.getDouble(arguments, "level") - (entity.getCapability(DndCraftModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new DndCraftModVariables.PlayerVariables())).PlayerLevel)));
+							+ 1 * (DoubleArgumentType.getDouble(arguments, "level") - entity.getData(DndCraftModVariables.PLAYER_VARIABLES).PlayerLevel)));
 		{
-			double _setval = DoubleArgumentType.getDouble(arguments, "level");
-			(new Object() {
+			DndCraftModVariables.PlayerVariables _vars = (new Object() {
 				public Entity getEntity() {
 					try {
 						return EntityArgument.getEntity(arguments, "Player_name");
@@ -48,19 +41,18 @@ public class SetLevelPcdProcedure {
 						return null;
 					}
 				}
-			}.getEntity()).getCapability(DndCraftModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-				capability.PlayerLevel = _setval;
-				capability.syncPlayerVariables((new Object() {
-					public Entity getEntity() {
-						try {
-							return EntityArgument.getEntity(arguments, "Player_name");
-						} catch (CommandSyntaxException e) {
-							e.printStackTrace();
-							return null;
-						}
+			}.getEntity()).getData(DndCraftModVariables.PLAYER_VARIABLES);
+			_vars.PlayerLevel = DoubleArgumentType.getDouble(arguments, "level");
+			_vars.syncPlayerVariables((new Object() {
+				public Entity getEntity() {
+					try {
+						return EntityArgument.getEntity(arguments, "Player_name");
+					} catch (CommandSyntaxException e) {
+						e.printStackTrace();
+						return null;
 					}
-				}.getEntity()));
-			});
+				}
+			}.getEntity()));
 		}
 		if (entity instanceof Player _player)
 			_player.giveExperiencePoints((int) 0.91);

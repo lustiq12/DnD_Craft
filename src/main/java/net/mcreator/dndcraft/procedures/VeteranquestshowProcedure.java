@@ -8,7 +8,7 @@ public class VeteranquestshowProcedure {
 	public static boolean execute(Entity entity) {
 		if (entity == null)
 			return false;
-		if ((entity.getCapability(DndCraftModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new DndCraftModVariables.PlayerVariables())).CookingVeteranquest > 79) {
+		if (entity.getData(DndCraftModVariables.PLAYER_VARIABLES).CookingVeteranquest > 79) {
 			return true;
 		}
 		return false;

@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:smithing_transform",
+  "template": {
+    "item": "dnd_craft:claymore"
+  },
+  "base": {
+    "item": "dnd_craft:adantium_ingot"
+  },
+  "addition": {
+    "item": "dnd_craft:adamantium_upgrade_smithing_template"
+  },
+  "result": {
+    "id": "dnd_craft:adamantium_claymore"
+  }
+}

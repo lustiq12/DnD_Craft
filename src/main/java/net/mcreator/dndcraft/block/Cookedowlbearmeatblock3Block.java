@@ -65,10 +65,7 @@ public class Cookedowlbearmeatblock3Block extends Block {
 	@Override
 	public void tick(BlockState blockstate, ServerLevel world, BlockPos pos, RandomSource random) {
 		super.tick(blockstate, world, pos, random);
-		int x = pos.getX();
-		int y = pos.getY();
-		int z = pos.getZ();
-		Owlbearregenerate2Procedure.execute(world, x, y, z);
+		Owlbearregenerate2Procedure.execute(world, pos.getX(), pos.getY(), pos.getZ());
 		world.scheduleTick(pos, this, 300);
 	}
 }

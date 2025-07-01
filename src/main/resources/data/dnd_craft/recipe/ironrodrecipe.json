@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "minecraft:stick"
+    },
+    {
+      "item": "dnd_craft:iron_plate"
+    }
+  ],
+  "result": {
+    "id": "dnd_craft:metal_rod",
+    "count": 1
+  }
+}

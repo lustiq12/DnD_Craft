@@ -1,6 +1,9 @@
 
 package net.mcreator.dndcraft.item;
 
+import net.neoforged.api.distmarker.OnlyIn;
+import net.neoforged.api.distmarker.Dist;
+
 import net.minecraft.world.level.Level;
 import net.minecraft.world.item.TooltipFlag;
 import net.minecraft.world.item.Rarity;
@@ -21,8 +24,9 @@ public class MagicscrollFirearrowItem extends Item {
 	}
 
 	@Override
-	public void appendHoverText(ItemStack itemstack, Level level, List<Component> list, TooltipFlag flag) {
-		super.appendHoverText(itemstack, level, list, flag);
+	@OnlyIn(Dist.CLIENT)
+	public void appendHoverText(ItemStack itemstack, Item.TooltipContext context, List<Component> list, TooltipFlag flag) {
+		super.appendHoverText(itemstack, context, list, flag);
 		list.add(Component.translatable("item.dnd_craft.magicscroll_firearrow.description_0"));
 		list.add(Component.translatable("item.dnd_craft.magicscroll_firearrow.description_1"));
 		list.add(Component.translatable("item.dnd_craft.magicscroll_firearrow.description_2"));

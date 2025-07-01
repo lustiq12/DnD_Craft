@@ -32,7 +32,7 @@
       "registry_name": "daggerrecipe",
       "metadata": {
         "files": [
-          "src/main/resources/data/dnd_craft/recipes/daggerrecipe.json"
+          "src/main/resources/data/dnd_craft/recipe/daggerrecipe.json"
         ]
       },
       "path": "~/Recipes"
@@ -72,7 +72,7 @@
       "registry_name": "bonemealrecipe",
       "metadata": {
         "files": [
-          "src/main/resources/data/dnd_craft/recipes/bonemealrecipe.json"
+          "src/main/resources/data/dnd_craft/recipe/bonemealrecipe.json"
         ]
       },
       "path": "~/Recipes"
@@ -85,7 +85,7 @@
       "registry_name": "bonemealrecipe_2",
       "metadata": {
         "files": [
-          "src/main/resources/data/dnd_craft/recipes/bonemealrecipe_2.json"
+          "src/main/resources/data/dnd_craft/recipe/bonemealrecipe_2.json"
         ]
       },
       "path": "~/Recipes"
@@ -98,7 +98,7 @@
       "registry_name": "bonemealrecipe_3",
       "metadata": {
         "files": [
-          "src/main/resources/data/dnd_craft/recipes/bonemealrecipe_3.json"
+          "src/main/resources/data/dnd_craft/recipe/bonemealrecipe_3.json"
         ]
       },
       "path": "~/Recipes"
@@ -111,7 +111,7 @@
       "registry_name": "bonemealrecipe_4",
       "metadata": {
         "files": [
-          "src/main/resources/data/dnd_craft/recipes/bonemealrecipe_4.json"
+          "src/main/resources/data/dnd_craft/recipe/bonemealrecipe_4.json"
         ]
       },
       "path": "~/Recipes"
@@ -124,7 +124,7 @@
       "registry_name": "bonemealrecipe_5",
       "metadata": {
         "files": [
-          "src/main/resources/data/dnd_craft/recipes/bonemealrecipe_5.json"
+          "src/main/resources/data/dnd_craft/recipe/bonemealrecipe_5.json"
         ]
       },
       "path": "~/Recipes"
@@ -137,7 +137,7 @@
       "registry_name": "ax_recipe",
       "metadata": {
         "files": [
-          "src/main/resources/data/dnd_craft/recipes/ax_recipe.json"
+          "src/main/resources/data/dnd_craft/recipe/ax_recipe.json"
         ]
       },
       "path": "~/Recipes"
@@ -164,7 +164,7 @@
       "registry_name": "lighthammerecipe",
       "metadata": {
         "files": [
-          "src/main/resources/data/dnd_craft/recipes/lighthammerecipe.json"
+          "src/main/resources/data/dnd_craft/recipe/lighthammerecipe.json"
         ]
       },
       "path": "~/Recipes"
@@ -191,7 +191,7 @@
       "registry_name": "battlestaffrecipe",
       "metadata": {
         "files": [
-          "src/main/resources/data/dnd_craft/recipes/battlestaffrecipe.json"
+          "src/main/resources/data/dnd_craft/recipe/battlestaffrecipe.json"
         ]
       },
       "path": "~/Recipes"
@@ -218,7 +218,7 @@
       "registry_name": "clubrecipe",
       "metadata": {
         "files": [
-          "src/main/resources/data/dnd_craft/recipes/clubrecipe.json"
+          "src/main/resources/data/dnd_craft/recipe/clubrecipe.json"
         ]
       },
       "path": "~/Recipes"
@@ -244,7 +244,7 @@
       "registry_name": "ironplaterecipe",
       "metadata": {
         "files": [
-          "src/main/resources/data/dnd_craft/recipes/ironplaterecipe.json"
+          "src/main/resources/data/dnd_craft/recipe/ironplaterecipe.json"
         ]
       },
       "path": "~/Recipes"
@@ -257,7 +257,7 @@
       "registry_name": "animalbonesrecipe",
       "metadata": {
         "files": [
-          "src/main/resources/data/dnd_craft/recipes/animalbonesrecipe.json"
+          "src/main/resources/data/dnd_craft/recipe/animalbonesrecipe.json"
         ]
       },
       "path": "~/Recipes"
@@ -284,7 +284,7 @@
       "registry_name": "spearrecipe",
       "metadata": {
         "files": [
-          "src/main/resources/data/dnd_craft/recipes/spearrecipe.json"
+          "src/main/resources/data/dnd_craft/recipe/spearrecipe.json"
         ]
       },
       "path": "~/Recipes"
@@ -311,7 +311,7 @@
       "registry_name": "macerecipe",
       "metadata": {
         "files": [
-          "src/main/resources/data/dnd_craft/recipes/macerecipe.json"
+          "src/main/resources/data/dnd_craft/recipe/macerecipe.json"
         ]
       },
       "path": "~/Recipes"
@@ -337,7 +337,7 @@
       "registry_name": "ironrodrecipe",
       "metadata": {
         "files": [
-          "src/main/resources/data/dnd_craft/recipes/ironrodrecipe.json"
+          "src/main/resources/data/dnd_craft/recipe/ironrodrecipe.json"
         ]
       },
       "path": "~/Recipes"
@@ -364,7 +364,7 @@
       "registry_name": "twohandedclub",
       "metadata": {
         "files": [
-          "src/main/resources/data/dnd_craft/recipes/twohandedclub.json"
+          "src/main/resources/data/dnd_craft/recipe/twohandedclub.json"
         ]
       },
       "path": "~/Recipes"
@@ -391,7 +391,7 @@
       "registry_name": "gladiusrecipe",
       "metadata": {
         "files": [
-          "src/main/resources/data/dnd_craft/recipes/gladiusrecipe.json"
+          "src/main/resources/data/dnd_craft/recipe/gladiusrecipe.json"
         ]
       },
       "path": "~/Recipes"
@@ -418,7 +418,7 @@
       "registry_name": "claymorerecipe",
       "metadata": {
         "files": [
-          "src/main/resources/data/dnd_craft/recipes/claymorerecipe.json"
+          "src/main/resources/data/dnd_craft/recipe/claymorerecipe.json"
         ]
       },
       "path": "~/Recipes"
@@ -478,7 +478,7 @@
       "registry_name": "warhammerecipe",
       "metadata": {
         "files": [
-          "src/main/resources/data/dnd_craft/recipes/warhammerecipe.json"
+          "src/main/resources/data/dnd_craft/recipe/warhammerecipe.json"
         ]
       },
       "path": "~/Recipes"
@@ -491,7 +491,7 @@
       "registry_name": "twohandedhammerrecipe",
       "metadata": {
         "files": [
-          "src/main/resources/data/dnd_craft/recipes/twohandedhammerrecipe.json"
+          "src/main/resources/data/dnd_craft/recipe/twohandedhammerrecipe.json"
         ]
       },
       "path": "~/Recipes"
@@ -504,7 +504,7 @@
       "registry_name": "ironplaterecipebig",
       "metadata": {
         "files": [
-          "src/main/resources/data/dnd_craft/recipes/ironplaterecipebig.json"
+          "src/main/resources/data/dnd_craft/recipe/ironplaterecipebig.json"
         ]
       },
       "path": "~/Recipes"
@@ -545,7 +545,7 @@
       "registry_name": "twohanedaxerecipe",
       "metadata": {
         "files": [
-          "src/main/resources/data/dnd_craft/recipes/twohanedaxerecipe.json"
+          "src/main/resources/data/dnd_craft/recipe/twohanedaxerecipe.json"
         ]
       },
       "path": "~/Recipes"
@@ -558,7 +558,7 @@
       "registry_name": "battleaxerecipe",
       "metadata": {
         "files": [
-          "src/main/resources/data/dnd_craft/recipes/battleaxerecipe.json"
+          "src/main/resources/data/dnd_craft/recipe/battleaxerecipe.json"
         ]
       },
       "path": "~/Recipes"
@@ -655,7 +655,7 @@
       "registry_name": "soaprecipe",
       "metadata": {
         "files": [
-          "src/main/resources/data/dnd_craft/recipes/soaprecipe.json"
+          "src/main/resources/data/dnd_craft/recipe/soaprecipe.json"
         ]
       },
       "path": "~/Recipes"
@@ -668,7 +668,7 @@
       "registry_name": "animalfatrecipe",
       "metadata": {
         "files": [
-          "src/main/resources/data/dnd_craft/recipes/animalfatrecipe.json"
+          "src/main/resources/data/dnd_craft/recipe/animalfatrecipe.json"
         ]
       },
       "path": "~/Recipes"
@@ -695,7 +695,7 @@
       "registry_name": "twohandedclaymorerecipe",
       "metadata": {
         "files": [
-          "src/main/resources/data/dnd_craft/recipes/twohandedclaymorerecipe.json"
+          "src/main/resources/data/dnd_craft/recipe/twohandedclaymorerecipe.json"
         ]
       },
       "path": "~/Recipes"
@@ -741,7 +741,7 @@
       "registry_name": "scimitrrecipe",
       "metadata": {
         "files": [
-          "src/main/resources/data/dnd_craft/recipes/scimitrrecipe.json"
+          "src/main/resources/data/dnd_craft/recipe/scimitrrecipe.json"
         ]
       },
       "path": "~/Recipes"
@@ -1188,7 +1188,7 @@
       "registry_name": "sicklerecipe",
       "metadata": {
         "files": [
-          "src/main/resources/data/dnd_craft/recipes/sicklerecipe.json"
+          "src/main/resources/data/dnd_craft/recipe/sicklerecipe.json"
         ]
       },
       "path": "~/Recipes"
@@ -1407,8 +1407,8 @@
           "src/main/java/net/mcreator/dndcraft/client/renderer/Ogre2Renderer.java",
           "src/main/java/net/mcreator/dndcraft/entity/Ogre2Entity.java",
           "src/main/java/net/mcreator/dndcraft/entity/model/Ogre2Model.java",
-          "src/main/resources/data/dnd_craft/forge/biome_modifier/ogre_biome_modifier.json",
-          "src/main/resources/assets/dnd_craft/models/item/ogre_spawn_egg.json"
+          "src/main/resources/assets/dnd_craft/models/item/ogre_spawn_egg.json",
+          "src/main/resources/data/dnd_craft/neoforge/biome_modifier/ogre_biome_modifier.json"
         ]
       },
       "path": "~/Mobs"
@@ -1423,8 +1423,8 @@
         "files": [
           "src/main/java/net/mcreator/dndcraft/entity/OrkEntity.java",
           "src/main/java/net/mcreator/dndcraft/entity/model/OrkModel.java",
-          "src/main/resources/data/dnd_craft/forge/biome_modifier/ork_biome_modifier.json",
           "src/main/java/net/mcreator/dndcraft/client/renderer/OrkRenderer.java",
+          "src/main/resources/data/dnd_craft/neoforge/biome_modifier/ork_biome_modifier.json",
           "src/main/resources/assets/dnd_craft/models/item/ork_spawn_egg.json"
         ]
       },
@@ -1440,12 +1440,12 @@
         "files": [
           "src/main/resources/data/dnd_craft/worldgen/placed_feature/adantium_ore.json",
           "src/main/resources/assets/dnd_craft/blockstates/adantium_ore.json",
-          "src/main/resources/data/dnd_craft/loot_tables/blocks/adantium_ore.json",
-          "src/main/resources/data/dnd_craft/forge/biome_modifier/adantium_ore_biome_modifier.json",
+          "src/main/resources/data/dnd_craft/neoforge/biome_modifier/adantium_ore_biome_modifier.json",
           "src/main/resources/assets/dnd_craft/models/item/adantium_ore.json",
           "src/main/resources/assets/dnd_craft/models/block/adantium_ore.json",
           "src/main/java/net/mcreator/dndcraft/block/AdantiumOreBlock.java",
-          "src/main/resources/data/dnd_craft/worldgen/configured_feature/adantium_ore.json"
+          "src/main/resources/data/dnd_craft/worldgen/configured_feature/adantium_ore.json",
+          "src/main/resources/data/dnd_craft/loot_table/blocks/adantium_ore.json"
         ]
       }
     },
@@ -1483,7 +1483,7 @@
       "registry_name": "adamantiumingotrecipe",
       "metadata": {
         "files": [
-          "src/main/resources/data/dnd_craft/recipes/adamantiumingotrecipe.json"
+          "src/main/resources/data/dnd_craft/recipe/adamantiumingotrecipe.json"
         ]
       },
       "path": "~/Recipes"
@@ -1692,7 +1692,7 @@
       "registry_name": "adagger",
       "metadata": {
         "files": [
-          "src/main/resources/data/dnd_craft/recipes/adagger.json"
+          "src/main/resources/data/dnd_craft/recipe/adagger.json"
         ]
       },
       "path": "~/Recipes"
@@ -1705,7 +1705,7 @@
       "registry_name": "aax",
       "metadata": {
         "files": [
-          "src/main/resources/data/dnd_craft/recipes/aax.json"
+          "src/main/resources/data/dnd_craft/recipe/aax.json"
         ]
       },
       "path": "~/Recipes"
@@ -1718,7 +1718,7 @@
       "registry_name": "alighthammer",
       "metadata": {
         "files": [
-          "src/main/resources/data/dnd_craft/recipes/alighthammer.json"
+          "src/main/resources/data/dnd_craft/recipe/alighthammer.json"
         ]
       },
       "path": "~/Recipes"
@@ -1744,7 +1744,7 @@
       "registry_name": "aspear",
       "metadata": {
         "files": [
-          "src/main/resources/data/dnd_craft/recipes/aspear.json"
+          "src/main/resources/data/dnd_craft/recipe/aspear.json"
         ]
       },
       "path": "~/Recipes"
@@ -1757,7 +1757,7 @@
       "registry_name": "amace",
       "metadata": {
         "files": [
-          "src/main/resources/data/dnd_craft/recipes/amace.json"
+          "src/main/resources/data/dnd_craft/recipe/amace.json"
         ]
       },
       "path": "~/Recipes"
@@ -1770,7 +1770,7 @@
       "registry_name": "agladius",
       "metadata": {
         "files": [
-          "src/main/resources/data/dnd_craft/recipes/agladius.json"
+          "src/main/resources/data/dnd_craft/recipe/agladius.json"
         ]
       },
       "path": "~/Recipes"
@@ -1783,7 +1783,7 @@
       "registry_name": "aclaymore",
       "metadata": {
         "files": [
-          "src/main/resources/data/dnd_craft/recipes/aclaymore.json"
+          "src/main/resources/data/dnd_craft/recipe/aclaymore.json"
         ]
       },
       "path": "~/Recipes"
@@ -1796,7 +1796,7 @@
       "registry_name": "atwohandedhammer",
       "metadata": {
         "files": [
-          "src/main/resources/data/dnd_craft/recipes/atwohandedhammer.json"
+          "src/main/resources/data/dnd_craft/recipe/atwohandedhammer.json"
         ]
       },
       "path": "~/Recipes"
@@ -1809,7 +1809,7 @@
       "registry_name": "awarhammer",
       "metadata": {
         "files": [
-          "src/main/resources/data/dnd_craft/recipes/awarhammer.json"
+          "src/main/resources/data/dnd_craft/recipe/awarhammer.json"
         ]
       },
       "path": "~/Recipes"
@@ -1822,7 +1822,7 @@
       "registry_name": "atwohandedaxe",
       "metadata": {
         "files": [
-          "src/main/resources/data/dnd_craft/recipes/atwohandedaxe.json"
+          "src/main/resources/data/dnd_craft/recipe/atwohandedaxe.json"
         ]
       },
       "path": "~/Recipes"
@@ -1835,7 +1835,7 @@
       "registry_name": "abattleaxe",
       "metadata": {
         "files": [
-          "src/main/resources/data/dnd_craft/recipes/abattleaxe.json"
+          "src/main/resources/data/dnd_craft/recipe/abattleaxe.json"
         ]
       },
       "path": "~/Recipes"
@@ -1848,7 +1848,7 @@
       "registry_name": "atwohandedclaymore",
       "metadata": {
         "files": [
-          "src/main/resources/data/dnd_craft/recipes/atwohandedclaymore.json"
+          "src/main/resources/data/dnd_craft/recipe/atwohandedclaymore.json"
         ]
       },
       "path": "~/Recipes"
@@ -1861,7 +1861,7 @@
       "registry_name": "ascimitar",
       "metadata": {
         "files": [
-          "src/main/resources/data/dnd_craft/recipes/ascimitar.json"
+          "src/main/resources/data/dnd_craft/recipe/ascimitar.json"
         ]
       },
       "path": "~/Recipes"
@@ -1874,7 +1874,7 @@
       "registry_name": "asickle",
       "metadata": {
         "files": [
-          "src/main/resources/data/dnd_craft/recipes/asickle.json"
+          "src/main/resources/data/dnd_craft/recipe/asickle.json"
         ]
       },
       "path": "~/Recipes"
@@ -1891,7 +1891,7 @@
           "src/main/resources/assets/dnd_craft/models/item/harpy_spawn_egg.json",
           "src/main/java/net/mcreator/dndcraft/client/renderer/HarpyRenderer.java",
           "src/main/java/net/mcreator/dndcraft/entity/HarpyEntity.java",
-          "src/main/resources/data/dnd_craft/forge/biome_modifier/harpy_biome_modifier.json"
+          "src/main/resources/data/dnd_craft/neoforge/biome_modifier/harpy_biome_modifier.json"
         ]
       },
       "path": "~/Mobs"
@@ -1931,7 +1931,7 @@
       "registry_name": "harpyspearrecipe",
       "metadata": {
         "files": [
-          "src/main/resources/data/dnd_craft/recipes/harpyspearrecipe.json"
+          "src/main/resources/data/dnd_craft/recipe/harpyspearrecipe.json"
         ]
       },
       "path": "~/Recipes"
@@ -1944,8 +1944,8 @@
       "registry_name": "owlbear",
       "metadata": {
         "files": [
-          "src/main/resources/data/dnd_craft/forge/biome_modifier/owlbear_biome_modifier.json",
           "src/main/java/net/mcreator/dndcraft/entity/OwlbearEntity.java",
+          "src/main/resources/data/dnd_craft/neoforge/biome_modifier/owlbear_biome_modifier.json",
           "src/main/java/net/mcreator/dndcraft/entity/model/OwlbearModel.java",
           "src/main/resources/assets/dnd_craft/models/item/owlbear_spawn_egg.json",
           "src/main/java/net/mcreator/dndcraft/client/renderer/OwlbearRenderer.java"
@@ -1989,7 +1989,7 @@
       "registry_name": "owlbearloottable",
       "metadata": {
         "files": [
-          "src/main/resources/data/dnd_craft/loot_tables/entities/owlbear.json"
+          "src/main/resources/data/dnd_craft/loot_table/entities/owlbear.json"
         ]
       },
       "path": "~/Loot"
@@ -2042,8 +2042,8 @@
         "files": [
           "src/main/java/net/mcreator/dndcraft/client/renderer/MimicRenderer.java",
           "src/main/java/net/mcreator/dndcraft/entity/model/MimicModel.java",
-          "src/main/resources/data/dnd_craft/forge/biome_modifier/mimic_biome_modifier.json",
           "src/main/java/net/mcreator/dndcraft/entity/MimicEntity.java",
+          "src/main/resources/data/dnd_craft/neoforge/biome_modifier/mimic_biome_modifier.json",
           "src/main/resources/assets/dnd_craft/models/item/mimic_spawn_egg.json"
         ]
       },
@@ -2057,7 +2057,7 @@
       "registry_name": "mimicloottable",
       "metadata": {
         "files": [
-          "src/main/resources/data/dnd_craft/loot_tables/entities/mimic.json"
+          "src/main/resources/data/dnd_craft/loot_table/entities/mimic.json"
         ]
       },
       "path": "~/Loot"
@@ -2070,7 +2070,7 @@
       "registry_name": "adamtiumupgraderecipe",
       "metadata": {
         "files": [
-          "src/main/resources/data/dnd_craft/recipes/adamtiumupgraderecipe.json"
+          "src/main/resources/data/dnd_craft/recipe/adamtiumupgraderecipe.json"
         ]
       },
       "path": "~/Recipes"
@@ -2132,8 +2132,8 @@
           "src/main/java/net/mcreator/dndcraft/entity/GoblinEntity.java",
           "src/main/java/net/mcreator/dndcraft/client/renderer/GoblinRenderer.java",
           "src/main/resources/assets/dnd_craft/models/item/goblin_spawn_egg.json",
-          "src/main/resources/data/dnd_craft/forge/biome_modifier/goblin_biome_modifier.json",
-          "src/main/java/net/mcreator/dndcraft/entity/model/GoblinModel.java"
+          "src/main/java/net/mcreator/dndcraft/entity/model/GoblinModel.java",
+          "src/main/resources/data/dnd_craft/neoforge/biome_modifier/goblin_biome_modifier.json"
         ]
       },
       "path": "~/Mobs"
@@ -2160,7 +2160,7 @@
       "registry_name": "goblinloot",
       "metadata": {
         "files": [
-          "src/main/resources/data/dnd_craft/loot_tables/entities/goblin.json"
+          "src/main/resources/data/dnd_craft/loot_table/entities/goblin.json"
         ]
       },
       "path": "~/Loot"
@@ -2221,7 +2221,7 @@
       "registry_name": "daggerreciperusty",
       "metadata": {
         "files": [
-          "src/main/resources/data/dnd_craft/recipes/daggerreciperusty.json"
+          "src/main/resources/data/dnd_craft/recipe/daggerreciperusty.json"
         ]
       },
       "path": "~/Recipes"
@@ -2272,7 +2272,7 @@
       "registry_name": "iron_goblinloot",
       "metadata": {
         "files": [
-          "src/main/resources/data/dnd_craft/loot_tables/entities/iron_goblin.json"
+          "src/main/resources/data/dnd_craft/loot_table/entities/iron_goblin.json"
         ]
       },
       "path": "~/Loot"
@@ -2337,7 +2337,7 @@
         "files": [
           "src/main/java/net/mcreator/dndcraft/client/renderer/GoblinChiefRenderer.java",
           "src/main/java/net/mcreator/dndcraft/entity/model/GoblinChiefModel.java",
-          "src/main/resources/data/dnd_craft/forge/biome_modifier/goblin_chief_biome_modifier.json",
+          "src/main/resources/data/dnd_craft/neoforge/biome_modifier/goblin_chief_biome_modifier.json",
           "src/main/java/net/mcreator/dndcraft/entity/GoblinChiefEntity.java",
           "src/main/resources/assets/dnd_craft/models/item/goblin_chief_spawn_egg.json"
         ]
@@ -2352,7 +2352,7 @@
       "registry_name": "goblinchiefloot",
       "metadata": {
         "files": [
-          "src/main/resources/data/dnd_craft/loot_tables/entities/goblin_chief.json"
+          "src/main/resources/data/dnd_craft/loot_table/entities/goblin_chief.json"
         ]
       },
       "path": "~/Loot"
@@ -2414,7 +2414,7 @@
           "src/main/resources/assets/dnd_craft/models/item/cooked_owlbear_meat_block.json",
           "src/main/resources/assets/dnd_craft/models/block/cooked_owlbear_meat_block.json",
           "src/main/resources/assets/dnd_craft/blockstates/cooked_owlbear_meat_block.json",
-          "src/main/resources/data/dnd_craft/loot_tables/blocks/cooked_owlbear_meat_block.json"
+          "src/main/resources/data/dnd_craft/loot_table/blocks/cooked_owlbear_meat_block.json"
         ]
       },
       "path": "~/Food"
@@ -2427,7 +2427,7 @@
       "registry_name": "cookedowlbearmeatrecipe_2",
       "metadata": {
         "files": [
-          "src/main/resources/data/dnd_craft/recipes/cookedowlbearmeatrecipe_2.json"
+          "src/main/resources/data/dnd_craft/recipe/cookedowlbearmeatrecipe_2.json"
         ]
       },
       "path": "~/Recipes"
@@ -2468,7 +2468,7 @@
       "registry_name": "orkloot",
       "metadata": {
         "files": [
-          "src/main/resources/data/dnd_craft/loot_tables/entities/ork.json"
+          "src/main/resources/data/dnd_craft/loot_table/entities/ork.json"
         ]
       },
       "path": "~/Loot"
@@ -2548,7 +2548,7 @@
       "registry_name": "daggerrecipe_2",
       "metadata": {
         "files": [
-          "src/main/resources/data/dnd_craft/recipes/daggerrecipe_2.json"
+          "src/main/resources/data/dnd_craft/recipe/daggerrecipe_2.json"
         ]
       },
       "path": "~/Recipes"
@@ -2576,7 +2576,7 @@
       "registry_name": "goblincamploot",
       "metadata": {
         "files": [
-          "src/main/resources/data/dnd_craft/loot_tables/chests/goblincamp.json"
+          "src/main/resources/data/dnd_craft/loot_table/chests/goblincamp.json"
         ]
       },
       "path": "~/Loot"
@@ -2589,7 +2589,7 @@
       "registry_name": "orkcamploot",
       "metadata": {
         "files": [
-          "src/main/resources/data/dnd_craft/loot_tables/chests/orkcamploot.json"
+          "src/main/resources/data/dnd_craft/loot_table/chests/orkcamploot.json"
         ]
       },
       "path": "~/Loot"
@@ -2616,7 +2616,7 @@
       "registry_name": "goblinhutloot",
       "metadata": {
         "files": [
-          "src/main/resources/data/dnd_craft/loot_tables/chests/lostcamploot.json"
+          "src/main/resources/data/dnd_craft/loot_table/chests/lostcamploot.json"
         ]
       },
       "path": "~/Loot"
@@ -3252,22 +3252,6 @@
           {
             "name": "entity",
             "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
           }
         ]
       },
@@ -3585,29 +3569,6 @@
         ]
       },
       "path": "~/Magic"
-    },
-    {
-      "name": "IronGoblinOnInitialEntitySpawn",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "iron_goblin_on_initial_entity_spawn",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/dndcraft/procedures/IronGoblinOnInitialEntitySpawnProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      },
-      "path": "~/Procedures"
     },
     {
       "name": "Firewall",
@@ -4191,11 +4152,11 @@
       "registry_name": "ocherjelly",
       "metadata": {
         "files": [
+          "src/main/resources/data/dnd_craft/neoforge/biome_modifier/ocherjelly_biome_modifier.json",
           "src/main/java/net/mcreator/dndcraft/entity/OcherjellyEntity.java",
           "src/main/resources/assets/dnd_craft/models/item/ocherjelly_spawn_egg.json",
           "src/main/java/net/mcreator/dndcraft/entity/model/OcherjellyModel.java",
-          "src/main/java/net/mcreator/dndcraft/client/renderer/OcherjellyRenderer.java",
-          "src/main/resources/data/dnd_craft/forge/biome_modifier/ocherjelly_biome_modifier.json"
+          "src/main/java/net/mcreator/dndcraft/client/renderer/OcherjellyRenderer.java"
         ]
       },
       "path": "~/Mobs"
@@ -4375,10 +4336,10 @@
       "registry_name": "raw_owlbearmeat_block",
       "metadata": {
         "files": [
+          "src/main/resources/data/dnd_craft/loot_table/blocks/raw_owlbearmeat_block.json",
           "src/main/resources/assets/dnd_craft/blockstates/raw_owlbearmeat_block.json",
           "src/main/resources/assets/dnd_craft/models/item/raw_owlbearmeat_block.json",
           "src/main/resources/assets/dnd_craft/models/block/raw_owlbearmeat_block.json",
-          "src/main/resources/data/dnd_craft/loot_tables/blocks/raw_owlbearmeat_block.json",
           "src/main/java/net/mcreator/dndcraft/block/RawOwlbearmeatBlockBlock.java"
         ]
       },
@@ -4630,11 +4591,11 @@
       "registry_name": "invisible_stalker",
       "metadata": {
         "files": [
+          "src/main/resources/data/dnd_craft/neoforge/biome_modifier/invisible_stalker_biome_modifier.json",
           "src/main/java/net/mcreator/dndcraft/client/renderer/InvisibleStalkerRenderer.java",
           "src/main/resources/assets/dnd_craft/models/item/invisible_stalker_spawn_egg.json",
           "src/main/java/net/mcreator/dndcraft/entity/model/InvisibleStalkerModel.java",
-          "src/main/java/net/mcreator/dndcraft/entity/InvisibleStalkerEntity.java",
-          "src/main/resources/data/dnd_craft/forge/biome_modifier/invisible_stalker_biome_modifier.json"
+          "src/main/java/net/mcreator/dndcraft/entity/InvisibleStalkerEntity.java"
         ]
       },
       "path": "~/Mobs"
@@ -4728,8 +4689,8 @@
       "registry_name": "basilisk",
       "metadata": {
         "files": [
+          "src/main/resources/data/dnd_craft/neoforge/biome_modifier/basilisk_biome_modifier.json",
           "src/main/resources/assets/dnd_craft/models/item/basilisk_spawn_egg.json",
-          "src/main/resources/data/dnd_craft/forge/biome_modifier/basilisk_biome_modifier.json",
           "src/main/java/net/mcreator/dndcraft/entity/BasiliskEntity.java",
           "src/main/java/net/mcreator/dndcraft/client/renderer/BasiliskRenderer.java",
           "src/main/java/net/mcreator/dndcraft/entity/model/BasiliskModel.java"
@@ -4745,10 +4706,10 @@
       "registry_name": "cookedowlbearmeatblock_2",
       "metadata": {
         "files": [
+          "src/main/resources/data/dnd_craft/loot_table/blocks/cookedowlbearmeatblock_2.json",
           "src/main/resources/assets/dnd_craft/models/item/cookedowlbearmeatblock_2.json",
           "src/main/java/net/mcreator/dndcraft/block/Cookedowlbearmeatblock2Block.java",
           "src/main/resources/assets/dnd_craft/blockstates/cookedowlbearmeatblock_2.json",
-          "src/main/resources/data/dnd_craft/loot_tables/blocks/cookedowlbearmeatblock_2.json",
           "src/main/resources/assets/dnd_craft/models/block/cookedowlbearmeatblock_2.json"
         ]
       },
@@ -4763,9 +4724,9 @@
       "metadata": {
         "files": [
           "src/main/resources/assets/dnd_craft/models/block/cookedowlbearmeatblock_3.json",
-          "src/main/resources/data/dnd_craft/loot_tables/blocks/cookedowlbearmeatblock_3.json",
           "src/main/resources/assets/dnd_craft/models/item/cookedowlbearmeatblock_3.json",
           "src/main/resources/assets/dnd_craft/blockstates/cookedowlbearmeatblock_3.json",
+          "src/main/resources/data/dnd_craft/loot_table/blocks/cookedowlbearmeatblock_3.json",
           "src/main/java/net/mcreator/dndcraft/block/Cookedowlbearmeatblock3Block.java"
         ]
       },
@@ -4779,11 +4740,11 @@
       "registry_name": "cookedowlbearmeatblock_4",
       "metadata": {
         "files": [
+          "src/main/resources/data/dnd_craft/loot_table/blocks/cookedowlbearmeatblock_4.json",
           "src/main/resources/assets/dnd_craft/models/item/cookedowlbearmeatblock_4.json",
           "src/main/resources/assets/dnd_craft/models/block/cookedowlbearmeatblock_4.json",
           "src/main/java/net/mcreator/dndcraft/block/Cookedowlbearmeatblock4Block.java",
-          "src/main/resources/assets/dnd_craft/blockstates/cookedowlbearmeatblock_4.json",
-          "src/main/resources/data/dnd_craft/loot_tables/blocks/cookedowlbearmeatblock_4.json"
+          "src/main/resources/assets/dnd_craft/blockstates/cookedowlbearmeatblock_4.json"
         ]
       },
       "path": "~/Food"
@@ -4835,7 +4796,7 @@
       "registry_name": "owlbearmeatblockrecipe",
       "metadata": {
         "files": [
-          "src/main/resources/data/dnd_craft/recipes/owlbearmeatblockrecipe.json"
+          "src/main/resources/data/dnd_craft/recipe/owlbearmeatblockrecipe.json"
         ]
       },
       "path": "~/Recipes"
@@ -4848,7 +4809,7 @@
       "registry_name": "owlbearmeatrecipe",
       "metadata": {
         "files": [
-          "src/main/resources/data/dnd_craft/recipes/owlbearmeatrecipe.json"
+          "src/main/resources/data/dnd_craft/recipe/owlbearmeatrecipe.json"
         ]
       },
       "path": "~/Recipes"
@@ -4992,8 +4953,8 @@
         "files": [
           "src/main/resources/data/dnd_craft/worldgen/configured_feature/platinum_ore.json",
           "src/main/resources/assets/dnd_craft/models/block/platinum_ore.json",
-          "src/main/resources/data/dnd_craft/forge/biome_modifier/platinum_ore_biome_modifier.json",
-          "src/main/resources/data/dnd_craft/loot_tables/blocks/platinum_ore.json",
+          "src/main/resources/data/dnd_craft/neoforge/biome_modifier/platinum_ore_biome_modifier.json",
+          "src/main/resources/data/dnd_craft/loot_table/blocks/platinum_ore.json",
           "src/main/resources/assets/dnd_craft/blockstates/platinum_ore.json",
           "src/main/resources/assets/dnd_craft/models/item/platinum_ore.json",
           "src/main/java/net/mcreator/dndcraft/block/PlatinumOreBlock.java",
@@ -5066,7 +5027,7 @@
       "registry_name": "platinumcook",
       "metadata": {
         "files": [
-          "src/main/resources/data/dnd_craft/recipes/platinumcook.json"
+          "src/main/resources/data/dnd_craft/recipe/platinumcook.json"
         ]
       },
       "path": "~/Recipes"
@@ -5079,7 +5040,7 @@
       "registry_name": "owlbearmeatcookingrecipe",
       "metadata": {
         "files": [
-          "src/main/resources/data/dnd_craft/recipes/owlbearmeatcookingrecipe.json"
+          "src/main/resources/data/dnd_craft/recipe/owlbearmeatcookingrecipe.json"
         ]
       },
       "path": "~/Recipes"
@@ -5154,7 +5115,7 @@
       "registry_name": "scrapsheetrecipe",
       "metadata": {
         "files": [
-          "src/main/resources/data/dnd_craft/recipes/scrapsheetrecipe.json"
+          "src/main/resources/data/dnd_craft/recipe/scrapsheetrecipe.json"
         ]
       },
       "path": "~/Recipes"
@@ -5167,7 +5128,7 @@
       "registry_name": "ogreloot",
       "metadata": {
         "files": [
-          "src/main/resources/data/dnd_craft/loot_tables/entities/ogre.json"
+          "src/main/resources/data/dnd_craft/loot_table/entities/ogre.json"
         ]
       },
       "path": "~/Loot"
@@ -5181,10 +5142,10 @@
       "metadata": {
         "files": [
           "src/main/java/net/mcreator/dndcraft/block/ScrapblockBlock.java",
-          "src/main/resources/data/dnd_craft/loot_tables/blocks/scrapblock.json",
           "src/main/resources/assets/dnd_craft/models/item/scrapblock.json",
           "src/main/resources/assets/dnd_craft/blockstates/scrapblock.json",
-          "src/main/resources/assets/dnd_craft/models/block/scrapblock.json"
+          "src/main/resources/assets/dnd_craft/models/block/scrapblock.json",
+          "src/main/resources/data/dnd_craft/loot_table/blocks/scrapblock.json"
         ]
       }
     },
@@ -5196,7 +5157,7 @@
       "registry_name": "scrapblcokrecipe",
       "metadata": {
         "files": [
-          "src/main/resources/data/dnd_craft/recipes/scrapblcokrecipe.json"
+          "src/main/resources/data/dnd_craft/recipe/scrapblcokrecipe.json"
         ]
       },
       "path": "~/Recipes"
@@ -5209,7 +5170,7 @@
       "registry_name": "craft_op_gapple",
       "metadata": {
         "files": [
-          "src/main/resources/data/dnd_craft/recipes/craft_op_gapple.json"
+          "src/main/resources/data/dnd_craft/recipe/craft_op_gapple.json"
         ]
       },
       "path": "~/Recipes"
@@ -5222,7 +5183,7 @@
       "registry_name": "dungeon_hunter",
       "metadata": {
         "files": [
-          "src/main/resources/data/dnd_craft/advancements/dungeon_hunter.json"
+          "src/main/resources/data/dnd_craft/advancement/dungeon_hunter.json"
         ]
       },
       "path": "~/Achievements"
@@ -5235,7 +5196,7 @@
       "registry_name": "dungeon_gourmet",
       "metadata": {
         "files": [
-          "src/main/resources/data/dnd_craft/advancements/dungeon_gourmet.json"
+          "src/main/resources/data/dnd_craft/advancement/dungeon_gourmet.json"
         ]
       },
       "path": "~/Achievements"
@@ -5248,7 +5209,7 @@
       "registry_name": "the_beginning",
       "metadata": {
         "files": [
-          "src/main/resources/data/dnd_craft/advancements/the_beginning.json"
+          "src/main/resources/data/dnd_craft/advancement/the_beginning.json"
         ]
       },
       "path": "~/Achievements"
@@ -5261,7 +5222,7 @@
       "registry_name": "weapon_collector",
       "metadata": {
         "files": [
-          "src/main/resources/data/dnd_craft/advancements/weapon_collector.json"
+          "src/main/resources/data/dnd_craft/advancement/weapon_collector.json"
         ]
       },
       "path": "~/Achievements"
@@ -5274,7 +5235,7 @@
       "registry_name": "businessman",
       "metadata": {
         "files": [
-          "src/main/resources/data/dnd_craft/advancements/businessman.json"
+          "src/main/resources/data/dnd_craft/advancement/businessman.json"
         ]
       },
       "path": "~/Achievements"
@@ -5287,7 +5248,7 @@
       "registry_name": "adamantiumattack",
       "metadata": {
         "files": [
-          "src/main/resources/data/dnd_craft/advancements/adamantiumattack.json"
+          "src/main/resources/data/dnd_craft/advancement/adamantiumattack.json"
         ]
       },
       "path": "~/Achievements"
@@ -5495,8 +5456,8 @@
       "metadata": {
         "files": [
           "src/main/java/net/mcreator/dndcraft/entity/model/WargModel.java",
+          "src/main/resources/data/dnd_craft/neoforge/biome_modifier/warg_biome_modifier.json",
           "src/main/java/net/mcreator/dndcraft/client/renderer/WargRenderer.java",
-          "src/main/resources/data/dnd_craft/forge/biome_modifier/warg_biome_modifier.json",
           "src/main/resources/assets/dnd_craft/models/item/warg_spawn_egg.json",
           "src/main/java/net/mcreator/dndcraft/entity/WargEntity.java"
         ]
@@ -5623,7 +5584,7 @@
       "registry_name": "daily_ration_recipe",
       "metadata": {
         "files": [
-          "src/main/resources/data/dnd_craft/recipes/daily_ration_recipe.json"
+          "src/main/resources/data/dnd_craft/recipe/daily_ration_recipe.json"
         ]
       },
       "path": "~/Recipes"
@@ -5951,7 +5912,7 @@
       "registry_name": "owlbeardrumsticksrecipe",
       "metadata": {
         "files": [
-          "src/main/resources/data/dnd_craft/recipes/owlbeardrumsticksrecipe.json"
+          "src/main/resources/data/dnd_craft/recipe/owlbeardrumsticksrecipe.json"
         ]
       },
       "path": "~/Recipes"
@@ -5964,7 +5925,7 @@
       "registry_name": "orksteakrecipe",
       "metadata": {
         "files": [
-          "src/main/resources/data/dnd_craft/recipes/orksteakrecipe.json"
+          "src/main/resources/data/dnd_craft/recipe/orksteakrecipe.json"
         ]
       },
       "path": "~/Recipes"
@@ -5977,7 +5938,7 @@
       "registry_name": "ork_steak_smelt",
       "metadata": {
         "files": [
-          "src/main/resources/data/dnd_craft/recipes/ork_steak_smelt.json"
+          "src/main/resources/data/dnd_craft/recipe/ork_steak_smelt.json"
         ]
       },
       "path": "~/Recipes"
@@ -5990,7 +5951,7 @@
       "registry_name": "ork_steak_smoke",
       "metadata": {
         "files": [
-          "src/main/resources/data/dnd_craft/recipes/ork_steak_smoke.json"
+          "src/main/resources/data/dnd_craft/recipe/ork_steak_smoke.json"
         ]
       },
       "path": "~/Recipes"
@@ -6003,7 +5964,7 @@
       "registry_name": "ork_steak_campfire_smoke",
       "metadata": {
         "files": [
-          "src/main/resources/data/dnd_craft/recipes/ork_steak_campfire_smoke.json"
+          "src/main/resources/data/dnd_craft/recipe/ork_steak_campfire_smoke.json"
         ]
       },
       "path": "~/Recipes"
@@ -6180,36 +6141,13 @@
       "metadata": {
         "files": [
           "src/main/java/net/mcreator/dndcraft/client/renderer/GhoulRenderer.java",
-          "src/main/resources/data/dnd_craft/forge/biome_modifier/ghoul_biome_modifier.json",
           "src/main/java/net/mcreator/dndcraft/entity/model/GhoulModel.java",
           "src/main/java/net/mcreator/dndcraft/entity/GhoulEntity.java",
-          "src/main/resources/assets/dnd_craft/models/item/ghoul_spawn_egg.json"
+          "src/main/resources/assets/dnd_craft/models/item/ghoul_spawn_egg.json",
+          "src/main/resources/data/dnd_craft/neoforge/biome_modifier/ghoul_biome_modifier.json"
         ]
       },
       "path": "~/Mobs"
-    },
-    {
-      "name": "Feywild",
-      "type": "dimension",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "feywild",
-      "metadata": {
-        "files": [
-          "src/main/resources/assets/dnd_craft/blockstates/feywild_portal.json",
-          "src/main/resources/assets/dnd_craft/models/block/feywild_portal_ns.json",
-          "src/main/java/net/mcreator/dndcraft/block/FeywildPortalBlock.java",
-          "src/main/resources/data/dnd_craft/dimension_type/feywild.json",
-          "src/main/java/net/mcreator/dndcraft/world/teleporter/FeywildPortalShape.java",
-          "src/main/resources/assets/dnd_craft/models/block/feywild_portal_ew.json",
-          "src/main/java/net/mcreator/dndcraft/item/FeywildItem.java",
-          "src/main/resources/assets/dnd_craft/models/item/feywild.json",
-          "src/main/java/net/mcreator/dndcraft/world/teleporter/FeywildTeleporter.java",
-          "src/main/java/net/mcreator/dndcraft/world/dimension/FeywildDimension.java",
-          "src/main/resources/data/dnd_craft/dimension/feywild.json"
-        ]
-      },
-      "path": "~/DimensionsBiomes"
     },
     {
       "name": "VINES",
@@ -6219,11 +6157,11 @@
       "registry_name": "vines",
       "metadata": {
         "files": [
+          "src/main/resources/data/dnd_craft/neoforge/biome_modifier/vines_biome_modifier.json",
           "src/main/resources/assets/dnd_craft/models/item/vines_spawn_egg.json",
           "src/main/java/net/mcreator/dndcraft/entity/model/VINESModel.java",
           "src/main/java/net/mcreator/dndcraft/entity/VINESEntity.java",
-          "src/main/java/net/mcreator/dndcraft/client/renderer/VINESRenderer.java",
-          "src/main/resources/data/dnd_craft/forge/biome_modifier/vines_biome_modifier.json"
+          "src/main/java/net/mcreator/dndcraft/client/renderer/VINESRenderer.java"
         ]
       },
       "path": "~/ClassSystem/Druid"
@@ -6313,37 +6251,14 @@
         "files": [
           "src/main/java/net/mcreator/dndcraft/block/SilverOreBlock.java",
           "src/main/resources/data/dnd_craft/worldgen/configured_feature/silver_ore.json",
+          "src/main/resources/data/dnd_craft/loot_table/blocks/silver_ore.json",
           "src/main/resources/assets/dnd_craft/blockstates/silver_ore.json",
           "src/main/resources/assets/dnd_craft/models/block/silver_ore.json",
-          "src/main/resources/data/dnd_craft/loot_tables/blocks/silver_ore.json",
-          "src/main/resources/data/dnd_craft/forge/biome_modifier/silver_ore_biome_modifier.json",
+          "src/main/resources/data/dnd_craft/neoforge/biome_modifier/silver_ore_biome_modifier.json",
           "src/main/resources/data/dnd_craft/worldgen/placed_feature/silver_ore.json",
           "src/main/resources/assets/dnd_craft/models/item/silver_ore.json"
         ]
       }
-    },
-    {
-      "name": "Shadowfell",
-      "type": "dimension",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "shadowfell",
-      "metadata": {
-        "files": [
-          "src/main/resources/assets/dnd_craft/models/block/shadowfell_portal_ew.json",
-          "src/main/resources/data/dnd_craft/dimension/shadowfell.json",
-          "src/main/java/net/mcreator/dndcraft/item/ShadowfellItem.java",
-          "src/main/resources/assets/dnd_craft/models/block/shadowfell_portal_ns.json",
-          "src/main/resources/assets/dnd_craft/blockstates/shadowfell_portal.json",
-          "src/main/java/net/mcreator/dndcraft/block/ShadowfellPortalBlock.java",
-          "src/main/resources/data/dnd_craft/dimension_type/shadowfell.json",
-          "src/main/java/net/mcreator/dndcraft/world/teleporter/ShadowfellTeleporter.java",
-          "src/main/java/net/mcreator/dndcraft/world/dimension/ShadowfellDimension.java",
-          "src/main/java/net/mcreator/dndcraft/world/teleporter/ShadowfellPortalShape.java",
-          "src/main/resources/assets/dnd_craft/models/item/shadowfell.json"
-        ]
-      },
-      "path": "~/DimensionsBiomes"
     },
     {
       "name": "DeepslateSilverOre",
@@ -6355,14 +6270,62 @@
         "files": [
           "src/main/java/net/mcreator/dndcraft/block/DeepslateSilverOreBlock.java",
           "src/main/resources/data/dnd_craft/worldgen/configured_feature/deepslate_silver_ore.json",
+          "src/main/resources/data/dnd_craft/neoforge/biome_modifier/deepslate_silver_ore_biome_modifier.json",
           "src/main/resources/assets/dnd_craft/blockstates/deepslate_silver_ore.json",
           "src/main/resources/assets/dnd_craft/models/block/deepslate_silver_ore.json",
           "src/main/resources/data/dnd_craft/worldgen/placed_feature/deepslate_silver_ore.json",
-          "src/main/resources/data/dnd_craft/forge/biome_modifier/deepslate_silver_ore_biome_modifier.json",
-          "src/main/resources/assets/dnd_craft/models/item/deepslate_silver_ore.json",
-          "src/main/resources/data/dnd_craft/loot_tables/blocks/deepslate_silver_ore.json"
+          "src/main/resources/data/dnd_craft/loot_table/blocks/deepslate_silver_ore.json",
+          "src/main/resources/assets/dnd_craft/models/item/deepslate_silver_ore.json"
         ]
       }
+    },
+    {
+      "name": "OpenClassGui",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "open_class_gui",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/dndcraft/procedures/OpenClassGuiProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/ClassSystem/Abilitys"
+    },
+    {
+      "name": "ClassChooseGuiKey",
+      "type": "keybind",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "class_choose_gui_key",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/dndcraft/network/ClassChooseGuiKeyMessage.java"
+        ]
+      },
+      "path": "~/ClassSystem"
     }
   ],
   "variable_elements": [
@@ -6482,6 +6445,10 @@
       "~CUSTOM:PlatinumOre",
       "~CUSTOM:AdantiumOre"
     ],
+    "ITEMS:minecraft:enchantable/durability": [
+      "~CUSTOM:PoisonVial",
+      "~CUSTOM:Soap"
+    ],
     "ITEMS:minecraft:pickaxes": [
       "~CUSTOM:AdamantiumWarHammer",
       "~CUSTOM:TwoHandedAdamantiumHammer",
@@ -6568,8 +6535,12 @@
       "~CUSTOM:AdamantiumSickle",
       "~CUSTOM:Sickle"
     ],
-    "BLOCKS:minecraft:overworld_carver_replaceables": [
-      "~Blocks.STONE#0"
+    "ITEMS:minecraft:meat": [
+      "~CUSTOM:Orksteaak",
+      "~CUSTOM:OwlbearDrumsticks",
+      "~CUSTOM:DailyRation",
+      "~CUSTOM:CookedOwlbearMeat",
+      "~CUSTOM:RawOwlbearMeat"
     ]
   },
   "tab_element_order": {
@@ -6655,8 +6626,6 @@
       "AdamantiumUpgradeSmithingTemplate",
       "HarpyTooth",
       "GoblinsBackpack",
-      "Feywild",
-      "Shadowfell",
       "DeepslateSilverOre",
       "SilverOre",
       "SilverIngot",
@@ -6769,6 +6738,7 @@
       "item.dnd_craft.adamantium_dagger": "Adamantium Dagger",
       "item.cool_mod.light_hammer": "Light Hammer",
       "item.cool_mod.raw_adamantium_ore": "Raw Adamantium Ore",
+      "gui.dnd_craft.classes.label_in_dev": "(in dev)",
       "item.dnd_craft.adamantium_upgrade_smithing_template": "Adamantium Upgrade Smithing Template",
       "gui.dnd_craft.magic_choose.label_level_40": "Level 6",
       "entity.dnd_craft.harpy": "Harpy",
@@ -6807,7 +6777,6 @@
       "gui.dnd_craft.monk_gui.button_choose": "Choose",
       "gui.dnd_craft.magic_choose.label_level_401": "Level 7",
       "item.cool_mod.owlbear_spawn_egg": "Owlbear Spawn Egg",
-      "item.dnd_craft.shadowfell": "some stick",
       "advancements.the_beginning.title": "The Beginning",
       "item.dnd_craft.scrapsheet": "Scrapsheet",
       "item.dnd_craft.war_hammer": "War Hammer",
@@ -6854,7 +6823,6 @@
       "gui.cool_mod.bardegui.label_level_60": "Level 60",
       "item.dnd_craft.magic_wand": "Spellbook",
       "gui.dnd_craft.bardegui.label_barbarian_strenght": "Better Healing",
-      "item.dnd_craft.feywild": "some stick",
       "gui.dnd_craft.cook_gui.label_eat_40_ork_beefs": "Eat 40 ork beefs",
       "item.dnd_craft.poison_vial": "Poison Vial",
       "gui.dnd_craft.ki.label_ki_abilitys": "Ki Abilitys",
@@ -7033,6 +7001,7 @@
       "gui.dnd_craft.classes.label_added_soon": "added soon...)",
       "gui.dnd_craft.ki.button_better_defense": "Better Defense",
       "item.dnd_craft.raw_ork_beef": "Raw Ork Beef",
+      "key.dnd_craft.class_choose_gui_key": "Class Choose Gui",
       "item.dnd_craft.potionofstronghealing.description_1": "§3Uncommon",
       "item.dnd_craft.potionofstronghealing.description_0": "Magic Item",
       "gui.dnd_craft.magic_choose.label_level_101": "Level 5",
@@ -7163,11 +7132,9 @@
     "dependencies": [],
     "dependants": [],
     "mcreatorDependencies": [
-      "pehkui",
-      "geckolib",
-      "jei"
+      "geckolib"
     ],
-    "currentGenerator": "forge-1.20.1",
+    "currentGenerator": "neoforge-1.21.1",
     "credits": "Created using mod maker MCreator - https://mcreator.net/about",
     "modElementsPackage": "net.mcreator.dndcraft"
   },

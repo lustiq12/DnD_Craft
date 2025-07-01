@@ -1,7 +1,5 @@
 package net.mcreator.dndcraft.procedures;
 
-import net.minecraftforge.registries.ForgeRegistries;
-
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.entity.LivingEntity;
@@ -13,6 +11,7 @@ import net.minecraft.util.Mth;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.core.particles.SimpleParticleType;
 import net.minecraft.core.BlockPos;
 
@@ -31,13 +30,13 @@ public class MimicEntityIsHurtProcedure {
 				_entity.addEffect(new MobEffectInstance(MobEffects.POISON, 40, 1));
 			DndCraftMod.queueServerWork(10, () -> {
 				if (sourceentity instanceof LivingEntity _entity && !_entity.level().isClientSide())
-					_entity.addEffect(new MobEffectInstance(DndCraftModMobEffects.SLIMY.get(), 60, 2));
+					_entity.addEffect(new MobEffectInstance(DndCraftModMobEffects.SLIMY, 60, 2));
 			});
 			if (world instanceof Level _level) {
 				if (!_level.isClientSide()) {
-					_level.playSound(null, BlockPos.containing(x, y, z), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.slime_block.step")), SoundSource.NEUTRAL, 6, 1);
+					_level.playSound(null, BlockPos.containing(x, y, z), BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("block.slime_block.step")), SoundSource.NEUTRAL, 6, 1);
 				} else {
-					_level.playLocalSound(x, y, z, ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.slime_block.step")), SoundSource.NEUTRAL, 6, 1, false);
+					_level.playLocalSound(x, y, z, BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("block.slime_block.step")), SoundSource.NEUTRAL, 6, 1, false);
 				}
 			}
 			if (world instanceof ServerLevel _level)

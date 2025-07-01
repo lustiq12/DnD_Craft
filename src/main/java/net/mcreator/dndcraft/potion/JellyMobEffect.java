@@ -8,9 +8,4 @@ public class JellyMobEffect extends MobEffect {
 	public JellyMobEffect() {
 		super(MobEffectCategory.HARMFUL, -5376);
 	}
-
-	@Override
-	public boolean isDurationEffectTick(int duration, int amplifier) {
-		return true;
-	}
 }

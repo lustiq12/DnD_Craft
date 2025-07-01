@@ -9,17 +9,17 @@ import net.mcreator.dndcraft.entity.InvisibleStalkerEntity;
 public class InvisibleStalkerModel extends GeoModel<InvisibleStalkerEntity> {
 	@Override
 	public ResourceLocation getAnimationResource(InvisibleStalkerEntity entity) {
-		return new ResourceLocation("dnd_craft", "animations/invisiblestalker.animation.json");
+		return ResourceLocation.parse("dnd_craft:animations/invisiblestalker.animation.json");
 	}
 
 	@Override
 	public ResourceLocation getModelResource(InvisibleStalkerEntity entity) {
-		return new ResourceLocation("dnd_craft", "geo/invisiblestalker.geo.json");
+		return ResourceLocation.parse("dnd_craft:geo/invisiblestalker.geo.json");
 	}
 
 	@Override
 	public ResourceLocation getTextureResource(InvisibleStalkerEntity entity) {
-		return new ResourceLocation("dnd_craft", "textures/entities/" + entity.getTexture() + ".png");
+		return ResourceLocation.parse("dnd_craft:textures/entities/" + entity.getTexture() + ".png");
 	}
 
 }

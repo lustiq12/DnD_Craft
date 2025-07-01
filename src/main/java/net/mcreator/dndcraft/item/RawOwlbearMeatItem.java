@@ -13,11 +13,11 @@ import net.mcreator.dndcraft.init.DndCraftModItems;
 
 public class RawOwlbearMeatItem extends Item {
 	public RawOwlbearMeatItem() {
-		super(new Item.Properties().stacksTo(64).rarity(Rarity.COMMON).food((new FoodProperties.Builder()).nutrition(8).saturationMod(6f).meat().build()));
+		super(new Item.Properties().stacksTo(64).rarity(Rarity.COMMON).food((new FoodProperties.Builder()).nutrition(8).saturationModifier(6f).build()));
 	}
 
 	@Override
-	public int getUseDuration(ItemStack itemstack) {
+	public int getUseDuration(ItemStack itemstack, LivingEntity livingEntity) {
 		return 48;
 	}
 

@@ -6,19 +6,16 @@ import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.InteractionHand;
-import net.minecraft.util.RandomSource;
+import net.minecraft.server.level.ServerLevel;
 import net.minecraft.core.BlockPos;
 
 public class SoapRightclickedOnBlockProcedure {
 	public static void execute(LevelAccessor world, double x, double y, double z, Entity entity, ItemStack itemstack) {
 		if (entity == null)
 			return;
-		{
-			ItemStack _ist = itemstack;
-			if (_ist.hurt(1, RandomSource.create(), null)) {
-				_ist.shrink(1);
-				_ist.setDamageValue(0);
-			}
+		if (world instanceof ServerLevel _level) {
+			itemstack.hurtAndBreak(1, _level, null, _stkprov -> {
+			});
 		}
 		if ((world.getBlockState(BlockPos.containing(x, y, z))) == Blocks.MOSSY_COBBLESTONE.defaultBlockState()) {
 			world.setBlock(BlockPos.containing(x, y, z), Blocks.COBBLESTONE.defaultBlockState(), 3);

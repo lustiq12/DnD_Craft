@@ -1,9 +1,9 @@
 package net.mcreator.dndcraft.procedures;
 
-import net.minecraftforge.fml.common.Mod;
-import net.minecraftforge.eventbus.api.SubscribeEvent;
-import net.minecraftforge.eventbus.api.Event;
-import net.minecraftforge.event.entity.player.PlayerInteractEvent;
+import net.neoforged.neoforge.event.entity.player.PlayerInteractEvent;
+import net.neoforged.fml.common.EventBusSubscriber;
+import net.neoforged.bus.api.SubscribeEvent;
+import net.neoforged.bus.api.Event;
 
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.LevelAccessor;
@@ -18,7 +18,7 @@ import net.mcreator.dndcraft.init.DndCraftModEntities;
 
 import javax.annotation.Nullable;
 
-@Mod.EventBusSubscriber
+@EventBusSubscriber
 public class ChestmimicProcedure {
 	@SubscribeEvent
 	public static void onRightClickBlock(PlayerInteractEvent.RightClickBlock event) {
@@ -33,7 +33,7 @@ public class ChestmimicProcedure {
 
 	private static void execute(@Nullable Event event, LevelAccessor world, double x, double y, double z) {
 		if ((world.getBlockState(BlockPos.containing(x, y, z))).getBlock() == Blocks.CHEST) {
-			if (Mth.nextInt(RandomSource.create(), 1, 40) == 1) {
+			if (Mth.nextInt(RandomSource.create(), 1, 100) == 1) {
 				world.setBlock(BlockPos.containing(x, y, z), Blocks.AIR.defaultBlockState(), 3);
 				if (world instanceof ServerLevel _level) {
 					Entity entityToSpawn = DndCraftModEntities.MIMIC.get().spawn(_level, BlockPos.containing(x, y, z), MobSpawnType.MOB_SUMMONED);

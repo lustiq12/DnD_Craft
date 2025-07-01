@@ -1,9 +1,9 @@
 package net.mcreator.dndcraft.procedures;
 
-import net.minecraftforge.fml.common.Mod;
-import net.minecraftforge.eventbus.api.SubscribeEvent;
-import net.minecraftforge.eventbus.api.Event;
-import net.minecraftforge.event.entity.player.PlayerEvent;
+import net.neoforged.neoforge.event.entity.player.PlayerEvent;
+import net.neoforged.fml.common.EventBusSubscriber;
+import net.neoforged.bus.api.SubscribeEvent;
+import net.neoforged.bus.api.Event;
 
 import net.minecraft.world.phys.Vec3;
 import net.minecraft.world.phys.Vec2;
@@ -18,7 +18,7 @@ import net.mcreator.dndcraft.network.DndCraftModVariables;
 
 import javax.annotation.Nullable;
 
-@Mod.EventBusSubscriber
+@EventBusSubscriber
 public class DiscordProcedure {
 	@SubscribeEvent
 	public static void onPlayerLoggedIn(PlayerEvent.PlayerLoggedInEvent event) {
@@ -32,7 +32,7 @@ public class DiscordProcedure {
 	private static void execute(@Nullable Event event, LevelAccessor world, double x, double y, double z, Entity entity) {
 		if (entity == null)
 			return;
-		if ((entity.getCapability(DndCraftModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new DndCraftModVariables.PlayerVariables())).first_join) {
+		if (entity.getData(DndCraftModVariables.PLAYER_VARIABLES).first_join) {
 			if (world instanceof ServerLevel _level)
 				_level.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(),
 						"/tellraw @p {\"text\":\"\",\"extra\":[ {\"text\":\"[DnD-Craft] \",\"color\":\"dark_green\",\"bold\":true}, {\"text\":\"Make sure to join our discord server! \",\"color\":\"gold\"}, {\"text\":\"(click on this message)\",\"color\":\"blue\",\"bold\":true, \"clickEvent\":{\"action\":\"open_url\",\"value\":\"https://discord.gg/fKCsbUauD7\"} } ]}");

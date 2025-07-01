@@ -1,37 +1,35 @@
 
 package net.mcreator.dndcraft.potion;
 
-import net.minecraftforge.client.extensions.common.IClientMobEffectExtensions;
+import net.neoforged.neoforge.common.EffectCure;
+import net.neoforged.neoforge.client.extensions.common.RegisterClientExtensionsEvent;
+import net.neoforged.neoforge.client.extensions.common.IClientMobEffectExtensions;
+import net.neoforged.fml.common.EventBusSubscriber;
+import net.neoforged.bus.api.SubscribeEvent;
 
-import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.effect.MobEffectCategory;
 import net.minecraft.world.effect.MobEffect;
 import net.minecraft.client.gui.screens.inventory.EffectRenderingInventoryScreen;
 import net.minecraft.client.gui.GuiGraphics;
 
-import java.util.List;
-import java.util.ArrayList;
+import net.mcreator.dndcraft.init.DndCraftModMobEffects;
 
+import java.util.Set;
+
+@EventBusSubscriber(bus = EventBusSubscriber.Bus.MOD)
 public class KiEffect2MobEffect extends MobEffect {
 	public KiEffect2MobEffect() {
 		super(MobEffectCategory.BENEFICIAL, -22528);
 	}
 
 	@Override
-	public List<ItemStack> getCurativeItems() {
-		ArrayList<ItemStack> cures = new ArrayList<ItemStack>();
-		return cures;
+	public void fillEffectCures(Set<EffectCure> cures, MobEffectInstance effectInstance) {
 	}
 
-	@Override
-	public boolean isDurationEffectTick(int duration, int amplifier) {
-		return true;
-	}
-
-	@Override
-	public void initializeClient(java.util.function.Consumer<IClientMobEffectExtensions> consumer) {
-		consumer.accept(new IClientMobEffectExtensions() {
+	@SubscribeEvent
+	public static void registerMobEffectExtensions(RegisterClientExtensionsEvent event) {
+		event.registerMobEffect(new IClientMobEffectExtensions() {
 			@Override
 			public boolean isVisibleInInventory(MobEffectInstance effect) {
 				return false;
@@ -46,6 +44,6 @@ public class KiEffect2MobEffect extends MobEffect {
 			public boolean isVisibleInGui(MobEffectInstance effect) {
 				return false;
 			}
-		});
+		}, DndCraftModMobEffects.KI_EFFECT_2.get());
 	}
 }

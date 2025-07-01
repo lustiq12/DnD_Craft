@@ -9,11 +9,9 @@ public class CooldwonresetProcedure {
 		if (entity == null)
 			return;
 		{
-			double _setval = 0;
-			entity.getCapability(DndCraftModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-				capability.cooldown = _setval;
-				capability.syncPlayerVariables(entity);
-			});
+			DndCraftModVariables.PlayerVariables _vars = entity.getData(DndCraftModVariables.PLAYER_VARIABLES);
+			_vars.cooldown = 0;
+			_vars.syncPlayerVariables(entity);
 		}
 	}
 }

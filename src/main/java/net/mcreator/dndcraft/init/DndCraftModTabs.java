@@ -4,11 +4,11 @@
  */
 package net.mcreator.dndcraft.init;
 
-import net.minecraftforge.registries.RegistryObject;
-import net.minecraftforge.registries.DeferredRegister;
-import net.minecraftforge.fml.common.Mod;
-import net.minecraftforge.eventbus.api.SubscribeEvent;
-import net.minecraftforge.event.BuildCreativeModeTabContentsEvent;
+import net.neoforged.neoforge.registries.DeferredRegister;
+import net.neoforged.neoforge.registries.DeferredHolder;
+import net.neoforged.neoforge.event.BuildCreativeModeTabContentsEvent;
+import net.neoforged.fml.common.EventBusSubscriber;
+import net.neoforged.bus.api.SubscribeEvent;
 
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.CreativeModeTabs;
@@ -18,10 +18,10 @@ import net.minecraft.core.registries.Registries;
 
 import net.mcreator.dndcraft.DndCraftMod;
 
-@Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD)
+@EventBusSubscriber(bus = EventBusSubscriber.Bus.MOD)
 public class DndCraftModTabs {
 	public static final DeferredRegister<CreativeModeTab> REGISTRY = DeferredRegister.create(Registries.CREATIVE_MODE_TAB, DndCraftMod.MODID);
-	public static final RegistryObject<CreativeModeTab> DN_D = REGISTRY.register("dn_d",
+	public static final DeferredHolder<CreativeModeTab, CreativeModeTab> DN_D = REGISTRY.register("dn_d",
 			() -> CreativeModeTab.builder().title(Component.translatable("item_group.dnd_craft.dn_d")).icon(() -> new ItemStack(DndCraftModItems.MAGICSCROLL_FIREARROW.get())).displayItems((parameters, tabData) -> {
 				tabData.accept(DndCraftModItems.MAGIC_WAND.get());
 				tabData.accept(DndCraftModItems.MONSTER_DAGGER.get());
@@ -104,8 +104,6 @@ public class DndCraftModTabs {
 				tabData.accept(DndCraftModItems.ADAMANTIUM_UPGRADE_SMITHING_TEMPLATE.get());
 				tabData.accept(DndCraftModItems.HARPY_TOOTH.get());
 				tabData.accept(DndCraftModItems.GOBLINS_BACKPACK.get());
-				tabData.accept(DndCraftModItems.FEYWILD.get());
-				tabData.accept(DndCraftModItems.SHADOWFELL.get());
 				tabData.accept(DndCraftModBlocks.DEEPSLATE_SILVER_ORE.get().asItem());
 				tabData.accept(DndCraftModBlocks.SILVER_ORE.get().asItem());
 				tabData.accept(DndCraftModItems.SILVER_INGOT.get());
@@ -135,8 +133,6 @@ public class DndCraftModTabs {
 		} else if (tabData.getTabKey() == CreativeModeTabs.TOOLS_AND_UTILITIES) {
 			tabData.accept(DndCraftModItems.BANJO.get());
 			tabData.accept(DndCraftModItems.DRUMS.get());
-			tabData.accept(DndCraftModItems.FEYWILD.get());
-			tabData.accept(DndCraftModItems.SHADOWFELL.get());
 		}
 	}
 }

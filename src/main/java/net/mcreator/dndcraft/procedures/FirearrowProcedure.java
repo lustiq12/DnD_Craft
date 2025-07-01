@@ -10,11 +10,9 @@ public class FirearrowProcedure {
 		if (entity == null)
 			return;
 		{
-			String _setval = "firearrow";
-			entity.getCapability(DndCraftModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-				capability.Spell = _setval;
-				capability.syncPlayerVariables(entity);
-			});
+			DndCraftModVariables.PlayerVariables _vars = entity.getData(DndCraftModVariables.PLAYER_VARIABLES);
+			_vars.Spell = "firearrow";
+			_vars.syncPlayerVariables(entity);
 		}
 		if (entity instanceof Player _player)
 			_player.closeContainer();

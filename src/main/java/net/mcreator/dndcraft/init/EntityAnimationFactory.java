@@ -1,8 +1,8 @@
 package net.mcreator.dndcraft.init;
 
-import net.minecraftforge.fml.common.Mod;
-import net.minecraftforge.eventbus.api.SubscribeEvent;
-import net.minecraftforge.event.entity.living.LivingEvent;
+import net.neoforged.neoforge.event.tick.EntityTickEvent;
+import net.neoforged.fml.common.EventBusSubscriber;
+import net.neoforged.bus.api.SubscribeEvent;
 
 import net.mcreator.dndcraft.entity.WargEntity;
 import net.mcreator.dndcraft.entity.VINESEntity;
@@ -22,10 +22,10 @@ import net.mcreator.dndcraft.entity.CookEntity;
 import net.mcreator.dndcraft.entity.BowblinEntity;
 import net.mcreator.dndcraft.entity.BasiliskEntity;
 
-@Mod.EventBusSubscriber
+@EventBusSubscriber
 public class EntityAnimationFactory {
 	@SubscribeEvent
-	public static void onEntityTick(LivingEvent.LivingTickEvent event) {
+	public static void onEntityTick(EntityTickEvent.Pre event) {
 		if (event != null && event.getEntity() != null) {
 			if (event.getEntity() instanceof Ogre2Entity syncable) {
 				String animation = syncable.getSyncedAnimation();

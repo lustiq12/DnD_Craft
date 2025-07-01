@@ -1,8 +1,5 @@
 package net.mcreator.dndcraft.procedures;
 
-import net.minecraftforge.registries.ForgeRegistries;
-import net.minecraftforge.network.NetworkHooks;
-
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.inventory.AbstractContainerMenu;
@@ -19,6 +16,7 @@ import net.minecraft.server.level.ServerLevel;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.network.chat.Component;
 import net.minecraft.network.FriendlyByteBuf;
+import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.core.BlockPos;
 
@@ -32,14 +30,12 @@ public class Classability1pProcedure {
 	public static void execute(LevelAccessor world, double x, double y, double z, Entity entity) {
 		if (entity == null)
 			return;
-		if (((entity.getCapability(DndCraftModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new DndCraftModVariables.PlayerVariables())).Class_Variable).equals("Barbarian")) {
-			if ((entity.getCapability(DndCraftModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new DndCraftModVariables.PlayerVariables())).cooldown < 0.05) {
+		if ((entity.getData(DndCraftModVariables.PLAYER_VARIABLES).Class_Variable).equals("Barbarian")) {
+			if (entity.getData(DndCraftModVariables.PLAYER_VARIABLES).cooldown < 0.05) {
 				{
-					double _setval = 30;
-					entity.getCapability(DndCraftModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-						capability.cooldown = _setval;
-						capability.syncPlayerVariables(entity);
-					});
+					DndCraftModVariables.PlayerVariables _vars = entity.getData(DndCraftModVariables.PLAYER_VARIABLES);
+					_vars.cooldown = 30;
+					_vars.syncPlayerVariables(entity);
 				}
 				if (world instanceof ServerLevel _level)
 					_level.sendParticles(ParticleTypes.CRIMSON_SPORE, x, y, z, 2000, 2, 2, 2, 0.6);
@@ -50,37 +46,31 @@ public class Classability1pProcedure {
 				if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
 					_entity.addEffect(new MobEffectInstance(MobEffects.REGENERATION, 100, 1));
 				{
-					boolean _setval = true;
-					entity.getCapability(DndCraftModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-						capability.wutrausch = _setval;
-						capability.syncPlayerVariables(entity);
-					});
+					DndCraftModVariables.PlayerVariables _vars = entity.getData(DndCraftModVariables.PLAYER_VARIABLES);
+					_vars.wutrausch = true;
+					_vars.syncPlayerVariables(entity);
 				}
 				DndCraftMod.queueServerWork(200, () -> {
 					{
-						boolean _setval = false;
-						entity.getCapability(DndCraftModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-							capability.wutrausch = _setval;
-							capability.syncPlayerVariables(entity);
-						});
+						DndCraftModVariables.PlayerVariables _vars = entity.getData(DndCraftModVariables.PLAYER_VARIABLES);
+						_vars.wutrausch = false;
+						_vars.syncPlayerVariables(entity);
 					}
 				});
 			}
 		}
-		if (((entity.getCapability(DndCraftModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new DndCraftModVariables.PlayerVariables())).Class_Variable).equals("Bard")) {
-			if ((entity.getCapability(DndCraftModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new DndCraftModVariables.PlayerVariables())).cooldown < 0.05) {
+		if ((entity.getData(DndCraftModVariables.PLAYER_VARIABLES).Class_Variable).equals("Bard")) {
+			if (entity.getData(DndCraftModVariables.PLAYER_VARIABLES).cooldown < 0.05) {
 				{
-					double _setval = 20;
-					entity.getCapability(DndCraftModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-						capability.cooldown = _setval;
-						capability.syncPlayerVariables(entity);
-					});
+					DndCraftModVariables.PlayerVariables _vars = entity.getData(DndCraftModVariables.PLAYER_VARIABLES);
+					_vars.cooldown = 20;
+					_vars.syncPlayerVariables(entity);
 				}
 				if (world instanceof Level _level) {
 					if (!_level.isClientSide()) {
-						_level.playSound(null, BlockPos.containing(x, y, z), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.amethyst_block.chime")), SoundSource.NEUTRAL, 100, 1);
+						_level.playSound(null, BlockPos.containing(x, y, z), BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("block.amethyst_block.chime")), SoundSource.NEUTRAL, 100, 1);
 					} else {
-						_level.playLocalSound(x, y, z, ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.amethyst_block.chime")), SoundSource.NEUTRAL, 100, 1, false);
+						_level.playLocalSound(x, y, z, BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("block.amethyst_block.chime")), SoundSource.NEUTRAL, 100, 1, false);
 					}
 				}
 				if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
@@ -94,95 +84,86 @@ public class Classability1pProcedure {
 				DndCraftMod.queueServerWork(100, () -> {
 					if (world instanceof Level _level) {
 						if (!_level.isClientSide()) {
-							_level.playSound(null, BlockPos.containing(x, y, z), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.amethyst_block.chime")), SoundSource.NEUTRAL, 100, 1);
+							_level.playSound(null, BlockPos.containing(x, y, z), BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("block.amethyst_block.chime")), SoundSource.NEUTRAL, 100, 1);
 						} else {
-							_level.playLocalSound(x, y, z, ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.amethyst_block.chime")), SoundSource.NEUTRAL, 100, 1, false);
+							_level.playLocalSound(x, y, z, BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("block.amethyst_block.chime")), SoundSource.NEUTRAL, 100, 1, false);
 						}
 					}
 				});
 			}
 		}
-		if (((entity.getCapability(DndCraftModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new DndCraftModVariables.PlayerVariables())).Class_Variable).equals("Magician")) {
-			if ((entity.getCapability(DndCraftModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new DndCraftModVariables.PlayerVariables())).cooldown < 0.05) {
+		if ((entity.getData(DndCraftModVariables.PLAYER_VARIABLES).Class_Variable).equals("Magician")) {
+			if (entity.getData(DndCraftModVariables.PLAYER_VARIABLES).cooldown < 0.05) {
 				{
-					double _setval = 30;
-					entity.getCapability(DndCraftModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-						capability.cooldown = _setval;
-						capability.syncPlayerVariables(entity);
-					});
+					DndCraftModVariables.PlayerVariables _vars = entity.getData(DndCraftModVariables.PLAYER_VARIABLES);
+					_vars.cooldown = 30;
+					_vars.syncPlayerVariables(entity);
 				}
 				if (world instanceof Level _level) {
 					if (!_level.isClientSide()) {
-						_level.playSound(null, BlockPos.containing(x, y, z), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.enchantment_table.use")), SoundSource.NEUTRAL, 7, 1);
+						_level.playSound(null, BlockPos.containing(x, y, z), BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("block.enchantment_table.use")), SoundSource.NEUTRAL, 7, 1);
 					} else {
-						_level.playLocalSound(x, y, z, ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.enchantment_table.use")), SoundSource.NEUTRAL, 7, 1, false);
+						_level.playLocalSound(x, y, z, BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("block.enchantment_table.use")), SoundSource.NEUTRAL, 7, 1, false);
 					}
 				}
 				DndCraftMod.queueServerWork(5, () -> {
 					{
-						double _setval = (entity.getCapability(DndCraftModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new DndCraftModVariables.PlayerVariables())).Mana + 10;
-						entity.getCapability(DndCraftModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-							capability.Mana = _setval;
-							capability.syncPlayerVariables(entity);
-						});
+						DndCraftModVariables.PlayerVariables _vars = entity.getData(DndCraftModVariables.PLAYER_VARIABLES);
+						_vars.Mana = entity.getData(DndCraftModVariables.PLAYER_VARIABLES).Mana + 10;
+						_vars.syncPlayerVariables(entity);
 					}
 				});
 				DndCraftMod.queueServerWork(10, () -> {
 					{
-						double _setval = (entity.getCapability(DndCraftModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new DndCraftModVariables.PlayerVariables())).Mana + 10;
-						entity.getCapability(DndCraftModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-							capability.Mana = _setval;
-							capability.syncPlayerVariables(entity);
-						});
+						DndCraftModVariables.PlayerVariables _vars = entity.getData(DndCraftModVariables.PLAYER_VARIABLES);
+						_vars.Mana = entity.getData(DndCraftModVariables.PLAYER_VARIABLES).Mana + 10;
+						_vars.syncPlayerVariables(entity);
 					}
 				});
 				DndCraftMod.queueServerWork(15, () -> {
 					{
-						double _setval = (entity.getCapability(DndCraftModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new DndCraftModVariables.PlayerVariables())).Mana + 10;
-						entity.getCapability(DndCraftModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-							capability.Mana = _setval;
-							capability.syncPlayerVariables(entity);
-						});
+						DndCraftModVariables.PlayerVariables _vars = entity.getData(DndCraftModVariables.PLAYER_VARIABLES);
+						_vars.Mana = entity.getData(DndCraftModVariables.PLAYER_VARIABLES).Mana + 10;
+						_vars.syncPlayerVariables(entity);
 					}
 				});
 				DndCraftMod.queueServerWork(20, () -> {
 					{
-						double _setval = (entity.getCapability(DndCraftModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new DndCraftModVariables.PlayerVariables())).Mana + 10;
-						entity.getCapability(DndCraftModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-							capability.Mana = _setval;
-							capability.syncPlayerVariables(entity);
-						});
+						DndCraftModVariables.PlayerVariables _vars = entity.getData(DndCraftModVariables.PLAYER_VARIABLES);
+						_vars.Mana = entity.getData(DndCraftModVariables.PLAYER_VARIABLES).Mana + 10;
+						_vars.syncPlayerVariables(entity);
 					}
 				});
 				DndCraftMod.queueServerWork(25, () -> {
 					{
-						double _setval = (entity.getCapability(DndCraftModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new DndCraftModVariables.PlayerVariables())).Mana + 10;
-						entity.getCapability(DndCraftModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-							capability.Mana = _setval;
-							capability.syncPlayerVariables(entity);
-						});
+						DndCraftModVariables.PlayerVariables _vars = entity.getData(DndCraftModVariables.PLAYER_VARIABLES);
+						_vars.Mana = entity.getData(DndCraftModVariables.PLAYER_VARIABLES).Mana + 10;
+						_vars.syncPlayerVariables(entity);
 					}
 				});
 				DndCraftMod.queueServerWork(30, () -> {
 					{
-						double _setval = (entity.getCapability(DndCraftModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new DndCraftModVariables.PlayerVariables())).Mana + 10;
-						entity.getCapability(DndCraftModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-							capability.Mana = _setval;
-							capability.syncPlayerVariables(entity);
-						});
+						DndCraftModVariables.PlayerVariables _vars = entity.getData(DndCraftModVariables.PLAYER_VARIABLES);
+						_vars.Mana = entity.getData(DndCraftModVariables.PLAYER_VARIABLES).Mana + 10;
+						_vars.syncPlayerVariables(entity);
 					}
 				});
 			}
 		}
-		if (((entity.getCapability(DndCraftModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new DndCraftModVariables.PlayerVariables())).Class_Variable).equals("Monk")) {
-			if ((entity.getCapability(DndCraftModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new DndCraftModVariables.PlayerVariables())).cooldown < 0.05) {
-				if ((entity.getCapability(DndCraftModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new DndCraftModVariables.PlayerVariables())).Ki > 0) {
+		if ((entity.getData(DndCraftModVariables.PLAYER_VARIABLES).Class_Variable).equals("Monk")) {
+			if (entity.getData(DndCraftModVariables.PLAYER_VARIABLES).cooldown < 0.05) {
+				if (entity.getData(DndCraftModVariables.PLAYER_VARIABLES).Ki > 0) {
 					if (entity instanceof ServerPlayer _ent) {
 						BlockPos _bpos = BlockPos.containing(x, y, z);
-						NetworkHooks.openScreen((ServerPlayer) _ent, new MenuProvider() {
+						_ent.openMenu(new MenuProvider() {
 							@Override
 							public Component getDisplayName() {
 								return Component.literal("Ki");
+							}
+
+							@Override
+							public boolean shouldTriggerClientSideContainerClosingOnOpen() {
+								return false;
 							}
 
 							@Override

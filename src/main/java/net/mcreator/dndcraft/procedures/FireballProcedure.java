@@ -9,13 +9,11 @@ public class FireballProcedure {
 	public static void execute(Entity entity) {
 		if (entity == null)
 			return;
-		if ((entity.getCapability(DndCraftModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new DndCraftModVariables.PlayerVariables())).PlayerLevel > 5) {
+		if (entity.getData(DndCraftModVariables.PLAYER_VARIABLES).PlayerLevel > 5) {
 			{
-				String _setval = "fireball";
-				entity.getCapability(DndCraftModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-					capability.Spell = _setval;
-					capability.syncPlayerVariables(entity);
-				});
+				DndCraftModVariables.PlayerVariables _vars = entity.getData(DndCraftModVariables.PLAYER_VARIABLES);
+				_vars.Spell = "fireball";
+				_vars.syncPlayerVariables(entity);
 			}
 			if (entity instanceof Player _player)
 				_player.closeContainer();

@@ -1,5 +1,7 @@
 package net.mcreator.dndcraft.client.gui;
 
+import net.neoforged.neoforge.network.PacketDistributor;
+
 import net.minecraft.world.level.Level;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.player.Inventory;
@@ -15,7 +17,6 @@ import net.mcreator.dndcraft.procedures.MonsterquestunlockProcedure;
 import net.mcreator.dndcraft.procedures.MonsterquestshowProcedure;
 import net.mcreator.dndcraft.procedures.IfnoQuestProcedure;
 import net.mcreator.dndcraft.network.CookGuiButtonMessage;
-import net.mcreator.dndcraft.DndCraftMod;
 
 import java.util.HashMap;
 
@@ -41,11 +42,11 @@ public class CookGuiScreen extends AbstractContainerScreen<CookGuiMenu> {
 		this.imageHeight = 200;
 	}
 
-	private static final ResourceLocation texture = new ResourceLocation("dnd_craft:textures/screens/cook_gui.png");
+	private static final ResourceLocation texture = ResourceLocation.parse("dnd_craft:textures/screens/cook_gui.png");
 
 	@Override
 	public void render(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {
-		this.renderBackground(guiGraphics);
+		this.renderBackground(guiGraphics, mouseX, mouseY, partialTicks);
 		super.render(guiGraphics, mouseX, mouseY, partialTicks);
 		this.renderTooltip(guiGraphics, mouseX, mouseY);
 	}
@@ -88,7 +89,7 @@ public class CookGuiScreen extends AbstractContainerScreen<CookGuiMenu> {
 		super.init();
 		button_loot_quest = Button.builder(Component.translatable("gui.dnd_craft.cook_gui.button_loot_quest"), e -> {
 			if (IfnoQuestProcedure.execute(entity)) {
-				DndCraftMod.PACKET_HANDLER.sendToServer(new CookGuiButtonMessage(0, x, y, z));
+				PacketDistributor.sendToServer(new CookGuiButtonMessage(0, x, y, z));
 				CookGuiButtonMessage.handleButtonAction(entity, 0, x, y, z);
 			}
 		}).bounds(this.leftPos + 124, this.topPos + 24, 77, 20).build(builder -> new Button(builder) {
@@ -102,7 +103,7 @@ public class CookGuiScreen extends AbstractContainerScreen<CookGuiMenu> {
 		this.addRenderableWidget(button_loot_quest);
 		button_loot_quest1 = Button.builder(Component.translatable("gui.dnd_craft.cook_gui.button_loot_quest1"), e -> {
 			if (MonsterquestshowProcedure.execute(entity)) {
-				DndCraftMod.PACKET_HANDLER.sendToServer(new CookGuiButtonMessage(1, x, y, z));
+				PacketDistributor.sendToServer(new CookGuiButtonMessage(1, x, y, z));
 				CookGuiButtonMessage.handleButtonAction(entity, 1, x, y, z);
 			}
 		}).bounds(this.leftPos + 124, this.topPos + 51, 77, 20).build(builder -> new Button(builder) {
@@ -116,7 +117,7 @@ public class CookGuiScreen extends AbstractContainerScreen<CookGuiMenu> {
 		this.addRenderableWidget(button_loot_quest1);
 		button_loot_quest2 = Button.builder(Component.translatable("gui.dnd_craft.cook_gui.button_loot_quest2"), e -> {
 			if (VeteranquestshowProcedure.execute(entity)) {
-				DndCraftMod.PACKET_HANDLER.sendToServer(new CookGuiButtonMessage(2, x, y, z));
+				PacketDistributor.sendToServer(new CookGuiButtonMessage(2, x, y, z));
 				CookGuiButtonMessage.handleButtonAction(entity, 2, x, y, z);
 			}
 		}).bounds(this.leftPos + 124, this.topPos + 78, 77, 20).build(builder -> new Button(builder) {

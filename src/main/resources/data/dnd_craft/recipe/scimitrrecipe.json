@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "aa",
+    "a ",
+    "b "
+  ],
+  "key": {
+    "a": {
+      "item": "minecraft:iron_ingot"
+    },
+    "b": {
+      "item": "dnd_craft:metal_rod"
+    }
+  },
+  "result": {
+    "id": "dnd_craft:scimitar",
+    "count": 1
+  }
+}

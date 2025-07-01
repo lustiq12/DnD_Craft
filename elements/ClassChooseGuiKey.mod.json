@@ -1,0 +1,12 @@
+{
+  "_fv": 73,
+  "_type": "keybind",
+  "definition": {
+    "triggerKey": "V",
+    "keyBindingName": "Class Choose Gui",
+    "keyBindingCategoryKey": "gameplay",
+    "onKeyPressed": {
+      "name": "OpenClassGui"
+    }
+  }
+}

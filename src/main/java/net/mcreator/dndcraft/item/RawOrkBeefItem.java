@@ -12,7 +12,7 @@ import net.mcreator.dndcraft.procedures.MonsterdelightquestProcedure;
 
 public class RawOrkBeefItem extends Item {
 	public RawOrkBeefItem() {
-		super(new Item.Properties().stacksTo(64).rarity(Rarity.COMMON).food((new FoodProperties.Builder()).nutrition(2).saturationMod(0.8f).build()));
+		super(new Item.Properties().stacksTo(64).rarity(Rarity.COMMON).food((new FoodProperties.Builder()).nutrition(2).saturationModifier(0.8f).build()));
 	}
 
 	@Override

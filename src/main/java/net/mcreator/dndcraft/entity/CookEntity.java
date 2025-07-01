@@ -2,27 +2,23 @@
 package net.mcreator.dndcraft.entity;
 
 import software.bernie.geckolib.util.GeckoLibUtil;
-import software.bernie.geckolib.core.object.PlayState;
-import software.bernie.geckolib.core.animation.RawAnimation;
-import software.bernie.geckolib.core.animation.AnimationState;
-import software.bernie.geckolib.core.animation.AnimationController;
-import software.bernie.geckolib.core.animation.AnimatableManager;
-import software.bernie.geckolib.core.animatable.instance.AnimatableInstanceCache;
+import software.bernie.geckolib.animation.RawAnimation;
+import software.bernie.geckolib.animation.PlayState;
+import software.bernie.geckolib.animation.AnimationState;
+import software.bernie.geckolib.animation.AnimationController;
+import software.bernie.geckolib.animation.AnimatableManager;
+import software.bernie.geckolib.animatable.instance.AnimatableInstanceCache;
 import software.bernie.geckolib.animatable.GeoEntity;
 
-import net.minecraftforge.registries.ForgeRegistries;
-import net.minecraftforge.network.PlayMessages;
-import net.minecraftforge.network.NetworkHooks;
-import net.minecraftforge.items.wrapper.EntityHandsInvWrapper;
-import net.minecraftforge.items.wrapper.EntityArmorInvWrapper;
-import net.minecraftforge.items.wrapper.CombinedInvWrapper;
-import net.minecraftforge.items.ItemStackHandler;
-import net.minecraftforge.common.util.LazyOptional;
-import net.minecraftforge.common.capabilities.ForgeCapabilities;
-import net.minecraftforge.common.capabilities.Capability;
+import net.neoforged.neoforge.items.wrapper.EntityHandsInvWrapper;
+import net.neoforged.neoforge.items.wrapper.EntityArmorInvWrapper;
+import net.neoforged.neoforge.items.wrapper.CombinedInvWrapper;
+import net.neoforged.neoforge.items.ItemStackHandler;
+import net.neoforged.neoforge.event.entity.RegisterSpawnPlacementsEvent;
 
 import net.minecraft.world.level.Level;
 import net.minecraft.world.item.enchantment.EnchantmentHelper;
+import net.minecraft.world.item.enchantment.EnchantmentEffectComponents;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.inventory.AbstractContainerMenu;
 import net.minecraft.world.entity.player.Player;
@@ -33,7 +29,6 @@ import net.minecraft.world.entity.ai.goal.FloatGoal;
 import net.minecraft.world.entity.ai.attributes.Attributes;
 import net.minecraft.world.entity.ai.attributes.AttributeSupplier;
 import net.minecraft.world.entity.Pose;
-import net.minecraft.world.entity.MobType;
 import net.minecraft.world.entity.Mob;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.EntityDimensions;
@@ -48,19 +43,13 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.network.syncher.SynchedEntityData;
 import net.minecraft.network.syncher.EntityDataSerializers;
 import net.minecraft.network.syncher.EntityDataAccessor;
-import net.minecraft.network.protocol.game.ClientGamePacketListener;
-import net.minecraft.network.protocol.Packet;
 import net.minecraft.network.chat.Component;
 import net.minecraft.network.FriendlyByteBuf;
 import net.minecraft.nbt.Tag;
 import net.minecraft.nbt.CompoundTag;
-import net.minecraft.core.Direction;
+import net.minecraft.core.registries.BuiltInRegistries;
 
 import net.mcreator.dndcraft.world.inventory.CookGuiMenu;
-import net.mcreator.dndcraft.init.DndCraftModEntities;
-
-import javax.annotation.Nullable;
-import javax.annotation.Nonnull;
 
 import io.netty.buffer.Unpooled;
 
@@ -74,24 +63,19 @@ public class CookEntity extends Monster implements GeoEntity {
 	private long lastSwing;
 	public String animationprocedure = "empty";
 
-	public CookEntity(PlayMessages.SpawnEntity packet, Level world) {
-		this(DndCraftModEntities.COOK.get(), world);
-	}
-
 	public CookEntity(EntityType<CookEntity> type, Level world) {
 		super(type, world);
 		xpReward = 0;
 		setNoAi(false);
-		setMaxUpStep(0.6f);
 		setPersistenceRequired();
 	}
 
 	@Override
-	protected void defineSynchedData() {
-		super.defineSynchedData();
-		this.entityData.define(SHOOT, false);
-		this.entityData.define(ANIMATION, "undefined");
-		this.entityData.define(TEXTURE, "cookstre");
+	protected void defineSynchedData(SynchedEntityData.Builder builder) {
+		super.defineSynchedData(builder);
+		builder.define(SHOOT, false);
+		builder.define(ANIMATION, "undefined");
+		builder.define(TEXTURE, "cookstre");
 	}
 
 	public void setTexture(String texture) {
@@ -103,20 +87,10 @@ public class CookEntity extends Monster implements GeoEntity {
 	}
 
 	@Override
-	public Packet<ClientGamePacketListener> getAddEntityPacket() {
-		return NetworkHooks.getEntitySpawningPacket(this);
-	}
-
-	@Override
 	protected void registerGoals() {
 		super.registerGoals();
 		this.goalSelector.addGoal(1, new RandomLookAroundGoal(this));
 		this.goalSelector.addGoal(2, new FloatGoal(this));
-	}
-
-	@Override
-	public MobType getMobType() {
-		return MobType.UNDEFINED;
 	}
 
 	@Override
@@ -126,12 +100,12 @@ public class CookEntity extends Monster implements GeoEntity {
 
 	@Override
 	public SoundEvent getHurtSound(DamageSource ds) {
-		return ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.generic.hurt"));
+		return BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("entity.generic.hurt"));
 	}
 
 	@Override
 	public SoundEvent getDeathSound() {
-		return ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.generic.death"));
+		return BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("entity.generic.death"));
 	}
 
 	@Override
@@ -149,11 +123,8 @@ public class CookEntity extends Monster implements GeoEntity {
 	};
 	private final CombinedInvWrapper combined = new CombinedInvWrapper(inventory, new EntityHandsInvWrapper(this), new EntityArmorInvWrapper(this));
 
-	@Override
-	public <T> LazyOptional<T> getCapability(@Nonnull Capability<T> capability, @Nullable Direction side) {
-		if (this.isAlive() && capability == ForgeCapabilities.ITEM_HANDLER && side == null)
-			return LazyOptional.of(() -> combined).cast();
-		return super.getCapability(capability, side);
+	public CombinedInvWrapper getInventory() {
+		return combined;
 	}
 
 	@Override
@@ -161,7 +132,7 @@ public class CookEntity extends Monster implements GeoEntity {
 		super.dropEquipment();
 		for (int i = 0; i < inventory.getSlots(); ++i) {
 			ItemStack itemstack = inventory.getStackInSlot(i);
-			if (!itemstack.isEmpty() && !EnchantmentHelper.hasVanishingCurse(itemstack)) {
+			if (!itemstack.isEmpty() && !EnchantmentHelper.has(itemstack, EnchantmentEffectComponents.PREVENT_EQUIPMENT_DROP)) {
 				this.spawnAtLocation(itemstack);
 			}
 		}
@@ -170,7 +141,7 @@ public class CookEntity extends Monster implements GeoEntity {
 	@Override
 	public void addAdditionalSaveData(CompoundTag compound) {
 		super.addAdditionalSaveData(compound);
-		compound.put("InventoryCustom", inventory.serializeNBT());
+		compound.put("InventoryCustom", inventory.serializeNBT(this.registryAccess()));
 		compound.putString("Texture", this.getTexture());
 	}
 
@@ -179,7 +150,7 @@ public class CookEntity extends Monster implements GeoEntity {
 		super.readAdditionalSaveData(compound);
 		Tag inventoryCustom = compound.get("InventoryCustom");
 		if (inventoryCustom instanceof CompoundTag inventoryTag)
-			inventory.deserializeNBT(inventoryTag);
+			inventory.deserializeNBT(this.registryAccess(), inventoryTag);
 		if (compound.contains("Texture"))
 			this.setTexture(compound.getString("Texture"));
 	}
@@ -189,7 +160,7 @@ public class CookEntity extends Monster implements GeoEntity {
 		ItemStack itemstack = sourceentity.getItemInHand(hand);
 		InteractionResult retval = InteractionResult.sidedSuccess(this.level().isClientSide());
 		if (sourceentity instanceof ServerPlayer serverPlayer) {
-			NetworkHooks.openScreen(serverPlayer, new MenuProvider() {
+			serverPlayer.openMenu(new MenuProvider() {
 				@Override
 				public Component getDisplayName() {
 					return Component.literal("Cook");
@@ -220,11 +191,11 @@ public class CookEntity extends Monster implements GeoEntity {
 	}
 
 	@Override
-	public EntityDimensions getDimensions(Pose p_33597_) {
-		return super.getDimensions(p_33597_).scale((float) 1.5);
+	public EntityDimensions getDefaultDimensions(Pose pose) {
+		return super.getDefaultDimensions(pose).scale(1.5f);
 	}
 
-	public static void init() {
+	public static void init(RegisterSpawnPlacementsEvent event) {
 	}
 
 	public static AttributeSupplier.Builder createAttributes() {
@@ -234,6 +205,7 @@ public class CookEntity extends Monster implements GeoEntity {
 		builder = builder.add(Attributes.ARMOR, 0);
 		builder = builder.add(Attributes.ATTACK_DAMAGE, 0);
 		builder = builder.add(Attributes.FOLLOW_RANGE, 16);
+		builder = builder.add(Attributes.STEP_HEIGHT, 0.6);
 		return builder;
 	}
 
@@ -268,7 +240,7 @@ public class CookEntity extends Monster implements GeoEntity {
 		++this.deathTime;
 		if (this.deathTime == 20) {
 			this.remove(CookEntity.RemovalReason.KILLED);
-			this.dropExperience();
+			this.dropExperience(this);
 		}
 	}
 

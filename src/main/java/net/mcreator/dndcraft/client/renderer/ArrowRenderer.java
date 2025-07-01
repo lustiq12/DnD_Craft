@@ -16,7 +16,7 @@ import com.mojang.blaze3d.vertex.VertexConsumer;
 import com.mojang.blaze3d.vertex.PoseStack;
 
 public class ArrowRenderer extends EntityRenderer<ArrowEntity> {
-	private static final ResourceLocation texture = new ResourceLocation("dnd_craft:textures/entities/arrow.png");
+	private static final ResourceLocation texture = ResourceLocation.parse("dnd_craft:textures/entities/arrow.png");
 	private final Modelarrow model;
 
 	public ArrowRenderer(EntityRendererProvider.Context context) {
@@ -30,7 +30,7 @@ public class ArrowRenderer extends EntityRenderer<ArrowEntity> {
 		poseStack.pushPose();
 		poseStack.mulPose(Axis.YP.rotationDegrees(Mth.lerp(partialTicks, entityIn.yRotO, entityIn.getYRot()) - 90));
 		poseStack.mulPose(Axis.ZP.rotationDegrees(90 + Mth.lerp(partialTicks, entityIn.xRotO, entityIn.getXRot())));
-		model.renderToBuffer(poseStack, vb, packedLightIn, OverlayTexture.NO_OVERLAY, 1, 1, 1, 1);
+		model.renderToBuffer(poseStack, vb, packedLightIn, OverlayTexture.NO_OVERLAY);
 		poseStack.popPose();
 		super.render(entityIn, entityYaw, partialTicks, poseStack, bufferIn, packedLightIn);
 	}

@@ -1,0 +1,42 @@
+modLoader="javafml"
+loaderVersion="[4,)"
+license="All Rights Reserved"
+
+[[mods]]
+modId="dnd_craft"
+version="2.5.0"
+displayName="DnD-Craft"
+displayURL="https://mcreator.net"
+logoFile="logo.png"
+credits="Created using mod maker MCreator - https://mcreator.net/about"
+authors="Ppotatoe, Luderspieler"
+description="This mod is a fun addition to Minecraft that adds some mobs from the DnD universe and lets you choose your own class."
+
+# Start of user code block mod configuration
+# End of user code block mod configuration
+
+[[dependencies.dnd_craft]]
+    modId="neoforge"
+    type="required"
+    versionRange="[21.1.65,)"
+    ordering="AFTER"
+    side="BOTH"
+
+[[dependencies.dnd_craft]]
+    modId="minecraft"
+    type="required"
+    versionRange="[1.21.1]"
+    ordering="AFTER"
+    side="BOTH"
+
+
+[[dependencies.dnd_craft]]
+    modId="geckolib"
+    type="optional"
+    versionRange="[0,)"
+    ordering="NONE"
+    side="BOTH"
+
+
+# Start of user code block dependencies configuration
+# End of user code block dependencies configuration

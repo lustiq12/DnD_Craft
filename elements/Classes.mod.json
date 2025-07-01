@@ -139,6 +139,22 @@
           "y": 35,
           "locked": false
         }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_in_dev",
+          "text": {
+            "fixedValue": "(in dev)"
+          },
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "x": 204,
+          "y": 98,
+          "locked": false
+        }
       }
     ],
     "gridSettings": {
@@ -146,7 +162,7 @@
       "sy": 18,
       "ox": 11,
       "oy": 15,
-      "snapOnGrid": false
+      "snapOnGrid": true
     }
   }
 }

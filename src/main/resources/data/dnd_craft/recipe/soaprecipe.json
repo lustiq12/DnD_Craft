@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    " a ",
+    "aba",
+    " a "
+  ],
+  "key": {
+    "a": {
+      "item": "dnd_craft:animal_fat"
+    },
+    "b": {
+      "item": "minecraft:milk_bucket"
+    }
+  },
+  "result": {
+    "id": "dnd_craft:soap",
+    "count": 1
+  }
+}

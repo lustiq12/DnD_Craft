@@ -1,5 +1,7 @@
 package net.mcreator.dndcraft.client.gui;
 
+import net.neoforged.neoforge.network.PacketDistributor;
+
 import net.minecraft.world.level.Level;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.player.Inventory;
@@ -11,7 +13,6 @@ import net.minecraft.client.gui.GuiGraphics;
 
 import net.mcreator.dndcraft.world.inventory.MagicChooseMenu;
 import net.mcreator.dndcraft.network.MagicChooseButtonMessage;
-import net.mcreator.dndcraft.DndCraftMod;
 
 import java.util.HashMap;
 
@@ -49,11 +50,11 @@ public class MagicChooseScreen extends AbstractContainerScreen<MagicChooseMenu> 
 		return true;
 	}
 
-	private static final ResourceLocation texture = new ResourceLocation("dnd_craft:textures/screens/magic_choose.png");
+	private static final ResourceLocation texture = ResourceLocation.parse("dnd_craft:textures/screens/magic_choose.png");
 
 	@Override
 	public void render(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {
-		this.renderBackground(guiGraphics);
+		this.renderBackground(guiGraphics, mouseX, mouseY, partialTicks);
 		super.render(guiGraphics, mouseX, mouseY, partialTicks);
 		this.renderTooltip(guiGraphics, mouseX, mouseY);
 	}
@@ -96,7 +97,7 @@ public class MagicChooseScreen extends AbstractContainerScreen<MagicChooseMenu> 
 		super.init();
 		button_fire_arrow = Button.builder(Component.translatable("gui.dnd_craft.magic_choose.button_fire_arrow"), e -> {
 			if (true) {
-				DndCraftMod.PACKET_HANDLER.sendToServer(new MagicChooseButtonMessage(0, x, y, z));
+				PacketDistributor.sendToServer(new MagicChooseButtonMessage(0, x, y, z));
 				MagicChooseButtonMessage.handleButtonAction(entity, 0, x, y, z);
 			}
 		}).bounds(this.leftPos + 54, this.topPos + 27, 77, 20).build();
@@ -104,7 +105,7 @@ public class MagicChooseScreen extends AbstractContainerScreen<MagicChooseMenu> 
 		this.addRenderableWidget(button_fire_arrow);
 		button_cold_ray = Button.builder(Component.translatable("gui.dnd_craft.magic_choose.button_cold_ray"), e -> {
 			if (true) {
-				DndCraftMod.PACKET_HANDLER.sendToServer(new MagicChooseButtonMessage(1, x, y, z));
+				PacketDistributor.sendToServer(new MagicChooseButtonMessage(1, x, y, z));
 				MagicChooseButtonMessage.handleButtonAction(entity, 1, x, y, z);
 			}
 		}).bounds(this.leftPos + 54, this.topPos + 54, 66, 20).build();
@@ -112,7 +113,7 @@ public class MagicChooseScreen extends AbstractContainerScreen<MagicChooseMenu> 
 		this.addRenderableWidget(button_cold_ray);
 		button_thunderwave = Button.builder(Component.translatable("gui.dnd_craft.magic_choose.button_thunderwave"), e -> {
 			if (true) {
-				DndCraftMod.PACKET_HANDLER.sendToServer(new MagicChooseButtonMessage(2, x, y, z));
+				PacketDistributor.sendToServer(new MagicChooseButtonMessage(2, x, y, z));
 				MagicChooseButtonMessage.handleButtonAction(entity, 2, x, y, z);
 			}
 		}).bounds(this.leftPos + 54, this.topPos + 108, 82, 20).build();
@@ -120,7 +121,7 @@ public class MagicChooseScreen extends AbstractContainerScreen<MagicChooseMenu> 
 		this.addRenderableWidget(button_thunderwave);
 		button_fake_life = Button.builder(Component.translatable("gui.dnd_craft.magic_choose.button_fake_life"), e -> {
 			if (true) {
-				DndCraftMod.PACKET_HANDLER.sendToServer(new MagicChooseButtonMessage(3, x, y, z));
+				PacketDistributor.sendToServer(new MagicChooseButtonMessage(3, x, y, z));
 				MagicChooseButtonMessage.handleButtonAction(entity, 3, x, y, z);
 			}
 		}).bounds(this.leftPos + 54, this.topPos + 81, 72, 20).build();
@@ -128,7 +129,7 @@ public class MagicChooseScreen extends AbstractContainerScreen<MagicChooseMenu> 
 		this.addRenderableWidget(button_fake_life);
 		button_invisibility = Button.builder(Component.translatable("gui.dnd_craft.magic_choose.button_invisibility"), e -> {
 			if (true) {
-				DndCraftMod.PACKET_HANDLER.sendToServer(new MagicChooseButtonMessage(4, x, y, z));
+				PacketDistributor.sendToServer(new MagicChooseButtonMessage(4, x, y, z));
 				MagicChooseButtonMessage.handleButtonAction(entity, 4, x, y, z);
 			}
 		}).bounds(this.leftPos + 54, this.topPos + 135, 88, 20).build();
@@ -136,7 +137,7 @@ public class MagicChooseScreen extends AbstractContainerScreen<MagicChooseMenu> 
 		this.addRenderableWidget(button_invisibility);
 		button_night_vision = Button.builder(Component.translatable("gui.dnd_craft.magic_choose.button_night_vision"), e -> {
 			if (true) {
-				DndCraftMod.PACKET_HANDLER.sendToServer(new MagicChooseButtonMessage(5, x, y, z));
+				PacketDistributor.sendToServer(new MagicChooseButtonMessage(5, x, y, z));
 				MagicChooseButtonMessage.handleButtonAction(entity, 5, x, y, z);
 			}
 		}).bounds(this.leftPos + 54, this.topPos + 162, 87, 20).build();
@@ -144,7 +145,7 @@ public class MagicChooseScreen extends AbstractContainerScreen<MagicChooseMenu> 
 		this.addRenderableWidget(button_night_vision);
 		button_fireball = Button.builder(Component.translatable("gui.dnd_craft.magic_choose.button_fireball"), e -> {
 			if (true) {
-				DndCraftMod.PACKET_HANDLER.sendToServer(new MagicChooseButtonMessage(6, x, y, z));
+				PacketDistributor.sendToServer(new MagicChooseButtonMessage(6, x, y, z));
 				MagicChooseButtonMessage.handleButtonAction(entity, 6, x, y, z);
 			}
 		}).bounds(this.leftPos + 54, this.topPos + 189, 67, 20).build();
@@ -152,7 +153,7 @@ public class MagicChooseScreen extends AbstractContainerScreen<MagicChooseMenu> 
 		this.addRenderableWidget(button_fireball);
 		button_snowstorm = Button.builder(Component.translatable("gui.dnd_craft.magic_choose.button_snowstorm"), e -> {
 			if (true) {
-				DndCraftMod.PACKET_HANDLER.sendToServer(new MagicChooseButtonMessage(7, x, y, z));
+				PacketDistributor.sendToServer(new MagicChooseButtonMessage(7, x, y, z));
 				MagicChooseButtonMessage.handleButtonAction(entity, 7, x, y, z);
 			}
 		}).bounds(this.leftPos + 189, this.topPos + 27, 72, 20).build();
@@ -160,7 +161,7 @@ public class MagicChooseScreen extends AbstractContainerScreen<MagicChooseMenu> 
 		this.addRenderableWidget(button_snowstorm);
 		button_fire_wall = Button.builder(Component.translatable("gui.dnd_craft.magic_choose.button_fire_wall"), e -> {
 			if (true) {
-				DndCraftMod.PACKET_HANDLER.sendToServer(new MagicChooseButtonMessage(8, x, y, z));
+				PacketDistributor.sendToServer(new MagicChooseButtonMessage(8, x, y, z));
 				MagicChooseButtonMessage.handleButtonAction(entity, 8, x, y, z);
 			}
 		}).bounds(this.leftPos + 189, this.topPos + 81, 72, 20).build();
@@ -168,7 +169,7 @@ public class MagicChooseScreen extends AbstractContainerScreen<MagicChooseMenu> 
 		this.addRenderableWidget(button_fire_wall);
 		button_strong_invisibility = Button.builder(Component.translatable("gui.dnd_craft.magic_choose.button_strong_invisibility"), e -> {
 			if (true) {
-				DndCraftMod.PACKET_HANDLER.sendToServer(new MagicChooseButtonMessage(9, x, y, z));
+				PacketDistributor.sendToServer(new MagicChooseButtonMessage(9, x, y, z));
 				MagicChooseButtonMessage.handleButtonAction(entity, 9, x, y, z);
 			}
 		}).bounds(this.leftPos + 189, this.topPos + 54, 124, 20).build();

@@ -14,7 +14,7 @@ import net.mcreator.dndcraft.procedures.DailyRationQuestProcedure;
 
 public class DailyRationItem extends Item {
 	public DailyRationItem() {
-		super(new Item.Properties().stacksTo(64).rarity(Rarity.COMMON).food((new FoodProperties.Builder()).nutrition(10).saturationMod(8.2f).meat().build()));
+		super(new Item.Properties().stacksTo(64).rarity(Rarity.COMMON).food((new FoodProperties.Builder()).nutrition(10).saturationModifier(8.2f).build()));
 	}
 
 	@Override

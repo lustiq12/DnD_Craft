@@ -8,7 +8,7 @@ public class WutrauschDisplayOverlayIngameProcedure {
 	public static boolean execute(Entity entity) {
 		if (entity == null)
 			return false;
-		if ((entity.getCapability(DndCraftModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new DndCraftModVariables.PlayerVariables())).wutrausch) {
+		if (entity.getData(DndCraftModVariables.PLAYER_VARIABLES).wutrausch) {
 			return true;
 		}
 		return false;

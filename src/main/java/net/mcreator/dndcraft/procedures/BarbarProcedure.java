@@ -1,6 +1,6 @@
 package net.mcreator.dndcraft.procedures;
 
-import net.minecraftforge.items.ItemHandlerHelper;
+import net.neoforged.neoforge.items.ItemHandlerHelper;
 
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.ItemStack;
@@ -20,11 +20,9 @@ public class BarbarProcedure {
 		if (entity == null)
 			return;
 		{
-			String _setval = "Barbarian";
-			entity.getCapability(DndCraftModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-				capability.Class_Variable = _setval;
-				capability.syncPlayerVariables(entity);
-			});
+			DndCraftModVariables.PlayerVariables _vars = entity.getData(DndCraftModVariables.PLAYER_VARIABLES);
+			_vars.Class_Variable = "Barbarian";
+			_vars.syncPlayerVariables(entity);
 		}
 		{
 			Entity _ent = entity;

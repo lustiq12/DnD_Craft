@@ -13,11 +13,9 @@ public class ClasssettercommandpProcedure {
 		if (entity == null)
 			return;
 		{
-			String _setval = StringArgumentType.getString(arguments, "classname");
-			entity.getCapability(DndCraftModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-				capability.Class_Variable = _setval;
-				capability.syncPlayerVariables(entity);
-			});
+			DndCraftModVariables.PlayerVariables _vars = entity.getData(DndCraftModVariables.PLAYER_VARIABLES);
+			_vars.Class_Variable = StringArgumentType.getString(arguments, "classname");
+			_vars.syncPlayerVariables(entity);
 		}
 	}
 }

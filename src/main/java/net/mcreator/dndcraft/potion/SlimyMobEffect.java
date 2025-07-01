@@ -8,9 +8,4 @@ public class SlimyMobEffect extends MobEffect {
 	public SlimyMobEffect() {
 		super(MobEffectCategory.HARMFUL, -8968520);
 	}
-
-	@Override
-	public boolean isDurationEffectTick(int duration, int amplifier) {
-		return true;
-	}
 }

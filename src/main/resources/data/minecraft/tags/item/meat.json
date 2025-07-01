@@ -1,0 +1,10 @@
+{
+  "replace": false,
+  "values": [
+    "dnd_craft:orksteaak",
+    "dnd_craft:owlbear_drumsticks",
+    "dnd_craft:daily_ration",
+    "dnd_craft:cooked_owlbear_meat",
+    "dnd_craft:raw_owlbear_meat"
+  ]
+}

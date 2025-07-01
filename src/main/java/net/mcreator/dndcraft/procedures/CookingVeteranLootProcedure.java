@@ -17,11 +17,9 @@ public class CookingVeteranLootProcedure {
 		if (entity == null)
 			return;
 		{
-			double _setval = -1;
-			entity.getCapability(DndCraftModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-				capability.DailyRationQuest = _setval;
-				capability.syncPlayerVariables(entity);
-			});
+			DndCraftModVariables.PlayerVariables _vars = entity.getData(DndCraftModVariables.PLAYER_VARIABLES);
+			_vars.DailyRationQuest = -1;
+			_vars.syncPlayerVariables(entity);
 		}
 		for (int index0 = 0; index0 < 15; index0++) {
 			if (world instanceof ServerLevel _level)

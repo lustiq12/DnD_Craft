@@ -4,11 +4,11 @@
  */
 package net.mcreator.dndcraft.init;
 
-import net.minecraftforge.registries.RegistryObject;
-import net.minecraftforge.registries.ForgeRegistries;
-import net.minecraftforge.registries.DeferredRegister;
+import net.neoforged.neoforge.registries.DeferredRegister;
+import net.neoforged.neoforge.registries.DeferredHolder;
 
 import net.minecraft.world.effect.MobEffect;
+import net.minecraft.core.registries.Registries;
 
 import net.mcreator.dndcraft.potion.SlimyMobEffect;
 import net.mcreator.dndcraft.potion.KiEffectMobEffect;
@@ -18,10 +18,10 @@ import net.mcreator.dndcraft.potion.FreezingMobEffect;
 import net.mcreator.dndcraft.DndCraftMod;
 
 public class DndCraftModMobEffects {
-	public static final DeferredRegister<MobEffect> REGISTRY = DeferredRegister.create(ForgeRegistries.MOB_EFFECTS, DndCraftMod.MODID);
-	public static final RegistryObject<MobEffect> SLIMY = REGISTRY.register("slimy", () -> new SlimyMobEffect());
-	public static final RegistryObject<MobEffect> JELLY = REGISTRY.register("jelly", () -> new JellyMobEffect());
-	public static final RegistryObject<MobEffect> FREEZING = REGISTRY.register("freezing", () -> new FreezingMobEffect());
-	public static final RegistryObject<MobEffect> KI_EFFECT = REGISTRY.register("ki_effect", () -> new KiEffectMobEffect());
-	public static final RegistryObject<MobEffect> KI_EFFECT_2 = REGISTRY.register("ki_effect_2", () -> new KiEffect2MobEffect());
+	public static final DeferredRegister<MobEffect> REGISTRY = DeferredRegister.create(Registries.MOB_EFFECT, DndCraftMod.MODID);
+	public static final DeferredHolder<MobEffect, MobEffect> SLIMY = REGISTRY.register("slimy", () -> new SlimyMobEffect());
+	public static final DeferredHolder<MobEffect, MobEffect> JELLY = REGISTRY.register("jelly", () -> new JellyMobEffect());
+	public static final DeferredHolder<MobEffect, MobEffect> FREEZING = REGISTRY.register("freezing", () -> new FreezingMobEffect());
+	public static final DeferredHolder<MobEffect, MobEffect> KI_EFFECT = REGISTRY.register("ki_effect", () -> new KiEffectMobEffect());
+	public static final DeferredHolder<MobEffect, MobEffect> KI_EFFECT_2 = REGISTRY.register("ki_effect_2", () -> new KiEffect2MobEffect());
 }

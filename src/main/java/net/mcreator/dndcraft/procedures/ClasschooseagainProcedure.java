@@ -1,10 +1,9 @@
 package net.mcreator.dndcraft.procedures;
 
-import net.minecraftforge.network.NetworkHooks;
-import net.minecraftforge.fml.common.Mod;
-import net.minecraftforge.eventbus.api.SubscribeEvent;
-import net.minecraftforge.eventbus.api.Event;
-import net.minecraftforge.event.entity.player.PlayerEvent;
+import net.neoforged.neoforge.event.entity.player.PlayerEvent;
+import net.neoforged.fml.common.EventBusSubscriber;
+import net.neoforged.bus.api.SubscribeEvent;
+import net.neoforged.bus.api.Event;
 
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.inventory.AbstractContainerMenu;
@@ -23,7 +22,7 @@ import javax.annotation.Nullable;
 
 import io.netty.buffer.Unpooled;
 
-@Mod.EventBusSubscriber
+@EventBusSubscriber
 public class ClasschooseagainProcedure {
 	@SubscribeEvent
 	public static void onPlayerRespawned(PlayerEvent.PlayerRespawnEvent event) {
@@ -39,10 +38,15 @@ public class ClasschooseagainProcedure {
 			return;
 		if (entity instanceof ServerPlayer _ent) {
 			BlockPos _bpos = BlockPos.containing(x, y, z);
-			NetworkHooks.openScreen((ServerPlayer) _ent, new MenuProvider() {
+			_ent.openMenu(new MenuProvider() {
 				@Override
 				public Component getDisplayName() {
 					return Component.literal("Classes");
+				}
+
+				@Override
+				public boolean shouldTriggerClientSideContainerClosingOnOpen() {
+					return false;
 				}
 
 				@Override

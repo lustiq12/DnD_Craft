@@ -1,5 +1,7 @@
 package net.mcreator.dndcraft.client.gui;
 
+import net.neoforged.neoforge.network.PacketDistributor;
+
 import net.minecraft.world.level.Level;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.player.Inventory;
@@ -11,7 +13,6 @@ import net.minecraft.client.gui.GuiGraphics;
 
 import net.mcreator.dndcraft.world.inventory.KiMenu;
 import net.mcreator.dndcraft.network.KiButtonMessage;
-import net.mcreator.dndcraft.DndCraftMod;
 
 import java.util.HashMap;
 
@@ -36,11 +37,11 @@ public class KiScreen extends AbstractContainerScreen<KiMenu> {
 		this.imageHeight = 189;
 	}
 
-	private static final ResourceLocation texture = new ResourceLocation("dnd_craft:textures/screens/ki.png");
+	private static final ResourceLocation texture = ResourceLocation.parse("dnd_craft:textures/screens/ki.png");
 
 	@Override
 	public void render(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {
-		this.renderBackground(guiGraphics);
+		this.renderBackground(guiGraphics, mouseX, mouseY, partialTicks);
 		super.render(guiGraphics, mouseX, mouseY, partialTicks);
 		this.renderTooltip(guiGraphics, mouseX, mouseY);
 	}
@@ -73,7 +74,7 @@ public class KiScreen extends AbstractContainerScreen<KiMenu> {
 		super.init();
 		button_strong_fist = Button.builder(Component.translatable("gui.dnd_craft.ki.button_strong_fist"), e -> {
 			if (true) {
-				DndCraftMod.PACKET_HANDLER.sendToServer(new KiButtonMessage(0, x, y, z));
+				PacketDistributor.sendToServer(new KiButtonMessage(0, x, y, z));
 				KiButtonMessage.handleButtonAction(entity, 0, x, y, z);
 			}
 		}).bounds(this.leftPos + 7, this.topPos + 27, 82, 20).build();
@@ -81,7 +82,7 @@ public class KiScreen extends AbstractContainerScreen<KiMenu> {
 		this.addRenderableWidget(button_strong_fist);
 		button_better_defense = Button.builder(Component.translatable("gui.dnd_craft.ki.button_better_defense"), e -> {
 			if (true) {
-				DndCraftMod.PACKET_HANDLER.sendToServer(new KiButtonMessage(1, x, y, z));
+				PacketDistributor.sendToServer(new KiButtonMessage(1, x, y, z));
 				KiButtonMessage.handleButtonAction(entity, 1, x, y, z);
 			}
 		}).bounds(this.leftPos + 7, this.topPos + 54, 98, 20).build();

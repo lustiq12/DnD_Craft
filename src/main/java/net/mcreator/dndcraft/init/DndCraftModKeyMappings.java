@@ -6,11 +6,12 @@ package net.mcreator.dndcraft.init;
 
 import org.lwjgl.glfw.GLFW;
 
-import net.minecraftforge.fml.common.Mod;
-import net.minecraftforge.eventbus.api.SubscribeEvent;
-import net.minecraftforge.event.TickEvent;
-import net.minecraftforge.client.event.RegisterKeyMappingsEvent;
-import net.minecraftforge.api.distmarker.Dist;
+import net.neoforged.neoforge.network.PacketDistributor;
+import net.neoforged.neoforge.client.event.RegisterKeyMappingsEvent;
+import net.neoforged.neoforge.client.event.ClientTickEvent;
+import net.neoforged.fml.common.EventBusSubscriber;
+import net.neoforged.bus.api.SubscribeEvent;
+import net.neoforged.api.distmarker.Dist;
 
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.KeyMapping;
@@ -20,9 +21,9 @@ import net.mcreator.dndcraft.network.ClassabilityopnguiMessage;
 import net.mcreator.dndcraft.network.Classability3Message;
 import net.mcreator.dndcraft.network.Classability2Message;
 import net.mcreator.dndcraft.network.Classability1Message;
-import net.mcreator.dndcraft.DndCraftMod;
+import net.mcreator.dndcraft.network.ClassChooseGuiKeyMessage;
 
-@Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD, value = {Dist.CLIENT})
+@EventBusSubscriber(bus = EventBusSubscriber.Bus.MOD, value = {Dist.CLIENT})
 public class DndCraftModKeyMappings {
 	public static final KeyMapping CLASSABILITY_1 = new KeyMapping("key.dnd_craft.classability_1", GLFW.GLFW_KEY_Y, "key.categories.gameplay") {
 		private boolean isDownOld = false;
@@ -31,7 +32,7 @@ public class DndCraftModKeyMappings {
 		public void setDown(boolean isDown) {
 			super.setDown(isDown);
 			if (isDownOld != isDown && isDown) {
-				DndCraftMod.PACKET_HANDLER.sendToServer(new Classability1Message(0, 0));
+				PacketDistributor.sendToServer(new Classability1Message(0, 0));
 				Classability1Message.pressAction(Minecraft.getInstance().player, 0, 0);
 			}
 			isDownOld = isDown;
@@ -44,7 +45,7 @@ public class DndCraftModKeyMappings {
 		public void setDown(boolean isDown) {
 			super.setDown(isDown);
 			if (isDownOld != isDown && isDown) {
-				DndCraftMod.PACKET_HANDLER.sendToServer(new Classability2Message(0, 0));
+				PacketDistributor.sendToServer(new Classability2Message(0, 0));
 				Classability2Message.pressAction(Minecraft.getInstance().player, 0, 0);
 			}
 			isDownOld = isDown;
@@ -57,7 +58,7 @@ public class DndCraftModKeyMappings {
 		public void setDown(boolean isDown) {
 			super.setDown(isDown);
 			if (isDownOld != isDown && isDown) {
-				DndCraftMod.PACKET_HANDLER.sendToServer(new Classability3Message(0, 0));
+				PacketDistributor.sendToServer(new Classability3Message(0, 0));
 				Classability3Message.pressAction(Minecraft.getInstance().player, 0, 0);
 			}
 			isDownOld = isDown;
@@ -70,7 +71,7 @@ public class DndCraftModKeyMappings {
 		public void setDown(boolean isDown) {
 			super.setDown(isDown);
 			if (isDownOld != isDown && isDown) {
-				DndCraftMod.PACKET_HANDLER.sendToServer(new ClassabilityopnguiMessage(0, 0));
+				PacketDistributor.sendToServer(new ClassabilityopnguiMessage(0, 0));
 				ClassabilityopnguiMessage.pressAction(Minecraft.getInstance().player, 0, 0);
 			}
 			isDownOld = isDown;
@@ -83,8 +84,21 @@ public class DndCraftModKeyMappings {
 		public void setDown(boolean isDown) {
 			super.setDown(isDown);
 			if (isDownOld != isDown && isDown) {
-				DndCraftMod.PACKET_HANDLER.sendToServer(new DodgeMessage(0, 0));
+				PacketDistributor.sendToServer(new DodgeMessage(0, 0));
 				DodgeMessage.pressAction(Minecraft.getInstance().player, 0, 0);
+			}
+			isDownOld = isDown;
+		}
+	};
+	public static final KeyMapping CLASS_CHOOSE_GUI_KEY = new KeyMapping("key.dnd_craft.class_choose_gui_key", GLFW.GLFW_KEY_V, "key.categories.gameplay") {
+		private boolean isDownOld = false;
+
+		@Override
+		public void setDown(boolean isDown) {
+			super.setDown(isDown);
+			if (isDownOld != isDown && isDown) {
+				PacketDistributor.sendToServer(new ClassChooseGuiKeyMessage(0, 0));
+				ClassChooseGuiKeyMessage.pressAction(Minecraft.getInstance().player, 0, 0);
 			}
 			isDownOld = isDown;
 		}
@@ -97,18 +111,20 @@ public class DndCraftModKeyMappings {
 		event.register(CLASSABILITY_3);
 		event.register(CLASSABILITYOPNGUI);
 		event.register(DODGE);
+		event.register(CLASS_CHOOSE_GUI_KEY);
 	}
 
-	@Mod.EventBusSubscriber({Dist.CLIENT})
+	@EventBusSubscriber({Dist.CLIENT})
 	public static class KeyEventListener {
 		@SubscribeEvent
-		public static void onClientTick(TickEvent.ClientTickEvent event) {
+		public static void onClientTick(ClientTickEvent.Post event) {
 			if (Minecraft.getInstance().screen == null) {
 				CLASSABILITY_1.consumeClick();
 				CLASSABILITY_2.consumeClick();
 				CLASSABILITY_3.consumeClick();
 				CLASSABILITYOPNGUI.consumeClick();
 				DODGE.consumeClick();
+				CLASS_CHOOSE_GUI_KEY.consumeClick();
 			}
 		}
 	}

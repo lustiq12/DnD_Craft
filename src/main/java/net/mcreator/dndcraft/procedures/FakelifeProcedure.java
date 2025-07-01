@@ -9,13 +9,11 @@ public class FakelifeProcedure {
 	public static void execute(Entity entity) {
 		if (entity == null)
 			return;
-		if ((entity.getCapability(DndCraftModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new DndCraftModVariables.PlayerVariables())).PlayerLevel > 2) {
+		if (entity.getData(DndCraftModVariables.PLAYER_VARIABLES).PlayerLevel > 2) {
 			{
-				String _setval = "fakelife";
-				entity.getCapability(DndCraftModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-					capability.Spell = _setval;
-					capability.syncPlayerVariables(entity);
-				});
+				DndCraftModVariables.PlayerVariables _vars = entity.getData(DndCraftModVariables.PLAYER_VARIABLES);
+				_vars.Spell = "fakelife";
+				_vars.syncPlayerVariables(entity);
 			}
 			if (entity instanceof Player _player)
 				_player.closeContainer();

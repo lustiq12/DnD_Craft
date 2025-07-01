@@ -1,5 +1,7 @@
 package net.mcreator.dndcraft.client.gui;
 
+import net.neoforged.neoforge.network.PacketDistributor;
+
 import net.minecraft.world.level.Level;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.player.Inventory;
@@ -11,7 +13,6 @@ import net.minecraft.client.gui.GuiGraphics;
 
 import net.mcreator.dndcraft.world.inventory.ClassesMenu;
 import net.mcreator.dndcraft.network.ClassesButtonMessage;
-import net.mcreator.dndcraft.DndCraftMod;
 
 import java.util.HashMap;
 
@@ -39,11 +40,11 @@ public class ClassesScreen extends AbstractContainerScreen<ClassesMenu> {
 		this.imageHeight = 189;
 	}
 
-	private static final ResourceLocation texture = new ResourceLocation("dnd_craft:textures/screens/classes.png");
+	private static final ResourceLocation texture = ResourceLocation.parse("dnd_craft:textures/screens/classes.png");
 
 	@Override
 	public void render(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {
-		this.renderBackground(guiGraphics);
+		this.renderBackground(guiGraphics, mouseX, mouseY, partialTicks);
 		super.render(guiGraphics, mouseX, mouseY, partialTicks);
 		this.renderTooltip(guiGraphics, mouseX, mouseY);
 	}
@@ -55,15 +56,15 @@ public class ClassesScreen extends AbstractContainerScreen<ClassesMenu> {
 		RenderSystem.defaultBlendFunc();
 		guiGraphics.blit(texture, this.leftPos, this.topPos, 0, 0, this.imageWidth, this.imageHeight, this.imageWidth, this.imageHeight);
 
-		guiGraphics.blit(new ResourceLocation("dnd_craft:textures/screens/barbaricon.png"), this.leftPos + 7, this.topPos + 9, 0, 0, 16, 16, 16, 16);
+		guiGraphics.blit(ResourceLocation.parse("dnd_craft:textures/screens/barbaricon.png"), this.leftPos + 7, this.topPos + 9, 0, 0, 16, 16, 16, 16);
 
-		guiGraphics.blit(new ResourceLocation("dnd_craft:textures/screens/christiano_ronaldo_horn.png"), this.leftPos + 7, this.topPos + 36, 0, 0, 16, 16, 16, 16);
+		guiGraphics.blit(ResourceLocation.parse("dnd_craft:textures/screens/christiano_ronaldo_horn.png"), this.leftPos + 7, this.topPos + 36, 0, 0, 16, 16, 16, 16);
 
-		guiGraphics.blit(new ResourceLocation("dnd_craft:textures/screens/druidstaff.png"), this.leftPos + 7, this.topPos + 63, 0, 0, 16, 16, 16, 16);
+		guiGraphics.blit(ResourceLocation.parse("dnd_craft:textures/screens/druidstaff.png"), this.leftPos + 7, this.topPos + 63, 0, 0, 16, 16, 16, 16);
 
-		guiGraphics.blit(new ResourceLocation("dnd_craft:textures/screens/zauberstab.png"), this.leftPos + 7, this.topPos + 90, 0, 0, 16, 16, 16, 16);
+		guiGraphics.blit(ResourceLocation.parse("dnd_craft:textures/screens/zauberstab.png"), this.leftPos + 7, this.topPos + 90, 0, 0, 16, 16, 16, 16);
 
-		guiGraphics.blit(new ResourceLocation("dnd_craft:textures/screens/bruh.png"), this.leftPos + 106, this.topPos + 9, 0, 0, 16, 16, 16, 16);
+		guiGraphics.blit(ResourceLocation.parse("dnd_craft:textures/screens/bruh.png"), this.leftPos + 106, this.topPos + 9, 0, 0, 16, 16, 16, 16);
 
 		RenderSystem.disableBlend();
 	}
@@ -79,6 +80,7 @@ public class ClassesScreen extends AbstractContainerScreen<ClassesMenu> {
 
 	@Override
 	protected void renderLabels(GuiGraphics guiGraphics, int mouseX, int mouseY) {
+		guiGraphics.drawString(this.font, Component.translatable("gui.dnd_craft.classes.label_in_dev"), 79, 72, -12829636, false);
 	}
 
 	@Override
@@ -86,7 +88,7 @@ public class ClassesScreen extends AbstractContainerScreen<ClassesMenu> {
 		super.init();
 		button_barbarian = Button.builder(Component.translatable("gui.dnd_craft.classes.button_barbarian"), e -> {
 			if (true) {
-				DndCraftMod.PACKET_HANDLER.sendToServer(new ClassesButtonMessage(0, x, y, z));
+				PacketDistributor.sendToServer(new ClassesButtonMessage(0, x, y, z));
 				ClassesButtonMessage.handleButtonAction(entity, 0, x, y, z);
 			}
 		}).bounds(this.leftPos + 25, this.topPos + 9, 72, 20).build();
@@ -94,7 +96,7 @@ public class ClassesScreen extends AbstractContainerScreen<ClassesMenu> {
 		this.addRenderableWidget(button_barbarian);
 		button_bard = Button.builder(Component.translatable("gui.dnd_craft.classes.button_bard"), e -> {
 			if (true) {
-				DndCraftMod.PACKET_HANDLER.sendToServer(new ClassesButtonMessage(1, x, y, z));
+				PacketDistributor.sendToServer(new ClassesButtonMessage(1, x, y, z));
 				ClassesButtonMessage.handleButtonAction(entity, 1, x, y, z);
 			}
 		}).bounds(this.leftPos + 25, this.topPos + 36, 46, 20).build();
@@ -102,7 +104,7 @@ public class ClassesScreen extends AbstractContainerScreen<ClassesMenu> {
 		this.addRenderableWidget(button_bard);
 		button_druid = Button.builder(Component.translatable("gui.dnd_craft.classes.button_druid"), e -> {
 			if (true) {
-				DndCraftMod.PACKET_HANDLER.sendToServer(new ClassesButtonMessage(2, x, y, z));
+				PacketDistributor.sendToServer(new ClassesButtonMessage(2, x, y, z));
 				ClassesButtonMessage.handleButtonAction(entity, 2, x, y, z);
 			}
 		}).bounds(this.leftPos + 25, this.topPos + 63, 51, 20).build();
@@ -110,7 +112,7 @@ public class ClassesScreen extends AbstractContainerScreen<ClassesMenu> {
 		this.addRenderableWidget(button_druid);
 		button_magician = Button.builder(Component.translatable("gui.dnd_craft.classes.button_magician"), e -> {
 			if (true) {
-				DndCraftMod.PACKET_HANDLER.sendToServer(new ClassesButtonMessage(3, x, y, z));
+				PacketDistributor.sendToServer(new ClassesButtonMessage(3, x, y, z));
 				ClassesButtonMessage.handleButtonAction(entity, 3, x, y, z);
 			}
 		}).bounds(this.leftPos + 25, this.topPos + 90, 67, 20).build();
@@ -118,7 +120,7 @@ public class ClassesScreen extends AbstractContainerScreen<ClassesMenu> {
 		this.addRenderableWidget(button_magician);
 		button_monk = Button.builder(Component.translatable("gui.dnd_craft.classes.button_monk"), e -> {
 			if (true) {
-				DndCraftMod.PACKET_HANDLER.sendToServer(new ClassesButtonMessage(4, x, y, z));
+				PacketDistributor.sendToServer(new ClassesButtonMessage(4, x, y, z));
 				ClassesButtonMessage.handleButtonAction(entity, 4, x, y, z);
 			}
 		}).bounds(this.leftPos + 124, this.topPos + 9, 46, 20).build();

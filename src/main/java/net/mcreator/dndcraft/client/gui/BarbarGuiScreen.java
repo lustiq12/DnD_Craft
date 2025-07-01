@@ -1,5 +1,7 @@
 package net.mcreator.dndcraft.client.gui;
 
+import net.neoforged.neoforge.network.PacketDistributor;
+
 import net.minecraft.world.level.Level;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.player.Inventory;
@@ -12,7 +14,6 @@ import net.minecraft.client.gui.GuiGraphics;
 import net.mcreator.dndcraft.world.inventory.BarbarGuiMenu;
 import net.mcreator.dndcraft.procedures.DisplaybuttonProcedure;
 import net.mcreator.dndcraft.network.BarbarGuiButtonMessage;
-import net.mcreator.dndcraft.DndCraftMod;
 
 import java.util.HashMap;
 
@@ -37,11 +38,11 @@ public class BarbarGuiScreen extends AbstractContainerScreen<BarbarGuiMenu> {
 		this.imageHeight = 189;
 	}
 
-	private static final ResourceLocation texture = new ResourceLocation("dnd_craft:textures/screens/barbar_gui.png");
+	private static final ResourceLocation texture = ResourceLocation.parse("dnd_craft:textures/screens/barbar_gui.png");
 
 	@Override
 	public void render(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {
-		this.renderBackground(guiGraphics);
+		this.renderBackground(guiGraphics, mouseX, mouseY, partialTicks);
 		super.render(guiGraphics, mouseX, mouseY, partialTicks);
 		this.renderTooltip(guiGraphics, mouseX, mouseY);
 	}
@@ -53,15 +54,15 @@ public class BarbarGuiScreen extends AbstractContainerScreen<BarbarGuiMenu> {
 		RenderSystem.defaultBlendFunc();
 		guiGraphics.blit(texture, this.leftPos, this.topPos, 0, 0, this.imageWidth, this.imageHeight, this.imageWidth, this.imageHeight);
 
-		guiGraphics.blit(new ResourceLocation("dnd_craft:textures/screens/experience_bottle.png"), this.leftPos + 16, this.topPos + 27, 0, 0, 16, 16, 16, 16);
+		guiGraphics.blit(ResourceLocation.parse("dnd_craft:textures/screens/experience_bottle.png"), this.leftPos + 16, this.topPos + 27, 0, 0, 16, 16, 16, 16);
 
-		guiGraphics.blit(new ResourceLocation("dnd_craft:textures/screens/experience_bottle.png"), this.leftPos + 16, this.topPos + 54, 0, 0, 16, 16, 16, 16);
+		guiGraphics.blit(ResourceLocation.parse("dnd_craft:textures/screens/experience_bottle.png"), this.leftPos + 16, this.topPos + 54, 0, 0, 16, 16, 16, 16);
 
-		guiGraphics.blit(new ResourceLocation("dnd_craft:textures/screens/experience_bottle.png"), this.leftPos + 16, this.topPos + 81, 0, 0, 16, 16, 16, 16);
+		guiGraphics.blit(ResourceLocation.parse("dnd_craft:textures/screens/experience_bottle.png"), this.leftPos + 16, this.topPos + 81, 0, 0, 16, 16, 16, 16);
 
-		guiGraphics.blit(new ResourceLocation("dnd_craft:textures/screens/experience_bottle.png"), this.leftPos + 16, this.topPos + 108, 0, 0, 16, 16, 16, 16);
+		guiGraphics.blit(ResourceLocation.parse("dnd_craft:textures/screens/experience_bottle.png"), this.leftPos + 16, this.topPos + 108, 0, 0, 16, 16, 16, 16);
 
-		guiGraphics.blit(new ResourceLocation("dnd_craft:textures/screens/experience_bottle.png"), this.leftPos + 16, this.topPos + 135, 0, 0, 16, 16, 16, 16);
+		guiGraphics.blit(ResourceLocation.parse("dnd_craft:textures/screens/experience_bottle.png"), this.leftPos + 16, this.topPos + 135, 0, 0, 16, 16, 16, 16);
 
 		RenderSystem.disableBlend();
 	}
@@ -95,7 +96,7 @@ public class BarbarGuiScreen extends AbstractContainerScreen<BarbarGuiMenu> {
 		super.init();
 		button_choose = Button.builder(Component.translatable("gui.dnd_craft.barbar_gui.button_choose"), e -> {
 			if (DisplaybuttonProcedure.execute(entity)) {
-				DndCraftMod.PACKET_HANDLER.sendToServer(new BarbarGuiButtonMessage(0, x, y, z));
+				PacketDistributor.sendToServer(new BarbarGuiButtonMessage(0, x, y, z));
 				BarbarGuiButtonMessage.handleButtonAction(entity, 0, x, y, z);
 			}
 		}).bounds(this.leftPos + 16, this.topPos + 162, 56, 20).build(builder -> new Button(builder) {
@@ -109,7 +110,7 @@ public class BarbarGuiScreen extends AbstractContainerScreen<BarbarGuiMenu> {
 		this.addRenderableWidget(button_choose);
 		button_exit = Button.builder(Component.translatable("gui.dnd_craft.barbar_gui.button_exit"), e -> {
 			if (DisplaybuttonProcedure.execute(entity)) {
-				DndCraftMod.PACKET_HANDLER.sendToServer(new BarbarGuiButtonMessage(1, x, y, z));
+				PacketDistributor.sendToServer(new BarbarGuiButtonMessage(1, x, y, z));
 				BarbarGuiButtonMessage.handleButtonAction(entity, 1, x, y, z);
 			}
 		}).bounds(this.leftPos + 115, this.topPos + 162, 46, 20).build(builder -> new Button(builder) {

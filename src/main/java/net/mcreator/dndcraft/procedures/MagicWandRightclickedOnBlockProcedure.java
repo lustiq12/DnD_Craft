@@ -20,25 +20,23 @@ public class MagicWandRightclickedOnBlockProcedure {
 	public static void execute(LevelAccessor world, double x, double y, double z, Entity entity, ItemStack itemstack) {
 		if (entity == null)
 			return;
-		if (((entity.getCapability(DndCraftModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new DndCraftModVariables.PlayerVariables())).Class_Variable).equals("Magician")) {
+		if ((entity.getData(DndCraftModVariables.PLAYER_VARIABLES).Class_Variable).equals("Magician")) {
 			if (!(entity instanceof Player _plrCldCheck1 && _plrCldCheck1.getCooldowns().isOnCooldown(itemstack.getItem()))) {
-				if ((entity.getCapability(DndCraftModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new DndCraftModVariables.PlayerVariables())).Mana > 19) {
-					if (((entity.getCapability(DndCraftModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new DndCraftModVariables.PlayerVariables())).Spell).equals("fakelife")) {
+				if (entity.getData(DndCraftModVariables.PLAYER_VARIABLES).Mana > 19) {
+					if ((entity.getData(DndCraftModVariables.PLAYER_VARIABLES).Spell).equals("fakelife")) {
 						if (world instanceof ServerLevel _level)
 							_level.sendParticles((SimpleParticleType) (DndCraftModParticleTypes.SHIELD_PARTICLE.get()), x, y, z, 1000, 2, 2, 2, 1);
 						if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
 							_entity.addEffect(new MobEffectInstance(MobEffects.ABSORPTION, 1200, 3));
 						{
-							double _setval = (entity.getCapability(DndCraftModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new DndCraftModVariables.PlayerVariables())).Mana - 20;
-							entity.getCapability(DndCraftModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-								capability.Mana = _setval;
-								capability.syncPlayerVariables(entity);
-							});
+							DndCraftModVariables.PlayerVariables _vars = entity.getData(DndCraftModVariables.PLAYER_VARIABLES);
+							_vars.Mana = entity.getData(DndCraftModVariables.PLAYER_VARIABLES).Mana - 20;
+							_vars.syncPlayerVariables(entity);
 						}
 					}
 				}
-				if ((entity.getCapability(DndCraftModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new DndCraftModVariables.PlayerVariables())).Mana > 29) {
-					if (((entity.getCapability(DndCraftModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new DndCraftModVariables.PlayerVariables())).Spell).equals("invisibility")) {
+				if (entity.getData(DndCraftModVariables.PLAYER_VARIABLES).Mana > 29) {
+					if ((entity.getData(DndCraftModVariables.PLAYER_VARIABLES).Spell).equals("invisibility")) {
 						if (world instanceof ServerLevel _level)
 							_level.sendParticles(ParticleTypes.SOUL_FIRE_FLAME, x, y, z, 1000, 2, 2, 2, 1);
 						if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
@@ -46,14 +44,12 @@ public class MagicWandRightclickedOnBlockProcedure {
 						if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
 							_entity.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 300, 2));
 						{
-							double _setval = (entity.getCapability(DndCraftModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new DndCraftModVariables.PlayerVariables())).Mana - 30;
-							entity.getCapability(DndCraftModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-								capability.Mana = _setval;
-								capability.syncPlayerVariables(entity);
-							});
+							DndCraftModVariables.PlayerVariables _vars = entity.getData(DndCraftModVariables.PLAYER_VARIABLES);
+							_vars.Mana = entity.getData(DndCraftModVariables.PLAYER_VARIABLES).Mana - 30;
+							_vars.syncPlayerVariables(entity);
 						}
 					}
-					if (((entity.getCapability(DndCraftModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new DndCraftModVariables.PlayerVariables())).Spell).equals("nightvision")) {
+					if ((entity.getData(DndCraftModVariables.PLAYER_VARIABLES).Spell).equals("nightvision")) {
 						if (world instanceof ServerLevel _level)
 							_level.sendParticles(ParticleTypes.CRIMSON_SPORE, x, y, z, 1000, 2, 2, 2, 1);
 						if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
@@ -65,16 +61,14 @@ public class MagicWandRightclickedOnBlockProcedure {
 								_entity.addEffect(new MobEffectInstance(MobEffects.REGENERATION, 500, 1));
 						}
 						{
-							double _setval = (entity.getCapability(DndCraftModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new DndCraftModVariables.PlayerVariables())).Mana - 30;
-							entity.getCapability(DndCraftModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-								capability.Mana = _setval;
-								capability.syncPlayerVariables(entity);
-							});
+							DndCraftModVariables.PlayerVariables _vars = entity.getData(DndCraftModVariables.PLAYER_VARIABLES);
+							_vars.Mana = entity.getData(DndCraftModVariables.PLAYER_VARIABLES).Mana - 30;
+							_vars.syncPlayerVariables(entity);
 						}
 					}
 				}
-				if ((entity.getCapability(DndCraftModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new DndCraftModVariables.PlayerVariables())).Mana > 49) {
-					if (((entity.getCapability(DndCraftModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new DndCraftModVariables.PlayerVariables())).Spell).equals("stronginvisibility")) {
+				if (entity.getData(DndCraftModVariables.PLAYER_VARIABLES).Mana > 49) {
+					if ((entity.getData(DndCraftModVariables.PLAYER_VARIABLES).Spell).equals("stronginvisibility")) {
 						if (world instanceof ServerLevel _level)
 							_level.sendParticles(ParticleTypes.SOUL_FIRE_FLAME, x, y, z, 1000, 2, 2, 2, 1);
 						if (entity instanceof Player _player) {
@@ -86,19 +80,15 @@ public class MagicWandRightclickedOnBlockProcedure {
 						if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
 							_entity.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 200, 2));
 						{
-							boolean _setval = true;
-							entity.getCapability(DndCraftModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-								capability.Dogde = _setval;
-								capability.syncPlayerVariables(entity);
-							});
+							DndCraftModVariables.PlayerVariables _vars = entity.getData(DndCraftModVariables.PLAYER_VARIABLES);
+							_vars.Dogde = true;
+							_vars.syncPlayerVariables(entity);
 						}
 						DndCraftMod.queueServerWork(200, () -> {
 							{
-								boolean _setval = false;
-								entity.getCapability(DndCraftModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-									capability.Dogde = _setval;
-									capability.syncPlayerVariables(entity);
-								});
+								DndCraftModVariables.PlayerVariables _vars = entity.getData(DndCraftModVariables.PLAYER_VARIABLES);
+								_vars.Dogde = false;
+								_vars.syncPlayerVariables(entity);
 							}
 						});
 						DndCraftMod.queueServerWork(25, () -> {
@@ -108,11 +98,9 @@ public class MagicWandRightclickedOnBlockProcedure {
 							}
 						});
 						{
-							double _setval = (entity.getCapability(DndCraftModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new DndCraftModVariables.PlayerVariables())).Mana - 50;
-							entity.getCapability(DndCraftModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-								capability.Mana = _setval;
-								capability.syncPlayerVariables(entity);
-							});
+							DndCraftModVariables.PlayerVariables _vars = entity.getData(DndCraftModVariables.PLAYER_VARIABLES);
+							_vars.Mana = entity.getData(DndCraftModVariables.PLAYER_VARIABLES).Mana - 50;
+							_vars.syncPlayerVariables(entity);
 						}
 					}
 				}
