@@ -15,8 +15,8 @@
         "value": "Blocks.GRASS"
       }
     ],
-    "spacing": 12,
-    "separation": 8,
+    "spacing": 40,
+    "separation": 30,
     "restrictionBiomes": [
       {
         "value": "plains"
@@ -44,6 +44,9 @@
       },
       {
         "value": "mountains"
+      },
+      {
+        "value": "CUSTOM:FeywildForest"
       }
     ],
     "terrainAdaptation": "beard_thin",

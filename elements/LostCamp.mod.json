@@ -9,8 +9,8 @@
         "value": "Blocks.STRUCTURE_BLOCK"
       }
     ],
-    "spacing": 30,
-    "separation": 6,
+    "spacing": 40,
+    "separation": 30,
     "restrictionBiomes": [
       {
         "value": "birch_forest"
@@ -35,6 +35,9 @@
       },
       {
         "value": "mutated_plains"
+      },
+      {
+        "value": "CUSTOM:FeywildForest"
       }
     ],
     "terrainAdaptation": "beard_thin",

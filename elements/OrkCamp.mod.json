@@ -9,8 +9,8 @@
         "value": "Blocks.STRUCTURE_BLOCK"
       }
     ],
-    "spacing": 25,
-    "separation": 4,
+    "spacing": 40,
+    "separation": 30,
     "restrictionBiomes": [
       {
         "value": "plains"
@@ -35,6 +35,9 @@
       },
       {
         "value": "taiga_cold"
+      },
+      {
+        "value": "CUSTOM:FeywildForest"
       }
     ],
     "terrainAdaptation": "beard_thin",

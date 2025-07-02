@@ -5,8 +5,8 @@
   },
   "spawners": {
     "type": "dnd_craft:goblin",
-    "weight": 4,
-    "minCount": 4,
-    "maxCount": 4
+    "weight": 2,
+    "minCount": 1,
+    "maxCount": 3
   }
 }

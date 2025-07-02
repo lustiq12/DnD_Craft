@@ -18,7 +18,8 @@
     "forest",
     "old_growth_birch_forest",
     "snowy_slopes",
-    "snowy_taiga"
+    "snowy_taiga",
+    "dnd_craft:feywild_forest"
   ],
   "use_expansion_hack": false
 }

@@ -19,7 +19,8 @@
     "old_growth_birch_forest",
     "windswept_forest",
     "windswept_gravelly_hills",
-    "windswept_hills"
+    "windswept_hills",
+    "dnd_craft:feywild_forest"
   ],
   "use_expansion_hack": false
 }

@@ -38,6 +38,9 @@
       },
       {
         "value": "frozen_river"
+      },
+      {
+        "value": "CUSTOM:FeywildForest"
       }
     ],
     "terrainAdaptation": "beard_thin",

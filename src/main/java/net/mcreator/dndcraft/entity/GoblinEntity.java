@@ -66,7 +66,6 @@ public class GoblinEntity extends Monster implements GeoEntity {
 		super(type, world);
 		xpReward = 5;
 		setNoAi(false);
-		setPersistenceRequired();
 	}
 
 	@Override
@@ -100,11 +99,6 @@ public class GoblinEntity extends Monster implements GeoEntity {
 		this.targetSelector.addGoal(5, new NearestAttackableTargetGoal(this, Player.class, false, false));
 		this.targetSelector.addGoal(6, new NearestAttackableTargetGoal(this, Villager.class, false, false));
 		this.goalSelector.addGoal(7, new FollowMobGoal(this, 1, (float) 10, (float) 5));
-	}
-
-	@Override
-	public boolean removeWhenFarAway(double distanceToClosestPlayer) {
-		return false;
 	}
 
 	@Override

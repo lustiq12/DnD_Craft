@@ -19,7 +19,8 @@
     "deep_frozen_ocean",
     "frozen_ocean",
     "frozen_peaks",
-    "frozen_river"
+    "frozen_river",
+    "dnd_craft:feywild_forest"
   ],
   "use_expansion_hack": false
 }
