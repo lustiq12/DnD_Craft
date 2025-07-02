@@ -13,6 +13,8 @@ import net.mcreator.dndcraft.block.SilverOreBlock;
 import net.mcreator.dndcraft.block.ScrapblockBlock;
 import net.mcreator.dndcraft.block.RawOwlbearmeatBlockBlock;
 import net.mcreator.dndcraft.block.PlatinumOreBlock;
+import net.mcreator.dndcraft.block.GlimmerLeavesBlock;
+import net.mcreator.dndcraft.block.FeywildPortalBlock;
 import net.mcreator.dndcraft.block.DeepslateSilverOreBlock;
 import net.mcreator.dndcraft.block.Cookedowlbearmeatblock4Block;
 import net.mcreator.dndcraft.block.Cookedowlbearmeatblock3Block;
@@ -33,6 +35,8 @@ public class DndCraftModBlocks {
 	public static final DeferredBlock<Block> SCRAPBLOCK = REGISTRY.register("scrapblock", ScrapblockBlock::new);
 	public static final DeferredBlock<Block> SILVER_ORE = REGISTRY.register("silver_ore", SilverOreBlock::new);
 	public static final DeferredBlock<Block> DEEPSLATE_SILVER_ORE = REGISTRY.register("deepslate_silver_ore", DeepslateSilverOreBlock::new);
+	public static final DeferredBlock<Block> GLIMMER_LEAVES = REGISTRY.register("glimmer_leaves", GlimmerLeavesBlock::new);
+	public static final DeferredBlock<Block> FEYWILD_PORTAL = REGISTRY.register("feywild_portal", FeywildPortalBlock::new);
 	// Start of user code block custom blocks
 	// End of user code block custom blocks
 }

@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "axis=z": {
+      "model": "dnd_craft:block/feywild_portal_ew"
+    },
+    "axis=x": {
+      "model": "dnd_craft:block/feywild_portal_ns"
+    }
+  }
+}

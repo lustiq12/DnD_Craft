@@ -6394,6 +6394,87 @@
         ]
       },
       "path": "~/ClassSystem"
+    },
+    {
+      "name": "FeywildForest",
+      "type": "biome",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "feywild_forest",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/dnd_craft/worldgen/configured_feature/feywild_forest_tree.json",
+          "src/main/resources/data/dnd_craft/worldgen/placed_feature/feywild_forest_tree.json",
+          "src/main/resources/data/dnd_craft/worldgen/biome/feywild_forest.json"
+        ]
+      },
+      "path": "~/DimensionsBiomes"
+    },
+    {
+      "name": "GlimmerLeaves",
+      "type": "block",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "glimmer_leaves",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/dnd_craft/models/block/glimmer_leaves.json",
+          "src/main/resources/assets/dnd_craft/models/item/glimmer_leaves.json",
+          "src/main/resources/assets/dnd_craft/blockstates/glimmer_leaves.json",
+          "src/main/java/net/mcreator/dndcraft/block/GlimmerLeavesBlock.java",
+          "src/main/resources/data/dnd_craft/loot_table/blocks/glimmer_leaves.json"
+        ]
+      }
+    },
+    {
+      "name": "GlimmerleafFruit",
+      "type": "item",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "glimmerleaf_fruit",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/dnd_craft/models/item/glimmerleaf_fruit.json",
+          "src/main/java/net/mcreator/dndcraft/item/GlimmerleafFruitItem.java"
+        ]
+      },
+      "path": "~/Food"
+    },
+    {
+      "name": "GlimmerLeavesDrop",
+      "type": "loottable",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "glimmer_leaves_drop",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/dnd_craft/loot_table/blocks/glimmer_leaves.json"
+        ]
+      },
+      "path": "~/Loot"
+    },
+    {
+      "name": "Feywild",
+      "type": "dimension",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "feywild",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/dnd_craft/blockstates/feywild_portal.json",
+          "src/main/resources/assets/dnd_craft/models/block/feywild_portal_ns.json",
+          "src/main/java/net/mcreator/dndcraft/block/FeywildPortalBlock.java",
+          "src/main/resources/data/dnd_craft/dimension_type/feywild.json",
+          "src/main/java/net/mcreator/dndcraft/world/teleporter/FeywildPortalShape.java",
+          "src/main/resources/assets/dnd_craft/models/block/feywild_portal_ew.json",
+          "src/main/java/net/mcreator/dndcraft/item/FeywildItem.java",
+          "src/main/resources/assets/dnd_craft/models/item/feywild.json",
+          "src/main/java/net/mcreator/dndcraft/world/teleporter/FeywildTeleporter.java",
+          "src/main/java/net/mcreator/dndcraft/world/dimension/FeywildDimension.java",
+          "src/main/resources/data/dnd_craft/dimension/feywild.json"
+        ]
+      },
+      "path": "~/DimensionsBiomes"
     }
   ],
   "variable_elements": [
@@ -6505,6 +6586,9 @@
     }
   ],
   "tag_elements": {
+    "BIOMES:minecraft:has_structure/ruined_portal_jungle": [
+      "~CUSTOM:FeywildForest"
+    ],
     "BLOCKS:minecraft:needs_diamond_tool": [
       "~CUSTOM:AdantiumOre"
     ],
@@ -6513,11 +6597,8 @@
       "~CUSTOM:SilverOre",
       "~CUSTOM:PlatinumOre"
     ],
-    "BLOCKS:minecraft:mineable/pickaxe": [
-      "~CUSTOM:DeepslateSilverOre",
-      "~CUSTOM:SilverOre",
-      "~CUSTOM:PlatinumOre",
-      "~CUSTOM:AdantiumOre"
+    "BIOMES:minecraft:has_structure/jungle_temple": [
+      "~CUSTOM:FeywildForest"
     ],
     "ITEMS:minecraft:enchantable/durability": [
       "~CUSTOM:PoisonVial",
@@ -6530,6 +6611,33 @@
       "~CUSTOM:WarHammer",
       "~CUSTOM:TwoHandedhammer",
       "~CUSTOM:LightHammer"
+    ],
+    "BIOMES:minecraft:has_structure/mineshaft": [
+      "~CUSTOM:FeywildForest"
+    ],
+    "ITEMS:minecraft:hoes": [
+      "~CUSTOM:AdamantiumSickle",
+      "~CUSTOM:Sickle"
+    ],
+    "ITEMS:minecraft:meat": [
+      "~CUSTOM:Orksteaak",
+      "~CUSTOM:OwlbearDrumsticks",
+      "~CUSTOM:DailyRation",
+      "~CUSTOM:CookedOwlbearMeat",
+      "~CUSTOM:RawOwlbearMeat"
+    ],
+    "BLOCKS:minecraft:overworld_carver_replaceables": [
+      "~Blocks.STONE#0",
+      "~Blocks.GRASS"
+    ],
+    "BLOCKS:minecraft:leaves": [
+      "~CUSTOM:GlimmerLeaves"
+    ],
+    "BLOCKS:minecraft:mineable/pickaxe": [
+      "~CUSTOM:DeepslateSilverOre",
+      "~CUSTOM:SilverOre",
+      "~CUSTOM:PlatinumOre",
+      "~CUSTOM:AdantiumOre"
     ],
     "ITEMS:minecraft:axes": [
       "~CUSTOM:RustyMace",
@@ -6604,17 +6712,6 @@
       "~CUSTOM:Club",
       "~CUSTOM:BattleStaff",
       "~CUSTOM:Dagger"
-    ],
-    "ITEMS:minecraft:hoes": [
-      "~CUSTOM:AdamantiumSickle",
-      "~CUSTOM:Sickle"
-    ],
-    "ITEMS:minecraft:meat": [
-      "~CUSTOM:Orksteaak",
-      "~CUSTOM:OwlbearDrumsticks",
-      "~CUSTOM:DailyRation",
-      "~CUSTOM:CookedOwlbearMeat",
-      "~CUSTOM:RawOwlbearMeat"
     ]
   },
   "tab_element_order": {
@@ -6801,6 +6898,7 @@
       "gui.dnd_craft.druid_gui.label_0_level": "Level 1 (y)",
       "gui.dnd_craft.cook_gui.label_ssc": "§6Cooking veteran",
       "gui.dnd_craft.bardegui.label_barbarian_strenght": "Better Healing",
+      "item.dnd_craft.feywild": "Feywild Portal Igniter",
       "gui.dnd_craft.cook_gui.label_eat_40_ork_beefs": "Eat 40 ork beefs",
       "gui.dnd_craft.cook_gui.button_accept": "Loot",
       "item.dnd_craft.sickle": "Sickle",
@@ -6820,6 +6918,7 @@
       "item.dnd_craft.copper_coin": "Copper Coin",
       "item.dnd_craft.club": "Club",
       "effect.dnd_craft.ki_effect_2": "Ki",
+      "biome.dnd_craft.feywild_forest": "Feywild Forest",
       "gui.cool_mod.bardegui.label_ghost_axe": "Damage Aura",
       "gui.dnd_craft.barbar_gui.label_level_60": "Level 15 (c)",
       "item.cool_mod.harpy_spawn_egg": "Harpy Spawn Egg",
@@ -6933,6 +7032,7 @@
       "item.cool_mod.adamantium_scimitar": "Adamantium Scimitar",
       "gui.dnd_craft.barbar_gui.label_barbarian_strenght": "Barbarian Strenght",
       "entity.dnd_craft.ocherjelly": "Ocherjelly",
+      "item.dnd_craft.glimmerleaf_fruit": "Glimmerleaf Fruit",
       "gui.dnd_craft.monk_gui.button_exit": "EXIT",
       "gui.dnd_craft.magiergui.label_10_level": "Every Level",
       "item.cool_mod.soap": "Soap",
@@ -7007,6 +7107,7 @@
       "item.dnd_craft.harpy_spear": "Harpy Spear",
       "gui.dnd_craft.classes.button_monk": "Monk",
       "item.dnd_craft.magicscroll_firearrow.description_1": "Magic Item",
+      "block.dnd_craft.glimmer_leaves": "Glimmer Leaves",
       "item.dnd_craft.magicscroll_firearrow.description_2": "§Common",
       "item.dnd_craft.owlbear_drumsticks": "Owlbear drums",
       "item.dnd_craft.cooked_ork_beef": "Cooked Ork Beef",

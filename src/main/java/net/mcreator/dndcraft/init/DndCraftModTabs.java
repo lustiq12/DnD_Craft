@@ -132,6 +132,7 @@ public class DndCraftModTabs {
 		} else if (tabData.getTabKey() == CreativeModeTabs.TOOLS_AND_UTILITIES) {
 			tabData.accept(DndCraftModItems.BANJO.get());
 			tabData.accept(DndCraftModItems.DRUMS.get());
+			tabData.accept(DndCraftModItems.FEYWILD.get());
 		}
 	}
 }

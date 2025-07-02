@@ -58,8 +58,10 @@ import net.mcreator.dndcraft.item.HarpyToothItem;
 import net.mcreator.dndcraft.item.HarpySpearItem;
 import net.mcreator.dndcraft.item.GoldCoinItem;
 import net.mcreator.dndcraft.item.GoblinsBackpackItem;
+import net.mcreator.dndcraft.item.GlimmerleafFruitItem;
 import net.mcreator.dndcraft.item.GladiusItem;
 import net.mcreator.dndcraft.item.GhostAxeItem;
+import net.mcreator.dndcraft.item.FeywildItem;
 import net.mcreator.dndcraft.item.DrumsItem;
 import net.mcreator.dndcraft.item.DailyRationItem;
 import net.mcreator.dndcraft.item.DaggerItem;
@@ -189,6 +191,9 @@ public class DndCraftModItems {
 	public static final DeferredItem<Item> RAW_SILVER_ORE = REGISTRY.register("raw_silver_ore", RawSilverOreItem::new);
 	public static final DeferredItem<Item> SILVER_ORE = block(DndCraftModBlocks.SILVER_ORE);
 	public static final DeferredItem<Item> DEEPSLATE_SILVER_ORE = block(DndCraftModBlocks.DEEPSLATE_SILVER_ORE);
+	public static final DeferredItem<Item> GLIMMER_LEAVES = block(DndCraftModBlocks.GLIMMER_LEAVES);
+	public static final DeferredItem<Item> GLIMMERLEAF_FRUIT = REGISTRY.register("glimmerleaf_fruit", GlimmerleafFruitItem::new);
+	public static final DeferredItem<Item> FEYWILD = REGISTRY.register("feywild", FeywildItem::new);
 
 	// Start of user code block custom items
 	// End of user code block custom items
