@@ -58,8 +58,7 @@ public class Classability1pProcedure {
 					}
 				});
 			}
-		}
-		if ((entity.getData(DndCraftModVariables.PLAYER_VARIABLES).Class_Variable).equals("Bard")) {
+		} else if ((entity.getData(DndCraftModVariables.PLAYER_VARIABLES).Class_Variable).equals("Bard")) {
 			if (entity.getData(DndCraftModVariables.PLAYER_VARIABLES).cooldown < 0.05) {
 				{
 					DndCraftModVariables.PlayerVariables _vars = entity.getData(DndCraftModVariables.PLAYER_VARIABLES);
@@ -91,8 +90,7 @@ public class Classability1pProcedure {
 					}
 				});
 			}
-		}
-		if ((entity.getData(DndCraftModVariables.PLAYER_VARIABLES).Class_Variable).equals("Magician")) {
+		} else if ((entity.getData(DndCraftModVariables.PLAYER_VARIABLES).Class_Variable).equals("Magician")) {
 			if (entity.getData(DndCraftModVariables.PLAYER_VARIABLES).cooldown < 0.05) {
 				{
 					DndCraftModVariables.PlayerVariables _vars = entity.getData(DndCraftModVariables.PLAYER_VARIABLES);
@@ -149,8 +147,7 @@ public class Classability1pProcedure {
 					}
 				});
 			}
-		}
-		if ((entity.getData(DndCraftModVariables.PLAYER_VARIABLES).Class_Variable).equals("Monk")) {
+		} else if ((entity.getData(DndCraftModVariables.PLAYER_VARIABLES).Class_Variable).equals("Monk")) {
 			if (entity.getData(DndCraftModVariables.PLAYER_VARIABLES).cooldown < 0.05) {
 				if (entity.getData(DndCraftModVariables.PLAYER_VARIABLES).Ki > 0) {
 					if (entity instanceof ServerPlayer _ent) {
@@ -172,6 +169,14 @@ public class Classability1pProcedure {
 							}
 						}, _bpos);
 					}
+				}
+			}
+		} else if ((entity.getData(DndCraftModVariables.PLAYER_VARIABLES).Class_Variable).equals("Druid")) {
+			if (entity.getData(DndCraftModVariables.PLAYER_VARIABLES).cooldown < 0.05) {
+				{
+					DndCraftModVariables.PlayerVariables _vars = entity.getData(DndCraftModVariables.PLAYER_VARIABLES);
+					_vars.cooldown = 30;
+					_vars.syncPlayerVariables(entity);
 				}
 			}
 		}

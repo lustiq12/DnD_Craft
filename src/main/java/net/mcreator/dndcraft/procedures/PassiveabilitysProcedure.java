@@ -157,9 +157,27 @@ public class PassiveabilitysProcedure {
 				if (entity instanceof LivingEntity _entity)
 					_entity.removeEffect(MobEffects.WITHER);
 			} else if ((entity.getData(DndCraftModVariables.PLAYER_VARIABLES).Class_Variable).equals("Druid")) {
-				if (entity instanceof Player _player) {
-					_player.getAbilities().mayBuild = true;
-					_player.onUpdateAbilities();
+				if (Mth.nextInt(RandomSource.create(), 1, 40) == 1) {
+					sx = -5;
+					found = false;
+					for (int index3 = 0; index3 < 10; index3++) {
+						sy = -5;
+						for (int index4 = 0; index4 < 10; index4++) {
+							sz = -5;
+							for (int index5 = 0; index5 < 10; index5++) {
+								if ((world.getBlockState(BlockPos.containing(Math.round(x) + sx, Math.round(y) + sy, Math.round(z) + sz))).is(BlockTags.create(ResourceLocation.parse("dnd_craft:druid_plants")))) {
+									found = true;
+								}
+								sz = sz + 1;
+							}
+							sy = sy + 1;
+						}
+						sx = sx + 1;
+					}
+					if (found == true) {
+						if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
+							_entity.addEffect(new MobEffectInstance(MobEffects.REGENERATION, 300, 2, false, false));
+					}
 				}
 			} else if ((entity.getData(DndCraftModVariables.PLAYER_VARIABLES).Class_Variable).equals("Sorcerer")) {
 				if (entity instanceof Player _player) {

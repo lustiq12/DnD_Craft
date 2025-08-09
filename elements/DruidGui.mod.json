@@ -41,7 +41,7 @@
         "data": {
           "name": "label_rage",
           "text": {
-            "fixedValue": "Healing"
+            "fixedValue": "-"
           },
           "color": {
             "value": -12829636,
@@ -167,7 +167,7 @@
         "data": {
           "name": "label_invincibility",
           "text": {
-            "fixedValue": "Power of the Wind"
+            "fixedValue": "-"
           },
           "color": {
             "value": -12829636,

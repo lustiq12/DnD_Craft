@@ -12,6 +12,7 @@ import net.minecraft.world.level.Level;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.core.Direction;
+import net.minecraft.commands.arguments.EntityArgument;
 import net.minecraft.commands.Commands;
 
 import net.mcreator.dndcraft.procedures.ClasssettercommandpProcedure;
@@ -22,7 +23,7 @@ import com.mojang.brigadier.arguments.StringArgumentType;
 public class ClasschoosecommandCommand {
 	@SubscribeEvent
 	public static void registerCommand(RegisterCommandsEvent event) {
-		event.getDispatcher().register(Commands.literal("class").requires(s -> s.hasPermission(2)).then(Commands.argument("classname", StringArgumentType.word()).executes(arguments -> {
+		event.getDispatcher().register(Commands.literal("class").requires(s -> s.hasPermission(2)).then(Commands.argument("Player", EntityArgument.player()).then(Commands.argument("classname", StringArgumentType.word()).executes(arguments -> {
 			Level world = arguments.getSource().getUnsidedLevel();
 			double x = arguments.getSource().getPosition().x();
 			double y = arguments.getSource().getPosition().y();
@@ -36,6 +37,6 @@ public class ClasschoosecommandCommand {
 
 			ClasssettercommandpProcedure.execute(arguments, entity);
 			return 0;
-		})));
+		}))));
 	}
 }
