@@ -62,7 +62,7 @@ public record BarbarGuiButtonMessage(int buttonID, int x, int y, int z) implemen
 			return;
 		if (buttonID == 0) {
 
-			BarbarProcedure.execute(entity);
+			BarbarProcedure.execute(world, entity);
 		}
 		if (buttonID == 1) {
 
