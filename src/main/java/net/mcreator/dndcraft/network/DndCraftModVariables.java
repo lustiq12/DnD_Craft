@@ -91,9 +91,9 @@ public class DndCraftModVariables {
 		public String Spell = "\"\"";
 		public double Mana = 100.0;
 		public boolean Dogde = false;
-		public double Ki = 0;
-		public double Lvlxp = 0;
-		public double DailyRationQuest = 0;
+		public double Ki = 2.0;
+		public double Lvlxp = 0.0;
+		public double DailyRationQuest = 0.0;
 		public double Monsterdelightquest = 0;
 		public double CookingVeteranquest = 0.0;
 		public double MaxMana = 100.0;

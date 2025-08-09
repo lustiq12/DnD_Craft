@@ -1132,6 +1132,10 @@
           {
             "name": "entity",
             "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
           }
         ]
       },
@@ -3057,6 +3061,10 @@
           {
             "name": "entity",
             "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
           }
         ]
       },
@@ -4214,6 +4222,10 @@
           {
             "name": "entity",
             "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
           }
         ]
       },
@@ -6073,6 +6085,10 @@
           {
             "name": "entity",
             "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
           }
         ]
       },
@@ -6479,6 +6495,29 @@
         ]
       },
       "path": "~/DimensionsBiomes"
+    },
+    {
+      "name": "ResetVariables",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "reset_variables",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/dndcraft/procedures/ResetVariablesProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/ClassSystem"
     }
   ],
   "variable_elements": [
@@ -6534,19 +6573,19 @@
       "name": "Ki",
       "type": "number",
       "scope": "player_lifetime",
-      "value": "0"
+      "value": "2.0"
     },
     {
       "name": "Lvlxp",
       "type": "number",
       "scope": "player_lifetime",
-      "value": "0"
+      "value": "0.0"
     },
     {
       "name": "DailyRationQuest",
       "type": "number",
       "scope": "player_lifetime",
-      "value": "0"
+      "value": "0.0"
     },
     {
       "name": "Monsterdelightquest",

@@ -62,7 +62,7 @@ public record MagierguiButtonMessage(int buttonID, int x, int y, int z) implemen
 			return;
 		if (buttonID == 0) {
 
-			MagierProcedure.execute(entity);
+			MagierProcedure.execute(world, entity);
 		}
 		if (buttonID == 1) {
 

@@ -2,6 +2,8 @@ package net.mcreator.dndcraft.procedures;
 
 import net.neoforged.neoforge.items.ItemHandlerHelper;
 
+import net.minecraft.world.level.LevelAccessor;
+import net.minecraft.world.level.GameRules;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.entity.player.Player;
@@ -15,7 +17,7 @@ import net.mcreator.dndcraft.network.DndCraftModVariables;
 import net.mcreator.dndcraft.init.DndCraftModItems;
 
 public class MonkProcedure {
-	public static void execute(Entity entity) {
+	public static void execute(LevelAccessor world, Entity entity) {
 		if (entity == null)
 			return;
 		{
@@ -53,30 +55,34 @@ public class MonkProcedure {
 		}
 		if (entity instanceof LivingEntity _entity)
 			_entity.setHealth(28);
-		if (entity instanceof Player _player) {
-			ItemStack _setstack = new ItemStack(DndCraftModItems.BATTLE_STAFF.get()).copy();
-			_setstack.setCount(1);
-			ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
-		}
-		if (entity instanceof Player _player) {
-			ItemStack _setstack = new ItemStack(DndCraftModItems.DAGGER.get()).copy();
-			_setstack.setCount(1);
-			ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
-		}
-		if (entity instanceof Player _player) {
-			ItemStack _setstack = new ItemStack(Items.COOKED_BEEF).copy();
-			_setstack.setCount(5);
-			ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
-		}
-		if (entity instanceof Player _player) {
-			ItemStack _setstack = new ItemStack(Items.BREAD).copy();
-			_setstack.setCount(10);
-			ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
-		}
-		if (entity instanceof Player _player) {
-			ItemStack _setstack = new ItemStack(DndCraftModItems.HEAL_POTION.get()).copy();
-			_setstack.setCount(5);
-			ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
+		if (!world.isClientSide()) {
+			if (!world.getLevelData().getGameRules().getBoolean(GameRules.RULE_KEEPINVENTORY)) {
+				if (entity instanceof Player _player) {
+					ItemStack _setstack = new ItemStack(DndCraftModItems.BATTLE_STAFF.get()).copy();
+					_setstack.setCount(1);
+					ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
+				}
+				if (entity instanceof Player _player) {
+					ItemStack _setstack = new ItemStack(DndCraftModItems.DAGGER.get()).copy();
+					_setstack.setCount(1);
+					ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
+				}
+				if (entity instanceof Player _player) {
+					ItemStack _setstack = new ItemStack(Items.COOKED_BEEF).copy();
+					_setstack.setCount(5);
+					ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
+				}
+				if (entity instanceof Player _player) {
+					ItemStack _setstack = new ItemStack(Items.BREAD).copy();
+					_setstack.setCount(10);
+					ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
+				}
+				if (entity instanceof Player _player) {
+					ItemStack _setstack = new ItemStack(DndCraftModItems.HEAL_POTION.get()).copy();
+					_setstack.setCount(5);
+					ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
+				}
+			}
 		}
 	}
 }

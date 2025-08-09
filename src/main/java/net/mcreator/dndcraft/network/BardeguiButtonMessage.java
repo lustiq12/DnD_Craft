@@ -62,7 +62,7 @@ public record BardeguiButtonMessage(int buttonID, int x, int y, int z) implement
 			return;
 		if (buttonID == 0) {
 
-			BardeProcedure.execute(entity);
+			BardeProcedure.execute(world, entity);
 		}
 		if (buttonID == 1) {
 

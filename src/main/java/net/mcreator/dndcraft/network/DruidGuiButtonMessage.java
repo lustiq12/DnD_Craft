@@ -62,7 +62,7 @@ public record DruidGuiButtonMessage(int buttonID, int x, int y, int z) implement
 			return;
 		if (buttonID == 0) {
 
-			DruidProcedure.execute(entity);
+			DruidProcedure.execute(world, entity);
 		}
 		if (buttonID == 1) {
 

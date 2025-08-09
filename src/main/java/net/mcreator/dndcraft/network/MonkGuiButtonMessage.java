@@ -62,7 +62,7 @@ public record MonkGuiButtonMessage(int buttonID, int x, int y, int z) implements
 			return;
 		if (buttonID == 0) {
 
-			MonkProcedure.execute(entity);
+			MonkProcedure.execute(world, entity);
 		}
 		if (buttonID == 1) {
 
