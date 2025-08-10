@@ -6,6 +6,7 @@ import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.bus.api.Event;
 
 import net.minecraft.world.level.LevelAccessor;
+import net.minecraft.world.level.GameRules;
 import net.minecraft.world.inventory.AbstractContainerMenu;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.player.Inventory;
@@ -36,24 +37,26 @@ public class ClasschooseagainProcedure {
 	private static void execute(@Nullable Event event, LevelAccessor world, double x, double y, double z, Entity entity) {
 		if (entity == null)
 			return;
-		if (entity instanceof ServerPlayer _ent) {
-			BlockPos _bpos = BlockPos.containing(x, y, z);
-			_ent.openMenu(new MenuProvider() {
-				@Override
-				public Component getDisplayName() {
-					return Component.literal("Classes");
-				}
+		if (!world.getLevelData().getGameRules().getBoolean(GameRules.RULE_KEEPINVENTORY)) {
+			if (entity instanceof ServerPlayer _ent) {
+				BlockPos _bpos = BlockPos.containing(x, y, z);
+				_ent.openMenu(new MenuProvider() {
+					@Override
+					public Component getDisplayName() {
+						return Component.literal("Classes");
+					}
 
-				@Override
-				public boolean shouldTriggerClientSideContainerClosingOnOpen() {
-					return false;
-				}
+					@Override
+					public boolean shouldTriggerClientSideContainerClosingOnOpen() {
+						return false;
+					}
 
-				@Override
-				public AbstractContainerMenu createMenu(int id, Inventory inventory, Player player) {
-					return new ClassesMenu(id, inventory, new FriendlyByteBuf(Unpooled.buffer()).writeBlockPos(_bpos));
-				}
-			}, _bpos);
+					@Override
+					public AbstractContainerMenu createMenu(int id, Inventory inventory, Player player) {
+						return new ClassesMenu(id, inventory, new FriendlyByteBuf(Unpooled.buffer()).writeBlockPos(_bpos));
+					}
+				}, _bpos);
+			}
 		}
 	}
 }

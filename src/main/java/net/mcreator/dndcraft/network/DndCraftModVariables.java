@@ -60,23 +60,23 @@ public class DndCraftModVariables {
 		public static void clonePlayer(PlayerEvent.Clone event) {
 			PlayerVariables original = event.getOriginal().getData(PLAYER_VARIABLES);
 			PlayerVariables clone = new PlayerVariables();
+			clone.Class_Variable = original.Class_Variable;
 			clone.first_join = original.first_join;
+			clone.wutrausch = original.wutrausch;
+			clone.cooldown = original.cooldown;
+			clone.PlayerLevel = original.PlayerLevel;
+			clone.Spell = original.Spell;
+			clone.Mana = original.Mana;
+			clone.Dogde = original.Dogde;
+			clone.Ki = original.Ki;
+			clone.Lvlxp = original.Lvlxp;
+			clone.DailyRationQuest = original.DailyRationQuest;
+			clone.Monsterdelightquest = original.Monsterdelightquest;
+			clone.CookingVeteranquest = original.CookingVeteranquest;
+			clone.MaxMana = original.MaxMana;
+			clone.MaxKi = original.MaxKi;
+			clone.XpPercent = original.XpPercent;
 			if (!event.isWasDeath()) {
-				clone.Class_Variable = original.Class_Variable;
-				clone.wutrausch = original.wutrausch;
-				clone.cooldown = original.cooldown;
-				clone.PlayerLevel = original.PlayerLevel;
-				clone.Spell = original.Spell;
-				clone.Mana = original.Mana;
-				clone.Dogde = original.Dogde;
-				clone.Ki = original.Ki;
-				clone.Lvlxp = original.Lvlxp;
-				clone.DailyRationQuest = original.DailyRationQuest;
-				clone.Monsterdelightquest = original.Monsterdelightquest;
-				clone.CookingVeteranquest = original.CookingVeteranquest;
-				clone.MaxMana = original.MaxMana;
-				clone.MaxKi = original.MaxKi;
-				clone.XpPercent = original.XpPercent;
 			}
 			event.getEntity().setData(PLAYER_VARIABLES, clone);
 		}
