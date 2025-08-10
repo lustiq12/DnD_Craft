@@ -1,0 +1,7 @@
+{
+  "parent": "dcc:custom/drums",
+  "textures": {
+    "1": "dcc:block/drumsture",
+    "particle": "dcc:item/banjo"
+  }
+}

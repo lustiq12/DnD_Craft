@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "minecraft:spruce_log"
+    },
+    {
+      "item": "dcc:animal_bone"
+    },
+    {
+      "item": "minecraft:raw_copper"
+    },
+    {
+      "item": "minecraft:raw_copper"
+    }
+  ],
+  "result": {
+    "id": "dcc:scrapsheet",
+    "count": 1
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:smithing_transform",
+  "template": {
+    "item": "dcc:two_handed_axe"
+  },
+  "base": {
+    "item": "dcc:adantium_ingot"
+  },
+  "addition": {
+    "item": "dcc:adamantium_upgrade_smithing_template"
+  },
+  "result": {
+    "id": "dcc:two_handed_adamantium_axe"
+  }
+}

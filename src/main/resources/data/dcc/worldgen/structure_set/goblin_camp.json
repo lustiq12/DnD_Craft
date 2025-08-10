@@ -1,0 +1,14 @@
+{
+  "structures": [
+    {
+      "structure": "dcc:goblin_camp",
+      "weight": 1
+    }
+  ],
+  "placement": {
+    "type": "minecraft:random_spread",
+    "spacing": 40,
+    "separation": 30,
+    "salt": 1323361775
+  }
+}

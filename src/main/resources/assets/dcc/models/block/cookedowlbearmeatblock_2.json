@@ -1,0 +1,13 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "dcc:block/mangrove_log_top",
+    "up": "dcc:block/mangrove_log_top",
+    "north": "dcc:block/mangrove_log",
+    "east": "dcc:block/mangrove_log",
+    "south": "dcc:block/mangrove_log",
+    "west": "dcc:block/mangrove_log",
+    "particle": "dcc:block/mangrove_log_top"
+  },
+  "render_type": "solid"
+}

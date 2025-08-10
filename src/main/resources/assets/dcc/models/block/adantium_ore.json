@@ -1,0 +1,13 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "dcc:block/adamantiumore",
+    "up": "dcc:block/adamantiumore",
+    "north": "dcc:block/adamantiumore",
+    "east": "dcc:block/adamantiumore",
+    "south": "dcc:block/adamantiumore",
+    "west": "dcc:block/adamantiumore",
+    "particle": "dcc:block/adamantiumore"
+  },
+  "render_type": "solid"
+}

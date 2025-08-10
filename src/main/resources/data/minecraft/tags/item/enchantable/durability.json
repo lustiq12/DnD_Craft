@@ -1,7 +1,7 @@
 {
   "replace": false,
   "values": [
-    "dnd_craft:poison_vial",
-    "dnd_craft:soap"
+    "dcc:poison_vial",
+    "dcc:soap"
   ]
 }

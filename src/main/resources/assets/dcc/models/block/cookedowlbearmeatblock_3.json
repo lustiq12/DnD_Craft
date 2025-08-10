@@ -1,0 +1,13 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "dcc:block/kebabfleshbruh",
+    "up": "dcc:block/kebabfleshbruh",
+    "north": "dcc:block/halfkebab",
+    "east": "dcc:block/halfkebab",
+    "south": "dcc:block/halfkebab",
+    "west": "dcc:block/halfkebab",
+    "particle": "dcc:block/kebabfleshbruh"
+  },
+  "render_type": "solid"
+}

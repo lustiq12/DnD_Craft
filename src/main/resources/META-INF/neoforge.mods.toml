@@ -3,9 +3,9 @@ loaderVersion="[4,)"
 license="All Rights Reserved"
 
 [[mods]]
-modId="dnd_craft"
+modId="dcc"
 version="2.5.0"
-displayName="DnD-Craft"
+displayName="Dungeons, Creatures & Classes"
 displayURL="https://mcreator.net"
 logoFile="logo.png"
 credits="Created using mod maker MCreator - https://mcreator.net/about"
@@ -15,14 +15,14 @@ description="This mod is a fun addition to Minecraft that adds some mobs from th
 # Start of user code block mod configuration
 # End of user code block mod configuration
 
-[[dependencies.dnd_craft]]
+[[dependencies.dcc]]
     modId="neoforge"
     type="required"
     versionRange="[21.1.65,)"
     ordering="AFTER"
     side="BOTH"
 
-[[dependencies.dnd_craft]]
+[[dependencies.dcc]]
     modId="minecraft"
     type="required"
     versionRange="[1.21.1]"
@@ -30,7 +30,7 @@ description="This mod is a fun addition to Minecraft that adds some mobs from th
     side="BOTH"
 
 
-[[dependencies.dnd_craft]]
+[[dependencies.dcc]]
     modId="geckolib"
     type="optional"
     versionRange="[0,)"

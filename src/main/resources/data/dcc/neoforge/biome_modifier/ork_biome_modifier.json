@@ -1,0 +1,16 @@
+{
+  "type": "neoforge:add_spawns",
+  "biomes": [
+    "plains",
+    "snowy_plains",
+    "windswept_hills",
+    "snowy_slopes",
+    "windswept_gravelly_hills"
+  ],
+  "spawners": {
+    "type": "dcc:ork",
+    "weight": 2,
+    "minCount": 2,
+    "maxCount": 4
+  }
+}

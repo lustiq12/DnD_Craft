@@ -1,7 +1,7 @@
 {
   "replace": false,
   "values": [
-    "dnd_craft:adamantium_sickle",
-    "dnd_craft:sickle"
+    "dcc:adamantium_sickle",
+    "dcc:sickle"
   ]
 }

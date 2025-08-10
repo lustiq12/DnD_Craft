@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "  a",
+    " b ",
+    "c  "
+  ],
+  "key": {
+    "a": {
+      "item": "minecraft:iron_ingot"
+    },
+    "b": {
+      "item": "minecraft:leather"
+    },
+    "c": {
+      "item": "minecraft:stick"
+    }
+  },
+  "result": {
+    "id": "dcc:spear",
+    "count": 1
+  }
+}

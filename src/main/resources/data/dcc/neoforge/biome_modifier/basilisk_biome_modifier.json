@@ -1,0 +1,10 @@
+{
+  "type": "neoforge:add_spawns",
+  "biomes": "dripstone_caves",
+  "spawners": {
+    "type": "dcc:basilisk",
+    "weight": 1,
+    "minCount": 4,
+    "maxCount": 4
+  }
+}

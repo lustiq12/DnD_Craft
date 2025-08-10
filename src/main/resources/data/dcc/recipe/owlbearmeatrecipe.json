@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "a"
+  ],
+  "key": {
+    "a": {
+      "item": "dcc:raw_owlbearmeat_block"
+    }
+  },
+  "result": {
+    "id": "dcc:raw_owlbear_meat",
+    "count": 4
+  }
+}

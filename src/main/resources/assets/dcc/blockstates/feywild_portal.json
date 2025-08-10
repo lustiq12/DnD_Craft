@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "axis=z": {
+      "model": "dcc:block/feywild_portal_ew"
+    },
+    "axis=x": {
+      "model": "dcc:block/feywild_portal_ns"
+    }
+  }
+}

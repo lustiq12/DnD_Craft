@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:smithing_transform",
+  "template": {
+    "item": "dcc:light_hammer"
+  },
+  "base": {
+    "item": "dcc:adantium_ingot"
+  },
+  "addition": {
+    "item": "dcc:adamantium_upgrade_smithing_template"
+  },
+  "result": {
+    "id": "dcc:light_adamantium_hammer"
+  }
+}

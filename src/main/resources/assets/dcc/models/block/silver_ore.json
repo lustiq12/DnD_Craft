@@ -1,0 +1,13 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "dcc:block/silverorestone",
+    "up": "dcc:block/silverorestone",
+    "north": "dcc:block/silverorestone",
+    "east": "dcc:block/silverorestone",
+    "south": "dcc:block/silverorestone",
+    "west": "dcc:block/silverorestone",
+    "particle": "dcc:block/silverorestone"
+  },
+  "render_type": "solid"
+}

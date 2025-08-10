@@ -1,9 +1,9 @@
 {
   "replace": false,
   "values": [
-    "dnd_craft:deepslate_silver_ore",
-    "dnd_craft:silver_ore",
-    "dnd_craft:platinum_ore",
-    "dnd_craft:adantium_ore"
+    "dcc:deepslate_silver_ore",
+    "dcc:silver_ore",
+    "dcc:platinum_ore",
+    "dcc:adantium_ore"
   ]
 }

@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    " a ",
+    "aba",
+    " a "
+  ],
+  "key": {
+    "a": {
+      "item": "dcc:animal_fat"
+    },
+    "b": {
+      "item": "minecraft:milk_bucket"
+    }
+  },
+  "result": {
+    "id": "dcc:soap",
+    "count": 1
+  }
+}

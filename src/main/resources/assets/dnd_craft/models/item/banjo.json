@@ -1,7 +1,0 @@
-{
-  "parent": "dnd_craft:custom/banjo",
-  "textures": {
-    "0": "dnd_craft:block/banjexture",
-    "particle": "dnd_craft:item/banjo"
-  }
-}

@@ -1,7 +1,0 @@
-{
-  "parent": "dnd_craft:custom/drums",
-  "textures": {
-    "1": "dnd_craft:block/drumsture",
-    "particle": "dnd_craft:item/banjo"
-  }
-}

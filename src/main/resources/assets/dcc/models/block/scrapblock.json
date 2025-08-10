@@ -1,0 +1,13 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "dcc:block/raw_iron_block",
+    "up": "dcc:block/raw_iron_block",
+    "north": "dcc:block/raw_iron_block",
+    "east": "dcc:block/raw_iron_block",
+    "south": "dcc:block/raw_iron_block",
+    "west": "dcc:block/raw_iron_block",
+    "particle": "dcc:block/raw_iron_block"
+  },
+  "render_type": "solid"
+}

@@ -1,0 +1,13 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "dcc:block/silveroredeepslate",
+    "up": "dcc:block/silveroredeepslate",
+    "north": "dcc:block/silveroredeepslate",
+    "east": "dcc:block/silveroredeepslate",
+    "south": "dcc:block/silveroredeepslate",
+    "west": "dcc:block/silveroredeepslate",
+    "particle": "dcc:block/silveroredeepslate"
+  },
+  "render_type": "solid"
+}

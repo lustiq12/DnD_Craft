@@ -1,0 +1,17 @@
+{
+  "type": "neoforge:add_spawns",
+  "biomes": [
+    "old_growth_spruce_taiga",
+    "dark_forest",
+    "old_growth_birch_forest",
+    "snowy_taiga",
+    "old_growth_pine_taiga",
+    "taiga"
+  ],
+  "spawners": {
+    "type": "dcc:ogre",
+    "weight": 1,
+    "minCount": 1,
+    "maxCount": 2
+  }
+}

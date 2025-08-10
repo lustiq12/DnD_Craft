@@ -1,0 +1,13 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "dcc:block/platinore",
+    "up": "dcc:block/platinore",
+    "north": "dcc:block/platinore",
+    "east": "dcc:block/platinore",
+    "south": "dcc:block/platinore",
+    "west": "dcc:block/platinore",
+    "particle": "dcc:block/platinore"
+  },
+  "render_type": "solid"
+}

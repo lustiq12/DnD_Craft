@@ -1,0 +1,13 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "dcc:block/verykebaba",
+    "up": "dcc:block/verykebaba",
+    "north": "dcc:block/lastkebab",
+    "east": "dcc:block/lastkebab",
+    "south": "dcc:block/lastkebab",
+    "west": "dcc:block/lastkebab",
+    "particle": "dcc:block/verykebaba"
+  },
+  "render_type": "solid"
+}

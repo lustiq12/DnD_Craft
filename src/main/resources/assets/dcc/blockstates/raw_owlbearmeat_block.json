@@ -1,0 +1,16 @@
+{
+  "variants": {
+    "axis=x": {
+      "model": "dcc:block/raw_owlbearmeat_block",
+      "x": 90,
+      "y": 90
+    },
+    "axis=y": {
+      "model": "dcc:block/raw_owlbearmeat_block"
+    },
+    "axis=z": {
+      "model": "dcc:block/raw_owlbearmeat_block",
+      "x": 90
+    }
+  }
+}

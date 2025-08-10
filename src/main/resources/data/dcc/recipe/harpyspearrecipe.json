@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "  a",
+    " b ",
+    "c  "
+  ],
+  "key": {
+    "a": {
+      "item": "dcc:harpy_tooth"
+    },
+    "b": {
+      "item": "minecraft:leather"
+    },
+    "c": {
+      "item": "minecraft:stick"
+    }
+  },
+  "result": {
+    "id": "dcc:harpy_spear",
+    "count": 1
+  }
+}

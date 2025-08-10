@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "dcc:monster_dagger"
+    },
+    {
+      "item": "minecraft:honeycomb"
+    }
+  ],
+  "result": {
+    "id": "dcc:dagger",
+    "count": 1
+  }
+}

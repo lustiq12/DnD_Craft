@@ -1,0 +1,13 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "dcc:block/mangrove_log_top",
+    "up": "dcc:block/mangrove_log_top",
+    "north": "dcc:block/fullowlbearkebab",
+    "east": "dcc:block/fullowlbearkebab",
+    "south": "dcc:block/fullowlbearkebab",
+    "west": "dcc:block/fullowlbearkebab",
+    "particle": "dcc:block/mangrove_log_top"
+  },
+  "render_type": "solid"
+}

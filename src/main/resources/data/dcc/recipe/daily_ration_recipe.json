@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "aab",
+    " c "
+  ],
+  "key": {
+    "a": {
+      "item": "dcc:owlbear_meat_stripe"
+    },
+    "b": {
+      "item": "minecraft:carrot"
+    },
+    "c": {
+      "item": "minecraft:bowl"
+    }
+  },
+  "result": {
+    "id": "dcc:daily_ration",
+    "count": 1
+  }
+}

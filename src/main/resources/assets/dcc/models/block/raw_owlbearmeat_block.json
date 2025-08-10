@@ -1,0 +1,13 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "dcc:block/rawowlbearmeatfront",
+    "up": "dcc:block/rawowlbearmeatfront",
+    "north": "dcc:block/rawowlbeaermeat",
+    "east": "dcc:block/rawowlbeaermeat",
+    "south": "dcc:block/rawowlbeaermeat",
+    "west": "dcc:block/rawowlbeaermeat",
+    "particle": "dcc:block/rawowlbearmeatfront"
+  },
+  "render_type": "solid"
+}

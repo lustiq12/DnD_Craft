@@ -1,0 +1,11 @@
+
+package net.mcreator.dcc.potion;
+
+import net.minecraft.world.effect.MobEffectCategory;
+import net.minecraft.world.effect.MobEffect;
+
+public class FreezingMobEffect extends MobEffect {
+	public FreezingMobEffect() {
+		super(MobEffectCategory.HARMFUL, -3342337);
+	}
+}

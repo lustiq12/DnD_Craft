@@ -1,0 +1,16 @@
+{
+  "variants": {
+    "axis=x": {
+      "model": "dcc:block/cooked_owlbear_meat_block",
+      "x": 90,
+      "y": 90
+    },
+    "axis=y": {
+      "model": "dcc:block/cooked_owlbear_meat_block"
+    },
+    "axis=z": {
+      "model": "dcc:block/cooked_owlbear_meat_block",
+      "x": 90
+    }
+  }
+}

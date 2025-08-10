@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    " aa",
+    " ba",
+    "b  "
+  ],
+  "key": {
+    "a": {
+      "item": "minecraft:iron_ingot"
+    },
+    "b": {
+      "item": "dcc:metal_rod"
+    }
+  },
+  "result": {
+    "id": "dcc:mace",
+    "count": 1
+  }
+}

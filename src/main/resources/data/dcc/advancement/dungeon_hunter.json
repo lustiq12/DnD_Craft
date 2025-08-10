@@ -1,0 +1,139 @@
+{
+  "display": {
+    "icon": {
+      "id": "dcc:raw_owlbear_meat"
+    },
+    "title": {
+      "translate": "advancements.dungeon_hunter.title"
+    },
+    "description": {
+      "translate": "advancements.dungeon_hunter.descr"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "dungeon_hunter_0": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "dcc:raw_ork_beef"
+            ],
+            "count": {
+              "min": 1,
+              "max": 1
+            }
+          }
+        ]
+      }
+    },
+    "dungeon_hunter_1": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "dcc:raw_owlbear_meat"
+            ],
+            "count": {
+              "min": 1,
+              "max": 1
+            }
+          }
+        ]
+      }
+    },
+    "dungeon_hunter_2": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "dcc:goblins_backpack"
+            ],
+            "count": {
+              "min": 1,
+              "max": 1
+            }
+          }
+        ]
+      }
+    },
+    "dungeon_hunter_3": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "dcc:dagger"
+            ],
+            "count": {
+              "min": 1,
+              "max": 1
+            }
+          }
+        ]
+      }
+    },
+    "dungeon_hunter_4": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "dcc:monster_dagger"
+            ],
+            "count": {
+              "min": 1,
+              "max": 1
+            }
+          }
+        ]
+      }
+    },
+    "dungeon_hunter_5": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "dcc:harpy_tooth"
+            ],
+            "count": {
+              "min": 1,
+              "max": 1
+            }
+          }
+        ]
+      }
+    },
+    "dungeon_hunter_6": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "dcc:zwo_handed_club"
+            ],
+            "count": {
+              "min": 1,
+              "max": 1
+            }
+          }
+        ]
+      }
+    }
+  },
+  "rewards": {
+    "experience": 50,
+    "recipes": [
+      "dcc:scrapsheetrecipe",
+      "dcc:scrapblcokrecipe"
+    ]
+  },
+  "parent": "dcc:the_beginning"
+}

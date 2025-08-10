@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "a",
+    "a"
+  ],
+  "key": {
+    "a": {
+      "item": "dcc:animal_bone"
+    }
+  },
+  "result": {
+    "id": "dcc:animal_fat",
+    "count": 1
+  }
+}

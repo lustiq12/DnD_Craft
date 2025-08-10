@@ -1,0 +1,21 @@
+{
+  "type": "neoforge:add_spawns",
+  "biomes": [
+    "beach",
+    "snowy_beach",
+    "dripstone_caves",
+    "frozen_peaks",
+    "grove",
+    "ice_spikes",
+    "jagged_peaks",
+    "stony_peaks",
+    "stony_shore",
+    "windswept_hills"
+  ],
+  "spawners": {
+    "type": "dcc:harpy",
+    "weight": 2,
+    "minCount": 4,
+    "maxCount": 4
+  }
+}
