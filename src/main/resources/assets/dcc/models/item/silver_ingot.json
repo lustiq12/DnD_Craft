@@ -1,6 +1,6 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "dcc:item/adamantium"
+    "layer0": "dcc:item/silver_ingot"
   }
 }

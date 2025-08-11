@@ -6871,7 +6871,7 @@
       "gui.dnd_craft.bardegui.label_invincibility": "Power of the Wind",
       "entity.dnd_craft.goblin": "Goblin",
       "item.dcc.adamantium_spear": "Adamantium Spear",
-      "item.dcc.poison_vial.description_0": "Craft with Weapons to Make Poisonous Weapons",
+      "item.dcc.poison_vial.description_0": "Left-click with a valid weapon in off hand to poison it",
       "gui.dcc.classes.button_barbarian": "Barbarian",
       "gui.dcc.bardegui.label_40_level": "Level 10 (Passive)",
       "gui.dcc.bardegui.label_0_level": "Level 1 (y)",

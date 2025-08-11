@@ -3,7 +3,7 @@
   "_type": "item",
   "definition": {
     "renderType": 0,
-    "texture": "adamantium",
+    "texture": "silver_ingot",
     "customModelName": "Normal",
     "customProperties": {},
     "states": [],

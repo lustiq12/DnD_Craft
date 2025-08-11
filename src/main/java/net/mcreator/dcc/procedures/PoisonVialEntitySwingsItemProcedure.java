@@ -27,7 +27,7 @@ public class PoisonVialEntitySwingsItemProcedure {
 					CustomData.update(DataComponents.CUSTOM_DATA, (entity instanceof LivingEntity _livEnt ? _livEnt.getOffhandItem() : ItemStack.EMPTY), tag -> tag.putBoolean(_tagName, _tagValue));
 				}
 				if (world instanceof ServerLevel _level) {
-					itemstack.hurtAndBreak(25, _level, null, _stkprov -> {
+					itemstack.hurtAndBreak(1, _level, null, _stkprov -> {
 					});
 				}
 				if (world instanceof Level _level) {

@@ -30,8 +30,7 @@
     "damageVsEntity": 0.0,
     "specialInformation": {
       "fixedValue": [
-        "Craft with Weapons to Make Poisonous Weapons",
-        "Right-click with weapon in off hand to poison it"
+        "Left-click with a valid weapon in off hand to poison it"
       ]
     },
     "glowCondition": {
