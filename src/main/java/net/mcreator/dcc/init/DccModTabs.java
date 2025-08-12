@@ -132,7 +132,6 @@ public class DccModTabs {
 		} else if (tabData.getTabKey() == CreativeModeTabs.TOOLS_AND_UTILITIES) {
 			tabData.accept(DccModItems.BANJO.get());
 			tabData.accept(DccModItems.DRUMS.get());
-			tabData.accept(DccModItems.FEYWILD.get());
 		}
 	}
 }

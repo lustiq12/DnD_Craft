@@ -61,7 +61,6 @@ import net.mcreator.dcc.item.GoblinsBackpackItem;
 import net.mcreator.dcc.item.GlimmerleafFruitItem;
 import net.mcreator.dcc.item.GladiusItem;
 import net.mcreator.dcc.item.GhostAxeItem;
-import net.mcreator.dcc.item.FeywildItem;
 import net.mcreator.dcc.item.DrumsItem;
 import net.mcreator.dcc.item.DailyRationItem;
 import net.mcreator.dcc.item.DaggerItem;
@@ -193,7 +192,6 @@ public class DccModItems {
 	public static final DeferredItem<Item> DEEPSLATE_SILVER_ORE = block(DccModBlocks.DEEPSLATE_SILVER_ORE);
 	public static final DeferredItem<Item> GLIMMER_LEAVES = block(DccModBlocks.GLIMMER_LEAVES);
 	public static final DeferredItem<Item> GLIMMERLEAF_FRUIT = REGISTRY.register("glimmerleaf_fruit", GlimmerleafFruitItem::new);
-	public static final DeferredItem<Item> FEYWILD = REGISTRY.register("feywild", FeywildItem::new);
 
 	// Start of user code block custom items
 	// End of user code block custom items

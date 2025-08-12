@@ -51,17 +51,13 @@
     "portalSound": {
       "value": "block.portal.ambient"
     },
-    "enableIgniter": true,
+    "enableIgniter": false,
     "igniterName": "Feywild Portal Igniter",
     "igniterRarity": "COMMON",
     "specialInformation": {
       "fixedValue": []
     },
-    "creativeTabs": [
-      {
-        "value": "TOOLS"
-      }
-    ],
+    "creativeTabs": [],
     "texture": "bonsaifruit",
     "portalTexture": "minecraft:nether_portal",
     "enablePortal": true
