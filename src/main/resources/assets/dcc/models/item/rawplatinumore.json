@@ -1,6 +1,6 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "dcc:item/raw_iron"
+    "layer0": "dcc:item/raw_platinum"
   }
 }

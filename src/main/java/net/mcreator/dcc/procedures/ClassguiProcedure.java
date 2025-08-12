@@ -128,7 +128,7 @@ public class ClassguiProcedure {
 			}
 		} else {
 			if (entity instanceof Player _player && !_player.level().isClientSide())
-				_player.displayClientMessage(Component.literal("\u00B34You dont have selected a valid class, the choosing gui will open in 2 seconds."), false);
+				_player.displayClientMessage(Component.literal("\u00A74You dont have selected a valid class, the choosing gui will open in 2 seconds."), false);
 			DccMod.queueServerWork(40, () -> {
 				if (entity instanceof ServerPlayer _ent) {
 					BlockPos _bpos = BlockPos.containing(x, y, z);
