@@ -21,7 +21,6 @@ import net.mcreator.dcc.network.ClassabilityopnguiMessage;
 import net.mcreator.dcc.network.Classability3Message;
 import net.mcreator.dcc.network.Classability2Message;
 import net.mcreator.dcc.network.Classability1Message;
-import net.mcreator.dcc.network.ClassChooseGuiKeyMessage;
 
 @EventBusSubscriber(bus = EventBusSubscriber.Bus.MOD, value = {Dist.CLIENT})
 public class DccModKeyMappings {
@@ -90,19 +89,6 @@ public class DccModKeyMappings {
 			isDownOld = isDown;
 		}
 	};
-	public static final KeyMapping CLASS_CHOOSE_GUI_KEY = new KeyMapping("key.dcc.class_choose_gui_key", GLFW.GLFW_KEY_V, "key.categories.gameplay") {
-		private boolean isDownOld = false;
-
-		@Override
-		public void setDown(boolean isDown) {
-			super.setDown(isDown);
-			if (isDownOld != isDown && isDown) {
-				PacketDistributor.sendToServer(new ClassChooseGuiKeyMessage(0, 0));
-				ClassChooseGuiKeyMessage.pressAction(Minecraft.getInstance().player, 0, 0);
-			}
-			isDownOld = isDown;
-		}
-	};
 
 	@SubscribeEvent
 	public static void registerKeyMappings(RegisterKeyMappingsEvent event) {
@@ -111,7 +97,6 @@ public class DccModKeyMappings {
 		event.register(CLASSABILITY_3);
 		event.register(CLASSABILITYOPNGUI);
 		event.register(DODGE);
-		event.register(CLASS_CHOOSE_GUI_KEY);
 	}
 
 	@EventBusSubscriber({Dist.CLIENT})
@@ -124,7 +109,6 @@ public class DccModKeyMappings {
 				CLASSABILITY_3.consumeClick();
 				CLASSABILITYOPNGUI.consumeClick();
 				DODGE.consumeClick();
-				CLASS_CHOOSE_GUI_KEY.consumeClick();
 			}
 		}
 	}

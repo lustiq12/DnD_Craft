@@ -14,9 +14,11 @@ import net.minecraft.core.BlockPos;
 import net.mcreator.dcc.world.inventory.MonkGuiMenu;
 import net.mcreator.dcc.world.inventory.MagierguiMenu;
 import net.mcreator.dcc.world.inventory.DruidGuiMenu;
+import net.mcreator.dcc.world.inventory.ClassesMenu;
 import net.mcreator.dcc.world.inventory.BardeguiMenu;
 import net.mcreator.dcc.world.inventory.BarbarGuiMenu;
 import net.mcreator.dcc.network.DccModVariables;
+import net.mcreator.dcc.DccMod;
 
 import io.netty.buffer.Unpooled;
 
@@ -44,8 +46,7 @@ public class ClassguiProcedure {
 					}
 				}, _bpos);
 			}
-		}
-		if (("Bard").equals(entity.getData(DccModVariables.PLAYER_VARIABLES).Class_Variable)) {
+		} else if (("Bard").equals(entity.getData(DccModVariables.PLAYER_VARIABLES).Class_Variable)) {
 			if (entity instanceof ServerPlayer _ent) {
 				BlockPos _bpos = BlockPos.containing(x, y, z);
 				_ent.openMenu(new MenuProvider() {
@@ -65,8 +66,7 @@ public class ClassguiProcedure {
 					}
 				}, _bpos);
 			}
-		}
-		if (("Magician").equals(entity.getData(DccModVariables.PLAYER_VARIABLES).Class_Variable)) {
+		} else if (("Magician").equals(entity.getData(DccModVariables.PLAYER_VARIABLES).Class_Variable)) {
 			if (entity instanceof ServerPlayer _ent) {
 				BlockPos _bpos = BlockPos.containing(x, y, z);
 				_ent.openMenu(new MenuProvider() {
@@ -86,8 +86,7 @@ public class ClassguiProcedure {
 					}
 				}, _bpos);
 			}
-		}
-		if (("Monk").equals(entity.getData(DccModVariables.PLAYER_VARIABLES).Class_Variable)) {
+		} else if (("Monk").equals(entity.getData(DccModVariables.PLAYER_VARIABLES).Class_Variable)) {
 			if (entity instanceof ServerPlayer _ent) {
 				BlockPos _bpos = BlockPos.containing(x, y, z);
 				_ent.openMenu(new MenuProvider() {
@@ -107,8 +106,7 @@ public class ClassguiProcedure {
 					}
 				}, _bpos);
 			}
-		}
-		if (("Druid").equals(entity.getData(DccModVariables.PLAYER_VARIABLES).Class_Variable)) {
+		} else if (("Druid").equals(entity.getData(DccModVariables.PLAYER_VARIABLES).Class_Variable)) {
 			if (entity instanceof ServerPlayer _ent) {
 				BlockPos _bpos = BlockPos.containing(x, y, z);
 				_ent.openMenu(new MenuProvider() {
@@ -128,6 +126,30 @@ public class ClassguiProcedure {
 					}
 				}, _bpos);
 			}
+		} else {
+			if (entity instanceof Player _player && !_player.level().isClientSide())
+				_player.displayClientMessage(Component.literal("\u00B34You dont have selected a valid class, the choosing gui will open in 2 seconds."), false);
+			DccMod.queueServerWork(40, () -> {
+				if (entity instanceof ServerPlayer _ent) {
+					BlockPos _bpos = BlockPos.containing(x, y, z);
+					_ent.openMenu(new MenuProvider() {
+						@Override
+						public Component getDisplayName() {
+							return Component.literal("Classes");
+						}
+
+						@Override
+						public boolean shouldTriggerClientSideContainerClosingOnOpen() {
+							return false;
+						}
+
+						@Override
+						public AbstractContainerMenu createMenu(int id, Inventory inventory, Player player) {
+							return new ClassesMenu(id, inventory, new FriendlyByteBuf(Unpooled.buffer()).writeBlockPos(_bpos));
+						}
+					}, _bpos);
+				}
+			});
 		}
 	}
 }
