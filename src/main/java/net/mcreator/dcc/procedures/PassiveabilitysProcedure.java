@@ -1,6 +1,6 @@
 package net.mcreator.dcc.procedures;
 
-import net.neoforged.neoforge.event.ServerChatEvent;
+import net.neoforged.neoforge.event.tick.PlayerTickEvent;
 import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.bus.api.Event;
@@ -37,8 +37,8 @@ import java.util.Comparator;
 @EventBusSubscriber
 public class PassiveabilitysProcedure {
 	@SubscribeEvent
-	public static void onChat(ServerChatEvent event) {
-		execute(event, event.getPlayer().level(), event.getPlayer().getX(), event.getPlayer().getY(), event.getPlayer().getZ(), event.getPlayer());
+	public static void onPlayerTick(PlayerTickEvent.Post event) {
+		execute(event, event.getEntity().level(), event.getEntity().getX(), event.getEntity().getY(), event.getEntity().getZ(), event.getEntity());
 	}
 
 	public static void execute(LevelAccessor world, double x, double y, double z, Entity entity) {
@@ -112,7 +112,7 @@ public class PassiveabilitysProcedure {
 						for (int index1 = 0; index1 < 6; index1++) {
 							sz = -3;
 							for (int index2 = 0; index2 < 6; index2++) {
-								if ((world.getBlockState(BlockPos.containing(Math.round(x) + sx, Math.round(y) + sy, Math.round(z) + sz))).is(BlockTags.create(ResourceLocation.parse("dnd_craft:druid_plants")))) {
+								if ((world.getBlockState(BlockPos.containing(Math.round(x) + sx, Math.round(y) + sy, Math.round(z) + sz))).is(BlockTags.create(ResourceLocation.parse("dcc:druid_plants")))) {
 									found = true;
 								}
 								sz = sz + 1;
@@ -165,7 +165,7 @@ public class PassiveabilitysProcedure {
 						for (int index4 = 0; index4 < 10; index4++) {
 							sz = -5;
 							for (int index5 = 0; index5 < 10; index5++) {
-								if ((world.getBlockState(BlockPos.containing(Math.round(x) + sx, Math.round(y) + sy, Math.round(z) + sz))).is(BlockTags.create(ResourceLocation.parse("dnd_craft:druid_plants")))) {
+								if ((world.getBlockState(BlockPos.containing(Math.round(x) + sx, Math.round(y) + sy, Math.round(z) + sz))).is(BlockTags.create(ResourceLocation.parse("dcc:druid_plants")))) {
 									found = true;
 								}
 								sz = sz + 1;

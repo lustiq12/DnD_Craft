@@ -22,7 +22,7 @@ public class GoblinsBackpackRightclickedOnBlockProcedure {
 			ItemStack _stktoremove = new ItemStack(DccModItems.GOBLINS_BACKPACK.get());
 			_player.getInventory().clearOrCountMatchingItems(p -> _stktoremove.getItem() == p.getItem(), 1, _player.inventoryMenu.getCraftSlots());
 		}
-		for (int index0 = 0; index0 < (int) Mth.nextDouble(RandomSource.create(), 1, 12); index0++) {
+		for (int index0 = 0; index0 < (int) Mth.nextDouble(RandomSource.create(), 1, 6); index0++) {
 			if (world instanceof ServerLevel _level) {
 				ItemEntity entityToSpawn = new ItemEntity(_level, x, (y + 1), z, new ItemStack(Items.RAW_COPPER));
 				entityToSpawn.setPickUpDelay(10);

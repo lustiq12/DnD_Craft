@@ -112,9 +112,6 @@
     "onStruckByLightning": {
       "name": "OcherjellyItIsStruckByLightning"
     },
-    "whenMobDies": {
-      "name": "OcherjellyItIsStruckByLightning"
-    },
     "whenMobIsHurt": {
       "name": "OcherjellyPlayerCollidesWithThisEntity"
     },

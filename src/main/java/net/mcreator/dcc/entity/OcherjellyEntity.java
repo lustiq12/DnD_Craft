@@ -130,12 +130,6 @@ public class OcherjellyEntity extends Monster implements GeoEntity {
 	}
 
 	@Override
-	public void die(DamageSource source) {
-		super.die(source);
-		OcherjellyItIsStruckByLightningProcedure.execute(this.level(), this.getX(), this.getY(), this.getZ(), this);
-	}
-
-	@Override
 	public void addAdditionalSaveData(CompoundTag compound) {
 		super.addAdditionalSaveData(compound);
 		compound.putString("Texture", this.getTexture());

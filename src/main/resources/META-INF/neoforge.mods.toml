@@ -4,7 +4,7 @@ license="All Rights Reserved"
 
 [[mods]]
 modId="dcc"
-version="2.5.0"
+version="3.9.0"
 displayName="Dungeons, Creatures & Classes"
 displayURL="https://mcreator.net"
 logoFile="logo.png"
