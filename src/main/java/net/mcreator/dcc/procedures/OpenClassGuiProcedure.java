@@ -1,7 +1,6 @@
 package net.mcreator.dcc.procedures;
 
 import net.minecraft.world.level.LevelAccessor;
-import net.minecraft.world.level.GameRules;
 import net.minecraft.world.inventory.AbstractContainerMenu;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.player.Inventory;
@@ -14,6 +13,7 @@ import net.minecraft.core.BlockPos;
 
 import net.mcreator.dcc.world.inventory.ClassesMenu;
 import net.mcreator.dcc.network.DccModVariables;
+import net.mcreator.dcc.init.DccModGameRules;
 
 import io.netty.buffer.Unpooled;
 
@@ -22,7 +22,7 @@ public class OpenClassGuiProcedure {
 		if (entity == null)
 			return;
 		if (!world.isClientSide()) {
-			if (!world.getLevelData().getGameRules().getBoolean(GameRules.RULE_KEEPINVENTORY)) {
+			if (!world.getLevelData().getGameRules().getBoolean(DccModGameRules.KEEP_CLASS_LEVELS_AND_GET_NO_STARTERITEMS_ON_RESPAWN)) {
 				if ((entity.getData(DccModVariables.PLAYER_VARIABLES).Class_Variable).equals("false")) {
 					if (entity instanceof ServerPlayer _ent) {
 						BlockPos _bpos = BlockPos.containing(x, y, z);

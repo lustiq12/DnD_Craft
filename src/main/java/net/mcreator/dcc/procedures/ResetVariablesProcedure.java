@@ -6,10 +6,10 @@ import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.bus.api.Event;
 
 import net.minecraft.world.level.LevelAccessor;
-import net.minecraft.world.level.GameRules;
 import net.minecraft.world.entity.Entity;
 
 import net.mcreator.dcc.network.DccModVariables;
+import net.mcreator.dcc.init.DccModGameRules;
 
 import javax.annotation.Nullable;
 
@@ -27,7 +27,7 @@ public class ResetVariablesProcedure {
 	private static void execute(@Nullable Event event, LevelAccessor world, Entity entity) {
 		if (entity == null)
 			return;
-		if (!world.getLevelData().getGameRules().getBoolean(GameRules.RULE_KEEPINVENTORY)) {
+		if (!world.getLevelData().getGameRules().getBoolean(DccModGameRules.KEEP_CLASS_LEVELS_AND_GET_NO_STARTERITEMS_ON_RESPAWN)) {
 			{
 				DccModVariables.PlayerVariables _vars = entity.getData(DccModVariables.PLAYER_VARIABLES);
 				_vars.cooldown = 0;

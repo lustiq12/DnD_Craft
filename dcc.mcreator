@@ -6771,6 +6771,18 @@
         ]
       },
       "path": "~/Procedures"
+    },
+    {
+      "name": "KeepClassLevelsAndGetNoStarteritemsOnRespawn",
+      "type": "gamerule",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "keep_class_levels_and_get_no_starteritems_on_respawn",
+      "metadata": {
+        "type": "logic",
+        "files": []
+      },
+      "path": "~/ClassSystem"
     }
   ],
   "variable_elements": [
@@ -7183,12 +7195,12 @@
   },
   "language_map": {
     "en_us": {
-      "gui.dcc.magiergui.label_ghost_axe": "+1 Spell",
       "gui.dnd_craft.bardegui.label_rage": "Healing",
+      "gui.dcc.magiergui.label_ghost_axe": "+1 Spell",
       "advancements.the_beginning.descr": "Start your adventure",
-      "gui.dcc.barbar_gui.label_0_level": "Level 1 (y)",
-      "entity.dnd_craft.goblin_chief": "Goblin Chief",
       "gui.dnd_craft.bardegui.label_0_level": "Level 1 (y)",
+      "entity.dnd_craft.goblin_chief": "Goblin Chief",
+      "gui.dcc.barbar_gui.label_0_level": "Level 1 (y)",
       "advancements.weapon_collector.title": "Weapon Collector",
       "item.dcc.poison_vial.description_1": "Right-click with weapon in off hand to poison it",
       "gui.dnd_craft.monk_gui.label_level_60": "Level 15 (c)",
@@ -7203,6 +7215,7 @@
       "item.dcc.adamantium_spear": "Adamantium Spear",
       "item.dcc.poison_vial.description_0": "Left-click with a valid weapon in off hand to poison it",
       "gui.dcc.classes.button_barbarian": "Barbarian",
+      "gamerule.keepClassLevelsAndGetNoStarteritemsOnRespawn": "keepClassLevelsAndGetNoStarteritemsOnRespawn",
       "gui.dcc.bardegui.label_40_level": "Level 10 (Passive)",
       "gui.dcc.bardegui.label_0_level": "Level 1 (y)",
       "item.cool_mod.two_handed_adamantium_claymore": "Two Handed Adamantium Claymore",
@@ -7215,8 +7228,8 @@
       "item.dnd_craft.basilisk_spawn_egg": "Basilisk Spawn Egg",
       "item.cool_mod.spear": "Spear",
       "item.dcc.spellbook.description_1": "Left-click to cast attack-spells",
-      "item.dcc.spellbook.description_2": "Right-click on block to cast self-spells",
       "gui.cool_mod.barbar_gui.label_level_60": "Level 60",
+      "item.dcc.spellbook.description_2": "Right-click on block to cast self-spells",
       "effect.dnd_craft.ki_effect": "Ki",
       "gui.dnd_craft.magic_choose.label_level_10": "Level 4",
       "item.dnd_craft.coated_poisoned_dagger.description_0": "Magic Weapon",
@@ -7246,9 +7259,10 @@
       "item.dnd_craft.metal_rod": "Metal Rod",
       "gui.dnd_craft.cook_gui.label_quests": "Quests",
       "gui.dcc.druid_gui.label_level_60": "Level 15 (c)",
+      "gamerule.keepClassLevelsAndGetNoStarteritemsOnRespawn.description": "Keep your class and get no new starter items when respawning",
       "item.dcc.ultimate_potionofhealing": "§6Ultimate Potion of Healing",
-      "item.dcc.raw_silver_ore": "Raw Silver Ore",
       "item.cool_mod.adamantium_dagger": "Adamantium Dagger",
+      "item.dcc.raw_silver_ore": "Raw Silver Ore",
       "gui.dnd_craft.monk_gui.label_invincibility": "Spiritual Regeneration",
       "gui.dcc.magic_choose.label_level_401": "Level 7",
       "gui.cool_mod.classes.button_magician": "Magician",
