@@ -29,91 +29,79 @@ public class Classability3pProcedure {
 	public static void execute(LevelAccessor world, double x, double y, double z, Entity entity) {
 		if (entity == null)
 			return;
-		if (14 < entity.getData(DccModVariables.PLAYER_VARIABLES).PlayerLevel) {
+		if (14 < entity.getData(DccModVariables.PLAYER_VARIABLES).PlayerLevel && entity.getData(DccModVariables.PLAYER_VARIABLES).cooldown < 0.05) {
+			{
+				DccModVariables.PlayerVariables _vars = entity.getData(DccModVariables.PLAYER_VARIABLES);
+				_vars.cooldown = 60;
+				_vars.syncPlayerVariables(entity);
+			}
 			if ((entity.getData(DccModVariables.PLAYER_VARIABLES).Class_Variable).equals("Barbarian")) {
-				if (entity.getData(DccModVariables.PLAYER_VARIABLES).cooldown < 0.05) {
-					{
-						DccModVariables.PlayerVariables _vars = entity.getData(DccModVariables.PLAYER_VARIABLES);
-						_vars.cooldown = 60;
-						_vars.syncPlayerVariables(entity);
+				if (world instanceof Level _level) {
+					if (!_level.isClientSide()) {
+						_level.playSound(null, BlockPos.containing(x, y, z), BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("block.anvil.use")), SoundSource.NEUTRAL, 1, 1);
+					} else {
+						_level.playLocalSound(x, y, z, BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("block.anvil.use")), SoundSource.NEUTRAL, 1, 1, false);
 					}
-					if (world instanceof Level _level) {
-						if (!_level.isClientSide()) {
-							_level.playSound(null, BlockPos.containing(x, y, z), BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("block.anvil.use")), SoundSource.NEUTRAL, 1, 1);
-						} else {
-							_level.playLocalSound(x, y, z, BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("block.anvil.use")), SoundSource.NEUTRAL, 1, 1, false);
-						}
-					}
-					if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
-						_entity.addEffect(new MobEffectInstance(MobEffects.REGENERATION, 100, 255));
+				}
+				if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
+					_entity.addEffect(new MobEffectInstance(MobEffects.REGENERATION, 100, 255));
+				if (entity instanceof Player _player) {
+					_player.getAbilities().invulnerable = true;
+					_player.onUpdateAbilities();
+				}
+				if (world instanceof ServerLevel _level)
+					_level.sendParticles((SimpleParticleType) (DccModParticleTypes.SHIELD_PARTICLE.get()), x, y, z, 300, 1, 2, 1, 0.02);
+				DccMod.queueServerWork(100, () -> {
 					if (entity instanceof Player _player) {
-						_player.getAbilities().invulnerable = true;
+						_player.getAbilities().invulnerable = false;
 						_player.onUpdateAbilities();
 					}
-					if (world instanceof ServerLevel _level)
-						_level.sendParticles((SimpleParticleType) (DccModParticleTypes.SHIELD_PARTICLE.get()), x, y, z, 300, 1, 2, 1, 0.02);
-					DccMod.queueServerWork(100, () -> {
-						if (entity instanceof Player _player) {
-							_player.getAbilities().invulnerable = false;
-							_player.onUpdateAbilities();
-						}
-					});
+				});
+			} else if ((entity.getData(DccModVariables.PLAYER_VARIABLES).Class_Variable).equals("Bard")) {
+				if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
+					_entity.addEffect(new MobEffectInstance(MobEffects.SLOW_FALLING, 120, 0));
+			} else if ((entity.getData(DccModVariables.PLAYER_VARIABLES).Class_Variable).equals("Monk")) {
+				{
+					DccModVariables.PlayerVariables _vars = entity.getData(DccModVariables.PLAYER_VARIABLES);
+					_vars.Ki = entity.getData(DccModVariables.PLAYER_VARIABLES).Ki - 1;
+					_vars.syncPlayerVariables(entity);
 				}
-			}
-			if ((entity.getData(DccModVariables.PLAYER_VARIABLES).Class_Variable).equals("Bard")) {
-				if (entity.getData(DccModVariables.PLAYER_VARIABLES).cooldown < 0.05) {
-					{
-						DccModVariables.PlayerVariables _vars = entity.getData(DccModVariables.PLAYER_VARIABLES);
-						_vars.cooldown = 30;
-						_vars.syncPlayerVariables(entity);
+				{
+					final Vec3 _center = new Vec3(x, y, z);
+					List<Entity> _entfound = world.getEntitiesOfClass(Entity.class, new AABB(_center, _center).inflate(8 / 2d), e -> true).stream().sorted(Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_center))).toList();
+					for (Entity entityiterator : _entfound) {
+						if (!(entity == entityiterator)) {
+							entityiterator.hurt(new DamageSource(world.holderOrThrow(DamageTypes.GENERIC)), 35);
+						}
 					}
-					if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
-						_entity.addEffect(new MobEffectInstance(MobEffects.SLOW_FALLING, 120, 0));
 				}
-			}
-			if ((entity.getData(DccModVariables.PLAYER_VARIABLES).Class_Variable).equals("Monk")) {
-				if (entity.getData(DccModVariables.PLAYER_VARIABLES).cooldown < 0.05) {
-					{
-						DccModVariables.PlayerVariables _vars = entity.getData(DccModVariables.PLAYER_VARIABLES);
-						_vars.cooldown = 60;
-						_vars.syncPlayerVariables(entity);
+				if (world instanceof Level _level) {
+					if (!_level.isClientSide()) {
+						_level.playSound(null, BlockPos.containing(x, y, z), BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("block.enchantment_table.use")), SoundSource.NEUTRAL, 10, 1);
+					} else {
+						_level.playLocalSound(x, y, z, BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("block.enchantment_table.use")), SoundSource.NEUTRAL, 10, 1, false);
 					}
-					{
-						DccModVariables.PlayerVariables _vars = entity.getData(DccModVariables.PLAYER_VARIABLES);
-						_vars.Ki = entity.getData(DccModVariables.PLAYER_VARIABLES).Ki - 1;
-						_vars.syncPlayerVariables(entity);
-					}
-					{
-						final Vec3 _center = new Vec3(x, y, z);
-						List<Entity> _entfound = world.getEntitiesOfClass(Entity.class, new AABB(_center, _center).inflate(8 / 2d), e -> true).stream().sorted(Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_center))).toList();
-						for (Entity entityiterator : _entfound) {
-							if (!(entity == entityiterator)) {
-								entityiterator.hurt(new DamageSource(world.holderOrThrow(DamageTypes.GENERIC)), 35);
-							}
-						}
-					}
-					if (world instanceof Level _level) {
-						if (!_level.isClientSide()) {
-							_level.playSound(null, BlockPos.containing(x, y, z), BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("block.enchantment_table.use")), SoundSource.NEUTRAL, 10, 1);
-						} else {
-							_level.playLocalSound(x, y, z, BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("block.enchantment_table.use")), SoundSource.NEUTRAL, 10, 1, false);
-						}
-					}
+				}
+				if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
+					_entity.addEffect(new MobEffectInstance(MobEffects.REGENERATION, 300, 1));
+				if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
+					_entity.addEffect(new MobEffectInstance(MobEffects.LEVITATION, 40, 20));
+				if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
+					_entity.addEffect(new MobEffectInstance(MobEffects.SLOW_FALLING, 100, 255));
+				{
+					DccModVariables.PlayerVariables _vars = entity.getData(DccModVariables.PLAYER_VARIABLES);
+					_vars.Ki = 6;
+					_vars.syncPlayerVariables(entity);
+				}
+				DccMod.queueServerWork(60, () -> {
 					if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
-						_entity.addEffect(new MobEffectInstance(MobEffects.REGENERATION, 300, 1));
-					if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
-						_entity.addEffect(new MobEffectInstance(MobEffects.LEVITATION, 40, 20));
-					if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
-						_entity.addEffect(new MobEffectInstance(MobEffects.SLOW_FALLING, 100, 255));
-					{
-						DccModVariables.PlayerVariables _vars = entity.getData(DccModVariables.PLAYER_VARIABLES);
-						_vars.Ki = 6;
-						_vars.syncPlayerVariables(entity);
-					}
-					DccMod.queueServerWork(60, () -> {
-						if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
-							_entity.addEffect(new MobEffectInstance(MobEffects.SLOW_FALLING, 200, 1));
-					});
+						_entity.addEffect(new MobEffectInstance(MobEffects.SLOW_FALLING, 200, 1));
+				});
+			} else if ((entity.getData(DccModVariables.PLAYER_VARIABLES).Class_Variable).equals("Druid")) {
+				{
+					DccModVariables.PlayerVariables _vars = entity.getData(DccModVariables.PLAYER_VARIABLES);
+					_vars.cooldown = 60;
+					_vars.syncPlayerVariables(entity);
 				}
 			}
 		}

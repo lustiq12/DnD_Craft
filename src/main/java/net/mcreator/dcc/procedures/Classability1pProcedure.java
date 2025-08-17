@@ -30,8 +30,8 @@ public class Classability1pProcedure {
 	public static void execute(LevelAccessor world, double x, double y, double z, Entity entity) {
 		if (entity == null)
 			return;
-		if ((entity.getData(DccModVariables.PLAYER_VARIABLES).Class_Variable).equals("Barbarian")) {
-			if (entity.getData(DccModVariables.PLAYER_VARIABLES).cooldown < 0.05) {
+		if (entity.getData(DccModVariables.PLAYER_VARIABLES).cooldown < 0.05) {
+			if ((entity.getData(DccModVariables.PLAYER_VARIABLES).Class_Variable).equals("Barbarian")) {
 				{
 					DccModVariables.PlayerVariables _vars = entity.getData(DccModVariables.PLAYER_VARIABLES);
 					_vars.cooldown = 30;
@@ -57,9 +57,7 @@ public class Classability1pProcedure {
 						_vars.syncPlayerVariables(entity);
 					}
 				});
-			}
-		} else if ((entity.getData(DccModVariables.PLAYER_VARIABLES).Class_Variable).equals("Bard")) {
-			if (entity.getData(DccModVariables.PLAYER_VARIABLES).cooldown < 0.05) {
+			} else if ((entity.getData(DccModVariables.PLAYER_VARIABLES).Class_Variable).equals("Bard")) {
 				{
 					DccModVariables.PlayerVariables _vars = entity.getData(DccModVariables.PLAYER_VARIABLES);
 					_vars.cooldown = 20;
@@ -73,10 +71,10 @@ public class Classability1pProcedure {
 					}
 				}
 				if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
-					_entity.addEffect(new MobEffectInstance(MobEffects.REGENERATION, 100, 2));
+					_entity.addEffect(new MobEffectInstance(MobEffects.REGENERATION, 40, 2));
 				if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
-					_entity.addEffect(new MobEffectInstance(MobEffects.SATURATION, 100, 1));
-				if (79 < (entity instanceof Player _plr ? _plr.experienceLevel : 0)) {
+					_entity.addEffect(new MobEffectInstance(MobEffects.SATURATION, 40, 1));
+				if (entity.getData(DccModVariables.PLAYER_VARIABLES).PlayerLevel > 19) {
 					if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
 						_entity.addEffect(new MobEffectInstance(MobEffects.REGENERATION, 100, 10));
 				}
@@ -89,9 +87,7 @@ public class Classability1pProcedure {
 						}
 					}
 				});
-			}
-		} else if ((entity.getData(DccModVariables.PLAYER_VARIABLES).Class_Variable).equals("Magician")) {
-			if (entity.getData(DccModVariables.PLAYER_VARIABLES).cooldown < 0.05) {
+			} else if ((entity.getData(DccModVariables.PLAYER_VARIABLES).Class_Variable).equals("Magician")) {
 				{
 					DccModVariables.PlayerVariables _vars = entity.getData(DccModVariables.PLAYER_VARIABLES);
 					_vars.cooldown = 30;
@@ -146,37 +142,34 @@ public class Classability1pProcedure {
 						_vars.syncPlayerVariables(entity);
 					}
 				});
-			}
-		} else if ((entity.getData(DccModVariables.PLAYER_VARIABLES).Class_Variable).equals("Monk")) {
-			if (entity.getData(DccModVariables.PLAYER_VARIABLES).cooldown < 0.05) {
-				if (entity.getData(DccModVariables.PLAYER_VARIABLES).Ki > 0) {
-					if (entity instanceof ServerPlayer _ent) {
-						BlockPos _bpos = BlockPos.containing(x, y, z);
-						_ent.openMenu(new MenuProvider() {
-							@Override
-							public Component getDisplayName() {
-								return Component.literal("Ki");
-							}
-
-							@Override
-							public boolean shouldTriggerClientSideContainerClosingOnOpen() {
-								return false;
-							}
-
-							@Override
-							public AbstractContainerMenu createMenu(int id, Inventory inventory, Player player) {
-								return new KiMenu(id, inventory, new FriendlyByteBuf(Unpooled.buffer()).writeBlockPos(_bpos));
-							}
-						}, _bpos);
-					}
-				}
-			}
-		} else if ((entity.getData(DccModVariables.PLAYER_VARIABLES).Class_Variable).equals("Druid")) {
-			if (entity.getData(DccModVariables.PLAYER_VARIABLES).cooldown < 0.05) {
+			} else if ((entity.getData(DccModVariables.PLAYER_VARIABLES).Class_Variable).equals("Druid")) {
 				{
 					DccModVariables.PlayerVariables _vars = entity.getData(DccModVariables.PLAYER_VARIABLES);
 					_vars.cooldown = 30;
 					_vars.syncPlayerVariables(entity);
+				}
+			}
+		}
+		if ((entity.getData(DccModVariables.PLAYER_VARIABLES).Class_Variable).equals("Monk")) {
+			if (entity.getData(DccModVariables.PLAYER_VARIABLES).Ki > 0) {
+				if (entity instanceof ServerPlayer _ent) {
+					BlockPos _bpos = BlockPos.containing(x, y, z);
+					_ent.openMenu(new MenuProvider() {
+						@Override
+						public Component getDisplayName() {
+							return Component.literal("Ki");
+						}
+
+						@Override
+						public boolean shouldTriggerClientSideContainerClosingOnOpen() {
+							return false;
+						}
+
+						@Override
+						public AbstractContainerMenu createMenu(int id, Inventory inventory, Player player) {
+							return new KiMenu(id, inventory, new FriendlyByteBuf(Unpooled.buffer()).writeBlockPos(_bpos));
+						}
+					}, _bpos);
 				}
 			}
 		}

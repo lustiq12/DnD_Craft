@@ -161,7 +161,7 @@
           "text": "Invisibility",
           "isUndecorated": false,
           "onClick": {
-            "name": "Ivisibility"
+            "name": "Invisibility"
           },
           "width": 88,
           "height": 20,

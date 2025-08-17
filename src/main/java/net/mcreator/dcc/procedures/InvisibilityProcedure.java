@@ -5,7 +5,7 @@ import net.minecraft.world.entity.Entity;
 
 import net.mcreator.dcc.network.DccModVariables;
 
-public class IvisibilityProcedure {
+public class InvisibilityProcedure {
 	public static void execute(Entity entity) {
 		if (entity == null)
 			return;

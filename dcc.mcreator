@@ -3045,7 +3045,7 @@
           }
         ]
       },
-      "path": "~/Magic"
+      "path": "~/Magic/spellsetters"
     },
     {
       "name": "Magier",
@@ -3153,7 +3153,7 @@
           }
         ]
       },
-      "path": "~/ClassSystem/Magician"
+      "path": "~/Magic"
     },
     {
       "name": "Coldray",
@@ -3172,7 +3172,7 @@
           }
         ]
       },
-      "path": "~/Magic"
+      "path": "~/Magic/spellsetters"
     },
     {
       "name": "Thunderwave",
@@ -3191,7 +3191,7 @@
           }
         ]
       },
-      "path": "~/Magic"
+      "path": "~/Magic/spellsetters"
     },
     {
       "name": "Fakelife",
@@ -3210,26 +3210,7 @@
           }
         ]
       },
-      "path": "~/Magic"
-    },
-    {
-      "name": "Ivisibility",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "ivisibility",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/dcc/procedures/IvisibilityProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      },
-      "path": "~/Magic"
+      "path": "~/Magic/spellsetters"
     },
     {
       "name": "Nightvision",
@@ -3248,7 +3229,7 @@
           }
         ]
       },
-      "path": "~/Magic"
+      "path": "~/Magic/spellsetters"
     },
     {
       "name": "Mana",
@@ -3286,7 +3267,7 @@
           }
         ]
       },
-      "path": "~/Magic"
+      "path": "~/Magic/spellsetters"
     },
     {
       "name": "Fireball2ProjectileHitsLivingEntity",
@@ -3415,7 +3396,7 @@
           }
         ]
       },
-      "path": "~/Procedures"
+      "path": "~/Magic/spellsetters"
     },
     {
       "name": "PoisonedDagger",
@@ -3599,7 +3580,7 @@
           }
         ]
       },
-      "path": "~/Magic"
+      "path": "~/Magic/spellsetters"
     },
     {
       "name": "Stronginvisibility",
@@ -3618,7 +3599,7 @@
           }
         ]
       },
-      "path": "~/Magic"
+      "path": "~/Magic/spellsetters"
     },
     {
       "name": "DodgeOnKeyPressed",
@@ -6480,6 +6461,347 @@
         ]
       },
       "path": "~/ClassSystem"
+    },
+    {
+      "name": "Invisibility",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "invisibility",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/dcc/procedures/InvisibilityProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Magic/spellsetters"
+    },
+    {
+      "name": "ColdrayCast",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "coldray_cast",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/dcc/procedures/ColdrayCastProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Magic/spellcasts"
+    },
+    {
+      "name": "FakelifeCast",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "fakelife_cast",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/dcc/procedures/FakelifeCastProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Magic/spellcasts"
+    },
+    {
+      "name": "FirearrowCast",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "firearrow_cast",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/dcc/procedures/FirearrowCastProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Magic/spellcasts"
+    },
+    {
+      "name": "FireballCast",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "fireball_cast",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/dcc/procedures/FireballCastProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Magic/spellcasts"
+    },
+    {
+      "name": "FirewallCast",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "firewall_cast",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/dcc/procedures/FirewallCastProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Magic/spellcasts"
+    },
+    {
+      "name": "InvisibilityCast",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "invisibility_cast",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/dcc/procedures/InvisibilityCastProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Magic/spellcasts"
+    },
+    {
+      "name": "NightvisionCast",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "nightvision_cast",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/dcc/procedures/NightvisionCastProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Magic/spellcasts"
+    },
+    {
+      "name": "StronginvisibilityCast",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "stronginvisibility_cast",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/dcc/procedures/StronginvisibilityCastProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Magic/spellcasts"
+    },
+    {
+      "name": "ThunderwaveCast",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "thunderwave_cast",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/dcc/procedures/ThunderwaveCastProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Magic/spellcasts"
+    },
+    {
+      "name": "SnowstormCast",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "snowstorm_cast",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/dcc/procedures/SnowstormCastProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Magic/spellcasts"
     }
   ],
   "variable_elements": [
@@ -6892,12 +7214,12 @@
   },
   "language_map": {
     "en_us": {
-      "gui.dnd_craft.bardegui.label_rage": "Healing",
       "gui.dcc.magiergui.label_ghost_axe": "+1 Spell",
+      "gui.dnd_craft.bardegui.label_rage": "Healing",
       "advancements.the_beginning.descr": "Start your adventure",
-      "gui.dnd_craft.bardegui.label_0_level": "Level 1 (y)",
-      "entity.dnd_craft.goblin_chief": "Goblin Chief",
       "gui.dcc.barbar_gui.label_0_level": "Level 1 (y)",
+      "entity.dnd_craft.goblin_chief": "Goblin Chief",
+      "gui.dnd_craft.bardegui.label_0_level": "Level 1 (y)",
       "advancements.weapon_collector.title": "Weapon Collector",
       "item.dcc.poison_vial.description_1": "Right-click with weapon in off hand to poison it",
       "gui.dnd_craft.monk_gui.label_level_60": "Level 15 (c)",
@@ -6924,8 +7246,8 @@
       "item.dnd_craft.basilisk_spawn_egg": "Basilisk Spawn Egg",
       "item.cool_mod.spear": "Spear",
       "item.dcc.spellbook.description_1": "Left-click to cast attack-spells",
-      "gui.cool_mod.barbar_gui.label_level_60": "Level 60",
       "item.dcc.spellbook.description_2": "Right-click on block to cast self-spells",
+      "gui.cool_mod.barbar_gui.label_level_60": "Level 60",
       "effect.dnd_craft.ki_effect": "Ki",
       "gui.dnd_craft.magic_choose.label_level_10": "Level 4",
       "item.dnd_craft.coated_poisoned_dagger.description_0": "Magic Weapon",
@@ -6956,8 +7278,8 @@
       "gui.dnd_craft.cook_gui.label_quests": "Quests",
       "gui.dcc.druid_gui.label_level_60": "Level 15 (c)",
       "item.dcc.ultimate_potionofhealing": "§6Ultimate Potion of Healing",
-      "item.cool_mod.adamantium_dagger": "Adamantium Dagger",
       "item.dcc.raw_silver_ore": "Raw Silver Ore",
+      "item.cool_mod.adamantium_dagger": "Adamantium Dagger",
       "gui.dnd_craft.monk_gui.label_invincibility": "Spiritual Regeneration",
       "gui.dcc.magic_choose.label_level_401": "Level 7",
       "gui.cool_mod.classes.button_magician": "Magician",
@@ -7593,10 +7915,6 @@
         "children": []
       },
       {
-        "name": "Magic",
-        "children": []
-      },
-      {
         "name": "Food",
         "children": []
       },
@@ -7635,6 +7953,19 @@
       {
         "name": "DimensionsBiomes",
         "children": []
+      },
+      {
+        "name": "Magic",
+        "children": [
+          {
+            "name": "spellsetters",
+            "children": []
+          },
+          {
+            "name": "spellcasts",
+            "children": []
+          }
+        ]
       }
     ]
   },

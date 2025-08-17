@@ -9,7 +9,7 @@ public class ThunderwaveProcedure {
 	public static void execute(Entity entity) {
 		if (entity == null)
 			return;
-		if (entity.getData(DccModVariables.PLAYER_VARIABLES).PlayerLevel > 1) {
+		if (entity.getData(DccModVariables.PLAYER_VARIABLES).PlayerLevel > 2) {
 			{
 				DccModVariables.PlayerVariables _vars = entity.getData(DccModVariables.PLAYER_VARIABLES);
 				_vars.Spell = "thunderwave";

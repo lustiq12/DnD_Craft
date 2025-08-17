@@ -39,7 +39,7 @@ public class ChestmimicProcedure {
 		double sy = 0;
 		double sz = 0;
 		if ((world.getBlockState(BlockPos.containing(x, y, z))).getBlock() == Blocks.CHEST) {
-			if (Mth.nextInt(RandomSource.create(), 1, 1) == 1) {
+			if (Mth.nextInt(RandomSource.create(), 1, 100) == 1) {
 				sx = -1;
 				found = false;
 				for (int index0 = 0; index0 < 3; index0++) {

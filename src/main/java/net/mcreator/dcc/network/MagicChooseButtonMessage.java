@@ -21,7 +21,7 @@ import net.mcreator.dcc.procedures.ThunderwaveProcedure;
 import net.mcreator.dcc.procedures.StronginvisibilityProcedure;
 import net.mcreator.dcc.procedures.SnowstormProcedure;
 import net.mcreator.dcc.procedures.NightvisionProcedure;
-import net.mcreator.dcc.procedures.IvisibilityProcedure;
+import net.mcreator.dcc.procedures.InvisibilityProcedure;
 import net.mcreator.dcc.procedures.FirewallProcedure;
 import net.mcreator.dcc.procedures.FireballProcedure;
 import net.mcreator.dcc.procedures.FirearrowProcedure;
@@ -86,7 +86,7 @@ public record MagicChooseButtonMessage(int buttonID, int x, int y, int z) implem
 		}
 		if (buttonID == 4) {
 
-			IvisibilityProcedure.execute(entity);
+			InvisibilityProcedure.execute(entity);
 		}
 		if (buttonID == 5) {
 
