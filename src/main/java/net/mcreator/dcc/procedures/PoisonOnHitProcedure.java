@@ -19,7 +19,7 @@ import net.minecraft.core.component.DataComponents;
 import javax.annotation.Nullable;
 
 @EventBusSubscriber
-public class EntityHitProcedure {
+public class PoisonOnHitProcedure {
 	@SubscribeEvent
 	public static void onEntityAttacked(LivingIncomingDamageEvent event) {
 		if (event.getEntity() != null) {

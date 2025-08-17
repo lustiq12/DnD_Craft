@@ -16,7 +16,7 @@ import net.mcreator.dcc.init.DccModParticleTypes;
 import javax.annotation.Nullable;
 
 @EventBusSubscriber
-public class BloodgoreProcedure {
+public class BloodParticlesProcedure {
 	@SubscribeEvent
 	public static void onEntityAttacked(LivingIncomingDamageEvent event) {
 		if (event.getEntity() != null) {

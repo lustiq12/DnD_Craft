@@ -20,7 +20,7 @@ import net.mcreator.dcc.network.DccModVariables;
 import javax.annotation.Nullable;
 
 @EventBusSubscriber
-public class ManaProcedure {
+public class ManaKiCooldownTextAboveHotbarProcedure {
 	@SubscribeEvent
 	public static void onPlayerTick(PlayerTickEvent.Post event) {
 		execute(event, event.getEntity());

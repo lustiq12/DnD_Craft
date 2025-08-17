@@ -2482,37 +2482,6 @@
       "path": "~/Loot"
     },
     {
-      "name": "GoblinSpawnerOnTickUpdate",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "goblin_spawner_on_tick_update",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/dcc/procedures/GoblinSpawnerOnTickUpdateProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      },
-      "path": "~/Procedures"
-    },
-    {
       "name": "CopperCoin",
       "type": "item",
       "compiles": true,
@@ -3232,25 +3201,6 @@
       "path": "~/Magic/spellsetters"
     },
     {
-      "name": "Mana",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "mana",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/dcc/procedures/ManaProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      },
-      "path": "~/Procedures"
-    },
-    {
       "name": "Fireball",
       "type": "procedure",
       "compiles": true,
@@ -3851,45 +3801,6 @@
           "src/main/resources/assets/dcc/models/item/poison_vial.json"
         ]
       }
-    },
-    {
-      "name": "EntityHit",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "entity_hit",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/dcc/procedures/EntityHitProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "immediatesourceentity",
-            "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      },
-      "path": "~/Procedures"
     },
     {
       "name": "Ogrehit",
@@ -4900,45 +4811,6 @@
         ]
       },
       "path": "~/OverlaysEffectsParticles"
-    },
-    {
-      "name": "Bloodgore",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "bloodgore",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/dcc/procedures/BloodgoreProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "damagesource",
-            "type": "damagesource"
-          },
-          {
-            "name": "amount",
-            "type": "number"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      },
-      "path": "~/Procedures"
     },
     {
       "name": "PlatinumOre",
@@ -6802,6 +6674,103 @@
         ]
       },
       "path": "~/Magic/spellcasts"
+    },
+    {
+      "name": "BloodParticles",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "blood_particles",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/dcc/procedures/BloodParticlesProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "damagesource",
+            "type": "damagesource"
+          },
+          {
+            "name": "amount",
+            "type": "number"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Procedures"
+    },
+    {
+      "name": "ManaKiCooldownTextAboveHotbar",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mana_ki_cooldown_text_above_hotbar",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/dcc/procedures/ManaKiCooldownTextAboveHotbarProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Procedures"
+    },
+    {
+      "name": "PoisonOnHit",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "poison_on_hit",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/dcc/procedures/PoisonOnHitProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "immediatesourceentity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Procedures"
     }
   ],
   "variable_elements": [
