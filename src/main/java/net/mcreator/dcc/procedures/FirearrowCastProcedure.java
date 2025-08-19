@@ -22,13 +22,14 @@ public class FirearrowCastProcedure {
 			Level projectileLevel = _shootFrom.level();
 			if (!projectileLevel.isClientSide()) {
 				Projectile _entityToSpawn = new Object() {
-					public Projectile getFireball(Level level, double ax, double ay, double az) {
+					public Projectile getFireball(Level level, Entity shooter, double ax, double ay, double az) {
 						AbstractHurtingProjectile entityToSpawn = new SmallFireball(EntityType.SMALL_FIREBALL, level);
+						entityToSpawn.setOwner(shooter);
 						entityToSpawn.setDeltaMovement(new Vec3(ax, ay, az));
 						entityToSpawn.hasImpulse = true;
 						return entityToSpawn;
 					}
-				}.getFireball(projectileLevel, (entity.getLookAngle().x), (entity.getLookAngle().y), (entity.getLookAngle().z));
+				}.getFireball(projectileLevel, entity, (entity.getLookAngle().x), (entity.getLookAngle().y), (entity.getLookAngle().z));
 				_entityToSpawn.setPos(_shootFrom.getX(), _shootFrom.getEyeY() - 0.1, _shootFrom.getZ());
 				_entityToSpawn.shoot(_shootFrom.getLookAngle().x, _shootFrom.getLookAngle().y, _shootFrom.getLookAngle().z, 7, 0);
 				projectileLevel.addFreshEntity(_entityToSpawn);

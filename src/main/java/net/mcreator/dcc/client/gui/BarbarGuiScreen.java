@@ -45,6 +45,16 @@ public class BarbarGuiScreen extends AbstractContainerScreen<BarbarGuiMenu> {
 		this.renderBackground(guiGraphics, mouseX, mouseY, partialTicks);
 		super.render(guiGraphics, mouseX, mouseY, partialTicks);
 		this.renderTooltip(guiGraphics, mouseX, mouseY);
+		if (mouseX > leftPos + 34 && mouseX < leftPos + 58 && mouseY > topPos + 27 && mouseY < topPos + 51)
+			guiGraphics.renderTooltip(font, Component.translatable("gui.dcc.barbar_gui.tooltip_get_strength_speed_and_regenera"), mouseX, mouseY);
+		if (mouseX > leftPos + 34 && mouseX < leftPos + 58 && mouseY > topPos + 54 && mouseY < topPos + 78)
+			guiGraphics.renderTooltip(font, Component.translatable("gui.dcc.barbar_gui.tooltip_summon_a_powerful_axe_that_despa"), mouseX, mouseY);
+		if (mouseX > leftPos + 34 && mouseX < leftPos + 58 && mouseY > topPos + 81 && mouseY < topPos + 105)
+			guiGraphics.renderTooltip(font, Component.translatable("gui.dcc.barbar_gui.tooltip_get_permanent_resistance_1"), mouseX, mouseY);
+		if (mouseX > leftPos + 34 && mouseX < leftPos + 58 && mouseY > topPos + 108 && mouseY < topPos + 132)
+			guiGraphics.renderTooltip(font, Component.translatable("gui.dcc.barbar_gui.tooltip_get_max_regeneration_and_invinci"), mouseX, mouseY);
+		if (mouseX > leftPos + 34 && mouseX < leftPos + 58 && mouseY > topPos + 135 && mouseY < topPos + 159)
+			guiGraphics.renderTooltip(font, Component.translatable("gui.dcc.barbar_gui.tooltip_get_permanent_strength_2"), mouseX, mouseY);
 	}
 
 	@Override

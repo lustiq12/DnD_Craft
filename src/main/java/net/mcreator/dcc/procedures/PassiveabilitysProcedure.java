@@ -24,8 +24,6 @@ import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.core.BlockPos;
 import net.minecraft.commands.arguments.EntityAnchorArgument;
-import net.minecraft.commands.CommandSourceStack;
-import net.minecraft.commands.CommandSource;
 
 import net.mcreator.dcc.network.DccModVariables;
 
@@ -56,7 +54,7 @@ public class PassiveabilitysProcedure {
 			if ((entity.getData(DccModVariables.PLAYER_VARIABLES).Class_Variable).equals("Barbarian")) {
 				if (8 > (entity instanceof LivingEntity _livEnt ? _livEnt.getHealth() : -1)) {
 					if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
-						_entity.addEffect(new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 100, 1));
+						_entity.addEffect(new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 100, 0));
 				}
 			} else if ((entity.getData(DccModVariables.PLAYER_VARIABLES).Class_Variable).equals("Bard")) {
 				if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
@@ -66,18 +64,18 @@ public class PassiveabilitysProcedure {
 			} else if ((entity.getData(DccModVariables.PLAYER_VARIABLES).Class_Variable).equals("Monk")) {
 				if (1 > entity.getData(DccModVariables.PLAYER_VARIABLES).cooldown) {
 					if (1 < entity.getData(DccModVariables.PLAYER_VARIABLES).Ki) {
-						if (10 > (entity instanceof LivingEntity _livEnt ? _livEnt.getHealth() : -1)) {
+						if (5 > (entity instanceof LivingEntity _livEnt ? _livEnt.getHealth() : -1)) {
+							{
+								DccModVariables.PlayerVariables _vars = entity.getData(DccModVariables.PLAYER_VARIABLES);
+								_vars.Ki = entity.getData(DccModVariables.PLAYER_VARIABLES).Ki - 1;
+								_vars.syncPlayerVariables(entity);
+							}
 							if (world instanceof Level _level) {
 								if (!_level.isClientSide()) {
 									_level.playSound(null, BlockPos.containing(x, y, z), BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("entity.dragon_fireball.explode")), SoundSource.NEUTRAL, 6, 1);
 								} else {
 									_level.playLocalSound(x, y, z, BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("entity.dragon_fireball.explode")), SoundSource.NEUTRAL, 6, 1, false);
 								}
-							}
-							{
-								DccModVariables.PlayerVariables _vars = entity.getData(DccModVariables.PLAYER_VARIABLES);
-								_vars.Ki = entity.getData(DccModVariables.PLAYER_VARIABLES).Ki - 1;
-								_vars.syncPlayerVariables(entity);
 							}
 							if (world instanceof ServerLevel _level)
 								_level.sendParticles(ParticleTypes.CHERRY_LEAVES, x, y, z, 2000, 5, 5, 3, 0.01);
@@ -140,13 +138,8 @@ public class PassiveabilitysProcedure {
 		}
 		if (19 < entity.getData(DccModVariables.PLAYER_VARIABLES).PlayerLevel) {
 			if ((entity.getData(DccModVariables.PLAYER_VARIABLES).Class_Variable).equals("Barbarian")) {
-				{
-					Entity _ent = entity;
-					if (!_ent.level().isClientSide() && _ent.getServer() != null) {
-						_ent.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, _ent.position(), _ent.getRotationVector(), _ent.level() instanceof ServerLevel ? (ServerLevel) _ent.level() : null, 4,
-								_ent.getName().getString(), _ent.getDisplayName(), _ent.level().getServer(), _ent), "attribute @p minecraft:generic.attack_damage base set 4");
-					}
-				}
+				if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
+					_entity.addEffect(new MobEffectInstance(MobEffects.DAMAGE_BOOST, 20, 1, false, false));
 			} else if ((entity.getData(DccModVariables.PLAYER_VARIABLES).Class_Variable).equals("Monk")) {
 				if (entity instanceof LivingEntity _entity)
 					_entity.removeEffect(MobEffects.BLINDNESS);

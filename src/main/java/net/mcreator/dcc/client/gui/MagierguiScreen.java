@@ -45,6 +45,10 @@ public class MagierguiScreen extends AbstractContainerScreen<MagierguiMenu> {
 		this.renderBackground(guiGraphics, mouseX, mouseY, partialTicks);
 		super.render(guiGraphics, mouseX, mouseY, partialTicks);
 		this.renderTooltip(guiGraphics, mouseX, mouseY);
+		if (mouseX > leftPos + 34 && mouseX < leftPos + 58 && mouseY > topPos + 27 && mouseY < topPos + 51)
+			guiGraphics.renderTooltip(font, Component.translatable("gui.dcc.magiergui.tooltip_regenerate_60_mana_in_15s"), mouseX, mouseY);
+		if (mouseX > leftPos + 34 && mouseX < leftPos + 58 && mouseY > topPos + 54 && mouseY < topPos + 78)
+			guiGraphics.renderTooltip(font, Component.translatable("gui.dcc.magiergui.tooltip_get_a_new_spell_you_can_acces_vi"), mouseX, mouseY);
 	}
 
 	@Override

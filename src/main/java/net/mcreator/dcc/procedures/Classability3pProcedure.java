@@ -5,7 +5,11 @@ import net.minecraft.world.phys.AABB;
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.entity.animal.Wolf;
+import net.minecraft.world.entity.TamableAnimal;
+import net.minecraft.world.entity.MobSpawnType;
 import net.minecraft.world.entity.LivingEntity;
+import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.effect.MobEffectInstance;
@@ -58,8 +62,41 @@ public class Classability3pProcedure {
 					}
 				});
 			} else if ((entity.getData(DccModVariables.PLAYER_VARIABLES).Class_Variable).equals("Bard")) {
-				if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
-					_entity.addEffect(new MobEffectInstance(MobEffects.SLOW_FALLING, 120, 0));
+				DccMod.queueServerWork(40, () -> {
+					{
+						DccModVariables.PlayerVariables _vars = entity.getData(DccModVariables.PLAYER_VARIABLES);
+						_vars.cooldown = 0;
+						_vars.syncPlayerVariables(entity);
+					}
+					DccMod.queueServerWork(40, () -> {
+						{
+							DccModVariables.PlayerVariables _vars = entity.getData(DccModVariables.PLAYER_VARIABLES);
+							_vars.cooldown = 0;
+							_vars.syncPlayerVariables(entity);
+						}
+						DccMod.queueServerWork(40, () -> {
+							{
+								DccModVariables.PlayerVariables _vars = entity.getData(DccModVariables.PLAYER_VARIABLES);
+								_vars.cooldown = 0;
+								_vars.syncPlayerVariables(entity);
+							}
+							DccMod.queueServerWork(40, () -> {
+								{
+									DccModVariables.PlayerVariables _vars = entity.getData(DccModVariables.PLAYER_VARIABLES);
+									_vars.cooldown = 0;
+									_vars.syncPlayerVariables(entity);
+								}
+								DccMod.queueServerWork(40, () -> {
+									{
+										DccModVariables.PlayerVariables _vars = entity.getData(DccModVariables.PLAYER_VARIABLES);
+										_vars.cooldown = 0;
+										_vars.syncPlayerVariables(entity);
+									}
+								});
+							});
+						});
+					});
+				});
 			} else if ((entity.getData(DccModVariables.PLAYER_VARIABLES).Class_Variable).equals("Monk")) {
 				{
 					DccModVariables.PlayerVariables _vars = entity.getData(DccModVariables.PLAYER_VARIABLES);
@@ -102,6 +139,52 @@ public class Classability3pProcedure {
 					DccModVariables.PlayerVariables _vars = entity.getData(DccModVariables.PLAYER_VARIABLES);
 					_vars.cooldown = 60;
 					_vars.syncPlayerVariables(entity);
+				}
+				if (world instanceof ServerLevel _level) {
+					Entity entityToSpawn = EntityType.WOLF.spawn(_level, BlockPos.containing(x, y, z), MobSpawnType.MOB_SUMMONED);
+					if (entityToSpawn != null) {
+						entityToSpawn.setDeltaMovement(0, 0, 0);
+					}
+				}
+				if (world instanceof ServerLevel _level) {
+					Entity entityToSpawn = EntityType.WOLF.spawn(_level, BlockPos.containing(x, y, z), MobSpawnType.MOB_SUMMONED);
+					if (entityToSpawn != null) {
+						entityToSpawn.setDeltaMovement(0, 0, 0);
+					}
+				}
+				if (world instanceof ServerLevel _level) {
+					Entity entityToSpawn = EntityType.WOLF.spawn(_level, BlockPos.containing(x, y, z), MobSpawnType.MOB_SUMMONED);
+					if (entityToSpawn != null) {
+						entityToSpawn.setDeltaMovement(0, 0, 0);
+					}
+				}
+				if (world instanceof ServerLevel _level) {
+					Entity entityToSpawn = EntityType.WOLF.spawn(_level, BlockPos.containing(x, y, z), MobSpawnType.MOB_SUMMONED);
+					if (entityToSpawn != null) {
+						entityToSpawn.setDeltaMovement(0, 0, 0);
+					}
+				}
+				if (world instanceof ServerLevel _level) {
+					Entity entityToSpawn = EntityType.WOLF.spawn(_level, BlockPos.containing(x, y, z), MobSpawnType.MOB_SUMMONED);
+					if (entityToSpawn != null) {
+						entityToSpawn.setDeltaMovement(0, 0, 0);
+					}
+				}
+				{
+					final Vec3 _center = new Vec3(x, y, z);
+					List<Entity> _entfound = world.getEntitiesOfClass(Entity.class, new AABB(_center, _center).inflate(4 / 2d), e -> true).stream().sorted(Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_center))).toList();
+					for (Entity entityiterator : _entfound) {
+						if (entityiterator instanceof Wolf) {
+							if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
+								_entity.addEffect(new MobEffectInstance(MobEffects.DAMAGE_BOOST, 200, 2, false, true));
+							if (entityiterator instanceof TamableAnimal _toTame && entity instanceof Player _owner)
+								_toTame.tame(_owner);
+							DccMod.queueServerWork(200, () -> {
+								if (!entityiterator.level().isClientSide())
+									entityiterator.discard();
+							});
+						}
+					}
 				}
 			}
 		}

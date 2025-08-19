@@ -128,7 +128,7 @@ public class Classability2pProcedure {
 								_vars.syncPlayerVariables(entity);
 							}
 							if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
-								_entity.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 900, 1));
+								_entity.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 400, 1));
 						}
 					}
 				}

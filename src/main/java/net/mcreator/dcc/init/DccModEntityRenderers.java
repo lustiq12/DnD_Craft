@@ -13,6 +13,7 @@ import net.minecraft.client.renderer.entity.ThrownItemRenderer;
 
 import net.mcreator.dcc.client.renderer.WargRenderer;
 import net.mcreator.dcc.client.renderer.VINESRenderer;
+import net.mcreator.dcc.client.renderer.ThornRenderer;
 import net.mcreator.dcc.client.renderer.OwlbearRenderer;
 import net.mcreator.dcc.client.renderer.OrkRenderer;
 import net.mcreator.dcc.client.renderer.Ogre2Renderer;
@@ -54,5 +55,6 @@ public class DccModEntityRenderers {
 		event.registerEntityRenderer(DccModEntities.COOK.get(), CookRenderer::new);
 		event.registerEntityRenderer(DccModEntities.GHOUL.get(), GhoulRenderer::new);
 		event.registerEntityRenderer(DccModEntities.VINES.get(), VINESRenderer::new);
+		event.registerEntityRenderer(DccModEntities.THORN.get(), ThornRenderer::new);
 	}
 }

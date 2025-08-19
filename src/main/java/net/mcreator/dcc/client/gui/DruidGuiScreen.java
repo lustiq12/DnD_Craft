@@ -45,6 +45,16 @@ public class DruidGuiScreen extends AbstractContainerScreen<DruidGuiMenu> {
 		this.renderBackground(guiGraphics, mouseX, mouseY, partialTicks);
 		super.render(guiGraphics, mouseX, mouseY, partialTicks);
 		this.renderTooltip(guiGraphics, mouseX, mouseY);
+		if (mouseX > leftPos + 34 && mouseX < leftPos + 58 && mouseY > topPos + 27 && mouseY < topPos + 51)
+			guiGraphics.renderTooltip(font, Component.translatable("gui.dcc.druid_gui.tooltip_shoot_a_thorn_that_deals_75_hea"), mouseX, mouseY);
+		if (mouseX > leftPos + 34 && mouseX < leftPos + 58 && mouseY > topPos + 54 && mouseY < topPos + 78)
+			guiGraphics.renderTooltip(font, Component.translatable("gui.dcc.druid_gui.tooltip_let_roots_come_out_of_the_earth"), mouseX, mouseY);
+		if (mouseX > leftPos + 34 && mouseX < leftPos + 58 && mouseY > topPos + 81 && mouseY < topPos + 105)
+			guiGraphics.renderTooltip(font, Component.translatable("gui.dcc.druid_gui.tooltip_when_you_are_near_plants_you_ge"), mouseX, mouseY);
+		if (mouseX > leftPos + 34 && mouseX < leftPos + 58 && mouseY > topPos + 135 && mouseY < topPos + 159)
+			guiGraphics.renderTooltip(font, Component.translatable("gui.dcc.druid_gui.tooltip_you_get_a_higher_regeneration_le"), mouseX, mouseY);
+		if (mouseX > leftPos + 34 && mouseX < leftPos + 58 && mouseY > topPos + 108 && mouseY < topPos + 132)
+			guiGraphics.renderTooltip(font, Component.translatable("gui.dcc.druid_gui.tooltip_summon_5_strong_wolves_that_supp"), mouseX, mouseY);
 	}
 
 	@Override

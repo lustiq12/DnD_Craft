@@ -167,7 +167,7 @@
         "data": {
           "name": "label_invincibility",
           "text": {
-            "fixedValue": "Power of the Wind"
+            "fixedValue": "Bard Agility !!WIP!!"
           },
           "color": {
             "value": -12829636,
@@ -271,6 +271,76 @@
           "height": 20,
           "x": 240,
           "y": 188,
+          "locked": false
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_get_regen_3_and_saturation_2_for",
+          "text": {
+            "fixedValue": "Get regen 3 and saturation 2 for 2 seconds"
+          },
+          "width": 24,
+          "height": 24,
+          "x": 159,
+          "y": 53,
+          "locked": false
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_get_regen_10_instead_of_3_for_5",
+          "text": {
+            "fixedValue": "Get regen 10 instead of 3 for 5 instead of 2 seconds"
+          },
+          "width": 24,
+          "height": 24,
+          "x": 159,
+          "y": 161,
+          "locked": false
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_deal_4_hearts_damage_to_every_en",
+          "text": {
+            "fixedValue": "Deal 4 hearts damage to every entity up to 7.5 blocks away from you"
+          },
+          "width": 24,
+          "height": 24,
+          "x": 159,
+          "y": 80,
+          "locked": false
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_permanent_speed_and_haste_1",
+          "text": {
+            "fixedValue": "Permanent speed and haste 1"
+          },
+          "width": 24,
+          "height": 24,
+          "x": 159,
+          "y": 107,
+          "locked": false
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_remove_your_cooldown_for_10_seco",
+          "text": {
+            "fixedValue": "Reset your cooldown 5x to 0 every 2 seconds"
+          },
+          "width": 24,
+          "height": 24,
+          "x": 159,
+          "y": 134,
           "locked": false
         }
       }

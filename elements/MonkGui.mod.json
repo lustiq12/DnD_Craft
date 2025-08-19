@@ -273,6 +273,76 @@
           "y": 188,
           "locked": false
         }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_acces_to_yourt_ki_gui_and_its_ab",
+          "text": {
+            "fixedValue": "Acces to yourt Ki gui and its abilitys"
+          },
+          "width": 24,
+          "height": 24,
+          "x": 159,
+          "y": 53,
+          "locked": false
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_get_speed_1_for_20_seconds",
+          "text": {
+            "fixedValue": "Get speed 1 for 20 seconds"
+          },
+          "width": 24,
+          "height": 24,
+          "x": 159,
+          "y": 80,
+          "locked": false
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_if_under_25_hearts_boost_entiy",
+          "text": {
+            "fixedValue": "If under 2.5 hearts, boost entiys around you away form you and give them slowness + slow falling"
+          },
+          "width": 24,
+          "height": 24,
+          "x": 159,
+          "y": 107,
+          "locked": false
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_deal_damage_to_entitys_around_yo",
+          "text": {
+            "fixedValue": "Deal damage to entitys around you, get regeneration and fly up a bit but with slow falling"
+          },
+          "width": 24,
+          "height": 24,
+          "x": 159,
+          "y": 134,
+          "locked": false
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_be_immune_to_blindness_poison",
+          "text": {
+            "fixedValue": "Be immune to: Blindness. Poison, Hunger, Wither"
+          },
+          "width": 24,
+          "height": 24,
+          "x": 159,
+          "y": 161,
+          "locked": false
+        }
       }
     ],
     "gridSettings": {

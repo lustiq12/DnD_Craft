@@ -44,6 +44,10 @@ public class KiScreen extends AbstractContainerScreen<KiMenu> {
 		this.renderBackground(guiGraphics, mouseX, mouseY, partialTicks);
 		super.render(guiGraphics, mouseX, mouseY, partialTicks);
 		this.renderTooltip(guiGraphics, mouseX, mouseY);
+		if (mouseX > leftPos + 7 && mouseX < leftPos + 31 && mouseY > topPos + 27 && mouseY < topPos + 51)
+			guiGraphics.renderTooltip(font, Component.translatable("gui.dcc.ki.tooltip_get_higher_attack_speed_and_spee"), mouseX, mouseY);
+		if (mouseX > leftPos + 7 && mouseX < leftPos + 31 && mouseY > topPos + 54 && mouseY < topPos + 78)
+			guiGraphics.renderTooltip(font, Component.translatable("gui.dcc.ki.tooltip_get_max_armor_and_speed_for_5_se"), mouseX, mouseY);
 	}
 
 	@Override

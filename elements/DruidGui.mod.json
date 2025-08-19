@@ -41,7 +41,7 @@
         "data": {
           "name": "label_rage",
           "text": {
-            "fixedValue": "-"
+            "fixedValue": "Thorn Bolt"
           },
           "color": {
             "value": -12829636,
@@ -167,7 +167,7 @@
         "data": {
           "name": "label_invincibility",
           "text": {
-            "fixedValue": "-"
+            "fixedValue": "Wolv Army"
           },
           "color": {
             "value": -12829636,
@@ -271,6 +271,76 @@
           "height": 20,
           "x": 240,
           "y": 188,
+          "locked": false
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_shoot_a_thorn_that_deals_75_hea",
+          "text": {
+            "fixedValue": "Shoot a thorn that deals 7.5 hearts of damage"
+          },
+          "width": 24,
+          "height": 24,
+          "x": 159,
+          "y": 53,
+          "locked": false
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_let_roots_come_out_of_the_earth",
+          "text": {
+            "fixedValue": "Let roots come out of the earth under your enemies and hold them in place"
+          },
+          "width": 24,
+          "height": 24,
+          "x": 159,
+          "y": 80,
+          "locked": false
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_when_you_are_near_plants_you_ge",
+          "text": {
+            "fixedValue": "When you are near plants, you get regeneration"
+          },
+          "width": 24,
+          "height": 24,
+          "x": 159,
+          "y": 107,
+          "locked": false
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_you_get_a_higher_regeneration_le",
+          "text": {
+            "fixedValue": "You get a higher regeneration level while near plants"
+          },
+          "width": 24,
+          "height": 24,
+          "x": 159,
+          "y": 161,
+          "locked": false
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_summon_5_strong_wolves_that_supp",
+          "text": {
+            "fixedValue": "Summon 5 strong wolves that support you, but despawn after 10s"
+          },
+          "width": 24,
+          "height": 24,
+          "x": 159,
+          "y": 134,
           "locked": false
         }
       }

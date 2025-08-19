@@ -21,6 +21,7 @@ import net.minecraft.core.registries.Registries;
 
 import net.mcreator.dcc.entity.WargEntity;
 import net.mcreator.dcc.entity.VINESEntity;
+import net.mcreator.dcc.entity.ThornEntity;
 import net.mcreator.dcc.entity.OwlbearEntity;
 import net.mcreator.dcc.entity.OrkEntity;
 import net.mcreator.dcc.entity.Ogre2Entity;
@@ -115,6 +116,8 @@ public class DccModEntities {
 					.sized(0.6f, 1.8f));
 	public static final DeferredHolder<EntityType<?>, EntityType<VINESEntity>> VINES = register("vines",
 			EntityType.Builder.<VINESEntity>of(VINESEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).fireImmune().sized(0.6f, 1.8f));
+	public static final DeferredHolder<EntityType<?>, EntityType<ThornEntity>> THORN = register("thorn",
+			EntityType.Builder.<ThornEntity>of(ThornEntity::new, MobCategory.MISC).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(0.5f, 0.5f));
 
 	// Start of user code block custom entities
 	// End of user code block custom entities

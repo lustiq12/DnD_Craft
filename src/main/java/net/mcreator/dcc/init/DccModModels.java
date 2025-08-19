@@ -9,6 +9,7 @@ import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.api.distmarker.Dist;
 
+import net.mcreator.dcc.client.model.Modelthorn;
 import net.mcreator.dcc.client.model.Modelrat;
 import net.mcreator.dcc.client.model.Modeliron_golem;
 import net.mcreator.dcc.client.model.Modelarrow;
@@ -19,6 +20,7 @@ public class DccModModels {
 	public static void registerLayerDefinitions(EntityRenderersEvent.RegisterLayerDefinitions event) {
 		event.registerLayerDefinition(Modelarrow.LAYER_LOCATION, Modelarrow::createBodyLayer);
 		event.registerLayerDefinition(Modelrat.LAYER_LOCATION, Modelrat::createBodyLayer);
+		event.registerLayerDefinition(Modelthorn.LAYER_LOCATION, Modelthorn::createBodyLayer);
 		event.registerLayerDefinition(Modeliron_golem.LAYER_LOCATION, Modeliron_golem::createBodyLayer);
 	}
 }

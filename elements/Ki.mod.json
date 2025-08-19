@@ -57,6 +57,34 @@
           "y": 80,
           "locked": false
         }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_get_higher_attack_speed_and_spee",
+          "text": {
+            "fixedValue": "Get higher attack speed and speed for 5 seconds"
+          },
+          "width": 24,
+          "height": 24,
+          "x": 132,
+          "y": 53,
+          "locked": false
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_get_max_armor_and_speed_for_5_se",
+          "text": {
+            "fixedValue": "Get max armor and speed for 5 seconds"
+          },
+          "width": 24,
+          "height": 24,
+          "x": 132,
+          "y": 80,
+          "locked": false
+        }
       }
     ],
     "gridSettings": {

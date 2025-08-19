@@ -147,6 +147,34 @@
           "y": 188,
           "locked": false
         }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_regenerate_60_mana_in_15s",
+          "text": {
+            "fixedValue": "Regenerate 60 mana in 1.5s"
+          },
+          "width": 24,
+          "height": 24,
+          "x": 159,
+          "y": 53,
+          "locked": false
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_get_a_new_spell_you_can_acces_vi",
+          "text": {
+            "fixedValue": "Get a new spell you can acces via your book"
+          },
+          "width": 24,
+          "height": 24,
+          "x": 159,
+          "y": 80,
+          "locked": false
+        }
       }
     ],
     "gridSettings": {

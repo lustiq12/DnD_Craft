@@ -45,6 +45,16 @@ public class BardeguiScreen extends AbstractContainerScreen<BardeguiMenu> {
 		this.renderBackground(guiGraphics, mouseX, mouseY, partialTicks);
 		super.render(guiGraphics, mouseX, mouseY, partialTicks);
 		this.renderTooltip(guiGraphics, mouseX, mouseY);
+		if (mouseX > leftPos + 34 && mouseX < leftPos + 58 && mouseY > topPos + 27 && mouseY < topPos + 51)
+			guiGraphics.renderTooltip(font, Component.translatable("gui.dcc.bardegui.tooltip_get_regen_3_and_saturation_2_for"), mouseX, mouseY);
+		if (mouseX > leftPos + 34 && mouseX < leftPos + 58 && mouseY > topPos + 135 && mouseY < topPos + 159)
+			guiGraphics.renderTooltip(font, Component.translatable("gui.dcc.bardegui.tooltip_get_regen_10_instead_of_3_for_5"), mouseX, mouseY);
+		if (mouseX > leftPos + 34 && mouseX < leftPos + 58 && mouseY > topPos + 54 && mouseY < topPos + 78)
+			guiGraphics.renderTooltip(font, Component.translatable("gui.dcc.bardegui.tooltip_deal_4_hearts_damage_to_every_en"), mouseX, mouseY);
+		if (mouseX > leftPos + 34 && mouseX < leftPos + 58 && mouseY > topPos + 81 && mouseY < topPos + 105)
+			guiGraphics.renderTooltip(font, Component.translatable("gui.dcc.bardegui.tooltip_permanent_speed_and_haste_1"), mouseX, mouseY);
+		if (mouseX > leftPos + 34 && mouseX < leftPos + 58 && mouseY > topPos + 108 && mouseY < topPos + 132)
+			guiGraphics.renderTooltip(font, Component.translatable("gui.dcc.bardegui.tooltip_remove_your_cooldown_for_10_seco"), mouseX, mouseY);
 	}
 
 	@Override

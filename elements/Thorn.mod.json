@@ -1,0 +1,21 @@
+{
+  "_fv": 73,
+  "_type": "projectile",
+  "definition": {
+    "projectileItem": {
+      "value": "Blocks.AIR"
+    },
+    "showParticles": false,
+    "actionSound": {
+      "value": "block.azalea.break"
+    },
+    "igniteFire": false,
+    "power": 1.0,
+    "damage": 5.0,
+    "knockback": 2,
+    "entityModel": "Modelthorn",
+    "customModelTexture": "thorn.png",
+    "modelWidth": 0.5,
+    "modelHeight": 0.5
+  }
+}

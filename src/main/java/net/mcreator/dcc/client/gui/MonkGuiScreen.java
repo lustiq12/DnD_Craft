@@ -45,6 +45,16 @@ public class MonkGuiScreen extends AbstractContainerScreen<MonkGuiMenu> {
 		this.renderBackground(guiGraphics, mouseX, mouseY, partialTicks);
 		super.render(guiGraphics, mouseX, mouseY, partialTicks);
 		this.renderTooltip(guiGraphics, mouseX, mouseY);
+		if (mouseX > leftPos + 34 && mouseX < leftPos + 58 && mouseY > topPos + 27 && mouseY < topPos + 51)
+			guiGraphics.renderTooltip(font, Component.translatable("gui.dcc.monk_gui.tooltip_acces_to_yourt_ki_gui_and_its_ab"), mouseX, mouseY);
+		if (mouseX > leftPos + 34 && mouseX < leftPos + 58 && mouseY > topPos + 54 && mouseY < topPos + 78)
+			guiGraphics.renderTooltip(font, Component.translatable("gui.dcc.monk_gui.tooltip_get_speed_1_for_20_seconds"), mouseX, mouseY);
+		if (mouseX > leftPos + 34 && mouseX < leftPos + 58 && mouseY > topPos + 81 && mouseY < topPos + 105)
+			guiGraphics.renderTooltip(font, Component.translatable("gui.dcc.monk_gui.tooltip_if_under_25_hearts_boost_entiy"), mouseX, mouseY);
+		if (mouseX > leftPos + 34 && mouseX < leftPos + 58 && mouseY > topPos + 108 && mouseY < topPos + 132)
+			guiGraphics.renderTooltip(font, Component.translatable("gui.dcc.monk_gui.tooltip_deal_damage_to_entitys_around_yo"), mouseX, mouseY);
+		if (mouseX > leftPos + 34 && mouseX < leftPos + 58 && mouseY > topPos + 135 && mouseY < topPos + 159)
+			guiGraphics.renderTooltip(font, Component.translatable("gui.dcc.monk_gui.tooltip_be_immune_to_blindness_poison"), mouseX, mouseY);
 	}
 
 	@Override
