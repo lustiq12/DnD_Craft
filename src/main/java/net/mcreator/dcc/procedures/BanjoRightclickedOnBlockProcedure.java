@@ -21,7 +21,6 @@ import net.minecraft.client.Minecraft;
 import net.mcreator.dcc.network.DccModVariables;
 import net.mcreator.dcc.DccMod;
 
-import java.util.List;
 import java.util.Comparator;
 
 public class BanjoRightclickedOnBlockProcedure {
@@ -71,8 +70,7 @@ public class BanjoRightclickedOnBlockProcedure {
 						_level.sendParticles(ParticleTypes.NOTE, x, y, z, 5000, 3.5, 3.5, 3.5, 1);
 					{
 						final Vec3 _center = new Vec3(x, y, z);
-						List<Entity> _entfound = world.getEntitiesOfClass(Entity.class, new AABB(_center, _center).inflate(7 / 2d), e -> true).stream().sorted(Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_center))).toList();
-						for (Entity entityiterator : _entfound) {
+						for (Entity entityiterator : world.getEntitiesOfClass(Entity.class, new AABB(_center, _center).inflate(7 / 2d), e -> true).stream().sorted(Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_center))).toList()) {
 							if (entityiterator instanceof Player) {
 								if (entityiterator instanceof LivingEntity _entity && !_entity.level().isClientSide())
 									_entity.addEffect(new MobEffectInstance(MobEffects.ABSORPTION, 1200, 2));

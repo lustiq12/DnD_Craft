@@ -1,4 +1,3 @@
-
 package net.mcreator.dcc.client.screens;
 
 import org.checkerframework.checker.units.qual.h;

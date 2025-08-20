@@ -1,4 +1,3 @@
-
 package net.mcreator.dcc.item;
 
 import net.neoforged.api.distmarker.OnlyIn;
@@ -6,7 +5,6 @@ import net.neoforged.api.distmarker.Dist;
 
 import net.minecraft.world.level.Level;
 import net.minecraft.world.item.TooltipFlag;
-import net.minecraft.world.item.Rarity;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Item;
@@ -22,7 +20,7 @@ import java.util.List;
 
 public class OwlbearDrumsticksItem extends Item {
 	public OwlbearDrumsticksItem() {
-		super(new Item.Properties().stacksTo(64).rarity(Rarity.COMMON).food((new FoodProperties.Builder()).nutrition(18).saturationModifier(16.8f).build()));
+		super(new Item.Properties().food((new FoodProperties.Builder()).nutrition(18).saturationModifier(16.8f).build()));
 	}
 
 	@Override

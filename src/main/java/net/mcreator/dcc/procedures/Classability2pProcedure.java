@@ -4,6 +4,7 @@ import net.neoforged.neoforge.items.ItemHandlerHelper;
 
 import net.minecraft.world.phys.Vec3;
 import net.minecraft.world.phys.AABB;
+import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.entity.player.Player;
@@ -17,16 +18,17 @@ import net.minecraft.world.damagesource.DamageTypes;
 import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.server.level.ServerLevel;
+import net.minecraft.network.chat.Component;
 import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.core.BlockPos;
 
 import net.mcreator.dcc.network.DccModVariables;
 import net.mcreator.dcc.init.DccModItems;
 import net.mcreator.dcc.init.DccModEntities;
+import net.mcreator.dcc.init.DccModBlocks;
 import net.mcreator.dcc.entity.VINESEntity;
 import net.mcreator.dcc.DccMod;
 
-import java.util.List;
 import java.util.Comparator;
 
 public class Classability2pProcedure {
@@ -46,10 +48,9 @@ public class Classability2pProcedure {
 						_level.sendParticles(ParticleTypes.DRAGON_BREATH, x, y, z, 3000, 3, 3, 3, 0.5);
 					{
 						final Vec3 _center = new Vec3(x, y, z);
-						List<Entity> _entfound = world.getEntitiesOfClass(Entity.class, new AABB(_center, _center).inflate(15 / 2d), e -> true).stream().sorted(Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_center))).toList();
-						for (Entity entityiterator : _entfound) {
+						for (Entity entityiterator : world.getEntitiesOfClass(Entity.class, new AABB(_center, _center).inflate(15 / 2d), e -> true).stream().sorted(Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_center))).toList()) {
 							if (!(entityiterator == entity)) {
-								entityiterator.hurt(new DamageSource(world.holderOrThrow(DamageTypes.GENERIC)), 8);
+								entityiterator.hurt(new DamageSource(world.holderOrThrow(DamageTypes.GENERIC)), 2);
 							}
 						}
 					}
@@ -58,10 +59,9 @@ public class Classability2pProcedure {
 							_level.sendParticles(ParticleTypes.DRAGON_BREATH, x, y, z, 3000, 3, 3, 3, 0.5);
 						{
 							final Vec3 _center = new Vec3(x, y, z);
-							List<Entity> _entfound = world.getEntitiesOfClass(Entity.class, new AABB(_center, _center).inflate(15 / 2d), e -> true).stream().sorted(Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_center))).toList();
-							for (Entity entityiterator : _entfound) {
+							for (Entity entityiterator : world.getEntitiesOfClass(Entity.class, new AABB(_center, _center).inflate(15 / 2d), e -> true).stream().sorted(Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_center))).toList()) {
 								if (!(entityiterator == entity)) {
-									entityiterator.hurt(new DamageSource(world.holderOrThrow(DamageTypes.GENERIC)), 8);
+									entityiterator.hurt(new DamageSource(world.holderOrThrow(DamageTypes.GENERIC)), 2);
 								}
 							}
 						}
@@ -70,10 +70,10 @@ public class Classability2pProcedure {
 								_level.sendParticles(ParticleTypes.DRAGON_BREATH, x, y, z, 3000, 3, 3, 3, 0.5);
 							{
 								final Vec3 _center = new Vec3(x, y, z);
-								List<Entity> _entfound = world.getEntitiesOfClass(Entity.class, new AABB(_center, _center).inflate(15 / 2d), e -> true).stream().sorted(Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_center))).toList();
-								for (Entity entityiterator : _entfound) {
+								for (Entity entityiterator : world.getEntitiesOfClass(Entity.class, new AABB(_center, _center).inflate(15 / 2d), e -> true).stream().sorted(Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_center)))
+										.toList()) {
 									if (!(entityiterator == entity)) {
-										entityiterator.hurt(new DamageSource(world.holderOrThrow(DamageTypes.GENERIC)), 8);
+										entityiterator.hurt(new DamageSource(world.holderOrThrow(DamageTypes.GENERIC)), 2);
 									}
 								}
 							}
@@ -82,11 +82,10 @@ public class Classability2pProcedure {
 									_level.sendParticles(ParticleTypes.DRAGON_BREATH, x, y, z, 3000, 3, 3, 3, 0.5);
 								{
 									final Vec3 _center = new Vec3(x, y, z);
-									List<Entity> _entfound = world.getEntitiesOfClass(Entity.class, new AABB(_center, _center).inflate(15 / 2d), e -> true).stream().sorted(Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_center)))
-											.toList();
-									for (Entity entityiterator : _entfound) {
+									for (Entity entityiterator : world.getEntitiesOfClass(Entity.class, new AABB(_center, _center).inflate(15 / 2d), e -> true).stream().sorted(Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_center)))
+											.toList()) {
 										if (!(entityiterator == entity)) {
-											entityiterator.hurt(new DamageSource(world.holderOrThrow(DamageTypes.GENERIC)), 8);
+											entityiterator.hurt(new DamageSource(world.holderOrThrow(DamageTypes.GENERIC)), 2);
 										}
 									}
 								}
@@ -141,8 +140,7 @@ public class Classability2pProcedure {
 					}
 					{
 						final Vec3 _center = new Vec3(x, y, z);
-						List<Entity> _entfound = world.getEntitiesOfClass(Entity.class, new AABB(_center, _center).inflate(12 / 2d), e -> true).stream().sorted(Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_center))).toList();
-						for (Entity entityiterator : _entfound) {
+						for (Entity entityiterator : world.getEntitiesOfClass(Entity.class, new AABB(_center, _center).inflate(12 / 2d), e -> true).stream().sorted(Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_center))).toList()) {
 							if (!(entityiterator instanceof Player)) {
 								if (entityiterator instanceof LivingEntity _livingEntity30 && _livingEntity30.getAttributes().hasAttribute(Attributes.KNOCKBACK_RESISTANCE))
 									_livingEntity30.getAttribute(Attributes.KNOCKBACK_RESISTANCE)
@@ -165,56 +163,20 @@ public class Classability2pProcedure {
 										entityToSpawn.setDeltaMovement(0, 0, 0);
 									}
 								}
-								if (((Entity) world.getEntitiesOfClass(VINESEntity.class, AABB.ofSize(new Vec3((entityiterator.getX()), (entityiterator.getY()), (entityiterator.getZ())), 4, 4, 4), e -> true).stream().sorted(new Object() {
-									Comparator<Entity> compareDistOf(double _x, double _y, double _z) {
-										return Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_x, _y, _z));
-									}
-								}.compareDistOf((entityiterator.getX()), (entityiterator.getY()), (entityiterator.getZ()))).findFirst().orElse(null)) instanceof VINESEntity) {
-									((VINESEntity) ((Entity) world.getEntitiesOfClass(VINESEntity.class, AABB.ofSize(new Vec3((entityiterator.getX()), (entityiterator.getY()), (entityiterator.getZ())), 4, 4, 4), e -> true).stream()
-											.sorted(new Object() {
-												Comparator<Entity> compareDistOf(double _x, double _y, double _z) {
-													return Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_x, _y, _z));
-												}
-											}.compareDistOf((entityiterator.getX()), (entityiterator.getY()), (entityiterator.getZ()))).findFirst().orElse(null))).setAnimation("attack");
+								if ((findEntityInWorldRange(world, VINESEntity.class, (entityiterator.getX()), (entityiterator.getY()), (entityiterator.getZ()), 4)) instanceof VINESEntity) {
+									((VINESEntity) (findEntityInWorldRange(world, VINESEntity.class, (entityiterator.getX()), (entityiterator.getY()), (entityiterator.getZ()), 4))).setAnimation("attack");
 								}
 								DccMod.queueServerWork(25, () -> {
-									if (((Entity) world.getEntitiesOfClass(VINESEntity.class, AABB.ofSize(new Vec3((entityiterator.getX()), (entityiterator.getY()), (entityiterator.getZ())), 4, 4, 4), e -> true).stream().sorted(new Object() {
-										Comparator<Entity> compareDistOf(double _x, double _y, double _z) {
-											return Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_x, _y, _z));
-										}
-									}.compareDistOf((entityiterator.getX()), (entityiterator.getY()), (entityiterator.getZ()))).findFirst().orElse(null)) instanceof VINESEntity) {
-										((VINESEntity) ((Entity) world.getEntitiesOfClass(VINESEntity.class, AABB.ofSize(new Vec3((entityiterator.getX()), (entityiterator.getY()), (entityiterator.getZ())), 4, 4, 4), e -> true).stream()
-												.sorted(new Object() {
-													Comparator<Entity> compareDistOf(double _x, double _y, double _z) {
-														return Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_x, _y, _z));
-													}
-												}.compareDistOf((entityiterator.getX()), (entityiterator.getY()), (entityiterator.getZ()))).findFirst().orElse(null))).setAnimation("idleReal");
+									if ((findEntityInWorldRange(world, VINESEntity.class, (entityiterator.getX()), (entityiterator.getY()), (entityiterator.getZ()), 4)) instanceof VINESEntity) {
+										((VINESEntity) (findEntityInWorldRange(world, VINESEntity.class, (entityiterator.getX()), (entityiterator.getY()), (entityiterator.getZ()), 4))).setAnimation("idleReal");
 									}
 									DccMod.queueServerWork(40, () -> {
-										if (((Entity) world.getEntitiesOfClass(VINESEntity.class, AABB.ofSize(new Vec3((entityiterator.getX()), (entityiterator.getY()), (entityiterator.getZ())), 4, 4, 4), e -> true).stream().sorted(new Object() {
-											Comparator<Entity> compareDistOf(double _x, double _y, double _z) {
-												return Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_x, _y, _z));
-											}
-										}.compareDistOf((entityiterator.getX()), (entityiterator.getY()), (entityiterator.getZ()))).findFirst().orElse(null)) instanceof VINESEntity) {
-											((VINESEntity) ((Entity) world.getEntitiesOfClass(VINESEntity.class, AABB.ofSize(new Vec3((entityiterator.getX()), (entityiterator.getY()), (entityiterator.getZ())), 4, 4, 4), e -> true).stream()
-													.sorted(new Object() {
-														Comparator<Entity> compareDistOf(double _x, double _y, double _z) {
-															return Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_x, _y, _z));
-														}
-													}.compareDistOf((entityiterator.getX()), (entityiterator.getY()), (entityiterator.getZ()))).findFirst().orElse(null))).setAnimation("idleReal");
+										if ((findEntityInWorldRange(world, VINESEntity.class, (entityiterator.getX()), (entityiterator.getY()), (entityiterator.getZ()), 4)) instanceof VINESEntity) {
+											((VINESEntity) (findEntityInWorldRange(world, VINESEntity.class, (entityiterator.getX()), (entityiterator.getY()), (entityiterator.getZ()), 4))).setAnimation("idleReal");
 										}
 										DccMod.queueServerWork(40, () -> {
-											if (((Entity) world.getEntitiesOfClass(VINESEntity.class, AABB.ofSize(new Vec3((entityiterator.getX()), (entityiterator.getY()), (entityiterator.getZ())), 4, 4, 4), e -> true).stream().sorted(new Object() {
-												Comparator<Entity> compareDistOf(double _x, double _y, double _z) {
-													return Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_x, _y, _z));
-												}
-											}.compareDistOf((entityiterator.getX()), (entityiterator.getY()), (entityiterator.getZ()))).findFirst().orElse(null)) instanceof VINESEntity) {
-												((VINESEntity) ((Entity) world.getEntitiesOfClass(VINESEntity.class, AABB.ofSize(new Vec3((entityiterator.getX()), (entityiterator.getY()), (entityiterator.getZ())), 4, 4, 4), e -> true).stream()
-														.sorted(new Object() {
-															Comparator<Entity> compareDistOf(double _x, double _y, double _z) {
-																return Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_x, _y, _z));
-															}
-														}.compareDistOf((entityiterator.getX()), (entityiterator.getY()), (entityiterator.getZ()))).findFirst().orElse(null))).setAnimation("despawn");
+											if ((findEntityInWorldRange(world, VINESEntity.class, (entityiterator.getX()), (entityiterator.getY()), (entityiterator.getZ()), 4)) instanceof VINESEntity) {
+												((VINESEntity) (findEntityInWorldRange(world, VINESEntity.class, (entityiterator.getX()), (entityiterator.getY()), (entityiterator.getZ()), 4))).setAnimation("despawn");
 											}
 											if (entityiterator.isAlive()) {
 												if (entityiterator instanceof LivingEntity _livingEntity63 && _livingEntity63.getAttributes().hasAttribute(Attributes.KNOCKBACK_RESISTANCE))
@@ -230,7 +192,25 @@ public class Classability2pProcedure {
 						}
 					}
 				}
+			} else if ((entity.getData(DccModVariables.PLAYER_VARIABLES).Class_Variable).equals("Paladin")) {
+				if (entity.getData(DccModVariables.PLAYER_VARIABLES).cooldown < 0.05) {
+					if ((world.getBlockState(BlockPos.containing(x, y + 2, z))).getBlock() == Blocks.AIR) {
+						{
+							DccModVariables.PlayerVariables _vars = entity.getData(DccModVariables.PLAYER_VARIABLES);
+							_vars.cooldown = 30;
+							_vars.syncPlayerVariables(entity);
+						}
+						world.setBlock(BlockPos.containing(x, y + 2, z), DccModBlocks.COOKED_OWLBEAR_MEAT_BLOCK.get().defaultBlockState(), 3);
+					} else {
+						if (entity instanceof Player _player && !_player.level().isClientSide())
+							_player.displayClientMessage(Component.literal("\u00A75 Not possible! block above you is NOT air!"), false);
+					}
+				}
 			}
 		}
+	}
+
+	private static Entity findEntityInWorldRange(LevelAccessor world, Class<? extends Entity> clazz, double x, double y, double z, double range) {
+		return (Entity) world.getEntitiesOfClass(clazz, AABB.ofSize(new Vec3(x, y, z), range, range, range), e -> true).stream().sorted(Comparator.comparingDouble(e -> e.distanceToSqr(x, y, z))).findFirst().orElse(null);
 	}
 }

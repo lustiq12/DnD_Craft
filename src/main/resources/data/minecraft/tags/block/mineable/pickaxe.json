@@ -1,9 +1,9 @@
 {
   "replace": false,
   "values": [
-    "dcc:deepslate_silver_ore",
-    "dcc:silver_ore",
+    "dcc:adantium_ore",
     "dcc:platinum_ore",
-    "dcc:adantium_ore"
+    "dcc:silver_ore",
+    "dcc:deepslate_silver_ore"
   ]
 }

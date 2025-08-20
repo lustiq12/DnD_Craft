@@ -1,4 +1,3 @@
-
 /*
  *    MCreator note: This file will be REGENERATED on each build.
  */
@@ -20,6 +19,7 @@ import net.mcreator.dcc.client.renderer.Ogre2Renderer;
 import net.mcreator.dcc.client.renderer.OcherjellyRenderer;
 import net.mcreator.dcc.client.renderer.MimicSludgeRenderer;
 import net.mcreator.dcc.client.renderer.MimicRenderer;
+import net.mcreator.dcc.client.renderer.LivingSwordRenderer;
 import net.mcreator.dcc.client.renderer.IronGoblinRenderer;
 import net.mcreator.dcc.client.renderer.InvisibleStalkerRenderer;
 import net.mcreator.dcc.client.renderer.HarpyRenderer;
@@ -56,5 +56,6 @@ public class DccModEntityRenderers {
 		event.registerEntityRenderer(DccModEntities.GHOUL.get(), GhoulRenderer::new);
 		event.registerEntityRenderer(DccModEntities.VINES.get(), VINESRenderer::new);
 		event.registerEntityRenderer(DccModEntities.THORN.get(), ThornRenderer::new);
+		event.registerEntityRenderer(DccModEntities.LIVING_SWORD.get(), LivingSwordRenderer::new);
 	}
 }

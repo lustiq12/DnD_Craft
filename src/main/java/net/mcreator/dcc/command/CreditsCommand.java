@@ -1,4 +1,3 @@
-
 package net.mcreator.dcc.command;
 
 import net.neoforged.neoforge.event.RegisterCommandsEvent;
@@ -15,4 +14,5 @@ public class CreditsCommand {
 
 		);
 	}
+
 }

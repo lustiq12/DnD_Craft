@@ -1,4 +1,3 @@
-
 package net.mcreator.dcc.client.particle;
 
 import net.neoforged.api.distmarker.OnlyIn;
@@ -25,8 +24,10 @@ public class ShieldParticleParticle extends TextureSheetParticle {
 			this.spriteSet = spriteSet;
 		}
 
+		@Override
 		public Particle createParticle(SimpleParticleType typeIn, ClientLevel worldIn, double x, double y, double z, double xSpeed, double ySpeed, double zSpeed) {
-			return new ShieldParticleParticle(worldIn, x, y, z, xSpeed, ySpeed, zSpeed, this.spriteSet);
+			ShieldParticleParticle particle = new ShieldParticleParticle(worldIn, x, y, z, xSpeed, ySpeed, zSpeed, this.spriteSet);
+			return particle;
 		}
 	}
 
@@ -47,13 +48,8 @@ public class ShieldParticleParticle extends TextureSheetParticle {
 	}
 
 	@Override
-	public int getLightColor(float partialTick) {
-		return 15728880;
-	}
-
-	@Override
 	public ParticleRenderType getRenderType() {
-		return ParticleRenderType.PARTICLE_SHEET_LIT;
+		return ParticleRenderType.PARTICLE_SHEET_OPAQUE;
 	}
 
 	@Override

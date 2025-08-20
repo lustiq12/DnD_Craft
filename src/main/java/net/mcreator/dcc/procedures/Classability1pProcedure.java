@@ -1,8 +1,10 @@
 package net.mcreator.dcc.procedures;
 
-import net.minecraft.world.phys.Vec3;
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.level.Level;
+import net.minecraft.world.item.enchantment.Enchantments;
+import net.minecraft.world.item.Items;
+import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.inventory.AbstractContainerMenu;
 import net.minecraft.world.entity.projectile.Projectile;
 import net.minecraft.world.entity.projectile.AbstractArrow;
@@ -13,7 +15,6 @@ import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.effect.MobEffectInstance;
-import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.world.MenuProvider;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.server.level.ServerPlayer;
@@ -21,6 +22,7 @@ import net.minecraft.server.level.ServerLevel;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.network.chat.Component;
 import net.minecraft.network.FriendlyByteBuf;
+import net.minecraft.core.registries.Registries;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.core.BlockPos;
@@ -159,32 +161,8 @@ public class Classability1pProcedure {
 					Entity _shootFrom = entity;
 					Level projectileLevel = _shootFrom.level();
 					if (!projectileLevel.isClientSide()) {
-						Projectile _entityToSpawn = new Object() {
-							public Projectile getArrow(Level level, Entity shooter, float damage, int knockback, byte piercing) {
-								AbstractArrow entityToSpawn = new ThornEntity(DccModEntities.THORN.get(), level) {
-									@Override
-									public byte getPierceLevel() {
-										return piercing;
-									}
-
-									@Override
-									protected void doKnockback(LivingEntity livingEntity, DamageSource damageSource) {
-										if (knockback > 0) {
-											double d1 = Math.max(0.0, 1.0 - livingEntity.getAttributeValue(Attributes.KNOCKBACK_RESISTANCE));
-											Vec3 vec3 = this.getDeltaMovement().multiply(1.0, 0.0, 1.0).normalize().scale(knockback * 0.6 * d1);
-											if (vec3.lengthSqr() > 0.0) {
-												livingEntity.push(vec3.x, 0.1, vec3.z);
-											}
-										}
-									}
-								};
-								entityToSpawn.setOwner(shooter);
-								entityToSpawn.setBaseDamage(damage);
-								entityToSpawn.setSilent(true);
-								entityToSpawn.setCritArrow(true);
-								return entityToSpawn;
-							}
-						}.getArrow(projectileLevel, entity, 5, 2, (byte) 1);
+						Projectile _entityToSpawn = initArrowProjectile(new ThornEntity(DccModEntities.THORN.get(), 0, 0, 0, projectileLevel, createArrowWeaponItemStack(projectileLevel, 2, (byte) 1)), entity, 5, true, false, true,
+								AbstractArrow.Pickup.DISALLOWED);
 						_entityToSpawn.setPos(_shootFrom.getX(), _shootFrom.getEyeY() - 0.1, _shootFrom.getZ());
 						_entityToSpawn.shoot(_shootFrom.getLookAngle().x, _shootFrom.getLookAngle().y, _shootFrom.getLookAngle().z, 3, 0);
 						projectileLevel.addFreshEntity(_entityToSpawn);
@@ -197,6 +175,20 @@ public class Classability1pProcedure {
 						_level.playLocalSound(x, y, z, BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("block.azalea.break")), SoundSource.NEUTRAL, 7, 1, false);
 					}
 				}
+			} else if ((entity.getData(DccModVariables.PLAYER_VARIABLES).Class_Variable).equals("Paladin")) {
+				{
+					DccModVariables.PlayerVariables _vars = entity.getData(DccModVariables.PLAYER_VARIABLES);
+					_vars.cooldown = 30;
+					_vars.syncPlayerVariables(entity);
+				}
+				if (entity instanceof LivingEntity _livingEntity22 && _livingEntity22.getAttributes().hasAttribute(Attributes.ARMOR))
+					_livingEntity22.getAttribute(Attributes.ARMOR)
+							.setBaseValue(((entity instanceof LivingEntity _livingEntity21 && _livingEntity21.getAttributes().hasAttribute(Attributes.ARMOR) ? _livingEntity21.getAttribute(Attributes.ARMOR).getValue() : 0) + 2));
+				DccMod.queueServerWork(100, () -> {
+					if (entity instanceof LivingEntity _livingEntity24 && _livingEntity24.getAttributes().hasAttribute(Attributes.ARMOR))
+						_livingEntity24.getAttribute(Attributes.ARMOR)
+								.setBaseValue(((entity instanceof LivingEntity _livingEntity23 && _livingEntity23.getAttributes().hasAttribute(Attributes.ARMOR) ? _livingEntity23.getAttribute(Attributes.ARMOR).getValue() : 0) - 2));
+				});
 			}
 		}
 		if ((entity.getData(DccModVariables.PLAYER_VARIABLES).Class_Variable).equals("Monk")) {
@@ -222,5 +214,27 @@ public class Classability1pProcedure {
 				}
 			}
 		}
+	}
+
+	private static AbstractArrow initArrowProjectile(AbstractArrow entityToSpawn, Entity shooter, float damage, boolean silent, boolean fire, boolean particles, AbstractArrow.Pickup pickup) {
+		entityToSpawn.setOwner(shooter);
+		entityToSpawn.setBaseDamage(damage);
+		if (silent)
+			entityToSpawn.setSilent(true);
+		if (fire)
+			entityToSpawn.igniteForSeconds(100);
+		if (particles)
+			entityToSpawn.setCritArrow(true);
+		entityToSpawn.pickup = pickup;
+		return entityToSpawn;
+	}
+
+	private static ItemStack createArrowWeaponItemStack(Level level, int knockback, byte piercing) {
+		ItemStack weapon = new ItemStack(Items.ARROW);
+		if (knockback > 0)
+			weapon.enchant(level.registryAccess().lookupOrThrow(Registries.ENCHANTMENT).getOrThrow(Enchantments.KNOCKBACK), knockback);
+		if (piercing > 0)
+			weapon.enchant(level.registryAccess().lookupOrThrow(Registries.ENCHANTMENT).getOrThrow(Enchantments.PIERCING), piercing);
+		return weapon;
 	}
 }

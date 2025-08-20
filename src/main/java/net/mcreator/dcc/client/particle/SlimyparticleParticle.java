@@ -1,4 +1,3 @@
-
 package net.mcreator.dcc.client.particle;
 
 import net.neoforged.api.distmarker.OnlyIn;
@@ -25,8 +24,10 @@ public class SlimyparticleParticle extends TextureSheetParticle {
 			this.spriteSet = spriteSet;
 		}
 
+		@Override
 		public Particle createParticle(SimpleParticleType typeIn, ClientLevel worldIn, double x, double y, double z, double xSpeed, double ySpeed, double zSpeed) {
-			return new SlimyparticleParticle(worldIn, x, y, z, xSpeed, ySpeed, zSpeed, this.spriteSet);
+			SlimyparticleParticle particle = new SlimyparticleParticle(worldIn, x, y, z, xSpeed, ySpeed, zSpeed, this.spriteSet);
+			return particle;
 		}
 	}
 

@@ -6829,6 +6829,94 @@
         ]
       },
       "path": "~/Commands"
+    },
+    {
+      "name": "PaladinGui",
+      "type": "gui",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "paladin_gui",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/dcc/network/PaladinGuiButtonMessage.java",
+          "src/main/java/net/mcreator/dcc/world/inventory/PaladinGuiMenu.java",
+          "src/main/java/net/mcreator/dcc/client/gui/PaladinGuiScreen.java"
+        ]
+      },
+      "path": "~/ClassSystem/Paladin"
+    },
+    {
+      "name": "PaladinOpen",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "paladin_open",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ],
+        "files": [
+          "src/main/java/net/mcreator/dcc/procedures/PaladinOpenProcedure.java"
+        ]
+      },
+      "path": "~/ClassSystem/Paladin"
+    },
+    {
+      "name": "Paladin",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "paladin",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ],
+        "files": [
+          "src/main/java/net/mcreator/dcc/procedures/PaladinProcedure.java"
+        ]
+      },
+      "path": "~/ClassSystem/Paladin"
+    },
+    {
+      "name": "LivingSword",
+      "type": "animatedentity",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "living_sword",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/dcc/entity/model/LivingSwordModel.java",
+          "src/main/java/net/mcreator/dcc/entity/LivingSwordEntity.java",
+          "src/main/java/net/mcreator/dcc/client/renderer/LivingSwordRenderer.java"
+        ]
+      },
+      "path": "~/ClassSystem/Paladin"
     }
   ],
   "variable_elements": [
@@ -7715,7 +7803,7 @@
       "item.dnd_craft.war_hammer": "War Hammer",
       "gui.cool_mod.barbar_gui.button_exit": "EXIT",
       "item.dcc.battle_axe": "Battle Axe",
-      "gui.dcc.bardegui.tooltip_deal_4_hearts_damage_to_every_en": "Deal 4 hearts damage to every entity up to 7.5 blocks away from you",
+      "gui.dcc.bardegui.tooltip_deal_4_hearts_damage_to_every_en": "Deal 6 hearts of damage to every entity up to 7.5 blocks away from you",
       "gui.dnd_craft.barbar_gui.label_survival_instinct": "Survival Instinct",
       "gui.dcc.monk_gui.label_0_level": "Level 1 (y)",
       "gui.dcc.classes.button_druid": "Druid",
@@ -7821,7 +7909,7 @@
       "gui.dnd_craft.monk_gui.label_survival_instinct": "Timestop Emergency",
       "item.dnd_craft.two_handed_claymore": "Two Handed Claymore",
       "entity.dnd_craft.ork": "Ork",
-      "gui.dcc.bardegui.label_invincibility": "Bard Agility !!WIP!!",
+      "gui.dcc.bardegui.label_invincibility": "Bard Agility",
       "item.dnd_craft.adamantium_war_hammer": "Adamantium War Hammer",
       "effect.dcc.slimy": "Slimy",
       "gui.cool_mod.bardegui.label_invincibility": "Power of the Wind",
@@ -7916,8 +8004,56 @@
       "item.dnd_craft.spear": "Spear",
       "effect.dcc.jelly": "Jelly",
       "item.dnd_craft.warg_spawn_egg": "Warg Spawn Egg",
-      "gui.dnd_craft.classes.button_barbarian": "Barbarian"
+      "gui.dnd_craft.classes.button_barbarian": "Barbarian",
+      "gui.dcc.paladin_gui.label_ghost_axe": "Ghost Axe",
+      "gui.dcc.paladin_gui.tooltip_get_permanent_resistance_1": "Get permanent resistance 1",
+      "gui.dcc.paladin_gui.label_survival_instinct": "Survival Instinct",
+      "gui.dcc.paladin_gui.label_invincibility": "Invincibility",
+      "gui.dcc.paladin_gui.label_10_level": "Level 5 (x)",
+      "gui.dcc.paladin_gui.label_level_60": "Level 15 (c)",
+      "gui.dcc.paladin_gui.label_barbarian": "Paladin",
+      "gui.dcc.paladin_gui.button_exit": "EXIT",
+      "gui.dcc.paladin_gui.label_rage": "Rage",
+      "gui.dcc.paladin_gui.label_barbarian_strenght": "Barbarian Strenght",
+      "gui.dcc.paladin_gui.tooltip_get_strength_speed_and_regenera": "Get strength, speed and regeneration for 10s",
+      "gui.dcc.paladin_gui.tooltip_summon_a_powerful_axe_that_despa": "Summon a powerful axe that despawns after 25s",
+      "gui.dcc.paladin_gui.button_choose": "Choose",
+      "gui.dcc.paladin_gui.label_0_level": "Level 1 (y)",
+      "gui.dcc.paladin_gui.label_40_level": "Level 10 (Passive)",
+      "gui.dcc.paladin_gui.tooltip_get_max_regeneration_and_invinci": "Get max regeneration and invincibility for 15s",
+      "gui.dcc.paladin_gui.label_level_80_passive": "Level 20 (Passive)",
+      "gui.dcc.paladin_gui.tooltip_get_permanent_strength_2": "Get permanent strength 2",
+      "gui.dcc.classes.button_paladin": "Paladin",
+      "item.dcc.living_sword_spawn_egg": "Living Sword Spawn Egg",
+      "entity.dcc.living_sword": "Living Sword"
     }
+  },
+  "metadata": {
+    "files": [
+      "src/main/java/net/mcreator/dcc/DccMod.java",
+      "src/main/resources/META-INF/neoforge.mods.toml",
+      "src/main/java/net/mcreator/dcc/network/DccModVariables.java",
+      "src/main/resources/mixins.dcc.json",
+      "src/main/java/net/mcreator/dcc/init/DccModTabs.java",
+      "src/main/java/net/mcreator/dcc/init/DccModModels.java",
+      "src/main/resources/assets/dcc/sounds.json",
+      "src/main/java/net/mcreator/dcc/init/DccModSounds.java",
+      "src/main/resources/pack.mcmeta",
+      "src/main/java/net/mcreator/dcc/init/EntityAnimationFactory.java",
+      "src/main/java/net/mcreator/dcc/network/MenuStateUpdateMessage.java",
+      "src/main/java/net/mcreator/dcc/init/DccModMenus.java",
+      "src/main/java/net/mcreator/dcc/init/DccModScreens.java",
+      "src/main/java/net/mcreator/dcc/init/DccModGameRules.java",
+      "src/main/java/net/mcreator/dcc/init/DccModKeyMappings.java",
+      "src/main/java/net/mcreator/dcc/init/DccModParticles.java",
+      "src/main/java/net/mcreator/dcc/init/DccModParticleTypes.java",
+      "src/main/java/net/mcreator/dcc/init/DccModMobEffects.java",
+      "src/main/java/net/mcreator/dcc/init/DccModTrades.java",
+      "src/main/java/net/mcreator/dcc/init/DccModBlocks.java",
+      "src/main/java/net/mcreator/dcc/init/DccModItems.java",
+      "src/main/java/net/mcreator/dcc/init/DccModEntityRenderers.java",
+      "src/main/java/net/mcreator/dcc/init/DccModEntities.java"
+    ]
   },
   "foldersRoot": {
     "name": "~",
@@ -7951,6 +8087,10 @@
           },
           {
             "name": "Druid",
+            "children": []
+          },
+          {
+            "name": "Paladin",
             "children": []
           }
         ]
@@ -8042,5 +8182,5 @@
     "credits": "Created using mod maker MCreator - https://mcreator.net/about",
     "modElementsPackage": "net.mcreator.dcc"
   },
-  "mcreatorVersion": 202400452410
+  "mcreatorVersion": 202500226612
 }

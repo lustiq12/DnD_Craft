@@ -12,6 +12,7 @@ import net.mcreator.dcc.entity.Ogre2Entity;
 import net.mcreator.dcc.entity.OcherjellyEntity;
 import net.mcreator.dcc.entity.MimicSludgeEntity;
 import net.mcreator.dcc.entity.MimicEntity;
+import net.mcreator.dcc.entity.LivingSwordEntity;
 import net.mcreator.dcc.entity.IronGoblinEntity;
 import net.mcreator.dcc.entity.InvisibleStalkerEntity;
 import net.mcreator.dcc.entity.HarpyEntity;
@@ -140,6 +141,13 @@ public class EntityAnimationFactory {
 				}
 			}
 			if (event.getEntity() instanceof VINESEntity syncable) {
+				String animation = syncable.getSyncedAnimation();
+				if (!animation.equals("undefined")) {
+					syncable.setAnimation("undefined");
+					syncable.animationprocedure = animation;
+				}
+			}
+			if (event.getEntity() instanceof LivingSwordEntity syncable) {
 				String animation = syncable.getSyncedAnimation();
 				if (!animation.equals("undefined")) {
 					syncable.setAnimation("undefined");

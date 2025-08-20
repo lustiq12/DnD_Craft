@@ -57,8 +57,7 @@
           ]
         },
         {
-          "type": "minecraft:item",
-          "name": "minecraft:air",
+          "type": "minecraft:empty",
           "weight": 7,
           "functions": [
             {
@@ -90,8 +89,7 @@
           ]
         },
         {
-          "type": "minecraft:item",
-          "name": "minecraft:air",
+          "type": "minecraft:empty",
           "weight": 9,
           "functions": [
             {
@@ -142,8 +140,7 @@
           ]
         },
         {
-          "type": "minecraft:item",
-          "name": "minecraft:air",
+          "type": "minecraft:empty",
           "weight": 99,
           "functions": [
             {

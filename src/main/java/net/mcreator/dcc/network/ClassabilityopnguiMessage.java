@@ -1,4 +1,3 @@
-
 package net.mcreator.dcc.network;
 
 import net.neoforged.neoforge.network.handling.IPayloadContext;

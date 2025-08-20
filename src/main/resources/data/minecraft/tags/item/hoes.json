@@ -1,7 +1,7 @@
 {
   "replace": false,
   "values": [
-    "dcc:adamantium_sickle",
-    "dcc:sickle"
+    "dcc:sickle",
+    "dcc:adamantium_sickle"
   ]
 }

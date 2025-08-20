@@ -19,8 +19,7 @@
           ]
         },
         {
-          "type": "minecraft:item",
-          "name": "minecraft:air",
+          "type": "minecraft:empty",
           "weight": 90,
           "functions": [
             {
@@ -52,8 +51,7 @@
           ]
         },
         {
-          "type": "minecraft:item",
-          "name": "minecraft:air",
+          "type": "minecraft:empty",
           "weight": 40,
           "functions": [
             {
@@ -85,8 +83,7 @@
           ]
         },
         {
-          "type": "minecraft:item",
-          "name": "minecraft:air",
+          "type": "minecraft:empty",
           "weight": 50,
           "functions": [
             {
@@ -118,8 +115,7 @@
           ]
         },
         {
-          "type": "minecraft:item",
-          "name": "minecraft:air",
+          "type": "minecraft:empty",
           "weight": 80,
           "functions": [
             {
@@ -151,8 +147,7 @@
           ]
         },
         {
-          "type": "minecraft:item",
-          "name": "minecraft:air",
+          "type": "minecraft:empty",
           "weight": 55,
           "functions": [
             {
@@ -184,8 +179,7 @@
           ]
         },
         {
-          "type": "minecraft:item",
-          "name": "minecraft:air",
+          "type": "minecraft:empty",
           "weight": 95,
           "functions": [
             {
@@ -217,8 +211,7 @@
           ]
         },
         {
-          "type": "minecraft:item",
-          "name": "minecraft:air",
+          "type": "minecraft:empty",
           "weight": 20,
           "functions": [
             {

@@ -13,16 +13,15 @@ import net.minecraft.client.gui.GuiGraphics;
 
 import net.mcreator.dcc.world.inventory.KiMenu;
 import net.mcreator.dcc.network.KiButtonMessage;
-
-import java.util.HashMap;
+import net.mcreator.dcc.init.DccModScreens;
 
 import com.mojang.blaze3d.systems.RenderSystem;
 
-public class KiScreen extends AbstractContainerScreen<KiMenu> {
-	private final static HashMap<String, Object> guistate = KiMenu.guistate;
+public class KiScreen extends AbstractContainerScreen<KiMenu> implements DccModScreens.ScreenAccessor {
 	private final Level world;
 	private final int x, y, z;
 	private final Player entity;
+	private boolean menuStateUpdateActive = false;
 	Button button_strong_fist;
 	Button button_better_defense;
 
@@ -37,17 +36,28 @@ public class KiScreen extends AbstractContainerScreen<KiMenu> {
 		this.imageHeight = 189;
 	}
 
+	@Override
+	public void updateMenuState(int elementType, String name, Object elementState) {
+		menuStateUpdateActive = true;
+		menuStateUpdateActive = false;
+	}
+
 	private static final ResourceLocation texture = ResourceLocation.parse("dcc:textures/screens/ki.png");
 
 	@Override
 	public void render(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {
-		this.renderBackground(guiGraphics, mouseX, mouseY, partialTicks);
 		super.render(guiGraphics, mouseX, mouseY, partialTicks);
-		this.renderTooltip(guiGraphics, mouseX, mouseY);
-		if (mouseX > leftPos + 7 && mouseX < leftPos + 31 && mouseY > topPos + 27 && mouseY < topPos + 51)
+		boolean customTooltipShown = false;
+		if (mouseX > leftPos + 7 && mouseX < leftPos + 31 && mouseY > topPos + 27 && mouseY < topPos + 51) {
 			guiGraphics.renderTooltip(font, Component.translatable("gui.dcc.ki.tooltip_get_higher_attack_speed_and_spee"), mouseX, mouseY);
-		if (mouseX > leftPos + 7 && mouseX < leftPos + 31 && mouseY > topPos + 54 && mouseY < topPos + 78)
+			customTooltipShown = true;
+		}
+		if (mouseX > leftPos + 7 && mouseX < leftPos + 31 && mouseY > topPos + 54 && mouseY < topPos + 78) {
 			guiGraphics.renderTooltip(font, Component.translatable("gui.dcc.ki.tooltip_get_max_armor_and_speed_for_5_se"), mouseX, mouseY);
+			customTooltipShown = true;
+		}
+		if (!customTooltipShown)
+			this.renderTooltip(guiGraphics, mouseX, mouseY);
 	}
 
 	@Override
@@ -82,7 +92,6 @@ public class KiScreen extends AbstractContainerScreen<KiMenu> {
 				KiButtonMessage.handleButtonAction(entity, 0, x, y, z);
 			}
 		}).bounds(this.leftPos + 7, this.topPos + 27, 82, 20).build();
-		guistate.put("button:button_strong_fist", button_strong_fist);
 		this.addRenderableWidget(button_strong_fist);
 		button_better_defense = Button.builder(Component.translatable("gui.dcc.ki.button_better_defense"), e -> {
 			if (true) {
@@ -90,7 +99,6 @@ public class KiScreen extends AbstractContainerScreen<KiMenu> {
 				KiButtonMessage.handleButtonAction(entity, 1, x, y, z);
 			}
 		}).bounds(this.leftPos + 7, this.topPos + 54, 98, 20).build();
-		guistate.put("button:button_better_defense", button_better_defense);
 		this.addRenderableWidget(button_better_defense);
 	}
 }

@@ -1,5 +1,5 @@
 {
-  "_fv": 73,
+  "_fv": 79,
   "_type": "gui",
   "definition": {
     "type": 0,
@@ -53,8 +53,8 @@
           },
           "width": 51,
           "height": 20,
-          "x": 150,
-          "y": 89,
+          "x": 249,
+          "y": 62,
           "locked": false
         }
       },
@@ -70,7 +70,7 @@
           "width": 67,
           "height": 20,
           "x": 150,
-          "y": 116,
+          "y": 89,
           "locked": false
         }
       },
@@ -99,8 +99,8 @@
         "data": {
           "image": "druidstaff.png",
           "use1Xscale": false,
-          "x": 132,
-          "y": 89,
+          "x": 231,
+          "y": 62,
           "locked": false
         }
       },
@@ -110,7 +110,7 @@
           "image": "zauberstab.png",
           "use1Xscale": false,
           "x": 132,
-          "y": 116,
+          "y": 89,
           "locked": false
         }
       },
@@ -141,18 +141,28 @@
         }
       },
       {
-        "type": "label",
+        "type": "button",
         "data": {
-          "name": "label_in_dev",
-          "text": {
-            "fixedValue": "(in dev)"
+          "name": "button_paladin",
+          "text": "Paladin",
+          "isUndecorated": false,
+          "onClick": {
+            "name": "PaladinOpen"
           },
-          "color": {
-            "value": -12829636,
-            "falpha": 0.0
-          },
-          "x": 204,
-          "y": 98,
+          "width": 61,
+          "height": 20,
+          "x": 150,
+          "y": 116,
+          "locked": false
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "barbaricon.png",
+          "use1Xscale": false,
+          "x": 132,
+          "y": 116,
           "locked": false
         }
       }

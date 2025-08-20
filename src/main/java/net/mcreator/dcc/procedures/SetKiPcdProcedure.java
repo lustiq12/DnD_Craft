@@ -13,27 +13,18 @@ import com.mojang.brigadier.arguments.DoubleArgumentType;
 public class SetKiPcdProcedure {
 	public static void execute(CommandContext<CommandSourceStack> arguments) {
 		{
-			DccModVariables.PlayerVariables _vars = (new Object() {
-				public Entity getEntity() {
-					try {
-						return EntityArgument.getEntity(arguments, "Player_name");
-					} catch (CommandSyntaxException e) {
-						e.printStackTrace();
-						return null;
-					}
-				}
-			}.getEntity()).getData(DccModVariables.PLAYER_VARIABLES);
+			DccModVariables.PlayerVariables _vars = (commandParameterEntity(arguments, "Player_name")).getData(DccModVariables.PLAYER_VARIABLES);
 			_vars.Ki = DoubleArgumentType.getDouble(arguments, "ki");
-			_vars.syncPlayerVariables((new Object() {
-				public Entity getEntity() {
-					try {
-						return EntityArgument.getEntity(arguments, "Player_name");
-					} catch (CommandSyntaxException e) {
-						e.printStackTrace();
-						return null;
-					}
-				}
-			}.getEntity()));
+			_vars.syncPlayerVariables((commandParameterEntity(arguments, "Player_name")));
+		}
+	}
+
+	private static Entity commandParameterEntity(CommandContext<CommandSourceStack> arguments, String parameter) {
+		try {
+			return EntityArgument.getEntity(arguments, parameter);
+		} catch (CommandSyntaxException e) {
+			e.printStackTrace();
+			return null;
 		}
 	}
 }

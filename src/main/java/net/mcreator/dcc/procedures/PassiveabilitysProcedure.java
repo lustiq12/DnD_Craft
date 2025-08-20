@@ -20,6 +20,7 @@ import net.minecraft.tags.BlockTags;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.network.chat.Component;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.core.BlockPos;
@@ -29,7 +30,6 @@ import net.mcreator.dcc.network.DccModVariables;
 
 import javax.annotation.Nullable;
 
-import java.util.List;
 import java.util.Comparator;
 
 @EventBusSubscriber
@@ -81,8 +81,8 @@ public class PassiveabilitysProcedure {
 								_level.sendParticles(ParticleTypes.CHERRY_LEAVES, x, y, z, 2000, 5, 5, 3, 0.01);
 							{
 								final Vec3 _center = new Vec3(x, y, z);
-								List<Entity> _entfound = world.getEntitiesOfClass(Entity.class, new AABB(_center, _center).inflate(15 / 2d), e -> true).stream().sorted(Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_center))).toList();
-								for (Entity entityiterator : _entfound) {
+								for (Entity entityiterator : world.getEntitiesOfClass(Entity.class, new AABB(_center, _center).inflate(15 / 2d), e -> true).stream().sorted(Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_center)))
+										.toList()) {
 									{
 										DccModVariables.PlayerVariables _vars = entity.getData(DccModVariables.PLAYER_VARIABLES);
 										_vars.cooldown = 25;
@@ -124,11 +124,9 @@ public class PassiveabilitysProcedure {
 							_entity.addEffect(new MobEffectInstance(MobEffects.REGENERATION, 200, 1, false, false));
 					}
 				}
-			} else if ((entity.getData(DccModVariables.PLAYER_VARIABLES).Class_Variable).equals("Sorcerer")) {
-				if (entity instanceof Player _player) {
-					_player.getAbilities().mayBuild = true;
-					_player.onUpdateAbilities();
-				}
+			} else if ((entity.getData(DccModVariables.PLAYER_VARIABLES).Class_Variable).equals("Paladin")) {
+				if (entity instanceof Player _player && !_player.level().isClientSide())
+					_player.displayClientMessage(Component.literal("paladin passsive 1"), false);
 			} else if ((entity.getData(DccModVariables.PLAYER_VARIABLES).Class_Variable).equals("Fighter")) {
 				if (entity instanceof Player _player) {
 					_player.getAbilities().mayBuild = true;
@@ -172,11 +170,9 @@ public class PassiveabilitysProcedure {
 							_entity.addEffect(new MobEffectInstance(MobEffects.REGENERATION, 300, 2, false, false));
 					}
 				}
-			} else if ((entity.getData(DccModVariables.PLAYER_VARIABLES).Class_Variable).equals("Sorcerer")) {
-				if (entity instanceof Player _player) {
-					_player.getAbilities().mayBuild = true;
-					_player.onUpdateAbilities();
-				}
+			} else if ((entity.getData(DccModVariables.PLAYER_VARIABLES).Class_Variable).equals("Paladin")) {
+				if (entity instanceof Player _player && !_player.level().isClientSide())
+					_player.displayClientMessage(Component.literal("paladin passsive 2"), false);
 			} else if ((entity.getData(DccModVariables.PLAYER_VARIABLES).Class_Variable).equals("Fighter")) {
 				if (entity instanceof Player _player) {
 					_player.getAbilities().mayBuild = true;

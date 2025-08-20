@@ -1,4 +1,3 @@
-
 package net.mcreator.dcc.potion;
 
 import net.minecraft.world.effect.MobEffectCategory;

@@ -1,5 +1,5 @@
 {
-  "_fv": 73,
+  "_fv": 79,
   "_type": "tool",
   "definition": {
     "toolType": "Sword",
@@ -19,7 +19,7 @@
     ],
     "efficiency": 4.0,
     "attackSpeed": 1.2,
-    "enchantability": 0,
+    "enchantability": 1,
     "damageVsEntity": 10.0,
     "usageCount": 250,
     "glowCondition": {

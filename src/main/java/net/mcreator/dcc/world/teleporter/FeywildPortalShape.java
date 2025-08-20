@@ -1,4 +1,3 @@
-
 package net.mcreator.dcc.world.teleporter;
 
 import net.minecraft.world.phys.shapes.VoxelShape;

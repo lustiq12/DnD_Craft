@@ -1,4 +1,3 @@
-
 /*
  *    MCreator note: This file will be REGENERATED on each build.
  */
@@ -28,6 +27,7 @@ import net.mcreator.dcc.entity.Ogre2Entity;
 import net.mcreator.dcc.entity.OcherjellyEntity;
 import net.mcreator.dcc.entity.MimicSludgeEntity;
 import net.mcreator.dcc.entity.MimicEntity;
+import net.mcreator.dcc.entity.LivingSwordEntity;
 import net.mcreator.dcc.entity.IronGoblinEntity;
 import net.mcreator.dcc.entity.InvisibleStalkerEntity;
 import net.mcreator.dcc.entity.HarpyEntity;
@@ -118,6 +118,8 @@ public class DccModEntities {
 			EntityType.Builder.<VINESEntity>of(VINESEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).fireImmune().sized(0.6f, 1.8f));
 	public static final DeferredHolder<EntityType<?>, EntityType<ThornEntity>> THORN = register("thorn",
 			EntityType.Builder.<ThornEntity>of(ThornEntity::new, MobCategory.MISC).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(0.5f, 0.5f));
+	public static final DeferredHolder<EntityType<?>, EntityType<LivingSwordEntity>> LIVING_SWORD = register("living_sword",
+			EntityType.Builder.<LivingSwordEntity>of(LivingSwordEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).fireImmune().sized(0.6f, 1.8f));
 
 	// Start of user code block custom entities
 	// End of user code block custom entities
@@ -149,6 +151,7 @@ public class DccModEntities {
 		CookEntity.init(event);
 		GhoulEntity.init(event);
 		VINESEntity.init(event);
+		LivingSwordEntity.init(event);
 	}
 
 	@SubscribeEvent
@@ -170,5 +173,6 @@ public class DccModEntities {
 		event.put(COOK.get(), CookEntity.createAttributes().build());
 		event.put(GHOUL.get(), GhoulEntity.createAttributes().build());
 		event.put(VINES.get(), VINESEntity.createAttributes().build());
+		event.put(LIVING_SWORD.get(), LivingSwordEntity.createAttributes().build());
 	}
 }

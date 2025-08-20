@@ -6,7 +6,6 @@ import net.minecraft.world.level.Level;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.entity.projectile.SmallFireball;
 import net.minecraft.world.entity.projectile.Projectile;
-import net.minecraft.world.entity.projectile.AbstractHurtingProjectile;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.Entity;
@@ -25,14 +24,7 @@ public class MagicscrollFirearrowRightclickedProcedure {
 			Entity _shootFrom = entity;
 			Level projectileLevel = _shootFrom.level();
 			if (!projectileLevel.isClientSide()) {
-				Projectile _entityToSpawn = new Object() {
-					public Projectile getFireball(Level level, double ax, double ay, double az) {
-						AbstractHurtingProjectile entityToSpawn = new SmallFireball(EntityType.SMALL_FIREBALL, level);
-						entityToSpawn.setDeltaMovement(new Vec3(ax, ay, az));
-						entityToSpawn.hasImpulse = true;
-						return entityToSpawn;
-					}
-				}.getFireball(projectileLevel, (entity.getLookAngle().x), (entity.getLookAngle().y), (entity.getLookAngle().z));
+				Projectile _entityToSpawn = initProjectileProperties(new SmallFireball(EntityType.SMALL_FIREBALL, projectileLevel), null, new Vec3((entity.getLookAngle().x), (entity.getLookAngle().y), (entity.getLookAngle().z)));
 				_entityToSpawn.setPos(_shootFrom.getX(), _shootFrom.getEyeY() - 0.1, _shootFrom.getZ());
 				_entityToSpawn.shoot(_shootFrom.getLookAngle().x, _shootFrom.getLookAngle().y, _shootFrom.getLookAngle().z, 7, 0);
 				projectileLevel.addFreshEntity(_entityToSpawn);
@@ -49,5 +41,14 @@ public class MagicscrollFirearrowRightclickedProcedure {
 			ItemStack _stktoremove = new ItemStack(DccModItems.MAGICSCROLL_FIREARROW.get());
 			_player.getInventory().clearOrCountMatchingItems(p -> _stktoremove.getItem() == p.getItem(), 1, _player.inventoryMenu.getCraftSlots());
 		}
+	}
+
+	private static Projectile initProjectileProperties(Projectile entityToSpawn, Entity shooter, Vec3 acceleration) {
+		entityToSpawn.setOwner(shooter);
+		if (!Vec3.ZERO.equals(acceleration)) {
+			entityToSpawn.setDeltaMovement(acceleration);
+			entityToSpawn.hasImpulse = true;
+		}
+		return entityToSpawn;
 	}
 }

@@ -24,11 +24,11 @@ public class WargOnInitialEntitySpawnProcedure {
 					entityToSpawn.setDeltaMovement(0, 0, 0);
 				}
 			}
-			((Entity) world.getEntitiesOfClass(BowblinEntity.class, AABB.ofSize(new Vec3(x, y, z), 1, 1, 1), e -> true).stream().sorted(new Object() {
-				Comparator<Entity> compareDistOf(double _x, double _y, double _z) {
-					return Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_x, _y, _z));
-				}
-			}.compareDistOf(x, y, z)).findFirst().orElse(null)).startRiding(entity);
+			(findEntityInWorldRange(world, BowblinEntity.class, x, y, z, 1)).startRiding(entity);
 		}
+	}
+
+	private static Entity findEntityInWorldRange(LevelAccessor world, Class<? extends Entity> clazz, double x, double y, double z, double range) {
+		return (Entity) world.getEntitiesOfClass(clazz, AABB.ofSize(new Vec3(x, y, z), range, range, range), e -> true).stream().sorted(Comparator.comparingDouble(e -> e.distanceToSqr(x, y, z))).findFirst().orElse(null);
 	}
 }

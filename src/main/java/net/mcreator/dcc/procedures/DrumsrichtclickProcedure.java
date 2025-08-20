@@ -23,7 +23,6 @@ import net.minecraft.client.Minecraft;
 import net.mcreator.dcc.network.DccModVariables;
 import net.mcreator.dcc.DccMod;
 
-import java.util.List;
 import java.util.Comparator;
 
 public class DrumsrichtclickProcedure {
@@ -73,8 +72,7 @@ public class DrumsrichtclickProcedure {
 						_level.sendParticles(ParticleTypes.TOTEM_OF_UNDYING, x, y, z, 1000, 3, 3, 3, 1);
 					{
 						final Vec3 _center = new Vec3(x, y, z);
-						List<Entity> _entfound = world.getEntitiesOfClass(Entity.class, new AABB(_center, _center).inflate(8 / 2d), e -> true).stream().sorted(Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_center))).toList();
-						for (Entity entityiterator : _entfound) {
+						for (Entity entityiterator : world.getEntitiesOfClass(Entity.class, new AABB(_center, _center).inflate(8 / 2d), e -> true).stream().sorted(Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_center))).toList()) {
 							if (!(entityiterator == entity)) {
 								entityiterator.hurt(new DamageSource(world.holderOrThrow(DamageTypes.MOB_ATTACK)), 6);
 								if (entityiterator instanceof LivingEntity _entity && !_entity.level().isClientSide())

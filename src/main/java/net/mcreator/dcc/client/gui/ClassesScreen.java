@@ -13,21 +13,21 @@ import net.minecraft.client.gui.GuiGraphics;
 
 import net.mcreator.dcc.world.inventory.ClassesMenu;
 import net.mcreator.dcc.network.ClassesButtonMessage;
-
-import java.util.HashMap;
+import net.mcreator.dcc.init.DccModScreens;
 
 import com.mojang.blaze3d.systems.RenderSystem;
 
-public class ClassesScreen extends AbstractContainerScreen<ClassesMenu> {
-	private final static HashMap<String, Object> guistate = ClassesMenu.guistate;
+public class ClassesScreen extends AbstractContainerScreen<ClassesMenu> implements DccModScreens.ScreenAccessor {
 	private final Level world;
 	private final int x, y, z;
 	private final Player entity;
+	private boolean menuStateUpdateActive = false;
 	Button button_barbarian;
 	Button button_bard;
 	Button button_druid;
 	Button button_magician;
 	Button button_monk;
+	Button button_paladin;
 
 	public ClassesScreen(ClassesMenu container, Inventory inventory, Component text) {
 		super(container, inventory, text);
@@ -40,11 +40,16 @@ public class ClassesScreen extends AbstractContainerScreen<ClassesMenu> {
 		this.imageHeight = 189;
 	}
 
+	@Override
+	public void updateMenuState(int elementType, String name, Object elementState) {
+		menuStateUpdateActive = true;
+		menuStateUpdateActive = false;
+	}
+
 	private static final ResourceLocation texture = ResourceLocation.parse("dcc:textures/screens/classes.png");
 
 	@Override
 	public void render(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {
-		this.renderBackground(guiGraphics, mouseX, mouseY, partialTicks);
 		super.render(guiGraphics, mouseX, mouseY, partialTicks);
 		this.renderTooltip(guiGraphics, mouseX, mouseY);
 	}
@@ -55,17 +60,12 @@ public class ClassesScreen extends AbstractContainerScreen<ClassesMenu> {
 		RenderSystem.enableBlend();
 		RenderSystem.defaultBlendFunc();
 		guiGraphics.blit(texture, this.leftPos, this.topPos, 0, 0, this.imageWidth, this.imageHeight, this.imageWidth, this.imageHeight);
-
 		guiGraphics.blit(ResourceLocation.parse("dcc:textures/screens/barbaricon.png"), this.leftPos + 7, this.topPos + 9, 0, 0, 16, 16, 16, 16);
-
 		guiGraphics.blit(ResourceLocation.parse("dcc:textures/screens/christiano_ronaldo_horn.png"), this.leftPos + 7, this.topPos + 36, 0, 0, 16, 16, 16, 16);
-
-		guiGraphics.blit(ResourceLocation.parse("dcc:textures/screens/druidstaff.png"), this.leftPos + 7, this.topPos + 63, 0, 0, 16, 16, 16, 16);
-
-		guiGraphics.blit(ResourceLocation.parse("dcc:textures/screens/zauberstab.png"), this.leftPos + 7, this.topPos + 90, 0, 0, 16, 16, 16, 16);
-
+		guiGraphics.blit(ResourceLocation.parse("dcc:textures/screens/druidstaff.png"), this.leftPos + 106, this.topPos + 36, 0, 0, 16, 16, 16, 16);
+		guiGraphics.blit(ResourceLocation.parse("dcc:textures/screens/zauberstab.png"), this.leftPos + 7, this.topPos + 63, 0, 0, 16, 16, 16, 16);
 		guiGraphics.blit(ResourceLocation.parse("dcc:textures/screens/bruh.png"), this.leftPos + 106, this.topPos + 9, 0, 0, 16, 16, 16, 16);
-
+		guiGraphics.blit(ResourceLocation.parse("dcc:textures/screens/barbaricon.png"), this.leftPos + 7, this.topPos + 90, 0, 0, 16, 16, 16, 16);
 		RenderSystem.disableBlend();
 	}
 
@@ -80,7 +80,6 @@ public class ClassesScreen extends AbstractContainerScreen<ClassesMenu> {
 
 	@Override
 	protected void renderLabels(GuiGraphics guiGraphics, int mouseX, int mouseY) {
-		guiGraphics.drawString(this.font, Component.translatable("gui.dcc.classes.label_in_dev"), 79, 72, -12829636, false);
 	}
 
 	@Override
@@ -92,7 +91,6 @@ public class ClassesScreen extends AbstractContainerScreen<ClassesMenu> {
 				ClassesButtonMessage.handleButtonAction(entity, 0, x, y, z);
 			}
 		}).bounds(this.leftPos + 25, this.topPos + 9, 72, 20).build();
-		guistate.put("button:button_barbarian", button_barbarian);
 		this.addRenderableWidget(button_barbarian);
 		button_bard = Button.builder(Component.translatable("gui.dcc.classes.button_bard"), e -> {
 			if (true) {
@@ -100,23 +98,20 @@ public class ClassesScreen extends AbstractContainerScreen<ClassesMenu> {
 				ClassesButtonMessage.handleButtonAction(entity, 1, x, y, z);
 			}
 		}).bounds(this.leftPos + 25, this.topPos + 36, 46, 20).build();
-		guistate.put("button:button_bard", button_bard);
 		this.addRenderableWidget(button_bard);
 		button_druid = Button.builder(Component.translatable("gui.dcc.classes.button_druid"), e -> {
 			if (true) {
 				PacketDistributor.sendToServer(new ClassesButtonMessage(2, x, y, z));
 				ClassesButtonMessage.handleButtonAction(entity, 2, x, y, z);
 			}
-		}).bounds(this.leftPos + 25, this.topPos + 63, 51, 20).build();
-		guistate.put("button:button_druid", button_druid);
+		}).bounds(this.leftPos + 124, this.topPos + 36, 51, 20).build();
 		this.addRenderableWidget(button_druid);
 		button_magician = Button.builder(Component.translatable("gui.dcc.classes.button_magician"), e -> {
 			if (true) {
 				PacketDistributor.sendToServer(new ClassesButtonMessage(3, x, y, z));
 				ClassesButtonMessage.handleButtonAction(entity, 3, x, y, z);
 			}
-		}).bounds(this.leftPos + 25, this.topPos + 90, 67, 20).build();
-		guistate.put("button:button_magician", button_magician);
+		}).bounds(this.leftPos + 25, this.topPos + 63, 67, 20).build();
 		this.addRenderableWidget(button_magician);
 		button_monk = Button.builder(Component.translatable("gui.dcc.classes.button_monk"), e -> {
 			if (true) {
@@ -124,7 +119,13 @@ public class ClassesScreen extends AbstractContainerScreen<ClassesMenu> {
 				ClassesButtonMessage.handleButtonAction(entity, 4, x, y, z);
 			}
 		}).bounds(this.leftPos + 124, this.topPos + 9, 46, 20).build();
-		guistate.put("button:button_monk", button_monk);
 		this.addRenderableWidget(button_monk);
+		button_paladin = Button.builder(Component.translatable("gui.dcc.classes.button_paladin"), e -> {
+			if (true) {
+				PacketDistributor.sendToServer(new ClassesButtonMessage(5, x, y, z));
+				ClassesButtonMessage.handleButtonAction(entity, 5, x, y, z);
+			}
+		}).bounds(this.leftPos + 25, this.topPos + 90, 61, 20).build();
+		this.addRenderableWidget(button_paladin);
 	}
 }

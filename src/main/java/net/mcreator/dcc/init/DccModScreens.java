@@ -1,4 +1,3 @@
-
 /*
  *	MCreator note: This file will be REGENERATED on each build.
  */
@@ -9,6 +8,7 @@ import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.api.distmarker.Dist;
 
+import net.mcreator.dcc.client.gui.PaladinGuiScreen;
 import net.mcreator.dcc.client.gui.MonkGuiScreen;
 import net.mcreator.dcc.client.gui.MagierguiScreen;
 import net.mcreator.dcc.client.gui.MagicChooseScreen;
@@ -32,5 +32,10 @@ public class DccModScreens {
 		event.register(DccModMenus.KI.get(), KiScreen::new);
 		event.register(DccModMenus.COOK_GUI.get(), CookGuiScreen::new);
 		event.register(DccModMenus.DRUID_GUI.get(), DruidGuiScreen::new);
+		event.register(DccModMenus.PALADIN_GUI.get(), PaladinGuiScreen::new);
+	}
+
+	public interface ScreenAccessor {
+		void updateMenuState(int elementType, String name, Object elementState);
 	}
 }

@@ -1,11 +1,11 @@
 {
   "replace": false,
   "values": [
-    "dcc:adamantium_war_hammer",
-    "dcc:two_handed_adamantium_hammer",
     "dcc:light_adamantium_hammer",
+    "dcc:light_hammer",
+    "dcc:two_handed_adamantium_hammer",
     "dcc:war_hammer",
     "dcc:two_handedhammer",
-    "dcc:light_hammer"
+    "dcc:adamantium_war_hammer"
   ]
 }

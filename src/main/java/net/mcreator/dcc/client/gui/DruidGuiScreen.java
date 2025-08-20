@@ -14,16 +14,15 @@ import net.minecraft.client.gui.GuiGraphics;
 import net.mcreator.dcc.world.inventory.DruidGuiMenu;
 import net.mcreator.dcc.procedures.DisplaybuttonProcedure;
 import net.mcreator.dcc.network.DruidGuiButtonMessage;
-
-import java.util.HashMap;
+import net.mcreator.dcc.init.DccModScreens;
 
 import com.mojang.blaze3d.systems.RenderSystem;
 
-public class DruidGuiScreen extends AbstractContainerScreen<DruidGuiMenu> {
-	private final static HashMap<String, Object> guistate = DruidGuiMenu.guistate;
+public class DruidGuiScreen extends AbstractContainerScreen<DruidGuiMenu> implements DccModScreens.ScreenAccessor {
 	private final Level world;
 	private final int x, y, z;
 	private final Player entity;
+	private boolean menuStateUpdateActive = false;
 	Button button_choose;
 	Button button_exit;
 
@@ -38,23 +37,40 @@ public class DruidGuiScreen extends AbstractContainerScreen<DruidGuiMenu> {
 		this.imageHeight = 189;
 	}
 
+	@Override
+	public void updateMenuState(int elementType, String name, Object elementState) {
+		menuStateUpdateActive = true;
+		menuStateUpdateActive = false;
+	}
+
 	private static final ResourceLocation texture = ResourceLocation.parse("dcc:textures/screens/druid_gui.png");
 
 	@Override
 	public void render(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {
-		this.renderBackground(guiGraphics, mouseX, mouseY, partialTicks);
 		super.render(guiGraphics, mouseX, mouseY, partialTicks);
-		this.renderTooltip(guiGraphics, mouseX, mouseY);
-		if (mouseX > leftPos + 34 && mouseX < leftPos + 58 && mouseY > topPos + 27 && mouseY < topPos + 51)
+		boolean customTooltipShown = false;
+		if (mouseX > leftPos + 34 && mouseX < leftPos + 58 && mouseY > topPos + 27 && mouseY < topPos + 51) {
 			guiGraphics.renderTooltip(font, Component.translatable("gui.dcc.druid_gui.tooltip_shoot_a_thorn_that_deals_75_hea"), mouseX, mouseY);
-		if (mouseX > leftPos + 34 && mouseX < leftPos + 58 && mouseY > topPos + 54 && mouseY < topPos + 78)
+			customTooltipShown = true;
+		}
+		if (mouseX > leftPos + 34 && mouseX < leftPos + 58 && mouseY > topPos + 54 && mouseY < topPos + 78) {
 			guiGraphics.renderTooltip(font, Component.translatable("gui.dcc.druid_gui.tooltip_let_roots_come_out_of_the_earth"), mouseX, mouseY);
-		if (mouseX > leftPos + 34 && mouseX < leftPos + 58 && mouseY > topPos + 81 && mouseY < topPos + 105)
+			customTooltipShown = true;
+		}
+		if (mouseX > leftPos + 34 && mouseX < leftPos + 58 && mouseY > topPos + 81 && mouseY < topPos + 105) {
 			guiGraphics.renderTooltip(font, Component.translatable("gui.dcc.druid_gui.tooltip_when_you_are_near_plants_you_ge"), mouseX, mouseY);
-		if (mouseX > leftPos + 34 && mouseX < leftPos + 58 && mouseY > topPos + 135 && mouseY < topPos + 159)
+			customTooltipShown = true;
+		}
+		if (mouseX > leftPos + 34 && mouseX < leftPos + 58 && mouseY > topPos + 135 && mouseY < topPos + 159) {
 			guiGraphics.renderTooltip(font, Component.translatable("gui.dcc.druid_gui.tooltip_you_get_a_higher_regeneration_le"), mouseX, mouseY);
-		if (mouseX > leftPos + 34 && mouseX < leftPos + 58 && mouseY > topPos + 108 && mouseY < topPos + 132)
+			customTooltipShown = true;
+		}
+		if (mouseX > leftPos + 34 && mouseX < leftPos + 58 && mouseY > topPos + 108 && mouseY < topPos + 132) {
 			guiGraphics.renderTooltip(font, Component.translatable("gui.dcc.druid_gui.tooltip_summon_5_strong_wolves_that_supp"), mouseX, mouseY);
+			customTooltipShown = true;
+		}
+		if (!customTooltipShown)
+			this.renderTooltip(guiGraphics, mouseX, mouseY);
 	}
 
 	@Override
@@ -63,17 +79,11 @@ public class DruidGuiScreen extends AbstractContainerScreen<DruidGuiMenu> {
 		RenderSystem.enableBlend();
 		RenderSystem.defaultBlendFunc();
 		guiGraphics.blit(texture, this.leftPos, this.topPos, 0, 0, this.imageWidth, this.imageHeight, this.imageWidth, this.imageHeight);
-
 		guiGraphics.blit(ResourceLocation.parse("dcc:textures/screens/experience_bottle.png"), this.leftPos + 16, this.topPos + 27, 0, 0, 16, 16, 16, 16);
-
 		guiGraphics.blit(ResourceLocation.parse("dcc:textures/screens/experience_bottle.png"), this.leftPos + 16, this.topPos + 54, 0, 0, 16, 16, 16, 16);
-
 		guiGraphics.blit(ResourceLocation.parse("dcc:textures/screens/experience_bottle.png"), this.leftPos + 16, this.topPos + 81, 0, 0, 16, 16, 16, 16);
-
 		guiGraphics.blit(ResourceLocation.parse("dcc:textures/screens/experience_bottle.png"), this.leftPos + 16, this.topPos + 108, 0, 0, 16, 16, 16, 16);
-
 		guiGraphics.blit(ResourceLocation.parse("dcc:textures/screens/experience_bottle.png"), this.leftPos + 16, this.topPos + 135, 0, 0, 16, 16, 16, 16);
-
 		RenderSystem.disableBlend();
 	}
 
@@ -109,28 +119,21 @@ public class DruidGuiScreen extends AbstractContainerScreen<DruidGuiMenu> {
 				PacketDistributor.sendToServer(new DruidGuiButtonMessage(0, x, y, z));
 				DruidGuiButtonMessage.handleButtonAction(entity, 0, x, y, z);
 			}
-		}).bounds(this.leftPos + 16, this.topPos + 162, 56, 20).build(builder -> new Button(builder) {
-			@Override
-			public void renderWidget(GuiGraphics guiGraphics, int gx, int gy, float ticks) {
-				this.visible = DisplaybuttonProcedure.execute(entity);
-				super.renderWidget(guiGraphics, gx, gy, ticks);
-			}
-		});
-		guistate.put("button:button_choose", button_choose);
+		}).bounds(this.leftPos + 16, this.topPos + 162, 56, 20).build();
 		this.addRenderableWidget(button_choose);
 		button_exit = Button.builder(Component.translatable("gui.dcc.druid_gui.button_exit"), e -> {
 			if (DisplaybuttonProcedure.execute(entity)) {
 				PacketDistributor.sendToServer(new DruidGuiButtonMessage(1, x, y, z));
 				DruidGuiButtonMessage.handleButtonAction(entity, 1, x, y, z);
 			}
-		}).bounds(this.leftPos + 115, this.topPos + 162, 46, 20).build(builder -> new Button(builder) {
-			@Override
-			public void renderWidget(GuiGraphics guiGraphics, int gx, int gy, float ticks) {
-				this.visible = DisplaybuttonProcedure.execute(entity);
-				super.renderWidget(guiGraphics, gx, gy, ticks);
-			}
-		});
-		guistate.put("button:button_exit", button_exit);
+		}).bounds(this.leftPos + 115, this.topPos + 162, 46, 20).build();
 		this.addRenderableWidget(button_exit);
+	}
+
+	@Override
+	protected void containerTick() {
+		super.containerTick();
+		this.button_choose.visible = DisplaybuttonProcedure.execute(entity);
+		this.button_exit.visible = DisplaybuttonProcedure.execute(entity);
 	}
 }

@@ -14,16 +14,15 @@ import net.minecraft.client.gui.GuiGraphics;
 import net.mcreator.dcc.world.inventory.MagierguiMenu;
 import net.mcreator.dcc.procedures.DisplaybuttonProcedure;
 import net.mcreator.dcc.network.MagierguiButtonMessage;
-
-import java.util.HashMap;
+import net.mcreator.dcc.init.DccModScreens;
 
 import com.mojang.blaze3d.systems.RenderSystem;
 
-public class MagierguiScreen extends AbstractContainerScreen<MagierguiMenu> {
-	private final static HashMap<String, Object> guistate = MagierguiMenu.guistate;
+public class MagierguiScreen extends AbstractContainerScreen<MagierguiMenu> implements DccModScreens.ScreenAccessor {
 	private final Level world;
 	private final int x, y, z;
 	private final Player entity;
+	private boolean menuStateUpdateActive = false;
 	Button button_choose;
 	Button button_exit;
 
@@ -38,17 +37,28 @@ public class MagierguiScreen extends AbstractContainerScreen<MagierguiMenu> {
 		this.imageHeight = 189;
 	}
 
+	@Override
+	public void updateMenuState(int elementType, String name, Object elementState) {
+		menuStateUpdateActive = true;
+		menuStateUpdateActive = false;
+	}
+
 	private static final ResourceLocation texture = ResourceLocation.parse("dcc:textures/screens/magiergui.png");
 
 	@Override
 	public void render(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {
-		this.renderBackground(guiGraphics, mouseX, mouseY, partialTicks);
 		super.render(guiGraphics, mouseX, mouseY, partialTicks);
-		this.renderTooltip(guiGraphics, mouseX, mouseY);
-		if (mouseX > leftPos + 34 && mouseX < leftPos + 58 && mouseY > topPos + 27 && mouseY < topPos + 51)
+		boolean customTooltipShown = false;
+		if (mouseX > leftPos + 34 && mouseX < leftPos + 58 && mouseY > topPos + 27 && mouseY < topPos + 51) {
 			guiGraphics.renderTooltip(font, Component.translatable("gui.dcc.magiergui.tooltip_regenerate_60_mana_in_15s"), mouseX, mouseY);
-		if (mouseX > leftPos + 34 && mouseX < leftPos + 58 && mouseY > topPos + 54 && mouseY < topPos + 78)
+			customTooltipShown = true;
+		}
+		if (mouseX > leftPos + 34 && mouseX < leftPos + 58 && mouseY > topPos + 54 && mouseY < topPos + 78) {
 			guiGraphics.renderTooltip(font, Component.translatable("gui.dcc.magiergui.tooltip_get_a_new_spell_you_can_acces_vi"), mouseX, mouseY);
+			customTooltipShown = true;
+		}
+		if (!customTooltipShown)
+			this.renderTooltip(guiGraphics, mouseX, mouseY);
 	}
 
 	@Override
@@ -57,11 +67,8 @@ public class MagierguiScreen extends AbstractContainerScreen<MagierguiMenu> {
 		RenderSystem.enableBlend();
 		RenderSystem.defaultBlendFunc();
 		guiGraphics.blit(texture, this.leftPos, this.topPos, 0, 0, this.imageWidth, this.imageHeight, this.imageWidth, this.imageHeight);
-
 		guiGraphics.blit(ResourceLocation.parse("dcc:textures/screens/experience_bottle.png"), this.leftPos + 16, this.topPos + 27, 0, 0, 16, 16, 16, 16);
-
 		guiGraphics.blit(ResourceLocation.parse("dcc:textures/screens/experience_bottle.png"), this.leftPos + 16, this.topPos + 54, 0, 0, 16, 16, 16, 16);
-
 		RenderSystem.disableBlend();
 	}
 
@@ -91,28 +98,21 @@ public class MagierguiScreen extends AbstractContainerScreen<MagierguiMenu> {
 				PacketDistributor.sendToServer(new MagierguiButtonMessage(0, x, y, z));
 				MagierguiButtonMessage.handleButtonAction(entity, 0, x, y, z);
 			}
-		}).bounds(this.leftPos + 16, this.topPos + 162, 56, 20).build(builder -> new Button(builder) {
-			@Override
-			public void renderWidget(GuiGraphics guiGraphics, int gx, int gy, float ticks) {
-				this.visible = DisplaybuttonProcedure.execute(entity);
-				super.renderWidget(guiGraphics, gx, gy, ticks);
-			}
-		});
-		guistate.put("button:button_choose", button_choose);
+		}).bounds(this.leftPos + 16, this.topPos + 162, 56, 20).build();
 		this.addRenderableWidget(button_choose);
 		button_exit = Button.builder(Component.translatable("gui.dcc.magiergui.button_exit"), e -> {
 			if (DisplaybuttonProcedure.execute(entity)) {
 				PacketDistributor.sendToServer(new MagierguiButtonMessage(1, x, y, z));
 				MagierguiButtonMessage.handleButtonAction(entity, 1, x, y, z);
 			}
-		}).bounds(this.leftPos + 115, this.topPos + 162, 46, 20).build(builder -> new Button(builder) {
-			@Override
-			public void renderWidget(GuiGraphics guiGraphics, int gx, int gy, float ticks) {
-				this.visible = DisplaybuttonProcedure.execute(entity);
-				super.renderWidget(guiGraphics, gx, gy, ticks);
-			}
-		});
-		guistate.put("button:button_exit", button_exit);
+		}).bounds(this.leftPos + 115, this.topPos + 162, 46, 20).build();
 		this.addRenderableWidget(button_exit);
+	}
+
+	@Override
+	protected void containerTick() {
+		super.containerTick();
+		this.button_choose.visible = DisplaybuttonProcedure.execute(entity);
+		this.button_exit.visible = DisplaybuttonProcedure.execute(entity);
 	}
 }

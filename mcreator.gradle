@@ -5,7 +5,7 @@ repositories {
 }
 
 dependencies {
-  implementation 'software.bernie.geckolib:geckolib-neoforge-1.21.1:4.7'
+  implementation 'software.bernie.geckolib:geckolib-neoforge-1.21.1:4.7.6'
 }
 
 

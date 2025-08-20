@@ -1,4 +1,3 @@
-
 package net.mcreator.dcc.network;
 
 import net.neoforged.neoforge.network.handling.IPayloadContext;
@@ -16,15 +15,13 @@ import net.minecraft.network.chat.Component;
 import net.minecraft.network.RegistryFriendlyByteBuf;
 import net.minecraft.core.BlockPos;
 
-import net.mcreator.dcc.world.inventory.ClassesMenu;
+import net.mcreator.dcc.procedures.PaladinOpenProcedure;
 import net.mcreator.dcc.procedures.MonkopenProcedure;
 import net.mcreator.dcc.procedures.MagieropenProcedure;
 import net.mcreator.dcc.procedures.DruidOpenProcedure;
 import net.mcreator.dcc.procedures.BardeopenProcedure;
 import net.mcreator.dcc.procedures.BarbaropenProcedure;
 import net.mcreator.dcc.DccMod;
-
-import java.util.HashMap;
 
 @EventBusSubscriber(bus = EventBusSubscriber.Bus.MOD)
 public record ClassesButtonMessage(int buttonID, int x, int y, int z) implements CustomPacketPayload {
@@ -43,14 +40,7 @@ public record ClassesButtonMessage(int buttonID, int x, int y, int z) implements
 
 	public static void handleData(final ClassesButtonMessage message, final IPayloadContext context) {
 		if (context.flow() == PacketFlow.SERVERBOUND) {
-			context.enqueueWork(() -> {
-				Player entity = context.player();
-				int buttonID = message.buttonID;
-				int x = message.x;
-				int y = message.y;
-				int z = message.z;
-				handleButtonAction(entity, buttonID, x, y, z);
-			}).exceptionally(e -> {
+			context.enqueueWork(() -> handleButtonAction(context.player(), message.buttonID, message.x, message.y, message.z)).exceptionally(e -> {
 				context.connection().disconnect(Component.literal(e.getMessage()));
 				return null;
 			});
@@ -59,7 +49,6 @@ public record ClassesButtonMessage(int buttonID, int x, int y, int z) implements
 
 	public static void handleButtonAction(Player entity, int buttonID, int x, int y, int z) {
 		Level world = entity.level();
-		HashMap guistate = ClassesMenu.guistate;
 		// security measure to prevent arbitrary chunk generation
 		if (!world.hasChunkAt(new BlockPos(x, y, z)))
 			return;
@@ -82,6 +71,10 @@ public record ClassesButtonMessage(int buttonID, int x, int y, int z) implements
 		if (buttonID == 4) {
 
 			MonkopenProcedure.execute(world, x, y, z, entity);
+		}
+		if (buttonID == 5) {
+
+			PaladinOpenProcedure.execute(world, x, y, z, entity);
 		}
 	}
 

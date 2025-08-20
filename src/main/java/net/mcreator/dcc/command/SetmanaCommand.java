@@ -1,4 +1,3 @@
-
 package net.mcreator.dcc.command;
 
 import org.checkerframework.checker.units.qual.s;
@@ -39,4 +38,5 @@ public class SetmanaCommand {
 			return 0;
 		}))));
 	}
+
 }

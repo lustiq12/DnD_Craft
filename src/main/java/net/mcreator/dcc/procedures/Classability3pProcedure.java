@@ -24,9 +24,10 @@ import net.minecraft.core.BlockPos;
 
 import net.mcreator.dcc.network.DccModVariables;
 import net.mcreator.dcc.init.DccModParticleTypes;
+import net.mcreator.dcc.init.DccModEntities;
+import net.mcreator.dcc.entity.LivingSwordEntity;
 import net.mcreator.dcc.DccMod;
 
-import java.util.List;
 import java.util.Comparator;
 
 public class Classability3pProcedure {
@@ -105,8 +106,7 @@ public class Classability3pProcedure {
 				}
 				{
 					final Vec3 _center = new Vec3(x, y, z);
-					List<Entity> _entfound = world.getEntitiesOfClass(Entity.class, new AABB(_center, _center).inflate(8 / 2d), e -> true).stream().sorted(Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_center))).toList();
-					for (Entity entityiterator : _entfound) {
+					for (Entity entityiterator : world.getEntitiesOfClass(Entity.class, new AABB(_center, _center).inflate(8 / 2d), e -> true).stream().sorted(Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_center))).toList()) {
 						if (!(entity == entityiterator)) {
 							entityiterator.hurt(new DamageSource(world.holderOrThrow(DamageTypes.GENERIC)), 35);
 						}
@@ -135,11 +135,6 @@ public class Classability3pProcedure {
 						_entity.addEffect(new MobEffectInstance(MobEffects.SLOW_FALLING, 200, 1));
 				});
 			} else if ((entity.getData(DccModVariables.PLAYER_VARIABLES).Class_Variable).equals("Druid")) {
-				{
-					DccModVariables.PlayerVariables _vars = entity.getData(DccModVariables.PLAYER_VARIABLES);
-					_vars.cooldown = 60;
-					_vars.syncPlayerVariables(entity);
-				}
 				if (world instanceof ServerLevel _level) {
 					Entity entityToSpawn = EntityType.WOLF.spawn(_level, BlockPos.containing(x, y, z), MobSpawnType.MOB_SUMMONED);
 					if (entityToSpawn != null) {
@@ -172,11 +167,42 @@ public class Classability3pProcedure {
 				}
 				{
 					final Vec3 _center = new Vec3(x, y, z);
-					List<Entity> _entfound = world.getEntitiesOfClass(Entity.class, new AABB(_center, _center).inflate(4 / 2d), e -> true).stream().sorted(Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_center))).toList();
-					for (Entity entityiterator : _entfound) {
+					for (Entity entityiterator : world.getEntitiesOfClass(Entity.class, new AABB(_center, _center).inflate(4 / 2d), e -> true).stream().sorted(Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_center))).toList()) {
 						if (entityiterator instanceof Wolf) {
 							if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
 								_entity.addEffect(new MobEffectInstance(MobEffects.DAMAGE_BOOST, 200, 2, false, true));
+							if (entityiterator instanceof TamableAnimal _toTame && entity instanceof Player _owner)
+								_toTame.tame(_owner);
+							DccMod.queueServerWork(200, () -> {
+								if (!entityiterator.level().isClientSide())
+									entityiterator.discard();
+							});
+						}
+					}
+				}
+			} else if ((entity.getData(DccModVariables.PLAYER_VARIABLES).Class_Variable).equals("Paladin")) {
+				if (world instanceof ServerLevel _level) {
+					Entity entityToSpawn = DccModEntities.LIVING_SWORD.get().spawn(_level, BlockPos.containing(x, y, z), MobSpawnType.MOB_SUMMONED);
+					if (entityToSpawn != null) {
+						entityToSpawn.setDeltaMovement(0, 0, 0);
+					}
+				}
+				if (world instanceof ServerLevel _level) {
+					Entity entityToSpawn = DccModEntities.LIVING_SWORD.get().spawn(_level, BlockPos.containing(x, y, z), MobSpawnType.MOB_SUMMONED);
+					if (entityToSpawn != null) {
+						entityToSpawn.setDeltaMovement(0, 0, 0);
+					}
+				}
+				if (world instanceof ServerLevel _level) {
+					Entity entityToSpawn = DccModEntities.LIVING_SWORD.get().spawn(_level, BlockPos.containing(x, y, z), MobSpawnType.MOB_SUMMONED);
+					if (entityToSpawn != null) {
+						entityToSpawn.setDeltaMovement(0, 0, 0);
+					}
+				}
+				{
+					final Vec3 _center = new Vec3(x, y, z);
+					for (Entity entityiterator : world.getEntitiesOfClass(Entity.class, new AABB(_center, _center).inflate(4 / 2d), e -> true).stream().sorted(Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_center))).toList()) {
+						if (entityiterator instanceof LivingSwordEntity) {
 							if (entityiterator instanceof TamableAnimal _toTame && entity instanceof Player _owner)
 								_toTame.tame(_owner);
 							DccMod.queueServerWork(200, () -> {

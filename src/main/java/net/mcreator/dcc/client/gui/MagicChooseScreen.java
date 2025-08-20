@@ -13,16 +13,15 @@ import net.minecraft.client.gui.GuiGraphics;
 
 import net.mcreator.dcc.world.inventory.MagicChooseMenu;
 import net.mcreator.dcc.network.MagicChooseButtonMessage;
-
-import java.util.HashMap;
+import net.mcreator.dcc.init.DccModScreens;
 
 import com.mojang.blaze3d.systems.RenderSystem;
 
-public class MagicChooseScreen extends AbstractContainerScreen<MagicChooseMenu> {
-	private final static HashMap<String, Object> guistate = MagicChooseMenu.guistate;
+public class MagicChooseScreen extends AbstractContainerScreen<MagicChooseMenu> implements DccModScreens.ScreenAccessor {
 	private final Level world;
 	private final int x, y, z;
 	private final Player entity;
+	private boolean menuStateUpdateActive = false;
 	Button button_fire_arrow;
 	Button button_cold_ray;
 	Button button_thunderwave;
@@ -46,6 +45,12 @@ public class MagicChooseScreen extends AbstractContainerScreen<MagicChooseMenu> 
 	}
 
 	@Override
+	public void updateMenuState(int elementType, String name, Object elementState) {
+		menuStateUpdateActive = true;
+		menuStateUpdateActive = false;
+	}
+
+	@Override
 	public boolean isPauseScreen() {
 		return true;
 	}
@@ -54,7 +59,6 @@ public class MagicChooseScreen extends AbstractContainerScreen<MagicChooseMenu> 
 
 	@Override
 	public void render(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {
-		this.renderBackground(guiGraphics, mouseX, mouseY, partialTicks);
 		super.render(guiGraphics, mouseX, mouseY, partialTicks);
 		this.renderTooltip(guiGraphics, mouseX, mouseY);
 	}
@@ -101,7 +105,6 @@ public class MagicChooseScreen extends AbstractContainerScreen<MagicChooseMenu> 
 				MagicChooseButtonMessage.handleButtonAction(entity, 0, x, y, z);
 			}
 		}).bounds(this.leftPos + 54, this.topPos + 27, 77, 20).build();
-		guistate.put("button:button_fire_arrow", button_fire_arrow);
 		this.addRenderableWidget(button_fire_arrow);
 		button_cold_ray = Button.builder(Component.translatable("gui.dcc.magic_choose.button_cold_ray"), e -> {
 			if (true) {
@@ -109,7 +112,6 @@ public class MagicChooseScreen extends AbstractContainerScreen<MagicChooseMenu> 
 				MagicChooseButtonMessage.handleButtonAction(entity, 1, x, y, z);
 			}
 		}).bounds(this.leftPos + 54, this.topPos + 54, 66, 20).build();
-		guistate.put("button:button_cold_ray", button_cold_ray);
 		this.addRenderableWidget(button_cold_ray);
 		button_thunderwave = Button.builder(Component.translatable("gui.dcc.magic_choose.button_thunderwave"), e -> {
 			if (true) {
@@ -117,7 +119,6 @@ public class MagicChooseScreen extends AbstractContainerScreen<MagicChooseMenu> 
 				MagicChooseButtonMessage.handleButtonAction(entity, 2, x, y, z);
 			}
 		}).bounds(this.leftPos + 54, this.topPos + 108, 82, 20).build();
-		guistate.put("button:button_thunderwave", button_thunderwave);
 		this.addRenderableWidget(button_thunderwave);
 		button_fake_life = Button.builder(Component.translatable("gui.dcc.magic_choose.button_fake_life"), e -> {
 			if (true) {
@@ -125,7 +126,6 @@ public class MagicChooseScreen extends AbstractContainerScreen<MagicChooseMenu> 
 				MagicChooseButtonMessage.handleButtonAction(entity, 3, x, y, z);
 			}
 		}).bounds(this.leftPos + 54, this.topPos + 81, 72, 20).build();
-		guistate.put("button:button_fake_life", button_fake_life);
 		this.addRenderableWidget(button_fake_life);
 		button_invisibility = Button.builder(Component.translatable("gui.dcc.magic_choose.button_invisibility"), e -> {
 			if (true) {
@@ -133,7 +133,6 @@ public class MagicChooseScreen extends AbstractContainerScreen<MagicChooseMenu> 
 				MagicChooseButtonMessage.handleButtonAction(entity, 4, x, y, z);
 			}
 		}).bounds(this.leftPos + 54, this.topPos + 135, 88, 20).build();
-		guistate.put("button:button_invisibility", button_invisibility);
 		this.addRenderableWidget(button_invisibility);
 		button_night_vision = Button.builder(Component.translatable("gui.dcc.magic_choose.button_night_vision"), e -> {
 			if (true) {
@@ -141,7 +140,6 @@ public class MagicChooseScreen extends AbstractContainerScreen<MagicChooseMenu> 
 				MagicChooseButtonMessage.handleButtonAction(entity, 5, x, y, z);
 			}
 		}).bounds(this.leftPos + 54, this.topPos + 162, 87, 20).build();
-		guistate.put("button:button_night_vision", button_night_vision);
 		this.addRenderableWidget(button_night_vision);
 		button_fireball = Button.builder(Component.translatable("gui.dcc.magic_choose.button_fireball"), e -> {
 			if (true) {
@@ -149,7 +147,6 @@ public class MagicChooseScreen extends AbstractContainerScreen<MagicChooseMenu> 
 				MagicChooseButtonMessage.handleButtonAction(entity, 6, x, y, z);
 			}
 		}).bounds(this.leftPos + 54, this.topPos + 189, 67, 20).build();
-		guistate.put("button:button_fireball", button_fireball);
 		this.addRenderableWidget(button_fireball);
 		button_snowstorm = Button.builder(Component.translatable("gui.dcc.magic_choose.button_snowstorm"), e -> {
 			if (true) {
@@ -157,7 +154,6 @@ public class MagicChooseScreen extends AbstractContainerScreen<MagicChooseMenu> 
 				MagicChooseButtonMessage.handleButtonAction(entity, 7, x, y, z);
 			}
 		}).bounds(this.leftPos + 189, this.topPos + 27, 72, 20).build();
-		guistate.put("button:button_snowstorm", button_snowstorm);
 		this.addRenderableWidget(button_snowstorm);
 		button_fire_wall = Button.builder(Component.translatable("gui.dcc.magic_choose.button_fire_wall"), e -> {
 			if (true) {
@@ -165,7 +161,6 @@ public class MagicChooseScreen extends AbstractContainerScreen<MagicChooseMenu> 
 				MagicChooseButtonMessage.handleButtonAction(entity, 8, x, y, z);
 			}
 		}).bounds(this.leftPos + 189, this.topPos + 81, 72, 20).build();
-		guistate.put("button:button_fire_wall", button_fire_wall);
 		this.addRenderableWidget(button_fire_wall);
 		button_strong_invisibility = Button.builder(Component.translatable("gui.dcc.magic_choose.button_strong_invisibility"), e -> {
 			if (true) {
@@ -173,7 +168,6 @@ public class MagicChooseScreen extends AbstractContainerScreen<MagicChooseMenu> 
 				MagicChooseButtonMessage.handleButtonAction(entity, 9, x, y, z);
 			}
 		}).bounds(this.leftPos + 189, this.topPos + 54, 124, 20).build();
-		guistate.put("button:button_strong_invisibility", button_strong_invisibility);
 		this.addRenderableWidget(button_strong_invisibility);
 	}
 }

@@ -1,4 +1,3 @@
-
 package net.mcreator.dcc.item;
 
 import net.minecraft.world.level.block.Block;
@@ -33,7 +32,7 @@ public class AdamantiumClaymoreItem extends SwordItem {
 
 		@Override
 		public int getEnchantmentValue() {
-			return 0;
+			return 1;
 		}
 
 		@Override

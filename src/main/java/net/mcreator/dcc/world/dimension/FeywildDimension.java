@@ -1,4 +1,3 @@
-
 package net.mcreator.dcc.world.dimension;
 
 import net.neoforged.neoforge.client.event.RegisterDimensionSpecialEffectsEvent;

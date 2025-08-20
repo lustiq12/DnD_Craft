@@ -1,4 +1,3 @@
-
 package net.mcreator.dcc.client.renderer;
 
 import software.bernie.geckolib.renderer.GeoEntityRenderer;

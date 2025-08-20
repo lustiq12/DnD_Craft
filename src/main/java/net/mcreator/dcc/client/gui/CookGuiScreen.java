@@ -17,16 +17,15 @@ import net.mcreator.dcc.procedures.MonsterquestunlockProcedure;
 import net.mcreator.dcc.procedures.MonsterquestshowProcedure;
 import net.mcreator.dcc.procedures.IfnoQuestProcedure;
 import net.mcreator.dcc.network.CookGuiButtonMessage;
-
-import java.util.HashMap;
+import net.mcreator.dcc.init.DccModScreens;
 
 import com.mojang.blaze3d.systems.RenderSystem;
 
-public class CookGuiScreen extends AbstractContainerScreen<CookGuiMenu> {
-	private final static HashMap<String, Object> guistate = CookGuiMenu.guistate;
+public class CookGuiScreen extends AbstractContainerScreen<CookGuiMenu> implements DccModScreens.ScreenAccessor {
 	private final Level world;
 	private final int x, y, z;
 	private final Player entity;
+	private boolean menuStateUpdateActive = false;
 	Button button_loot_quest;
 	Button button_loot_quest1;
 	Button button_loot_quest2;
@@ -42,11 +41,16 @@ public class CookGuiScreen extends AbstractContainerScreen<CookGuiMenu> {
 		this.imageHeight = 200;
 	}
 
+	@Override
+	public void updateMenuState(int elementType, String name, Object elementState) {
+		menuStateUpdateActive = true;
+		menuStateUpdateActive = false;
+	}
+
 	private static final ResourceLocation texture = ResourceLocation.parse("dcc:textures/screens/cook_gui.png");
 
 	@Override
 	public void render(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {
-		this.renderBackground(guiGraphics, mouseX, mouseY, partialTicks);
 		super.render(guiGraphics, mouseX, mouseY, partialTicks);
 		this.renderTooltip(guiGraphics, mouseX, mouseY);
 	}
@@ -92,42 +96,29 @@ public class CookGuiScreen extends AbstractContainerScreen<CookGuiMenu> {
 				PacketDistributor.sendToServer(new CookGuiButtonMessage(0, x, y, z));
 				CookGuiButtonMessage.handleButtonAction(entity, 0, x, y, z);
 			}
-		}).bounds(this.leftPos + 142, this.topPos + 24, 77, 20).build(builder -> new Button(builder) {
-			@Override
-			public void renderWidget(GuiGraphics guiGraphics, int gx, int gy, float ticks) {
-				this.visible = IfnoQuestProcedure.execute(entity);
-				super.renderWidget(guiGraphics, gx, gy, ticks);
-			}
-		});
-		guistate.put("button:button_loot_quest", button_loot_quest);
+		}).bounds(this.leftPos + 142, this.topPos + 24, 77, 20).build();
 		this.addRenderableWidget(button_loot_quest);
 		button_loot_quest1 = Button.builder(Component.translatable("gui.dcc.cook_gui.button_loot_quest1"), e -> {
 			if (MonsterquestshowProcedure.execute(entity)) {
 				PacketDistributor.sendToServer(new CookGuiButtonMessage(1, x, y, z));
 				CookGuiButtonMessage.handleButtonAction(entity, 1, x, y, z);
 			}
-		}).bounds(this.leftPos + 142, this.topPos + 51, 77, 20).build(builder -> new Button(builder) {
-			@Override
-			public void renderWidget(GuiGraphics guiGraphics, int gx, int gy, float ticks) {
-				this.visible = MonsterquestshowProcedure.execute(entity);
-				super.renderWidget(guiGraphics, gx, gy, ticks);
-			}
-		});
-		guistate.put("button:button_loot_quest1", button_loot_quest1);
+		}).bounds(this.leftPos + 142, this.topPos + 51, 77, 20).build();
 		this.addRenderableWidget(button_loot_quest1);
 		button_loot_quest2 = Button.builder(Component.translatable("gui.dcc.cook_gui.button_loot_quest2"), e -> {
 			if (VeteranquestshowProcedure.execute(entity)) {
 				PacketDistributor.sendToServer(new CookGuiButtonMessage(2, x, y, z));
 				CookGuiButtonMessage.handleButtonAction(entity, 2, x, y, z);
 			}
-		}).bounds(this.leftPos + 142, this.topPos + 78, 77, 20).build(builder -> new Button(builder) {
-			@Override
-			public void renderWidget(GuiGraphics guiGraphics, int gx, int gy, float ticks) {
-				this.visible = VeteranquestshowProcedure.execute(entity);
-				super.renderWidget(guiGraphics, gx, gy, ticks);
-			}
-		});
-		guistate.put("button:button_loot_quest2", button_loot_quest2);
+		}).bounds(this.leftPos + 142, this.topPos + 78, 77, 20).build();
 		this.addRenderableWidget(button_loot_quest2);
+	}
+
+	@Override
+	protected void containerTick() {
+		super.containerTick();
+		this.button_loot_quest.visible = IfnoQuestProcedure.execute(entity);
+		this.button_loot_quest1.visible = MonsterquestshowProcedure.execute(entity);
+		this.button_loot_quest2.visible = VeteranquestshowProcedure.execute(entity);
 	}
 }

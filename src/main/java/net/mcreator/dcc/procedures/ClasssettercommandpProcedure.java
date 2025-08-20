@@ -20,27 +20,18 @@ public class ClasssettercommandpProcedure {
 			_player.displayClientMessage(Component.literal(("Old class: " + entity.getData(DccModVariables.PLAYER_VARIABLES).Class_Variable + "\n" + "Class set to: " + StringArgumentType.getString(arguments, "classname") + "\n"
 					+ "This only works if the class name is one from the ones you" + "\n" + "can choose in the gui and if the first letter is capital.")), false);
 		{
-			DccModVariables.PlayerVariables _vars = (new Object() {
-				public Entity getEntity() {
-					try {
-						return EntityArgument.getEntity(arguments, "Player");
-					} catch (CommandSyntaxException e) {
-						e.printStackTrace();
-						return null;
-					}
-				}
-			}.getEntity()).getData(DccModVariables.PLAYER_VARIABLES);
+			DccModVariables.PlayerVariables _vars = (commandParameterEntity(arguments, "Player")).getData(DccModVariables.PLAYER_VARIABLES);
 			_vars.Class_Variable = StringArgumentType.getString(arguments, "classname");
-			_vars.syncPlayerVariables((new Object() {
-				public Entity getEntity() {
-					try {
-						return EntityArgument.getEntity(arguments, "Player");
-					} catch (CommandSyntaxException e) {
-						e.printStackTrace();
-						return null;
-					}
-				}
-			}.getEntity()));
+			_vars.syncPlayerVariables((commandParameterEntity(arguments, "Player")));
+		}
+	}
+
+	private static Entity commandParameterEntity(CommandContext<CommandSourceStack> arguments, String parameter) {
+		try {
+			return EntityArgument.getEntity(arguments, parameter);
+		} catch (CommandSyntaxException e) {
+			e.printStackTrace();
+			return null;
 		}
 	}
 }

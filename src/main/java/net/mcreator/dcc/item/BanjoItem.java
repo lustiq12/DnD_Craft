@@ -1,4 +1,3 @@
-
 package net.mcreator.dcc.item;
 
 import net.neoforged.neoforge.event.ModifyDefaultComponentsEvent;

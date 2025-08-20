@@ -1,4 +1,3 @@
-
 package net.mcreator.dcc.entity;
 
 import software.bernie.geckolib.util.GeckoLibUtil;

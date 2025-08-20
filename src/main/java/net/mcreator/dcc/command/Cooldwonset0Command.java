@@ -1,4 +1,3 @@
-
 package net.mcreator.dcc.command;
 
 import org.checkerframework.checker.units.qual.s;
@@ -36,4 +35,5 @@ public class Cooldwonset0Command {
 			return 0;
 		}));
 	}
+
 }

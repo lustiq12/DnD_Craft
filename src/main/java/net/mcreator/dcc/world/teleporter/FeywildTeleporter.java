@@ -1,4 +1,3 @@
-
 package net.mcreator.dcc.world.teleporter;
 
 import net.neoforged.neoforge.registries.RegisterEvent;

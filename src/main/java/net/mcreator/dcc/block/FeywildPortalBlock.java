@@ -1,4 +1,3 @@
-
 package net.mcreator.dcc.block;
 
 import org.slf4j.Logger;
@@ -179,6 +178,6 @@ public class FeywildPortalBlock extends NetherPortalBlock {
 			world.addParticle(ParticleTypes.PORTAL, px, py, pz, vx, vy, vz);
 		}
 		if (random.nextInt(110) == 0)
-			world.playSound(null, pos.getX() + 0.5, pos.getY() + 0.5, pos.getZ() + 0.5, BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse(("block.portal.ambient"))), SoundSource.BLOCKS, 0.5f, random.nextFloat() * 0.4f + 0.8f);
+			world.playSound(null, pos.getX() + 0.5, pos.getY() + 0.5, pos.getZ() + 0.5, BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("block.portal.ambient")), SoundSource.BLOCKS, 0.5f, random.nextFloat() * 0.4f + 0.8f);
 	}
 }

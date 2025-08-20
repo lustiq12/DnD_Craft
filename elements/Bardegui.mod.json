@@ -1,5 +1,5 @@
 {
-  "_fv": 73,
+  "_fv": 79,
   "_type": "gui",
   "definition": {
     "type": 0,
@@ -167,7 +167,7 @@
         "data": {
           "name": "label_invincibility",
           "text": {
-            "fixedValue": "Bard Agility !!WIP!!"
+            "fixedValue": "Bard Agility"
           },
           "color": {
             "value": -12829636,
@@ -307,7 +307,7 @@
         "data": {
           "name": "tooltip_deal_4_hearts_damage_to_every_en",
           "text": {
-            "fixedValue": "Deal 4 hearts damage to every entity up to 7.5 blocks away from you"
+            "fixedValue": "Deal 6 hearts of damage to every entity up to 7.5 blocks away from you"
           },
           "width": 24,
           "height": 24,

@@ -1,0 +1,356 @@
+{
+  "_fv": 79,
+  "_type": "gui",
+  "definition": {
+    "type": 0,
+    "width": 178,
+    "height": 189,
+    "inventoryOffsetX": 0,
+    "inventoryOffsetY": 0,
+    "renderBgLayer": true,
+    "doesPauseGame": false,
+    "components": [
+      {
+        "type": "image",
+        "data": {
+          "image": "experience_bottle.png",
+          "use1Xscale": false,
+          "x": 141,
+          "y": 53,
+          "locked": false
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_0_level",
+          "text": {
+            "fixedValue": "Level 1 (y)"
+          },
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "x": 159,
+          "y": 53,
+          "locked": false
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_rage",
+          "text": {
+            "fixedValue": "Rage"
+          },
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "x": 159,
+          "y": 62,
+          "locked": false
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "experience_bottle.png",
+          "use1Xscale": false,
+          "x": 141,
+          "y": 80,
+          "locked": false
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_10_level",
+          "text": {
+            "fixedValue": "Level 5 (x)"
+          },
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "x": 159,
+          "y": 80,
+          "locked": false
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_ghost_axe",
+          "text": {
+            "fixedValue": "Ghost Axe"
+          },
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "x": 159,
+          "y": 89,
+          "locked": false
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "experience_bottle.png",
+          "use1Xscale": false,
+          "x": 141,
+          "y": 107,
+          "locked": false
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_40_level",
+          "text": {
+            "fixedValue": "Level 10 (Passive)"
+          },
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "x": 159,
+          "y": 107,
+          "locked": false
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_survival_instinct",
+          "text": {
+            "fixedValue": "Survival Instinct"
+          },
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "x": 159,
+          "y": 116,
+          "locked": false
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "experience_bottle.png",
+          "use1Xscale": false,
+          "x": 141,
+          "y": 134,
+          "locked": false
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_level_60",
+          "text": {
+            "fixedValue": "Level 15 (c)"
+          },
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "x": 159,
+          "y": 134,
+          "locked": false
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_invincibility",
+          "text": {
+            "fixedValue": "Invincibility"
+          },
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "x": 159,
+          "y": 143,
+          "locked": false
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "experience_bottle.png",
+          "use1Xscale": false,
+          "x": 141,
+          "y": 161,
+          "locked": false
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_level_80_passive",
+          "text": {
+            "fixedValue": "Level 20 (Passive)"
+          },
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "x": 159,
+          "y": 161,
+          "locked": false
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_barbarian_strenght",
+          "text": {
+            "fixedValue": "Barbarian Strenght"
+          },
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "x": 159,
+          "y": 170,
+          "locked": false
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_barbarian",
+          "text": {
+            "fixedValue": "Paladin"
+          },
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "x": 186,
+          "y": 35,
+          "locked": false
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "name": "button_choose",
+          "text": "Choose",
+          "isUndecorated": false,
+          "onClick": {
+            "name": "Paladin"
+          },
+          "displayCondition": {
+            "name": "Displaybutton"
+          },
+          "width": 56,
+          "height": 20,
+          "x": 141,
+          "y": 188,
+          "locked": false
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "name": "button_exit",
+          "text": "EXIT",
+          "isUndecorated": false,
+          "onClick": {
+            "name": "Exit"
+          },
+          "displayCondition": {
+            "name": "Displaybutton"
+          },
+          "width": 46,
+          "height": 20,
+          "x": 240,
+          "y": 188,
+          "locked": false
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_get_strength_speed_and_regenera",
+          "text": {
+            "fixedValue": "Get strength, speed and regeneration for 10s"
+          },
+          "width": 24,
+          "height": 24,
+          "x": 159,
+          "y": 53,
+          "locked": false
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_summon_a_powerful_axe_that_despa",
+          "text": {
+            "fixedValue": "Summon a powerful axe that despawns after 25s"
+          },
+          "width": 24,
+          "height": 24,
+          "x": 159,
+          "y": 80,
+          "locked": false
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_get_permanent_resistance_1",
+          "text": {
+            "fixedValue": "Get permanent resistance 1"
+          },
+          "width": 24,
+          "height": 24,
+          "x": 159,
+          "y": 107,
+          "locked": false
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_get_max_regeneration_and_invinci",
+          "text": {
+            "fixedValue": "Get max regeneration and invincibility for 15s"
+          },
+          "width": 24,
+          "height": 24,
+          "x": 159,
+          "y": 134,
+          "locked": false
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_get_permanent_strength_2",
+          "text": {
+            "fixedValue": "Get permanent strength 2"
+          },
+          "width": 24,
+          "height": 24,
+          "x": 159,
+          "y": 161,
+          "locked": false
+        }
+      }
+    ],
+    "gridSettings": {
+      "sx": 18,
+      "sy": 18,
+      "ox": 11,
+      "oy": 15,
+      "snapOnGrid": true
+    }
+  }
+}

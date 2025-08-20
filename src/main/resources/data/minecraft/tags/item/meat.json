@@ -1,10 +1,10 @@
 {
   "replace": false,
   "values": [
-    "dcc:orksteaak",
+    "dcc:raw_owlbear_meat",
+    "dcc:cooked_owlbear_meat",
     "dcc:owlbear_drumsticks",
     "dcc:daily_ration",
-    "dcc:cooked_owlbear_meat",
-    "dcc:raw_owlbear_meat"
+    "dcc:orksteaak"
   ]
 }

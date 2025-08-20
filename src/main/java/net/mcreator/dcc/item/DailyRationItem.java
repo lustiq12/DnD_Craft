@@ -1,8 +1,6 @@
-
 package net.mcreator.dcc.item;
 
 import net.minecraft.world.level.Level;
-import net.minecraft.world.item.Rarity;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Item;
@@ -14,7 +12,7 @@ import net.mcreator.dcc.procedures.DailyRationQuestProcedure;
 
 public class DailyRationItem extends Item {
 	public DailyRationItem() {
-		super(new Item.Properties().stacksTo(64).rarity(Rarity.COMMON).food((new FoodProperties.Builder()).nutrition(10).saturationModifier(8.2f).build()));
+		super(new Item.Properties().food((new FoodProperties.Builder()).nutrition(10).saturationModifier(8.2f).build()));
 	}
 
 	@Override

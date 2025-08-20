@@ -1,14 +1,14 @@
 {
   "replace": false,
   "values": [
-    "dcc:rusty_mace",
-    "dcc:adamantium_battle_axe",
-    "dcc:two_handed_adamantium_axe",
-    "dcc:adamantium_mace",
     "dcc:adamantium_ax",
     "dcc:battle_axe",
-    "dcc:two_handed_axe",
+    "dcc:adamantium_mace",
+    "dcc:two_handed_adamantium_axe",
+    "dcc:ax",
     "dcc:mace",
-    "dcc:ax"
+    "dcc:adamantium_battle_axe",
+    "dcc:two_handed_axe",
+    "dcc:rusty_mace"
   ]
 }

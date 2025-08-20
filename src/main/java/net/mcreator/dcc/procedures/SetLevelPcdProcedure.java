@@ -32,31 +32,22 @@ public class SetLevelPcdProcedure {
 					.setBaseValue(((entity instanceof LivingEntity _livingEntity2 && _livingEntity2.getAttributes().hasAttribute(Attributes.MAX_HEALTH) ? _livingEntity2.getAttribute(Attributes.MAX_HEALTH).getBaseValue() : 0)
 							+ 1 * (DoubleArgumentType.getDouble(arguments, "level") - entity.getData(DccModVariables.PLAYER_VARIABLES).PlayerLevel)));
 		{
-			DccModVariables.PlayerVariables _vars = (new Object() {
-				public Entity getEntity() {
-					try {
-						return EntityArgument.getEntity(arguments, "Player_name");
-					} catch (CommandSyntaxException e) {
-						e.printStackTrace();
-						return null;
-					}
-				}
-			}.getEntity()).getData(DccModVariables.PLAYER_VARIABLES);
+			DccModVariables.PlayerVariables _vars = (commandParameterEntity(arguments, "Player_name")).getData(DccModVariables.PLAYER_VARIABLES);
 			_vars.PlayerLevel = DoubleArgumentType.getDouble(arguments, "level");
-			_vars.syncPlayerVariables((new Object() {
-				public Entity getEntity() {
-					try {
-						return EntityArgument.getEntity(arguments, "Player_name");
-					} catch (CommandSyntaxException e) {
-						e.printStackTrace();
-						return null;
-					}
-				}
-			}.getEntity()));
+			_vars.syncPlayerVariables((commandParameterEntity(arguments, "Player_name")));
 		}
 		if (entity instanceof Player _player)
 			_player.giveExperiencePoints((int) 0.91);
 		if (entity instanceof Player _player)
 			_player.giveExperiencePoints(-((int) 0.91));
+	}
+
+	private static Entity commandParameterEntity(CommandContext<CommandSourceStack> arguments, String parameter) {
+		try {
+			return EntityArgument.getEntity(arguments, parameter);
+		} catch (CommandSyntaxException e) {
+			e.printStackTrace();
+			return null;
+		}
 	}
 }

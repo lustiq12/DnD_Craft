@@ -1,7 +1,5 @@
-
 package net.mcreator.dcc.potion;
 
-import net.neoforged.neoforge.common.EffectCure;
 import net.neoforged.neoforge.client.extensions.common.RegisterClientExtensionsEvent;
 import net.neoforged.neoforge.client.extensions.common.IClientMobEffectExtensions;
 import net.neoforged.fml.common.EventBusSubscriber;
@@ -15,16 +13,10 @@ import net.minecraft.client.gui.GuiGraphics;
 
 import net.mcreator.dcc.init.DccModMobEffects;
 
-import java.util.Set;
-
 @EventBusSubscriber(bus = EventBusSubscriber.Bus.MOD)
 public class KiEffectMobEffect extends MobEffect {
 	public KiEffectMobEffect() {
 		super(MobEffectCategory.BENEFICIAL, -22528);
-	}
-
-	@Override
-	public void fillEffectCures(Set<EffectCure> cures, MobEffectInstance effectInstance) {
 	}
 
 	@SubscribeEvent
