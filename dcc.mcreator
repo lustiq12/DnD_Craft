@@ -6917,6 +6917,29 @@
         ]
       },
       "path": "~/ClassSystem/Paladin"
+    },
+    {
+      "name": "LivingSwordOnEntityTickUpdate",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "living_sword_on_entity_tick_update",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ],
+        "files": [
+          "src/main/java/net/mcreator/dcc/procedures/LivingSwordOnEntityTickUpdateProcedure.java"
+        ]
+      },
+      "path": "~/ClassSystem/Paladin"
     }
   ],
   "variable_elements": [
