@@ -176,7 +176,7 @@ public class PassiveabilitysProcedure {
 						_vars.Mana = entity.getData(DccModVariables.PLAYER_VARIABLES).Mana - 1;
 						_vars.syncPlayerVariables(entity);
 					}
-					entity.setDeltaMovement(new Vec3((entity.getLookAngle().x / 2), (entity.getY() / 2 + 0.1), (entity.getLookAngle().z / 2)));
+					entity.setDeltaMovement(new Vec3((entity.getLookAngle().x / 2), 0.2, (entity.getLookAngle().z / 2)));
 				}
 			} else if ((entity.getData(DccModVariables.PLAYER_VARIABLES).Class_Variable).equals("Fighter")) {
 				if (entity instanceof Player _player) {
