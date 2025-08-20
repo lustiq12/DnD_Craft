@@ -41,7 +41,7 @@
         "data": {
           "name": "label_rage",
           "text": {
-            "fixedValue": "Rage"
+            "fixedValue": "Strong Defense"
           },
           "color": {
             "value": -12829636,
@@ -83,7 +83,7 @@
         "data": {
           "name": "label_ghost_axe",
           "text": {
-            "fixedValue": "Ghost Axe"
+            "fixedValue": "Sanctified Beacon"
           },
           "color": {
             "value": -12829636,
@@ -125,7 +125,7 @@
         "data": {
           "name": "label_survival_instinct",
           "text": {
-            "fixedValue": "Survival Instinct"
+            "fixedValue": "Iron Resolve"
           },
           "color": {
             "value": -12829636,
@@ -167,7 +167,7 @@
         "data": {
           "name": "label_invincibility",
           "text": {
-            "fixedValue": "Invincibility"
+            "fixedValue": "Blade's Blessing"
           },
           "color": {
             "value": -12829636,
@@ -209,7 +209,7 @@
         "data": {
           "name": "label_barbarian_strenght",
           "text": {
-            "fixedValue": "Barbarian Strenght"
+            "fixedValue": "Divine Ascent"
           },
           "color": {
             "value": -12829636,
@@ -279,7 +279,7 @@
         "data": {
           "name": "tooltip_get_strength_speed_and_regenera",
           "text": {
-            "fixedValue": "Get strength, speed and regeneration for 10s"
+            "fixedValue": "Get +8 armor for 10 seconds"
           },
           "width": 24,
           "height": 24,
@@ -293,7 +293,7 @@
         "data": {
           "name": "tooltip_summon_a_powerful_axe_that_despa",
           "text": {
-            "fixedValue": "Summon a powerful axe that despawns after 25s"
+            "fixedValue": "Summon a block that gives you strength and regeneration when you are near it"
           },
           "width": 24,
           "height": 24,
@@ -321,7 +321,7 @@
         "data": {
           "name": "tooltip_get_max_regeneration_and_invinci",
           "text": {
-            "fixedValue": "Get max regeneration and invincibility for 15s"
+            "fixedValue": "Summon 3 mystical flying swords fighting on your side"
           },
           "width": 24,
           "height": 24,
@@ -335,7 +335,7 @@
         "data": {
           "name": "tooltip_get_permanent_strength_2",
           "text": {
-            "fixedValue": "Get permanent strength 2"
+            "fixedValue": "Get the ability to fly for 5 mana per second"
           },
           "width": 24,
           "height": 24,

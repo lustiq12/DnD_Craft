@@ -184,7 +184,7 @@ public class Classability1pProcedure {
 				if (entity instanceof LivingEntity _livingEntity22 && _livingEntity22.getAttributes().hasAttribute(Attributes.ARMOR))
 					_livingEntity22.getAttribute(Attributes.ARMOR)
 							.setBaseValue(((entity instanceof LivingEntity _livingEntity21 && _livingEntity21.getAttributes().hasAttribute(Attributes.ARMOR) ? _livingEntity21.getAttribute(Attributes.ARMOR).getBaseValue() : 0) + 8));
-				DccMod.queueServerWork(100, () -> {
+				DccMod.queueServerWork(200, () -> {
 					if (entity instanceof LivingEntity _livingEntity24 && _livingEntity24.getAttributes().hasAttribute(Attributes.ARMOR))
 						_livingEntity24.getAttribute(Attributes.ARMOR)
 								.setBaseValue(((entity instanceof LivingEntity _livingEntity23 && _livingEntity23.getAttributes().hasAttribute(Attributes.ARMOR) ? _livingEntity23.getAttribute(Attributes.ARMOR).getBaseValue() : 0) - 8));

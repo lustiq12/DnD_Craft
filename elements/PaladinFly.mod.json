@@ -1,0 +1,15 @@
+{
+  "_fv": 79,
+  "_type": "keybind",
+  "definition": {
+    "triggerKey": "SPACE",
+    "keyBindingName": "Paladin Fly",
+    "keyBindingCategoryKey": "movement",
+    "onKeyPressed": {
+      "name": "PaladinFlyOnKeyPressed"
+    },
+    "onKeyReleased": {
+      "name": "PaladinFlyOnKeyReleased"
+    }
+  }
+}

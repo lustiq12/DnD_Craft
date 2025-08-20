@@ -15,6 +15,7 @@ import net.neoforged.api.distmarker.Dist;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.KeyMapping;
 
+import net.mcreator.dcc.network.PaladinFlyMessage;
 import net.mcreator.dcc.network.DodgeMessage;
 import net.mcreator.dcc.network.ClassabilityopnguiMessage;
 import net.mcreator.dcc.network.Classability3Message;
@@ -88,6 +89,25 @@ public class DccModKeyMappings {
 			isDownOld = isDown;
 		}
 	};
+	public static final KeyMapping PALADIN_FLY = new KeyMapping("key.dcc.paladin_fly", GLFW.GLFW_KEY_SPACE, "key.categories.movement") {
+		private boolean isDownOld = false;
+
+		@Override
+		public void setDown(boolean isDown) {
+			super.setDown(isDown);
+			if (isDownOld != isDown && isDown) {
+				PacketDistributor.sendToServer(new PaladinFlyMessage(0, 0));
+				PaladinFlyMessage.pressAction(Minecraft.getInstance().player, 0, 0);
+				PALADIN_FLY_LASTPRESS = System.currentTimeMillis();
+			} else if (isDownOld != isDown && !isDown) {
+				int dt = (int) (System.currentTimeMillis() - PALADIN_FLY_LASTPRESS);
+				PacketDistributor.sendToServer(new PaladinFlyMessage(1, dt));
+				PaladinFlyMessage.pressAction(Minecraft.getInstance().player, 1, dt);
+			}
+			isDownOld = isDown;
+		}
+	};
+	private static long PALADIN_FLY_LASTPRESS = 0;
 
 	@SubscribeEvent
 	public static void registerKeyMappings(RegisterKeyMappingsEvent event) {
@@ -96,6 +116,7 @@ public class DccModKeyMappings {
 		event.register(CLASSABILITY_3);
 		event.register(CLASSABILITYOPNGUI);
 		event.register(DODGE);
+		event.register(PALADIN_FLY);
 	}
 
 	@EventBusSubscriber({Dist.CLIENT})
@@ -108,6 +129,7 @@ public class DccModKeyMappings {
 				CLASSABILITY_3.consumeClick();
 				CLASSABILITYOPNGUI.consumeClick();
 				DODGE.consumeClick();
+				PALADIN_FLY.consumeClick();
 			}
 		}
 	}

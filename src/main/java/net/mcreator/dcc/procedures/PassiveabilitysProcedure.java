@@ -20,7 +20,6 @@ import net.minecraft.tags.BlockTags;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.resources.ResourceLocation;
-import net.minecraft.network.chat.Component;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.core.BlockPos;
@@ -125,8 +124,8 @@ public class PassiveabilitysProcedure {
 					}
 				}
 			} else if ((entity.getData(DccModVariables.PLAYER_VARIABLES).Class_Variable).equals("Paladin")) {
-				if (entity instanceof Player _player && !_player.level().isClientSide())
-					_player.displayClientMessage(Component.literal("paladin passsive 1"), false);
+				if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
+					_entity.addEffect(new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 20, 1, false, false));
 			} else if ((entity.getData(DccModVariables.PLAYER_VARIABLES).Class_Variable).equals("Fighter")) {
 				if (entity instanceof Player _player) {
 					_player.getAbilities().mayBuild = true;
@@ -171,8 +170,14 @@ public class PassiveabilitysProcedure {
 					}
 				}
 			} else if ((entity.getData(DccModVariables.PLAYER_VARIABLES).Class_Variable).equals("Paladin")) {
-				if (entity instanceof Player _player && !_player.level().isClientSide())
-					_player.displayClientMessage(Component.literal("paladin passsive 2"), false);
+				if (entity.getPersistentData().getBoolean("Fly") && entity.getData(DccModVariables.PLAYER_VARIABLES).Mana >= 1) {
+					{
+						DccModVariables.PlayerVariables _vars = entity.getData(DccModVariables.PLAYER_VARIABLES);
+						_vars.Mana = entity.getData(DccModVariables.PLAYER_VARIABLES).Mana - 1;
+						_vars.syncPlayerVariables(entity);
+					}
+					entity.setDeltaMovement(new Vec3((entity.getLookAngle().x / 2), (entity.getY() / 2 + 0.1), (entity.getLookAngle().z / 2)));
+				}
 			} else if ((entity.getData(DccModVariables.PLAYER_VARIABLES).Class_Variable).equals("Fighter")) {
 				if (entity instanceof Player _player) {
 					_player.getAbilities().mayBuild = true;
