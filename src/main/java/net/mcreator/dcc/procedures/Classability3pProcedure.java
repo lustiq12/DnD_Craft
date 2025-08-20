@@ -205,7 +205,7 @@ public class Classability3pProcedure {
 						if (entityiterator instanceof LivingSwordEntity) {
 							if (entityiterator instanceof TamableAnimal _toTame && entity instanceof Player _owner)
 								_toTame.tame(_owner);
-							DccMod.queueServerWork(200, () -> {
+							DccMod.queueServerWork(300, () -> {
 								if (!entityiterator.level().isClientSide())
 									entityiterator.discard();
 							});
