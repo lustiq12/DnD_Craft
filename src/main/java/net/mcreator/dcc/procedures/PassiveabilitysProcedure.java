@@ -170,13 +170,19 @@ public class PassiveabilitysProcedure {
 					}
 				}
 			} else if ((entity.getData(DccModVariables.PLAYER_VARIABLES).Class_Variable).equals("Paladin")) {
-				if (entity.getPersistentData().getBoolean("Fly") && entity.getData(DccModVariables.PLAYER_VARIABLES).Mana >= 1) {
+				if (entity.getPersistentData().getBoolean("Fly") && entity.getPersistentData().getBoolean("EnoughMana") && entity.getData(DccModVariables.PLAYER_VARIABLES).Mana >= 1) {
 					{
 						DccModVariables.PlayerVariables _vars = entity.getData(DccModVariables.PLAYER_VARIABLES);
-						_vars.Mana = entity.getData(DccModVariables.PLAYER_VARIABLES).Mana - 1;
+						_vars.Mana = entity.getData(DccModVariables.PLAYER_VARIABLES).Mana - 0.5;
 						_vars.syncPlayerVariables(entity);
 					}
-					entity.setDeltaMovement(new Vec3((entity.getLookAngle().x / 2), 0.2, (entity.getLookAngle().z / 2)));
+					entity.setDeltaMovement(new Vec3((entity.getLookAngle().x / 3), 0.2, (entity.getLookAngle().z / 3)));
+				} else {
+					if (entity.getData(DccModVariables.PLAYER_VARIABLES).Mana >= 20) {
+						entity.getPersistentData().putBoolean("EnoughMana", true);
+					} else {
+						entity.getPersistentData().putBoolean("EnoughMana", false);
+					}
 				}
 			} else if ((entity.getData(DccModVariables.PLAYER_VARIABLES).Class_Variable).equals("Fighter")) {
 				if (entity instanceof Player _player) {

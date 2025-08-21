@@ -2,7 +2,7 @@
   "_fv": 79,
   "_type": "keybind",
   "definition": {
-    "triggerKey": "SPACE",
+    "triggerKey": "B",
     "keyBindingName": "Paladin Fly",
     "keyBindingCategoryKey": "movement",
     "onKeyPressed": {

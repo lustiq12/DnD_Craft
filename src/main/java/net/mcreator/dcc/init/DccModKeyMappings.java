@@ -89,7 +89,7 @@ public class DccModKeyMappings {
 			isDownOld = isDown;
 		}
 	};
-	public static final KeyMapping PALADIN_FLY = new KeyMapping("key.dcc.paladin_fly", GLFW.GLFW_KEY_SPACE, "key.categories.movement") {
+	public static final KeyMapping PALADIN_FLY = new KeyMapping("key.dcc.paladin_fly", GLFW.GLFW_KEY_B, "key.categories.movement") {
 		private boolean isDownOld = false;
 
 		@Override
