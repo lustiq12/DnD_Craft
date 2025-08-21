@@ -20,9 +20,9 @@ public class SanctifiedBeaconOnTickUpdateProcedure {
 			for (Entity entityiterator : world.getEntitiesOfClass(Entity.class, new AABB(_center, _center).inflate(20 / 2d), e -> true).stream().sorted(Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_center))).toList()) {
 				if ((entityiterator.getDisplayName().getString()).equals(getBlockNBTString(world, BlockPos.containing(x, y, z), "Owner"))) {
 					if (entityiterator instanceof LivingEntity _entity && !_entity.level().isClientSide())
-						_entity.addEffect(new MobEffectInstance(MobEffects.DAMAGE_BOOST, 30, 0, false, true));
+						_entity.addEffect(new MobEffectInstance(MobEffects.DAMAGE_BOOST, 50, 0, false, true));
 					if (entityiterator instanceof LivingEntity _entity && !_entity.level().isClientSide())
-						_entity.addEffect(new MobEffectInstance(MobEffects.REGENERATION, 30, 1, false, true));
+						_entity.addEffect(new MobEffectInstance(MobEffects.REGENERATION, 50, 1, false, true));
 				}
 			}
 		}
