@@ -57,9 +57,9 @@ public class PassiveabilitysProcedure {
 				}
 			} else if ((entity.getData(DccModVariables.PLAYER_VARIABLES).Class_Variable).equals("Bard")) {
 				if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
-					_entity.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 20, 0));
+					_entity.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 25, 0));
 				if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
-					_entity.addEffect(new MobEffectInstance(MobEffects.DIG_SPEED, 20, 0));
+					_entity.addEffect(new MobEffectInstance(MobEffects.DIG_SPEED, 25, 0));
 			} else if ((entity.getData(DccModVariables.PLAYER_VARIABLES).Class_Variable).equals("Monk")) {
 				if (1 > entity.getData(DccModVariables.PLAYER_VARIABLES).cooldown) {
 					if (1 < entity.getData(DccModVariables.PLAYER_VARIABLES).Ki) {
@@ -125,7 +125,7 @@ public class PassiveabilitysProcedure {
 				}
 			} else if ((entity.getData(DccModVariables.PLAYER_VARIABLES).Class_Variable).equals("Paladin")) {
 				if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
-					_entity.addEffect(new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 20, 1, false, false));
+					_entity.addEffect(new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 25, 1, false, false));
 			} else if ((entity.getData(DccModVariables.PLAYER_VARIABLES).Class_Variable).equals("Fighter")) {
 				if (entity instanceof Player _player) {
 					_player.getAbilities().mayBuild = true;
