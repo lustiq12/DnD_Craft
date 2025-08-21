@@ -6991,6 +6991,55 @@
         ]
       },
       "path": "~/ClassSystem/Paladin"
+    },
+    {
+      "name": "SanctifiedBeacon",
+      "type": "block",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "sanctified_beacon",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/dcc/models/block/sanctified_beacon.json",
+          "src/main/resources/assets/dcc/models/item/sanctified_beacon.json",
+          "src/main/java/net/mcreator/dcc/block/SanctifiedBeaconBlock.java",
+          "src/main/resources/assets/dcc/blockstates/sanctified_beacon.json",
+          "src/main/java/net/mcreator/dcc/block/entity/SanctifiedBeaconBlockEntity.java",
+          "src/main/resources/data/dcc/loot_table/blocks/sanctified_beacon.json"
+        ]
+      },
+      "path": "~/ClassSystem/Paladin"
+    },
+    {
+      "name": "SanctifiedBeaconOnTickUpdate",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "sanctified_beacon_on_tick_update",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ],
+        "files": [
+          "src/main/java/net/mcreator/dcc/procedures/SanctifiedBeaconOnTickUpdateProcedure.java"
+        ]
+      },
+      "path": "~/ClassSystem/Paladin"
     }
   ],
   "variable_elements": [
@@ -7398,7 +7447,8 @@
       "AdantiumOre",
       "RawAdamantiumOre",
       "AdantiumIngot",
-      "MagicWand"
+      "MagicWand",
+      "SanctifiedBeacon"
     ]
   },
   "language_map": {
@@ -8100,7 +8150,8 @@
       "gui.dcc.classes.button_paladin": "Paladin",
       "item.dcc.living_sword_spawn_egg": "Living Sword Spawn Egg",
       "entity.dcc.living_sword": "Living Sword",
-      "key.dcc.paladin_fly": "Paladin Fly"
+      "key.dcc.paladin_fly": "Paladin Fly",
+      "block.dcc.sanctified_beacon": "Sanctified Beacon"
     }
   },
   "metadata": {
@@ -8125,6 +8176,7 @@
       "src/main/java/net/mcreator/dcc/init/DccModMobEffects.java",
       "src/main/java/net/mcreator/dcc/init/DccModTrades.java",
       "src/main/java/net/mcreator/dcc/init/DccModBlocks.java",
+      "src/main/java/net/mcreator/dcc/init/DccModBlockEntities.java",
       "src/main/java/net/mcreator/dcc/init/DccModItems.java",
       "src/main/java/net/mcreator/dcc/init/DccModEntityRenderers.java",
       "src/main/java/net/mcreator/dcc/init/DccModEntities.java"

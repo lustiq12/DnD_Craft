@@ -27,6 +27,7 @@ import net.mcreator.dcc.init.DccModMenus;
 import net.mcreator.dcc.init.DccModItems;
 import net.mcreator.dcc.init.DccModEntities;
 import net.mcreator.dcc.init.DccModBlocks;
+import net.mcreator.dcc.init.DccModBlockEntities;
 
 import java.util.concurrent.ConcurrentLinkedQueue;
 import java.util.Map;
@@ -47,7 +48,7 @@ public class DccMod {
 		modEventBus.addListener(this::registerNetworking);
 		DccModSounds.REGISTRY.register(modEventBus);
 		DccModBlocks.REGISTRY.register(modEventBus);
-
+		DccModBlockEntities.REGISTRY.register(modEventBus);
 		DccModItems.REGISTRY.register(modEventBus);
 		DccModEntities.REGISTRY.register(modEventBus);
 		DccModTabs.REGISTRY.register(modEventBus);

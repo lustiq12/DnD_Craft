@@ -696,5 +696,6 @@
   "gui.dcc.classes.button_paladin": "Paladin",
   "item.dcc.living_sword_spawn_egg": "Living Sword Spawn Egg",
   "entity.dcc.living_sword": "Living Sword",
-  "key.dcc.paladin_fly": "Paladin Fly"
+  "key.dcc.paladin_fly": "Paladin Fly",
+  "block.dcc.sanctified_beacon": "Sanctified Beacon"
 }

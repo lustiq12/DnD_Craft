@@ -10,6 +10,7 @@ import net.minecraft.world.level.block.Block;
 
 import net.mcreator.dcc.block.SilverOreBlock;
 import net.mcreator.dcc.block.ScrapblockBlock;
+import net.mcreator.dcc.block.SanctifiedBeaconBlock;
 import net.mcreator.dcc.block.RawOwlbearmeatBlockBlock;
 import net.mcreator.dcc.block.PlatinumOreBlock;
 import net.mcreator.dcc.block.GlimmerLeavesBlock;
@@ -36,6 +37,7 @@ public class DccModBlocks {
 	public static final DeferredBlock<Block> DEEPSLATE_SILVER_ORE = REGISTRY.register("deepslate_silver_ore", DeepslateSilverOreBlock::new);
 	public static final DeferredBlock<Block> GLIMMER_LEAVES = REGISTRY.register("glimmer_leaves", GlimmerLeavesBlock::new);
 	public static final DeferredBlock<Block> FEYWILD_PORTAL = REGISTRY.register("feywild_portal", FeywildPortalBlock::new);
+	public static final DeferredBlock<Block> SANCTIFIED_BEACON = REGISTRY.register("sanctified_beacon", SanctifiedBeaconBlock::new);
 	// Start of user code block custom blocks
 	// End of user code block custom blocks
 }

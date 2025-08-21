@@ -112,6 +112,7 @@ public class DccModTabs {
 				tabData.accept(DccModItems.RAW_ADAMANTIUM_ORE.get());
 				tabData.accept(DccModItems.ADANTIUM_INGOT.get());
 				tabData.accept(DccModItems.SPELLBOOK.get());
+				tabData.accept(DccModBlocks.SANCTIFIED_BEACON.get().asItem());
 			}).build());
 
 	@SubscribeEvent

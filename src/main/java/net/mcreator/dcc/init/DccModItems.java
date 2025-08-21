@@ -191,6 +191,7 @@ public class DccModItems {
 	public static final DeferredItem<Item> DEEPSLATE_SILVER_ORE = block(DccModBlocks.DEEPSLATE_SILVER_ORE);
 	public static final DeferredItem<Item> GLIMMER_LEAVES = block(DccModBlocks.GLIMMER_LEAVES);
 	public static final DeferredItem<Item> GLIMMERLEAF_FRUIT = REGISTRY.register("glimmerleaf_fruit", GlimmerleafFruitItem::new);
+	public static final DeferredItem<Item> SANCTIFIED_BEACON = block(DccModBlocks.SANCTIFIED_BEACON);
 
 	// Start of user code block custom items
 	// End of user code block custom items

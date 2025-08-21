@@ -4,8 +4,11 @@ import net.neoforged.neoforge.items.ItemHandlerHelper;
 
 import net.minecraft.world.phys.Vec3;
 import net.minecraft.world.phys.AABB;
+import net.minecraft.world.level.block.state.BlockState;
+import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.LevelAccessor;
+import net.minecraft.world.level.Level;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.ai.attributes.Attributes;
@@ -200,7 +203,16 @@ public class Classability2pProcedure {
 							_vars.cooldown = 30;
 							_vars.syncPlayerVariables(entity);
 						}
-						world.setBlock(BlockPos.containing(x, y + 2, z), DccModBlocks.COOKED_OWLBEAR_MEAT_BLOCK.get().defaultBlockState(), 3);
+						world.setBlock(BlockPos.containing(x, y + 2, z), DccModBlocks.SANCTIFIED_BEACON.get().defaultBlockState(), 3);
+						if (!world.isClientSide()) {
+							BlockPos _bp = BlockPos.containing(x, y + 2, z);
+							BlockEntity _blockEntity = world.getBlockEntity(_bp);
+							BlockState _bs = world.getBlockState(_bp);
+							if (_blockEntity != null)
+								_blockEntity.getPersistentData().putString("Owner", (entity.getDisplayName().getString()));
+							if (world instanceof Level _level)
+								_level.sendBlockUpdated(_bp, _bs, _bs, 3);
+						}
 					} else {
 						if (entity instanceof Player _player && !_player.level().isClientSide())
 							_player.displayClientMessage(Component.literal("\u00A75 Not possible! block above you is NOT air!"), false);
