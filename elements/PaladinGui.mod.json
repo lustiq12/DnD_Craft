@@ -335,7 +335,7 @@
         "data": {
           "name": "tooltip_get_permanent_strength_2",
           "text": {
-            "fixedValue": "Get the ability to fly for 5 mana per second"
+            "fixedValue": "Get the ability to fly for 10 mana per second, once your mana has reached 0 you will need to have 20 again to fly"
           },
           "width": 24,
           "height": 24,

@@ -8096,7 +8096,7 @@
       "gui.dcc.paladin_gui.label_40_level": "Level 10 (Passive)",
       "gui.dcc.paladin_gui.tooltip_get_max_regeneration_and_invinci": "Summon 3 mystical flying swords fighting on your side",
       "gui.dcc.paladin_gui.label_level_80_passive": "Level 20 (Passive)",
-      "gui.dcc.paladin_gui.tooltip_get_permanent_strength_2": "Get the ability to fly for 5 mana per second",
+      "gui.dcc.paladin_gui.tooltip_get_permanent_strength_2": "Get the ability to fly for 10 mana per second, once your mana has reached 0 you will need to have 20 again to fly",
       "gui.dcc.classes.button_paladin": "Paladin",
       "item.dcc.living_sword_spawn_egg": "Living Sword Spawn Egg",
       "entity.dcc.living_sword": "Living Sword",
