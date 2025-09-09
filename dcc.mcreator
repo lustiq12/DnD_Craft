@@ -6298,6 +6298,8 @@
       "registry_name": "feywild",
       "metadata": {
         "files": [
+          "src/main/java/net/mcreator/dcc/item/FeywildItem.java",
+          "src/main/resources/assets/dcc/models/item/feywild.json",
           "src/main/resources/assets/dcc/models/block/feywild_portal_ew.json",
           "src/main/java/net/mcreator/dcc/world/dimension/FeywildDimension.java",
           "src/main/java/net/mcreator/dcc/world/teleporter/FeywildPortalShape.java",
@@ -7040,6 +7042,67 @@
         ]
       },
       "path": "~/ClassSystem/Paladin"
+    },
+    {
+      "name": "Regeneration",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "regeneration",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ],
+        "files": [
+          "src/main/java/net/mcreator/dcc/procedures/RegenerationProcedure.java"
+        ]
+      },
+      "path": "~/Food"
+    },
+    {
+      "name": "GlimmerleafFruitCake",
+      "type": "item",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "glimmerleaf_fruit_cake",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/dcc/models/item/glimmerleaf_fruit_cake.json",
+          "src/main/java/net/mcreator/dcc/item/GlimmerleafFruitCakeItem.java"
+        ]
+      },
+      "path": "~/Food"
+    },
+    {
+      "name": "GlimmerLeafCakeRecipe",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "glimmer_leaf_cake_recipe",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/dcc/recipe/glimmer_leaf_cake_recipe.json"
+        ]
+      },
+      "path": "~/Recipes"
+    },
+    {
+      "name": "Feywildportal",
+      "type": "structure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "feywildportal",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/dcc/worldgen/template_pool/feywildportal.json",
+          "src/main/resources/data/dcc/worldgen/structure_set/feywildportal.json",
+          "src/main/resources/data/dcc/worldgen/structure/feywildportal.json"
+        ]
+      },
+      "path": "~/Structures"
     }
   ],
   "variable_elements": [
@@ -7151,9 +7214,6 @@
     }
   ],
   "tag_elements": {
-    "BIOMES:minecraft:has_structure/ruined_portal_jungle": [
-      "~CUSTOM:FeywildForest"
-    ],
     "BLOCKS:minecraft:needs_diamond_tool": [
       "~CUSTOM:AdantiumOre"
     ],
@@ -7354,6 +7414,9 @@
       "~CUSTOM:Club",
       "~CUSTOM:BattleStaff",
       "~CUSTOM:Dagger"
+    ],
+    "BIOMES:minecraft:has_structure/nether_fossil": [
+      "~CUSTOM:FeywildForest"
     ]
   },
   "tab_element_order": {
@@ -7448,7 +7511,9 @@
       "RawAdamantiumOre",
       "AdantiumIngot",
       "MagicWand",
-      "SanctifiedBeacon"
+      "SanctifiedBeacon",
+      "GlimmerleafFruitCake",
+      "Feywild"
     ]
   },
   "language_map": {
@@ -8140,7 +8205,7 @@
       "gui.dcc.paladin_gui.label_rage": "Strong Defense",
       "gui.dcc.paladin_gui.label_barbarian_strenght": "Divine Ascent",
       "gui.dcc.paladin_gui.tooltip_get_strength_speed_and_regenera": "Get +8 armor for 10 seconds",
-      "gui.dcc.paladin_gui.tooltip_summon_a_powerful_axe_that_despa": "Summon a block that gives you strength and regeneration when you are near it",
+      "gui.dcc.paladin_gui.tooltip_summon_a_powerful_axe_that_despa": "Summon a block that gives Strength and Regeneration nearby, disappears after 15 seconds",
       "gui.dcc.paladin_gui.button_choose": "Choose",
       "gui.dcc.paladin_gui.label_0_level": "Level 1 (y)",
       "gui.dcc.paladin_gui.label_40_level": "Level 10 (Passive)",
@@ -8151,7 +8216,11 @@
       "item.dcc.living_sword_spawn_egg": "Living Sword Spawn Egg",
       "entity.dcc.living_sword": "Living Sword",
       "key.dcc.paladin_fly": "Paladin Fly",
-      "block.dcc.sanctified_beacon": "Sanctified Beacon"
+      "block.dcc.sanctified_beacon": "Sanctified Beacon",
+      "item.dcc.glimmerleaf_fruit_cake": "Glimmerleaf Fruit Cake",
+      "item.dcc.glimmerleaf_fruit_cake.description_1": "§6-Regeneration I",
+      "item.dcc.glimmerleaf_fruit_cake.description_0": "§6This is a meal, wich means you get specific effects upon consuming it.",
+      "item.dcc.feywild": "Holy Crystal"
     }
   },
   "metadata": {

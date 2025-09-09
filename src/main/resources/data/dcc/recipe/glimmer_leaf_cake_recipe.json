@@ -1,0 +1,30 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "aba",
+    "cdc",
+    "eee"
+  ],
+  "key": {
+    "a": {
+      "item": "dcc:glimmerleaf_fruit"
+    },
+    "b": {
+      "item": "minecraft:milk_bucket"
+    },
+    "c": {
+      "item": "minecraft:sugar"
+    },
+    "d": {
+      "item": "minecraft:egg"
+    },
+    "e": {
+      "item": "minecraft:wheat"
+    }
+  },
+  "result": {
+    "id": "dcc:glimmerleaf_fruit_cake",
+    "count": 1
+  }
+}

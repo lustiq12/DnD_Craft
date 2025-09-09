@@ -113,6 +113,8 @@ public class DccModTabs {
 				tabData.accept(DccModItems.ADANTIUM_INGOT.get());
 				tabData.accept(DccModItems.SPELLBOOK.get());
 				tabData.accept(DccModBlocks.SANCTIFIED_BEACON.get().asItem());
+				tabData.accept(DccModItems.GLIMMERLEAF_FRUIT_CAKE.get());
+				tabData.accept(DccModItems.FEYWILD.get());
 			}).build());
 
 	@SubscribeEvent

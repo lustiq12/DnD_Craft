@@ -3,14 +3,18 @@
   "_type": "item",
   "definition": {
     "renderType": 0,
-    "texture": "frucht",
+    "texture": "cake_infused_with_little_pink_pieces_of_fruit__1_piece_already_taken_out__1_2",
     "customModelName": "Normal",
     "guiTexture": "",
     "customProperties": {},
     "states": [],
-    "name": "Glimmerleaf Fruit",
+    "name": "Glimmerleaf Fruit Cake",
     "rarity": "COMMON",
-    "creativeTabs": [],
+    "creativeTabs": [
+      {
+        "value": "CUSTOM:DnD"
+      }
+    ],
     "stackSize": 64,
     "enchantability": 0,
     "useDuration": 32,
@@ -26,13 +30,19 @@
     "enableMeleeDamage": false,
     "damageVsEntity": 0.0,
     "specialInformation": {
-      "fixedValue": []
+      "fixedValue": [
+        "§6This is a meal, wich means you get specific effects upon consuming it.",
+        "§6-Regeneration I"
+      ]
     },
     "glowCondition": {
       "fixedValue": false
     },
     "inventorySize": 9,
     "inventoryStackSize": 64,
+    "onFinishUsingItem": {
+      "name": "Regeneration"
+    },
     "enableRanged": false,
     "shootConstantly": false,
     "rangedItemChargesPower": false,
@@ -41,8 +51,8 @@
     },
     "projectileDisableAmmoCheck": false,
     "isFood": true,
-    "nutritionalValue": 4,
-    "saturation": 1.0,
+    "nutritionalValue": 16,
+    "saturation": 12.200000000000001,
     "eatResultItem": {
       "value": ""
     },

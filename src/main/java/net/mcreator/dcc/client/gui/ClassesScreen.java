@@ -36,7 +36,7 @@ public class ClassesScreen extends AbstractContainerScreen<ClassesMenu> implemen
 		this.y = container.y;
 		this.z = container.z;
 		this.entity = container.entity;
-		this.imageWidth = 178;
+		this.imageWidth = 219;
 		this.imageHeight = 189;
 	}
 
@@ -62,10 +62,10 @@ public class ClassesScreen extends AbstractContainerScreen<ClassesMenu> implemen
 		guiGraphics.blit(texture, this.leftPos, this.topPos, 0, 0, this.imageWidth, this.imageHeight, this.imageWidth, this.imageHeight);
 		guiGraphics.blit(ResourceLocation.parse("dcc:textures/screens/barbaricon.png"), this.leftPos + 7, this.topPos + 9, 0, 0, 16, 16, 16, 16);
 		guiGraphics.blit(ResourceLocation.parse("dcc:textures/screens/christiano_ronaldo_horn.png"), this.leftPos + 7, this.topPos + 36, 0, 0, 16, 16, 16, 16);
-		guiGraphics.blit(ResourceLocation.parse("dcc:textures/screens/druidstaff.png"), this.leftPos + 106, this.topPos + 36, 0, 0, 16, 16, 16, 16);
+		guiGraphics.blit(ResourceLocation.parse("dcc:textures/screens/druidstaff2.png"), this.leftPos + 106, this.topPos + 36, 0, 0, 16, 16, 16, 16);
 		guiGraphics.blit(ResourceLocation.parse("dcc:textures/screens/zauberstab.png"), this.leftPos + 7, this.topPos + 63, 0, 0, 16, 16, 16, 16);
 		guiGraphics.blit(ResourceLocation.parse("dcc:textures/screens/bruh.png"), this.leftPos + 106, this.topPos + 9, 0, 0, 16, 16, 16, 16);
-		guiGraphics.blit(ResourceLocation.parse("dcc:textures/screens/barbaricon.png"), this.leftPos + 7, this.topPos + 90, 0, 0, 16, 16, 16, 16);
+		guiGraphics.blit(ResourceLocation.parse("dcc:textures/screens/paladin.png"), this.leftPos + 7, this.topPos + 90, 0, 0, 16, 16, 16, 16);
 		RenderSystem.disableBlend();
 	}
 

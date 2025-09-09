@@ -17,7 +17,7 @@
     "seaLevel": 63,
     "generateOreVeins": true,
     "generateAquifers": true,
-    "horizontalNoiseSize": 4,
+    "horizontalNoiseSize": 1,
     "verticalNoiseSize": 4,
     "defaultEffects": "overworld",
     "useCustomEffects": true,
@@ -51,14 +51,18 @@
     "portalSound": {
       "value": "block.portal.ambient"
     },
-    "enableIgniter": false,
-    "igniterName": "Feywild Portal Igniter",
-    "igniterRarity": "COMMON",
+    "enableIgniter": true,
+    "igniterName": "Holy Crystal",
+    "igniterRarity": "RARE",
     "specialInformation": {
       "fixedValue": []
     },
-    "creativeTabs": [],
-    "texture": "bonsaifruit",
+    "creativeTabs": [
+      {
+        "value": "CUSTOM:DnD"
+      }
+    ],
+    "texture": "holycrystal",
     "portalTexture": "minecraft:nether_portal",
     "enablePortal": true
   }

@@ -1,0 +1,6 @@
+{
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "dcc:item/cake_infused_with_little_pink_pieces_of_fruit__1_piece_already_taken_out__1_2"
+  }
+}

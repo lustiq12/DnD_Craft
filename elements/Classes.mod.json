@@ -3,7 +3,7 @@
   "_type": "gui",
   "definition": {
     "type": 0,
-    "width": 178,
+    "width": 219,
     "height": 189,
     "inventoryOffsetX": 0,
     "inventoryOffsetY": 0,
@@ -21,7 +21,7 @@
           },
           "width": 72,
           "height": 20,
-          "x": 150,
+          "x": 129,
           "y": 35,
           "locked": false
         }
@@ -37,7 +37,7 @@
           },
           "width": 46,
           "height": 20,
-          "x": 150,
+          "x": 129,
           "y": 62,
           "locked": false
         }
@@ -53,7 +53,7 @@
           },
           "width": 51,
           "height": 20,
-          "x": 249,
+          "x": 228,
           "y": 62,
           "locked": false
         }
@@ -69,7 +69,7 @@
           },
           "width": 67,
           "height": 20,
-          "x": 150,
+          "x": 129,
           "y": 89,
           "locked": false
         }
@@ -79,7 +79,7 @@
         "data": {
           "image": "barbaricon.png",
           "use1Xscale": false,
-          "x": 132,
+          "x": 111,
           "y": 35,
           "locked": false
         }
@@ -89,7 +89,7 @@
         "data": {
           "image": "christiano_ronaldo_horn.png",
           "use1Xscale": false,
-          "x": 132,
+          "x": 111,
           "y": 62,
           "locked": false
         }
@@ -97,9 +97,9 @@
       {
         "type": "image",
         "data": {
-          "image": "druidstaff.png",
+          "image": "druidstaff2.png",
           "use1Xscale": false,
-          "x": 231,
+          "x": 210,
           "y": 62,
           "locked": false
         }
@@ -109,7 +109,7 @@
         "data": {
           "image": "zauberstab.png",
           "use1Xscale": false,
-          "x": 132,
+          "x": 111,
           "y": 89,
           "locked": false
         }
@@ -125,7 +125,7 @@
           },
           "width": 46,
           "height": 20,
-          "x": 249,
+          "x": 228,
           "y": 35,
           "locked": false
         }
@@ -135,7 +135,7 @@
         "data": {
           "image": "bruh.png",
           "use1Xscale": false,
-          "x": 231,
+          "x": 210,
           "y": 35,
           "locked": false
         }
@@ -151,7 +151,7 @@
           },
           "width": 61,
           "height": 20,
-          "x": 150,
+          "x": 129,
           "y": 116,
           "locked": false
         }
@@ -159,9 +159,9 @@
       {
         "type": "image",
         "data": {
-          "image": "barbaricon.png",
+          "image": "paladin.png",
           "use1Xscale": false,
-          "x": 132,
+          "x": 111,
           "y": 116,
           "locked": false
         }
@@ -170,7 +170,7 @@
     "gridSettings": {
       "sx": 18,
       "sy": 18,
-      "ox": 11,
+      "ox": 5,
       "oy": 15,
       "snapOnGrid": true
     }

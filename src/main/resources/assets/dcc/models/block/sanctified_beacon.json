@@ -1,13 +1,13 @@
 {
   "parent": "block/cube",
   "textures": {
-    "down": "dcc:block/rawowlbearmeatfront",
-    "up": "dcc:block/rawowlbearmeatfront",
-    "north": "dcc:block/rawowlbearmeatfront",
-    "east": "dcc:block/rawowlbearmeatfront",
-    "south": "dcc:block/rawowlbearmeatfront",
-    "west": "dcc:block/rawowlbearmeatfront",
-    "particle": "dcc:block/rawowlbearmeatfront"
+    "down": "dcc:block/sanctified_beacon",
+    "up": "dcc:block/sanctified_beacon",
+    "north": "dcc:block/sanctified_beacon",
+    "east": "dcc:block/sanctified_beacon",
+    "south": "dcc:block/sanctified_beacon",
+    "west": "dcc:block/sanctified_beacon",
+    "particle": "dcc:block/sanctified_beacon"
   },
   "render_type": "solid"
 }

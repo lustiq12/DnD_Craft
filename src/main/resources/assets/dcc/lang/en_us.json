@@ -686,7 +686,7 @@
   "gui.dcc.paladin_gui.label_rage": "Strong Defense",
   "gui.dcc.paladin_gui.label_barbarian_strenght": "Divine Ascent",
   "gui.dcc.paladin_gui.tooltip_get_strength_speed_and_regenera": "Get +8 armor for 10 seconds",
-  "gui.dcc.paladin_gui.tooltip_summon_a_powerful_axe_that_despa": "Summon a block that gives you strength and regeneration when you are near it",
+  "gui.dcc.paladin_gui.tooltip_summon_a_powerful_axe_that_despa": "Summon a block that gives Strength and Regeneration nearby, disappears after 15 seconds",
   "gui.dcc.paladin_gui.button_choose": "Choose",
   "gui.dcc.paladin_gui.label_0_level": "Level 1 (y)",
   "gui.dcc.paladin_gui.label_40_level": "Level 10 (Passive)",
@@ -697,5 +697,9 @@
   "item.dcc.living_sword_spawn_egg": "Living Sword Spawn Egg",
   "entity.dcc.living_sword": "Living Sword",
   "key.dcc.paladin_fly": "Paladin Fly",
-  "block.dcc.sanctified_beacon": "Sanctified Beacon"
+  "block.dcc.sanctified_beacon": "Sanctified Beacon",
+  "item.dcc.glimmerleaf_fruit_cake": "Glimmerleaf Fruit Cake",
+  "item.dcc.glimmerleaf_fruit_cake.description_1": "§6-Regeneration I",
+  "item.dcc.glimmerleaf_fruit_cake.description_0": "§6This is a meal, wich means you get specific effects upon consuming it.",
+  "item.dcc.feywild": "Holy Crystal"
 }
