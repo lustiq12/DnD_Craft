@@ -5,6 +5,7 @@
     "renderType": 0,
     "texture": "gebratenes_wild",
     "customModelName": "Normal",
+    "guiTexture": "",
     "customProperties": {},
     "states": [],
     "name": "Cooked Owlbear Meat",
@@ -44,8 +45,8 @@
     },
     "projectileDisableAmmoCheck": false,
     "isFood": true,
-    "nutritionalValue": 16,
-    "saturation": 14.6,
+    "nutritionalValue": 10,
+    "saturation": 7.0,
     "eatResultItem": {
       "value": "CUSTOM:AnimalBone"
     },

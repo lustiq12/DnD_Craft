@@ -701,5 +701,9 @@
   "item.dcc.glimmerleaf_fruit_cake": "Glimmerleaf Fruit Cake",
   "item.dcc.glimmerleaf_fruit_cake.description_1": "§6-Regeneration I",
   "item.dcc.glimmerleaf_fruit_cake.description_0": "§6This is a meal, wich means you get specific effects upon consuming it.",
-  "item.dcc.feywild": "Holy Crystal"
+  "item.dcc.feywild": "Holy Crystal",
+  "gamerule.enableMimics.description": "Make Mimics spawn from chests.",
+  "gamerule.enableMimics": "enableMimics",
+  "item.dcc.small_ocherjelly_spawn_egg": "Small Ocherjelly Spawn Egg",
+  "entity.dcc.small_ocherjelly": "Small Ocherjelly"
 }

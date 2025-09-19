@@ -196,6 +196,7 @@ public class DccModItems {
 	public static final DeferredItem<Item> FEYWILD = REGISTRY.register("feywild", FeywildItem::new);
 	public static final DeferredItem<Item> SANCTIFIED_BEACON = block(DccModBlocks.SANCTIFIED_BEACON);
 	public static final DeferredItem<Item> GLIMMERLEAF_FRUIT_CAKE = REGISTRY.register("glimmerleaf_fruit_cake", GlimmerleafFruitCakeItem::new);
+	public static final DeferredItem<Item> SMALL_OCHERJELLY_SPAWN_EGG = REGISTRY.register("small_ocherjelly_spawn_egg", () -> new DeferredSpawnEggItem(DccModEntities.SMALL_OCHERJELLY, -1713144, -6322651, new Item.Properties()));
 
 	// Start of user code block custom items
 	// End of user code block custom items

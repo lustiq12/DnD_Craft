@@ -5,6 +5,7 @@
     "renderType": 0,
     "texture": "dailyration",
     "customModelName": "Normal",
+    "guiTexture": "",
     "customProperties": {},
     "states": [],
     "name": "Daily Ration",

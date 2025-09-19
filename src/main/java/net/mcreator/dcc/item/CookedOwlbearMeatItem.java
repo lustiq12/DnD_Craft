@@ -11,7 +11,7 @@ import net.mcreator.dcc.init.DccModItems;
 
 public class CookedOwlbearMeatItem extends Item {
 	public CookedOwlbearMeatItem() {
-		super(new Item.Properties().food((new FoodProperties.Builder()).nutrition(16).saturationModifier(14.6f).build()));
+		super(new Item.Properties().food((new FoodProperties.Builder()).nutrition(10).saturationModifier(7f).build()));
 	}
 
 	@Override

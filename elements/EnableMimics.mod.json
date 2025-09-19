@@ -1,0 +1,12 @@
+{
+  "_fv": 79,
+  "_type": "gamerule",
+  "definition": {
+    "type": "Logic",
+    "displayName": "enableMimics",
+    "description": "Make Mimics spawn from chests.",
+    "category": "SPAWNING",
+    "defaultValueLogic": true,
+    "defaultValueNumber": 0
+  }
+}

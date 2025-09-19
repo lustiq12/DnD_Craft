@@ -6,6 +6,7 @@ import net.neoforged.bus.api.SubscribeEvent;
 
 import net.mcreator.dcc.entity.WargEntity;
 import net.mcreator.dcc.entity.VINESEntity;
+import net.mcreator.dcc.entity.SmallOcherjellyEntity;
 import net.mcreator.dcc.entity.OwlbearEntity;
 import net.mcreator.dcc.entity.OrkEntity;
 import net.mcreator.dcc.entity.Ogre2Entity;
@@ -148,6 +149,13 @@ public class EntityAnimationFactory {
 				}
 			}
 			if (event.getEntity() instanceof LivingSwordEntity syncable) {
+				String animation = syncable.getSyncedAnimation();
+				if (!animation.equals("undefined")) {
+					syncable.setAnimation("undefined");
+					syncable.animationprocedure = animation;
+				}
+			}
+			if (event.getEntity() instanceof SmallOcherjellyEntity syncable) {
 				String animation = syncable.getSyncedAnimation();
 				if (!animation.equals("undefined")) {
 					syncable.setAnimation("undefined");

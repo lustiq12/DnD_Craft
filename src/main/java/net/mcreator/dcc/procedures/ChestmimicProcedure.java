@@ -17,6 +17,7 @@ import net.minecraft.server.level.ServerLevel;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.core.BlockPos;
 
+import net.mcreator.dcc.init.DccModGameRules;
 import net.mcreator.dcc.init.DccModEntities;
 
 import javax.annotation.Nullable;
@@ -39,31 +40,33 @@ public class ChestmimicProcedure {
 		double sx = 0;
 		double sy = 0;
 		double sz = 0;
-		if ((world.getBlockState(BlockPos.containing(x, y, z))).getBlock() == Blocks.CHEST) {
-			if (Mth.nextInt(RandomSource.create(), 1, 100) == 1) {
-				sx = -1;
-				found = false;
-				for (int index0 = 0; index0 < 3; index0++) {
-					sy = -1;
-					for (int index1 = 0; index1 < 3; index1++) {
-						sz = -1;
-						for (int index2 = 0; index2 < 3; index2++) {
-							if ((world.getBlockState(BlockPos.containing(x + sx, y + sy, z + sz))).is(BlockTags.create(ResourceLocation.parse("dcc:mimic_spawnable")))) {
-								if (!(found == true)) {
-									if (world instanceof ServerLevel _level) {
-										Entity entityToSpawn = DccModEntities.MIMIC.get().spawn(_level, BlockPos.containing(x + sx, y + sy, z + sz), MobSpawnType.MOB_SUMMONED);
-										if (entityToSpawn != null) {
-											entityToSpawn.setYRot(world.getRandom().nextFloat() * 360F);
+		if (world.getLevelData().getGameRules().getBoolean(DccModGameRules.ENABLE_MIMICS)) {
+			if ((world.getBlockState(BlockPos.containing(x, y, z))).getBlock() == Blocks.CHEST) {
+				if (Mth.nextInt(RandomSource.create(), 1, 100) == 1) {
+					sx = -1;
+					found = false;
+					for (int index0 = 0; index0 < 3; index0++) {
+						sy = -1;
+						for (int index1 = 0; index1 < 3; index1++) {
+							sz = -1;
+							for (int index2 = 0; index2 < 3; index2++) {
+								if ((world.getBlockState(BlockPos.containing(x + sx, y + sy, z + sz))).is(BlockTags.create(ResourceLocation.parse("dcc:mimic_spawnable")))) {
+									if (!(found == true)) {
+										if (world instanceof ServerLevel _level) {
+											Entity entityToSpawn = DccModEntities.MIMIC.get().spawn(_level, BlockPos.containing(x + sx, y + sy, z + sz), MobSpawnType.MOB_SUMMONED);
+											if (entityToSpawn != null) {
+												entityToSpawn.setYRot(world.getRandom().nextFloat() * 360F);
+											}
 										}
 									}
+									found = true;
 								}
-								found = true;
+								sz = sz + 1;
 							}
-							sz = sz + 1;
+							sy = sy + 1;
 						}
-						sy = sy + 1;
+						sx = sx + 1;
 					}
-					sx = sx + 1;
 				}
 			}
 		}

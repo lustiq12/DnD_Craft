@@ -5,6 +5,7 @@
     "renderType": 0,
     "texture": "raw_wild",
     "customModelName": "Normal",
+    "guiTexture": "",
     "customProperties": {},
     "states": [],
     "name": "Raw Owlbear Meat",
@@ -44,8 +45,8 @@
     },
     "projectileDisableAmmoCheck": false,
     "isFood": true,
-    "nutritionalValue": 8,
-    "saturation": 6.0,
+    "nutritionalValue": 2,
+    "saturation": 0.0,
     "eatResultItem": {
       "value": "CUSTOM:AnimalBone"
     },
@@ -53,6 +54,10 @@
     "isAlwaysEdible": false,
     "animation": "eat",
     "isMusicDisc": false,
+    "musicDiscMusic": {
+      "value": ""
+    },
+    "musicDiscDescription": "",
     "musicDiscLengthInTicks": 0,
     "musicDiscAnalogOutput": 0,
     "providedBannerPatterns": []

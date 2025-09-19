@@ -5,6 +5,7 @@
     "renderType": 0,
     "texture": "orksteak",
     "customModelName": "Normal",
+    "guiTexture": "",
     "customProperties": {},
     "states": [],
     "name": "Orksteak",
@@ -53,8 +54,8 @@
     },
     "projectileDisableAmmoCheck": false,
     "isFood": true,
-    "nutritionalValue": 16,
-    "saturation": 12.200000000000001,
+    "nutritionalValue": 9,
+    "saturation": 6.0,
     "eatResultItem": {
       "value": "Items.BOWL"
     },

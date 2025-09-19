@@ -5,7 +5,6 @@ import net.neoforged.neoforge.items.ItemHandlerHelper;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.level.GameRules;
-import net.minecraft.world.item.Items;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.LivingEntity;
@@ -50,7 +49,7 @@ public class DruidProcedure {
 					ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
 				}
 				if (entity instanceof Player _player) {
-					ItemStack _setstack = new ItemStack(Items.GOAT_HORN).copy();
+					ItemStack _setstack = new ItemStack(DccModItems.SICKLE.get()).copy();
 					_setstack.setCount(1);
 					ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
 				}
@@ -60,7 +59,7 @@ public class DruidProcedure {
 					ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
 				}
 				if (entity instanceof Player _player) {
-					ItemStack _setstack = new ItemStack(Items.COOKED_BEEF).copy();
+					ItemStack _setstack = new ItemStack(DccModItems.DAILY_RATION.get()).copy();
 					_setstack.setCount(5);
 					ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
 				}

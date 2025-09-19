@@ -5,6 +5,7 @@
     "renderType": 0,
     "texture": "owlbeardrumsticks",
     "customModelName": "Normal",
+    "guiTexture": "",
     "customProperties": {},
     "states": [],
     "name": "Owlbear drums",
@@ -53,8 +54,8 @@
     },
     "projectileDisableAmmoCheck": false,
     "isFood": true,
-    "nutritionalValue": 18,
-    "saturation": 16.8,
+    "nutritionalValue": 10,
+    "saturation": 8.0,
     "eatResultItem": {
       "value": "Items.BOWL"
     },

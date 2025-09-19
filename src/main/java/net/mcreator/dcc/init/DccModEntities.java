@@ -21,6 +21,7 @@ import net.minecraft.core.registries.Registries;
 import net.mcreator.dcc.entity.WargEntity;
 import net.mcreator.dcc.entity.VINESEntity;
 import net.mcreator.dcc.entity.ThornEntity;
+import net.mcreator.dcc.entity.SmallOcherjellyEntity;
 import net.mcreator.dcc.entity.OwlbearEntity;
 import net.mcreator.dcc.entity.OrkEntity;
 import net.mcreator.dcc.entity.Ogre2Entity;
@@ -120,6 +121,10 @@ public class DccModEntities {
 			EntityType.Builder.<ThornEntity>of(ThornEntity::new, MobCategory.MISC).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(0.5f, 0.5f));
 	public static final DeferredHolder<EntityType<?>, EntityType<LivingSwordEntity>> LIVING_SWORD = register("living_sword",
 			EntityType.Builder.<LivingSwordEntity>of(LivingSwordEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).fireImmune().sized(0.6f, 1.8f));
+	public static final DeferredHolder<EntityType<?>, EntityType<SmallOcherjellyEntity>> SMALL_OCHERJELLY = register("small_ocherjelly",
+			EntityType.Builder.<SmallOcherjellyEntity>of(SmallOcherjellyEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3)
+
+					.sized(1.2f, 1f));
 
 	// Start of user code block custom entities
 	// End of user code block custom entities
@@ -152,6 +157,7 @@ public class DccModEntities {
 		GhoulEntity.init(event);
 		VINESEntity.init(event);
 		LivingSwordEntity.init(event);
+		SmallOcherjellyEntity.init(event);
 	}
 
 	@SubscribeEvent
@@ -174,5 +180,6 @@ public class DccModEntities {
 		event.put(GHOUL.get(), GhoulEntity.createAttributes().build());
 		event.put(VINES.get(), VINESEntity.createAttributes().build());
 		event.put(LIVING_SWORD.get(), LivingSwordEntity.createAttributes().build());
+		event.put(SMALL_OCHERJELLY.get(), SmallOcherjellyEntity.createAttributes().build());
 	}
 }

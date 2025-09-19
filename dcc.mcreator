@@ -7103,6 +7103,34 @@
         ]
       },
       "path": "~/Structures"
+    },
+    {
+      "name": "EnableMimics",
+      "type": "gamerule",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "enable_mimics",
+      "metadata": {
+        "type": "logic",
+        "files": []
+      },
+      "path": "~/Commands"
+    },
+    {
+      "name": "SmallOcherjelly",
+      "type": "animatedentity",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "small_ocherjelly",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/dcc/entity/SmallOcherjellyEntity.java",
+          "src/main/java/net/mcreator/dcc/entity/model/SmallOcherjellyModel.java",
+          "src/main/java/net/mcreator/dcc/client/renderer/SmallOcherjellyRenderer.java",
+          "src/main/resources/assets/dcc/models/item/small_ocherjelly_spawn_egg.json"
+        ]
+      },
+      "path": "~/Mobs"
     }
   ],
   "variable_elements": [
@@ -7417,6 +7445,9 @@
     ],
     "BIOMES:minecraft:has_structure/nether_fossil": [
       "~CUSTOM:FeywildForest"
+    ],
+    "BLOCKS:minecraft:mineable/hoe": [
+      "~CUSTOM:GlimmerLeaves"
     ]
   },
   "tab_element_order": {
@@ -7513,7 +7544,8 @@
       "MagicWand",
       "SanctifiedBeacon",
       "GlimmerleafFruitCake",
-      "Feywild"
+      "Feywild",
+      "SmallOcherjelly"
     ]
   },
   "language_map": {
@@ -8220,7 +8252,11 @@
       "item.dcc.glimmerleaf_fruit_cake": "Glimmerleaf Fruit Cake",
       "item.dcc.glimmerleaf_fruit_cake.description_1": "§6-Regeneration I",
       "item.dcc.glimmerleaf_fruit_cake.description_0": "§6This is a meal, wich means you get specific effects upon consuming it.",
-      "item.dcc.feywild": "Holy Crystal"
+      "item.dcc.feywild": "Holy Crystal",
+      "gamerule.enableMimics.description": "Make Mimics spawn from chests.",
+      "gamerule.enableMimics": "enableMimics",
+      "item.dcc.small_ocherjelly_spawn_egg": "Small Ocherjelly Spawn Egg",
+      "entity.dcc.small_ocherjelly": "Small Ocherjelly"
     }
   },
   "metadata": {

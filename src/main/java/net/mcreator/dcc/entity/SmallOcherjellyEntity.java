@@ -11,7 +11,6 @@ import software.bernie.geckolib.animatable.GeoEntity;
 
 import net.neoforged.neoforge.event.entity.RegisterSpawnPlacementsEvent;
 
-import net.minecraft.world.level.levelgen.Heightmap;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.entity.projectile.AbstractArrow;
@@ -24,7 +23,6 @@ import net.minecraft.world.entity.ai.goal.RandomLookAroundGoal;
 import net.minecraft.world.entity.ai.goal.MeleeAttackGoal;
 import net.minecraft.world.entity.ai.attributes.Attributes;
 import net.minecraft.world.entity.ai.attributes.AttributeSupplier;
-import net.minecraft.world.entity.SpawnPlacementTypes;
 import net.minecraft.world.entity.Pose;
 import net.minecraft.world.entity.Mob;
 import net.minecraft.world.entity.LivingEntity;
@@ -34,7 +32,6 @@ import net.minecraft.world.entity.EntityDimensions;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.damagesource.DamageTypes;
 import net.minecraft.world.damagesource.DamageSource;
-import net.minecraft.world.Difficulty;
 import net.minecraft.sounds.SoundEvent;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.resources.ResourceLocation;
@@ -47,19 +44,18 @@ import net.minecraft.core.BlockPos;
 
 import net.mcreator.dcc.procedures.OcherjellyPlayerCollidesWithThisEntityProcedure;
 import net.mcreator.dcc.procedures.OcherjellyItIsStruckByLightningProcedure;
-import net.mcreator.dcc.init.DccModEntities;
 
-public class OcherjellyEntity extends Monster implements GeoEntity {
-	public static final EntityDataAccessor<Boolean> SHOOT = SynchedEntityData.defineId(OcherjellyEntity.class, EntityDataSerializers.BOOLEAN);
-	public static final EntityDataAccessor<String> ANIMATION = SynchedEntityData.defineId(OcherjellyEntity.class, EntityDataSerializers.STRING);
-	public static final EntityDataAccessor<String> TEXTURE = SynchedEntityData.defineId(OcherjellyEntity.class, EntityDataSerializers.STRING);
+public class SmallOcherjellyEntity extends Monster implements GeoEntity {
+	public static final EntityDataAccessor<Boolean> SHOOT = SynchedEntityData.defineId(SmallOcherjellyEntity.class, EntityDataSerializers.BOOLEAN);
+	public static final EntityDataAccessor<String> ANIMATION = SynchedEntityData.defineId(SmallOcherjellyEntity.class, EntityDataSerializers.STRING);
+	public static final EntityDataAccessor<String> TEXTURE = SynchedEntityData.defineId(SmallOcherjellyEntity.class, EntityDataSerializers.STRING);
 	private final AnimatableInstanceCache cache = GeckoLibUtil.createInstanceCache(this);
 	private boolean swinging;
 	private boolean lastloop;
 	private long lastSwing;
 	public String animationprocedure = "empty";
 
-	public OcherjellyEntity(EntityType<OcherjellyEntity> type, Level world) {
+	public SmallOcherjellyEntity(EntityType<SmallOcherjellyEntity> type, Level world) {
 		super(type, world);
 		xpReward = 23;
 		setNoAi(false);
@@ -129,12 +125,6 @@ public class OcherjellyEntity extends Monster implements GeoEntity {
 	}
 
 	@Override
-	public void die(DamageSource source) {
-		super.die(source);
-		OcherjellyItIsStruckByLightningProcedure.execute(this.level(), this.getX(), this.getY(), this.getZ(), this);
-	}
-
-	@Override
 	public void addAdditionalSaveData(CompoundTag compound) {
 		super.addAdditionalSaveData(compound);
 		compound.putString("Texture", this.getTexture());
@@ -155,13 +145,10 @@ public class OcherjellyEntity extends Monster implements GeoEntity {
 
 	@Override
 	public EntityDimensions getDefaultDimensions(Pose pose) {
-		return super.getDefaultDimensions(pose).scale(2f);
+		return super.getDefaultDimensions(pose).scale(1f);
 	}
 
 	public static void init(RegisterSpawnPlacementsEvent event) {
-		event.register(DccModEntities.OCHERJELLY.get(), SpawnPlacementTypes.ON_GROUND, Heightmap.Types.MOTION_BLOCKING_NO_LEAVES,
-				(entityType, world, reason, pos, random) -> (world.getDifficulty() != Difficulty.PEACEFUL && Monster.isDarkEnoughToSpawn(world, pos, random) && Mob.checkMobSpawnRules(entityType, world, reason, pos, random)),
-				RegisterSpawnPlacementsEvent.Operation.REPLACE);
 	}
 
 	public static AttributeSupplier.Builder createAttributes() {
@@ -169,11 +156,11 @@ public class OcherjellyEntity extends Monster implements GeoEntity {
 		builder = builder.add(Attributes.MOVEMENT_SPEED, 0.2);
 		builder = builder.add(Attributes.MAX_HEALTH, 90);
 		builder = builder.add(Attributes.ARMOR, 0);
-		builder = builder.add(Attributes.ATTACK_DAMAGE, 5);
+		builder = builder.add(Attributes.ATTACK_DAMAGE, 3);
 		builder = builder.add(Attributes.FOLLOW_RANGE, 16);
-		builder = builder.add(Attributes.STEP_HEIGHT, 1);
-		builder = builder.add(Attributes.KNOCKBACK_RESISTANCE, 4);
-		builder = builder.add(Attributes.ATTACK_KNOCKBACK, 2);
+		builder = builder.add(Attributes.STEP_HEIGHT, 0.6);
+		builder = builder.add(Attributes.KNOCKBACK_RESISTANCE, 2);
+		builder = builder.add(Attributes.ATTACK_KNOCKBACK, 1);
 		return builder;
 	}
 
@@ -215,7 +202,7 @@ public class OcherjellyEntity extends Monster implements GeoEntity {
 	protected void tickDeath() {
 		++this.deathTime;
 		if (this.deathTime == 20) {
-			this.remove(OcherjellyEntity.RemovalReason.KILLED);
+			this.remove(SmallOcherjellyEntity.RemovalReason.KILLED);
 			this.dropExperience(this);
 		}
 	}

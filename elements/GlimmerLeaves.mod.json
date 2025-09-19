@@ -50,7 +50,7 @@
     "rarity": "COMMON",
     "immuneToFire": false,
     "creativeTabs": [],
-    "destroyTool": "Not specified",
+    "destroyTool": "hoe",
     "customDrop": {
       "value": ""
     },
@@ -109,6 +109,9 @@
     "isBonemealable": false,
     "sensitiveToVibration": false,
     "vibrationalEvents": [],
+    "vibrationSensitivityRadius": {
+      "fixedValue": 7.0
+    },
     "hasInventory": false,
     "openGUIOnRightClick": false,
     "inventorySize": 9,

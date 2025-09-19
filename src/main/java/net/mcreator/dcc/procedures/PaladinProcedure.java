@@ -59,22 +59,27 @@ public class PaladinProcedure {
 		if (!world.isClientSide()) {
 			if (!world.getLevelData().getGameRules().getBoolean(GameRules.RULE_KEEPINVENTORY)) {
 				if (entity instanceof Player _player) {
-					ItemStack _setstack = new ItemStack(DccModItems.ADANTIUM_INGOT.get()).copy();
+					ItemStack _setstack = new ItemStack(DccModItems.CLAYMORE.get()).copy();
 					_setstack.setCount(1);
 					ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
 				}
 				if (entity instanceof Player _player) {
-					ItemStack _setstack = new ItemStack(DccModItems.ADANTIUM_INGOT.get()).copy();
+					ItemStack _setstack = new ItemStack(DccModItems.BATTLE_AXE.get()).copy();
 					_setstack.setCount(1);
 					ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
 				}
 				if (entity instanceof Player _player) {
-					ItemStack _setstack = new ItemStack(DccModItems.ADANTIUM_INGOT.get()).copy();
-					_setstack.setCount(1);
+					ItemStack _setstack = new ItemStack(DccModItems.GOLD_COIN.get()).copy();
+					_setstack.setCount(20);
 					ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
 				}
 				if (entity instanceof Player _player) {
-					ItemStack _setstack = new ItemStack(DccModItems.ADANTIUM_INGOT.get()).copy();
+					ItemStack _setstack = new ItemStack(DccModItems.DAILY_RATION.get()).copy();
+					_setstack.setCount(5);
+					ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
+				}
+				if (entity instanceof Player _player) {
+					ItemStack _setstack = new ItemStack(DccModItems.HEAL_POTION.get()).copy();
 					_setstack.setCount(5);
 					ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
 				}
@@ -86,11 +91,6 @@ public class PaladinProcedure {
 					} else if (_entity instanceof LivingEntity _living) {
 						_living.setItemSlot(EquipmentSlot.CHEST, new ItemStack(Items.IRON_CHESTPLATE));
 					}
-				}
-				if (entity instanceof Player _player) {
-					ItemStack _setstack = new ItemStack(DccModItems.HEAL_POTION.get()).copy();
-					_setstack.setCount(5);
-					ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
 				}
 			}
 		}

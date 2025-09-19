@@ -20,7 +20,7 @@ import java.util.List;
 
 public class OwlbearDrumsticksItem extends Item {
 	public OwlbearDrumsticksItem() {
-		super(new Item.Properties().food((new FoodProperties.Builder()).nutrition(18).saturationModifier(16.8f).build()));
+		super(new Item.Properties().food((new FoodProperties.Builder()).nutrition(10).saturationModifier(8f).build()));
 	}
 
 	@Override

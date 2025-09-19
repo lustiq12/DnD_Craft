@@ -17,7 +17,7 @@ import java.util.List;
 
 public class GlimmerleafFruitCakeItem extends Item {
 	public GlimmerleafFruitCakeItem() {
-		super(new Item.Properties().food((new FoodProperties.Builder()).nutrition(16).saturationModifier(12.2f).build()));
+		super(new Item.Properties().food((new FoodProperties.Builder()).nutrition(8).saturationModifier(5f).build()));
 	}
 
 	@Override

@@ -5,6 +5,7 @@
     "renderType": 0,
     "texture": "owlbearkebab",
     "customModelName": "Normal",
+    "guiTexture": "",
     "customProperties": {},
     "states": [],
     "name": "Owlbear Meat Stripe",

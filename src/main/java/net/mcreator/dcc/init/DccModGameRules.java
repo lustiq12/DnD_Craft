@@ -12,9 +12,11 @@ import net.minecraft.world.level.GameRules;
 @EventBusSubscriber(bus = EventBusSubscriber.Bus.MOD)
 public class DccModGameRules {
 	public static GameRules.Key<GameRules.BooleanValue> KEEP_CLASS_LEVELS_AND_GET_NO_STARTERITEMS_ON_RESPAWN;
+	public static GameRules.Key<GameRules.BooleanValue> ENABLE_MIMICS;
 
 	@SubscribeEvent
 	public static void registerGameRules(FMLCommonSetupEvent event) {
 		KEEP_CLASS_LEVELS_AND_GET_NO_STARTERITEMS_ON_RESPAWN = GameRules.register("keepClassLevelsAndGetNoStarteritemsOnRespawn", GameRules.Category.PLAYER, GameRules.BooleanValue.create(false));
+		ENABLE_MIMICS = GameRules.register("enableMimics", GameRules.Category.SPAWNING, GameRules.BooleanValue.create(true));
 	}
 }

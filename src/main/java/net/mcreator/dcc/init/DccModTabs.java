@@ -115,6 +115,7 @@ public class DccModTabs {
 				tabData.accept(DccModBlocks.SANCTIFIED_BEACON.get().asItem());
 				tabData.accept(DccModItems.GLIMMERLEAF_FRUIT_CAKE.get());
 				tabData.accept(DccModItems.FEYWILD.get());
+				tabData.accept(DccModItems.SMALL_OCHERJELLY_SPAWN_EGG.get());
 			}).build());
 
 	@SubscribeEvent
@@ -131,6 +132,7 @@ public class DccModTabs {
 			tabData.accept(DccModItems.BASILISK_SPAWN_EGG.get());
 			tabData.accept(DccModItems.WARG_SPAWN_EGG.get());
 			tabData.accept(DccModItems.COOK_SPAWN_EGG.get());
+			tabData.accept(DccModItems.SMALL_OCHERJELLY_SPAWN_EGG.get());
 		} else if (tabData.getTabKey() == CreativeModeTabs.TOOLS_AND_UTILITIES) {
 			tabData.accept(DccModItems.BANJO.get());
 			tabData.accept(DccModItems.DRUMS.get());
