@@ -125,7 +125,7 @@ public class PassiveabilitysProcedure {
 				}
 			} else if ((entity.getData(DccModVariables.PLAYER_VARIABLES).Class_Variable).equals("Paladin")) {
 				if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
-					_entity.addEffect(new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 25, 1, false, false));
+					_entity.addEffect(new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 25, 0, false, false));
 			} else if ((entity.getData(DccModVariables.PLAYER_VARIABLES).Class_Variable).equals("Fighter")) {
 				if (entity instanceof Player _player) {
 					_player.getAbilities().mayBuild = true;
@@ -136,7 +136,7 @@ public class PassiveabilitysProcedure {
 		if (19 < entity.getData(DccModVariables.PLAYER_VARIABLES).PlayerLevel) {
 			if ((entity.getData(DccModVariables.PLAYER_VARIABLES).Class_Variable).equals("Barbarian")) {
 				if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
-					_entity.addEffect(new MobEffectInstance(MobEffects.DAMAGE_BOOST, 20, 1, false, false));
+					_entity.addEffect(new MobEffectInstance(MobEffects.DAMAGE_BOOST, 20, 0, false, false));
 			} else if ((entity.getData(DccModVariables.PLAYER_VARIABLES).Class_Variable).equals("Monk")) {
 				if (entity instanceof LivingEntity _entity)
 					_entity.removeEffect(MobEffects.BLINDNESS);

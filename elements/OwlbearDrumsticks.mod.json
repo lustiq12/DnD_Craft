@@ -44,7 +44,7 @@
       "name": "Veteranquest"
     },
     "onFinishUsingItem": {
-      "name": "ResiI"
+      "name": "Veteranquest"
     },
     "enableRanged": false,
     "shootConstantly": false,

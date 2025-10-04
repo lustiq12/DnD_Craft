@@ -14,7 +14,6 @@ import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.network.chat.Component;
 
 import net.mcreator.dcc.procedures.VeteranquestProcedure;
-import net.mcreator.dcc.procedures.ResiIProcedure;
 
 import java.util.List;
 
@@ -38,7 +37,7 @@ public class OwlbearDrumsticksItem extends Item {
 		double x = entity.getX();
 		double y = entity.getY();
 		double z = entity.getZ();
-		ResiIProcedure.execute(entity);
+		VeteranquestProcedure.execute(world, entity);
 		if (itemstack.isEmpty()) {
 			return retval;
 		} else {

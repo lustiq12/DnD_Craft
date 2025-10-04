@@ -182,7 +182,7 @@
             "name": "CookingVeteranLoot"
           },
           "displayCondition": {
-            "name": "Veteranquestshow"
+            "name": "VeteranquestshowLoot"
           },
           "width": 77,
           "height": 20,

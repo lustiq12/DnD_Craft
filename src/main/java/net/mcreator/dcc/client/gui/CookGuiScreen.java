@@ -13,6 +13,7 @@ import net.minecraft.client.gui.GuiGraphics;
 
 import net.mcreator.dcc.world.inventory.CookGuiMenu;
 import net.mcreator.dcc.procedures.VeteranquestshowProcedure;
+import net.mcreator.dcc.procedures.VeteranquestshowLootProcedure;
 import net.mcreator.dcc.procedures.MonsterquestunlockProcedure;
 import net.mcreator.dcc.procedures.MonsterquestshowProcedure;
 import net.mcreator.dcc.procedures.IfnoQuestProcedure;
@@ -106,7 +107,7 @@ public class CookGuiScreen extends AbstractContainerScreen<CookGuiMenu> implemen
 		}).bounds(this.leftPos + 142, this.topPos + 51, 77, 20).build();
 		this.addRenderableWidget(button_loot_quest1);
 		button_loot_quest2 = Button.builder(Component.translatable("gui.dcc.cook_gui.button_loot_quest2"), e -> {
-			if (VeteranquestshowProcedure.execute(entity)) {
+			if (VeteranquestshowLootProcedure.execute(entity)) {
 				PacketDistributor.sendToServer(new CookGuiButtonMessage(2, x, y, z));
 				CookGuiButtonMessage.handleButtonAction(entity, 2, x, y, z);
 			}
@@ -119,6 +120,6 @@ public class CookGuiScreen extends AbstractContainerScreen<CookGuiMenu> implemen
 		super.containerTick();
 		this.button_loot_quest.visible = IfnoQuestProcedure.execute(entity);
 		this.button_loot_quest1.visible = MonsterquestshowProcedure.execute(entity);
-		this.button_loot_quest2.visible = VeteranquestshowProcedure.execute(entity);
+		this.button_loot_quest2.visible = VeteranquestshowLootProcedure.execute(entity);
 	}
 }

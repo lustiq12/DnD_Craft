@@ -70,13 +70,13 @@ public class DccModVariables {
 			clone.Dogde = original.Dogde;
 			clone.Ki = original.Ki;
 			clone.Lvlxp = original.Lvlxp;
-			clone.DailyRationQuest = original.DailyRationQuest;
-			clone.Monsterdelightquest = original.Monsterdelightquest;
-			clone.CookingVeteranquest = original.CookingVeteranquest;
 			clone.MaxMana = original.MaxMana;
 			clone.MaxKi = original.MaxKi;
 			clone.XpPercent = original.XpPercent;
 			if (!event.isWasDeath()) {
+				clone.DailyRationQuest = original.DailyRationQuest;
+				clone.Monsterdelightquest = original.Monsterdelightquest;
+				clone.CookingVeteranquest = original.CookingVeteranquest;
 			}
 			event.getEntity().setData(PLAYER_VARIABLES, clone);
 		}

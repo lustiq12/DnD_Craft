@@ -5429,7 +5429,7 @@
           }
         ]
       },
-      "path": "~/NPCs"
+      "path": "~/NPCs/Daily Ration Quest"
     },
     {
       "name": "DailyRation",
@@ -5475,7 +5475,7 @@
           }
         ]
       },
-      "path": "~/NPCs"
+      "path": "~/NPCs/Daily Ration Quest"
     },
     {
       "name": "DailyRationLoot",
@@ -5510,7 +5510,7 @@
           }
         ]
       },
-      "path": "~/NPCs"
+      "path": "~/NPCs/Daily Ration Quest"
     },
     {
       "name": "Monsterquestshow",
@@ -5530,7 +5530,7 @@
           }
         ]
       },
-      "path": "~/NPCs"
+      "path": "~/NPCs/Monster Quest"
     },
     {
       "name": "Monsterdelightquest",
@@ -5549,7 +5549,7 @@
           }
         ]
       },
-      "path": "~/NPCs"
+      "path": "~/NPCs/Monster Quest"
     },
     {
       "name": "MonsterDelightloot",
@@ -5584,7 +5584,7 @@
           }
         ]
       },
-      "path": "~/NPCs"
+      "path": "~/NPCs/Monster Quest"
     },
     {
       "name": "Monsterquestunlock",
@@ -5604,7 +5604,7 @@
           }
         ]
       },
-      "path": "~/NPCs"
+      "path": "~/NPCs/Monster Quest"
     },
     {
       "name": "CooksHouse",
@@ -5639,7 +5639,7 @@
           }
         ]
       },
-      "path": "~/NPCs"
+      "path": "~/NPCs/Veteran Quest"
     },
     {
       "name": "Veteranquest",
@@ -5662,7 +5662,7 @@
           }
         ]
       },
-      "path": "~/NPCs"
+      "path": "~/NPCs/Veteran Quest"
     },
     {
       "name": "CookingVeteranLoot",
@@ -5697,7 +5697,7 @@
           }
         ]
       },
-      "path": "~/NPCs"
+      "path": "~/NPCs/Veteran Quest"
     },
     {
       "name": "OwlbearDrumsticks",
@@ -7274,6 +7274,122 @@
         ]
       },
       "path": "~/Mobs"
+    },
+    {
+      "name": "VeteranquestshowLoot",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "veteranquestshow_loot",
+      "metadata": {
+        "return_type": "logic",
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ],
+        "files": [
+          "src/main/java/net/mcreator/dcc/procedures/VeteranquestshowLootProcedure.java"
+        ]
+      },
+      "path": "~/NPCs/Veteran Quest"
+    },
+    {
+      "name": "SetVeteranquest",
+      "type": "command",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "set_veteranquest",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/dcc/command/SetVeteranquestCommand.java"
+        ]
+      },
+      "path": "~/Commands"
+    },
+    {
+      "name": "SetMonsterQuest",
+      "type": "command",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "set_monster_quest",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/dcc/command/SetMonsterQuestCommand.java"
+        ]
+      },
+      "path": "~/Commands"
+    },
+    {
+      "name": "SetDailyRationQuest",
+      "type": "command",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "set_daily_ration_quest",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/dcc/command/SetDailyRationQuestCommand.java"
+        ]
+      },
+      "path": "~/Commands"
+    },
+    {
+      "name": "SetDailyRationQuestPcd",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "set_daily_ration_quest_pcd",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "arguments",
+            "type": "cmdcontext"
+          }
+        ],
+        "files": [
+          "src/main/java/net/mcreator/dcc/procedures/SetDailyRationQuestPcdProcedure.java"
+        ]
+      },
+      "path": "~/Commands"
+    },
+    {
+      "name": "SetMonsterQuestPcd",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "set_monster_quest_pcd",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "arguments",
+            "type": "cmdcontext"
+          }
+        ],
+        "files": [
+          "src/main/java/net/mcreator/dcc/procedures/SetMonsterQuestPcdProcedure.java"
+        ]
+      },
+      "path": "~/Commands"
+    },
+    {
+      "name": "SetVeteranQuestPcd",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "set_veteran_quest_pcd",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "arguments",
+            "type": "cmdcontext"
+          }
+        ],
+        "files": [
+          "src/main/java/net/mcreator/dcc/procedures/SetVeteranQuestPcdProcedure.java"
+        ]
+      },
+      "path": "~/Commands"
     }
   ],
   "variable_elements": [
@@ -7340,19 +7456,19 @@
     {
       "name": "DailyRationQuest",
       "type": "number",
-      "scope": "player_persistent",
+      "scope": "player_lifetime",
       "value": "0.0"
     },
     {
       "name": "Monsterdelightquest",
       "type": "number",
-      "scope": "player_persistent",
+      "scope": "player_lifetime",
       "value": "0"
     },
     {
       "name": "CookingVeteranquest",
       "type": "number",
-      "scope": "player_persistent",
+      "scope": "player_lifetime",
       "value": "0.0"
     },
     {
@@ -8521,7 +8637,20 @@
       },
       {
         "name": "NPCs",
-        "children": []
+        "children": [
+          {
+            "name": "Daily Ration Quest",
+            "children": []
+          },
+          {
+            "name": "Veteran Quest",
+            "children": []
+          },
+          {
+            "name": "Monster Quest",
+            "children": []
+          }
+        ]
       },
       {
         "name": "Structures",

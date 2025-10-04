@@ -16,7 +16,7 @@ public class DailyRationLootProcedure {
 			return;
 		{
 			DccModVariables.PlayerVariables _vars = entity.getData(DccModVariables.PLAYER_VARIABLES);
-			_vars.DailyRationQuest = 0;
+			_vars.DailyRationQuest = -1;
 			_vars.syncPlayerVariables(entity);
 		}
 		for (int index0 = 0; index0 < 10; index0++) {

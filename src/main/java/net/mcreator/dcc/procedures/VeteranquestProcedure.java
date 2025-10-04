@@ -17,8 +17,6 @@ public class VeteranquestProcedure {
 					_vars.CookingVeteranquest = entity.getData(DccModVariables.PLAYER_VARIABLES).CookingVeteranquest + 1;
 					_vars.syncPlayerVariables(entity);
 				}
-				if (!world.isClientSide() && world.getServer() != null)
-					world.getServer().getPlayerList().broadcastSystemMessage(Component.literal("\u00A74 you have ate"), false);
 				if (entity.getData(DccModVariables.PLAYER_VARIABLES).CookingVeteranquest == 80) {
 					if (!world.isClientSide() && world.getServer() != null)
 						world.getServer().getPlayerList().broadcastSystemMessage(Component.literal("\u00A74You have completed the cooks quest: Cooking veteran"), false);

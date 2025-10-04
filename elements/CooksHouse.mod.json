@@ -2,7 +2,7 @@
   "_fv": 79,
   "_type": "structure",
   "definition": {
-    "structure": "cookshouse",
+    "structure": "cooks_house",
     "projection": "rigid",
     "ignoredBlocks": [
       {

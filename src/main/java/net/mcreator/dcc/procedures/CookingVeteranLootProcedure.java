@@ -18,7 +18,7 @@ public class CookingVeteranLootProcedure {
 			return;
 		{
 			DccModVariables.PlayerVariables _vars = entity.getData(DccModVariables.PLAYER_VARIABLES);
-			_vars.CookingVeteranquest = 0;
+			_vars.CookingVeteranquest = -1;
 			_vars.syncPlayerVariables(entity);
 		}
 		for (int index0 = 0; index0 < 15; index0++) {

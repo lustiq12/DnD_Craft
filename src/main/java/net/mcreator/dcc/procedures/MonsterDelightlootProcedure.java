@@ -17,7 +17,7 @@ public class MonsterDelightlootProcedure {
 			return;
 		{
 			DccModVariables.PlayerVariables _vars = entity.getData(DccModVariables.PLAYER_VARIABLES);
-			_vars.Monsterdelightquest = 0;
+			_vars.Monsterdelightquest = -1;
 			_vars.syncPlayerVariables(entity);
 		}
 		for (int index0 = 0; index0 < 10; index0++) {
