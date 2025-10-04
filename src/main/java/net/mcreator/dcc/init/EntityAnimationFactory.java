@@ -6,6 +6,7 @@ import net.neoforged.bus.api.SubscribeEvent;
 
 import net.mcreator.dcc.entity.WargEntity;
 import net.mcreator.dcc.entity.VINESEntity;
+import net.mcreator.dcc.entity.TentaclesEntity;
 import net.mcreator.dcc.entity.SmallOcherjellyEntity;
 import net.mcreator.dcc.entity.OwlbearEntity;
 import net.mcreator.dcc.entity.OrkEntity;
@@ -21,6 +22,7 @@ import net.mcreator.dcc.entity.GoblinEntity;
 import net.mcreator.dcc.entity.GoblinChiefEntity;
 import net.mcreator.dcc.entity.GhoulEntity;
 import net.mcreator.dcc.entity.CookEntity;
+import net.mcreator.dcc.entity.CarrionCrawlerEntity;
 import net.mcreator.dcc.entity.BowblinEntity;
 import net.mcreator.dcc.entity.BasiliskEntity;
 
@@ -156,6 +158,20 @@ public class EntityAnimationFactory {
 				}
 			}
 			if (event.getEntity() instanceof SmallOcherjellyEntity syncable) {
+				String animation = syncable.getSyncedAnimation();
+				if (!animation.equals("undefined")) {
+					syncable.setAnimation("undefined");
+					syncable.animationprocedure = animation;
+				}
+			}
+			if (event.getEntity() instanceof CarrionCrawlerEntity syncable) {
+				String animation = syncable.getSyncedAnimation();
+				if (!animation.equals("undefined")) {
+					syncable.setAnimation("undefined");
+					syncable.animationprocedure = animation;
+				}
+			}
+			if (event.getEntity() instanceof TentaclesEntity syncable) {
 				String animation = syncable.getSyncedAnimation();
 				if (!animation.equals("undefined")) {
 					syncable.setAnimation("undefined");

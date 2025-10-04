@@ -116,6 +116,8 @@ public class DccModTabs {
 				tabData.accept(DccModItems.GLIMMERLEAF_FRUIT_CAKE.get());
 				tabData.accept(DccModItems.FEYWILD.get());
 				tabData.accept(DccModItems.SMALL_OCHERJELLY_SPAWN_EGG.get());
+				tabData.accept(DccModItems.GLIMMERLEAF_FRUIT.get());
+				tabData.accept(DccModBlocks.GLIMMER_LEAVES.get().asItem());
 			}).build());
 
 	@SubscribeEvent

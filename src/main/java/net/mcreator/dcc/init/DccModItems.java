@@ -184,7 +184,6 @@ public class DccModItems {
 	public static final DeferredItem<Item> OWLBEAR_DRUMSTICKS = REGISTRY.register("owlbear_drumsticks", OwlbearDrumsticksItem::new);
 	public static final DeferredItem<Item> ORKSTEAAK = REGISTRY.register("orksteaak", OrksteaakItem::new);
 	public static final DeferredItem<Item> GHOUL_SPAWN_EGG = REGISTRY.register("ghoul_spawn_egg", () -> new DeferredSpawnEggItem(DccModEntities.GHOUL, -16724788, -10066330, new Item.Properties()));
-	public static final DeferredItem<Item> VINES_SPAWN_EGG = REGISTRY.register("vines_spawn_egg", () -> new DeferredSpawnEggItem(DccModEntities.VINES, -1, -1, new Item.Properties()));
 	public static final DeferredItem<Item> PLATIN_COIN = REGISTRY.register("platin_coin", PlatinCoinItem::new);
 	public static final DeferredItem<Item> SILVER_COIN = REGISTRY.register("silver_coin", SilverCoinItem::new);
 	public static final DeferredItem<Item> SILVER_INGOT = REGISTRY.register("silver_ingot", SilverIngotItem::new);
@@ -197,6 +196,8 @@ public class DccModItems {
 	public static final DeferredItem<Item> SANCTIFIED_BEACON = block(DccModBlocks.SANCTIFIED_BEACON);
 	public static final DeferredItem<Item> GLIMMERLEAF_FRUIT_CAKE = REGISTRY.register("glimmerleaf_fruit_cake", GlimmerleafFruitCakeItem::new);
 	public static final DeferredItem<Item> SMALL_OCHERJELLY_SPAWN_EGG = REGISTRY.register("small_ocherjelly_spawn_egg", () -> new DeferredSpawnEggItem(DccModEntities.SMALL_OCHERJELLY, -1713144, -6322651, new Item.Properties()));
+	public static final DeferredItem<Item> CARRIONCRAWLERCOCOON = block(DccModBlocks.CARRIONCRAWLERCOCOON);
+	public static final DeferredItem<Item> CARRION_CRAWLER_SPAWN_EGG = REGISTRY.register("carrion_crawler_spawn_egg", () -> new DeferredSpawnEggItem(DccModEntities.CARRION_CRAWLER, -4551362, -1518675, new Item.Properties()));
 
 	// Start of user code block custom items
 	// End of user code block custom items

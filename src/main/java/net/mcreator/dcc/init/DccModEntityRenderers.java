@@ -13,6 +13,7 @@ import net.minecraft.client.renderer.entity.ThrownItemRenderer;
 import net.mcreator.dcc.client.renderer.WargRenderer;
 import net.mcreator.dcc.client.renderer.VINESRenderer;
 import net.mcreator.dcc.client.renderer.ThornRenderer;
+import net.mcreator.dcc.client.renderer.TentaclesRenderer;
 import net.mcreator.dcc.client.renderer.SmallOcherjellyRenderer;
 import net.mcreator.dcc.client.renderer.OwlbearRenderer;
 import net.mcreator.dcc.client.renderer.OrkRenderer;
@@ -28,6 +29,7 @@ import net.mcreator.dcc.client.renderer.GoblinRenderer;
 import net.mcreator.dcc.client.renderer.GoblinChiefRenderer;
 import net.mcreator.dcc.client.renderer.GhoulRenderer;
 import net.mcreator.dcc.client.renderer.CookRenderer;
+import net.mcreator.dcc.client.renderer.CarrionCrawlerRenderer;
 import net.mcreator.dcc.client.renderer.BowblinRenderer;
 import net.mcreator.dcc.client.renderer.BasiliskRenderer;
 import net.mcreator.dcc.client.renderer.ArrowRenderer;
@@ -59,5 +61,8 @@ public class DccModEntityRenderers {
 		event.registerEntityRenderer(DccModEntities.THORN.get(), ThornRenderer::new);
 		event.registerEntityRenderer(DccModEntities.LIVING_SWORD.get(), LivingSwordRenderer::new);
 		event.registerEntityRenderer(DccModEntities.SMALL_OCHERJELLY.get(), SmallOcherjellyRenderer::new);
+		event.registerEntityRenderer(DccModEntities.CARRION_CRAWLER.get(), CarrionCrawlerRenderer::new);
+		event.registerEntityRenderer(DccModEntities.CARRION_CRAWLER_POISON.get(), ThrownItemRenderer::new);
+		event.registerEntityRenderer(DccModEntities.TENTACLES.get(), TentaclesRenderer::new);
 	}
 }

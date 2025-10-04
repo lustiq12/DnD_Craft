@@ -28,32 +28,45 @@ public class Ogre2OnEntityTickUpdateProcedure {
 	public static void execute(LevelAccessor world, double x, double y, double z, Entity entity) {
 		if (entity == null)
 			return;
-		if (Mth.nextInt(RandomSource.create(), 1, 10) == 1) {
-			if (entity instanceof Ogre2Entity) {
-				((Ogre2Entity) entity).setAnimation("smash");
-			}
-			DccMod.queueServerWork(15, () -> {
-				if (world instanceof ServerLevel _level)
-					_level.sendParticles(ParticleTypes.EXPLOSION, x, y, z, 5000, 7.5, 7.5, 7.5, 1);
-				if (world instanceof Level _level) {
-					if (!_level.isClientSide()) {
-						_level.playSound(null, BlockPos.containing(x, y, z), BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("entity.generic.explode")), SoundSource.NEUTRAL, 5, 1);
-					} else {
-						_level.playLocalSound(x, y, z, BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("entity.generic.explode")), SoundSource.NEUTRAL, 5, 1, false);
-					}
+		if (!world.isClientSide()) {
+			if (Mth.nextInt(RandomSource.create(), 1, 10) == 1) {
+				if (entity instanceof Ogre2Entity) {
+					((Ogre2Entity) entity).setAnimation("shockwave");
 				}
-				{
-					final Vec3 _center = new Vec3(x, y, z);
-					for (Entity entityiterator : world.getEntitiesOfClass(Entity.class, new AABB(_center, _center).inflate(20 / 2d), e -> true).stream().sorted(Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_center))).toList()) {
-						if (!(entityiterator == entity)) {
-							entityiterator.hurt(new DamageSource(world.holderOrThrow(DamageTypes.GENERIC)), 3);
-							if (entityiterator instanceof LivingEntity _entity && !_entity.level().isClientSide())
-								_entity.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SLOWDOWN, 60, 1));
-							entityiterator.setDeltaMovement(new Vec3(0, 0.7, 0));
+				DccMod.queueServerWork(30, () -> {
+					if (world instanceof ServerLevel _level)
+						_level.sendParticles(ParticleTypes.EXPLOSION, x, y, z, 5000, 7.5, 7.5, 7.5, 1);
+					if (world instanceof Level _level) {
+						if (!_level.isClientSide()) {
+							_level.playSound(null, BlockPos.containing(x, y, z), BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("entity.generic.explode")), SoundSource.NEUTRAL, 5, 1);
+						} else {
+							_level.playLocalSound(x, y, z, BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("entity.generic.explode")), SoundSource.NEUTRAL, 5, 1, false);
 						}
 					}
+					{
+						final Vec3 _center = new Vec3(x, y, z);
+						for (Entity entityiterator : world.getEntitiesOfClass(Entity.class, new AABB(_center, _center).inflate(20 / 2d), e -> true).stream().sorted(Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_center))).toList()) {
+							if (!(entityiterator == entity)) {
+								entityiterator.hurt(new DamageSource(world.holderOrThrow(DamageTypes.GENERIC)), 3);
+								if (entityiterator instanceof LivingEntity _entity && !_entity.level().isClientSide())
+									_entity.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SLOWDOWN, 60, 1));
+								entityiterator.setDeltaMovement(new Vec3(0, 0.7, 0));
+							}
+						}
+					}
+				});
+			} else if (Mth.nextInt(RandomSource.create(), 1, 5) == 1) {
+				if (entity instanceof Ogre2Entity) {
+					((Ogre2Entity) entity).setAnimation("roar");
 				}
-			});
+				if (world instanceof Level _level) {
+					if (!_level.isClientSide()) {
+						_level.playSound(null, BlockPos.containing(x, y, z), BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("dcc:ogre_roar")), SoundSource.NEUTRAL, 100, 1);
+					} else {
+						_level.playLocalSound(x, y, z, BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("dcc:ogre_roar")), SoundSource.NEUTRAL, 100, 1, false);
+					}
+				}
+			}
 		}
 	}
 }

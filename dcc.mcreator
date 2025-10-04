@@ -6024,9 +6024,7 @@
         "files": [
           "src/main/java/net/mcreator/dcc/client/renderer/VINESRenderer.java",
           "src/main/java/net/mcreator/dcc/entity/model/VINESModel.java",
-          "src/main/resources/data/dcc/neoforge/biome_modifier/vines_biome_modifier.json",
-          "src/main/java/net/mcreator/dcc/entity/VINESEntity.java",
-          "src/main/resources/assets/dcc/models/item/vines_spawn_egg.json"
+          "src/main/java/net/mcreator/dcc/entity/VINESEntity.java"
         ]
       },
       "path": "~/ClassSystem/Druid"
@@ -7131,6 +7129,151 @@
         ]
       },
       "path": "~/Mobs"
+    },
+    {
+      "name": "CarrioncrawlercocoonOnTickUpdate",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "carrioncrawlercocoon_on_tick_update",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ],
+        "files": [
+          "src/main/java/net/mcreator/dcc/procedures/CarrioncrawlercocoonOnTickUpdateProcedure.java"
+        ]
+      },
+      "path": "~/ClassSystem/Paladin"
+    },
+    {
+      "name": "Carrioncrawlercocoon",
+      "type": "block",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "carrioncrawlercocoon",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/dcc/loot_table/blocks/carrioncrawlercocoon.json",
+          "src/main/resources/assets/dcc/models/block/carrioncrawlercocoon.json",
+          "src/main/java/net/mcreator/dcc/block/CarrioncrawlercocoonBlock.java",
+          "src/main/resources/assets/dcc/models/item/carrioncrawlercocoon.json",
+          "src/main/resources/assets/dcc/blockstates/carrioncrawlercocoon.json"
+        ]
+      }
+    },
+    {
+      "name": "CarrionCrawler",
+      "type": "animatedentity",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "carrion_crawler",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/dcc/entity/model/CarrionCrawlerModel.java",
+          "src/main/java/net/mcreator/dcc/client/renderer/CarrionCrawlerRenderer.java",
+          "src/main/resources/data/dcc/neoforge/biome_modifier/carrion_crawler_biome_modifier.json",
+          "src/main/java/net/mcreator/dcc/entity/CarrionCrawlerEntity.java",
+          "src/main/resources/assets/dcc/models/item/carrion_crawler_spawn_egg.json"
+        ]
+      },
+      "path": "~/Mobs"
+    },
+    {
+      "name": "CarrionCrawlerOnEntityTickUpdate",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "carrion_crawler_on_entity_tick_update",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ],
+        "files": [
+          "src/main/java/net/mcreator/dcc/procedures/CarrionCrawlerOnEntityTickUpdateProcedure.java"
+        ]
+      },
+      "path": "~/Mobs"
+    },
+    {
+      "name": "CarrionCrawlerPoison",
+      "type": "projectile",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "carrion_crawler_poison",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/dcc/entity/CarrionCrawlerPoisonEntity.java"
+        ]
+      }
+    },
+    {
+      "name": "CarrionCrawlerPoisonProjectileHitsPlayer",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "carrion_crawler_poison_projectile_hits_player",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ],
+        "files": [
+          "src/main/java/net/mcreator/dcc/procedures/CarrionCrawlerPoisonProjectileHitsPlayerProcedure.java"
+        ]
+      }
+    },
+    {
+      "name": "Tentacles",
+      "type": "animatedentity",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "tentacles",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/dcc/neoforge/biome_modifier/tentacles_biome_modifier.json",
+          "src/main/java/net/mcreator/dcc/client/renderer/TentaclesRenderer.java",
+          "src/main/java/net/mcreator/dcc/entity/TentaclesEntity.java",
+          "src/main/java/net/mcreator/dcc/entity/model/TentaclesModel.java"
+        ]
+      },
+      "path": "~/Mobs"
     }
   ],
   "variable_elements": [
@@ -7239,6 +7382,14 @@
       ],
       "category": "hostile",
       "subtitle": "ogre grunts"
+    },
+    {
+      "name": "ogre_roar",
+      "files": [
+        "ogre-387364"
+      ],
+      "category": "neutral",
+      "subtitle": "Ogre Roars"
     }
   ],
   "tag_elements": {
@@ -7545,7 +7696,9 @@
       "SanctifiedBeacon",
       "GlimmerleafFruitCake",
       "Feywild",
-      "SmallOcherjelly"
+      "SmallOcherjelly",
+      "GlimmerleafFruit",
+      "GlimmerLeaves"
     ]
   },
   "language_map": {
@@ -8256,7 +8409,14 @@
       "gamerule.enableMimics.description": "Make Mimics spawn from chests.",
       "gamerule.enableMimics": "enableMimics",
       "item.dcc.small_ocherjelly_spawn_egg": "Small Ocherjelly Spawn Egg",
-      "entity.dcc.small_ocherjelly": "Small Ocherjelly"
+      "entity.dcc.small_ocherjelly": "Small Ocherjelly",
+      "subtitles.ogre.roar": "Ogre Roars",
+      "subtitles.ogre_roar": "Ogre Roars",
+      "block.dcc.carrioncrawlercocoon": "Carrion crawler cocoon",
+      "entity.dcc.carrion_crawler": "Carrion Crawler",
+      "item.dcc.carrion_crawler_spawn_egg": "Carrion Crawler Spawn Egg",
+      "item.dcc.tentacles_spawn_egg": "Tentacles Spawn Egg",
+      "entity.dcc.tentacles": "Tentacles"
     }
   },
   "metadata": {

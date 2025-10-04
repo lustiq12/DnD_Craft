@@ -9,7 +9,7 @@ import net.minecraft.core.BlockPos;
 
 public class GlimmerLeavesBlock extends LeavesBlock {
 	public GlimmerLeavesBlock() {
-		super(BlockBehaviour.Properties.of().sound(SoundType.AZALEA_LEAVES).strength(1f, 2f).noOcclusion());
+		super(BlockBehaviour.Properties.of().sound(SoundType.AZALEA_LEAVES).strength(0.2f).noOcclusion());
 	}
 
 	@Override

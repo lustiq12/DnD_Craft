@@ -154,17 +154,17 @@ public class Classability2pProcedure {
 									_entity.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SLOWDOWN, 115, 254, false, false));
 								if (entityiterator instanceof LivingEntity _entity && !_entity.level().isClientSide())
 									_entity.addEffect(new MobEffectInstance(MobEffects.JUMP, 115, 254, false, false));
-								{
-									Entity _ent = entityiterator;
-									_ent.teleportTo((entityiterator.getX()), (entityiterator.getY()), (entityiterator.getZ()));
-									if (_ent instanceof ServerPlayer _serverPlayer)
-										_serverPlayer.connection.teleport((entityiterator.getX()), (entityiterator.getY()), (entityiterator.getZ()), _ent.getYRot(), _ent.getXRot());
-								}
 								if (world instanceof ServerLevel _level) {
 									Entity entityToSpawn = DccModEntities.VINES.get().spawn(_level, BlockPos.containing(entityiterator.getX(), entityiterator.getY(), entityiterator.getZ()), MobSpawnType.MOB_SUMMONED);
 									if (entityToSpawn != null) {
 										entityToSpawn.setDeltaMovement(0, 0, 0);
 									}
+								}
+								{
+									Entity _ent = (findEntityInWorldRange(world, VINESEntity.class, (entityiterator.getX()), (entityiterator.getY()), (entityiterator.getZ()), 4));
+									_ent.teleportTo((entityiterator.getX()), (entityiterator.getY()), (entityiterator.getZ()));
+									if (_ent instanceof ServerPlayer _serverPlayer)
+										_serverPlayer.connection.teleport((entityiterator.getX()), (entityiterator.getY()), (entityiterator.getZ()), _ent.getYRot(), _ent.getXRot());
 								}
 								if ((findEntityInWorldRange(world, VINESEntity.class, (entityiterator.getX()), (entityiterator.getY()), (entityiterator.getZ()), 4)) instanceof VINESEntity) {
 									((VINESEntity) (findEntityInWorldRange(world, VINESEntity.class, (entityiterator.getX()), (entityiterator.getY()), (entityiterator.getZ()), 4))).setAnimation("attack");
@@ -182,10 +182,10 @@ public class Classability2pProcedure {
 												((VINESEntity) (findEntityInWorldRange(world, VINESEntity.class, (entityiterator.getX()), (entityiterator.getY()), (entityiterator.getZ()), 4))).setAnimation("despawn");
 											}
 											if (entityiterator.isAlive()) {
-												if (entityiterator instanceof LivingEntity _livingEntity63 && _livingEntity63.getAttributes().hasAttribute(Attributes.KNOCKBACK_RESISTANCE))
-													_livingEntity63.getAttribute(Attributes.KNOCKBACK_RESISTANCE)
-															.setBaseValue(((entityiterator instanceof LivingEntity _livingEntity62 && _livingEntity62.getAttributes().hasAttribute(Attributes.KNOCKBACK_RESISTANCE)
-																	? _livingEntity62.getAttribute(Attributes.KNOCKBACK_RESISTANCE).getBaseValue()
+												if (entityiterator instanceof LivingEntity _livingEntity67 && _livingEntity67.getAttributes().hasAttribute(Attributes.KNOCKBACK_RESISTANCE))
+													_livingEntity67.getAttribute(Attributes.KNOCKBACK_RESISTANCE)
+															.setBaseValue(((entityiterator instanceof LivingEntity _livingEntity66 && _livingEntity66.getAttributes().hasAttribute(Attributes.KNOCKBACK_RESISTANCE)
+																	? _livingEntity66.getAttribute(Attributes.KNOCKBACK_RESISTANCE).getBaseValue()
 																	: 0) / 100 - 1));
 											}
 										});

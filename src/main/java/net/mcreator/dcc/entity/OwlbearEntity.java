@@ -64,7 +64,7 @@ public class OwlbearEntity extends Monster implements GeoEntity {
 		super.defineSynchedData(builder);
 		builder.define(SHOOT, false);
 		builder.define(ANIMATION, "undefined");
-		builder.define(TEXTURE, "owl_bear_txt");
+		builder.define(TEXTURE, "owlbear2");
 	}
 
 	public void setTexture(String texture) {

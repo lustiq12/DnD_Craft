@@ -32,4 +32,9 @@ public class Ogre2Renderer extends GeoEntityRenderer<Ogre2Entity> {
 		this.scaleWidth = scale;
 		super.preRender(poseStack, entity, model, bufferSource, buffer, isReRender, partialTick, packedLight, packedOverlay, color);
 	}
+
+	@Override
+	protected float getDeathMaxRotation(Ogre2Entity entityLivingBaseIn) {
+		return 0.0F;
+	}
 }

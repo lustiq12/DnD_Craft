@@ -1,0 +1,13 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "dcc:block/flowingnlood",
+    "up": "dcc:block/flowingnlood",
+    "north": "dcc:block/flowingnlood",
+    "east": "dcc:block/flowingnlood",
+    "south": "dcc:block/flowingnlood",
+    "west": "dcc:block/flowingnlood",
+    "particle": "dcc:block/flowingnlood"
+  },
+  "render_type": "solid"
+}

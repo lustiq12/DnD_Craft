@@ -21,6 +21,7 @@ import net.minecraft.core.registries.Registries;
 import net.mcreator.dcc.entity.WargEntity;
 import net.mcreator.dcc.entity.VINESEntity;
 import net.mcreator.dcc.entity.ThornEntity;
+import net.mcreator.dcc.entity.TentaclesEntity;
 import net.mcreator.dcc.entity.SmallOcherjellyEntity;
 import net.mcreator.dcc.entity.OwlbearEntity;
 import net.mcreator.dcc.entity.OrkEntity;
@@ -38,6 +39,8 @@ import net.mcreator.dcc.entity.GhoulEntity;
 import net.mcreator.dcc.entity.Fireball2Entity;
 import net.mcreator.dcc.entity.CookEntity;
 import net.mcreator.dcc.entity.ColdrayspellEntity;
+import net.mcreator.dcc.entity.CarrionCrawlerPoisonEntity;
+import net.mcreator.dcc.entity.CarrionCrawlerEntity;
 import net.mcreator.dcc.entity.BowblinEntity;
 import net.mcreator.dcc.entity.BasiliskEntity;
 import net.mcreator.dcc.entity.ArrowEntity;
@@ -125,6 +128,14 @@ public class DccModEntities {
 			EntityType.Builder.<SmallOcherjellyEntity>of(SmallOcherjellyEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3)
 
 					.sized(1.2f, 1f));
+	public static final DeferredHolder<EntityType<?>, EntityType<CarrionCrawlerEntity>> CARRION_CRAWLER = register("carrion_crawler",
+			EntityType.Builder.<CarrionCrawlerEntity>of(CarrionCrawlerEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3)
+
+					.sized(0.6f, 1.8f));
+	public static final DeferredHolder<EntityType<?>, EntityType<CarrionCrawlerPoisonEntity>> CARRION_CRAWLER_POISON = register("carrion_crawler_poison",
+			EntityType.Builder.<CarrionCrawlerPoisonEntity>of(CarrionCrawlerPoisonEntity::new, MobCategory.MISC).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(0.5f, 0.5f));
+	public static final DeferredHolder<EntityType<?>, EntityType<TentaclesEntity>> TENTACLES = register("tentacles",
+			EntityType.Builder.<TentaclesEntity>of(TentaclesEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).fireImmune().sized(0.6f, 1.8f));
 
 	// Start of user code block custom entities
 	// End of user code block custom entities
@@ -158,6 +169,8 @@ public class DccModEntities {
 		VINESEntity.init(event);
 		LivingSwordEntity.init(event);
 		SmallOcherjellyEntity.init(event);
+		CarrionCrawlerEntity.init(event);
+		TentaclesEntity.init(event);
 	}
 
 	@SubscribeEvent
@@ -181,5 +194,7 @@ public class DccModEntities {
 		event.put(VINES.get(), VINESEntity.createAttributes().build());
 		event.put(LIVING_SWORD.get(), LivingSwordEntity.createAttributes().build());
 		event.put(SMALL_OCHERJELLY.get(), SmallOcherjellyEntity.createAttributes().build());
+		event.put(CARRION_CRAWLER.get(), CarrionCrawlerEntity.createAttributes().build());
+		event.put(TENTACLES.get(), TentaclesEntity.createAttributes().build());
 	}
 }

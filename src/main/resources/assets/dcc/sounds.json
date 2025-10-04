@@ -7,5 +7,14 @@
         "stream": false
       }
     ]
+  },
+  "ogre_roar": {
+    "subtitle": "subtitles.ogre_roar",
+    "sounds": [
+      {
+        "name": "dcc:ogre-387364",
+        "stream": false
+      }
+    ]
   }
 }

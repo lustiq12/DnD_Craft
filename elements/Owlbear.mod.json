@@ -4,7 +4,7 @@
   "definition": {
     "mobName": "Owlbear",
     "mobLabel": "",
-    "mobModelTexture": "owl_bear_txt.png",
+    "mobModelTexture": "owlbear2.png",
     "mobModelGlowTexture": "",
     "visualScale": {
       "fixedValue": 1.5

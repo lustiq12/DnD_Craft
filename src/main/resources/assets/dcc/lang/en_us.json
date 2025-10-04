@@ -705,5 +705,12 @@
   "gamerule.enableMimics.description": "Make Mimics spawn from chests.",
   "gamerule.enableMimics": "enableMimics",
   "item.dcc.small_ocherjelly_spawn_egg": "Small Ocherjelly Spawn Egg",
-  "entity.dcc.small_ocherjelly": "Small Ocherjelly"
+  "entity.dcc.small_ocherjelly": "Small Ocherjelly",
+  "subtitles.ogre.roar": "Ogre Roars",
+  "subtitles.ogre_roar": "Ogre Roars",
+  "block.dcc.carrioncrawlercocoon": "Carrion crawler cocoon",
+  "entity.dcc.carrion_crawler": "Carrion Crawler",
+  "item.dcc.carrion_crawler_spawn_egg": "Carrion Crawler Spawn Egg",
+  "item.dcc.tentacles_spawn_egg": "Tentacles Spawn Egg",
+  "entity.dcc.tentacles": "Tentacles"
 }

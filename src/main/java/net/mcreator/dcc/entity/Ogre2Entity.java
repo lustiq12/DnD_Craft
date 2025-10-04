@@ -69,7 +69,7 @@ public class Ogre2Entity extends Monster implements GeoEntity {
 		super.defineSynchedData(builder);
 		builder.define(SHOOT, false);
 		builder.define(ANIMATION, "undefined");
-		builder.define(TEXTURE, "ogretexture");
+		builder.define(TEXTURE, "ogre2");
 	}
 
 	public void setTexture(String texture) {
@@ -179,6 +179,9 @@ public class Ogre2Entity extends Monster implements GeoEntity {
 					&& !this.isSprinting()) {
 				return event.setAndContinue(RawAnimation.begin().thenLoop("walk"));
 			}
+			if (this.isDeadOrDying()) {
+				return event.setAndContinue(RawAnimation.begin().thenPlay("death"));
+			}
 			if (this.isSprinting()) {
 				return event.setAndContinue(RawAnimation.begin().thenLoop("walk"));
 			}
@@ -200,7 +203,7 @@ public class Ogre2Entity extends Monster implements GeoEntity {
 		}
 		if (this.swinging && event.getController().getAnimationState() == AnimationController.State.STOPPED) {
 			event.getController().forceAnimationReset();
-			return event.setAndContinue(RawAnimation.begin().thenPlay("attack"));
+			return event.setAndContinue(RawAnimation.begin().thenPlay("normalattack"));
 		}
 		return PlayState.CONTINUE;
 	}
@@ -227,7 +230,7 @@ public class Ogre2Entity extends Monster implements GeoEntity {
 	@Override
 	protected void tickDeath() {
 		++this.deathTime;
-		if (this.deathTime == 40) {
+		if (this.deathTime == 35) {
 			this.remove(Ogre2Entity.RemovalReason.KILLED);
 			this.dropExperience(this);
 		}

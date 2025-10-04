@@ -15,4 +15,5 @@ import net.mcreator.dcc.DccMod;
 public class DccModSounds {
 	public static final DeferredRegister<SoundEvent> REGISTRY = DeferredRegister.create(Registries.SOUND_EVENT, DccMod.MODID);
 	public static final DeferredHolder<SoundEvent, SoundEvent> OGRE_DEATH = REGISTRY.register("ogre_death", () -> SoundEvent.createVariableRangeEvent(ResourceLocation.fromNamespaceAndPath("dcc", "ogre_death")));
+	public static final DeferredHolder<SoundEvent, SoundEvent> OGRE_ROAR = REGISTRY.register("ogre_roar", () -> SoundEvent.createVariableRangeEvent(ResourceLocation.fromNamespaceAndPath("dcc", "ogre_roar")));
 }

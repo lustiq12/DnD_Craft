@@ -18,7 +18,7 @@
     "modelShadowSize": 0.5,
     "mountedYOffset": 0.0,
     "stepHeight": 0.6,
-    "hasSpawnEgg": true,
+    "hasSpawnEgg": false,
     "spawnEggBaseColor": {
       "value": -1,
       "falpha": 0.0
@@ -102,6 +102,9 @@
     "raidCelebrationSound": {
       "value": ""
     },
+    "onMobTickUpdate": {
+      "name": "VinesEntityDespawn"
+    },
     "onInitialSpawn": {
       "name": "VinesEntityDespawn"
     },
@@ -153,7 +156,7 @@
       4,
       2
     ],
-    "spawnThisMob": true,
+    "spawnThisMob": false,
     "doesDespawnWhenIdle": true,
     "spawningProbability": 20,
     "mobSpawningType": "monster",
