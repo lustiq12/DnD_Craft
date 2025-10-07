@@ -220,6 +220,7 @@ public class DccModItems {
 	public static final DeferredItem<Item> MAGICSCROLL_SNOWSTORM = REGISTRY.register("magicscroll_snowstorm", MagicscrollSnowstormItem::new);
 	public static final DeferredItem<Item> MAGICSCROLL_STRONG_INVISIBILITY = REGISTRY.register("magicscroll_strong_invisibility", MagicscrollStrongInvisibilityItem::new);
 	public static final DeferredItem<Item> MAGICSCROLL_THUNDERWAVE = REGISTRY.register("magicscroll_thunderwave", MagicscrollThunderwaveItem::new);
+	public static final DeferredItem<Item> WATER_REPLACER = block(DccModBlocks.WATER_REPLACER);
 
 	// Start of user code block custom items
 	// End of user code block custom items

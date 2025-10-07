@@ -9,12 +9,12 @@ import net.mcreator.dcc.entity.BullywugEntity;
 public class BullywugModel extends GeoModel<BullywugEntity> {
 	@Override
 	public ResourceLocation getAnimationResource(BullywugEntity entity) {
-		return ResourceLocation.parse("dcc:animations/bullywug.animation.json");
+		return ResourceLocation.parse("dcc:animations/bullywugknight.animation.json");
 	}
 
 	@Override
 	public ResourceLocation getModelResource(BullywugEntity entity) {
-		return ResourceLocation.parse("dcc:geo/bullywug.geo.json");
+		return ResourceLocation.parse("dcc:geo/bullywugknight.geo.json");
 	}
 
 	@Override

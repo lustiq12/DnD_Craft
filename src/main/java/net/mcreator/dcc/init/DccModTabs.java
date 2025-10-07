@@ -121,6 +121,9 @@ public class DccModTabs {
 				tabData.accept(DccModBlocks.CARRIONCRAWLERCOCOON.get().asItem());
 				tabData.accept(DccModItems.CARRION_CRAWLER_SPAWN_EGG.get());
 				tabData.accept(DccModItems.GHOUL_SPAWN_EGG.get());
+				tabData.accept(DccModItems.BULLYWUG_WARRIOR_SPAWN_EGG.get());
+				tabData.accept(DccModItems.BULLYWUG_TADPOLE_SPAWN_EGG.get());
+				tabData.accept(DccModItems.BULLYWUG_SPAWN_EGG.get());
 			}).build());
 
 	@SubscribeEvent

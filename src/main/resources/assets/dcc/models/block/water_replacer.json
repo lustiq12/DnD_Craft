@@ -1,0 +1,13 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "dcc:block/water_still",
+    "up": "dcc:block/water_still",
+    "north": "dcc:block/water_still",
+    "east": "dcc:block/water_still",
+    "south": "dcc:block/water_still",
+    "west": "dcc:block/water_still",
+    "particle": "dcc:block/water_still"
+  },
+  "render_type": "solid"
+}

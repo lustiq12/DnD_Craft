@@ -2,12 +2,12 @@
   "_fv": 79,
   "_type": "block",
   "definition": {
-    "texture": "carrioncocoontop",
-    "textureTop": "carrioncocoontop",
-    "textureLeft": "carrioncocoonside",
-    "textureFront": "carrioncocoonside",
-    "textureRight": "carrioncocoonside",
-    "textureBack": "carrioncocoonside",
+    "texture": "water_still",
+    "textureTop": "",
+    "textureLeft": "",
+    "textureFront": "",
+    "textureRight": "",
+    "textureBack": "",
     "renderType": 10,
     "customModelName": "Normal",
     "rotationMode": 0,
@@ -18,8 +18,8 @@
     "itemTexture": "",
     "particleTexture": "",
     "blockSetType": "OAK",
-    "tintType": "No tint",
-    "isItemTinted": false,
+    "tintType": "Grass",
+    "isItemTinted": true,
     "hasTransparency": false,
     "connectedSides": false,
     "transparencyType": "SOLID",
@@ -36,12 +36,13 @@
       }
     ],
     "customProperties": [],
-    "name": "Carrion Crawler Cocoon Inactive",
+    "name": "Water Replacer",
     "specialInformation": {
       "fixedValue": [
-        "This has no real use, it will just convert to a normal one ",
-        "after some time",
-        "it is only used for the generation of this block and has no other use"
+        "This has no real use, it will just convert to a normal water",
+        "after some time.",
+        "I have to use it for these puddles you probably saw",
+        "because of a bug in the minecraft source code."
       ]
     },
     "hardness": 1.0,
@@ -132,7 +133,7 @@
     "fluidCapacity": 8000,
     "fluidRestrictions": [],
     "onTickUpdate": {
-      "name": "CarrioncrawlercocoonBlockAdded"
+      "name": "ReplaceWithWater"
     },
     "generateFeature": false,
     "restrictionBiomes": [],

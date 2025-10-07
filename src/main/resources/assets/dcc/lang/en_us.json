@@ -727,8 +727,8 @@
   "item.dcc.bullywug_spawn_egg": "Bullywug Spawn Egg",
   "item.dcc.bullywug_tadpole_spawn_egg": "Bullywug Tadpole Spawn Egg",
   "entity.dcc.bullywug_tadpole": "Bullywug Tadpole",
-  "entity.dcc.bullywug_warrior": "Bullywug",
-  "item.dcc.bullywug_warrior_spawn_egg": "Bullywug Spawn Egg",
+  "entity.dcc.bullywug_warrior": "Bullywug Warrior",
+  "item.dcc.bullywug_warrior_spawn_egg": "Bullywug Warrior Spawn Egg",
   "biome.dcc.feywild_swamp": "Feywild Forest",
   "item.dcc.magicscroll_cold_ray.description_1": "Magic Item",
   "item.dcc.magicscroll_cold_ray": "§6Magic Scroll",
@@ -765,5 +765,10 @@
   "item.dcc.magicscroll_thunderwave": "§6Magic Scroll",
   "item.dcc.magicscroll_thunderwave.description_2": "§Common",
   "item.dcc.magicscroll_thunderwave.description_1": "Magic Item",
-  "item.dcc.magicscroll_thunderwave.description_0": "-Thunderwave"
+  "item.dcc.magicscroll_thunderwave.description_0": "-Thunderwave",
+  "block.dcc.water_replacer.description_2": "I have to use it for these puddles you probably saw",
+  "block.dcc.water_replacer.description_1": "after some time.",
+  "block.dcc.water_replacer.description_0": "This has no real use, it will just convert to a normal water",
+  "block.dcc.water_replacer": "Water Replacer",
+  "block.dcc.water_replacer.description_3": "because of a bug in the minecraft source code."
 }

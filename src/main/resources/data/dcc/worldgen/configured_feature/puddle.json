@@ -4,7 +4,7 @@
     "fluid": {
       "type": "minecraft:simple_state_provider",
       "state": {
-        "Name": "minecraft:lapis_block"
+        "Name": "dcc:water_replacer"
       }
     },
     "barrier": {
