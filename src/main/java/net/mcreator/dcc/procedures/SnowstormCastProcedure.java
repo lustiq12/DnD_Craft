@@ -4,6 +4,7 @@ import net.minecraft.world.phys.Vec3;
 import net.minecraft.world.phys.AABB;
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.level.Level;
+import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.Entity;
@@ -18,12 +19,15 @@ import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.core.BlockPos;
 
+import net.mcreator.dcc.init.DccModItems;
 import net.mcreator.dcc.DccMod;
 
 import java.util.Comparator;
 
 public class SnowstormCastProcedure {
-	public static void execute(LevelAccessor world, double x, double y, double z) {
+	public static void execute(LevelAccessor world, double x, double y, double z, Entity entity) {
+		if (entity == null)
+			return;
 		if (world instanceof ServerLevel _level)
 			_level.sendParticles(ParticleTypes.SNOWFLAKE, x, y, z, 7000, 3, 3, 3, 0.001);
 		if (world instanceof Level _level) {
@@ -133,5 +137,8 @@ public class SnowstormCastProcedure {
 				}
 			}
 		});
+		if ((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem() == DccModItems.MAGICSCROLL_SNOWSTORM.get()) {
+			(entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).shrink(1);
+		}
 	}
 }

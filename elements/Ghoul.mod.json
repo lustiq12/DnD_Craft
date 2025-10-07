@@ -27,7 +27,11 @@
       "value": -10066330,
       "falpha": 0.0
     },
-    "creativeTabs": [],
+    "creativeTabs": [
+      {
+        "value": "CUSTOM:DnD"
+      }
+    ],
     "isBoss": false,
     "bossBarColor": "PINK",
     "bossBarType": "PROGRESS",
@@ -108,12 +112,12 @@
     "model": "ghoul.geo.json",
     "groupName": "",
     "animation1": "idle",
-    "animation2": "walk",
+    "animation2": "run",
     "animation3": "",
     "animation4": "attack",
     "animation5": "",
     "animation6": "",
-    "animation7": "",
+    "animation7": "run",
     "animation8": "",
     "animation9": "",
     "animation10": "",
@@ -122,7 +126,7 @@
     "enable4": true,
     "enable5": false,
     "enable6": false,
-    "enable7": false,
+    "enable7": true,
     "enable8": false,
     "enable9": false,
     "enable10": false,
@@ -152,11 +156,69 @@
     ],
     "spawnThisMob": true,
     "doesDespawnWhenIdle": true,
-    "spawningProbability": 2,
+    "spawningProbability": 40,
     "mobSpawningType": "monster",
     "minNumberOfMobsPerGroup": 1,
     "maxNumberOfMobsPerGroup": 2,
-    "restrictionBiomes": [],
+    "restrictionBiomes": [
+      {
+        "value": "plains"
+      },
+      {
+        "value": "birch_forest"
+      },
+      {
+        "value": "roofed_forest"
+      },
+      {
+        "value": "mutated_forest"
+      },
+      {
+        "value": "forest"
+      },
+      {
+        "value": "mutated_birch_forest"
+      },
+      {
+        "value": "extreme_hills_with_trees"
+      },
+      {
+        "value": "desert"
+      },
+      {
+        "value": "redwood_taiga"
+      },
+      {
+        "value": "taiga_cold"
+      },
+      {
+        "value": "taiga"
+      },
+      {
+        "value": "dripstone_caves"
+      },
+      {
+        "value": "lush_caves"
+      },
+      {
+        "value": "bamboo_jungle"
+      },
+      {
+        "value": "jungle"
+      },
+      {
+        "value": "jungle_edge"
+      },
+      {
+        "value": "river"
+      },
+      {
+        "value": "savanna"
+      },
+      {
+        "value": "wooded_badlands_plateau"
+      }
+    ],
     "spawnInDungeons": false
   }
 }

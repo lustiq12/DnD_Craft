@@ -17,12 +17,14 @@ import net.minecraft.world.WorldlyContainer;
 import net.minecraft.core.registries.BuiltInRegistries;
 
 import net.mcreator.dcc.block.entity.SanctifiedBeaconBlockEntity;
+import net.mcreator.dcc.block.entity.CarrioncrawlercocoonBlockEntity;
 import net.mcreator.dcc.DccMod;
 
 @EventBusSubscriber(bus = EventBusSubscriber.Bus.MOD)
 public class DccModBlockEntities {
 	public static final DeferredRegister<BlockEntityType<?>> REGISTRY = DeferredRegister.create(BuiltInRegistries.BLOCK_ENTITY_TYPE, DccMod.MODID);
 	public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<?>> SANCTIFIED_BEACON = register("sanctified_beacon", DccModBlocks.SANCTIFIED_BEACON, SanctifiedBeaconBlockEntity::new);
+	public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<?>> CARRIONCRAWLERCOCOON = register("carrioncrawlercocoon", DccModBlocks.CARRIONCRAWLERCOCOON, CarrioncrawlercocoonBlockEntity::new);
 
 	// Start of user code block custom block entities
 	// End of user code block custom block entities
@@ -33,5 +35,6 @@ public class DccModBlockEntities {
 	@SubscribeEvent
 	public static void registerCapabilities(RegisterCapabilitiesEvent event) {
 		event.registerBlockEntity(Capabilities.ItemHandler.BLOCK, SANCTIFIED_BEACON.get(), (blockEntity, side) -> new SidedInvWrapper((WorldlyContainer) blockEntity, side));
+		event.registerBlockEntity(Capabilities.ItemHandler.BLOCK, CARRIONCRAWLERCOCOON.get(), (blockEntity, side) -> new SidedInvWrapper((WorldlyContainer) blockEntity, side));
 	}
 }

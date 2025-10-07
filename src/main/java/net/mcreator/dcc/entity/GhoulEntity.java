@@ -153,8 +153,11 @@ public class GhoulEntity extends Monster implements GeoEntity {
 		if (this.animationprocedure.equals("empty")) {
 			if ((event.isMoving() || !(event.getLimbSwingAmount() > -0.15F && event.getLimbSwingAmount() < 0.15F))
 
-			) {
-				return event.setAndContinue(RawAnimation.begin().thenLoop("walk"));
+					&& !this.isSprinting()) {
+				return event.setAndContinue(RawAnimation.begin().thenLoop("run"));
+			}
+			if (this.isSprinting()) {
+				return event.setAndContinue(RawAnimation.begin().thenLoop("run"));
 			}
 			return event.setAndContinue(RawAnimation.begin().thenLoop("idle"));
 		}

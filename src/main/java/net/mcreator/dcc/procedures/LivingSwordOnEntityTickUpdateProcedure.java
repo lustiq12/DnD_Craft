@@ -9,7 +9,7 @@ public class LivingSwordOnEntityTickUpdateProcedure {
 			return;
 		if (!world.isClientSide()) {
 			entity.getPersistentData().putDouble("despawn", (entity.getPersistentData().getDouble("despawn") + 1));
-			if (300 <= entity.getPersistentData().getDouble("despawn")) {
+			if (600 <= entity.getPersistentData().getDouble("despawn")) {
 				if (!entity.level().isClientSide())
 					entity.discard();
 			}

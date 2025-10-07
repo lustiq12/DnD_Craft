@@ -1,6 +1,7 @@
 package net.mcreator.dcc.procedures;
 
 import net.minecraft.world.level.LevelAccessor;
+import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.effect.MobEffects;
@@ -9,6 +10,7 @@ import net.minecraft.server.level.ServerLevel;
 import net.minecraft.core.particles.SimpleParticleType;
 
 import net.mcreator.dcc.init.DccModParticleTypes;
+import net.mcreator.dcc.init.DccModItems;
 
 public class FakelifeCastProcedure {
 	public static void execute(LevelAccessor world, double x, double y, double z, Entity entity) {
@@ -18,5 +20,8 @@ public class FakelifeCastProcedure {
 			_level.sendParticles((SimpleParticleType) (DccModParticleTypes.SHIELD_PARTICLE.get()), x, y, z, 1000, 2, 2, 2, 1);
 		if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
 			_entity.addEffect(new MobEffectInstance(MobEffects.ABSORPTION, 1200, 3));
+		if ((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem() == DccModItems.MAGICSCROLL_FAKE_LIFE.get()) {
+			(entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).shrink(1);
+		}
 	}
 }

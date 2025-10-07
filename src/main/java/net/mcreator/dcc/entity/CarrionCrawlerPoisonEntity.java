@@ -23,6 +23,7 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.core.registries.BuiltInRegistries;
 
+import net.mcreator.dcc.procedures.CarrionCrawlerPoisonWhileProjectileFlyingTickProcedure;
 import net.mcreator.dcc.procedures.CarrionCrawlerPoisonProjectileHitsPlayerProcedure;
 import net.mcreator.dcc.init.DccModEntities;
 
@@ -101,6 +102,7 @@ public class CarrionCrawlerPoisonEntity extends AbstractArrow implements ItemSup
 	@Override
 	public void tick() {
 		super.tick();
+		CarrionCrawlerPoisonWhileProjectileFlyingTickProcedure.execute(this.getOwner());
 		if (this.inGround)
 			this.discard();
 	}

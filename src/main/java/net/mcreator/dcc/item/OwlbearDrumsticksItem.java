@@ -14,12 +14,13 @@ import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.network.chat.Component;
 
 import net.mcreator.dcc.procedures.VeteranquestProcedure;
+import net.mcreator.dcc.procedures.ResiIProcedure;
 
 import java.util.List;
 
 public class OwlbearDrumsticksItem extends Item {
 	public OwlbearDrumsticksItem() {
-		super(new Item.Properties().food((new FoodProperties.Builder()).nutrition(10).saturationModifier(8f).build()));
+		super(new Item.Properties().food((new FoodProperties.Builder()).nutrition(10).saturationModifier(4f).build()));
 	}
 
 	@Override
@@ -37,7 +38,7 @@ public class OwlbearDrumsticksItem extends Item {
 		double x = entity.getX();
 		double y = entity.getY();
 		double z = entity.getZ();
-		VeteranquestProcedure.execute(world, entity);
+		ResiIProcedure.execute(entity);
 		if (itemstack.isEmpty()) {
 			return retval;
 		} else {

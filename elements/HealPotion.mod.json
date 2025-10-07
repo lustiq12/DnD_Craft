@@ -5,9 +5,10 @@
     "renderType": 0,
     "texture": "heal",
     "customModelName": "Normal",
+    "guiTexture": "",
     "customProperties": {},
     "states": [],
-    "name": "§6Heal Potion",
+    "name": "§6Potion of Healing",
     "rarity": "COMMON",
     "creativeTabs": [
       {
@@ -59,6 +60,10 @@
     "isAlwaysEdible": true,
     "animation": "drink",
     "isMusicDisc": false,
+    "musicDiscMusic": {
+      "value": ""
+    },
+    "musicDiscDescription": "",
     "musicDiscLengthInTicks": 0,
     "musicDiscAnalogOutput": 0,
     "providedBannerPatterns": []

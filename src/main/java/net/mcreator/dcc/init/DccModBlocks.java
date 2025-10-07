@@ -21,6 +21,7 @@ import net.mcreator.dcc.block.Cookedowlbearmeatblock3Block;
 import net.mcreator.dcc.block.Cookedowlbearmeatblock2Block;
 import net.mcreator.dcc.block.CookedOwlbearMeatBlockBlock;
 import net.mcreator.dcc.block.CarrioncrawlercocoonBlock;
+import net.mcreator.dcc.block.CarrionCrawlerCocoonInactiveBlock;
 import net.mcreator.dcc.block.AdantiumOreBlock;
 import net.mcreator.dcc.DccMod;
 
@@ -40,6 +41,7 @@ public class DccModBlocks {
 	public static final DeferredBlock<Block> FEYWILD_PORTAL = REGISTRY.register("feywild_portal", FeywildPortalBlock::new);
 	public static final DeferredBlock<Block> SANCTIFIED_BEACON = REGISTRY.register("sanctified_beacon", SanctifiedBeaconBlock::new);
 	public static final DeferredBlock<Block> CARRIONCRAWLERCOCOON = REGISTRY.register("carrioncrawlercocoon", CarrioncrawlercocoonBlock::new);
+	public static final DeferredBlock<Block> CARRION_CRAWLER_COCOON_INACTIVE = REGISTRY.register("carrion_crawler_cocoon_inactive", CarrionCrawlerCocoonInactiveBlock::new);
 	// Start of user code block custom blocks
 	// End of user code block custom blocks
 }

@@ -1,6 +1,7 @@
 {
   "replace": false,
   "values": [
-    "dcc:glimmer_leaves"
+    "dcc:glimmer_leaves",
+    "dcc:carrioncrawlercocoon"
   ]
 }

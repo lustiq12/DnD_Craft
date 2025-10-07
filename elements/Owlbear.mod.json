@@ -7,7 +7,7 @@
     "mobModelTexture": "owlbear2.png",
     "mobModelGlowTexture": "",
     "visualScale": {
-      "fixedValue": 1.5
+      "fixedValue": 2.0
     },
     "boundingBoxScale": {
       "fixedValue": 1.5

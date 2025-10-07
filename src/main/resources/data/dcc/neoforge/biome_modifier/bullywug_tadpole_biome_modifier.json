@@ -1,10 +1,8 @@
 {
   "type": "neoforge:add_spawns",
-  "biomes": {
-    "type": "neoforge:any"
-  },
+  "biomes": "dcc:feywild_swamp",
   "spawners": {
-    "type": "dcc:carrion_crawler",
+    "type": "dcc:bullywug_tadpole",
     "weight": 20,
     "minCount": 4,
     "maxCount": 4

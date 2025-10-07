@@ -2,12 +2,12 @@
   "_fv": 79,
   "_type": "block",
   "definition": {
-    "texture": "flowingnlood",
-    "textureTop": "",
-    "textureLeft": "",
-    "textureFront": "",
-    "textureRight": "",
-    "textureBack": "",
+    "texture": "carrioncocoontop",
+    "textureTop": "carrioncocoontop",
+    "textureLeft": "carrioncocoonside",
+    "textureFront": "carrioncocoonside",
+    "textureRight": "carrioncocoonside",
+    "textureBack": "carrioncocoonside",
     "renderType": 10,
     "customModelName": "Normal",
     "rotationMode": 0,
@@ -38,24 +38,34 @@
     "customProperties": [],
     "name": "Carrion crawler cocoon",
     "specialInformation": {
-      "fixedValue": []
+      "fixedValue": [
+        "If you place this in survival you will be able to hatch",
+        "a friendly Carrion Crawler after some time,",
+        "But make sure to be nearby, otherwise it will feel left aside and attack you",
+        "however if you place this in creative it will",
+        "work just like a normal generated one and hatch when you walk under it"
+      ]
     },
-    "hardness": 1.0,
-    "resistance": 10.0,
+    "hardness": 3.0,
+    "resistance": 2.0,
     "hasGravity": false,
     "isWaterloggable": false,
     "hasBlockItem": true,
     "maxStackSize": 64,
     "rarity": "COMMON",
     "immuneToFire": false,
-    "creativeTabs": [],
-    "destroyTool": "Not specified",
+    "creativeTabs": [
+      {
+        "value": "CUSTOM:DnD"
+      }
+    ],
+    "destroyTool": "hoe",
     "customDrop": {
       "value": ""
     },
     "dropAmount": 1,
     "useLootTableForDrops": false,
-    "requiresCorrectTool": false,
+    "requiresCorrectTool": true,
     "enchantPowerBonus": 0.0,
     "plantsGrowOn": false,
     "canRedstoneConnect": false,
@@ -85,7 +95,7 @@
     "isNotColidable": false,
     "isCustomSoundType": false,
     "soundOnStep": {
-      "value": "GROUND"
+      "value": "WOOD"
     },
     "breakSound": {
       "value": ""
@@ -103,7 +113,7 @@
       "value": ""
     },
     "luminance": 0,
-    "unbreakable": true,
+    "unbreakable": false,
     "vanillaToolTier": "NONE",
     "isBonemealable": false,
     "sensitiveToVibration": false,
@@ -111,7 +121,7 @@
     "vibrationSensitivityRadius": {
       "fixedValue": 7.0
     },
-    "hasInventory": false,
+    "hasInventory": true,
     "openGUIOnRightClick": false,
     "inventorySize": 9,
     "inventoryStackSize": 99,
@@ -129,6 +139,9 @@
     "fluidRestrictions": [],
     "onTickUpdate": {
       "name": "CarrioncrawlercocoonOnTickUpdate"
+    },
+    "onBlockPlayedBy": {
+      "name": "CarrioncrawlercocoonBlockIsPlacedBy"
     },
     "generateFeature": false,
     "restrictionBiomes": [],

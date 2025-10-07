@@ -36,5 +36,12 @@ public class MonsterDelightlootProcedure {
 				_level.addFreshEntity(entityToSpawn);
 			}
 		}
+		for (int index2 = 0; index2 < 8; index2++) {
+			if (world instanceof ServerLevel _level) {
+				ItemEntity entityToSpawn = new ItemEntity(_level, x, y, z, new ItemStack(DccModItems.GOLD_COIN.get()));
+				entityToSpawn.setPickUpDelay(10);
+				_level.addFreshEntity(entityToSpawn);
+			}
+		}
 	}
 }

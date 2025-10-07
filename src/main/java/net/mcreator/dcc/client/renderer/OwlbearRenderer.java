@@ -27,7 +27,7 @@ public class OwlbearRenderer extends GeoEntityRenderer<OwlbearEntity> {
 
 	@Override
 	public void preRender(PoseStack poseStack, OwlbearEntity entity, BakedGeoModel model, MultiBufferSource bufferSource, VertexConsumer buffer, boolean isReRender, float partialTick, int packedLight, int packedOverlay, int color) {
-		float scale = 1.5f;
+		float scale = 2f;
 		this.scaleHeight = scale;
 		this.scaleWidth = scale;
 		super.preRender(poseStack, entity, model, bufferSource, buffer, isReRender, partialTick, packedLight, packedOverlay, color);

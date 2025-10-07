@@ -15,12 +15,6 @@
               "blocks": [
                 {
                   "Name": "minecraft:structure_block"
-                },
-                {
-                  "Name": "minecraft:dirt"
-                },
-                {
-                  "Name": "minecraft:grass_block"
                 }
               ]
             }

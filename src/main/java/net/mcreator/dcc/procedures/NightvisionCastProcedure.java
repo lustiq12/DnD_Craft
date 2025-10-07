@@ -2,12 +2,15 @@ package net.mcreator.dcc.procedures;
 
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.level.Level;
+import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.core.particles.ParticleTypes;
+
+import net.mcreator.dcc.init.DccModItems;
 
 public class NightvisionCastProcedure {
 	public static void execute(LevelAccessor world, double x, double y, double z, Entity entity) {
@@ -22,6 +25,9 @@ public class NightvisionCastProcedure {
 				_entity.addEffect(new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 150, 1));
 			if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
 				_entity.addEffect(new MobEffectInstance(MobEffects.REGENERATION, 500, 1));
+		}
+		if ((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem() == DccModItems.MAGICSCROLL_NIGHT_VISION.get()) {
+			(entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).shrink(1);
 		}
 	}
 }

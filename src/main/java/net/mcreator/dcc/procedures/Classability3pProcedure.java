@@ -170,10 +170,10 @@ public class Classability3pProcedure {
 					for (Entity entityiterator : world.getEntitiesOfClass(Entity.class, new AABB(_center, _center).inflate(4 / 2d), e -> true).stream().sorted(Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_center))).toList()) {
 						if (entityiterator instanceof Wolf) {
 							if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
-								_entity.addEffect(new MobEffectInstance(MobEffects.DAMAGE_BOOST, 200, 2, false, true));
+								_entity.addEffect(new MobEffectInstance(MobEffects.DAMAGE_BOOST, 200, 0, false, true));
 							if (entityiterator instanceof TamableAnimal _toTame && entity instanceof Player _owner)
 								_toTame.tame(_owner);
-							DccMod.queueServerWork(200, () -> {
+							DccMod.queueServerWork(400, () -> {
 								if (!entityiterator.level().isClientSide())
 									entityiterator.discard();
 							});
@@ -205,7 +205,7 @@ public class Classability3pProcedure {
 						if (entityiterator instanceof LivingSwordEntity) {
 							if (entityiterator instanceof TamableAnimal _toTame && entity instanceof Player _owner)
 								_toTame.tame(_owner);
-							DccMod.queueServerWork(300, () -> {
+							DccMod.queueServerWork(600, () -> {
 								if (!entityiterator.level().isClientSide())
 									entityiterator.discard();
 							});

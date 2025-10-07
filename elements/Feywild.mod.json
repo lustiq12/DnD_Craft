@@ -4,6 +4,9 @@
   "definition": {
     "biomesInDimension": [
       {
+        "value": "CUSTOM:FeywildSwamp"
+      },
+      {
         "value": "CUSTOM:FeywildForest"
       }
     ],
@@ -12,11 +15,11 @@
       "value": "Blocks.STONE#0"
     },
     "fluidBlock": {
-      "value": "Blocks.FLOWING_WATER"
+      "value": "Blocks.WATER"
     },
     "seaLevel": 63,
     "generateOreVeins": true,
-    "generateAquifers": true,
+    "generateAquifers": false,
     "horizontalNoiseSize": 1,
     "verticalNoiseSize": 4,
     "defaultEffects": "overworld",

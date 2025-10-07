@@ -50,11 +50,6 @@ public class StrongfistkiProcedure {
 			_vars.Ki = entity.getData(DccModVariables.PLAYER_VARIABLES).Ki - 1;
 			_vars.syncPlayerVariables(entity);
 		}
-		{
-			DccModVariables.PlayerVariables _vars = entity.getData(DccModVariables.PLAYER_VARIABLES);
-			_vars.cooldown = 15;
-			_vars.syncPlayerVariables(entity);
-		}
 		DccMod.queueServerWork(100, () -> {
 			if (world instanceof ServerLevel _level)
 				_level.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(),

@@ -44,7 +44,7 @@
       "name": "Veteranquest"
     },
     "onFinishUsingItem": {
-      "name": "Veteranquest"
+      "name": "ResiI"
     },
     "enableRanged": false,
     "shootConstantly": false,
@@ -55,7 +55,7 @@
     "projectileDisableAmmoCheck": false,
     "isFood": true,
     "nutritionalValue": 10,
-    "saturation": 8.0,
+    "saturation": 4.0,
     "eatResultItem": {
       "value": "Items.BOWL"
     },

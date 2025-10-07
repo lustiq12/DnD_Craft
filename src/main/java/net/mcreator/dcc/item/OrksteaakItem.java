@@ -20,7 +20,7 @@ import java.util.List;
 
 public class OrksteaakItem extends Item {
 	public OrksteaakItem() {
-		super(new Item.Properties().food((new FoodProperties.Builder()).nutrition(9).saturationModifier(6f).build()));
+		super(new Item.Properties().food((new FoodProperties.Builder()).nutrition(9).saturationModifier(3f).build()));
 	}
 
 	@Override

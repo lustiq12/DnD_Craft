@@ -1,6 +1,7 @@
 {
   "replace": false,
   "values": [
+    "dcc:feywild_swamp",
     "dcc:feywild_forest"
   ]
 }

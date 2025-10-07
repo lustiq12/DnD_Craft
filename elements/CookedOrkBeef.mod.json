@@ -5,6 +5,7 @@
     "renderType": 0,
     "texture": "cookedorkbeef",
     "customModelName": "Normal",
+    "guiTexture": "",
     "customProperties": {},
     "states": [],
     "name": "Cooked Ork Beef",
@@ -48,7 +49,7 @@
     "projectileDisableAmmoCheck": false,
     "isFood": true,
     "nutritionalValue": 7,
-    "saturation": 5.0,
+    "saturation": 2.0,
     "eatResultItem": {
       "value": ""
     },

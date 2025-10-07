@@ -103,7 +103,7 @@
       "value": ""
     },
     "onMobTickUpdate": {
-      "name": "VinesEntityDespawn"
+      "name": "TentaclesEntityDespawn"
     },
     "onInitialSpawn": {
       "name": "VinesEntityDespawn"

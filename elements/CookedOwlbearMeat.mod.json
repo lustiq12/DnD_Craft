@@ -46,7 +46,7 @@
     "projectileDisableAmmoCheck": false,
     "isFood": true,
     "nutritionalValue": 10,
-    "saturation": 7.0,
+    "saturation": 3.0,
     "eatResultItem": {
       "value": "CUSTOM:AnimalBone"
     },

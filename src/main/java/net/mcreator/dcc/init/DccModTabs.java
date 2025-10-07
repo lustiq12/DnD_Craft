@@ -118,6 +118,9 @@ public class DccModTabs {
 				tabData.accept(DccModItems.SMALL_OCHERJELLY_SPAWN_EGG.get());
 				tabData.accept(DccModItems.GLIMMERLEAF_FRUIT.get());
 				tabData.accept(DccModBlocks.GLIMMER_LEAVES.get().asItem());
+				tabData.accept(DccModBlocks.CARRIONCRAWLERCOCOON.get().asItem());
+				tabData.accept(DccModItems.CARRION_CRAWLER_SPAWN_EGG.get());
+				tabData.accept(DccModItems.GHOUL_SPAWN_EGG.get());
 			}).build());
 
 	@SubscribeEvent

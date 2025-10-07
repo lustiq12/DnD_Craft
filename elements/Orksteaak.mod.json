@@ -55,7 +55,7 @@
     "projectileDisableAmmoCheck": false,
     "isFood": true,
     "nutritionalValue": 9,
-    "saturation": 6.0,
+    "saturation": 3.0,
     "eatResultItem": {
       "value": "Items.BOWL"
     },

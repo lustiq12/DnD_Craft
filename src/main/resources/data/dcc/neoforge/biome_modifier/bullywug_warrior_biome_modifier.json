@@ -1,0 +1,10 @@
+{
+  "type": "neoforge:add_spawns",
+  "biomes": "dcc:feywild_swamp",
+  "spawners": {
+    "type": "dcc:bullywug_warrior",
+    "weight": 20,
+    "minCount": 4,
+    "maxCount": 4
+  }
+}

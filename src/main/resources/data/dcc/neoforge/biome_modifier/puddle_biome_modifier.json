@@ -1,0 +1,6 @@
+{
+  "type": "neoforge:add_features",
+  "biomes": "dcc:feywild_swamp",
+  "features": "dcc:puddle",
+  "step": "surface_structures"
+}

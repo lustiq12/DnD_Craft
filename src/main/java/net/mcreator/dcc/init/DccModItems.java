@@ -46,7 +46,16 @@ import net.mcreator.dcc.item.OwlbearDrumsticksItem;
 import net.mcreator.dcc.item.OrksteaakItem;
 import net.mcreator.dcc.item.MonsterDaggerItem;
 import net.mcreator.dcc.item.MetalRodItem;
+import net.mcreator.dcc.item.MagicscrollThunderwaveItem;
+import net.mcreator.dcc.item.MagicscrollStrongInvisibilityItem;
+import net.mcreator.dcc.item.MagicscrollSnowstormItem;
+import net.mcreator.dcc.item.MagicscrollNightVisionItem;
+import net.mcreator.dcc.item.MagicscrollInvisibilityItem;
 import net.mcreator.dcc.item.MagicscrollFirearrowItem;
+import net.mcreator.dcc.item.MagicscrollFireWallItem;
+import net.mcreator.dcc.item.MagicscrollFireBallItem;
+import net.mcreator.dcc.item.MagicscrollFakeLifeItem;
+import net.mcreator.dcc.item.MagicscrollColdRayItem;
 import net.mcreator.dcc.item.MagicWandItem;
 import net.mcreator.dcc.item.MaceItem;
 import net.mcreator.dcc.item.LightHammerItem;
@@ -198,6 +207,19 @@ public class DccModItems {
 	public static final DeferredItem<Item> SMALL_OCHERJELLY_SPAWN_EGG = REGISTRY.register("small_ocherjelly_spawn_egg", () -> new DeferredSpawnEggItem(DccModEntities.SMALL_OCHERJELLY, -1713144, -6322651, new Item.Properties()));
 	public static final DeferredItem<Item> CARRIONCRAWLERCOCOON = block(DccModBlocks.CARRIONCRAWLERCOCOON);
 	public static final DeferredItem<Item> CARRION_CRAWLER_SPAWN_EGG = REGISTRY.register("carrion_crawler_spawn_egg", () -> new DeferredSpawnEggItem(DccModEntities.CARRION_CRAWLER, -4551362, -1518675, new Item.Properties()));
+	public static final DeferredItem<Item> CARRION_CRAWLER_COCOON_INACTIVE = block(DccModBlocks.CARRION_CRAWLER_COCOON_INACTIVE);
+	public static final DeferredItem<Item> BULLYWUG_SPAWN_EGG = REGISTRY.register("bullywug_spawn_egg", () -> new DeferredSpawnEggItem(DccModEntities.BULLYWUG, -6684877, -13421773, new Item.Properties()));
+	public static final DeferredItem<Item> BULLYWUG_TADPOLE_SPAWN_EGG = REGISTRY.register("bullywug_tadpole_spawn_egg", () -> new DeferredSpawnEggItem(DccModEntities.BULLYWUG_TADPOLE, -10066330, -13421773, new Item.Properties()));
+	public static final DeferredItem<Item> BULLYWUG_WARRIOR_SPAWN_EGG = REGISTRY.register("bullywug_warrior_spawn_egg", () -> new DeferredSpawnEggItem(DccModEntities.BULLYWUG_WARRIOR, -3342541, -3355444, new Item.Properties()));
+	public static final DeferredItem<Item> MAGICSCROLL_COLD_RAY = REGISTRY.register("magicscroll_cold_ray", MagicscrollColdRayItem::new);
+	public static final DeferredItem<Item> MAGICSCROLL_FAKE_LIFE = REGISTRY.register("magicscroll_fake_life", MagicscrollFakeLifeItem::new);
+	public static final DeferredItem<Item> MAGICSCROLL_FIRE_BALL = REGISTRY.register("magicscroll_fire_ball", MagicscrollFireBallItem::new);
+	public static final DeferredItem<Item> MAGICSCROLL_FIRE_WALL = REGISTRY.register("magicscroll_fire_wall", MagicscrollFireWallItem::new);
+	public static final DeferredItem<Item> MAGICSCROLL_INVISIBILITY = REGISTRY.register("magicscroll_invisibility", MagicscrollInvisibilityItem::new);
+	public static final DeferredItem<Item> MAGICSCROLL_NIGHT_VISION = REGISTRY.register("magicscroll_night_vision", MagicscrollNightVisionItem::new);
+	public static final DeferredItem<Item> MAGICSCROLL_SNOWSTORM = REGISTRY.register("magicscroll_snowstorm", MagicscrollSnowstormItem::new);
+	public static final DeferredItem<Item> MAGICSCROLL_STRONG_INVISIBILITY = REGISTRY.register("magicscroll_strong_invisibility", MagicscrollStrongInvisibilityItem::new);
+	public static final DeferredItem<Item> MAGICSCROLL_THUNDERWAVE = REGISTRY.register("magicscroll_thunderwave", MagicscrollThunderwaveItem::new);
 
 	// Start of user code block custom items
 	// End of user code block custom items

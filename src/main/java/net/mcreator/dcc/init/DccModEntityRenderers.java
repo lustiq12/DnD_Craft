@@ -30,9 +30,11 @@ import net.mcreator.dcc.client.renderer.GoblinChiefRenderer;
 import net.mcreator.dcc.client.renderer.GhoulRenderer;
 import net.mcreator.dcc.client.renderer.CookRenderer;
 import net.mcreator.dcc.client.renderer.CarrionCrawlerRenderer;
+import net.mcreator.dcc.client.renderer.BullywugWarriorRenderer;
+import net.mcreator.dcc.client.renderer.BullywugTadpoleRenderer;
+import net.mcreator.dcc.client.renderer.BullywugRenderer;
 import net.mcreator.dcc.client.renderer.BowblinRenderer;
 import net.mcreator.dcc.client.renderer.BasiliskRenderer;
-import net.mcreator.dcc.client.renderer.ArrowRenderer;
 
 @EventBusSubscriber(bus = EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
 public class DccModEntityRenderers {
@@ -54,7 +56,6 @@ public class DccModEntityRenderers {
 		event.registerEntityRenderer(DccModEntities.BASILISK.get(), BasiliskRenderer::new);
 		event.registerEntityRenderer(DccModEntities.WARG.get(), WargRenderer::new);
 		event.registerEntityRenderer(DccModEntities.GOBLIN_BOW.get(), BowblinRenderer::new);
-		event.registerEntityRenderer(DccModEntities.ARROW.get(), ArrowRenderer::new);
 		event.registerEntityRenderer(DccModEntities.COOK.get(), CookRenderer::new);
 		event.registerEntityRenderer(DccModEntities.GHOUL.get(), GhoulRenderer::new);
 		event.registerEntityRenderer(DccModEntities.VINES.get(), VINESRenderer::new);
@@ -64,5 +65,8 @@ public class DccModEntityRenderers {
 		event.registerEntityRenderer(DccModEntities.CARRION_CRAWLER.get(), CarrionCrawlerRenderer::new);
 		event.registerEntityRenderer(DccModEntities.CARRION_CRAWLER_POISON.get(), ThrownItemRenderer::new);
 		event.registerEntityRenderer(DccModEntities.TENTACLES.get(), TentaclesRenderer::new);
+		event.registerEntityRenderer(DccModEntities.BULLYWUG.get(), BullywugRenderer::new);
+		event.registerEntityRenderer(DccModEntities.BULLYWUG_TADPOLE.get(), BullywugTadpoleRenderer::new);
+		event.registerEntityRenderer(DccModEntities.BULLYWUG_WARRIOR.get(), BullywugWarriorRenderer::new);
 	}
 }

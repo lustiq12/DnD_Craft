@@ -62,7 +62,7 @@ public class MagicWandRightclickedProcedure {
 				}
 				if (19 < entity.getData(DccModVariables.PLAYER_VARIABLES).Mana) {
 					if ((entity.getData(DccModVariables.PLAYER_VARIABLES).Spell).equals("thunderwave")) {
-						ThunderwaveCastProcedure.execute(world, x, y, z);
+						ThunderwaveCastProcedure.execute(world, x, y, z, entity);
 						{
 							DccModVariables.PlayerVariables _vars = entity.getData(DccModVariables.PLAYER_VARIABLES);
 							_vars.Mana = entity.getData(DccModVariables.PLAYER_VARIABLES).Mana - 20;
@@ -80,7 +80,7 @@ public class MagicWandRightclickedProcedure {
 						}
 					}
 					if ((entity.getData(DccModVariables.PLAYER_VARIABLES).Spell).equals("snowstorm")) {
-						SnowstormCastProcedure.execute(world, x, y, z);
+						SnowstormCastProcedure.execute(world, x, y, z, entity);
 						{
 							DccModVariables.PlayerVariables _vars = entity.getData(DccModVariables.PLAYER_VARIABLES);
 							_vars.Mana = entity.getData(DccModVariables.PLAYER_VARIABLES).Mana - 40;
@@ -89,7 +89,7 @@ public class MagicWandRightclickedProcedure {
 					}
 					if (49 < entity.getData(DccModVariables.PLAYER_VARIABLES).Mana) {
 						if ((entity.getData(DccModVariables.PLAYER_VARIABLES).Spell).equals("firewall")) {
-							FirewallCastProcedure.execute(world, x, y, z);
+							FirewallCastProcedure.execute(world, x, y, z, entity);
 							{
 								DccModVariables.PlayerVariables _vars = entity.getData(DccModVariables.PLAYER_VARIABLES);
 								_vars.Mana = entity.getData(DccModVariables.PLAYER_VARIABLES).Mana - 50;

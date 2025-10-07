@@ -1,6 +1,7 @@
 package net.mcreator.dcc.procedures;
 
 import net.minecraft.world.level.LevelAccessor;
+import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.effect.MobEffects;
@@ -9,6 +10,7 @@ import net.minecraft.server.level.ServerLevel;
 import net.minecraft.core.particles.ParticleTypes;
 
 import net.mcreator.dcc.network.DccModVariables;
+import net.mcreator.dcc.init.DccModItems;
 import net.mcreator.dcc.DccMod;
 
 public class StronginvisibilityCastProcedure {
@@ -35,5 +37,8 @@ public class StronginvisibilityCastProcedure {
 				_vars.syncPlayerVariables(entity);
 			}
 		});
+		if ((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem() == DccModItems.MAGICSCROLL_STRONG_INVISIBILITY.get()) {
+			(entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).shrink(1);
+		}
 	}
 }

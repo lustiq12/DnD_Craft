@@ -23,6 +23,9 @@ import net.mcreator.dcc.entity.GoblinChiefEntity;
 import net.mcreator.dcc.entity.GhoulEntity;
 import net.mcreator.dcc.entity.CookEntity;
 import net.mcreator.dcc.entity.CarrionCrawlerEntity;
+import net.mcreator.dcc.entity.BullywugWarriorEntity;
+import net.mcreator.dcc.entity.BullywugTadpoleEntity;
+import net.mcreator.dcc.entity.BullywugEntity;
 import net.mcreator.dcc.entity.BowblinEntity;
 import net.mcreator.dcc.entity.BasiliskEntity;
 
@@ -172,6 +175,27 @@ public class EntityAnimationFactory {
 				}
 			}
 			if (event.getEntity() instanceof TentaclesEntity syncable) {
+				String animation = syncable.getSyncedAnimation();
+				if (!animation.equals("undefined")) {
+					syncable.setAnimation("undefined");
+					syncable.animationprocedure = animation;
+				}
+			}
+			if (event.getEntity() instanceof BullywugEntity syncable) {
+				String animation = syncable.getSyncedAnimation();
+				if (!animation.equals("undefined")) {
+					syncable.setAnimation("undefined");
+					syncable.animationprocedure = animation;
+				}
+			}
+			if (event.getEntity() instanceof BullywugTadpoleEntity syncable) {
+				String animation = syncable.getSyncedAnimation();
+				if (!animation.equals("undefined")) {
+					syncable.setAnimation("undefined");
+					syncable.animationprocedure = animation;
+				}
+			}
+			if (event.getEntity() instanceof BullywugWarriorEntity syncable) {
 				String animation = syncable.getSyncedAnimation();
 				if (!animation.equals("undefined")) {
 					syncable.setAnimation("undefined");

@@ -62,7 +62,8 @@
           "src/main/java/net/mcreator/dcc/item/AnimalBoneItem.java",
           "src/main/resources/assets/dcc/models/item/animal_bone.json"
         ]
-      }
+      },
+      "path": "~/Other Items and blocks"
     },
     {
       "name": "Bonemealrecipe",
@@ -234,7 +235,8 @@
           "src/main/java/net/mcreator/dcc/item/IronPlateItem.java",
           "src/main/resources/assets/dcc/models/item/iron_plate.json"
         ]
-      }
+      },
+      "path": "~/Other Items and blocks"
     },
     {
       "name": "Ironplaterecipe",
@@ -327,7 +329,8 @@
           "src/main/java/net/mcreator/dcc/item/MetalRodItem.java",
           "src/main/resources/assets/dcc/models/item/metal_rod.json"
         ]
-      }
+      },
+      "path": "~/Other Items and blocks"
     },
     {
       "name": "Ironrodrecipe",
@@ -632,7 +635,8 @@
           "src/main/resources/assets/dcc/models/item/soap.json",
           "src/main/java/net/mcreator/dcc/item/SoapItem.java"
         ]
-      }
+      },
+      "path": "~/Other Items and blocks"
     },
     {
       "name": "AnimalFat",
@@ -645,7 +649,8 @@
           "src/main/resources/assets/dcc/models/item/animal_fat.json",
           "src/main/java/net/mcreator/dcc/item/AnimalFatItem.java"
         ]
-      }
+      },
+      "path": "~/Other Items and blocks"
     },
     {
       "name": "Soaprecipe",
@@ -1455,7 +1460,8 @@
           "src/main/java/net/mcreator/dcc/block/AdantiumOreBlock.java",
           "src/main/resources/data/dcc/loot_table/blocks/adantium_ore.json"
         ]
-      }
+      },
+      "path": "~/Other Items and blocks"
     },
     {
       "name": "AdantiumIngot",
@@ -1468,7 +1474,8 @@
           "src/main/java/net/mcreator/dcc/item/AdantiumIngotItem.java",
           "src/main/resources/assets/dcc/models/item/adantium_ingot.json"
         ]
-      }
+      },
+      "path": "~/Other Items and blocks"
     },
     {
       "name": "RawAdamantiumOre",
@@ -1481,7 +1488,8 @@
           "src/main/java/net/mcreator/dcc/item/RawAdamantiumOreItem.java",
           "src/main/resources/assets/dcc/models/item/raw_adamantium_ore.json"
         ]
-      }
+      },
+      "path": "~/Other Items and blocks"
     },
     {
       "name": "Adamantiumingotrecipe",
@@ -1742,7 +1750,8 @@
           "src/main/resources/assets/dcc/models/item/adamantium_upgrade_smithing_template.json",
           "src/main/java/net/mcreator/dcc/item/AdamantiumUpgradeSmithingTemplateItem.java"
         ]
-      }
+      },
+      "path": "~/Other Items and blocks"
     },
     {
       "name": "Aspear",
@@ -1915,7 +1924,8 @@
           "src/main/resources/assets/dcc/models/item/harpy_tooth.json",
           "src/main/java/net/mcreator/dcc/item/HarpyToothItem.java"
         ]
-      }
+      },
+      "path": "~/Other Items and blocks"
     },
     {
       "name": "HarpySpear",
@@ -2184,7 +2194,8 @@
           "src/main/java/net/mcreator/dcc/item/GoblinsBackpackItem.java",
           "src/main/resources/assets/dcc/models/item/goblins_backpack.json"
         ]
-      }
+      },
+      "path": "~/Other Items and blocks"
     },
     {
       "name": "GoblinsBackpackRightclickedOnBlock",
@@ -2318,7 +2329,7 @@
           }
         ]
       },
-      "path": "~/Mobs"
+      "path": "~/Procedures"
     },
     {
       "name": "GoblinCamp",
@@ -2492,7 +2503,8 @@
           "src/main/java/net/mcreator/dcc/item/CopperCoinItem.java",
           "src/main/resources/assets/dcc/models/item/copper_coin.json"
         ]
-      }
+      },
+      "path": "~/Other Items and blocks"
     },
     {
       "name": "GoldCoin",
@@ -2505,7 +2517,8 @@
           "src/main/resources/assets/dcc/models/item/gold_coin.json",
           "src/main/java/net/mcreator/dcc/item/GoldCoinItem.java"
         ]
-      }
+      },
+      "path": "~/Other Items and blocks"
     },
     {
       "name": "Coins",
@@ -3800,7 +3813,8 @@
           "src/main/java/net/mcreator/dcc/item/PoisonVialItem.java",
           "src/main/resources/assets/dcc/models/item/poison_vial.json"
         ]
-      }
+      },
+      "path": "~/Other Items and blocks"
     },
     {
       "name": "Ogrehit",
@@ -4829,7 +4843,8 @@
           "src/main/resources/assets/dcc/models/item/platinum_ore.json",
           "src/main/resources/data/dcc/loot_table/blocks/platinum_ore.json"
         ]
-      }
+      },
+      "path": "~/Other Items and blocks"
     },
     {
       "name": "Rawplatinumore",
@@ -4842,7 +4857,8 @@
           "src/main/java/net/mcreator/dcc/item/RawplatinumoreItem.java",
           "src/main/resources/assets/dcc/models/item/rawplatinumore.json"
         ]
-      }
+      },
+      "path": "~/Other Items and blocks"
     },
     {
       "name": "Plainumingot",
@@ -4855,7 +4871,8 @@
           "src/main/java/net/mcreator/dcc/item/PlainumingotItem.java",
           "src/main/resources/assets/dcc/models/item/plainumingot.json"
         ]
-      }
+      },
+      "path": "~/Other Items and blocks"
     },
     {
       "name": "Owlbearregenerate3",
@@ -4915,41 +4932,6 @@
       "path": "~/Recipes"
     },
     {
-      "name": "MagicscrollFirearrowRightclicked",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "magicscroll_firearrow_rightclicked",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/dcc/procedures/MagicscrollFirearrowRightclickedProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      },
-      "path": "~/Magic Items"
-    },
-    {
       "name": "MagicscrollFirearrow",
       "type": "item",
       "compiles": true,
@@ -4961,7 +4943,7 @@
           "src/main/java/net/mcreator/dcc/item/MagicscrollFirearrowItem.java"
         ]
       },
-      "path": "~/Magic Items"
+      "path": "~/Magic Items/Scrolls"
     },
     {
       "name": "Scrapsheet",
@@ -4974,7 +4956,8 @@
           "src/main/resources/assets/dcc/models/item/scrapsheet.json",
           "src/main/java/net/mcreator/dcc/item/ScrapsheetItem.java"
         ]
-      }
+      },
+      "path": "~/Other Items and blocks"
     },
     {
       "name": "Scrapsheetrecipe",
@@ -5016,7 +4999,8 @@
           "src/main/resources/assets/dcc/models/block/scrapblock.json",
           "src/main/resources/assets/dcc/models/item/scrapblock.json"
         ]
-      }
+      },
+      "path": "~/Other Items and blocks"
     },
     {
       "name": "Scrapblcokrecipe",
@@ -5314,7 +5298,7 @@
           }
         ]
       },
-      "path": "~/Mobs"
+      "path": "~/Procedures"
     },
     {
       "name": "Warg",
@@ -5350,7 +5334,7 @@
           }
         ]
       },
-      "path": "~/Mobs"
+      "path": "~/Procedures"
     },
     {
       "name": "Bowblin",
@@ -5366,19 +5350,6 @@
         ]
       },
       "path": "~/Mobs"
-    },
-    {
-      "name": "Arrow",
-      "type": "projectile",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "arrow",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/dcc/client/renderer/ArrowRenderer.java",
-          "src/main/java/net/mcreator/dcc/entity/ArrowEntity.java"
-        ]
-      }
     },
     {
       "name": "Cook",
@@ -6063,7 +6034,8 @@
           "src/main/resources/assets/dcc/models/item/platin_coin.json",
           "src/main/java/net/mcreator/dcc/item/PlatinCoinItem.java"
         ]
-      }
+      },
+      "path": "~/Other Items and blocks"
     },
     {
       "name": "SilverCoin",
@@ -6076,7 +6048,8 @@
           "src/main/java/net/mcreator/dcc/item/SilverCoinItem.java",
           "src/main/resources/assets/dcc/models/item/silver_coin.json"
         ]
-      }
+      },
+      "path": "~/Other Items and blocks"
     },
     {
       "name": "SilverIngot",
@@ -6089,7 +6062,8 @@
           "src/main/resources/assets/dcc/models/item/silver_ingot.json",
           "src/main/java/net/mcreator/dcc/item/SilverIngotItem.java"
         ]
-      }
+      },
+      "path": "~/Other Items and blocks"
     },
     {
       "name": "RawSilverOre",
@@ -6102,7 +6076,8 @@
           "src/main/resources/assets/dcc/models/item/raw_silver_ore.json",
           "src/main/java/net/mcreator/dcc/item/RawSilverOreItem.java"
         ]
-      }
+      },
+      "path": "~/Other Items and blocks"
     },
     {
       "name": "SilverOre",
@@ -6121,7 +6096,8 @@
           "src/main/resources/assets/dcc/models/block/silver_ore.json",
           "src/main/java/net/mcreator/dcc/block/SilverOreBlock.java"
         ]
-      }
+      },
+      "path": "~/Other Items and blocks"
     },
     {
       "name": "DeepslateSilverOre",
@@ -6140,7 +6116,8 @@
           "src/main/resources/assets/dcc/models/item/deepslate_silver_ore.json",
           "src/main/resources/assets/dcc/blockstates/deepslate_silver_ore.json"
         ]
-      }
+      },
+      "path": "~/Other Items and blocks"
     },
     {
       "name": "OpenClassGui",
@@ -6243,7 +6220,7 @@
           "src/main/resources/data/dcc/worldgen/configured_feature/feywild_forest_tree.json"
         ]
       },
-      "path": "~/DimensionsBiomes"
+      "path": "~/DimensiondBiomesFeatures"
     },
     {
       "name": "GlimmerLeaves",
@@ -6259,7 +6236,8 @@
           "src/main/resources/assets/dcc/blockstates/glimmer_leaves.json",
           "src/main/java/net/mcreator/dcc/block/GlimmerLeavesBlock.java"
         ]
-      }
+      },
+      "path": "~/Other Items and blocks"
     },
     {
       "name": "GlimmerleafFruit",
@@ -6309,7 +6287,7 @@
           "src/main/resources/data/dcc/dimension_type/feywild.json"
         ]
       },
-      "path": "~/DimensionsBiomes"
+      "path": "~/DimensiondBiomesFeatures"
     },
     {
       "name": "ResetVariables",
@@ -6489,6 +6467,10 @@
         ],
         "dependencies": [
           {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
             "name": "x",
             "type": "number"
           },
@@ -6625,6 +6607,10 @@
         ],
         "dependencies": [
           {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
             "name": "x",
             "type": "number"
           },
@@ -6655,6 +6641,10 @@
           "src/main/java/net/mcreator/dcc/procedures/SnowstormCastProcedure.java"
         ],
         "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
           {
             "name": "x",
             "type": "number"
@@ -7171,11 +7161,13 @@
         "files": [
           "src/main/resources/data/dcc/loot_table/blocks/carrioncrawlercocoon.json",
           "src/main/resources/assets/dcc/models/block/carrioncrawlercocoon.json",
+          "src/main/java/net/mcreator/dcc/block/entity/CarrioncrawlercocoonBlockEntity.java",
           "src/main/java/net/mcreator/dcc/block/CarrioncrawlercocoonBlock.java",
           "src/main/resources/assets/dcc/models/item/carrioncrawlercocoon.json",
           "src/main/resources/assets/dcc/blockstates/carrioncrawlercocoon.json"
         ]
-      }
+      },
+      "path": "~/Other Items and blocks"
     },
     {
       "name": "CarrionCrawler",
@@ -7187,7 +7179,6 @@
         "files": [
           "src/main/java/net/mcreator/dcc/entity/model/CarrionCrawlerModel.java",
           "src/main/java/net/mcreator/dcc/client/renderer/CarrionCrawlerRenderer.java",
-          "src/main/resources/data/dcc/neoforge/biome_modifier/carrion_crawler_biome_modifier.json",
           "src/main/java/net/mcreator/dcc/entity/CarrionCrawlerEntity.java",
           "src/main/resources/assets/dcc/models/item/carrion_crawler_spawn_egg.json"
         ]
@@ -7227,7 +7218,7 @@
           "src/main/java/net/mcreator/dcc/procedures/CarrionCrawlerOnEntityTickUpdateProcedure.java"
         ]
       },
-      "path": "~/Mobs"
+      "path": "~/Procedures"
     },
     {
       "name": "CarrionCrawlerPoison",
@@ -7239,7 +7230,8 @@
         "files": [
           "src/main/java/net/mcreator/dcc/entity/CarrionCrawlerPoisonEntity.java"
         ]
-      }
+      },
+      "path": "~/Projectiles and non mob entitys not from abilitys"
     },
     {
       "name": "CarrionCrawlerPoisonProjectileHitsPlayer",
@@ -7257,7 +7249,8 @@
         "files": [
           "src/main/java/net/mcreator/dcc/procedures/CarrionCrawlerPoisonProjectileHitsPlayerProcedure.java"
         ]
-      }
+      },
+      "path": "~/Procedures"
     },
     {
       "name": "Tentacles",
@@ -7273,7 +7266,7 @@
           "src/main/java/net/mcreator/dcc/entity/model/TentaclesModel.java"
         ]
       },
-      "path": "~/Mobs"
+      "path": "~/Projectiles and non mob entitys not from abilitys"
     },
     {
       "name": "VeteranquestshowLoot",
@@ -7390,6 +7383,424 @@
         ]
       },
       "path": "~/Commands"
+    },
+    {
+      "name": "TentaclesEntityDespawn",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "tentacles_entity_despawn",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ],
+        "files": [
+          "src/main/java/net/mcreator/dcc/procedures/TentaclesEntityDespawnProcedure.java"
+        ]
+      },
+      "path": "~/Procedures"
+    },
+    {
+      "name": "CarrionCrawlerPoisonWhileProjectileFlyingTick",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "carrion_crawler_poison_while_projectile_flying_tick",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ],
+        "files": [
+          "src/main/java/net/mcreator/dcc/procedures/CarrionCrawlerPoisonWhileProjectileFlyingTickProcedure.java"
+        ]
+      },
+      "path": "~/Procedures"
+    },
+    {
+      "name": "GenerateCocoon",
+      "type": "feature",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "generate_cocoon",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/dcc/neoforge/biome_modifier/generate_cocoon_biome_modifier.json",
+          "src/main/resources/data/dcc/worldgen/configured_feature/generate_cocoon.json",
+          "src/main/resources/data/dcc/worldgen/placed_feature/generate_cocoon.json"
+        ]
+      },
+      "path": "~/DimensiondBiomesFeatures"
+    },
+    {
+      "name": "CarrioncrawlercocoonBlockAdded",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "carrioncrawlercocoon_block_added",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ],
+        "files": [
+          "src/main/java/net/mcreator/dcc/procedures/CarrioncrawlercocoonBlockAddedProcedure.java"
+        ]
+      },
+      "path": "~/Procedures"
+    },
+    {
+      "name": "CarrionCrawlerCocoonInactive",
+      "type": "block",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "carrion_crawler_cocoon_inactive",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/dcc/models/item/carrion_crawler_cocoon_inactive.json",
+          "src/main/resources/assets/dcc/models/block/carrion_crawler_cocoon_inactive.json",
+          "src/main/java/net/mcreator/dcc/block/CarrionCrawlerCocoonInactiveBlock.java",
+          "src/main/resources/assets/dcc/blockstates/carrion_crawler_cocoon_inactive.json",
+          "src/main/resources/data/dcc/loot_table/blocks/carrion_crawler_cocoon_inactive.json"
+        ]
+      },
+      "path": "~/Other Items and blocks"
+    },
+    {
+      "name": "CarrioncrawlercocoonBlockIsPlacedBy",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "carrioncrawlercocoon_block_is_placed_by",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ],
+        "files": [
+          "src/main/java/net/mcreator/dcc/procedures/CarrioncrawlercocoonBlockIsPlacedByProcedure.java"
+        ]
+      },
+      "path": "~/Procedures"
+    },
+    {
+      "name": "CarrionCrawlerRightClickedOnEntity",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "carrion_crawler_right_clicked_on_entity",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "sourceentity",
+            "type": "entity"
+          }
+        ],
+        "files": [
+          "src/main/java/net/mcreator/dcc/procedures/CarrionCrawlerRightClickedOnEntityProcedure.java"
+        ]
+      },
+      "path": "~/Mobs"
+    },
+    {
+      "name": "Bullywug",
+      "type": "animatedentity",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "bullywug",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/dcc/entity/model/BullywugModel.java",
+          "src/main/resources/assets/dcc/models/item/bullywug_spawn_egg.json",
+          "src/main/resources/data/dcc/neoforge/biome_modifier/bullywug_biome_modifier.json",
+          "src/main/java/net/mcreator/dcc/client/renderer/BullywugRenderer.java",
+          "src/main/java/net/mcreator/dcc/entity/BullywugEntity.java"
+        ]
+      },
+      "path": "~/Mobs"
+    },
+    {
+      "name": "BullywugTadpole",
+      "type": "animatedentity",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "bullywug_tadpole",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/dcc/entity/BullywugTadpoleEntity.java",
+          "src/main/java/net/mcreator/dcc/client/renderer/BullywugTadpoleRenderer.java",
+          "src/main/resources/data/dcc/neoforge/biome_modifier/bullywug_tadpole_biome_modifier.json",
+          "src/main/java/net/mcreator/dcc/entity/model/BullywugTadpoleModel.java",
+          "src/main/resources/assets/dcc/models/item/bullywug_tadpole_spawn_egg.json"
+        ]
+      },
+      "path": "~/Mobs"
+    },
+    {
+      "name": "BullywugWarrior",
+      "type": "animatedentity",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "bullywug_warrior",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/dcc/neoforge/biome_modifier/bullywug_warrior_biome_modifier.json",
+          "src/main/java/net/mcreator/dcc/entity/model/BullywugWarriorModel.java",
+          "src/main/java/net/mcreator/dcc/entity/BullywugWarriorEntity.java",
+          "src/main/resources/assets/dcc/models/item/bullywug_warrior_spawn_egg.json",
+          "src/main/java/net/mcreator/dcc/client/renderer/BullywugWarriorRenderer.java"
+        ]
+      },
+      "path": "~/Mobs"
+    },
+    {
+      "name": "FeywildSwamp",
+      "type": "biome",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "feywild_swamp",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/dcc/worldgen/configured_feature/feywild_swamp_tree.json",
+          "src/main/java/net/mcreator/dcc/world/features/treedecorators/FeywildSwampTrunkDecorator.java",
+          "src/main/resources/data/dcc/worldgen/placed_feature/feywild_swamp_tree.json",
+          "src/main/java/net/mcreator/dcc/world/features/treedecorators/FeywildSwampLeaveDecorator.java",
+          "src/main/resources/data/dcc/worldgen/biome/feywild_swamp.json"
+        ]
+      },
+      "path": "~/DimensiondBiomesFeatures"
+    },
+    {
+      "name": "BullywugTadpoleEntityIsHurt",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "bullywug_tadpole_entity_is_hurt",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "sourceentity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ],
+        "files": [
+          "src/main/java/net/mcreator/dcc/procedures/BullywugTadpoleEntityIsHurtProcedure.java"
+        ]
+      }
+    },
+    {
+      "name": "MagicscrollColdRay",
+      "type": "item",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "magicscroll_cold_ray",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/dcc/models/item/magicscroll_cold_ray.json",
+          "src/main/java/net/mcreator/dcc/item/MagicscrollColdRayItem.java"
+        ]
+      },
+      "path": "~/Magic Items/Scrolls"
+    },
+    {
+      "name": "MagicscrollFakeLife",
+      "type": "item",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "magicscroll_fake_life",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/dcc/models/item/magicscroll_fake_life.json",
+          "src/main/java/net/mcreator/dcc/item/MagicscrollFakeLifeItem.java"
+        ]
+      },
+      "path": "~/Magic Items/Scrolls"
+    },
+    {
+      "name": "MagicscrollFireBall",
+      "type": "item",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "magicscroll_fire_ball",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/dcc/models/item/magicscroll_fire_ball.json",
+          "src/main/java/net/mcreator/dcc/item/MagicscrollFireBallItem.java"
+        ]
+      },
+      "path": "~/Magic Items/Scrolls"
+    },
+    {
+      "name": "MagicscrollFireWall",
+      "type": "item",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "magicscroll_fire_wall",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/dcc/item/MagicscrollFireWallItem.java",
+          "src/main/resources/assets/dcc/models/item/magicscroll_fire_wall.json"
+        ]
+      },
+      "path": "~/Magic Items/Scrolls"
+    },
+    {
+      "name": "MagicscrollInvisibility",
+      "type": "item",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "magicscroll_invisibility",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/dcc/item/MagicscrollInvisibilityItem.java",
+          "src/main/resources/assets/dcc/models/item/magicscroll_invisibility.json"
+        ]
+      },
+      "path": "~/Magic Items/Scrolls"
+    },
+    {
+      "name": "MagicscrollNightVision",
+      "type": "item",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "magicscroll_night_vision",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/dcc/models/item/magicscroll_night_vision.json",
+          "src/main/java/net/mcreator/dcc/item/MagicscrollNightVisionItem.java"
+        ]
+      },
+      "path": "~/Magic Items/Scrolls"
+    },
+    {
+      "name": "MagicscrollSnowstorm",
+      "type": "item",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "magicscroll_snowstorm",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/dcc/item/MagicscrollSnowstormItem.java",
+          "src/main/resources/assets/dcc/models/item/magicscroll_snowstorm.json"
+        ]
+      },
+      "path": "~/Magic Items/Scrolls"
+    },
+    {
+      "name": "MagicscrollStrongInvisibility",
+      "type": "item",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "magicscroll_strong_invisibility",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/dcc/item/MagicscrollStrongInvisibilityItem.java",
+          "src/main/resources/assets/dcc/models/item/magicscroll_strong_invisibility.json"
+        ]
+      },
+      "path": "~/Magic Items/Scrolls"
+    },
+    {
+      "name": "MagicscrollThunderwave",
+      "type": "item",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "magicscroll_thunderwave",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/dcc/models/item/magicscroll_thunderwave.json",
+          "src/main/java/net/mcreator/dcc/item/MagicscrollThunderwaveItem.java"
+        ]
+      },
+      "path": "~/Magic Items/Scrolls"
+    },
+    {
+      "name": "Puddle",
+      "type": "feature",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "puddle",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/dcc/worldgen/configured_feature/puddle.json",
+          "src/main/resources/data/dcc/neoforge/biome_modifier/puddle_biome_modifier.json",
+          "src/main/resources/data/dcc/worldgen/placed_feature/puddle.json"
+        ]
+      },
+      "path": "~/DimensiondBiomesFeatures"
     }
   ],
   "variable_elements": [
@@ -7533,6 +7944,7 @@
       "~CUSTOM:LightHammer"
     ],
     "BIOMES:minecraft:has_structure/mineshaft": [
+      "~CUSTOM:FeywildSwamp",
       "~CUSTOM:FeywildForest"
     ],
     "ITEMS:minecraft:hoes": [
@@ -7547,6 +7959,8 @@
       "~CUSTOM:RawOwlbearMeat"
     ],
     "BLOCKS:minecraft:overworld_carver_replaceables": [
+      "~Blocks.WATER",
+      "~Blocks.MUD",
       "~Blocks.STONE#0",
       "~Blocks.GRASS"
     ],
@@ -7711,10 +8125,15 @@
       "~CUSTOM:Dagger"
     ],
     "BIOMES:minecraft:has_structure/nether_fossil": [
+      "~CUSTOM:FeywildSwamp",
       "~CUSTOM:FeywildForest"
     ],
     "BLOCKS:minecraft:mineable/hoe": [
+      "~CUSTOM:Carrioncrawlercocoon",
       "~CUSTOM:GlimmerLeaves"
+    ],
+    "BIOMES:minecraft:has_structure/swamp_hut": [
+      "~CUSTOM:FeywildSwamp"
     ]
   },
   "tab_element_order": {
@@ -7814,7 +8233,10 @@
       "Feywild",
       "SmallOcherjelly",
       "GlimmerleafFruit",
-      "GlimmerLeaves"
+      "GlimmerLeaves",
+      "Carrioncrawlercocoon",
+      "CarrionCrawler",
+      "Ghoul"
     ]
   },
   "language_map": {
@@ -7928,7 +8350,7 @@
       "subtitles.ogre_death": "ogre grunts",
       "item.dcc.owlbear_drumsticks": "Owlbear drums",
       "gui.dnd_craft.magic_choose.label_level_51": "Level 3",
-      "item.dcc.heal_potion": "§6Heal Potion",
+      "item.dcc.heal_potion": "§6Potion of Healing",
       "block.dnd_craft.silver_ore": "Silver Ore",
       "key.dnd_craft.classability_1": "Class ability 1",
       "gui.dcc.magic_choose.label_spell_chooser": "Spell Chooser",
@@ -8305,7 +8727,7 @@
       "effect.dnd_craft.slimy": "Slimy",
       "gui.cool_mod.bardegui.label_level_80_passive": "Level 80 (Passive)",
       "item.dnd_craft.two_handedhammer": "Two Handed Hammer",
-      "gui.dcc.monk_gui.tooltip_deal_damage_to_entitys_around_yo": "Deal damage to entitys around you, get regeneration and fly up a bit but with slow falling",
+      "gui.dcc.monk_gui.tooltip_deal_damage_to_entitys_around_yo": "Damage nearby enemies, gain regeneration, lift slightly with slow fall, and restore 6 Ki.",
       "gui.cool_mod.classes.label_working_right_now_but_will_be_ad": "working right now but will be",
       "item.cool_mod.claymore": "Claymore",
       "key.dnd_craft.classabilityopngui": "Classabilityopengui",
@@ -8405,7 +8827,7 @@
       "gui.cool_mod.bardegui.label_invincibility": "Power of the Wind",
       "gui.dnd_craft.classes.button_bard": "Bard",
       "entity.dcc.warg": "Warg",
-      "gui.dcc.monk_gui.tooltip_get_speed_1_for_20_seconds": "Get speed 1 for 20 seconds",
+      "gui.dcc.monk_gui.tooltip_get_speed_1_for_20_seconds": "Get speed 1 for 20 seconds if you arent wearing armor",
       "item.dcc.monster_dagger": "Rusty Dagger",
       "gui.dcc.monk_gui.label_barbarian": "Monk",
       "gui.dnd_craft.bardegui.label_survival_instinct": "Bards Speed",
@@ -8532,7 +8954,60 @@
       "entity.dcc.carrion_crawler": "Carrion Crawler",
       "item.dcc.carrion_crawler_spawn_egg": "Carrion Crawler Spawn Egg",
       "item.dcc.tentacles_spawn_egg": "Tentacles Spawn Egg",
-      "entity.dcc.tentacles": "Tentacles"
+      "entity.dcc.tentacles": "Tentacles",
+      "block.dcc.carrion_crawler_cocoon_inactive": "Carrion Crawler Cocoon Inactive",
+      "block.dcc.carrion_crawler_cocoon_inactive.description_1": "after some time",
+      "block.dcc.carrion_crawler_cocoon_inactive.description_2": "it is only used for the generation of this block and has no other use",
+      "block.dcc.carrion_crawler_cocoon_inactive.description_0": "This has no real use, it will just convert to a normal one ",
+      "block.dcc.carrioncrawlercocoon.description_1": "a friendly Carrion Crawler after some time,",
+      "block.dcc.carrioncrawlercocoon.description_2": "But make sure to be nearby, otherwise it will feel left aside and attack you",
+      "block.dcc.carrioncrawlercocoon.description_3": "however if you place this in creative it will",
+      "block.dcc.carrioncrawlercocoon.description_0": "If you place this in survival you will be able to hatch",
+      "block.dcc.carrioncrawlercocoon.description_4": "work just like a normal generated one and hatch when you walk under it",
+      "subtitles.you_hear_sigma_mewing": "you hear some sigma mewing",
+      "entity.dcc.bullywug": "Bullywug",
+      "item.dcc.bullywug_spawn_egg": "Bullywug Spawn Egg",
+      "item.dcc.bullywug_tadpole_spawn_egg": "Bullywug Tadpole Spawn Egg",
+      "entity.dcc.bullywug_tadpole": "Bullywug Tadpole",
+      "entity.dcc.bullywug_warrior": "Bullywug",
+      "item.dcc.bullywug_warrior_spawn_egg": "Bullywug Spawn Egg",
+      "biome.dcc.feywild_swamp": "Feywild Forest",
+      "item.dcc.magicscroll_cold_ray.description_1": "Magic Item",
+      "item.dcc.magicscroll_cold_ray": "§6Magic Scroll",
+      "item.dcc.magicscroll_cold_ray.description_0": "-Cold Ray",
+      "item.dcc.magicscroll_cold_ray.description_2": "§Common",
+      "item.dcc.magicscroll_fake_life": "§6Magic Scroll",
+      "item.dcc.magicscroll_fake_life.description_0": "-Fake Life",
+      "item.dcc.magicscroll_fake_life.description_1": "Magic Item",
+      "item.dcc.magicscroll_fake_life.description_2": "§Common",
+      "item.dcc.magicscroll_fire_ball": "§6Magic Scroll",
+      "item.dcc.magicscroll_fire_ball.description_1": "Magic Item",
+      "item.dcc.magicscroll_fire_ball.description_2": "§Common",
+      "item.dcc.magicscroll_fire_ball.description_0": "-Fire Ball",
+      "item.dcc.magicscroll_fire_wall": "§6Magic Scroll",
+      "item.dcc.magicscroll_fire_wall.description_2": "§Common",
+      "item.dcc.magicscroll_fire_wall.description_0": "-Fire Wall",
+      "item.dcc.magicscroll_fire_wall.description_1": "Magic Item",
+      "item.dcc.magicscroll_invisibility": "§6Magic Scroll",
+      "item.dcc.magicscroll_invisibility.description_2": "§Common",
+      "item.dcc.magicscroll_invisibility.description_0": "-Invisibility",
+      "item.dcc.magicscroll_invisibility.description_1": "Magic Item",
+      "item.dcc.magicscroll_night_vision.description_1": "Magic Item",
+      "item.dcc.magicscroll_night_vision.description_0": "-Night Vision",
+      "item.dcc.magicscroll_night_vision": "§6Magic Scroll",
+      "item.dcc.magicscroll_night_vision.description_2": "§Common",
+      "item.dcc.magicscroll_snowstorm": "§6Magic Scroll",
+      "item.dcc.magicscroll_snowstorm.description_0": "-Snow Storm",
+      "item.dcc.magicscroll_snowstorm.description_1": "Magic Item",
+      "item.dcc.magicscroll_snowstorm.description_2": "§Common",
+      "item.dcc.magicscroll_strong_invisibility.description_1": "Magic Item",
+      "item.dcc.magicscroll_strong_invisibility.description_0": "-Strong Invisibility",
+      "item.dcc.magicscroll_strong_invisibility.description_2": "§Common",
+      "item.dcc.magicscroll_strong_invisibility": "§6Magic Scroll",
+      "item.dcc.magicscroll_thunderwave": "§6Magic Scroll",
+      "item.dcc.magicscroll_thunderwave.description_2": "§Common",
+      "item.dcc.magicscroll_thunderwave.description_1": "Magic Item",
+      "item.dcc.magicscroll_thunderwave.description_0": "-Thunderwave"
     }
   },
   "metadata": {
@@ -8540,6 +9015,7 @@
       "src/main/java/net/mcreator/dcc/DccMod.java",
       "src/main/resources/META-INF/neoforge.mods.toml",
       "src/main/java/net/mcreator/dcc/network/DccModVariables.java",
+      "src/main/resources/META-INF/accesstransformer.cfg",
       "src/main/resources/mixins.dcc.json",
       "src/main/java/net/mcreator/dcc/init/DccModTabs.java",
       "src/main/java/net/mcreator/dcc/init/DccModModels.java",
@@ -8625,7 +9101,12 @@
       },
       {
         "name": "Magic Items",
-        "children": []
+        "children": [
+          {
+            "name": "Scrolls",
+            "children": []
+          }
+        ]
       },
       {
         "name": "Loot",
@@ -8665,7 +9146,7 @@
         "children": []
       },
       {
-        "name": "DimensionsBiomes",
+        "name": "DimensiondBiomesFeatures",
         "children": []
       },
       {
@@ -8680,13 +9161,21 @@
             "children": []
           }
         ]
+      },
+      {
+        "name": "Other Items and blocks",
+        "children": []
+      },
+      {
+        "name": "Projectiles and non mob entitys not from abilitys",
+        "children": []
       }
     ]
   },
   "workspaceSettings": {
     "modid": "dcc",
     "modName": "Dungeons, Creatures \u0026 Classes",
-    "version": "4.5.0",
+    "version": "5.5.0",
     "description": "This mod is a fun addition to Minecraft that adds some mobs from the DnD universe and lets you choose your own class.",
     "author": "Ppotatoe, Luderspieler",
     "websiteURL": "https://mcreator.net",

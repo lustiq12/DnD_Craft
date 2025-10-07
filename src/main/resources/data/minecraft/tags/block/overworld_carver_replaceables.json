@@ -2,6 +2,8 @@
   "replace": false,
   "values": [
     "minecraft:grass_block",
-    "minecraft:stone"
+    "minecraft:water",
+    "minecraft:stone",
+    "minecraft:mud"
   ]
 }

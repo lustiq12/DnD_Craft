@@ -17,7 +17,7 @@ import com.mojang.blaze3d.vertex.PoseStack;
 public class CarrionCrawlerRenderer extends GeoEntityRenderer<CarrionCrawlerEntity> {
 	public CarrionCrawlerRenderer(EntityRendererProvider.Context renderManager) {
 		super(renderManager, new CarrionCrawlerModel());
-		this.shadowRadius = 0.5f;
+		this.shadowRadius = 1f;
 	}
 
 	@Override
@@ -31,10 +31,5 @@ public class CarrionCrawlerRenderer extends GeoEntityRenderer<CarrionCrawlerEnti
 		this.scaleHeight = scale;
 		this.scaleWidth = scale;
 		super.preRender(poseStack, entity, model, bufferSource, buffer, isReRender, partialTick, packedLight, packedOverlay, color);
-	}
-
-	@Override
-	protected float getDeathMaxRotation(CarrionCrawlerEntity entityLivingBaseIn) {
-		return 0.0F;
 	}
 }

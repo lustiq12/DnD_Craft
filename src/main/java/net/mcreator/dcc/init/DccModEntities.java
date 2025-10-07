@@ -41,9 +41,11 @@ import net.mcreator.dcc.entity.CookEntity;
 import net.mcreator.dcc.entity.ColdrayspellEntity;
 import net.mcreator.dcc.entity.CarrionCrawlerPoisonEntity;
 import net.mcreator.dcc.entity.CarrionCrawlerEntity;
+import net.mcreator.dcc.entity.BullywugWarriorEntity;
+import net.mcreator.dcc.entity.BullywugTadpoleEntity;
+import net.mcreator.dcc.entity.BullywugEntity;
 import net.mcreator.dcc.entity.BowblinEntity;
 import net.mcreator.dcc.entity.BasiliskEntity;
-import net.mcreator.dcc.entity.ArrowEntity;
 import net.mcreator.dcc.DccMod;
 
 @EventBusSubscriber(bus = EventBusSubscriber.Bus.MOD)
@@ -108,8 +110,6 @@ public class DccModEntities {
 			EntityType.Builder.<BowblinEntity>of(BowblinEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3)
 
 					.sized(0.7f, 1.4f));
-	public static final DeferredHolder<EntityType<?>, EntityType<ArrowEntity>> ARROW = register("arrow",
-			EntityType.Builder.<ArrowEntity>of(ArrowEntity::new, MobCategory.MISC).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(0.3f, 0.5f));
 	public static final DeferredHolder<EntityType<?>, EntityType<CookEntity>> COOK = register("cook",
 			EntityType.Builder.<CookEntity>of(CookEntity::new, MobCategory.AMBIENT).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3)
 
@@ -131,11 +131,23 @@ public class DccModEntities {
 	public static final DeferredHolder<EntityType<?>, EntityType<CarrionCrawlerEntity>> CARRION_CRAWLER = register("carrion_crawler",
 			EntityType.Builder.<CarrionCrawlerEntity>of(CarrionCrawlerEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3)
 
-					.sized(0.6f, 1.8f));
+					.sized(1.5f, 1.2f));
 	public static final DeferredHolder<EntityType<?>, EntityType<CarrionCrawlerPoisonEntity>> CARRION_CRAWLER_POISON = register("carrion_crawler_poison",
 			EntityType.Builder.<CarrionCrawlerPoisonEntity>of(CarrionCrawlerPoisonEntity::new, MobCategory.MISC).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(0.5f, 0.5f));
 	public static final DeferredHolder<EntityType<?>, EntityType<TentaclesEntity>> TENTACLES = register("tentacles",
 			EntityType.Builder.<TentaclesEntity>of(TentaclesEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).fireImmune().sized(0.6f, 1.8f));
+	public static final DeferredHolder<EntityType<?>, EntityType<BullywugEntity>> BULLYWUG = register("bullywug",
+			EntityType.Builder.<BullywugEntity>of(BullywugEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3)
+
+					.sized(0.6f, 1.8f));
+	public static final DeferredHolder<EntityType<?>, EntityType<BullywugTadpoleEntity>> BULLYWUG_TADPOLE = register("bullywug_tadpole",
+			EntityType.Builder.<BullywugTadpoleEntity>of(BullywugTadpoleEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3)
+
+					.sized(0.6f, 1.8f));
+	public static final DeferredHolder<EntityType<?>, EntityType<BullywugWarriorEntity>> BULLYWUG_WARRIOR = register("bullywug_warrior",
+			EntityType.Builder.<BullywugWarriorEntity>of(BullywugWarriorEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3)
+
+					.sized(0.6f, 1.8f));
 
 	// Start of user code block custom entities
 	// End of user code block custom entities
@@ -171,6 +183,9 @@ public class DccModEntities {
 		SmallOcherjellyEntity.init(event);
 		CarrionCrawlerEntity.init(event);
 		TentaclesEntity.init(event);
+		BullywugEntity.init(event);
+		BullywugTadpoleEntity.init(event);
+		BullywugWarriorEntity.init(event);
 	}
 
 	@SubscribeEvent
@@ -196,5 +211,8 @@ public class DccModEntities {
 		event.put(SMALL_OCHERJELLY.get(), SmallOcherjellyEntity.createAttributes().build());
 		event.put(CARRION_CRAWLER.get(), CarrionCrawlerEntity.createAttributes().build());
 		event.put(TENTACLES.get(), TentaclesEntity.createAttributes().build());
+		event.put(BULLYWUG.get(), BullywugEntity.createAttributes().build());
+		event.put(BULLYWUG_TADPOLE.get(), BullywugTadpoleEntity.createAttributes().build());
+		event.put(BULLYWUG_WARRIOR.get(), BullywugWarriorEntity.createAttributes().build());
 	}
 }

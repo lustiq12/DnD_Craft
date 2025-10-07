@@ -41,6 +41,7 @@ import net.minecraft.network.syncher.EntityDataAccessor;
 import net.minecraft.nbt.CompoundTag;
 
 import net.mcreator.dcc.procedures.VinesEntityDespawnProcedure;
+import net.mcreator.dcc.procedures.TentaclesEntityDespawnProcedure;
 import net.mcreator.dcc.init.DccModEntities;
 
 import javax.annotation.Nullable;
@@ -141,7 +142,7 @@ public class TentaclesEntity extends Monster implements GeoEntity {
 	@Override
 	public void baseTick() {
 		super.baseTick();
-		VinesEntityDespawnProcedure.execute(this.level(), this);
+		TentaclesEntityDespawnProcedure.execute(this.level(), this.getX(), this.getY(), this.getZ(), this);
 		this.refreshDimensions();
 	}
 

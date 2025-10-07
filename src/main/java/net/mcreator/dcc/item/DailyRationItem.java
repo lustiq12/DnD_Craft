@@ -12,7 +12,7 @@ import net.mcreator.dcc.procedures.DailyRationQuestProcedure;
 
 public class DailyRationItem extends Item {
 	public DailyRationItem() {
-		super(new Item.Properties().food((new FoodProperties.Builder()).nutrition(10).saturationModifier(8.2f).build()));
+		super(new Item.Properties().food((new FoodProperties.Builder()).nutrition(10).saturationModifier(4f).build()));
 	}
 
 	@Override

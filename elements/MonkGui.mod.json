@@ -293,7 +293,7 @@
         "data": {
           "name": "tooltip_get_speed_1_for_20_seconds",
           "text": {
-            "fixedValue": "Get speed 1 for 20 seconds"
+            "fixedValue": "Get speed 1 for 20 seconds if you arent wearing armor"
           },
           "width": 24,
           "height": 24,
@@ -321,7 +321,7 @@
         "data": {
           "name": "tooltip_deal_damage_to_entitys_around_yo",
           "text": {
-            "fixedValue": "Deal damage to entitys around you, get regeneration and fly up a bit but with slow falling"
+            "fixedValue": "Damage nearby enemies, gain regeneration, lift slightly with slow fall, and restore 6 Ki."
           },
           "width": 24,
           "height": 24,

@@ -30,6 +30,10 @@ public class SetLevelPcdProcedure {
 		if (entity instanceof LivingEntity _livingEntity4 && _livingEntity4.getAttributes().hasAttribute(Attributes.MAX_HEALTH))
 			_livingEntity4.getAttribute(Attributes.MAX_HEALTH)
 					.setBaseValue(((entity instanceof LivingEntity _livingEntity2 && _livingEntity2.getAttributes().hasAttribute(Attributes.MAX_HEALTH) ? _livingEntity2.getAttribute(Attributes.MAX_HEALTH).getBaseValue() : 0)
+							+ 3 * (DoubleArgumentType.getDouble(arguments, "level") - entity.getData(DccModVariables.PLAYER_VARIABLES).PlayerLevel)));
+		if (entity instanceof LivingEntity _livingEntity7 && _livingEntity7.getAttributes().hasAttribute(Attributes.ATTACK_DAMAGE))
+			_livingEntity7.getAttribute(Attributes.ATTACK_DAMAGE)
+					.setBaseValue(((entity instanceof LivingEntity _livingEntity5 && _livingEntity5.getAttributes().hasAttribute(Attributes.ATTACK_DAMAGE) ? _livingEntity5.getAttribute(Attributes.ATTACK_DAMAGE).getBaseValue() : 0)
 							+ 1 * (DoubleArgumentType.getDouble(arguments, "level") - entity.getData(DccModVariables.PLAYER_VARIABLES).PlayerLevel)));
 		{
 			DccModVariables.PlayerVariables _vars = (commandParameterEntity(arguments, "Player_name")).getData(DccModVariables.PLAYER_VARIABLES);

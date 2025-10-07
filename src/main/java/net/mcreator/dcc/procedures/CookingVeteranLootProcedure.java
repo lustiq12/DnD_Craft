@@ -51,5 +51,12 @@ public class CookingVeteranLootProcedure {
 				_level.addFreshEntity(entityToSpawn);
 			}
 		}
+		for (int index4 = 0; index4 < 10; index4++) {
+			if (world instanceof ServerLevel _level) {
+				ItemEntity entityToSpawn = new ItemEntity(_level, x, y, z, new ItemStack(DccModItems.GOLD_COIN.get()));
+				entityToSpawn.setPickUpDelay(10);
+				_level.addFreshEntity(entityToSpawn);
+			}
+		}
 	}
 }

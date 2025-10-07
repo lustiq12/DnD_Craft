@@ -5,6 +5,7 @@
     "renderType": 0,
     "texture": "commonmagicscroll",
     "customModelName": "Normal",
+    "guiTexture": "",
     "customProperties": {},
     "states": [],
     "name": "§6Magic Scroll",
@@ -36,8 +37,8 @@
     },
     "inventorySize": 9,
     "inventoryStackSize": 64,
-    "onRightClickedInAir": {
-      "name": "MagicscrollFirearrowRightclicked"
+    "onEntitySwing": {
+      "name": "FirearrowCast"
     },
     "enableRanged": false,
     "shootConstantly": false,

@@ -10,7 +10,7 @@ import net.mcreator.dcc.procedures.MonsterdelightquestProcedure;
 
 public class CookedOrkBeefItem extends Item {
 	public CookedOrkBeefItem() {
-		super(new Item.Properties().food((new FoodProperties.Builder()).nutrition(7).saturationModifier(5f).build()));
+		super(new Item.Properties().food((new FoodProperties.Builder()).nutrition(7).saturationModifier(2f).build()));
 	}
 
 	@Override

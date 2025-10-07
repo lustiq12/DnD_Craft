@@ -7,7 +7,7 @@ import net.minecraft.world.entity.LivingEntity;
 
 public class OwlbearMeatStripeItem extends Item {
 	public OwlbearMeatStripeItem() {
-		super(new Item.Properties().food((new FoodProperties.Builder()).nutrition(3).saturationModifier(2.4f).build()));
+		super(new Item.Properties().food((new FoodProperties.Builder()).nutrition(3).saturationModifier(2f).build()));
 	}
 
 	@Override
