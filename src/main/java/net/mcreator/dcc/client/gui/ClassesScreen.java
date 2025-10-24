@@ -55,7 +55,7 @@ public class ClassesScreen extends AbstractContainerScreen<ClassesMenu> implemen
 	}
 
 	@Override
-	protected void renderBg(GuiGraphics guiGraphics, float partialTicks, int gx, int gy) {
+	protected void renderBg(GuiGraphics guiGraphics, float partialTicks, int mouseX, int mouseY) {
 		RenderSystem.setShaderColor(1, 1, 1, 1);
 		RenderSystem.enableBlend();
 		RenderSystem.defaultBlendFunc();
@@ -86,6 +86,8 @@ public class ClassesScreen extends AbstractContainerScreen<ClassesMenu> implemen
 	public void init() {
 		super.init();
 		button_barbarian = Button.builder(Component.translatable("gui.dcc.classes.button_barbarian"), e -> {
+			int x = ClassesScreen.this.x;
+			int y = ClassesScreen.this.y;
 			if (true) {
 				PacketDistributor.sendToServer(new ClassesButtonMessage(0, x, y, z));
 				ClassesButtonMessage.handleButtonAction(entity, 0, x, y, z);
@@ -93,6 +95,8 @@ public class ClassesScreen extends AbstractContainerScreen<ClassesMenu> implemen
 		}).bounds(this.leftPos + 25, this.topPos + 9, 72, 20).build();
 		this.addRenderableWidget(button_barbarian);
 		button_bard = Button.builder(Component.translatable("gui.dcc.classes.button_bard"), e -> {
+			int x = ClassesScreen.this.x;
+			int y = ClassesScreen.this.y;
 			if (true) {
 				PacketDistributor.sendToServer(new ClassesButtonMessage(1, x, y, z));
 				ClassesButtonMessage.handleButtonAction(entity, 1, x, y, z);
@@ -100,6 +104,8 @@ public class ClassesScreen extends AbstractContainerScreen<ClassesMenu> implemen
 		}).bounds(this.leftPos + 25, this.topPos + 36, 46, 20).build();
 		this.addRenderableWidget(button_bard);
 		button_druid = Button.builder(Component.translatable("gui.dcc.classes.button_druid"), e -> {
+			int x = ClassesScreen.this.x;
+			int y = ClassesScreen.this.y;
 			if (true) {
 				PacketDistributor.sendToServer(new ClassesButtonMessage(2, x, y, z));
 				ClassesButtonMessage.handleButtonAction(entity, 2, x, y, z);
@@ -107,6 +113,8 @@ public class ClassesScreen extends AbstractContainerScreen<ClassesMenu> implemen
 		}).bounds(this.leftPos + 124, this.topPos + 36, 51, 20).build();
 		this.addRenderableWidget(button_druid);
 		button_magician = Button.builder(Component.translatable("gui.dcc.classes.button_magician"), e -> {
+			int x = ClassesScreen.this.x;
+			int y = ClassesScreen.this.y;
 			if (true) {
 				PacketDistributor.sendToServer(new ClassesButtonMessage(3, x, y, z));
 				ClassesButtonMessage.handleButtonAction(entity, 3, x, y, z);
@@ -114,6 +122,8 @@ public class ClassesScreen extends AbstractContainerScreen<ClassesMenu> implemen
 		}).bounds(this.leftPos + 25, this.topPos + 63, 67, 20).build();
 		this.addRenderableWidget(button_magician);
 		button_monk = Button.builder(Component.translatable("gui.dcc.classes.button_monk"), e -> {
+			int x = ClassesScreen.this.x;
+			int y = ClassesScreen.this.y;
 			if (true) {
 				PacketDistributor.sendToServer(new ClassesButtonMessage(4, x, y, z));
 				ClassesButtonMessage.handleButtonAction(entity, 4, x, y, z);
@@ -121,6 +131,8 @@ public class ClassesScreen extends AbstractContainerScreen<ClassesMenu> implemen
 		}).bounds(this.leftPos + 124, this.topPos + 9, 46, 20).build();
 		this.addRenderableWidget(button_monk);
 		button_paladin = Button.builder(Component.translatable("gui.dcc.classes.button_paladin"), e -> {
+			int x = ClassesScreen.this.x;
+			int y = ClassesScreen.this.y;
 			if (true) {
 				PacketDistributor.sendToServer(new ClassesButtonMessage(5, x, y, z));
 				ClassesButtonMessage.handleButtonAction(entity, 5, x, y, z);

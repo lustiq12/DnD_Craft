@@ -9,7 +9,6 @@ import net.minecraft.world.item.Items;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.entity.projectile.Projectile;
 import net.minecraft.world.entity.projectile.AbstractArrow;
-import net.minecraft.world.entity.item.ItemEntity;
 import net.minecraft.world.entity.ai.attributes.Attributes;
 import net.minecraft.world.entity.TamableAnimal;
 import net.minecraft.world.entity.MobSpawnType;
@@ -72,15 +71,20 @@ public class CarrionCrawlerOnEntityTickUpdateProcedure {
 						DccMod.queueServerWork(25, () -> {
 							{
 								final Vec3 _center = new Vec3(x, y, z);
-								for (Entity entityiterator : world.getEntitiesOfClass(Entity.class, new AABB(_center, _center).inflate(20 / 2d), e -> true).stream().sorted(Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_center)))
+								for (Entity entityiterator : world.getEntitiesOfClass(Entity.class, new AABB(_center, _center).inflate(10 / 2d), e -> true).stream().sorted(Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_center)))
 										.toList()) {
-									if (!(entityiterator instanceof CarrionCrawlerEntity) && !(entityiterator instanceof ItemEntity) && !(entityiterator instanceof TentaclesEntity)
+									if (!(entityiterator instanceof CarrionCrawlerEntity) && entityiterator instanceof LivingEntity && !(entityiterator instanceof TentaclesEntity)
 											&& !(entityiterator == (entity instanceof TamableAnimal _tamEnt ? (Entity) _tamEnt.getOwner() : null))) {
 										if (entityiterator instanceof LivingEntity _livingEntity20 && _livingEntity20.getAttributes().hasAttribute(Attributes.KNOCKBACK_RESISTANCE))
 											_livingEntity20.getAttribute(Attributes.KNOCKBACK_RESISTANCE)
 													.setBaseValue((((entityiterator instanceof LivingEntity _livingEntity19 && _livingEntity19.getAttributes().hasAttribute(Attributes.KNOCKBACK_RESISTANCE)
 															? _livingEntity19.getAttribute(Attributes.KNOCKBACK_RESISTANCE).getBaseValue()
 															: 0) + 1) * 100));
+										if (entityiterator instanceof LivingEntity _livingEntity22 && _livingEntity22.getAttributes().hasAttribute(Attributes.JUMP_STRENGTH))
+											_livingEntity22.getAttribute(Attributes.JUMP_STRENGTH)
+													.setBaseValue(((entityiterator instanceof LivingEntity _livingEntity21 && _livingEntity21.getAttributes().hasAttribute(Attributes.JUMP_STRENGTH)
+															? _livingEntity21.getAttribute(Attributes.JUMP_STRENGTH).getBaseValue()
+															: 0) / 10000));
 										if (entityiterator instanceof LivingEntity _entity && !_entity.level().isClientSide())
 											_entity.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SLOWDOWN, 115, 254, false, false));
 										if (entityiterator instanceof LivingEntity _entity && !_entity.level().isClientSide())
@@ -113,11 +117,16 @@ public class CarrionCrawlerOnEntityTickUpdateProcedure {
 														((TentaclesEntity) (findEntityInWorldRange(world, TentaclesEntity.class, (entityiterator.getX()), (entityiterator.getY()), (entityiterator.getZ()), 25))).setAnimation("despawn");
 													}
 													if (entityiterator.isAlive()) {
-														if (entityiterator instanceof LivingEntity _livingEntity57 && _livingEntity57.getAttributes().hasAttribute(Attributes.KNOCKBACK_RESISTANCE))
-															_livingEntity57.getAttribute(Attributes.KNOCKBACK_RESISTANCE)
-																	.setBaseValue(((entityiterator instanceof LivingEntity _livingEntity56 && _livingEntity56.getAttributes().hasAttribute(Attributes.KNOCKBACK_RESISTANCE)
-																			? _livingEntity56.getAttribute(Attributes.KNOCKBACK_RESISTANCE).getBaseValue()
+														if (entityiterator instanceof LivingEntity _livingEntity59 && _livingEntity59.getAttributes().hasAttribute(Attributes.KNOCKBACK_RESISTANCE))
+															_livingEntity59.getAttribute(Attributes.KNOCKBACK_RESISTANCE)
+																	.setBaseValue(((entityiterator instanceof LivingEntity _livingEntity58 && _livingEntity58.getAttributes().hasAttribute(Attributes.KNOCKBACK_RESISTANCE)
+																			? _livingEntity58.getAttribute(Attributes.KNOCKBACK_RESISTANCE).getBaseValue()
 																			: 0) / 100 - 1));
+														if (entityiterator instanceof LivingEntity _livingEntity61 && _livingEntity61.getAttributes().hasAttribute(Attributes.JUMP_STRENGTH))
+															_livingEntity61.getAttribute(Attributes.JUMP_STRENGTH)
+																	.setBaseValue(((entityiterator instanceof LivingEntity _livingEntity60 && _livingEntity60.getAttributes().hasAttribute(Attributes.JUMP_STRENGTH)
+																			? _livingEntity60.getAttribute(Attributes.JUMP_STRENGTH).getBaseValue()
+																			: 0) * 10000));
 													}
 												});
 											});

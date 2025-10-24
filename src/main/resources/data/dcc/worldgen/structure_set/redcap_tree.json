@@ -1,0 +1,14 @@
+{
+  "structures": [
+    {
+      "structure": "dcc:redcap_tree",
+      "weight": 1
+    }
+  ],
+  "placement": {
+    "type": "minecraft:random_spread",
+    "spacing": 8,
+    "separation": 5,
+    "salt": 206787196
+  }
+}

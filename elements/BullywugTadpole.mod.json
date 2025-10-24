@@ -13,9 +13,9 @@
       "fixedValue": 1.0
     },
     "entityDataEntries": [],
-    "modelWidth": 0.6,
-    "modelHeight": 1.8,
-    "modelShadowSize": 0.5,
+    "modelWidth": 0.5,
+    "modelHeight": 0.3,
+    "modelShadowSize": 0.2,
     "mountedYOffset": 0.0,
     "stepHeight": 0.6,
     "hasSpawnEgg": true,
@@ -111,6 +111,9 @@
     },
     "whenMobIsHurt": {
       "name": "BullywugTadpoleEntityIsHurt"
+    },
+    "onMobTickUpdate": {
+      "name": "TadpoleGrowUpKiddo"
     },
     "hasAI": true,
     "aiBase": "(none)",

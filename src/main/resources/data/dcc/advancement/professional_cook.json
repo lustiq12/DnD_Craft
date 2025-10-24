@@ -1,0 +1,68 @@
+{
+  "display": {
+    "icon": {
+      "id": "dcc:orksteaak"
+    },
+    "title": {
+      "translate": "advancements.professional_cook.title"
+    },
+    "description": {
+      "translate": "advancements.professional_cook.descr"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "professional_cook_0": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "dcc:owlbear_drumsticks"
+            ],
+            "count": {
+              "min": 1,
+              "max": 1
+            }
+          }
+        ]
+      }
+    },
+    "professional_cook_1": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "dcc:orksteaak"
+            ],
+            "count": {
+              "min": 1,
+              "max": 1
+            }
+          }
+        ]
+      }
+    },
+    "professional_cook_2": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "dcc:glimmerleaf_fruit_cake"
+            ],
+            "count": {
+              "min": 1,
+              "max": 1
+            }
+          }
+        ]
+      }
+    }
+  },
+  "parent": "dcc:the_beginning"
+}

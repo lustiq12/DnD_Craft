@@ -144,11 +144,11 @@ public class Classability2pProcedure {
 					{
 						final Vec3 _center = new Vec3(x, y, z);
 						for (Entity entityiterator : world.getEntitiesOfClass(Entity.class, new AABB(_center, _center).inflate(12 / 2d), e -> true).stream().sorted(Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_center))).toList()) {
-							if (!(entityiterator instanceof Player)) {
-								if (entityiterator instanceof LivingEntity _livingEntity30 && _livingEntity30.getAttributes().hasAttribute(Attributes.KNOCKBACK_RESISTANCE))
-									_livingEntity30.getAttribute(Attributes.KNOCKBACK_RESISTANCE)
-											.setBaseValue((((entityiterator instanceof LivingEntity _livingEntity29 && _livingEntity29.getAttributes().hasAttribute(Attributes.KNOCKBACK_RESISTANCE)
-													? _livingEntity29.getAttribute(Attributes.KNOCKBACK_RESISTANCE).getBaseValue()
+							if (!(entityiterator instanceof Player) && !(entityiterator == null)) {
+								if (entityiterator instanceof LivingEntity _livingEntity31 && _livingEntity31.getAttributes().hasAttribute(Attributes.KNOCKBACK_RESISTANCE))
+									_livingEntity31.getAttribute(Attributes.KNOCKBACK_RESISTANCE)
+											.setBaseValue((((entityiterator instanceof LivingEntity _livingEntity30 && _livingEntity30.getAttributes().hasAttribute(Attributes.KNOCKBACK_RESISTANCE)
+													? _livingEntity30.getAttribute(Attributes.KNOCKBACK_RESISTANCE).getBaseValue()
 													: 0) + 1) * 100));
 								if (entityiterator instanceof LivingEntity _entity && !_entity.level().isClientSide())
 									_entity.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SLOWDOWN, 115, 254, false, false));
@@ -160,34 +160,36 @@ public class Classability2pProcedure {
 										entityToSpawn.setDeltaMovement(0, 0, 0);
 									}
 								}
-								{
-									Entity _ent = (findEntityInWorldRange(world, VINESEntity.class, (entityiterator.getX()), (entityiterator.getY()), (entityiterator.getZ()), 4));
-									_ent.teleportTo((entityiterator.getX()), (entityiterator.getY()), (entityiterator.getZ()));
-									if (_ent instanceof ServerPlayer _serverPlayer)
-										_serverPlayer.connection.teleport((entityiterator.getX()), (entityiterator.getY()), (entityiterator.getZ()), _ent.getYRot(), _ent.getXRot());
-								}
-								if ((findEntityInWorldRange(world, VINESEntity.class, (entityiterator.getX()), (entityiterator.getY()), (entityiterator.getZ()), 4)) instanceof VINESEntity) {
-									((VINESEntity) (findEntityInWorldRange(world, VINESEntity.class, (entityiterator.getX()), (entityiterator.getY()), (entityiterator.getZ()), 4))).setAnimation("attack");
-								}
-								DccMod.queueServerWork(25, () -> {
-									if ((findEntityInWorldRange(world, VINESEntity.class, (entityiterator.getX()), (entityiterator.getY()), (entityiterator.getZ()), 4)) instanceof VINESEntity) {
-										((VINESEntity) (findEntityInWorldRange(world, VINESEntity.class, (entityiterator.getX()), (entityiterator.getY()), (entityiterator.getZ()), 4))).setAnimation("idleReal");
+								DccMod.queueServerWork(1, () -> {
+									{
+										Entity _ent = (findEntityInWorldRange(world, VINESEntity.class, (entityiterator.getX()), (entityiterator.getY()), (entityiterator.getZ()), 4));
+										_ent.teleportTo((entityiterator.getX()), (entityiterator.getY()), (entityiterator.getZ()));
+										if (_ent instanceof ServerPlayer _serverPlayer)
+											_serverPlayer.connection.teleport((entityiterator.getX()), (entityiterator.getY()), (entityiterator.getZ()), _ent.getYRot(), _ent.getXRot());
 									}
-									DccMod.queueServerWork(40, () -> {
+									if ((findEntityInWorldRange(world, VINESEntity.class, (entityiterator.getX()), (entityiterator.getY()), (entityiterator.getZ()), 4)) instanceof VINESEntity) {
+										((VINESEntity) (findEntityInWorldRange(world, VINESEntity.class, (entityiterator.getX()), (entityiterator.getY()), (entityiterator.getZ()), 4))).setAnimation("attack");
+									}
+									DccMod.queueServerWork(25, () -> {
 										if ((findEntityInWorldRange(world, VINESEntity.class, (entityiterator.getX()), (entityiterator.getY()), (entityiterator.getZ()), 4)) instanceof VINESEntity) {
 											((VINESEntity) (findEntityInWorldRange(world, VINESEntity.class, (entityiterator.getX()), (entityiterator.getY()), (entityiterator.getZ()), 4))).setAnimation("idleReal");
 										}
 										DccMod.queueServerWork(40, () -> {
 											if ((findEntityInWorldRange(world, VINESEntity.class, (entityiterator.getX()), (entityiterator.getY()), (entityiterator.getZ()), 4)) instanceof VINESEntity) {
-												((VINESEntity) (findEntityInWorldRange(world, VINESEntity.class, (entityiterator.getX()), (entityiterator.getY()), (entityiterator.getZ()), 4))).setAnimation("despawn");
+												((VINESEntity) (findEntityInWorldRange(world, VINESEntity.class, (entityiterator.getX()), (entityiterator.getY()), (entityiterator.getZ()), 4))).setAnimation("idleReal");
 											}
-											if (entityiterator.isAlive()) {
-												if (entityiterator instanceof LivingEntity _livingEntity67 && _livingEntity67.getAttributes().hasAttribute(Attributes.KNOCKBACK_RESISTANCE))
-													_livingEntity67.getAttribute(Attributes.KNOCKBACK_RESISTANCE)
-															.setBaseValue(((entityiterator instanceof LivingEntity _livingEntity66 && _livingEntity66.getAttributes().hasAttribute(Attributes.KNOCKBACK_RESISTANCE)
-																	? _livingEntity66.getAttribute(Attributes.KNOCKBACK_RESISTANCE).getBaseValue()
-																	: 0) / 100 - 1));
-											}
+											DccMod.queueServerWork(40, () -> {
+												if ((findEntityInWorldRange(world, VINESEntity.class, (entityiterator.getX()), (entityiterator.getY()), (entityiterator.getZ()), 4)) instanceof VINESEntity) {
+													((VINESEntity) (findEntityInWorldRange(world, VINESEntity.class, (entityiterator.getX()), (entityiterator.getY()), (entityiterator.getZ()), 4))).setAnimation("despawn");
+												}
+												if (entityiterator.isAlive()) {
+													if (entityiterator instanceof LivingEntity _livingEntity68 && _livingEntity68.getAttributes().hasAttribute(Attributes.KNOCKBACK_RESISTANCE))
+														_livingEntity68.getAttribute(Attributes.KNOCKBACK_RESISTANCE)
+																.setBaseValue(((entityiterator instanceof LivingEntity _livingEntity67 && _livingEntity67.getAttributes().hasAttribute(Attributes.KNOCKBACK_RESISTANCE)
+																		? _livingEntity67.getAttribute(Attributes.KNOCKBACK_RESISTANCE).getBaseValue()
+																		: 0) / 100 - 1));
+												}
+											});
 										});
 									});
 								});

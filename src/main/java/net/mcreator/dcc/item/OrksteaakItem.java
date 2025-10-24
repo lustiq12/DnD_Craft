@@ -13,7 +13,6 @@ import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.network.chat.Component;
 
-import net.mcreator.dcc.procedures.VeteranquestProcedure;
 import net.mcreator.dcc.procedures.StrenIProcedure;
 
 import java.util.List;
@@ -48,11 +47,5 @@ public class OrksteaakItem extends Item {
 			}
 			return itemstack;
 		}
-	}
-
-	@Override
-	public void onCraftedBy(ItemStack itemstack, Level world, Player entity) {
-		super.onCraftedBy(itemstack, world, entity);
-		VeteranquestProcedure.execute(world, entity);
 	}
 }

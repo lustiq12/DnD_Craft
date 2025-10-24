@@ -1,0 +1,80 @@
+{
+  "display": {
+    "icon": {
+      "id": "dcc:coated_poisoned_dagger"
+    },
+    "title": {
+      "translate": "advancements.goblin_mayhem.title"
+    },
+    "description": {
+      "translate": "advancements.goblin_mayhem.descr"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "goblin_mayhem_0": {
+      "trigger": "minecraft:entity_hurt_player",
+      "conditions": {
+        "damage": {
+          "taken": {
+            "min": 0,
+            "max": 100
+          },
+          "source_entity": {
+            "type": "dcc:goblin"
+          },
+          "blocked": false
+        }
+      }
+    },
+    "goblin_mayhem_1": {
+      "trigger": "minecraft:entity_hurt_player",
+      "conditions": {
+        "damage": {
+          "taken": {
+            "min": 0,
+            "max": 100
+          },
+          "source_entity": {
+            "type": "dcc:goblin_iron"
+          },
+          "blocked": false
+        }
+      }
+    },
+    "goblin_mayhem_2": {
+      "trigger": "minecraft:entity_hurt_player",
+      "conditions": {
+        "damage": {
+          "taken": {
+            "min": 0,
+            "max": 100
+          },
+          "source_entity": {
+            "type": "dcc:goblin_chief"
+          },
+          "blocked": false
+        }
+      }
+    },
+    "goblin_mayhem_3": {
+      "trigger": "minecraft:entity_hurt_player",
+      "conditions": {
+        "damage": {
+          "taken": {
+            "min": 0,
+            "max": 100
+          },
+          "source_entity": {
+            "type": "dcc:goblin_bow"
+          },
+          "blocked": false
+        }
+      }
+    }
+  },
+  "parent": "dcc:ork_slayer"
+}

@@ -1,9 +1,10 @@
 package net.mcreator.dcc.item;
 
+import net.minecraft.world.item.Rarity;
 import net.minecraft.world.item.Item;
 
 public class AdamantiumUpgradeSmithingTemplateItem extends Item {
 	public AdamantiumUpgradeSmithingTemplateItem() {
-		super(new Item.Properties());
+		super(new Item.Properties().stacksTo(64).rarity(Rarity.COMMON));
 	}
 }

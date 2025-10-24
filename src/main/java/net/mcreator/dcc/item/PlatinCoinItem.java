@@ -5,6 +5,6 @@ import net.minecraft.world.item.Item;
 
 public class PlatinCoinItem extends Item {
 	public PlatinCoinItem() {
-		super(new Item.Properties().rarity(Rarity.EPIC));
+		super(new Item.Properties().stacksTo(64).rarity(Rarity.EPIC));
 	}
 }

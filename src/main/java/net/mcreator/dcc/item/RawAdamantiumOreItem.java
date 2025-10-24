@@ -5,6 +5,6 @@ import net.minecraft.world.item.Item;
 
 public class RawAdamantiumOreItem extends Item {
 	public RawAdamantiumOreItem() {
-		super(new Item.Properties().rarity(Rarity.UNCOMMON));
+		super(new Item.Properties().stacksTo(64).rarity(Rarity.UNCOMMON));
 	}
 }

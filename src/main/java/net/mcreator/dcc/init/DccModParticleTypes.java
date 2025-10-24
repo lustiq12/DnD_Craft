@@ -17,4 +17,5 @@ public class DccModParticleTypes {
 	public static final DeferredHolder<ParticleType<?>, SimpleParticleType> SHIELD_PARTICLE = REGISTRY.register("shield_particle", () -> new SimpleParticleType(true));
 	public static final DeferredHolder<ParticleType<?>, SimpleParticleType> SLIMYPARTICLE = REGISTRY.register("slimyparticle", () -> new SimpleParticleType(true));
 	public static final DeferredHolder<ParticleType<?>, SimpleParticleType> BLOOD = REGISTRY.register("blood", () -> new SimpleParticleType(false));
+	public static final DeferredHolder<ParticleType<?>, SimpleParticleType> BUTTERFLY_PARTICLE = REGISTRY.register("butterfly_particle", () -> new SimpleParticleType(false));
 }

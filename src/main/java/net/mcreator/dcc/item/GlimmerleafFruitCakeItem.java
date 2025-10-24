@@ -5,6 +5,7 @@ import net.neoforged.api.distmarker.Dist;
 
 import net.minecraft.world.level.Level;
 import net.minecraft.world.item.TooltipFlag;
+import net.minecraft.world.item.Rarity;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.food.FoodProperties;
@@ -17,15 +18,15 @@ import java.util.List;
 
 public class GlimmerleafFruitCakeItem extends Item {
 	public GlimmerleafFruitCakeItem() {
-		super(new Item.Properties().food((new FoodProperties.Builder()).nutrition(8).saturationModifier(3f).build()));
+		super(new Item.Properties().stacksTo(64).rarity(Rarity.COMMON).food((new FoodProperties.Builder()).nutrition(8).saturationModifier(3f).build()));
 	}
 
 	@Override
 	@OnlyIn(Dist.CLIENT)
 	public void appendHoverText(ItemStack itemstack, Item.TooltipContext context, List<Component> list, TooltipFlag flag) {
 		super.appendHoverText(itemstack, context, list, flag);
-		list.add(Component.translatable("item.dcc.glimmerleaf_fruit_cake.description_0"));
-		list.add(Component.translatable("item.dcc.glimmerleaf_fruit_cake.description_1"));
+		list.add(Component.literal("\u00A76This is a meal, wich means you get specific effects upon consuming it."));
+		list.add(Component.literal("\u00A76-Regeneration I"));
 	}
 
 	@Override

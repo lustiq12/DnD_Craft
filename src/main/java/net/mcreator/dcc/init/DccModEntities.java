@@ -7,11 +7,8 @@ import net.neoforged.neoforge.registries.DeferredRegister;
 import net.neoforged.neoforge.registries.DeferredHolder;
 import net.neoforged.neoforge.event.entity.RegisterSpawnPlacementsEvent;
 import net.neoforged.neoforge.event.entity.EntityAttributeCreationEvent;
-import net.neoforged.neoforge.capabilities.RegisterCapabilitiesEvent;
-import net.neoforged.neoforge.capabilities.Capabilities;
 import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.bus.api.SubscribeEvent;
-import net.neoforged.bus.api.EventPriority;
 
 import net.minecraft.world.entity.MobCategory;
 import net.minecraft.world.entity.EntityType;
@@ -23,6 +20,7 @@ import net.mcreator.dcc.entity.VINESEntity;
 import net.mcreator.dcc.entity.ThornEntity;
 import net.mcreator.dcc.entity.TentaclesEntity;
 import net.mcreator.dcc.entity.SmallOcherjellyEntity;
+import net.mcreator.dcc.entity.RedCapEntity;
 import net.mcreator.dcc.entity.OwlbearEntity;
 import net.mcreator.dcc.entity.OrkEntity;
 import net.mcreator.dcc.entity.Ogre2Entity;
@@ -143,9 +141,13 @@ public class DccModEntities {
 	public static final DeferredHolder<EntityType<?>, EntityType<BullywugTadpoleEntity>> BULLYWUG_TADPOLE = register("bullywug_tadpole",
 			EntityType.Builder.<BullywugTadpoleEntity>of(BullywugTadpoleEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3)
 
-					.sized(0.6f, 1.8f));
+					.sized(0.5f, 0.3f));
 	public static final DeferredHolder<EntityType<?>, EntityType<BullywugWarriorEntity>> BULLYWUG_WARRIOR = register("bullywug_warrior",
 			EntityType.Builder.<BullywugWarriorEntity>of(BullywugWarriorEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3)
+
+					.sized(0.6f, 1.8f));
+	public static final DeferredHolder<EntityType<?>, EntityType<RedCapEntity>> RED_CAP = register("red_cap",
+			EntityType.Builder.<RedCapEntity>of(RedCapEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3)
 
 					.sized(0.6f, 1.8f));
 
@@ -153,11 +155,6 @@ public class DccModEntities {
 	// End of user code block custom entities
 	private static <T extends Entity> DeferredHolder<EntityType<?>, EntityType<T>> register(String registryname, EntityType.Builder<T> entityTypeBuilder) {
 		return REGISTRY.register(registryname, () -> (EntityType<T>) entityTypeBuilder.build(registryname));
-	}
-
-	@SubscribeEvent(priority = EventPriority.HIGHEST)
-	public static void registerCapabilities(RegisterCapabilitiesEvent event) {
-		event.registerEntity(Capabilities.ItemHandler.ENTITY, COOK.get(), (living, context) -> living.getInventory());
 	}
 
 	@SubscribeEvent
@@ -186,6 +183,7 @@ public class DccModEntities {
 		BullywugEntity.init(event);
 		BullywugTadpoleEntity.init(event);
 		BullywugWarriorEntity.init(event);
+		RedCapEntity.init(event);
 	}
 
 	@SubscribeEvent
@@ -214,5 +212,6 @@ public class DccModEntities {
 		event.put(BULLYWUG.get(), BullywugEntity.createAttributes().build());
 		event.put(BULLYWUG_TADPOLE.get(), BullywugTadpoleEntity.createAttributes().build());
 		event.put(BULLYWUG_WARRIOR.get(), BullywugWarriorEntity.createAttributes().build());
+		event.put(RED_CAP.get(), RedCapEntity.createAttributes().build());
 	}
 }

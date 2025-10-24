@@ -1,0 +1,35 @@
+{
+  "display": {
+    "icon": {
+      "id": "dcc:carrioncrawlercocoon"
+    },
+    "title": {
+      "translate": "advancements.cave_jumpscare.title"
+    },
+    "description": {
+      "translate": "advancements.cave_jumpscare.descr"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "cave_jumpscare_0": {
+      "trigger": "minecraft:entity_hurt_player",
+      "conditions": {
+        "damage": {
+          "taken": {
+            "min": 0,
+            "max": 10000
+          },
+          "source_entity": {
+            "type": "dcc:carrion_crawler"
+          },
+          "blocked": false
+        }
+      }
+    }
+  },
+  "parent": "dcc:ork_slayer"
+}

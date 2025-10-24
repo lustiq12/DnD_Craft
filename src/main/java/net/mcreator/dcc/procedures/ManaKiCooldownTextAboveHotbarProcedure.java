@@ -20,6 +20,8 @@ import net.mcreator.dcc.network.DccModVariables;
 
 import javax.annotation.Nullable;
 
+import com.ibm.icu.util.Output;
+
 @EventBusSubscriber
 public class ManaKiCooldownTextAboveHotbarProcedure {
 	@SubscribeEvent
@@ -34,6 +36,7 @@ public class ManaKiCooldownTextAboveHotbarProcedure {
 	private static void execute(@Nullable Event event, Entity entity) {
 		if (entity == null)
 			return;
+		String Output = "";
 		if (entity.isAlive()) {
 			if ((entity.getData(DccModVariables.PLAYER_VARIABLES).Class_Variable).equals("false")) {
 				if (!(entity instanceof Player _plr0 && _plr0.containerMenu instanceof ClassesMenu || entity instanceof Player _plr1 && _plr1.containerMenu instanceof BarbarGuiMenu
@@ -53,9 +56,7 @@ public class ManaKiCooldownTextAboveHotbarProcedure {
 			}
 			if ((entity.getData(DccModVariables.PLAYER_VARIABLES).Class_Variable).equals("Magician") || (entity.getData(DccModVariables.PLAYER_VARIABLES).Class_Variable).equals("Paladin")
 					|| (entity.getData(DccModVariables.PLAYER_VARIABLES).Class_Variable).equals("Bard")) {
-				if (entity instanceof Player _player && !_player.level().isClientSide())
-					_player.displayClientMessage(
-							Component.literal(("\u00A79Mana: " + Math.round(entity.getData(DccModVariables.PLAYER_VARIABLES).Mana) + " " + "\u00A76Cooldown: " + Math.round(entity.getData(DccModVariables.PLAYER_VARIABLES).cooldown))), true);
+				Output = "\u00A79Mana: " + Math.round(entity.getData(DccModVariables.PLAYER_VARIABLES).Mana) + " " + "\u00A76Cooldown: " + Math.round(entity.getData(DccModVariables.PLAYER_VARIABLES).cooldown);
 				if (entity.getData(DccModVariables.PLAYER_VARIABLES).MaxMana < entity.getData(DccModVariables.PLAYER_VARIABLES).Mana) {
 					{
 						DccModVariables.PlayerVariables _vars = entity.getData(DccModVariables.PLAYER_VARIABLES);
@@ -70,9 +71,7 @@ public class ManaKiCooldownTextAboveHotbarProcedure {
 					}
 				}
 			} else if ((entity.getData(DccModVariables.PLAYER_VARIABLES).Class_Variable).equals("Monk")) {
-				if (entity instanceof Player _player && !_player.level().isClientSide())
-					_player.displayClientMessage(Component.literal(("\u00A73Ki: " + Math.round(entity.getData(DccModVariables.PLAYER_VARIABLES).Ki) + " " + "\u00A76Cooldown: " + Math.round(entity.getData(DccModVariables.PLAYER_VARIABLES).cooldown))),
-							true);
+				Output = "\u00A73Ki: " + Math.round(entity.getData(DccModVariables.PLAYER_VARIABLES).Ki) + " " + "\u00A76Cooldown: " + Math.round(entity.getData(DccModVariables.PLAYER_VARIABLES).cooldown);
 				if (entity.getData(DccModVariables.PLAYER_VARIABLES).MaxKi > entity.getData(DccModVariables.PLAYER_VARIABLES).Ki) {
 					{
 						DccModVariables.PlayerVariables _vars = entity.getData(DccModVariables.PLAYER_VARIABLES);
@@ -87,8 +86,12 @@ public class ManaKiCooldownTextAboveHotbarProcedure {
 					}
 				}
 			} else {
-				if (entity instanceof Player _player && !_player.level().isClientSide())
-					_player.displayClientMessage(Component.literal(("\u00A76Cooldown: " + Math.round(entity.getData(DccModVariables.PLAYER_VARIABLES).cooldown))), true);
+				Output = "\u00A76Cooldown: " + Math.round(entity.getData(DccModVariables.PLAYER_VARIABLES).cooldown);
+			}
+			{
+				DccModVariables.PlayerVariables _vars = entity.getData(DccModVariables.PLAYER_VARIABLES);
+				_vars.InfoText = Output;
+				_vars.syncPlayerVariables(entity);
 			}
 		}
 	}

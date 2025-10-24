@@ -62,7 +62,7 @@ public class MagierguiScreen extends AbstractContainerScreen<MagierguiMenu> impl
 	}
 
 	@Override
-	protected void renderBg(GuiGraphics guiGraphics, float partialTicks, int gx, int gy) {
+	protected void renderBg(GuiGraphics guiGraphics, float partialTicks, int mouseX, int mouseY) {
 		RenderSystem.setShaderColor(1, 1, 1, 1);
 		RenderSystem.enableBlend();
 		RenderSystem.defaultBlendFunc();
@@ -94,6 +94,8 @@ public class MagierguiScreen extends AbstractContainerScreen<MagierguiMenu> impl
 	public void init() {
 		super.init();
 		button_choose = Button.builder(Component.translatable("gui.dcc.magiergui.button_choose"), e -> {
+			int x = MagierguiScreen.this.x;
+			int y = MagierguiScreen.this.y;
 			if (DisplaybuttonProcedure.execute(entity)) {
 				PacketDistributor.sendToServer(new MagierguiButtonMessage(0, x, y, z));
 				MagierguiButtonMessage.handleButtonAction(entity, 0, x, y, z);
@@ -101,6 +103,8 @@ public class MagierguiScreen extends AbstractContainerScreen<MagierguiMenu> impl
 		}).bounds(this.leftPos + 16, this.topPos + 162, 56, 20).build();
 		this.addRenderableWidget(button_choose);
 		button_exit = Button.builder(Component.translatable("gui.dcc.magiergui.button_exit"), e -> {
+			int x = MagierguiScreen.this.x;
+			int y = MagierguiScreen.this.y;
 			if (DisplaybuttonProcedure.execute(entity)) {
 				PacketDistributor.sendToServer(new MagierguiButtonMessage(1, x, y, z));
 				MagierguiButtonMessage.handleButtonAction(entity, 1, x, y, z);

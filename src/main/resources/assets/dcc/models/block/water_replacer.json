@@ -1,13 +1,13 @@
 {
   "parent": "block/cube",
   "textures": {
-    "down": "dcc:block/water_still",
-    "up": "dcc:block/water_still",
-    "north": "dcc:block/water_still",
-    "east": "dcc:block/water_still",
-    "south": "dcc:block/water_still",
-    "west": "dcc:block/water_still",
-    "particle": "dcc:block/water_still"
+    "down": "dcc:block/transparent",
+    "up": "dcc:block/transparent",
+    "north": "dcc:block/transparent",
+    "east": "dcc:block/transparent",
+    "south": "dcc:block/transparent",
+    "west": "dcc:block/transparent",
+    "particle": "dcc:block/transparent"
   },
-  "render_type": "solid"
+  "render_type": "cutout"
 }

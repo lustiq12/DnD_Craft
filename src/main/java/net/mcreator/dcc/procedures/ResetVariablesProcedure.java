@@ -6,6 +6,8 @@ import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.bus.api.Event;
 
 import net.minecraft.world.level.LevelAccessor;
+import net.minecraft.world.entity.ai.attributes.Attributes;
+import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.Entity;
 
 import net.mcreator.dcc.network.DccModVariables;
@@ -78,6 +80,10 @@ public class ResetVariablesProcedure {
 				_vars.Class_Variable = "false";
 				_vars.syncPlayerVariables(entity);
 			}
+			if (entity instanceof LivingEntity _livingEntity1 && _livingEntity1.getAttributes().hasAttribute(Attributes.ATTACK_DAMAGE))
+				_livingEntity1.getAttribute(Attributes.ATTACK_DAMAGE).setBaseValue(2);
+			if (entity instanceof LivingEntity _livingEntity2 && _livingEntity2.getAttributes().hasAttribute(Attributes.MAX_HEALTH))
+				_livingEntity2.getAttribute(Attributes.MAX_HEALTH).setBaseValue(20);
 		}
 	}
 }

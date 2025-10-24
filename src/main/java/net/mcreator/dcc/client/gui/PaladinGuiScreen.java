@@ -74,7 +74,7 @@ public class PaladinGuiScreen extends AbstractContainerScreen<PaladinGuiMenu> im
 	}
 
 	@Override
-	protected void renderBg(GuiGraphics guiGraphics, float partialTicks, int gx, int gy) {
+	protected void renderBg(GuiGraphics guiGraphics, float partialTicks, int mouseX, int mouseY) {
 		RenderSystem.setShaderColor(1, 1, 1, 1);
 		RenderSystem.enableBlend();
 		RenderSystem.defaultBlendFunc();
@@ -115,6 +115,8 @@ public class PaladinGuiScreen extends AbstractContainerScreen<PaladinGuiMenu> im
 	public void init() {
 		super.init();
 		button_choose = Button.builder(Component.translatable("gui.dcc.paladin_gui.button_choose"), e -> {
+			int x = PaladinGuiScreen.this.x;
+			int y = PaladinGuiScreen.this.y;
 			if (DisplaybuttonProcedure.execute(entity)) {
 				PacketDistributor.sendToServer(new PaladinGuiButtonMessage(0, x, y, z));
 				PaladinGuiButtonMessage.handleButtonAction(entity, 0, x, y, z);
@@ -122,6 +124,8 @@ public class PaladinGuiScreen extends AbstractContainerScreen<PaladinGuiMenu> im
 		}).bounds(this.leftPos + 16, this.topPos + 162, 56, 20).build();
 		this.addRenderableWidget(button_choose);
 		button_exit = Button.builder(Component.translatable("gui.dcc.paladin_gui.button_exit"), e -> {
+			int x = PaladinGuiScreen.this.x;
+			int y = PaladinGuiScreen.this.y;
 			if (DisplaybuttonProcedure.execute(entity)) {
 				PacketDistributor.sendToServer(new PaladinGuiButtonMessage(1, x, y, z));
 				PaladinGuiButtonMessage.handleButtonAction(entity, 1, x, y, z);

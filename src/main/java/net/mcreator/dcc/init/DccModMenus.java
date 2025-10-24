@@ -21,7 +21,6 @@ import net.mcreator.dcc.world.inventory.MagierguiMenu;
 import net.mcreator.dcc.world.inventory.MagicChooseMenu;
 import net.mcreator.dcc.world.inventory.KiMenu;
 import net.mcreator.dcc.world.inventory.DruidGuiMenu;
-import net.mcreator.dcc.world.inventory.CookGuiMenu;
 import net.mcreator.dcc.world.inventory.ClassesMenu;
 import net.mcreator.dcc.world.inventory.BardeguiMenu;
 import net.mcreator.dcc.world.inventory.BarbarGuiMenu;
@@ -39,7 +38,6 @@ public class DccModMenus {
 	public static final DeferredHolder<MenuType<?>, MenuType<MagierguiMenu>> MAGIERGUI = REGISTRY.register("magiergui", () -> IMenuTypeExtension.create(MagierguiMenu::new));
 	public static final DeferredHolder<MenuType<?>, MenuType<MonkGuiMenu>> MONK_GUI = REGISTRY.register("monk_gui", () -> IMenuTypeExtension.create(MonkGuiMenu::new));
 	public static final DeferredHolder<MenuType<?>, MenuType<KiMenu>> KI = REGISTRY.register("ki", () -> IMenuTypeExtension.create(KiMenu::new));
-	public static final DeferredHolder<MenuType<?>, MenuType<CookGuiMenu>> COOK_GUI = REGISTRY.register("cook_gui", () -> IMenuTypeExtension.create(CookGuiMenu::new));
 	public static final DeferredHolder<MenuType<?>, MenuType<DruidGuiMenu>> DRUID_GUI = REGISTRY.register("druid_gui", () -> IMenuTypeExtension.create(DruidGuiMenu::new));
 	public static final DeferredHolder<MenuType<?>, MenuType<PaladinGuiMenu>> PALADIN_GUI = REGISTRY.register("paladin_gui", () -> IMenuTypeExtension.create(PaladinGuiMenu::new));
 

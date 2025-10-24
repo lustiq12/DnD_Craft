@@ -71,7 +71,6 @@ public class CarrionCrawlerEntity extends TamableAnimal implements GeoEntity {
 		super(type, world);
 		xpReward = 0;
 		setNoAi(false);
-		setPersistenceRequired();
 	}
 
 	@Override
@@ -107,11 +106,6 @@ public class CarrionCrawlerEntity extends TamableAnimal implements GeoEntity {
 		this.goalSelector.addGoal(7, new FloatGoal(this));
 		this.targetSelector.addGoal(8, new NearestAttackableTargetGoal(this, Player.class, false, false));
 		this.goalSelector.addGoal(9, new FollowOwnerGoal(this, 1, (float) 10, (float) 2));
-	}
-
-	@Override
-	public boolean removeWhenFarAway(double distanceToClosestPlayer) {
-		return false;
 	}
 
 	@Override

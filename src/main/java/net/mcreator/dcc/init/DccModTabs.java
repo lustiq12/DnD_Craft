@@ -124,6 +124,7 @@ public class DccModTabs {
 				tabData.accept(DccModItems.BULLYWUG_WARRIOR_SPAWN_EGG.get());
 				tabData.accept(DccModItems.BULLYWUG_TADPOLE_SPAWN_EGG.get());
 				tabData.accept(DccModItems.BULLYWUG_SPAWN_EGG.get());
+				tabData.accept(DccModItems.RED_CAP_SPAWN_EGG.get());
 			}).build());
 
 	@SubscribeEvent

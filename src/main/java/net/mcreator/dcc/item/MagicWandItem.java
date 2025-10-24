@@ -27,9 +27,9 @@ public class MagicWandItem extends Item {
 	@OnlyIn(Dist.CLIENT)
 	public void appendHoverText(ItemStack itemstack, Item.TooltipContext context, List<Component> list, TooltipFlag flag) {
 		super.appendHoverText(itemstack, context, list, flag);
-		list.add(Component.translatable("item.dcc.spellbook.description_0"));
-		list.add(Component.translatable("item.dcc.spellbook.description_1"));
-		list.add(Component.translatable("item.dcc.spellbook.description_2"));
+		list.add(Component.literal("Sneak-click to select Spells"));
+		list.add(Component.literal("Left-click to cast attack-spells"));
+		list.add(Component.literal("Right-click on block to cast self-spells"));
 	}
 
 	@Override

@@ -66,7 +66,6 @@ public class BowblinEntity extends Monster implements RangedAttackMob, GeoEntity
 		super(type, world);
 		xpReward = 5;
 		setNoAi(false);
-		setPersistenceRequired();
 	}
 
 	@Override
@@ -189,11 +188,6 @@ public class BowblinEntity extends Monster implements RangedAttackMob, GeoEntity
 			} else
 				((BowblinEntity) rangedAttackMob).entityData.set(SHOOT, false);
 		}
-	}
-
-	@Override
-	public boolean removeWhenFarAway(double distanceToClosestPlayer) {
-		return false;
 	}
 
 	@Override

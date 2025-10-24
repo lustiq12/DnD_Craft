@@ -15,6 +15,7 @@ import net.mcreator.dcc.client.renderer.VINESRenderer;
 import net.mcreator.dcc.client.renderer.ThornRenderer;
 import net.mcreator.dcc.client.renderer.TentaclesRenderer;
 import net.mcreator.dcc.client.renderer.SmallOcherjellyRenderer;
+import net.mcreator.dcc.client.renderer.RedCapRenderer;
 import net.mcreator.dcc.client.renderer.OwlbearRenderer;
 import net.mcreator.dcc.client.renderer.OrkRenderer;
 import net.mcreator.dcc.client.renderer.Ogre2Renderer;
@@ -68,5 +69,6 @@ public class DccModEntityRenderers {
 		event.registerEntityRenderer(DccModEntities.BULLYWUG.get(), BullywugRenderer::new);
 		event.registerEntityRenderer(DccModEntities.BULLYWUG_TADPOLE.get(), BullywugTadpoleRenderer::new);
 		event.registerEntityRenderer(DccModEntities.BULLYWUG_WARRIOR.get(), BullywugWarriorRenderer::new);
+		event.registerEntityRenderer(DccModEntities.RED_CAP.get(), RedCapRenderer::new);
 	}
 }

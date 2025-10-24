@@ -14,6 +14,7 @@ import net.mcreator.dcc.potion.KiEffectMobEffect;
 import net.mcreator.dcc.potion.KiEffect2MobEffect;
 import net.mcreator.dcc.potion.JellyMobEffect;
 import net.mcreator.dcc.potion.FreezingMobEffect;
+import net.mcreator.dcc.potion.ButterflyCurseMobEffect;
 import net.mcreator.dcc.DccMod;
 
 public class DccModMobEffects {
@@ -23,4 +24,5 @@ public class DccModMobEffects {
 	public static final DeferredHolder<MobEffect, MobEffect> FREEZING = REGISTRY.register("freezing", () -> new FreezingMobEffect());
 	public static final DeferredHolder<MobEffect, MobEffect> KI_EFFECT = REGISTRY.register("ki_effect", () -> new KiEffectMobEffect());
 	public static final DeferredHolder<MobEffect, MobEffect> KI_EFFECT_2 = REGISTRY.register("ki_effect_2", () -> new KiEffect2MobEffect());
+	public static final DeferredHolder<MobEffect, MobEffect> BUTTERFLY_CURSE = REGISTRY.register("butterfly_curse", () -> new ButterflyCurseMobEffect());
 }

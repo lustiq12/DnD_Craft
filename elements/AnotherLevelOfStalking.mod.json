@@ -1,0 +1,24 @@
+{
+  "_fv": 79,
+  "_type": "achievement",
+  "definition": {
+    "achievementName": "Another Level of Stalking",
+    "achievementDescription": "Get Jumpscared by a Invisible Stalker",
+    "achievementIcon": {
+      "value": "Blocks.STAINED_GLASS_PANE#8"
+    },
+    "background": "Default",
+    "disableDisplay": false,
+    "showPopup": true,
+    "announceToChat": true,
+    "hideIfNotCompleted": false,
+    "rewardLoot": [],
+    "rewardRecipes": [],
+    "rewardXP": 0,
+    "achievementType": "task",
+    "parent": {
+      "value": "CUSTOM:OrkSlayer"
+    },
+    "triggerxml": "<xml xmlns=\"https://developers.google.com/blockly/xml\"><block type=\"advancement_trigger\" deletable=\"false\" x=\"40\" y=\"80\"><next><block type=\"entity_hurt_player\"><field name=\"sourceentity\">CUSTOM:InvisibleStalker</field><field name=\"blocked\">FALSE</field><value name=\"minDamage\"><block type=\"math_number\"><field name=\"NUM\">0</field></block></value><value name=\"maxDamage\"><block type=\"math_number\"><field name=\"NUM\">100</field></block></value></block></next></block></xml>"
+  }
+}

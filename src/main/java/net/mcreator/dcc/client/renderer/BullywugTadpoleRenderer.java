@@ -17,7 +17,7 @@ import com.mojang.blaze3d.vertex.PoseStack;
 public class BullywugTadpoleRenderer extends GeoEntityRenderer<BullywugTadpoleEntity> {
 	public BullywugTadpoleRenderer(EntityRendererProvider.Context renderManager) {
 		super(renderManager, new BullywugTadpoleModel());
-		this.shadowRadius = 0.5f;
+		this.shadowRadius = 0.2f;
 	}
 
 	@Override

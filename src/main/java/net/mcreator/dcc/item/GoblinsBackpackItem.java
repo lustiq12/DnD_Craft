@@ -1,6 +1,7 @@
 package net.mcreator.dcc.item;
 
 import net.minecraft.world.item.context.UseOnContext;
+import net.minecraft.world.item.Rarity;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.InteractionResult;
 
@@ -8,7 +9,7 @@ import net.mcreator.dcc.procedures.GoblinsBackpackRightclickedOnBlockProcedure;
 
 public class GoblinsBackpackItem extends Item {
 	public GoblinsBackpackItem() {
-		super(new Item.Properties().stacksTo(32));
+		super(new Item.Properties().stacksTo(32).rarity(Rarity.COMMON));
 	}
 
 	@Override

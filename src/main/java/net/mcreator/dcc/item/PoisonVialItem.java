@@ -58,7 +58,7 @@ public class PoisonVialItem extends Item {
 	@OnlyIn(Dist.CLIENT)
 	public void appendHoverText(ItemStack itemstack, Item.TooltipContext context, List<Component> list, TooltipFlag flag) {
 		super.appendHoverText(itemstack, context, list, flag);
-		list.add(Component.translatable("item.dcc.poison_vial.description_0"));
+		list.add(Component.literal("Left-click with a valid weapon in off hand to poison it"));
 	}
 
 	@Override

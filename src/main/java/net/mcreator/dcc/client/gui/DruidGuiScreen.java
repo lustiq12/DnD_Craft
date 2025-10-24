@@ -74,7 +74,7 @@ public class DruidGuiScreen extends AbstractContainerScreen<DruidGuiMenu> implem
 	}
 
 	@Override
-	protected void renderBg(GuiGraphics guiGraphics, float partialTicks, int gx, int gy) {
+	protected void renderBg(GuiGraphics guiGraphics, float partialTicks, int mouseX, int mouseY) {
 		RenderSystem.setShaderColor(1, 1, 1, 1);
 		RenderSystem.enableBlend();
 		RenderSystem.defaultBlendFunc();
@@ -115,6 +115,8 @@ public class DruidGuiScreen extends AbstractContainerScreen<DruidGuiMenu> implem
 	public void init() {
 		super.init();
 		button_choose = Button.builder(Component.translatable("gui.dcc.druid_gui.button_choose"), e -> {
+			int x = DruidGuiScreen.this.x;
+			int y = DruidGuiScreen.this.y;
 			if (DisplaybuttonProcedure.execute(entity)) {
 				PacketDistributor.sendToServer(new DruidGuiButtonMessage(0, x, y, z));
 				DruidGuiButtonMessage.handleButtonAction(entity, 0, x, y, z);
@@ -122,6 +124,8 @@ public class DruidGuiScreen extends AbstractContainerScreen<DruidGuiMenu> implem
 		}).bounds(this.leftPos + 16, this.topPos + 162, 56, 20).build();
 		this.addRenderableWidget(button_choose);
 		button_exit = Button.builder(Component.translatable("gui.dcc.druid_gui.button_exit"), e -> {
+			int x = DruidGuiScreen.this.x;
+			int y = DruidGuiScreen.this.y;
 			if (DisplaybuttonProcedure.execute(entity)) {
 				PacketDistributor.sendToServer(new DruidGuiButtonMessage(1, x, y, z));
 				DruidGuiButtonMessage.handleButtonAction(entity, 1, x, y, z);

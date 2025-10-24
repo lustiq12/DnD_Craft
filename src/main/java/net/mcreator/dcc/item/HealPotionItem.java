@@ -6,6 +6,7 @@ import net.neoforged.api.distmarker.Dist;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.item.UseAnim;
 import net.minecraft.world.item.TooltipFlag;
+import net.minecraft.world.item.Rarity;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.food.FoodProperties;
@@ -18,7 +19,7 @@ import java.util.List;
 
 public class HealPotionItem extends Item {
 	public HealPotionItem() {
-		super(new Item.Properties().stacksTo(16).food((new FoodProperties.Builder()).nutrition(1).saturationModifier(1f).alwaysEdible().build()));
+		super(new Item.Properties().stacksTo(16).rarity(Rarity.COMMON).food((new FoodProperties.Builder()).nutrition(1).saturationModifier(1f).alwaysEdible().build()));
 	}
 
 	@Override
@@ -35,8 +36,8 @@ public class HealPotionItem extends Item {
 	@OnlyIn(Dist.CLIENT)
 	public void appendHoverText(ItemStack itemstack, Item.TooltipContext context, List<Component> list, TooltipFlag flag) {
 		super.appendHoverText(itemstack, context, list, flag);
-		list.add(Component.translatable("item.dcc.heal_potion.description_0"));
-		list.add(Component.translatable("item.dcc.heal_potion.description_1"));
+		list.add(Component.literal("Magic Item"));
+		list.add(Component.literal("\u00A72Common"));
 	}
 
 	@Override

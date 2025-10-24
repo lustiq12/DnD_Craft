@@ -1,0 +1,23 @@
+{
+  "display": {
+    "icon": {
+      "id": "dcc:owlbear_meat_stripe"
+    },
+    "title": {
+      "translate": "advancements.kebab_man.title"
+    },
+    "description": {
+      "translate": "advancements.kebab_man.descr"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "kebab_man_0": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "parent": "dcc:ork_slayer"
+}

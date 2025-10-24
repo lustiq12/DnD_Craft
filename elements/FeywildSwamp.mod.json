@@ -76,7 +76,7 @@
       "max": 0.1
     },
     "treesPerChunk": 10,
-    "vanillaTreeType": "Savanna trees",
+    "vanillaTreeType": "Default",
     "treeType": 1,
     "minHeight": 8,
     "treeStem": {
@@ -127,6 +127,52 @@
     "spawnBastionRemnant": false,
     "spawnEndCity": false,
     "spawnRuinedPortal": "NONE",
-    "spawnEntries": []
+    "spawnEntries": [
+      {
+        "entity": {
+          "value": "CUSTOM:RedCap"
+        },
+        "minGroup": 1,
+        "maxGroup": 2,
+        "weight": 4,
+        "spawnType": "monster"
+      },
+      {
+        "entity": {
+          "value": "CUSTOM:BullywugWarrior"
+        },
+        "minGroup": 1,
+        "maxGroup": 2,
+        "weight": 5,
+        "spawnType": "monster"
+      },
+      {
+        "entity": {
+          "value": "CUSTOM:Bullywug"
+        },
+        "minGroup": 1,
+        "maxGroup": 4,
+        "weight": 8,
+        "spawnType": "monster"
+      },
+      {
+        "entity": {
+          "value": "CUSTOM:BullywugTadpole"
+        },
+        "minGroup": 1,
+        "maxGroup": 4,
+        "weight": 10,
+        "spawnType": "monster"
+      },
+      {
+        "entity": {
+          "value": "EntitySlime"
+        },
+        "minGroup": 1,
+        "maxGroup": 2,
+        "weight": 10,
+        "spawnType": "monster"
+      }
+    ]
   }
 }

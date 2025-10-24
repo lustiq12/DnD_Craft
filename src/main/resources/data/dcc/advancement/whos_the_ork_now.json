@@ -1,0 +1,23 @@
+{
+  "display": {
+    "icon": {
+      "id": "dcc:two_handed_axe"
+    },
+    "title": {
+      "translate": "advancements.whos_the_ork_now.title"
+    },
+    "description": {
+      "translate": "advancements.whos_the_ork_now.descr"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "whos_the_ork_now_0": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "parent": "dcc:ork_slayer"
+}

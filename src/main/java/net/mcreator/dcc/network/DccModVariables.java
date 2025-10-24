@@ -77,6 +77,7 @@ public class DccModVariables {
 				clone.DailyRationQuest = original.DailyRationQuest;
 				clone.Monsterdelightquest = original.Monsterdelightquest;
 				clone.CookingVeteranquest = original.CookingVeteranquest;
+				clone.InfoText = original.InfoText;
 			}
 			event.getEntity().setData(PLAYER_VARIABLES, clone);
 		}
@@ -99,6 +100,7 @@ public class DccModVariables {
 		public double MaxMana = 100.0;
 		public double MaxKi = 2.0;
 		public double XpPercent = 0;
+		public String InfoText = "\"\"";
 
 		@Override
 		public CompoundTag serializeNBT(HolderLookup.Provider lookupProvider) {
@@ -119,6 +121,7 @@ public class DccModVariables {
 			nbt.putDouble("MaxMana", MaxMana);
 			nbt.putDouble("MaxKi", MaxKi);
 			nbt.putDouble("XpPercent", XpPercent);
+			nbt.putString("InfoText", InfoText);
 			return nbt;
 		}
 
@@ -140,6 +143,7 @@ public class DccModVariables {
 			MaxMana = nbt.getDouble("MaxMana");
 			MaxKi = nbt.getDouble("MaxKi");
 			XpPercent = nbt.getDouble("XpPercent");
+			InfoText = nbt.getString("InfoText");
 		}
 
 		public void syncPlayerVariables(Entity entity) {

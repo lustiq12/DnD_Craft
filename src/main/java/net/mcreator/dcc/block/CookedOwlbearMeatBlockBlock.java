@@ -1,5 +1,6 @@
 package net.mcreator.dcc.block;
 
+import net.minecraft.world.level.block.state.properties.NoteBlockInstrument;
 import net.minecraft.world.level.block.state.properties.EnumProperty;
 import net.minecraft.world.level.block.state.properties.BlockStateProperties;
 import net.minecraft.world.level.block.state.StateDefinition;
@@ -7,6 +8,7 @@ import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.block.Rotation;
+import net.minecraft.world.level.block.RotatedPillarBlock;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.item.context.BlockPlaceContext;
@@ -17,7 +19,7 @@ public class CookedOwlbearMeatBlockBlock extends Block {
 	public static final EnumProperty<Direction.Axis> AXIS = BlockStateProperties.AXIS;
 
 	public CookedOwlbearMeatBlockBlock() {
-		super(BlockBehaviour.Properties.of().sound(SoundType.POLISHED_DEEPSLATE).strength(0.5f, 10f));
+		super(BlockBehaviour.Properties.of().sound(SoundType.POLISHED_DEEPSLATE).strength(0.5f, 10f).instrument(NoteBlockInstrument.BASEDRUM));
 		this.registerDefaultState(this.stateDefinition.any().setValue(AXIS, Direction.Axis.Y));
 	}
 
@@ -39,13 +41,6 @@ public class CookedOwlbearMeatBlockBlock extends Block {
 
 	@Override
 	public BlockState rotate(BlockState state, Rotation rot) {
-		if (rot == Rotation.CLOCKWISE_90 || rot == Rotation.COUNTERCLOCKWISE_90) {
-			if (state.getValue(AXIS) == Direction.Axis.X) {
-				return state.setValue(AXIS, Direction.Axis.Z);
-			} else if (state.getValue(AXIS) == Direction.Axis.Z) {
-				return state.setValue(AXIS, Direction.Axis.X);
-			}
-		}
-		return state;
+		return RotatedPillarBlock.rotatePillar(state, rot);
 	}
 }

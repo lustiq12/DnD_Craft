@@ -10,6 +10,7 @@ import net.neoforged.api.distmarker.Dist;
 
 import net.mcreator.dcc.client.particle.SlimyparticleParticle;
 import net.mcreator.dcc.client.particle.ShieldParticleParticle;
+import net.mcreator.dcc.client.particle.ButterflyParticleParticle;
 import net.mcreator.dcc.client.particle.BloodParticle;
 
 @EventBusSubscriber(bus = EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
@@ -19,5 +20,6 @@ public class DccModParticles {
 		event.registerSpriteSet(DccModParticleTypes.SHIELD_PARTICLE.get(), ShieldParticleParticle::provider);
 		event.registerSpriteSet(DccModParticleTypes.SLIMYPARTICLE.get(), SlimyparticleParticle::provider);
 		event.registerSpriteSet(DccModParticleTypes.BLOOD.get(), BloodParticle::provider);
+		event.registerSpriteSet(DccModParticleTypes.BUTTERFLY_PARTICLE.get(), ButterflyParticleParticle::provider);
 	}
 }

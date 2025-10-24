@@ -14,6 +14,7 @@ import net.minecraft.client.Minecraft;
 
 import net.mcreator.dcc.procedures.XpPercentProcedure;
 import net.mcreator.dcc.procedures.LevelNumberProcedure;
+import net.mcreator.dcc.procedures.GetInfoTextProcedure;
 
 @EventBusSubscriber({Dist.CLIENT})
 public class LevelBarOverlay {
@@ -35,10 +36,13 @@ public class LevelBarOverlay {
 		if (true) {
 			event.getGuiGraphics().drawString(Minecraft.getInstance().font,
 
-					XpPercentProcedure.execute(entity), 5, h - 11, -1, false);
+					XpPercentProcedure.execute(entity), 6, h - 13, -1, false);
 			event.getGuiGraphics().drawString(Minecraft.getInstance().font,
 
-					LevelNumberProcedure.execute(entity), 4, h - 23, -1, false);
+					LevelNumberProcedure.execute(entity), 6, h - 22, -1, false);
+			event.getGuiGraphics().drawString(Minecraft.getInstance().font,
+
+					GetInfoTextProcedure.execute(entity), 6, h - 31, -1, false);
 		}
 	}
 }

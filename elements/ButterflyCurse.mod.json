@@ -1,0 +1,27 @@
+{
+  "_fv": 79,
+  "_type": "potioneffect",
+  "definition": {
+    "effectName": "Butterfly Curse",
+    "icon": "butterfly",
+    "color": {
+      "value": -3407668,
+      "falpha": 0.0
+    },
+    "onAddedSound": {
+      "value": ""
+    },
+    "isInstant": false,
+    "mobEffectCategory": "HARMFUL",
+    "renderStatusInInventory": true,
+    "renderStatusInHUD": true,
+    "isCuredbyHoney": true,
+    "modifiers": [],
+    "onActiveTick": {
+      "name": "ButterflyCurseOnEffectActiveTick"
+    },
+    "onMobHurt": {
+      "name": "ButterflyCurseOnEntityHurt"
+    }
+  }
+}

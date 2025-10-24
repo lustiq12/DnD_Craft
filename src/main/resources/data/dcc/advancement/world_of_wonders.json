@@ -1,0 +1,26 @@
+{
+  "display": {
+    "icon": {
+      "id": "dcc:feywild"
+    },
+    "title": {
+      "translate": "advancements.world_of_wonders.title"
+    },
+    "description": {
+      "translate": "advancements.world_of_wonders.descr"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "world_of_wonders_0": {
+      "trigger": "minecraft:changed_dimension",
+      "conditions": {
+        "to": "dcc:feywild"
+      }
+    }
+  },
+  "parent": "dcc:the_beginning"
+}

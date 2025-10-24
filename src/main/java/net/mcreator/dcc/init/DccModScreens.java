@@ -14,7 +14,6 @@ import net.mcreator.dcc.client.gui.MagierguiScreen;
 import net.mcreator.dcc.client.gui.MagicChooseScreen;
 import net.mcreator.dcc.client.gui.KiScreen;
 import net.mcreator.dcc.client.gui.DruidGuiScreen;
-import net.mcreator.dcc.client.gui.CookGuiScreen;
 import net.mcreator.dcc.client.gui.ClassesScreen;
 import net.mcreator.dcc.client.gui.BardeguiScreen;
 import net.mcreator.dcc.client.gui.BarbarGuiScreen;
@@ -30,7 +29,6 @@ public class DccModScreens {
 		event.register(DccModMenus.MAGIERGUI.get(), MagierguiScreen::new);
 		event.register(DccModMenus.MONK_GUI.get(), MonkGuiScreen::new);
 		event.register(DccModMenus.KI.get(), KiScreen::new);
-		event.register(DccModMenus.COOK_GUI.get(), CookGuiScreen::new);
 		event.register(DccModMenus.DRUID_GUI.get(), DruidGuiScreen::new);
 		event.register(DccModMenus.PALADIN_GUI.get(), PaladinGuiScreen::new);
 	}

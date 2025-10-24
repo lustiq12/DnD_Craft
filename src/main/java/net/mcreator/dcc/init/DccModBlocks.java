@@ -57,10 +57,5 @@ public class DccModBlocks {
 		public static void blockColorLoad(RegisterColorHandlersEvent.Block event) {
 			WaterReplacerBlock.blockColorLoad(event);
 		}
-
-		@SubscribeEvent
-		public static void itemColorLoad(RegisterColorHandlersEvent.Item event) {
-			WaterReplacerBlock.itemColorLoad(event);
-		}
 	}
 }

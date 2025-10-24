@@ -9,19 +9,11 @@ import software.bernie.geckolib.animation.AnimatableManager;
 import software.bernie.geckolib.animatable.instance.AnimatableInstanceCache;
 import software.bernie.geckolib.animatable.GeoEntity;
 
-import net.neoforged.neoforge.items.wrapper.EntityHandsInvWrapper;
-import net.neoforged.neoforge.items.wrapper.EntityArmorInvWrapper;
-import net.neoforged.neoforge.items.wrapper.CombinedInvWrapper;
-import net.neoforged.neoforge.items.ItemStackHandler;
 import net.neoforged.neoforge.event.entity.RegisterSpawnPlacementsEvent;
 
 import net.minecraft.world.level.Level;
-import net.minecraft.world.item.enchantment.EnchantmentHelper;
-import net.minecraft.world.item.enchantment.EnchantmentEffectComponents;
 import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.inventory.AbstractContainerMenu;
 import net.minecraft.world.entity.player.Player;
-import net.minecraft.world.entity.player.Inventory;
 import net.minecraft.world.entity.monster.Monster;
 import net.minecraft.world.entity.ai.goal.RandomLookAroundGoal;
 import net.minecraft.world.entity.ai.goal.FloatGoal;
@@ -31,31 +23,28 @@ import net.minecraft.world.entity.Pose;
 import net.minecraft.world.entity.Mob;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.EntityDimensions;
+import net.minecraft.world.entity.Entity;
 import net.minecraft.world.damagesource.DamageTypes;
 import net.minecraft.world.damagesource.DamageSource;
-import net.minecraft.world.MenuProvider;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.sounds.SoundEvent;
-import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.network.syncher.SynchedEntityData;
 import net.minecraft.network.syncher.EntityDataSerializers;
 import net.minecraft.network.syncher.EntityDataAccessor;
-import net.minecraft.network.chat.Component;
-import net.minecraft.network.FriendlyByteBuf;
-import net.minecraft.nbt.Tag;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.core.registries.BuiltInRegistries;
 
-import net.mcreator.dcc.world.inventory.CookGuiMenu;
-
-import io.netty.buffer.Unpooled;
+import net.mcreator.dcc.procedures.CookRightClickedOnEntityProcedure;
 
 public class CookEntity extends Monster implements GeoEntity {
 	public static final EntityDataAccessor<Boolean> SHOOT = SynchedEntityData.defineId(CookEntity.class, EntityDataSerializers.BOOLEAN);
 	public static final EntityDataAccessor<String> ANIMATION = SynchedEntityData.defineId(CookEntity.class, EntityDataSerializers.STRING);
 	public static final EntityDataAccessor<String> TEXTURE = SynchedEntityData.defineId(CookEntity.class, EntityDataSerializers.STRING);
+	public static final EntityDataAccessor<Integer> DATA_AmountCurrently = SynchedEntityData.defineId(CookEntity.class, EntityDataSerializers.INT);
+	public static final EntityDataAccessor<String> DATA_CurrentQuest = SynchedEntityData.defineId(CookEntity.class, EntityDataSerializers.STRING);
+	public static final EntityDataAccessor<Boolean> DATA_FirstTimeAsking = SynchedEntityData.defineId(CookEntity.class, EntityDataSerializers.BOOLEAN);
 	private final AnimatableInstanceCache cache = GeckoLibUtil.createInstanceCache(this);
 	private boolean swinging;
 	private boolean lastloop;
@@ -74,7 +63,10 @@ public class CookEntity extends Monster implements GeoEntity {
 		super.defineSynchedData(builder);
 		builder.define(SHOOT, false);
 		builder.define(ANIMATION, "undefined");
-		builder.define(TEXTURE, "cookstre");
+		builder.define(TEXTURE, "cook2");
+		builder.define(DATA_AmountCurrently, 0);
+		builder.define(DATA_CurrentQuest, "0");
+		builder.define(DATA_FirstTimeAsking, false);
 	}
 
 	public void setTexture(String texture) {
@@ -114,72 +106,40 @@ public class CookEntity extends Monster implements GeoEntity {
 		return super.hurt(source, amount);
 	}
 
-	private final ItemStackHandler inventory = new ItemStackHandler(9) {
-		@Override
-		public int getSlotLimit(int slot) {
-			return 64;
-		}
-	};
-	private final CombinedInvWrapper combined = new CombinedInvWrapper(inventory, new EntityHandsInvWrapper(this), new EntityArmorInvWrapper(this));
-
-	public CombinedInvWrapper getInventory() {
-		return combined;
-	}
-
-	@Override
-	protected void dropEquipment() {
-		super.dropEquipment();
-		for (int i = 0; i < inventory.getSlots(); ++i) {
-			ItemStack itemstack = inventory.getStackInSlot(i);
-			if (!itemstack.isEmpty() && !EnchantmentHelper.has(itemstack, EnchantmentEffectComponents.PREVENT_EQUIPMENT_DROP)) {
-				this.spawnAtLocation(itemstack);
-			}
-		}
-	}
-
 	@Override
 	public void addAdditionalSaveData(CompoundTag compound) {
 		super.addAdditionalSaveData(compound);
-		compound.put("InventoryCustom", inventory.serializeNBT(this.registryAccess()));
 		compound.putString("Texture", this.getTexture());
+		compound.putInt("DataAmountCurrently", this.entityData.get(DATA_AmountCurrently));
+		compound.putString("DataCurrentQuest", this.entityData.get(DATA_CurrentQuest));
+		compound.putBoolean("DataFirstTimeAsking", this.entityData.get(DATA_FirstTimeAsking));
 	}
 
 	@Override
 	public void readAdditionalSaveData(CompoundTag compound) {
 		super.readAdditionalSaveData(compound);
-		Tag inventoryCustom = compound.get("InventoryCustom");
-		if (inventoryCustom instanceof CompoundTag inventoryTag)
-			inventory.deserializeNBT(this.registryAccess(), inventoryTag);
 		if (compound.contains("Texture"))
 			this.setTexture(compound.getString("Texture"));
+		if (compound.contains("DataAmountCurrently"))
+			this.entityData.set(DATA_AmountCurrently, compound.getInt("DataAmountCurrently"));
+		if (compound.contains("DataCurrentQuest"))
+			this.entityData.set(DATA_CurrentQuest, compound.getString("DataCurrentQuest"));
+		if (compound.contains("DataFirstTimeAsking"))
+			this.entityData.set(DATA_FirstTimeAsking, compound.getBoolean("DataFirstTimeAsking"));
 	}
 
 	@Override
 	public InteractionResult mobInteract(Player sourceentity, InteractionHand hand) {
 		ItemStack itemstack = sourceentity.getItemInHand(hand);
 		InteractionResult retval = InteractionResult.sidedSuccess(this.level().isClientSide());
-		if (sourceentity instanceof ServerPlayer serverPlayer) {
-			serverPlayer.openMenu(new MenuProvider() {
-				@Override
-				public Component getDisplayName() {
-					return Component.literal("Cook");
-				}
-
-				@Override
-				public AbstractContainerMenu createMenu(int id, Inventory inventory, Player player) {
-					FriendlyByteBuf packetBuffer = new FriendlyByteBuf(Unpooled.buffer());
-					packetBuffer.writeBlockPos(sourceentity.blockPosition());
-					packetBuffer.writeByte(0);
-					packetBuffer.writeVarInt(CookEntity.this.getId());
-					return new CookGuiMenu(id, inventory, packetBuffer);
-				}
-			}, buf -> {
-				buf.writeBlockPos(sourceentity.blockPosition());
-				buf.writeByte(0);
-				buf.writeVarInt(this.getId());
-			});
-		}
 		super.mobInteract(sourceentity, hand);
+		double x = this.getX();
+		double y = this.getY();
+		double z = this.getZ();
+		Entity entity = this;
+		Level world = this.level();
+
+		CookRightClickedOnEntityProcedure.execute(world, x, y, z, entity, sourceentity);
 		return retval;
 	}
 

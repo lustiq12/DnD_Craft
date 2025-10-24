@@ -1,0 +1,14 @@
+{
+  "structures": [
+    {
+      "structure": "dcc:bully_wug_hut_1",
+      "weight": 1
+    }
+  ],
+  "placement": {
+    "type": "minecraft:random_spread",
+    "spacing": 8,
+    "separation": 5,
+    "salt": 1445991369
+  }
+}

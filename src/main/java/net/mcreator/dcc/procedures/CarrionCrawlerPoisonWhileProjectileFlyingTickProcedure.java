@@ -8,12 +8,12 @@ public class CarrionCrawlerPoisonWhileProjectileFlyingTickProcedure {
 	public static void execute(Entity entity) {
 		if (entity == null)
 			return;
-		if (entity.getPersistentData().getDouble("tagName") == 0) {
-			entity.getPersistentData().putDouble("tagName", 1);
+		if (entity.getPersistentData().getDouble("Time") == 0) {
+			entity.getPersistentData().putDouble("Time", 1);
 		} else {
-			entity.getPersistentData().putDouble("tagName", (entity.getPersistentData().getDouble("tagName") + 1));
+			entity.getPersistentData().putDouble("Time", (entity.getPersistentData().getDouble("Time") + 1));
 		}
-		if (entity.getPersistentData().getDouble("tagName") > 5) {
+		if (entity.getPersistentData().getDouble("Time") > 5) {
 			if (!(entity instanceof CarrionCrawlerEntity) && !(entity == null)) {
 				if (!entity.level().isClientSide())
 					entity.discard();

@@ -9,12 +9,12 @@ import net.mcreator.dcc.entity.CookEntity;
 public class CookModel extends GeoModel<CookEntity> {
 	@Override
 	public ResourceLocation getAnimationResource(CookEntity entity) {
-		return ResourceLocation.parse("dcc:animations/cook.animation.json");
+		return ResourceLocation.parse("dcc:animations/cook2.animation.json");
 	}
 
 	@Override
 	public ResourceLocation getModelResource(CookEntity entity) {
-		return ResourceLocation.parse("dcc:geo/cook.geo.json");
+		return ResourceLocation.parse("dcc:geo/cook2.geo.json");
 	}
 
 	@Override

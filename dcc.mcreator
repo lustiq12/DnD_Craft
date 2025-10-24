@@ -5029,32 +5029,6 @@
       "path": "~/Recipes"
     },
     {
-      "name": "DungeonHunter",
-      "type": "achievement",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "dungeon_hunter",
-      "metadata": {
-        "files": [
-          "src/main/resources/data/dcc/advancement/dungeon_hunter.json"
-        ]
-      },
-      "path": "~/Achievements"
-    },
-    {
-      "name": "DungeonGourmet",
-      "type": "achievement",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "dungeon_gourmet",
-      "metadata": {
-        "files": [
-          "src/main/resources/data/dcc/advancement/dungeon_gourmet.json"
-        ]
-      },
-      "path": "~/Achievements"
-    },
-    {
       "name": "TheBeginning",
       "type": "achievement",
       "compiles": true,
@@ -5089,19 +5063,6 @@
       "metadata": {
         "files": [
           "src/main/resources/data/dcc/advancement/businessman.json"
-        ]
-      },
-      "path": "~/Achievements"
-    },
-    {
-      "name": "Adamantiumattack",
-      "type": "achievement",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "adamantiumattack",
-      "metadata": {
-        "files": [
-          "src/main/resources/data/dcc/advancement/adamantiumattack.json"
         ]
       },
       "path": "~/Achievements"
@@ -5368,41 +5329,6 @@
       "path": "~/NPCs"
     },
     {
-      "name": "CookGui",
-      "type": "gui",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "cook_gui",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/dcc/world/inventory/CookGuiMenu.java",
-          "src/main/java/net/mcreator/dcc/client/gui/CookGuiScreen.java",
-          "src/main/java/net/mcreator/dcc/network/CookGuiButtonMessage.java"
-        ]
-      },
-      "path": "~/NPCs"
-    },
-    {
-      "name": "IfnoQuest",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "ifno_quest",
-      "metadata": {
-        "return_type": "logic",
-        "files": [
-          "src/main/java/net/mcreator/dcc/procedures/IfnoQuestProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      },
-      "path": "~/NPCs/Daily Ration Quest"
-    },
-    {
       "name": "DailyRation",
       "type": "item",
       "compiles": true,
@@ -5430,154 +5356,6 @@
       "path": "~/Recipes"
     },
     {
-      "name": "DailyRationQuest",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "daily_ration_quest",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/dcc/procedures/DailyRationQuestProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      },
-      "path": "~/NPCs/Daily Ration Quest"
-    },
-    {
-      "name": "DailyRationLoot",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "daily_ration_loot",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/dcc/procedures/DailyRationLootProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      },
-      "path": "~/NPCs/Daily Ration Quest"
-    },
-    {
-      "name": "Monsterquestshow",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "monsterquestshow",
-      "metadata": {
-        "return_type": "logic",
-        "files": [
-          "src/main/java/net/mcreator/dcc/procedures/MonsterquestshowProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      },
-      "path": "~/NPCs/Monster Quest"
-    },
-    {
-      "name": "Monsterdelightquest",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "monsterdelightquest",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/dcc/procedures/MonsterdelightquestProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      },
-      "path": "~/NPCs/Monster Quest"
-    },
-    {
-      "name": "MonsterDelightloot",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "monster_delightloot",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/dcc/procedures/MonsterDelightlootProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      },
-      "path": "~/NPCs/Monster Quest"
-    },
-    {
-      "name": "Monsterquestunlock",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "monsterquestunlock",
-      "metadata": {
-        "return_type": "logic",
-        "files": [
-          "src/main/java/net/mcreator/dcc/procedures/MonsterquestunlockProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      },
-      "path": "~/NPCs/Monster Quest"
-    },
-    {
       "name": "CooksHouse",
       "type": "structure",
       "compiles": true,
@@ -5591,84 +5369,6 @@
         ]
       },
       "path": "~/Structures"
-    },
-    {
-      "name": "Veteranquestshow",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "veteranquestshow",
-      "metadata": {
-        "return_type": "logic",
-        "files": [
-          "src/main/java/net/mcreator/dcc/procedures/VeteranquestshowProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      },
-      "path": "~/NPCs/Veteran Quest"
-    },
-    {
-      "name": "Veteranquest",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "veteranquest",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/dcc/procedures/VeteranquestProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      },
-      "path": "~/NPCs/Veteran Quest"
-    },
-    {
-      "name": "CookingVeteranLoot",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "cooking_veteran_loot",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/dcc/procedures/CookingVeteranLootProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      },
-      "path": "~/NPCs/Veteran Quest"
     },
     {
       "name": "OwlbearDrumsticks",
@@ -6721,7 +6421,7 @@
           }
         ]
       },
-      "path": "~/Procedures"
+      "path": "~/ClassSystem"
     },
     {
       "name": "PoisonOnHit",
@@ -7260,129 +6960,12 @@
       "registry_name": "tentacles",
       "metadata": {
         "files": [
-          "src/main/resources/data/dcc/neoforge/biome_modifier/tentacles_biome_modifier.json",
           "src/main/java/net/mcreator/dcc/client/renderer/TentaclesRenderer.java",
           "src/main/java/net/mcreator/dcc/entity/TentaclesEntity.java",
           "src/main/java/net/mcreator/dcc/entity/model/TentaclesModel.java"
         ]
       },
       "path": "~/Projectiles and non mob entitys not from abilitys"
-    },
-    {
-      "name": "VeteranquestshowLoot",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "veteranquestshow_loot",
-      "metadata": {
-        "return_type": "logic",
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ],
-        "files": [
-          "src/main/java/net/mcreator/dcc/procedures/VeteranquestshowLootProcedure.java"
-        ]
-      },
-      "path": "~/NPCs/Veteran Quest"
-    },
-    {
-      "name": "SetVeteranquest",
-      "type": "command",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "set_veteranquest",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/dcc/command/SetVeteranquestCommand.java"
-        ]
-      },
-      "path": "~/Commands"
-    },
-    {
-      "name": "SetMonsterQuest",
-      "type": "command",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "set_monster_quest",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/dcc/command/SetMonsterQuestCommand.java"
-        ]
-      },
-      "path": "~/Commands"
-    },
-    {
-      "name": "SetDailyRationQuest",
-      "type": "command",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "set_daily_ration_quest",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/dcc/command/SetDailyRationQuestCommand.java"
-        ]
-      },
-      "path": "~/Commands"
-    },
-    {
-      "name": "SetDailyRationQuestPcd",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "set_daily_ration_quest_pcd",
-      "metadata": {
-        "dependencies": [
-          {
-            "name": "arguments",
-            "type": "cmdcontext"
-          }
-        ],
-        "files": [
-          "src/main/java/net/mcreator/dcc/procedures/SetDailyRationQuestPcdProcedure.java"
-        ]
-      },
-      "path": "~/Commands"
-    },
-    {
-      "name": "SetMonsterQuestPcd",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "set_monster_quest_pcd",
-      "metadata": {
-        "dependencies": [
-          {
-            "name": "arguments",
-            "type": "cmdcontext"
-          }
-        ],
-        "files": [
-          "src/main/java/net/mcreator/dcc/procedures/SetMonsterQuestPcdProcedure.java"
-        ]
-      },
-      "path": "~/Commands"
-    },
-    {
-      "name": "SetVeteranQuestPcd",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "set_veteran_quest_pcd",
-      "metadata": {
-        "dependencies": [
-          {
-            "name": "arguments",
-            "type": "cmdcontext"
-          }
-        ],
-        "files": [
-          "src/main/java/net/mcreator/dcc/procedures/SetVeteranQuestPcdProcedure.java"
-        ]
-      },
-      "path": "~/Commands"
     },
     {
       "name": "TentaclesEntityDespawn",
@@ -7395,18 +6978,6 @@
           {
             "name": "entity",
             "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
           },
           {
             "name": "world",
@@ -7557,7 +7128,7 @@
           "src/main/java/net/mcreator/dcc/procedures/CarrionCrawlerRightClickedOnEntityProcedure.java"
         ]
       },
-      "path": "~/Mobs"
+      "path": "~/Procedures"
     },
     {
       "name": "Bullywug",
@@ -7659,7 +7230,8 @@
         "files": [
           "src/main/java/net/mcreator/dcc/procedures/BullywugTadpoleEntityIsHurtProcedure.java"
         ]
-      }
+      },
+      "path": "~/Procedures"
     },
     {
       "name": "MagicscrollColdRay",
@@ -7812,7 +7384,6 @@
         "files": [
           "src/main/resources/assets/dcc/blockstates/water_replacer.json",
           "src/main/java/net/mcreator/dcc/block/WaterReplacerBlock.java",
-          "src/main/resources/assets/dcc/models/item/water_replacer.json",
           "src/main/resources/assets/dcc/models/block/water_replacer.json",
           "src/main/resources/data/dcc/loot_table/blocks/water_replacer.json"
         ]
@@ -7847,7 +7418,572 @@
         "files": [
           "src/main/java/net/mcreator/dcc/procedures/ReplaceWithWaterProcedure.java"
         ]
-      }
+      },
+      "path": "~/Procedures"
+    },
+    {
+      "name": "BullyWugHut1",
+      "type": "structure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "bully_wug_hut_1",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/dcc/worldgen/template_pool/bully_wug_hut_1.json",
+          "src/main/resources/data/dcc/worldgen/structure_set/bully_wug_hut_1.json",
+          "src/main/resources/data/dcc/worldgen/structure/bully_wug_hut_1.json"
+        ]
+      },
+      "path": "~/Structures"
+    },
+    {
+      "name": "BullyWugHut2",
+      "type": "structure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "bully_wug_hut_2",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/dcc/worldgen/structure/bully_wug_hut_2.json",
+          "src/main/resources/data/dcc/worldgen/structure_set/bully_wug_hut_2.json",
+          "src/main/resources/data/dcc/worldgen/template_pool/bully_wug_hut_2.json"
+        ]
+      },
+      "path": "~/Structures"
+    },
+    {
+      "name": "OrkSlayer",
+      "type": "achievement",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ork_slayer",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/dcc/advancement/ork_slayer.json"
+        ]
+      },
+      "path": "~/Achievements"
+    },
+    {
+      "name": "OrkslayerPro",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "orkslayer_pro",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "sourceentity",
+            "type": "entity"
+          }
+        ],
+        "files": [
+          "src/main/java/net/mcreator/dcc/procedures/OrkslayerProProcedure.java"
+        ]
+      },
+      "path": "~/Achievements"
+    },
+    {
+      "name": "WhosTheOrkNow",
+      "type": "achievement",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "whos_the_ork_now",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/dcc/advancement/whos_the_ork_now.json"
+        ]
+      },
+      "path": "~/Achievements"
+    },
+    {
+      "name": "WhosTheOrkNowPro",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "whos_the_ork_now_pro",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "sourceentity",
+            "type": "entity"
+          }
+        ],
+        "files": [
+          "src/main/java/net/mcreator/dcc/procedures/WhosTheOrkNowProProcedure.java"
+        ]
+      },
+      "path": "~/Achievements"
+    },
+    {
+      "name": "KebabMan",
+      "type": "achievement",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "kebab_man",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/dcc/advancement/kebab_man.json"
+        ]
+      },
+      "path": "~/Achievements"
+    },
+    {
+      "name": "ProfessionalCook",
+      "type": "achievement",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "professional_cook",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/dcc/advancement/professional_cook.json"
+        ]
+      },
+      "path": "~/Achievements"
+    },
+    {
+      "name": "Blacksmith",
+      "type": "achievement",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "blacksmith",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/dcc/advancement/blacksmith.json"
+        ]
+      },
+      "path": "~/Achievements"
+    },
+    {
+      "name": "BlacksmithPro",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "blacksmith_pro",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "itemstack",
+            "type": "itemstack"
+          }
+        ],
+        "files": [
+          "src/main/java/net/mcreator/dcc/procedures/BlacksmithProProcedure.java"
+        ]
+      },
+      "path": "~/Achievements"
+    },
+    {
+      "name": "Adamantium",
+      "type": "achievement",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "adamantium",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/dcc/advancement/adamantium.json"
+        ]
+      },
+      "path": "~/Achievements"
+    },
+    {
+      "name": "AdamtiumPro",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "adamtium_pro",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "itemstack",
+            "type": "itemstack"
+          }
+        ],
+        "files": [
+          "src/main/java/net/mcreator/dcc/procedures/AdamtiumProProcedure.java"
+        ]
+      },
+      "path": "~/Achievements"
+    },
+    {
+      "name": "WorldOfWonders",
+      "type": "achievement",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "world_of_wonders",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/dcc/advancement/world_of_wonders.json"
+        ]
+      },
+      "path": "~/Achievements"
+    },
+    {
+      "name": "MagicalForest",
+      "type": "achievement",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "magical_forest",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/dcc/advancement/magical_forest.json"
+        ]
+      },
+      "path": "~/Achievements"
+    },
+    {
+      "name": "Frogswamp",
+      "type": "achievement",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "frogswamp",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/dcc/advancement/frogswamp.json"
+        ]
+      },
+      "path": "~/Achievements"
+    },
+    {
+      "name": "CaveJumpscare",
+      "type": "achievement",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "cave_jumpscare",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/dcc/advancement/cave_jumpscare.json"
+        ]
+      },
+      "path": "~/Achievements"
+    },
+    {
+      "name": "GoblinMayhem",
+      "type": "achievement",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "goblin_mayhem",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/dcc/advancement/goblin_mayhem.json"
+        ]
+      },
+      "path": "~/Achievements"
+    },
+    {
+      "name": "AnotherLevelOfStalking",
+      "type": "achievement",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "another_level_of_stalking",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/dcc/advancement/another_level_of_stalking.json"
+        ]
+      },
+      "path": "~/Achievements"
+    },
+    {
+      "name": "SpawnTadpole",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "spawn_tadpole",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ],
+        "files": [
+          "src/main/java/net/mcreator/dcc/procedures/SpawnTadpoleProcedure.java"
+        ]
+      },
+      "path": "~/Procedures"
+    },
+    {
+      "name": "TadpoleGrowUpKiddo",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "tadpole_grow_up_kiddo",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ],
+        "files": [
+          "src/main/java/net/mcreator/dcc/procedures/TadpoleGrowUpKiddoProcedure.java"
+        ]
+      },
+      "path": "~/Procedures"
+    },
+    {
+      "name": "CarrionHatcher",
+      "type": "achievement",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "carrion_hatcher",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/dcc/advancement/carrion_hatcher.json"
+        ]
+      },
+      "path": "~/Achievements"
+    },
+    {
+      "name": "RedCap",
+      "type": "animatedentity",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "red_cap",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/dcc/models/item/red_cap_spawn_egg.json",
+          "src/main/resources/data/dcc/neoforge/biome_modifier/red_cap_biome_modifier.json",
+          "src/main/java/net/mcreator/dcc/client/renderer/RedCapRenderer.java",
+          "src/main/java/net/mcreator/dcc/entity/model/RedCapModel.java",
+          "src/main/java/net/mcreator/dcc/entity/RedCapEntity.java"
+        ]
+      },
+      "path": "~/Mobs"
+    },
+    {
+      "name": "ButterflyCurseOnEffectActiveTick",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "butterfly_curse_on_effect_active_tick",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ],
+        "files": [
+          "src/main/java/net/mcreator/dcc/procedures/ButterflyCurseOnEffectActiveTickProcedure.java"
+        ]
+      },
+      "path": "~/OverlaysEffectsParticles"
+    },
+    {
+      "name": "ButterflyCurse",
+      "type": "potioneffect",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "butterfly_curse",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/dcc/potion/ButterflyCurseMobEffect.java"
+        ]
+      },
+      "path": "~/OverlaysEffectsParticles"
+    },
+    {
+      "name": "ButterflyParticle",
+      "type": "particle",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "butterfly_particle",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/dcc/client/particle/ButterflyParticleParticle.java",
+          "src/main/resources/assets/dcc/particles/butterfly_particle.json"
+        ]
+      },
+      "path": "~/OverlaysEffectsParticles"
+    },
+    {
+      "name": "ButterflyCurseOnEntityHurt",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "butterfly_curse_on_entity_hurt",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ],
+        "files": [
+          "src/main/java/net/mcreator/dcc/procedures/ButterflyCurseOnEntityHurtProcedure.java"
+        ]
+      },
+      "path": "~/OverlaysEffectsParticles"
+    },
+    {
+      "name": "RedCapOnEntityTickUpdate",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "red_cap_on_entity_tick_update",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ],
+        "files": [
+          "src/main/java/net/mcreator/dcc/procedures/RedCapOnEntityTickUpdateProcedure.java"
+        ]
+      },
+      "path": "~/Mobs"
+    },
+    {
+      "name": "GetInfoText",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "get_info_text",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ],
+        "return_type": "string",
+        "files": [
+          "src/main/java/net/mcreator/dcc/procedures/GetInfoTextProcedure.java"
+        ]
+      },
+      "path": "~/ClassSystem"
+    },
+    {
+      "name": "CookRightClickedOnEntity",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "cook_right_clicked_on_entity",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "sourceentity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ],
+        "files": [
+          "src/main/java/net/mcreator/dcc/procedures/CookRightClickedOnEntityProcedure.java"
+        ]
+      },
+      "path": "~/NPCs"
+    },
+    {
+      "name": "RedcapTree",
+      "type": "structure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "redcap_tree",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/dcc/worldgen/template_pool/redcap_tree.json",
+          "src/main/resources/data/dcc/worldgen/structure_set/redcap_tree.json",
+          "src/main/resources/data/dcc/worldgen/structure/redcap_tree.json"
+        ]
+      },
+      "path": "~/Structures"
     }
   ],
   "variable_elements": [
@@ -7946,6 +8082,12 @@
       "type": "number",
       "scope": "player_persistent",
       "value": "0"
+    },
+    {
+      "name": "InfoText",
+      "type": "string",
+      "scope": "player_lifetime",
+      "value": "\"\""
     }
   ],
   "sound_elements": [
@@ -8006,7 +8148,6 @@
       "~CUSTOM:RawOwlbearMeat"
     ],
     "BLOCKS:minecraft:overworld_carver_replaceables": [
-      "~Blocks.WATER",
       "~Blocks.MUD",
       "~Blocks.STONE#0",
       "~Blocks.GRASS"
@@ -8181,6 +8322,9 @@
     ],
     "BIOMES:minecraft:has_structure/swamp_hut": [
       "~CUSTOM:FeywildSwamp"
+    ],
+    "BLOCKS:minecraft:replaceable": [
+      "~CUSTOM:WaterReplacer"
     ]
   },
   "tab_element_order": {
@@ -8286,7 +8430,8 @@
       "Ghoul",
       "BullywugWarrior",
       "BullywugTadpole",
-      "Bullywug"
+      "Bullywug",
+      "RedCap"
     ]
   },
   "language_map": {
@@ -8335,7 +8480,6 @@
       "gui.dcc.druid_gui.label_survival_instinct": "Nature Regeneration",
       "gui.dnd_craft.bardegui.label_ghost_axe": "Damage Aura",
       "gui.dnd_craft.monk_gui.label_ghost_axe": "Unarmored Speed",
-      "advancements.adamantiumattack.descr": "Get all adamantium weapons.",
       "entity.dcc.goblin_chief": "Goblin Chief",
       "gui.dcc.monk_gui.button_exit": "EXIT",
       "item.dnd_craft.gold_coin": "Gold Coin",
@@ -8365,7 +8509,6 @@
       "gui.cool_mod.classes.button_magician": "Magician",
       "gui.dcc.magic_choose.button_thunderwave": "Thunderwave",
       "gui.dcc.magic_choose.button_fireball": "Fireball",
-      "gui.dcc.cook_gui.label_craft_every_food_item_of_dnd": "Craft 80 of Dnd meals",
       "gui.dnd_craft.barbar_gui.label_ghost_axe": "Ghost Axe",
       "item.cool_mod.raw_owlbear_meat": "Raw Owlbear Meat",
       "item.dcc.silver_coin": "Silver Coin",
@@ -8471,7 +8614,6 @@
       "item.cool_mod.dagger": "Dagger",
       "item.dnd_craft.copper_coin": "Copper Coin",
       "gui.dcc.monk_gui.label_level_80_passive": "Level 20 (Passive)",
-      "gui.dcc.cook_gui.label_sscmonster_delight": "§6Monster delight",
       "item.dcc.two_handed_adamantium_axe": "Two Handed Adamantium Axe",
       "item.dnd_craft.club": "Club",
       "entity.dcc.ocherjelly": "Ocherjelly",
@@ -8494,7 +8636,6 @@
       "item.dnd_craft.two_handed_axe": "Two Handed Axe",
       "gui.dnd_craft.druid_gui.label_level_80_passive": "Level 20 (Passive)",
       "item.dcc.adamantium_claymore": "Adamantium Claymore",
-      "gui.dcc.cook_gui.label_ss4daily_eater": "§6Daily eater",
       "gui.dnd_craft.druid_gui.label_10_level": "Level 5 (x)",
       "gui.dnd_craft.druid_gui.button_exit": "EXIT",
       "item.dcc.owlbear_drumsticks.description_1": "§6-Resistance I",
@@ -8531,7 +8672,6 @@
       "gui.dnd_craft.monk_gui.label_barbarian_strenght": "Diamond Soul",
       "block.cool_mod.adantium_ore": "Adantium Ore",
       "gui.dcc.barbar_gui.tooltip_get_permanent_strength_2": "Get permanent strength 2",
-      "advancements.dungeon_hunter.title": "Dungeon Looter",
       "gui.dcc.magiergui.tooltip_get_a_new_spell_you_can_acces_vi": "Get a new spell you can acces via your book",
       "item.dcc.adamantium_upgrade_smithing_template": "Adamantium Upgrade Smithing Template",
       "item.dnd_craft.raw_silver_ore": "Raw Silver Ore",
@@ -8555,7 +8695,6 @@
       "item.dnd_craft.animal_bone": "Animal Bones",
       "gui.dnd_craft.druid_gui.label_rage": "-",
       "item.dnd_craft.heal_potion": "§6Heal Potion",
-      "gui.dcc.cook_gui.label_eat_10_fish": "Eat 12 Daily Rations",
       "gui.dcc.barbar_gui.label_level_80_passive": "Level 20 (Passive)",
       "gui.dcc.magic_choose.label_level_80": "Level 8",
       "gui.dcc.bardegui.label_barbarian": "Bard",
@@ -8563,9 +8702,7 @@
       "gui.dnd_craft.bardegui.button_exit": "EXIT",
       "key.cool_mod.classability_1": "Class ability 1",
       "item.cool_mod.adamantium_claymore": "Adamantium Claymore",
-      "gui.dcc.cook_gui.button_loot_quest2": "LOOT QUEST",
       "gui.dnd_craft.barbar_gui.label_10_level": "Level 5 (x)",
-      "gui.dcc.cook_gui.button_loot_quest1": "LOOT QUEST",
       "item.dnd_craft.adamantium_mace": "Adamantium Mace",
       "gui.dnd_craft.magic_choose.button_cold_ray": "Cold Ray",
       "item.dnd_craft.rusty_mace": "Rusty Mace",
@@ -8581,7 +8718,6 @@
       "item.dnd_craft.goblin_iron_spawn_egg": "Goblin Spawn Egg",
       "advancements.businessman.title": "Businessman",
       "gui.cool_mod.barbar_gui.label_survival_instinct": "Survival Instinct",
-      "advancements.dungeon_hunter.descr": "Get every DnD mob loot.",
       "entity.cool_mod.owlbear": "Owlbear",
       "gui.dnd_craft.magiergui.label_0_level": "Level 1 (y)",
       "gui.dcc.druid_gui.tooltip_summon_5_strong_wolves_that_supp": "Summon 5 strong wolves that support you, but despawn after 10s",
@@ -8675,7 +8811,6 @@
       "item.dnd_craft.superior_potionof_healing.description_1": "§4Rare",
       "item.dnd_craft.superior_potionof_healing.description_0": "Magic Item",
       "item.dcc.cooked_owlbear_meat": "Cooked Owlbear Meat",
-      "gui.dcc.cook_gui.label_eat_40_ork_beefs": "Eat 40 ork beefs",
       "item.dnd_craft.soap": "Soap",
       "item.cool_mod.adamantium_scimitar": "Adamantium Scimitar",
       "entity.dcc.basilisk": "Basilisk",
@@ -8725,7 +8860,7 @@
       "item.dcc.two_handed_adamantium_claymore": "Two Handed Adamantium Claymore",
       "gui.dnd_craft.bardegui.label_10_level": "Level 5 (x)",
       "item.dcc.two_handed_axe": "Two Handed Axe",
-      "advancements.weapon_collector.descr": "Get every dnd weapon.",
+      "advancements.weapon_collector.descr": "Get every weapon",
       "item.cool_mod.iron_plate": "Iron Plate",
       "gui.dcc.magic_choose.label_level_01": "Level 1",
       "entity.dcc.mimic_sludge": "Mimic",
@@ -8741,14 +8876,12 @@
       "gui.dcc.magic_choose.button_strong_invisibility": "Strong Invisibility",
       "item.dcc.cook_spawn_egg": "Cook Spawn Egg",
       "item.dnd_craft.drums": "§4Drums",
-      "gui.dcc.cook_gui.label_ssc": "§6Cooking veteran",
       "gui.dnd_craft.cook_gui.label_craft_every_food_item_of_dnd": "Craft 80 of Dnd meals",
       "gui.dcc.bardegui.label_survival_instinct": "Bards Speed",
       "gui.dcc.druid_gui.button_choose": "Choose",
       "item.cool_mod.zwo_handed_club": "two Handed Club",
       "item_group.dcc.dn_d": "D\u0026D",
       "key.dcc.classabilityopngui": "Classabilityopengui",
-      "gui.dcc.cook_gui.button_loot_quest": "LOOT QUEST",
       "gui.cool_mod.bardegui.label_barbarian_strenght": "Better Healing",
       "item.dnd_craft.plainumingot": "Platinum Ingot",
       "item.dcc.adamantium_battle_axe": "Adamantium Battle Axe",
@@ -8802,7 +8935,6 @@
       "block.dcc.cooked_owlbear_meat_block": "Cooked Owlbear Meat Block",
       "gui.dnd_craft.druid_gui.label_barbarian": "Druid",
       "gui.dcc.barbar_gui.button_choose": "Choose",
-      "advancements.adamantiumattack.title": "Adamantium Attack",
       "entity.dcc.vines": "VINES",
       "gui.dcc.magiergui.label_barbarian": "Magician",
       "item.dcc.goblin_spawn_egg": "Goblin Spawn Egg",
@@ -8828,7 +8960,6 @@
       "item.dcc.orksteaak.description_0": "§6This is a meal, wich means you get specific effects upon consuming it.",
       "item.dcc.banjo": "§4Banjo",
       "item.dcc.orksteaak.description_1": "§6-Strenght I",
-      "advancements.dungeon_gourmet.title": "Dungeon Gourmet",
       "block.dnd_craft.platinum_ore": "Platinum Ore",
       "entity.dnd_craft.owlbear": "Owlbear",
       "item.cool_mod.ogre_spawn_egg": "Ogre Spawn Egg",
@@ -8838,7 +8969,6 @@
       "gui.dcc.druid_gui.tooltip_let_roots_come_out_of_the_earth": "Let roots come out of the earth under your enemies and hold them in place",
       "item.dnd_craft.two_handed_adamantium_axe": "Two Handed Adamantium Axe",
       "item.dcc.invisible_stalker_spawn_egg": "Invisible Stalker Spawn Egg",
-      "gui.dcc.cook_gui.label_quests": "Quests",
       "gui.dnd_craft.magiergui.label_ghost_axe": "+1 Spell",
       "item_group.cool_mod.dn_d": "D\u0026D",
       "item.dnd_craft.banjo": "§4Banjo",
@@ -8951,7 +9081,6 @@
       "entity.dcc.invisible_stalker": "Invisible Stalker",
       "item.dcc.glimmerleaf_fruit": "Glimmerleaf Fruit",
       "item.dnd_craft.adamantium_scimitar": "Adamantium Scimitar",
-      "advancements.dungeon_gourmet.descr": "Eat every food item in this mod.",
       "item.dcc.mace": "Mace",
       "item.dcc.banjo.description_1": "-Shift rightclick to slow and weaken all enemies in an area and give yourself absorbtion",
       "item.dnd_craft.raw_adamantium_ore": "Raw Adamantium Ore",
@@ -9062,16 +9191,45 @@
       "block.dcc.water_replacer.description_1": "after some time.",
       "block.dcc.water_replacer.description_0": "This has no real use, it will just convert to a normal water",
       "block.dcc.water_replacer": "Water Replacer",
-      "block.dcc.water_replacer.description_3": "because of a bug in the minecraft source code."
+      "block.dcc.water_replacer.description_3": "because of a bug in the minecraft source code.",
+      "advancements.ork_slayer.title": "Ork Slayer",
+      "advancements.ork_slayer.descr": "Kill your first ork",
+      "advancements.whos_the_ork_now.descr": "Kill an ork with his own weapon",
+      "advancements.whos_the_ork_now.title": "Who`s the Ork now!",
+      "advancements.kebab_man.title": "Kebab Man",
+      "advancements.kebab_man.descr": "Cut some kebab from owlbear meat with a dagger",
+      "advancements.professional_cook.descr": "Cook all the Meals",
+      "advancements.professional_cook.title": "Monsters Delight",
+      "advancements.blacksmith.title": "Blacksmith",
+      "advancements.blacksmith.descr": "Craft your first Weapon",
+      "advancements.adamantium.descr": "Craft your first Adamantium Weapon",
+      "advancements.adamantium.title": "Adamantium",
+      "advancements.world_of_wonders.title": "World Of Wonders",
+      "advancements.world_of_wonders.descr": "Enter the Feywilds",
+      "advancements.magical_forest.descr": "Discover the Feywild Forest",
+      "advancements.magical_forest.title": "Magical Forest",
+      "advancements.frogswamp.descr": "Discover the Feywild Swamp",
+      "advancements.frogswamp.title": "Frog Swamp",
+      "advancements.cave_jumpscare.title": "Cave Jumpscare",
+      "advancements.cave_jumpscare.descr": "Get Attacked by a Carrion Crawler",
+      "advancements.goblin_mayhem.title": "Goblin Mayhem",
+      "advancements.goblin_mayhem.descr": "Get damaged by all the Goblins",
+      "advancements.another_level_of_stalking.title": "Another Level of Stalking",
+      "advancements.another_level_of_stalking.descr": "Get Jumpscared by a Invisible Stalker",
+      "advancements.carrion_hatcher.title": "Carrion Hatcher",
+      "advancements.carrion_hatcher.descr": "Hatch a Carrion Crawler",
+      "item.dcc.red_cap_spawn_egg": "Red Cap Spawn Egg",
+      "entity.dcc.red_cap": "Red Cap",
+      "effect.dcc.butterfly_curse": "Butterfly Curse"
     }
   },
   "metadata": {
     "files": [
+      "src/main/resources/mixin.dcc.json",
       "src/main/java/net/mcreator/dcc/DccMod.java",
       "src/main/resources/META-INF/neoforge.mods.toml",
       "src/main/java/net/mcreator/dcc/network/DccModVariables.java",
       "src/main/resources/META-INF/accesstransformer.cfg",
-      "src/main/resources/mixins.dcc.json",
       "src/main/java/net/mcreator/dcc/init/DccModTabs.java",
       "src/main/java/net/mcreator/dcc/init/DccModModels.java",
       "src/main/resources/assets/dcc/sounds.json",
@@ -9173,20 +9331,7 @@
       },
       {
         "name": "NPCs",
-        "children": [
-          {
-            "name": "Daily Ration Quest",
-            "children": []
-          },
-          {
-            "name": "Veteran Quest",
-            "children": []
-          },
-          {
-            "name": "Monster Quest",
-            "children": []
-          }
-        ]
+        "children": []
       },
       {
         "name": "Structures",
@@ -9230,7 +9375,7 @@
   "workspaceSettings": {
     "modid": "dcc",
     "modName": "Dungeons, Creatures \u0026 Classes",
-    "version": "5.5.0",
+    "version": "6.0.0",
     "description": "This mod is a fun addition to Minecraft that adds some mobs from the DnD universe and lets you choose your own class.",
     "author": "Ppotatoe, Luderspieler",
     "websiteURL": "https://mcreator.net",
@@ -9247,5 +9392,5 @@
     "credits": "Created using mod maker MCreator - https://mcreator.net/about",
     "modElementsPackage": "net.mcreator.dcc"
   },
-  "mcreatorVersion": 202500226612
+  "mcreatorVersion": 202500228610
 }

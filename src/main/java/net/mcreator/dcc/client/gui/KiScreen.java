@@ -61,7 +61,7 @@ public class KiScreen extends AbstractContainerScreen<KiMenu> implements DccModS
 	}
 
 	@Override
-	protected void renderBg(GuiGraphics guiGraphics, float partialTicks, int gx, int gy) {
+	protected void renderBg(GuiGraphics guiGraphics, float partialTicks, int mouseX, int mouseY) {
 		RenderSystem.setShaderColor(1, 1, 1, 1);
 		RenderSystem.enableBlend();
 		RenderSystem.defaultBlendFunc();
@@ -87,6 +87,8 @@ public class KiScreen extends AbstractContainerScreen<KiMenu> implements DccModS
 	public void init() {
 		super.init();
 		button_strong_fist = Button.builder(Component.translatable("gui.dcc.ki.button_strong_fist"), e -> {
+			int x = KiScreen.this.x;
+			int y = KiScreen.this.y;
 			if (true) {
 				PacketDistributor.sendToServer(new KiButtonMessage(0, x, y, z));
 				KiButtonMessage.handleButtonAction(entity, 0, x, y, z);
@@ -94,6 +96,8 @@ public class KiScreen extends AbstractContainerScreen<KiMenu> implements DccModS
 		}).bounds(this.leftPos + 7, this.topPos + 27, 82, 20).build();
 		this.addRenderableWidget(button_strong_fist);
 		button_better_defense = Button.builder(Component.translatable("gui.dcc.ki.button_better_defense"), e -> {
+			int x = KiScreen.this.x;
+			int y = KiScreen.this.y;
 			if (true) {
 				PacketDistributor.sendToServer(new KiButtonMessage(1, x, y, z));
 				KiButtonMessage.handleButtonAction(entity, 1, x, y, z);

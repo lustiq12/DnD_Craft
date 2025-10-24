@@ -47,6 +47,7 @@ import net.minecraft.network.syncher.EntityDataAccessor;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.core.registries.BuiltInRegistries;
 
+import net.mcreator.dcc.procedures.TadpoleGrowUpKiddoProcedure;
 import net.mcreator.dcc.procedures.BullywugTadpoleEntityIsHurtProcedure;
 import net.mcreator.dcc.init.DccModEntities;
 
@@ -175,6 +176,7 @@ public class BullywugTadpoleEntity extends PathfinderMob implements GeoEntity {
 	@Override
 	public void baseTick() {
 		super.baseTick();
+		TadpoleGrowUpKiddoProcedure.execute(this.level(), this.getX(), this.getY(), this.getZ(), this);
 		this.refreshDimensions();
 	}
 

@@ -4,7 +4,7 @@
   "definition": {
     "mobName": "Cook",
     "mobLabel": "",
-    "mobModelTexture": "cookstre.png",
+    "mobModelTexture": "cook2.png",
     "mobModelGlowTexture": "",
     "visualScale": {
       "fixedValue": 1.5
@@ -12,7 +12,25 @@
     "boundingBoxScale": {
       "fixedValue": 1.5
     },
-    "entityDataEntries": [],
+    "entityDataEntries": [
+      {
+        "min": -2147483648,
+        "max": 2147483647,
+        "name": "AmountCurrently",
+        "type": "integer",
+        "value": 0
+      },
+      {
+        "name": "CurrentQuest",
+        "type": "string",
+        "value": "0"
+      },
+      {
+        "name": "FirstTimeAsking",
+        "type": "logic",
+        "value": false
+      }
+    ],
     "modelWidth": 0.9,
     "modelHeight": 1.5,
     "modelShadowSize": 0.5,
@@ -69,7 +87,7 @@
     "xpAmount": 0,
     "waterMob": false,
     "flyingMob": false,
-    "guiBoundTo": "CookGui",
+    "guiBoundTo": "<NONE>",
     "inventorySize": 9,
     "inventoryStackSize": 64,
     "deathTime": 20,
@@ -109,10 +127,13 @@
     "raidCelebrationSound": {
       "value": ""
     },
+    "onRightClickedOn": {
+      "name": "CookRightClickedOnEntity"
+    },
     "hasAI": true,
     "aiBase": "(none)",
     "aixml": "<xml xmlns=\"https://developers.google.com/blockly/xml\"><block type=\"aitasks_container\" deletable=\"false\" x=\"40\" y=\"40\"><next><block type=\"look_around\"><field name=\"condition\">null,null</field><next><block type=\"swim_in_water\"><field name=\"condition\">null,null</field></block></next></block></next></block></xml>",
-    "model": "cook.geo.json",
+    "model": "cook2.geo.json",
     "groupName": "",
     "animation1": "idle",
     "animation2": "",

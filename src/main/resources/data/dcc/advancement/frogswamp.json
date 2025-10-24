@@ -1,0 +1,36 @@
+{
+  "display": {
+    "icon": {
+      "id": "minecraft:mangrove_planks"
+    },
+    "title": {
+      "translate": "advancements.frogswamp.title"
+    },
+    "description": {
+      "translate": "advancements.frogswamp.descr"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "frogswamp_0": {
+      "trigger": "minecraft:location",
+      "conditions": {
+        "player": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "location": {
+                "biomes": "dcc:feywild_swamp"
+              }
+            }
+          }
+        ]
+      }
+    }
+  },
+  "parent": "dcc:world_of_wonders"
+}

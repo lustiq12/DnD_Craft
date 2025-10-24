@@ -1,0 +1,35 @@
+{
+  "display": {
+    "icon": {
+      "id": "minecraft:light_gray_stained_glass_pane"
+    },
+    "title": {
+      "translate": "advancements.another_level_of_stalking.title"
+    },
+    "description": {
+      "translate": "advancements.another_level_of_stalking.descr"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "another_level_of_stalking_0": {
+      "trigger": "minecraft:entity_hurt_player",
+      "conditions": {
+        "damage": {
+          "taken": {
+            "min": 0,
+            "max": 100
+          },
+          "source_entity": {
+            "type": "dcc:invisible_stalker"
+          },
+          "blocked": false
+        }
+      }
+    }
+  },
+  "parent": "dcc:ork_slayer"
+}

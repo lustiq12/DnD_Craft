@@ -9,7 +9,7 @@
   ],
   "spawners": {
     "type": "dcc:ork",
-    "weight": 2,
+    "weight": 5,
     "minCount": 2,
     "maxCount": 4
   }

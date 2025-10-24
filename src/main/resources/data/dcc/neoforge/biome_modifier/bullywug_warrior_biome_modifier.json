@@ -3,7 +3,7 @@
   "biomes": "dcc:feywild_swamp",
   "spawners": {
     "type": "dcc:bullywug_warrior",
-    "weight": 20,
+    "weight": 4,
     "minCount": 4,
     "maxCount": 4
   }

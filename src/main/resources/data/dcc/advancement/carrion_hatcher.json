@@ -1,0 +1,23 @@
+{
+  "display": {
+    "icon": {
+      "id": "dcc:carrion_crawler_cocoon_inactive"
+    },
+    "title": {
+      "translate": "advancements.carrion_hatcher.title"
+    },
+    "description": {
+      "translate": "advancements.carrion_hatcher.descr"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "carrion_hatcher_0": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "parent": "dcc:cave_jumpscare"
+}

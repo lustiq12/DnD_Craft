@@ -64,7 +64,7 @@ public class MagicChooseScreen extends AbstractContainerScreen<MagicChooseMenu> 
 	}
 
 	@Override
-	protected void renderBg(GuiGraphics guiGraphics, float partialTicks, int gx, int gy) {
+	protected void renderBg(GuiGraphics guiGraphics, float partialTicks, int mouseX, int mouseY) {
 		RenderSystem.setShaderColor(1, 1, 1, 1);
 		RenderSystem.enableBlend();
 		RenderSystem.defaultBlendFunc();
@@ -100,6 +100,8 @@ public class MagicChooseScreen extends AbstractContainerScreen<MagicChooseMenu> 
 	public void init() {
 		super.init();
 		button_fire_arrow = Button.builder(Component.translatable("gui.dcc.magic_choose.button_fire_arrow"), e -> {
+			int x = MagicChooseScreen.this.x;
+			int y = MagicChooseScreen.this.y;
 			if (true) {
 				PacketDistributor.sendToServer(new MagicChooseButtonMessage(0, x, y, z));
 				MagicChooseButtonMessage.handleButtonAction(entity, 0, x, y, z);
@@ -107,6 +109,8 @@ public class MagicChooseScreen extends AbstractContainerScreen<MagicChooseMenu> 
 		}).bounds(this.leftPos + 54, this.topPos + 27, 77, 20).build();
 		this.addRenderableWidget(button_fire_arrow);
 		button_cold_ray = Button.builder(Component.translatable("gui.dcc.magic_choose.button_cold_ray"), e -> {
+			int x = MagicChooseScreen.this.x;
+			int y = MagicChooseScreen.this.y;
 			if (true) {
 				PacketDistributor.sendToServer(new MagicChooseButtonMessage(1, x, y, z));
 				MagicChooseButtonMessage.handleButtonAction(entity, 1, x, y, z);
@@ -114,6 +118,8 @@ public class MagicChooseScreen extends AbstractContainerScreen<MagicChooseMenu> 
 		}).bounds(this.leftPos + 54, this.topPos + 54, 66, 20).build();
 		this.addRenderableWidget(button_cold_ray);
 		button_thunderwave = Button.builder(Component.translatable("gui.dcc.magic_choose.button_thunderwave"), e -> {
+			int x = MagicChooseScreen.this.x;
+			int y = MagicChooseScreen.this.y;
 			if (true) {
 				PacketDistributor.sendToServer(new MagicChooseButtonMessage(2, x, y, z));
 				MagicChooseButtonMessage.handleButtonAction(entity, 2, x, y, z);
@@ -121,6 +127,8 @@ public class MagicChooseScreen extends AbstractContainerScreen<MagicChooseMenu> 
 		}).bounds(this.leftPos + 54, this.topPos + 108, 82, 20).build();
 		this.addRenderableWidget(button_thunderwave);
 		button_fake_life = Button.builder(Component.translatable("gui.dcc.magic_choose.button_fake_life"), e -> {
+			int x = MagicChooseScreen.this.x;
+			int y = MagicChooseScreen.this.y;
 			if (true) {
 				PacketDistributor.sendToServer(new MagicChooseButtonMessage(3, x, y, z));
 				MagicChooseButtonMessage.handleButtonAction(entity, 3, x, y, z);
@@ -128,6 +136,8 @@ public class MagicChooseScreen extends AbstractContainerScreen<MagicChooseMenu> 
 		}).bounds(this.leftPos + 54, this.topPos + 81, 72, 20).build();
 		this.addRenderableWidget(button_fake_life);
 		button_invisibility = Button.builder(Component.translatable("gui.dcc.magic_choose.button_invisibility"), e -> {
+			int x = MagicChooseScreen.this.x;
+			int y = MagicChooseScreen.this.y;
 			if (true) {
 				PacketDistributor.sendToServer(new MagicChooseButtonMessage(4, x, y, z));
 				MagicChooseButtonMessage.handleButtonAction(entity, 4, x, y, z);
@@ -135,6 +145,8 @@ public class MagicChooseScreen extends AbstractContainerScreen<MagicChooseMenu> 
 		}).bounds(this.leftPos + 54, this.topPos + 135, 88, 20).build();
 		this.addRenderableWidget(button_invisibility);
 		button_night_vision = Button.builder(Component.translatable("gui.dcc.magic_choose.button_night_vision"), e -> {
+			int x = MagicChooseScreen.this.x;
+			int y = MagicChooseScreen.this.y;
 			if (true) {
 				PacketDistributor.sendToServer(new MagicChooseButtonMessage(5, x, y, z));
 				MagicChooseButtonMessage.handleButtonAction(entity, 5, x, y, z);
@@ -142,6 +154,8 @@ public class MagicChooseScreen extends AbstractContainerScreen<MagicChooseMenu> 
 		}).bounds(this.leftPos + 54, this.topPos + 162, 87, 20).build();
 		this.addRenderableWidget(button_night_vision);
 		button_fireball = Button.builder(Component.translatable("gui.dcc.magic_choose.button_fireball"), e -> {
+			int x = MagicChooseScreen.this.x;
+			int y = MagicChooseScreen.this.y;
 			if (true) {
 				PacketDistributor.sendToServer(new MagicChooseButtonMessage(6, x, y, z));
 				MagicChooseButtonMessage.handleButtonAction(entity, 6, x, y, z);
@@ -149,6 +163,8 @@ public class MagicChooseScreen extends AbstractContainerScreen<MagicChooseMenu> 
 		}).bounds(this.leftPos + 54, this.topPos + 189, 67, 20).build();
 		this.addRenderableWidget(button_fireball);
 		button_snowstorm = Button.builder(Component.translatable("gui.dcc.magic_choose.button_snowstorm"), e -> {
+			int x = MagicChooseScreen.this.x;
+			int y = MagicChooseScreen.this.y;
 			if (true) {
 				PacketDistributor.sendToServer(new MagicChooseButtonMessage(7, x, y, z));
 				MagicChooseButtonMessage.handleButtonAction(entity, 7, x, y, z);
@@ -156,6 +172,8 @@ public class MagicChooseScreen extends AbstractContainerScreen<MagicChooseMenu> 
 		}).bounds(this.leftPos + 189, this.topPos + 27, 72, 20).build();
 		this.addRenderableWidget(button_snowstorm);
 		button_fire_wall = Button.builder(Component.translatable("gui.dcc.magic_choose.button_fire_wall"), e -> {
+			int x = MagicChooseScreen.this.x;
+			int y = MagicChooseScreen.this.y;
 			if (true) {
 				PacketDistributor.sendToServer(new MagicChooseButtonMessage(8, x, y, z));
 				MagicChooseButtonMessage.handleButtonAction(entity, 8, x, y, z);
@@ -163,6 +181,8 @@ public class MagicChooseScreen extends AbstractContainerScreen<MagicChooseMenu> 
 		}).bounds(this.leftPos + 189, this.topPos + 81, 72, 20).build();
 		this.addRenderableWidget(button_fire_wall);
 		button_strong_invisibility = Button.builder(Component.translatable("gui.dcc.magic_choose.button_strong_invisibility"), e -> {
+			int x = MagicChooseScreen.this.x;
+			int y = MagicChooseScreen.this.y;
 			if (true) {
 				PacketDistributor.sendToServer(new MagicChooseButtonMessage(9, x, y, z));
 				MagicChooseButtonMessage.handleButtonAction(entity, 9, x, y, z);

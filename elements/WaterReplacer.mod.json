@@ -2,7 +2,7 @@
   "_fv": 79,
   "_type": "block",
   "definition": {
-    "texture": "water_still",
+    "texture": "transparent",
     "textureTop": "",
     "textureLeft": "",
     "textureFront": "",
@@ -20,9 +20,9 @@
     "blockSetType": "OAK",
     "tintType": "Grass",
     "isItemTinted": true,
-    "hasTransparency": false,
+    "hasTransparency": true,
     "connectedSides": false,
-    "transparencyType": "SOLID",
+    "transparencyType": "CUTOUT",
     "disableOffset": false,
     "boundingBoxes": [
       {
@@ -49,7 +49,7 @@
     "resistance": 10.0,
     "hasGravity": false,
     "isWaterloggable": false,
-    "hasBlockItem": true,
+    "hasBlockItem": false,
     "maxStackSize": 64,
     "rarity": "COMMON",
     "immuneToFire": false,
@@ -64,10 +64,10 @@
     "enchantPowerBonus": 0.0,
     "plantsGrowOn": false,
     "canRedstoneConnect": false,
-    "lightOpacity": 15,
+    "lightOpacity": 0,
     "tickRate": 0,
     "tickRandomly": true,
-    "isReplaceable": false,
+    "isReplaceable": true,
     "canProvidePower": false,
     "emittedRedstonePower": {
       "fixedValue": 15.0
@@ -132,7 +132,34 @@
     "isFluidTank": false,
     "fluidCapacity": 8000,
     "fluidRestrictions": [],
+    "onRightClicked": {
+      "name": "ReplaceWithWater"
+    },
+    "onBlockAdded": {
+      "name": "ReplaceWithWater"
+    },
+    "onNeighbourBlockChanges": {
+      "name": "ReplaceWithWater"
+    },
     "onTickUpdate": {
+      "name": "ReplaceWithWater"
+    },
+    "onStartToDestroy": {
+      "name": "ReplaceWithWater"
+    },
+    "onEntityCollides": {
+      "name": "ReplaceWithWater"
+    },
+    "onEntityWalksOn": {
+      "name": "ReplaceWithWater"
+    },
+    "onBlockPlayedBy": {
+      "name": "ReplaceWithWater"
+    },
+    "onRedstoneOn": {
+      "name": "ReplaceWithWater"
+    },
+    "onHitByProjectile": {
       "name": "ReplaceWithWater"
     },
     "generateFeature": false,

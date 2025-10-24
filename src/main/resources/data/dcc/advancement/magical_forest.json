@@ -1,0 +1,36 @@
+{
+  "display": {
+    "icon": {
+      "id": "dcc:glimmerleaf_fruit"
+    },
+    "title": {
+      "translate": "advancements.magical_forest.title"
+    },
+    "description": {
+      "translate": "advancements.magical_forest.descr"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "magical_forest_0": {
+      "trigger": "minecraft:location",
+      "conditions": {
+        "player": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "location": {
+                "biomes": "dcc:feywild_forest"
+              }
+            }
+          }
+        ]
+      }
+    }
+  },
+  "parent": "dcc:world_of_wonders"
+}
