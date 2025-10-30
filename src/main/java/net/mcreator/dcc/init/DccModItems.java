@@ -79,6 +79,7 @@ import net.mcreator.dcc.item.CookedOwlbearMeatItem;
 import net.mcreator.dcc.item.CookedOrkBeefItem;
 import net.mcreator.dcc.item.ClubItem;
 import net.mcreator.dcc.item.ClaymoreItem;
+import net.mcreator.dcc.item.CarnivalTicketItem;
 import net.mcreator.dcc.item.BattleStaffItem;
 import net.mcreator.dcc.item.BattleAxeItem;
 import net.mcreator.dcc.item.BattalestafftwohandedItem;
@@ -222,6 +223,7 @@ public class DccModItems {
 	public static final DeferredItem<Item> MAGICSCROLL_THUNDERWAVE = REGISTRY.register("magicscroll_thunderwave", MagicscrollThunderwaveItem::new);
 	public static final DeferredItem<Item> RED_CAP_SPAWN_EGG = REGISTRY.register("red_cap_spawn_egg", () -> new DeferredSpawnEggItem(DccModEntities.RED_CAP, -52429, -6710887, new Item.Properties()));
 	public static final DeferredItem<Item> SLOT_MACHINE = block(DccModBlocks.SLOT_MACHINE);
+	public static final DeferredItem<Item> CARNIVAL_TICKET = REGISTRY.register("carnival_ticket", CarnivalTicketItem::new);
 
 	// Start of user code block custom items
 	// End of user code block custom items

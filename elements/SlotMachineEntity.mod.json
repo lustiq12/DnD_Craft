@@ -17,6 +17,27 @@
         "name": "Clicked",
         "type": "logic",
         "value": false
+      },
+      {
+        "min": -2147483648,
+        "max": 2147483647,
+        "name": "Random",
+        "type": "integer",
+        "value": 0
+      },
+      {
+        "min": -2147483648,
+        "max": 2147483647,
+        "name": "DropX",
+        "type": "integer",
+        "value": 0
+      },
+      {
+        "min": -2147483648,
+        "max": 2147483647,
+        "name": "DropZ",
+        "type": "integer",
+        "value": 0
       }
     ],
     "modelWidth": 0.1,

@@ -1,7 +1,7 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "dcc:item/slotmachine"
+    "layer0": "dcc:item/slotmachineitem"
   },
   "render_type": "translucent"
 }

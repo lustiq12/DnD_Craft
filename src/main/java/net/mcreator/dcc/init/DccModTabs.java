@@ -126,6 +126,7 @@ public class DccModTabs {
 				tabData.accept(DccModItems.BULLYWUG_SPAWN_EGG.get());
 				tabData.accept(DccModItems.RED_CAP_SPAWN_EGG.get());
 				tabData.accept(DccModBlocks.SLOT_MACHINE.get().asItem());
+				tabData.accept(DccModItems.CARNIVAL_TICKET.get());
 			}).build());
 
 	@SubscribeEvent

@@ -786,5 +786,6 @@
   "effect.dcc.butterfly_curse": "Butterfly Curse",
   "item.dcc.slot_machine_entity_spawn_egg": "Slot Machine Spawn Egg",
   "entity.dcc.slot_machine_entity": "Slot Machine",
-  "block.dcc.slot_machine": "Slot Machine"
+  "block.dcc.slot_machine": "Slot Machine",
+  "item.dcc.carnival_ticket": "Carnival Ticket"
 }

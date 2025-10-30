@@ -8203,6 +8203,20 @@
         ]
       },
       "path": "~/Other Items and blocks"
+    },
+    {
+      "name": "CarnivalTicket",
+      "type": "item",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "carnival_ticket",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/dcc/item/CarnivalTicketItem.java",
+          "src/main/resources/assets/dcc/models/item/carnival_ticket.json"
+        ]
+      },
+      "path": "~/Other Items and blocks"
     }
   ],
   "variable_elements": [
@@ -8651,7 +8665,8 @@
       "BullywugTadpole",
       "Bullywug",
       "RedCap",
-      "SlotMachine"
+      "SlotMachine",
+      "CarnivalTicket"
     ]
   },
   "language_map": {
@@ -9443,7 +9458,8 @@
       "effect.dcc.butterfly_curse": "Butterfly Curse",
       "item.dcc.slot_machine_entity_spawn_egg": "Slot Machine Spawn Egg",
       "entity.dcc.slot_machine_entity": "Slot Machine",
-      "block.dcc.slot_machine": "Slot Machine"
+      "block.dcc.slot_machine": "Slot Machine",
+      "item.dcc.carnival_ticket": "Carnival Ticket"
     }
   },
   "metadata": {

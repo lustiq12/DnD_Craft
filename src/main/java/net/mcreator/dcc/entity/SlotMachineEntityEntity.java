@@ -45,6 +45,9 @@ public class SlotMachineEntityEntity extends PathfinderMob implements GeoEntity 
 	public static final EntityDataAccessor<String> ANIMATION = SynchedEntityData.defineId(SlotMachineEntityEntity.class, EntityDataSerializers.STRING);
 	public static final EntityDataAccessor<String> TEXTURE = SynchedEntityData.defineId(SlotMachineEntityEntity.class, EntityDataSerializers.STRING);
 	public static final EntityDataAccessor<Boolean> DATA_Clicked = SynchedEntityData.defineId(SlotMachineEntityEntity.class, EntityDataSerializers.BOOLEAN);
+	public static final EntityDataAccessor<Integer> DATA_Random = SynchedEntityData.defineId(SlotMachineEntityEntity.class, EntityDataSerializers.INT);
+	public static final EntityDataAccessor<Integer> DATA_DropX = SynchedEntityData.defineId(SlotMachineEntityEntity.class, EntityDataSerializers.INT);
+	public static final EntityDataAccessor<Integer> DATA_DropZ = SynchedEntityData.defineId(SlotMachineEntityEntity.class, EntityDataSerializers.INT);
 	private final AnimatableInstanceCache cache = GeckoLibUtil.createInstanceCache(this);
 	private boolean swinging;
 	private boolean lastloop;
@@ -64,6 +67,9 @@ public class SlotMachineEntityEntity extends PathfinderMob implements GeoEntity 
 		builder.define(ANIMATION, "undefined");
 		builder.define(TEXTURE, "gambling");
 		builder.define(DATA_Clicked, false);
+		builder.define(DATA_Random, 0);
+		builder.define(DATA_DropX, 0);
+		builder.define(DATA_DropZ, 0);
 	}
 
 	public void setTexture(String texture) {
@@ -120,6 +126,9 @@ public class SlotMachineEntityEntity extends PathfinderMob implements GeoEntity 
 		super.addAdditionalSaveData(compound);
 		compound.putString("Texture", this.getTexture());
 		compound.putBoolean("DataClicked", this.entityData.get(DATA_Clicked));
+		compound.putInt("DataRandom", this.entityData.get(DATA_Random));
+		compound.putInt("DataDropX", this.entityData.get(DATA_DropX));
+		compound.putInt("DataDropZ", this.entityData.get(DATA_DropZ));
 	}
 
 	@Override
@@ -129,6 +138,12 @@ public class SlotMachineEntityEntity extends PathfinderMob implements GeoEntity 
 			this.setTexture(compound.getString("Texture"));
 		if (compound.contains("DataClicked"))
 			this.entityData.set(DATA_Clicked, compound.getBoolean("DataClicked"));
+		if (compound.contains("DataRandom"))
+			this.entityData.set(DATA_Random, compound.getInt("DataRandom"));
+		if (compound.contains("DataDropX"))
+			this.entityData.set(DATA_DropX, compound.getInt("DataDropX"));
+		if (compound.contains("DataDropZ"))
+			this.entityData.set(DATA_DropZ, compound.getInt("DataDropZ"));
 	}
 
 	@Override
