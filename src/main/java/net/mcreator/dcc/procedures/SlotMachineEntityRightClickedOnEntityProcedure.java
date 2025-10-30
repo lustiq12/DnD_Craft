@@ -98,41 +98,51 @@ public class SlotMachineEntityRightClickedOnEntityProcedure {
 								if ((entity instanceof SlotMachineEntityEntity _datEntI ? _datEntI.getEntityData().get(SlotMachineEntityEntity.DATA_Random) : 0) == 1) {
 									if (world instanceof Level _level) {
 										if (!_level.isClientSide()) {
-											_level.playSound(null, BlockPos.containing(x, y, z), BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("entity.experience_orb.pickup")), SoundSource.BLOCKS, 1, 1);
+											_level.playSound(null, BlockPos.containing(x, y, z), BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("entity.experience_orb.pickup")), SoundSource.BLOCKS, 1,
+													(float) Mth.nextDouble(RandomSource.create(), 0.5, 0.8));
 										} else {
-											_level.playLocalSound(x, y, z, BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("entity.experience_orb.pickup")), SoundSource.BLOCKS, 1, 1, false);
+											_level.playLocalSound(x, y, z, BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("entity.experience_orb.pickup")), SoundSource.BLOCKS, 1, (float) Mth.nextDouble(RandomSource.create(), 0.5, 0.8),
+													false);
 										}
 									}
 									DccMod.queueServerWork(5, () -> {
 										if (world instanceof Level _level) {
 											if (!_level.isClientSide()) {
-												_level.playSound(null, BlockPos.containing(x, y, z), BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("entity.experience_orb.pickup")), SoundSource.BLOCKS, 1, 1);
+												_level.playSound(null, BlockPos.containing(x, y, z), BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("entity.experience_orb.pickup")), SoundSource.BLOCKS, 1,
+														(float) Mth.nextDouble(RandomSource.create(), 0.5, 0.8));
 											} else {
-												_level.playLocalSound(x, y, z, BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("entity.experience_orb.pickup")), SoundSource.BLOCKS, 1, 1, false);
+												_level.playLocalSound(x, y, z, BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("entity.experience_orb.pickup")), SoundSource.BLOCKS, 1, (float) Mth.nextDouble(RandomSource.create(), 0.5, 0.8),
+														false);
 											}
 										}
 										DccMod.queueServerWork(5, () -> {
 											if (world instanceof Level _level) {
 												if (!_level.isClientSide()) {
-													_level.playSound(null, BlockPos.containing(x, y, z), BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("entity.experience_orb.pickup")), SoundSource.BLOCKS, 1, 1);
+													_level.playSound(null, BlockPos.containing(x, y, z), BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("entity.experience_orb.pickup")), SoundSource.BLOCKS, 1,
+															(float) Mth.nextDouble(RandomSource.create(), 0.5, 0.8));
 												} else {
-													_level.playLocalSound(x, y, z, BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("entity.experience_orb.pickup")), SoundSource.BLOCKS, 1, 1, false);
+													_level.playLocalSound(x, y, z, BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("entity.experience_orb.pickup")), SoundSource.BLOCKS, 1,
+															(float) Mth.nextDouble(RandomSource.create(), 0.5, 0.8), false);
 												}
 											}
 											DccMod.queueServerWork(5, () -> {
 												if (world instanceof Level _level) {
 													if (!_level.isClientSide()) {
-														_level.playSound(null, BlockPos.containing(x, y, z), BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("entity.experience_orb.pickup")), SoundSource.BLOCKS, 1, 1);
+														_level.playSound(null, BlockPos.containing(x, y, z), BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("entity.experience_orb.pickup")), SoundSource.BLOCKS, 1,
+																(float) Mth.nextDouble(RandomSource.create(), 0.5, 0.8));
 													} else {
-														_level.playLocalSound(x, y, z, BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("entity.experience_orb.pickup")), SoundSource.BLOCKS, 1, 1, false);
+														_level.playLocalSound(x, y, z, BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("entity.experience_orb.pickup")), SoundSource.BLOCKS, 1,
+																(float) Mth.nextDouble(RandomSource.create(), 0.5, 0.8), false);
 													}
 												}
 												DccMod.queueServerWork(5, () -> {
 													if (world instanceof Level _level) {
 														if (!_level.isClientSide()) {
-															_level.playSound(null, BlockPos.containing(x, y, z), BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("entity.experience_orb.pickup")), SoundSource.BLOCKS, 1, 1);
+															_level.playSound(null, BlockPos.containing(x, y, z), BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("entity.experience_orb.pickup")), SoundSource.BLOCKS, 1,
+																	(float) Mth.nextDouble(RandomSource.create(), 0.5, 0.8));
 														} else {
-															_level.playLocalSound(x, y, z, BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("entity.experience_orb.pickup")), SoundSource.BLOCKS, 1, 1, false);
+															_level.playLocalSound(x, y, z, BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("entity.experience_orb.pickup")), SoundSource.BLOCKS, 1,
+																	(float) Mth.nextDouble(RandomSource.create(), 0.5, 0.8), false);
 														}
 													}
 													if (world instanceof ServerLevel _level) {
@@ -148,25 +158,31 @@ public class SlotMachineEntityRightClickedOnEntityProcedure {
 								} else if ((entity instanceof SlotMachineEntityEntity _datEntI ? _datEntI.getEntityData().get(SlotMachineEntityEntity.DATA_Random) : 0) == 2) {
 									if (world instanceof Level _level) {
 										if (!_level.isClientSide()) {
-											_level.playSound(null, BlockPos.containing(x, y, z), BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("entity.experience_orb.pickup")), SoundSource.BLOCKS, 1, 1);
+											_level.playSound(null, BlockPos.containing(x, y, z), BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("entity.experience_orb.pickup")), SoundSource.BLOCKS, 1,
+													(float) Mth.nextDouble(RandomSource.create(), 0.5, 0.8));
 										} else {
-											_level.playLocalSound(x, y, z, BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("entity.experience_orb.pickup")), SoundSource.BLOCKS, 1, 1, false);
+											_level.playLocalSound(x, y, z, BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("entity.experience_orb.pickup")), SoundSource.BLOCKS, 1, (float) Mth.nextDouble(RandomSource.create(), 0.5, 0.8),
+													false);
 										}
 									}
 									DccMod.queueServerWork(5, () -> {
 										if (world instanceof Level _level) {
 											if (!_level.isClientSide()) {
-												_level.playSound(null, BlockPos.containing(x, y, z), BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("entity.experience_orb.pickup")), SoundSource.BLOCKS, 1, 1);
+												_level.playSound(null, BlockPos.containing(x, y, z), BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("entity.experience_orb.pickup")), SoundSource.BLOCKS, 1,
+														(float) Mth.nextDouble(RandomSource.create(), 0.5, 0.8));
 											} else {
-												_level.playLocalSound(x, y, z, BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("entity.experience_orb.pickup")), SoundSource.BLOCKS, 1, 1, false);
+												_level.playLocalSound(x, y, z, BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("entity.experience_orb.pickup")), SoundSource.BLOCKS, 1, (float) Mth.nextDouble(RandomSource.create(), 0.5, 0.8),
+														false);
 											}
 										}
 										DccMod.queueServerWork(5, () -> {
 											if (world instanceof Level _level) {
 												if (!_level.isClientSide()) {
-													_level.playSound(null, BlockPos.containing(x, y, z), BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("entity.experience_orb.pickup")), SoundSource.BLOCKS, 1, 1);
+													_level.playSound(null, BlockPos.containing(x, y, z), BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("entity.experience_orb.pickup")), SoundSource.BLOCKS, 1,
+															(float) Mth.nextDouble(RandomSource.create(), 0.5, 0.8));
 												} else {
-													_level.playLocalSound(x, y, z, BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("entity.experience_orb.pickup")), SoundSource.BLOCKS, 1, 1, false);
+													_level.playLocalSound(x, y, z, BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("entity.experience_orb.pickup")), SoundSource.BLOCKS, 1,
+															(float) Mth.nextDouble(RandomSource.create(), 0.5, 0.8), false);
 												}
 											}
 											if (world instanceof ServerLevel _level) {
@@ -180,17 +196,21 @@ public class SlotMachineEntityRightClickedOnEntityProcedure {
 								} else if ((entity instanceof SlotMachineEntityEntity _datEntI ? _datEntI.getEntityData().get(SlotMachineEntityEntity.DATA_Random) : 0) == 3) {
 									if (world instanceof Level _level) {
 										if (!_level.isClientSide()) {
-											_level.playSound(null, BlockPos.containing(x, y, z), BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("entity.experience_orb.pickup")), SoundSource.BLOCKS, 1, 1);
+											_level.playSound(null, BlockPos.containing(x, y, z), BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("entity.experience_orb.pickup")), SoundSource.BLOCKS, 1,
+													(float) Mth.nextDouble(RandomSource.create(), 0.5, 0.8));
 										} else {
-											_level.playLocalSound(x, y, z, BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("entity.experience_orb.pickup")), SoundSource.BLOCKS, 1, 1, false);
+											_level.playLocalSound(x, y, z, BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("entity.experience_orb.pickup")), SoundSource.BLOCKS, 1, (float) Mth.nextDouble(RandomSource.create(), 0.5, 0.8),
+													false);
 										}
 									}
 									DccMod.queueServerWork(5, () -> {
 										if (world instanceof Level _level) {
 											if (!_level.isClientSide()) {
-												_level.playSound(null, BlockPos.containing(x, y, z), BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("entity.experience_orb.pickup")), SoundSource.BLOCKS, 1, 1);
+												_level.playSound(null, BlockPos.containing(x, y, z), BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("entity.experience_orb.pickup")), SoundSource.BLOCKS, 1,
+														(float) Mth.nextDouble(RandomSource.create(), 0.5, 0.8));
 											} else {
-												_level.playLocalSound(x, y, z, BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("entity.experience_orb.pickup")), SoundSource.BLOCKS, 1, 1, false);
+												_level.playLocalSound(x, y, z, BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("entity.experience_orb.pickup")), SoundSource.BLOCKS, 1, (float) Mth.nextDouble(RandomSource.create(), 0.5, 0.8),
+														false);
 											}
 										}
 										if (world instanceof ServerLevel _level) {
@@ -203,17 +223,21 @@ public class SlotMachineEntityRightClickedOnEntityProcedure {
 								} else if ((entity instanceof SlotMachineEntityEntity _datEntI ? _datEntI.getEntityData().get(SlotMachineEntityEntity.DATA_Random) : 0) == 4) {
 									if (world instanceof Level _level) {
 										if (!_level.isClientSide()) {
-											_level.playSound(null, BlockPos.containing(x, y, z), BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("entity.experience_orb.pickup")), SoundSource.BLOCKS, 1, 1);
+											_level.playSound(null, BlockPos.containing(x, y, z), BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("entity.experience_orb.pickup")), SoundSource.BLOCKS, 1,
+													(float) Mth.nextDouble(RandomSource.create(), 0.5, 0.8));
 										} else {
-											_level.playLocalSound(x, y, z, BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("entity.experience_orb.pickup")), SoundSource.BLOCKS, 1, 1, false);
+											_level.playLocalSound(x, y, z, BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("entity.experience_orb.pickup")), SoundSource.BLOCKS, 1, (float) Mth.nextDouble(RandomSource.create(), 0.5, 0.8),
+													false);
 										}
 									}
 									DccMod.queueServerWork(5, () -> {
 										if (world instanceof Level _level) {
 											if (!_level.isClientSide()) {
-												_level.playSound(null, BlockPos.containing(x, y, z), BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("entity.experience_orb.pickup")), SoundSource.BLOCKS, 1, 1);
+												_level.playSound(null, BlockPos.containing(x, y, z), BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("entity.experience_orb.pickup")), SoundSource.BLOCKS, 1,
+														(float) Mth.nextDouble(RandomSource.create(), 0.5, 0.8));
 											} else {
-												_level.playLocalSound(x, y, z, BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("entity.experience_orb.pickup")), SoundSource.BLOCKS, 1, 1, false);
+												_level.playLocalSound(x, y, z, BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("entity.experience_orb.pickup")), SoundSource.BLOCKS, 1, (float) Mth.nextDouble(RandomSource.create(), 0.5, 0.8),
+														false);
 											}
 										}
 										if (world instanceof ServerLevel _level) {
@@ -226,9 +250,11 @@ public class SlotMachineEntityRightClickedOnEntityProcedure {
 								} else if ((entity instanceof SlotMachineEntityEntity _datEntI ? _datEntI.getEntityData().get(SlotMachineEntityEntity.DATA_Random) : 0) == 5) {
 									if (world instanceof Level _level) {
 										if (!_level.isClientSide()) {
-											_level.playSound(null, BlockPos.containing(x, y, z), BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("entity.experience_orb.pickup")), SoundSource.BLOCKS, 1, 1);
+											_level.playSound(null, BlockPos.containing(x, y, z), BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("entity.experience_orb.pickup")), SoundSource.BLOCKS, 1,
+													(float) Mth.nextDouble(RandomSource.create(), 0.5, 0.8));
 										} else {
-											_level.playLocalSound(x, y, z, BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("entity.experience_orb.pickup")), SoundSource.BLOCKS, 1, 1, false);
+											_level.playLocalSound(x, y, z, BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("entity.experience_orb.pickup")), SoundSource.BLOCKS, 1, (float) Mth.nextDouble(RandomSource.create(), 0.5, 0.8),
+													false);
 										}
 									}
 									if (world instanceof ServerLevel _level) {
@@ -240,9 +266,11 @@ public class SlotMachineEntityRightClickedOnEntityProcedure {
 								} else if ((entity instanceof SlotMachineEntityEntity _datEntI ? _datEntI.getEntityData().get(SlotMachineEntityEntity.DATA_Random) : 0) == 6) {
 									if (world instanceof Level _level) {
 										if (!_level.isClientSide()) {
-											_level.playSound(null, BlockPos.containing(x, y, z), BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("entity.experience_orb.pickup")), SoundSource.BLOCKS, 1, 1);
+											_level.playSound(null, BlockPos.containing(x, y, z), BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("entity.experience_orb.pickup")), SoundSource.BLOCKS, 1,
+													(float) Mth.nextDouble(RandomSource.create(), 0.5, 0.8));
 										} else {
-											_level.playLocalSound(x, y, z, BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("entity.experience_orb.pickup")), SoundSource.BLOCKS, 1, 1, false);
+											_level.playLocalSound(x, y, z, BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("entity.experience_orb.pickup")), SoundSource.BLOCKS, 1, (float) Mth.nextDouble(RandomSource.create(), 0.5, 0.8),
+													false);
 										}
 									}
 									if (world instanceof ServerLevel _level) {
