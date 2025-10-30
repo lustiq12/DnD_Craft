@@ -83,18 +83,20 @@ public class CarrioncrawlercocoonOnTickUpdateProcedure {
 			}
 		} else {
 			for (Entity entityiterator : world.getEntities(null, new AABB((x - 1), (y - 40), (z - 1), (x + 2), y, (z + 2)))) {
-				world.setBlock(BlockPos.containing(x, y, z), Blocks.AIR.defaultBlockState(), 3);
-				if (world instanceof ServerLevel _level) {
-					Entity entityToSpawn = DccModEntities.CARRION_CRAWLER.get().spawn(_level, BlockPos.containing(entityiterator.getX(), y, entityiterator.getZ()), MobSpawnType.MOB_SUMMONED);
-					if (entityToSpawn != null) {
-						entityToSpawn.setDeltaMovement(0, 0, 0);
+				if (entityiterator instanceof Player) {
+					world.setBlock(BlockPos.containing(x, y, z), Blocks.AIR.defaultBlockState(), 3);
+					if (world instanceof ServerLevel _level) {
+						Entity entityToSpawn = DccModEntities.CARRION_CRAWLER.get().spawn(_level, BlockPos.containing(entityiterator.getX(), y, entityiterator.getZ()), MobSpawnType.MOB_SUMMONED);
+						if (entityToSpawn != null) {
+							entityToSpawn.setDeltaMovement(0, 0, 0);
+						}
 					}
-				}
-				if (world instanceof Level _level) {
-					if (!_level.isClientSide()) {
-						_level.playSound(null, BlockPos.containing(x, y, z), BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("entity.spider.death")), SoundSource.HOSTILE, 10, 1);
-					} else {
-						_level.playLocalSound(x, y, z, BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("entity.spider.death")), SoundSource.HOSTILE, 10, 1, false);
+					if (world instanceof Level _level) {
+						if (!_level.isClientSide()) {
+							_level.playSound(null, BlockPos.containing(x, y, z), BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("entity.spider.death")), SoundSource.HOSTILE, 10, 1);
+						} else {
+							_level.playLocalSound(x, y, z, BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("entity.spider.death")), SoundSource.HOSTILE, 10, 1, false);
+						}
 					}
 				}
 			}

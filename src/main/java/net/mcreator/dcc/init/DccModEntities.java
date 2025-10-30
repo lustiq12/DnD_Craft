@@ -20,6 +20,7 @@ import net.mcreator.dcc.entity.VINESEntity;
 import net.mcreator.dcc.entity.ThornEntity;
 import net.mcreator.dcc.entity.TentaclesEntity;
 import net.mcreator.dcc.entity.SmallOcherjellyEntity;
+import net.mcreator.dcc.entity.SlotMachineEntityEntity;
 import net.mcreator.dcc.entity.RedCapEntity;
 import net.mcreator.dcc.entity.OwlbearEntity;
 import net.mcreator.dcc.entity.OrkEntity;
@@ -150,6 +151,8 @@ public class DccModEntities {
 			EntityType.Builder.<RedCapEntity>of(RedCapEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3)
 
 					.sized(0.6f, 1.8f));
+	public static final DeferredHolder<EntityType<?>, EntityType<SlotMachineEntityEntity>> SLOT_MACHINE_ENTITY = register("slot_machine_entity",
+			EntityType.Builder.<SlotMachineEntityEntity>of(SlotMachineEntityEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).fireImmune().sized(0.1f, 1.5f));
 
 	// Start of user code block custom entities
 	// End of user code block custom entities
@@ -184,6 +187,7 @@ public class DccModEntities {
 		BullywugTadpoleEntity.init(event);
 		BullywugWarriorEntity.init(event);
 		RedCapEntity.init(event);
+		SlotMachineEntityEntity.init(event);
 	}
 
 	@SubscribeEvent
@@ -213,5 +217,6 @@ public class DccModEntities {
 		event.put(BULLYWUG_TADPOLE.get(), BullywugTadpoleEntity.createAttributes().build());
 		event.put(BULLYWUG_WARRIOR.get(), BullywugWarriorEntity.createAttributes().build());
 		event.put(RED_CAP.get(), RedCapEntity.createAttributes().build());
+		event.put(SLOT_MACHINE_ENTITY.get(), SlotMachineEntityEntity.createAttributes().build());
 	}
 }

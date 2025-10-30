@@ -783,5 +783,8 @@
   "advancements.carrion_hatcher.descr": "Hatch a Carrion Crawler",
   "item.dcc.red_cap_spawn_egg": "Red Cap Spawn Egg",
   "entity.dcc.red_cap": "Red Cap",
-  "effect.dcc.butterfly_curse": "Butterfly Curse"
+  "effect.dcc.butterfly_curse": "Butterfly Curse",
+  "item.dcc.slot_machine_entity_spawn_egg": "Slot Machine Spawn Egg",
+  "entity.dcc.slot_machine_entity": "Slot Machine",
+  "block.dcc.slot_machine": "Slot Machine"
 }

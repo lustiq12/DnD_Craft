@@ -8,6 +8,7 @@ import net.mcreator.dcc.entity.WargEntity;
 import net.mcreator.dcc.entity.VINESEntity;
 import net.mcreator.dcc.entity.TentaclesEntity;
 import net.mcreator.dcc.entity.SmallOcherjellyEntity;
+import net.mcreator.dcc.entity.SlotMachineEntityEntity;
 import net.mcreator.dcc.entity.RedCapEntity;
 import net.mcreator.dcc.entity.OwlbearEntity;
 import net.mcreator.dcc.entity.OrkEntity;
@@ -204,6 +205,13 @@ public class EntityAnimationFactory {
 				}
 			}
 			if (event.getEntity() instanceof RedCapEntity syncable) {
+				String animation = syncable.getSyncedAnimation();
+				if (!animation.equals("undefined")) {
+					syncable.setAnimation("undefined");
+					syncable.animationprocedure = animation;
+				}
+			}
+			if (event.getEntity() instanceof SlotMachineEntityEntity syncable) {
 				String animation = syncable.getSyncedAnimation();
 				if (!animation.equals("undefined")) {
 					syncable.setAnimation("undefined");

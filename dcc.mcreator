@@ -6381,6 +6381,10 @@
             "type": "damagesource"
           },
           {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
             "name": "amount",
             "type": "number"
           },
@@ -7984,6 +7988,221 @@
         ]
       },
       "path": "~/Structures"
+    },
+    {
+      "name": "SlotMachineEntity",
+      "type": "animatedentity",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "slot_machine_entity",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/dcc/client/renderer/SlotMachineEntityRenderer.java",
+          "src/main/java/net/mcreator/dcc/entity/SlotMachineEntityEntity.java",
+          "src/main/resources/data/dcc/neoforge/biome_modifier/slot_machine_entity_biome_modifier.json",
+          "src/main/java/net/mcreator/dcc/entity/model/SlotMachineEntityModel.java"
+        ]
+      },
+      "path": "~/Other Items and blocks"
+    },
+    {
+      "name": "SlotMachineEntityRightClickedOnEntity",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "slot_machine_entity_right_clicked_on_entity",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ],
+        "files": [
+          "src/main/java/net/mcreator/dcc/procedures/SlotMachineEntityRightClickedOnEntityProcedure.java"
+        ]
+      },
+      "path": "~/Other Items and blocks"
+    },
+    {
+      "name": "SlotMachine",
+      "type": "block",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "slot_machine",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/dcc/models/item/slot_machine.json",
+          "src/main/resources/assets/dcc/blockstates/slot_machine.json",
+          "src/main/resources/assets/dcc/models/block/slot_machine.json",
+          "src/main/resources/data/dcc/loot_table/blocks/slot_machine.json",
+          "src/main/java/net/mcreator/dcc/block/SlotMachineBlock.java"
+        ]
+      },
+      "path": "~/Other Items and blocks"
+    },
+    {
+      "name": "SlotMachineBlockIsPlacedBy",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "slot_machine_block_is_placed_by",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ],
+        "files": [
+          "src/main/java/net/mcreator/dcc/procedures/SlotMachineBlockIsPlacedByProcedure.java"
+        ]
+      },
+      "path": "~/Other Items and blocks"
+    },
+    {
+      "name": "SlotMachineBlockDestroyedByPlayer",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "slot_machine_block_destroyed_by_player",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ],
+        "files": [
+          "src/main/java/net/mcreator/dcc/procedures/SlotMachineBlockDestroyedByPlayerProcedure.java"
+        ]
+      },
+      "path": "~/Other Items and blocks"
+    },
+    {
+      "name": "SlotMachineOnTickUpdate",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "slot_machine_on_tick_update",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ],
+        "files": [
+          "src/main/java/net/mcreator/dcc/procedures/SlotMachineOnTickUpdateProcedure.java"
+        ]
+      },
+      "path": "~/Other Items and blocks"
+    },
+    {
+      "name": "SlotMachineNoDamage",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "slot_machine_no_damage",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "damagesource",
+            "type": "damagesource"
+          },
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ],
+        "files": [
+          "src/main/java/net/mcreator/dcc/procedures/SlotMachineNoDamageProcedure.java"
+        ]
+      },
+      "path": "~/Other Items and blocks"
+    },
+    {
+      "name": "SlotMachineOnBlockRightClicked",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "slot_machine_on_block_right_clicked",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ],
+        "files": [
+          "src/main/java/net/mcreator/dcc/procedures/SlotMachineOnBlockRightClickedProcedure.java"
+        ]
+      },
+      "path": "~/Other Items and blocks"
     }
   ],
   "variable_elements": [
@@ -8431,7 +8650,8 @@
       "BullywugWarrior",
       "BullywugTadpole",
       "Bullywug",
-      "RedCap"
+      "RedCap",
+      "SlotMachine"
     ]
   },
   "language_map": {
@@ -9220,7 +9440,10 @@
       "advancements.carrion_hatcher.descr": "Hatch a Carrion Crawler",
       "item.dcc.red_cap_spawn_egg": "Red Cap Spawn Egg",
       "entity.dcc.red_cap": "Red Cap",
-      "effect.dcc.butterfly_curse": "Butterfly Curse"
+      "effect.dcc.butterfly_curse": "Butterfly Curse",
+      "item.dcc.slot_machine_entity_spawn_egg": "Slot Machine Spawn Egg",
+      "entity.dcc.slot_machine_entity": "Slot Machine",
+      "block.dcc.slot_machine": "Slot Machine"
     }
   },
   "metadata": {

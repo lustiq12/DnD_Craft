@@ -13,6 +13,7 @@ import net.neoforged.api.distmarker.Dist;
 import net.minecraft.world.level.block.Block;
 
 import net.mcreator.dcc.block.WaterReplacerBlock;
+import net.mcreator.dcc.block.SlotMachineBlock;
 import net.mcreator.dcc.block.SilverOreBlock;
 import net.mcreator.dcc.block.ScrapblockBlock;
 import net.mcreator.dcc.block.SanctifiedBeaconBlock;
@@ -48,6 +49,7 @@ public class DccModBlocks {
 	public static final DeferredBlock<Block> CARRIONCRAWLERCOCOON = REGISTRY.register("carrioncrawlercocoon", CarrioncrawlercocoonBlock::new);
 	public static final DeferredBlock<Block> CARRION_CRAWLER_COCOON_INACTIVE = REGISTRY.register("carrion_crawler_cocoon_inactive", CarrionCrawlerCocoonInactiveBlock::new);
 	public static final DeferredBlock<Block> WATER_REPLACER = REGISTRY.register("water_replacer", WaterReplacerBlock::new);
+	public static final DeferredBlock<Block> SLOT_MACHINE = REGISTRY.register("slot_machine", SlotMachineBlock::new);
 
 	// Start of user code block custom blocks
 	// End of user code block custom blocks
